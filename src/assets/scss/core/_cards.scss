@@ -193,6 +193,15 @@
     &.card-rotate.bg-warning .back{
       background: linear-gradient(60deg, $orange-400, $orange-600);
     }
+    .card-header-vibent-green .card-icon,
+    .card-header-vibent-green .card-text,
+    .card-header-vibent-green:not(.card-header-icon):not(.card-header-text),
+    &.bg-warning,
+    &.card-rotate.bg-warning .front,
+    &.card-rotate.bg-warning .back{
+      background: linear-gradient(60deg, $green-700, $green-400);
+    }
+
     .card-header-danger .card-icon,
     .card-header-danger .card-text,
     .card-header-danger:not(.card-header-icon):not(.card-header-text),
@@ -201,6 +210,15 @@
     &.card-rotate.bg-danger .back{
       background: linear-gradient(60deg, $red-400, $red-600);
     }
+
+  .card-header-vibent-purple .card-icon,
+  .card-header-vibent-purple .card-text,
+  .card-header-vibent-purple:not(.card-header-icon):not(.card-header-text),
+  &.bg-danger,
+  &.card-rotate.bg-danger .front,
+  &.card-rotate.bg-danger .back{
+    background: linear-gradient(60deg, $vibent-purple, $red-600);
+  }
 
     .card-header-rose .card-icon,
     .card-header-rose .card-text,
@@ -225,6 +243,12 @@
         @include shadow-big-color($brand-danger);
     }
 
+  .card-header-vibent-purple .card-icon,
+  .card-header-vibent-purple:not(.card-header-icon):not(.card-header-text),
+  .card-header-vibent-purple .card-text{
+    @include shadow-big-color($vibent-purple);
+  }
+
     .card-header-rose .card-icon,
     .card-header-rose:not(.card-header-icon):not(.card-header-text),
     .card-header-rose .card-text{
@@ -235,6 +259,12 @@
     .card-header-warning:not(.card-header-icon):not(.card-header-text),
     .card-header-warning .card-text{
         @include shadow-big-color($brand-warning);
+    }
+
+    .card-header-vibent-green .card-icon,
+    .card-header-vibent-green:not(.card-header-icon):not(.card-header-text),
+    .card-header-vibent-green .card-text{
+      @include shadow-big-color($vibent-green);
     }
 
     .card-header-info .card-icon,

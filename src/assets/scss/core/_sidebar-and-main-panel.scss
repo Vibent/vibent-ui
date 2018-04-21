@@ -298,8 +298,8 @@
     &[data-color="orange"]{
         @include set-background-color-button($brand-warning);
     }
-    &[data-color="danger"]{
-        @include set-background-color-button($brand-danger);
+    &[data-color="vibent-sidebar-style"]{
+        @include set-background-color-button($vibent-purple);
     }
     &[data-color="rose"]{
         @include set-background-color-button($brand-rose);
