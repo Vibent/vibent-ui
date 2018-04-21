@@ -411,8 +411,10 @@
         display: none;
         box-shadow: none;
 
+      // side-wrapper smartphone
         .sidebar-wrapper{
-            padding-bottom: 60px;
+          padding-bottom: 60px;
+          background-color: #fff;
         }
 
         .nav-mobile-menu{
@@ -544,7 +546,7 @@
             height: 100%;
             width: 100%;
             position: absolute;
-            background-color: #282828;
+            background-color: #fff;
             display: block;
             content: "";
             z-index: 1;
@@ -599,7 +601,7 @@
         opacity: 0;
         top: 0;
         left: auto;
-        background: rgba(0, 0, 0, 0.35);
+        background: rgba(0, 0, 0, 0.2);
         content: "";
         z-index: 9999;
         overflow-x: hidden;
