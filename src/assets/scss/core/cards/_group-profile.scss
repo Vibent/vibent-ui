@@ -1,0 +1,36 @@
+.group-profile {
+  margin-top: 55px;
+  text-align: center;
+
+  .group-user-avatar {
+    margin: -50px auto 0;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 0;
+
+    @include shadow-4dp();
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .group-user-body {
+    margin-top: 10px;
+  }
+
+  .group-user-additional {
+    color: darkcyan;
+    margin-top: -8px;
+    font-size: 11px;
+  }
+
+  .group-user-name {
+    margin-top: -3px;
+  }
+  .group-user-avatar {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
