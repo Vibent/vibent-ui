@@ -33,4 +33,16 @@
     max-width: 100px;
     max-height: 100px;
   }
+
+}
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  .group-profile {
+    display: inline-block;
+    margin-left: 50px;
+  }
 }
