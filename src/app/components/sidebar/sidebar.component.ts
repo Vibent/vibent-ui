@@ -9,7 +9,7 @@ declare interface RouteInfo {
 }
 export const ROUTES: RouteInfo[] = [
     { path: 'events', title: 'Events',  icon: 'bubble_chart', class: '' },
-    { path: 'groups', title: 'Groups',  icon:'group', class: '' },
+    { path: 'groups', title: 'Groups',  icon: 'group', class: '' },
 ];
 
 @Component({
@@ -27,7 +27,7 @@ export class SidebarComponent implements OnInit {
   }
   isMobileMenu() {
       if ($(window).width() > 991) {
-          return false;
+        return false;
       }
       return true;
   };

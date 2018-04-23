@@ -12,22 +12,23 @@ import {
 } from '@angular/material';
 
 import { AppRoutingModule } from './app.routing';
-import { ComponentsModule } from './components/components.module';
-
 import { AppComponent } from './app.component';
-
 import { EventsComponent } from './events/events.component';
-import { GroupsComponent } from './groups/groups.component';
 import {
   AgmCoreModule
 } from '@agm/core';
+import {GroupsModule} from './groups/groups.module';
+import {FooterModule} from './components/footer/footer.module';
+import {SidebarModule} from './components/sidebar/sidebar.module';
+import {NavbarModule} from './components/navbar/navbar.module';
+import {CommonModule} from '@angular/common';
+import {EventsModule} from './events/events.module';
 
 @NgModule({
   imports: [
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    ComponentsModule,
     RouterModule,
     MatButtonModule,
     MatRippleModule,
@@ -36,12 +37,17 @@ import {
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
-    })
+    }),
+    CommonModule,
+    RouterModule,
+    GroupsModule,
+    EventsModule,
+    FooterModule,
+    SidebarModule,
+    NavbarModule
   ],
   declarations: [
     AppComponent,
-    EventsComponent,
-    GroupsComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
