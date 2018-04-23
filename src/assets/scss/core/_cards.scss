@@ -126,13 +126,14 @@
                 @include shadow-big-image();
             }
             .card-title {
-                position: absolute;
-                bottom: 15px;
-                left: 15px;
-                color: $white-color;
-                font-size: $font-size-h4;
-                text-shadow: 0 2px 5px rgba(33, 33, 33, 0.5);
-            }
+               position: absolute;
+               bottom: 15px;
+               left: 15px;
+               color: $white-color;
+               font-size: $font-size-h4;
+               text-shadow: 0 2px 5px rgba(33, 33, 33, 0.5);
+             }
+
 
             .colored-shadow{
                 transform: scale(0.94);
@@ -392,6 +393,13 @@
 
     .card-title{
       margin-bottom: 3px;
+      display: inline-block;
+    }
+
+    .card-members{
+      margin-bottom: 3px;
+      display: inline-block;
+      float: right;
     }
 
     .card-category{
@@ -419,6 +427,7 @@
           margin-top: 15px;
           color: $black-color;
         }
+
         h4{
           font-weight: 300;
         }
@@ -515,7 +524,7 @@
       margin: 0px 15px 0;
       padding: 0;
 
-      .card-title + .card-category{
+      .card-title + .card-category + .card-members{
         color: rgba(255, 255, 255, 0.62);
         a {
           color: $white-color;
