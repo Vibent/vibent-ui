@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as Chartist from 'chartist';
+import {EventPreview} from '../models/event-preview';
 
 @Component({
   selector: 'app-events',
@@ -8,8 +8,14 @@ import * as Chartist from 'chartist';
 })
 export class EventsComponent implements OnInit {
 
+  eventsPreview: EventPreview[];
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.eventsPreview = [
+      new EventPreview('zbeubzbeub', 5, '14/04', 'Playa partyyy', 'Cannes'),
+      new EventPreview('zbeubzbeub', 5, '14/04', 'Playa partyyy', 'Cannes'),
+    ]
+  }
 
 }

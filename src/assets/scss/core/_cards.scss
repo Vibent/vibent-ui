@@ -197,6 +197,7 @@
     .card-header-vibent-green .card-icon,
     .card-header-vibent-green .card-text,
     .card-header-vibent-green:not(.card-header-icon):not(.card-header-text),
+    .event-preview-group,
     &.bg-warning,
     &.card-rotate.bg-warning .front,
     &.card-rotate.bg-warning .back{
@@ -264,7 +265,8 @@
 
     .card-header-vibent-green .card-icon,
     .card-header-vibent-green:not(.card-header-icon):not(.card-header-text),
-    .card-header-vibent-green .card-text{
+    .card-header-vibent-green .card-text,
+    .event-preview-group {
       @include shadow-big-color($vibent-green);
     }
 
@@ -505,6 +507,12 @@
 
     h6 {
       width: 100%;
+    }
+
+    .event-preview-group{
+      color: #ffffff;
+      padding: 3px 7px;
+      border-radius: 10px;
     }
 
     .stats{

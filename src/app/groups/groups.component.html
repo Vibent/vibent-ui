@@ -1,5 +1,5 @@
 <div class="main-content">
     <div class="container-fluid">
-        <app-group-preview></app-group-preview>
+        <app-group-preview *ngFor="let group of groupsPreview" [groupPreview]=group></app-group-preview>
     </div>
 </div>
