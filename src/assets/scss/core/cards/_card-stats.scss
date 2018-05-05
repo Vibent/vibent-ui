@@ -45,4 +45,10 @@
     color: #000;
     font-size: 25px;
   }
+  transition-duration: 0.5s;
+}
+
+.card-stats:hover {
+  @include box-shadow($bmd-shadow-6dp);
+  transition-duration: 0.5s;
 }

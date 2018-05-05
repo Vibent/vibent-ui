@@ -13,7 +13,6 @@ import {
 
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
-import { EventsComponent } from './events/events.component';
 import {
   AgmCoreModule
 } from '@agm/core';
@@ -23,6 +22,12 @@ import {SidebarModule} from './components/sidebar/sidebar.module';
 import {NavbarModule} from './components/navbar/navbar.module';
 import {CommonModule} from '@angular/common';
 import {EventsModule} from './events/events.module';
+import {HttpClientModule} from '@angular/common/http';
+import {EventModule} from './event/event.module';
+import {EventCreationComponent} from './dialogs/event-creation/event-creation.component';
+import {GroupCreationComponent} from './dialogs/group-creation/group-creation.component';
+import {GroupModule} from './group/group.module';
+import {GroupMembersComponent} from './dialogs/group-members/group-members.component';
 
 @NgModule({
   imports: [
@@ -44,12 +49,16 @@ import {EventsModule} from './events/events.module';
     EventsModule,
     FooterModule,
     SidebarModule,
-    NavbarModule
+    NavbarModule,
+    EventModule,
+    HttpClientModule,
+    GroupModule,
   ],
   declarations: [
     AppComponent,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [EventCreationComponent, GroupCreationComponent, GroupMembersComponent]
 })
 export class AppModule { }

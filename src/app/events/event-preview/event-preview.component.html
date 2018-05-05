@@ -1,30 +1,32 @@
- <div class="row justify-content-md-center">
+ <div class="row justify-content-center">
       <div class="col-xl-8 col-lg-9 col-md-12">
-          <div class="card card-stats">
-              <div class="card-header card-header-vibent-green card-header-icon">
-                  <div class="card-icon">
-                      <h3>{{eventPreview._eventDate}}</h3>
-                  </div>
-                  <p class="card-category">in 4 days!</p>
-                  <h4 class="card-title">{{eventPreview._eventGroupSize}}
-                      <small>participants</small>
-                  </h4>
-                  <div class="card-body">{{eventPreview._eventTitle}}
-                      <div class ="card-location">
-                          in {{eventPreview._eventLocation}}
+          <a [routerLink]="['/event']">
+              <div class="card card-stats">
+                  <div class="card-header card-header-vibent-green card-header-icon">
+                      <div class="card-icon">
+                          <h3>{{eventPreview._eventDate}}</h3>
+                      </div>
+                      <p class="card-category">in 4 days!</p>
+                      <h4 class="card-title">{{eventPreview._eventGroupSize}}
+                          <small>participants</small>
+                      </h4>
+                      <div class="card-body">{{eventPreview._eventTitle}}
+                          <div class ="card-location">
+                              in {{eventPreview._eventLocation}}
+                          </div>
                       </div>
                   </div>
-              </div>
-              <div class="card-footer">
-                  <div class="stats">
-                      <i class="material-icons text-info">info</i>
-                      3 new bubbles!
+                  <div class="card-footer">
+                      <div class="stats">
+                          <i class="material-icons text-info">info</i>
+                          3 new bubbles!
+                      </div>
+                      <div class="event-preview-group">
+                         From {{eventPreview._eventGroupName}} group
+                      </div>
                   </div>
-                  <div class="event-preview-group">
-                     From {{eventPreview._eventGroupName}} group
-                  </div>
-              </div>
           </div>
+          </a>
       </div>
   </div>
 

@@ -84,6 +84,17 @@
     > .mat-button-focus-overlay, .mat-button-ripple{
       border-radius: $border-radius-extreme;
     }
+    &.btn-add-event {
+      background: $vibent-green;
+    }
+    &.btn-join-group{
+      background: #a73974 /*linear-gradient(60deg, $vibent-purple, $vibent-red)*/;
+    }
+
+    &.btn-add-event-in-group {
+      background: white;
+      color: #000;
+    }
   }
 
   &.btn-fab,
@@ -255,3 +266,5 @@ button:focus {
 .mat-button .mat-button-ripple{
   border-radius: inherit;
 }
+
+

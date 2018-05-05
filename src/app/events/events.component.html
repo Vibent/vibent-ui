@@ -1,6 +1,9 @@
 <div class="main-content">
     <div class="container-fluid">
         <h3 class="col-xl-12" style="text-align: center;">All events you attend!</h3>
-            <app-event-preview *ngFor="let event of eventsPreview" [eventPreview]=event></app-event-preview>
+        <div class="row justify-content-center">
+            <div class="btn btn-round btn-add-event" (click)="openDialog()">Create an event</div>
+        </div>
+        <app-event-preview *ngFor="let event of eventsPreview" [eventPreview]=event></app-event-preview>
     </div>
 </div>

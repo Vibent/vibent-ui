@@ -1,6 +1,6 @@
 /*** Vibent Material ***/
  @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
+ @import "~ng-pick-datetime/assets/style/picker.min.css";
  @import "core/variables";
  @import "core/mixins";
  @import "~bootstrap/scss/bootstrap";
@@ -27,6 +27,10 @@
  @import "core/fixed-plugin";
  @import "core/tables";
  @import "core/misc";
+ @import "core/event";
+ @import "core/bubble";
+ @import "core/dialog-creation";
+ @import "core/group";
 
 @import "core/cards";
 @import "core/cards/card-stats";
