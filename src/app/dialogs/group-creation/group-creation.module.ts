@@ -6,6 +6,7 @@ import {OwlDateTimeModule, OwlNativeDateTimeModule} from 'ng-pick-datetime';
 import {CommonModule} from '@angular/common';
 import {ReactiveFormsModule} from '@angular/forms';
 import {GroupCreationComponent} from './group-creation.component';
+import {HttpService} from '../../http/http.service';
 
 @NgModule({
   imports: [
@@ -20,7 +21,7 @@ import {GroupCreationComponent} from './group-creation.component';
   declarations: [
     GroupCreationComponent
   ],
-  providers: [],
+  providers: [HttpService],
   exports: [GroupCreationComponent]
 })
 export class GroupCreationModule { }

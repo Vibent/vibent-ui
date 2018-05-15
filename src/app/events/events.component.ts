@@ -3,6 +3,8 @@ import {EventPreview} from '../models/event-preview';
 import {EventCreationComponent} from '../dialogs/event-creation/event-creation.component';
 import {MatDialog } from '@angular/material';
 import {Group} from '../models/group';
+import {Event} from '../models/event';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-events',
@@ -11,21 +13,17 @@ import {Group} from '../models/group';
 })
 export class EventsComponent implements OnInit {
 
-  eventsPreview: EventPreview[];
   data;
-  public groups: Group[] = [];
+  // TODO: generate groupRef - groupName array for dialog
+  public groups: Group[];
+  events: Event[];
 
-  constructor(public dialog: MatDialog) {
+  constructor(public dialog: MatDialog, private route: ActivatedRoute) {
+    this.events = this.route.snapshot.data['events'];
   }
 
 
   ngOnInit() {
-    this.eventsPreview = [
-      new EventPreview('zbeubzbeub', 5, '14/04', 'Playa partyyy', 'Cannes'),
-      new EventPreview('zbeubzbeub', 5, '14/04', 'Playa partyyy', 'Cannes'),
-    ];
-    this.groups.push(new Group('group1', 10, 'description', [], []));
-    this.groups.push(new Group('group2', 10, 'description', [], []));
   }
 
   openDialog() {

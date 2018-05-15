@@ -1,10 +1,11 @@
+import {Event} from './event';
+
 export class EventPreview {
 
   constructor(
-    public _eventGroupName: string,
-    public _eventGroupSize: number,
-    public _eventDate: string,
-    public _eventTitle: string,
-    public _eventLocation: string) { }
+    public groupName: string,
+    public groupSize: number,
+    public eventLocation: string,
+    public event: Event) { }
 
 }

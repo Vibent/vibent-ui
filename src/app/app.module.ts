@@ -33,7 +33,6 @@ import {GroupMembersComponent} from './dialogs/group-members/group-members.compo
   imports: [
     BrowserAnimationsModule,
     FormsModule,
-    HttpModule,
     RouterModule,
     MatButtonModule,
     MatRippleModule,

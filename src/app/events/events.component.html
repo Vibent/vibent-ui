@@ -4,6 +4,6 @@
         <div class="row justify-content-center">
             <div class="btn btn-round btn-add-event" (click)="openDialog()">Create an event</div>
         </div>
-        <app-event-preview *ngFor="let event of eventsPreview" [eventPreview]=event></app-event-preview>
+        <app-event-preview *ngFor="let event of events" [event]=event></app-event-preview>
     </div>
 </div>

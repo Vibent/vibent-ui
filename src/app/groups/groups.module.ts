@@ -14,7 +14,7 @@ import {RouterModule} from '@angular/router';
     HttpClientModule,
     GroupCreationModule,
     MatDialogModule,
-    RouterModule
+    RouterModule,
   ],
   declarations: [
     GroupsComponent

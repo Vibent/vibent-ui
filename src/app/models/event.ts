@@ -1,11 +1,20 @@
-import {Group} from './group';
+export interface Event {
 
-export class Event {
+  title: string;
+  ref?: string;
+  description?: string;
+  endDate?: Date;
+  startDate?: Date;
+  groupRef: string;
+  participationRefs?: string[];
 
-  constructor(
-    public _eventTitle: string,
-    public _eventDescription: string,
-    public _eventDate: Date,
-    public _eventGroup: Group) {}
+  /** bubbles **/
+  alimentationBubbles?: any[];
+  checkboxBubbles?: any[];
+  freeBubbles?: any[];
+  locationBubbles?: any[];
+  planningBubbles?: any[];
+  surveyBubbles?: any[];
+  travelBubbles?: any[];
 
 }

@@ -3,6 +3,9 @@ import {GroupPreview} from '../models/group-preview';
 import {GroupPreviewMember} from '../models/group-preview-member';
 import {MatDialog} from '@angular/material';
 import {GroupCreationComponent} from '../dialogs/group-creation/group-creation.component';
+import {HttpService} from '../http/http.service';
+import {Group} from '../models/group';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-groups',
@@ -11,11 +14,10 @@ import {GroupCreationComponent} from '../dialogs/group-creation/group-creation.c
 })
 export class GroupsComponent implements OnInit {
 
-  groupsPreview: GroupPreview[];
+  groupsPreview: GroupPreview[] = [];
+  groups: Group[];
 
-  constructor(public dialog: MatDialog) { }
-
-  ngOnInit() {
+  constructor(public dialog: MatDialog, private route: ActivatedRoute) {
     const groupPreviewMembers = [
       new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
       new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
@@ -28,13 +30,13 @@ export class GroupsComponent implements OnInit {
       new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
       new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
     ];
-
-    this.groupsPreview = [
-      new GroupPreview('Group Name 1', 10, 'Blablabla bla', groupPreviewMembers),
-      new GroupPreview('Group Name 2', 1000, 'Blablabla bla 2 Blablabla bla Blablabla ' +
-        'bla Blablabla bla Blablabla bla Blablabla bla', groupPreviewMembers),
-    ];
+    this.groups = this.route.snapshot.data['groups'];
+    for (const group of this.groups) {
+      this.groupsPreview.push(new GroupPreview(group.ref, group.name, group.memberRefs.length, group.description, groupPreviewMembers));
+    }
   }
+
+  ngOnInit() {}
 
   openDialog() {
     const dialogRef = this.dialog.open(GroupCreationComponent, {

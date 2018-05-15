@@ -1,19 +1,28 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {EventPreview} from '../../models/event-preview';
+import {Component, Input, OnChanges, OnInit, SimpleChange, SimpleChanges} from '@angular/core';
+import {Event} from '../../models/event';
+import {AdditionalEventInfoService} from '../../services/additional-event-info.service.';
+import {AdditionnalEventInfos} from '../../models/additionnal-event-infos';
 
 @Component({
   selector: 'app-event-preview',
   templateUrl: './event-preview.component.html',
   styleUrls: ['./event-preview.component.css']
 })
-export class EventPreviewComponent implements OnInit {
+export class EventPreviewComponent implements OnChanges {
 
   @Input()
-  eventPreview: EventPreview;
+  event: Event;
+  additionnalEventInfos: AdditionnalEventInfos;
+  ressourcesLoaded: Promise<boolean>;
 
-  constructor() { }
+  constructor(private additonalEventInfoService: AdditionalEventInfoService) {
+  }
 
-  ngOnInit() {
+  ngOnChanges(changes: SimpleChanges) {
+    const event: SimpleChange = changes.event;
+    let promise: Promise<AdditionnalEventInfos>;
+    promise = this.additonalEventInfoService.getAdditionnalInfos(this.event);
+    promise.then((val) => {this.additionnalEventInfos = val;  this.ressourcesLoaded = Promise.resolve(true); });
   }
 
 }

@@ -1,13 +1,14 @@
-import {User} from './user';
-import {Event} from './event';
+export interface Group {
 
-export class Group {
-
-  constructor(
-    public _groupName: string,
-    public _groupSize: number,
-    public _groupDescription: string,
-    public _groupMembers: User[],
-    public _groupEvents: Event[]) { }
+  name?: string;
+  ref?: string;
+  adminRefs?: string[];
+  eventRefs?: string[];
+  description?: string;
+  inviteRefs?: string[];
+  memberRefs?: string[];
+  hasDefaultAdmin?: boolean;
+  allAdmins ?: boolean;
+  imagePath?: string;
 
 }

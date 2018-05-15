@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {EventParticipant} from '../models/event-participant';
-
+import {ActivatedRoute} from '@angular/router';
+import {Event} from '../models/event';
 @Component({
   selector: 'app-event',
   templateUrl: './event.component.html',
@@ -9,8 +10,11 @@ import {EventParticipant} from '../models/event-participant';
 export class EventComponent implements OnInit {
 
   participants: EventParticipant[];
+  event: Event;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) {
+    this.event = this.route.snapshot.data['event'];
+  }
 
   ngOnInit() {
     this.participants = [

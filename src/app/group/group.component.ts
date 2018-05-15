@@ -5,6 +5,7 @@ import {GroupMembersComponent} from '../dialogs/group-members/group-members.comp
 import {GroupPreviewMember} from '../models/group-preview-member';
 import {EventCreationComponent} from '../dialogs/event-creation/event-creation.component';
 import {Group} from '../models/group';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-group',
@@ -13,15 +14,13 @@ import {Group} from '../models/group';
 })
 export class GroupComponent implements OnInit {
 
-  eventsPreview: EventPreview[];
+  events: Event[];
   groupPreviewMembers: GroupPreviewMember[] = [];
   group: Group;
 
-  constructor(public dialogGroupMembers: MatDialog, public dialogEventCreation: MatDialog) {
-    this.eventsPreview = [
-      new EventPreview('zbeubzbeub', 5, '14/04', 'Playa partyyy', 'Cannes'),
-      new EventPreview('zbeubzbeub', 5, '14/04', 'Playa partyyy', 'Cannes'),
-    ];
+  constructor(public dialogGroupMembers: MatDialog, public dialogEventCreation: MatDialog, private route: ActivatedRoute) {
+    this.group = this.route.snapshot.data['group'];
+    console.log(this.group);
   }
 
   ngOnInit() {

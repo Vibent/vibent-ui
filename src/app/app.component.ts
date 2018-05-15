@@ -3,6 +3,7 @@ import { Location, LocationStrategy, PathLocationStrategy, PopStateEvent } from 
 import 'rxjs/add/operator/filter';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
+import {HttpService} from './http/http.service';
 
 declare const $: any;
 

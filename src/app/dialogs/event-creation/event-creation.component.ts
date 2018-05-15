@@ -42,7 +42,7 @@ export class EventCreationComponent implements OnInit {
 
   public saveEvent() {
     this.dialogRef.close(this.form.value);
-    this.eventCreationService.createEvent(this.form.value.title, this.form.value.description, this.form.value.date, this.form.value.group);
+    this.eventCreationService.createEvent(this.form.value);
   }
 
 }
