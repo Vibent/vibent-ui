@@ -1,21 +1,13 @@
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
 
-import {
-  MatButtonModule,
-  MatInputModule,
-  MatRippleModule,
-  MatTooltipModule,
-} from '@angular/material';
+import {MatButtonModule, MatInputModule, MatRippleModule, MatTooltipModule, } from '@angular/material';
 
-import { AppRoutingModule } from './app.routing';
-import { AppComponent } from './app.component';
-import {
-  AgmCoreModule
-} from '@agm/core';
+import {AppRoutingModule} from './app.routing';
+import {AppComponent} from './app.component';
+import {AgmCoreModule} from '@agm/core';
 import {GroupsModule} from './groups/groups.module';
 import {FooterModule} from './components/footer/footer.module';
 import {SidebarModule} from './components/sidebar/sidebar.module';
@@ -28,6 +20,8 @@ import {EventCreationComponent} from './dialogs/event-creation/event-creation.co
 import {GroupCreationComponent} from './dialogs/group-creation/group-creation.component';
 import {GroupModule} from './group/group.module';
 import {GroupMembersComponent} from './dialogs/group-members/group-members.component';
+import {LoginModule} from './auth/login/login.module';
+import {CookieService} from 'ngx-cookie-service';
 
 @NgModule({
   imports: [
@@ -52,11 +46,12 @@ import {GroupMembersComponent} from './dialogs/group-members/group-members.compo
     EventModule,
     HttpClientModule,
     GroupModule,
+    LoginModule,
   ],
   declarations: [
     AppComponent,
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent],
   entryComponents: [EventCreationComponent, GroupCreationComponent, GroupMembersComponent]
 })
