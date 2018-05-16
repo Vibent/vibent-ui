@@ -5,16 +5,24 @@
                 <h2 class="group-title">{{group.name}}</h2>
             </div>
             <div class="col-xl-12" style="text-align: center">
-                <a href="javascript:void(0);"><h5 class="members-number" (click)="openGroupMembersDialog()">{{group.memberRefs.length}} members</h5></a>
-          </div>
+                <a href="javascript:void(0);"><h5 class="members-number" (click)="openGroupMembersDialog()">
+                    {{group.memberRefs.length}} members</h5></a>
+            </div>
             <div class="col-xl-10">
                 <h5 class="group-description">{{group.description}}</h5>
             </div>
             <div class="col-xl-12" style="text-align: center">
-                <div class="btn btn-round btn-add-event-in-group" (click)="openEventCreationDialog()">Create an event</div>
+                <div class="btn btn-round btn-add-event-in-group" (click)="openEventCreationDialog()">Create an event
+                </div>
             </div>
         </div>
     </div>
-
-    <app-event-preview *ngFor="let event of events" [event]=event></app-event-preview>
+    <div *ngIf="events.length>0;else no_events">
+        <app-event-preview *ngFor="let event of events" [event]=event></app-event-preview>
+    </div>
+    <ng-template #no_events>
+        <div class="col-xl-12" style="text-align: center; margin-top: 50px; color: white;">
+            <h4>No events... bouhouhou :'(</h4>
+        </div>
+    </ng-template>
 </div>

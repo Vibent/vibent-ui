@@ -1,27 +1,22 @@
 import { NgModule } from '@angular/core';
 import {EventCreationComponent} from './event-creation.component';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {OwlDateTimeModule, OwlNativeDateTimeModule} from 'ng-pick-datetime';
+import { OwlDateTimeModule} from 'ng-pick-datetime';
+import { OwlMomentDateTimeModule } from 'ng-pick-datetime-moment';
 import {CommonModule} from '@angular/common';
 import {ReactiveFormsModule} from '@angular/forms';
-import {EventCreationService} from '../../services/event-creation.service';
+
 
 @NgModule({
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    MatDialogModule,
-    MatDatepickerModule,
-    MatFormFieldModule,
     OwlDateTimeModule,
-    OwlNativeDateTimeModule,
+    OwlMomentDateTimeModule,
   ],
   declarations: [
     EventCreationComponent
   ],
-  providers: [EventCreationService],
+  providers: [],
   exports: [EventCreationComponent]
 })
 export class EventCreationModule { }

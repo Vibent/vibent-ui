@@ -16,7 +16,7 @@
 
         <div class="row justify-content-center">
             <div class="Input">
-            <input formControlName="date" [min]="minimalDate" [owlDateTime]="dt" class="calendar" [owlDateTimeTrigger]="dt" placeholder="Date">
+            <input formControlName="date" [min]="dateTime" [(ngModel)]="dateTime" [owlDateTime]="dt" class="calendar" [owlDateTimeTrigger]="dt" placeholder="Date">
             <owl-date-time #dt></owl-date-time>
             </div>
         </div>
@@ -25,7 +25,7 @@
             <div class="group-selection">
                 <h4 class="col-xl-12">Select a group</h4>
                 <select required formControlName="group">
-                    <option value="{{group}}" *ngFor="let group of groups">{{group._groupName}}</option>
+                    <option value="{{group}}" *ngFor="let group of groups">{{group}}</option>
                     <option value="5">No</option>
                 </select>
             </div>

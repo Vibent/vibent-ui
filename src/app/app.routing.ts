@@ -2,7 +2,6 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule, Routes} from '@angular/router';
-
 import {EventsComponent} from './events/events.component';
 import {GroupsComponent} from './groups/groups.component';
 import {EventComponent} from './event/event.component';
@@ -12,6 +11,7 @@ import {GroupsResolver} from './resolvers/groups.resolver';
 import {EventsResolver} from './resolvers/events.resolver';
 import {EventResolver} from './resolvers/event.resolver';
 import {LoginComponent} from './auth/login/login.component';
+import {GroupEventsResolver} from './resolvers/group-events.resolver';
 
 const routes: Routes = [
     {
@@ -42,13 +42,14 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [
-        CommonModule,
-        BrowserModule,
-        RouterModule.forRoot(routes)
-    ],
-    exports: [],
-    providers: [GroupResolver, GroupsResolver, EventsResolver, EventResolver]
+  imports: [
+    CommonModule,
+    BrowserModule,
+    RouterModule.forRoot(routes)
+  ],
+  exports: [],
+  providers: [GroupResolver, GroupEventsResolver, GroupsResolver, EventsResolver, EventResolver]
+
 })
 export class AppRoutingModule {
 }

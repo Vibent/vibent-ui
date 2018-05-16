@@ -4,7 +4,7 @@ export interface Event {
   ref?: string;
   description?: string;
   endDate?: Date;
-  startDate?: Date;
+  startDate?: string;
   groupRef: string;
   participationRefs?: string[];
 

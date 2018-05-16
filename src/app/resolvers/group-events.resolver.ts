@@ -3,15 +3,15 @@ import {Injectable} from '@angular/core';
 import {ActivatedRouteSnapshot, Resolve} from '@angular/router';
 
 import {Observable} from 'rxjs/Observable';
-import {Group} from '../models/group';
+import {Event} from '../models/event';
 import {HttpService} from '../http/http.service';
 
 @Injectable()
-export class GroupResolver implements Resolve<Group> {
+export class GroupEventsResolver implements Resolve<Event[]> {
   constructor(private httpService: HttpService) {
   }
 
-  resolve(route: ActivatedRouteSnapshot): any | Observable<any> | Promise<any> {
-    return this.httpService.getGroup(route.paramMap.get('ref'));
+  resolve(route: ActivatedRouteSnapshot): Event[] | Observable<Event[]> | Promise<Event[]> {
+    return this.httpService.getGroupEvents(route.paramMap.get('ref'));
   }
 }
