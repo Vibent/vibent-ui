@@ -40,6 +40,7 @@
     "mailcomposer": "^4.0.2",
     "moment": "2.18.1",
     "ng-pick-datetime": "^5.2.6",
+    "ngx-cookie-service": "^1.0.10",
     "nodemailer": "^4.6.4",
     "perfect-scrollbar": "1.1.0",
     "popper.js": "1.14.3",
