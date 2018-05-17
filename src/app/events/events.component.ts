@@ -16,14 +16,15 @@ export class EventsComponent implements OnInit {
 
   data;
   // TODO: generate groupRef - groupName array for dialog
-  public groups: string[] = [];
+  public groups: any[] = [];
   events: Event[];
 
   constructor(public dialog: MatDialog, private route: ActivatedRoute, private httpService: HttpService) {
     this.events = this.route.snapshot.data['events'];
     this.httpService.getGroups().subscribe((groups) => {
       for (const group of groups) {
-        this.groups.push(group.ref);
+        const g = {ref: group.ref, name: group.name};
+        this.groups.push(g);
       }
     });
   }

@@ -25,7 +25,7 @@
             <div class="group-selection">
                 <h4 class="col-xl-12">Select a group</h4>
                 <select required formControlName="group">
-                    <option value="{{group}}" *ngFor="let group of groups">{{group}}</option>
+                    <option value="{{group.ref}}" *ngFor="let group of groups">{{group.name}}</option>
                     <option value="5">No</option>
                 </select>
             </div>
@@ -34,6 +34,6 @@
             <button (click)="saveEvent()" class="btn btn-round btn-add-event">Create</button>
         </div>
         <div class="row justify-content-center">
-            <button mat-dialog-close class="btn btn-round btn-danger" style="opacity: 0.8">Cancel</button>
+            <button mat-dialog-close class="btn btn-round btn-danger" (click)="close()"style="opacity: 0.8">Cancel</button>
         </div>
     </div>

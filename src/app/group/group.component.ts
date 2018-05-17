@@ -21,6 +21,8 @@ export class GroupComponent implements OnInit {
   constructor(public dialogGroupMembers: MatDialog, public dialogEventCreation: MatDialog, private route: ActivatedRoute) {
     this.group = this.route.snapshot.data['group'];
     this.events = this.route.snapshot.data['groupEvents'];
+    console.log(this.group);
+    console.log(this.events);
   }
 
   ngOnInit() {
@@ -75,8 +77,10 @@ export class GroupComponent implements OnInit {
   }
 
   openEventCreationDialog() {
+    const groups: any[] = [];
+    groups.push({ref: this.group.ref, name: this.group.name});
     const dialogRef = this.dialogEventCreation.open(EventCreationComponent, {
-      data: {group: null}
+      data: {groups: groups}
     });
   }
 }

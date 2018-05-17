@@ -32,7 +32,7 @@ const routes: Routes = [
     {
         path: 'groups/:ref',
         component: GroupComponent,
-        resolve: {group: GroupResolver}
+        resolve: {group: GroupResolver, groupEvents: GroupEventsResolver}
     },
     {
         path: 'login',

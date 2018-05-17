@@ -17,7 +17,7 @@
             </div>
         </div>
     </div>
-    <div *ngIf="events.length>0;else no_events">
+    <div *ngIf="events && events.length>0;else no_events">
         <app-event-preview *ngFor="let event of events" [event]=event></app-event-preview>
     </div>
     <ng-template #no_events>
