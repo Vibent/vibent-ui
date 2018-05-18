@@ -6,6 +6,7 @@ import {GroupPreviewMember} from '../models/group-preview-member';
 import {EventCreationComponent} from '../dialogs/event-creation/event-creation.component';
 import {Group} from '../models/group';
 import {ActivatedRoute} from '@angular/router';
+import {AddGroupMembersComponent} from '../dialogs/group-members/add-group-members/add-group-members.component';
 
 @Component({
   selector: 'app-group',
@@ -74,6 +75,10 @@ export class GroupComponent implements OnInit {
     const dialogRef = this.dialogGroupMembers.open(GroupMembersComponent, {
       data: {groupMembers: this.groupPreviewMembers}
     });
+  }
+
+  openAddGroupMemberDialog() {
+    const dialogRef = this.dialogGroupMembers.open(AddGroupMembersComponent);
   }
 
   openEventCreationDialog() {
