@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {EventParticipant} from '../models/event-participant';
 import {ActivatedRoute} from '@angular/router';
 import {Event} from '../models/event';
+
 @Component({
   selector: 'app-event',
   templateUrl: './event.component.html',

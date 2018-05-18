@@ -11,8 +11,10 @@ export class GroupPreviewComponent implements OnInit {
   @Input()
   groupPreview: GroupPreview;
 
-  constructor() { }
+  constructor() {
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 }

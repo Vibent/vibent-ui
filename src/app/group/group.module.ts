@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 import {GroupComponent} from './group.component';
@@ -21,4 +21,5 @@ import {AddGroupMembersModule} from '../dialogs/group-members/add-group-members/
   ],
   providers: [],
 })
-export class GroupModule { }
+export class GroupModule {
+}

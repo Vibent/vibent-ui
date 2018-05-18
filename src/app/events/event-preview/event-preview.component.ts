@@ -22,7 +22,10 @@ export class EventPreviewComponent implements OnChanges {
     const event: SimpleChange = changes.event;
     let promise: Promise<AdditionnalEventInfos>;
     promise = this.additonalEventInfoService.getAdditionnalInfos(this.event);
-    promise.then((val) => {this.additionnalEventInfos = val;  this.ressourcesLoaded = Promise.resolve(true); });
+    promise.then((val) => {
+      this.additionnalEventInfos = val;
+      this.ressourcesLoaded = Promise.resolve(true);
+    });
   }
 
 }

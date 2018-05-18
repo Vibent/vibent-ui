@@ -1,5 +1,4 @@
-
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {EventComponent} from './event.component';
 import {RouterModule} from '@angular/router';
@@ -16,4 +15,5 @@ import {EventParticipantsPreviewModule} from './event-participants/event-partici
   ],
   providers: [],
 })
-export class EventModule { }
+export class EventModule {
+}

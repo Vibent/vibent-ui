@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {EventPreviewComponent} from './event-preview.component';
 import {RouterModule} from '@angular/router';
@@ -15,4 +15,5 @@ import {AdditionalEventInfoService} from '../../services/additional-event-info.s
   providers: [AdditionalEventInfoService],
   exports: [EventPreviewComponent]
 })
-export class EventPreviewModule { }
+export class EventPreviewModule {
+}

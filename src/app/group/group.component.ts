@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {EventPreview} from '../models/event-preview';
 import {MatDialog} from '@angular/material';
 import {GroupMembersComponent} from '../dialogs/group-members/group-members.component';

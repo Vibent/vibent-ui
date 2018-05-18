@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {GroupPreview} from '../models/group-preview';
 import {GroupPreviewMember} from '../models/group-preview-member';
 import {MatDialog} from '@angular/material';
@@ -36,10 +36,10 @@ export class GroupsComponent implements OnInit {
     }
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   openDialog() {
-    const dialogRef = this.dialog.open(GroupCreationComponent, {
-    });
+    const dialogRef = this.dialog.open(GroupCreationComponent, {});
   }
 }
