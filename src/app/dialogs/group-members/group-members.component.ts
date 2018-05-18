@@ -9,9 +9,7 @@ import {GroupPreviewMember} from '../../models/group-preview-member';
   styleUrls: ['./group-members.component.css']
 })
 export class GroupMembersComponent implements OnInit {
-  title: string;
-  description: string;
-  group: string;
+
   form: FormGroup;
   groupMembers: GroupPreviewMember[];
 

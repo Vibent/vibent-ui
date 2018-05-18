@@ -5,6 +5,7 @@ import {GroupComponent} from './group.component';
 import {EventPreviewModule} from '../events/event-preview/event-preview.module';
 import {MatDialogModule} from '@angular/material/dialog';
 import {GroupMembersModule} from '../dialogs/group-members/group-members.module';
+import {AddGroupMembersModule} from '../dialogs/group-members/add-group-members/add-group-members.module';
 
 @NgModule({
   imports: [
@@ -13,6 +14,7 @@ import {GroupMembersModule} from '../dialogs/group-members/group-members.module'
     EventPreviewModule,
     MatDialogModule,
     GroupMembersModule,
+    AddGroupMembersModule
   ],
   declarations: [
     GroupComponent
