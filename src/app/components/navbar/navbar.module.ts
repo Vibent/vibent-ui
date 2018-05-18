@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {NavbarComponent} from './navbar.component';
 
@@ -13,4 +13,5 @@ import {NavbarComponent} from './navbar.component';
   providers: [],
   exports: [NavbarComponent]
 })
-export class NavbarModule { }
+export class NavbarModule {
+}

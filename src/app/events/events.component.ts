@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {EventPreview} from '../models/event-preview';
 import {EventCreationComponent} from '../dialogs/event-creation/event-creation.component';
-import {MatDialog } from '@angular/material';
+import {MatDialog} from '@angular/material';
 import {Group} from '../models/group';
 import {Event} from '../models/event';
 import {ActivatedRoute} from '@angular/router';

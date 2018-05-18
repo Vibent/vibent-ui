@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -24,4 +24,5 @@ import {HttpService} from '../../http/http.service';
   providers: [HttpService],
   exports: [GroupCreationComponent]
 })
-export class GroupCreationModule { }
+export class GroupCreationModule {
+}

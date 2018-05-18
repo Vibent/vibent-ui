@@ -49,12 +49,18 @@ export class EventCreationComponent implements OnInit {
 
   public saveEvent() {
     this.dialogRef.close(this.form.value);
+    let groupRef: string;
+    if (this.form.value.group) {
+      groupRef = this.form.value.group;
+    } else {
+      groupRef = this.groups[0].ref;
+    }
     console.log(this.dateTime.toJSON());
     const event: Event = {
       title: this.form.value.title,
       description: this.form.value.description,
       startDate: this.dateTime.toJSON(),
-      groupRef: this.form.value.group,
+      groupRef: groupRef,
     };
     this.httpService.createEvent(event).subscribe(res => {
       this.router.navigate(['/events/' + res['ref']]);

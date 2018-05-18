@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {AddGroupMembersComponent} from './add-group-members.component';
 
@@ -12,4 +12,5 @@ import {AddGroupMembersComponent} from './add-group-members.component';
   providers: [],
   exports: [AddGroupMembersComponent]
 })
-export class AddGroupMembersModule { }
+export class AddGroupMembersModule {
+}

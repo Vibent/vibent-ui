@@ -18,11 +18,12 @@ export class GroupCreationComponent implements OnInit {
   group: string;
   form: FormGroup;
   result: Group;
+
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<GroupCreationComponent>,
               private httpService: HttpService,
               @Inject(MAT_DIALOG_DATA) data,
-              private router: Router, ) {
+              private router: Router,) {
     dialogRef.disableClose = true;
     dialogRef.updateSize('600px', '80%');
   }
@@ -41,7 +42,9 @@ export class GroupCreationComponent implements OnInit {
       description: this.form.value.description,
       allAdmins: true
     };
-    this.httpService.createGroup(group).subscribe(res => {  this.router.navigate(['/groups/' + res['ref']]); });
+    this.httpService.createGroup(group).subscribe(res => {
+      this.router.navigate(['/groups/' + res['ref']]);
+    });
 
   }
 }

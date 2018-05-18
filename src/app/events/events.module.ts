@@ -1,5 +1,4 @@
-
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {EventsComponent} from './events.component';
 import {EventPreviewModule} from './event-preview/event-preview.module';
@@ -20,4 +19,5 @@ import {EventCreationModule} from '../dialogs/event-creation/event-creation.modu
   ],
   providers: [],
 })
-export class EventsModule { }
+export class EventsModule {
+}

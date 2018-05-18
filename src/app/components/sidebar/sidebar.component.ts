@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 declare const $: any;
+
 declare interface RouteInfo {
-    path: string;
-    title: string;
-    icon: string;
-    class: string;
+  path: string;
+  title: string;
+  icon: string;
+  class: string;
 }
+
 export const ROUTES: RouteInfo[] = [
-    { path: 'events', title: 'Events',  icon: 'bubble_chart', class: '' },
-    { path: 'groups', title: 'Groups',  icon: 'group', class: '' },
+  {path: 'events', title: 'Events', icon: 'bubble_chart', class: ''},
+  {path: 'groups', title: 'Groups', icon: 'group', class: ''},
 ];
 
 @Component({
@@ -20,15 +22,17 @@ export const ROUTES: RouteInfo[] = [
 export class SidebarComponent implements OnInit {
   menuItems: any[];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
   }
+
   isMobileMenu() {
-      if ($(window).width() > 991) {
-        return false;
-      }
-      return true;
+    if ($(window).width() > 991) {
+      return false;
+    }
+    return true;
   };
 }

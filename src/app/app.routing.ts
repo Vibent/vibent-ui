@@ -14,31 +14,31 @@ import {LoginComponent} from './auth/login/login.component';
 import {GroupEventsResolver} from './resolvers/group-events.resolver';
 
 const routes: Routes = [
-    {
-        path: 'events',
-        component: EventsComponent,
-        resolve: {events: EventsResolver}
-    },
-    {
-        path: 'events/:ref',
-        component: EventComponent,
-        resolve: {event: EventResolver}
-    },
-    {
-        path: 'groups',
-        component: GroupsComponent,
-        resolve: {groups: GroupsResolver}
-    },
-    {
-        path: 'groups/:ref',
-        component: GroupComponent,
-        resolve: {group: GroupResolver, groupEvents: GroupEventsResolver}
-    },
-    {
-        path: 'login',
-        component: LoginComponent
-    },
-    {path: '', redirectTo: 'events', pathMatch: 'full'}
+  {
+    path: 'events',
+    component: EventsComponent,
+    resolve: {events: EventsResolver}
+  },
+  {
+    path: 'events/:ref',
+    component: EventComponent,
+    resolve: {event: EventResolver}
+  },
+  {
+    path: 'groups',
+    component: GroupsComponent,
+    resolve: {groups: GroupsResolver}
+  },
+  {
+    path: 'groups/:ref',
+    component: GroupComponent,
+    resolve: {group: GroupResolver, groupEvents: GroupEventsResolver}
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {path: '', redirectTo: 'events', pathMatch: 'full'}
 ];
 
 @NgModule({

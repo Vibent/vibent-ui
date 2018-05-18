@@ -1,12 +1,14 @@
 <div class="participant-profile">
-    <div class="participant-avatar-{{this.getResponseCss(participant._participantResponse)}}">
-        <a href="#pablo">
-            <img class="img" src={{participant._participantAvatar}} />
-        </a>
-    </div>
-    <div class="participant-user-body">
-        <div class="participant-user-name">{{participant._participantName}}</div>
-        <div class="participant-user-additional-{{this.getResponseCss(participant._participantResponse)}}">{{participant._participantResponse}}</div>
-    </div>
+	<div class="participant-avatar-{{this.getResponseCss(participant._participantResponse)}}">
+		<a href="#pablo">
+			<img class="img" src={{participant._participantAvatar}}/>
+		</a>
+	</div>
+	<div class="participant-user-body">
+		<div class="participant-user-name">{{participant._participantName}}</div>
+		<div class="participant-user-additional-{{this.getResponseCss(participant._participantResponse)}}">
+			{{participant._participantResponse}}
+		</div>
+	</div>
 </div>
 

@@ -13,9 +13,11 @@ export class EventParticipantsPreviewComponent implements OnInit {
   @Input()
   participant: EventParticipant;
 
-  constructor() {}
+  constructor() {
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   getResponseCss(response: string): string {
     if (response === 'Participates') {
@@ -23,6 +25,8 @@ export class EventParticipantsPreviewComponent implements OnInit {
     }
     if (response === 'Don\'t know') {
       return 'idk';
-    } else { return 'dontparticipate'; }
+    } else {
+      return 'dontparticipate';
+    }
   }
 }

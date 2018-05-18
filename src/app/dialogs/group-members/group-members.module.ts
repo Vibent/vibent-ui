@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -25,4 +25,5 @@ import {GroupPreviewMemberModule} from '../../groups/group-preview/group-preview
   providers: [],
   exports: [GroupMembersComponent]
 })
-export class GroupMembersModule { }
+export class GroupMembersModule {
+}

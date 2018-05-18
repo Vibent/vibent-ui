@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { GroupPreviewMemberComponent } from './group-preview-member.component';
+import {GroupPreviewMemberComponent} from './group-preview-member.component';
 
 describe('GroupPreviewMemberComponent', () => {
   let component: GroupPreviewMemberComponent;
@@ -8,9 +8,9 @@ describe('GroupPreviewMemberComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GroupPreviewMemberComponent ]
+      declarations: [GroupPreviewMemberComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

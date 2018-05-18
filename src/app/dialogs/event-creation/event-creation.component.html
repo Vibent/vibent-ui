@@ -1,39 +1,41 @@
+<div class="row justify-content-center">
+	<div class="create-event-title">Create an event</div>
+</div>
 
-    <div class="row justify-content-center">
-        <div class="create-event-title">Create an event</div>
-    </div>
+<div [formGroup]="form">
+	<div class="Input">
+		<input type="text" formControlName="title" id="title" class="Input-text" placeholder="Event title">
+		<label for="title" class="Input-label">Title</label>
+	</div>
+	<div class="TextArea">
+		<textarea data-autoresize id="description" formControlName="description" class="Input-text"
+							placeholder="Event decription"></textarea>
+		<label for="description" class="TextArea-label">Description</label>
+	</div>
 
-    <div [formGroup]="form">
-        <div class="Input">
-            <input type="text" formControlName="title" id="title" class="Input-text" placeholder="Event title">
-            <label for="title" class="Input-label">Title</label>
-        </div>
-        <div class="TextArea">
-            <textarea data-autoresize id="description" formControlName="description" class="Input-text" placeholder="Event decription"></textarea>
-            <label for="description" class="TextArea-label">Description</label>
-        </div>
+	<div class="row justify-content-center">
+		<div class="Input">
+			<input formControlName="date" [min]="dateTime" [(ngModel)]="dateTime" [owlDateTime]="dt" class="calendar"
+						 [owlDateTimeTrigger]="dt" placeholder="Date">
+			<owl-date-time #dt></owl-date-time>
+		</div>
+	</div>
 
-
-        <div class="row justify-content-center">
-            <div class="Input">
-            <input formControlName="date" [min]="dateTime" [(ngModel)]="dateTime" [owlDateTime]="dt" class="calendar" [owlDateTimeTrigger]="dt" placeholder="Date">
-            <owl-date-time #dt></owl-date-time>
-            </div>
-        </div>
-
-        <div class="row justify-content-center">
-            <div class="group-selection">
-                <h4 class="col-xl-12">Select a group</h4>
-                <select required formControlName="group">
-                    <option value="{{group.ref}}" *ngFor="let group of groups">{{group.name}}</option>
-                    <option value="5">No</option>
-                </select>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <button (click)="saveEvent()" class="btn btn-round btn-add-event">Create</button>
-        </div>
-        <div class="row justify-content-center">
-            <button mat-dialog-close class="btn btn-round btn-danger" (click)="close()"style="opacity: 0.8">Cancel</button>
-        </div>
-    </div>
+	<div *ngIf="groups && groups.length > 1">
+		<div class="row justify-content-center">
+			<div class="group-selection">
+				<h4 class="col-xl-12">Select a group</h4>
+				<select required formControlName="group">
+					<option value="{{group.ref}}" *ngFor="let group of groups">{{group.name}}</option>
+					<option value="5">No</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="row justify-content-center" style="margin-top: 50px;">
+		<button (click)="saveEvent()" class="btn btn-round btn-add-event">Create</button>
+	</div>
+	<div class="row justify-content-center">
+		<button mat-dialog-close class="btn btn-round btn-danger" (click)="close()" style="opacity: 0.8">Cancel</button>
+	</div>
+</div>
