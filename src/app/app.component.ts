@@ -13,39 +13,11 @@ declare const $: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  private _router: Subscription;
-  private lastPoppedUrl: string;
-  private yScrollStack: number[] = [];
 
-  constructor(public location: Location, private router: Router) {
+  constructor(public location: Location) {
   }
 
   ngOnInit() {
-    const isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
-    const elemMainPanel = <HTMLElement>document.querySelector('.main-panel');
-    const elemSidebar = <HTMLElement>document.querySelector('.sidebar .sidebar-wrapper');
-
-    this.location.subscribe((ev: PopStateEvent) => {
-      this.lastPoppedUrl = ev.url;
-    });
-    this.router.events.subscribe((event: any) => {
-      if (event instanceof NavigationStart) {
-        if (event.url !== this.lastPoppedUrl) {
-          this.yScrollStack.push(window.scrollY);
-        }
-      } else if (event instanceof NavigationEnd) {
-        if (event.url === this.lastPoppedUrl) {
-          this.lastPoppedUrl = undefined;
-          window.scrollTo(0, this.yScrollStack.pop());
-        } else {
-          window.scrollTo(0, 0);
-        }
-      }
-    });
-    this._router = this.router.events.filter(event => event instanceof NavigationEnd).subscribe((event: NavigationEnd) => {
-      elemMainPanel.scrollTop = 0;
-      elemSidebar.scrollTop = 0;
-    });
     if (window.matchMedia(`(min-width: 960px)`).matches && !this.isMac()) {
     }
   }
@@ -55,9 +27,9 @@ export class AppComponent implements OnInit {
   }
 
   isMaps(path) {
-    let titlee = this.location.prepareExternalUrl(this.location.path());
-    titlee = titlee.slice(1);
-    if (path == titlee) {
+    let title = this.location.prepareExternalUrl(this.location.path());
+    title = title.slice(1);
+    if (path === title) {
       return false;
     } else {
       return true;

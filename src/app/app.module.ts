@@ -23,6 +23,7 @@ import {GroupMembersComponent} from './dialogs/group-members/group-members.compo
 import {LoginModule} from './auth/login/login.module';
 import {CookieService} from 'ngx-cookie-service';
 import {AddGroupMembersComponent} from './dialogs/group-members/add-group-members/add-group-members.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   imports: [
@@ -51,6 +52,7 @@ import {AddGroupMembersComponent} from './dialogs/group-members/add-group-member
   ],
   declarations: [
     AppComponent,
+    MainComponent,
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],
