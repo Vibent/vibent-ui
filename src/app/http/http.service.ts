@@ -3,8 +3,6 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Group} from '../models/group';
 import {Event} from '../models/event';
 import {Observable} from 'rxjs/Observable';
-import {LoginRequest} from '../models/login-request';
-import {LoginResponse} from '../models/login-response';
 import {CookieService} from 'ngx-cookie-service';
 
 @Injectable()
@@ -61,12 +59,20 @@ export class HttpService {
     return this.http.post(this.API_URL + '/event', body, this.getOptions());
   }
 
-  login(loginRequest: LoginRequest): Observable<LoginResponse> {
+  login(loginRequest): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({'Content-Type': 'application/json'})
     };
 
-    return this.http.post<LoginResponse>(this.API_URL + '/auth/login', loginRequest, httpOptions);
+    return this.http.post(this.API_URL + '/auth/login', loginRequest, httpOptions);
+  }
+
+  register(registrationRequest): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
+
+    return this.http.post(this.API_URL + '/auth/register', registrationRequest, httpOptions);
   }
 
 }

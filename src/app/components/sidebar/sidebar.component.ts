@@ -1,4 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit} from '@angular/core';
+import {AuthenticationService} from '../../services/authentication.service';
+import {Router} from '@angular/router';
+import {Location} from '@angular/common';
 
 declare const $: any;
 
@@ -22,8 +25,8 @@ export const ROUTES: RouteInfo[] = [
 export class SidebarComponent implements OnInit {
   menuItems: any[];
 
-  constructor() {
-  }
+  constructor(private router: Router,
+              private authenticationService: AuthenticationService) {}
 
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
@@ -35,4 +38,9 @@ export class SidebarComponent implements OnInit {
     }
     return true;
   };
+
+  logout(): void {
+    this.authenticationService.logout();
+    this.router.navigate(['/login']);
+  }
 }

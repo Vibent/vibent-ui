@@ -13,14 +13,20 @@ import {EventResolver} from './resolvers/event.resolver';
 import {LoginComponent} from './auth/login/login.component';
 import {GroupEventsResolver} from './resolvers/group-events.resolver';
 import {MainComponent} from './main/main.component';
+import {AuthGuardService} from './services/auth-guard.service';
+import {RegisterComponent} from './auth/register/register.component';
 
 const routes: Routes = [
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
   {
     path: 'login',
     component: LoginComponent
   },
   {
-    path: '', component: MainComponent, pathMatch: 'prefix',
+    path: '', component: MainComponent, pathMatch: 'prefix', canActivate: [AuthGuardService],
     children: [
       {
         path: 'events',
@@ -42,9 +48,9 @@ const routes: Routes = [
         component: GroupComponent,
         resolve: {group: GroupResolver, groupEvents: GroupEventsResolver}
       },
-      { path: '', redirectTo: 'events', pathMatch: 'full'}
+      {path: '**', redirectTo: '/events', pathMatch: 'full'}
     ]
-  }
+  },
 ];
 
 @NgModule({
@@ -54,7 +60,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   exports: [],
-  providers: [GroupResolver, GroupEventsResolver, GroupsResolver, EventsResolver, EventResolver]
+  providers: [GroupResolver, GroupEventsResolver, GroupsResolver, EventsResolver, EventResolver, AuthGuardService]
 
 })
 export class AppRoutingModule {
