@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 
-import {MatButtonModule, MatInputModule, MatRippleModule, MatTooltipModule,} from '@angular/material';
+import {MatButtonModule, MatInputModule, MatRippleModule, MatTooltipModule } from '@angular/material';
 
 import {AppRoutingModule} from './app.routing';
 import {AppComponent} from './app.component';
@@ -23,7 +23,8 @@ import {GroupMembersComponent} from './dialogs/group-members/group-members.compo
 import {LoginModule} from './auth/login/login.module';
 import {CookieService} from 'ngx-cookie-service';
 import {AddGroupMembersComponent} from './dialogs/group-members/add-group-members/add-group-members.component';
-import { MainComponent } from './main/main.component';
+import {MainComponent} from './main/main.component';
+import {RegisterModule} from './auth/register/register.module';
 
 @NgModule({
   imports: [
@@ -49,6 +50,7 @@ import { MainComponent } from './main/main.component';
     HttpClientModule,
     GroupModule,
     LoginModule,
+    RegisterModule
   ],
   declarations: [
     AppComponent,

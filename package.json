@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start-standalone": "node_modules/.bin/ng serve"
   },
   "private": true,
   "dependencies": {
@@ -27,6 +28,7 @@
     "@angular/router": "5.2.9",
     "ajv": "6.4.0",
     "arrive": "2.4.1",
+    "bcryptjs": "^2.4.3",
     "bootstrap": "4.1.0",
     "bootstrap-material-design": "4.1.1",
     "bootstrap-notify": "^3.1.3",
@@ -53,6 +55,7 @@
     "@angular/cli": "1.7.4",
     "@angular/compiler-cli": "5.2.9",
     "@angular/language-service": "5.2.9",
+    "@types/bcryptjs": "^2.4.1",
     "@types/bootstrap": "3.3.32",
     "@types/chartist": "0.9.34",
     "@types/googlemaps": "^3.30.8",
