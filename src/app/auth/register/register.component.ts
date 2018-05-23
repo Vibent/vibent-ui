@@ -3,7 +3,6 @@ import { AuthenticationService } from '../../services/authentication.service';
 import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { PasswordValidator } from '../../validators/password.validator';
 
 @Component({
   selector: 'app-register',
