@@ -3,15 +3,16 @@ import {Injectable} from '@angular/core';
 import {ActivatedRouteSnapshot, Resolve} from '@angular/router';
 
 import {Observable} from 'rxjs/Observable';
-import {Group} from '../models/group';
 import {HttpService} from '../http/http.service';
+import {User} from '../models/user';
 
 @Injectable()
-export class GroupResolver implements Resolve<Group> {
+export class ProfileResolver implements Resolve<User> {
   constructor(private httpService: HttpService) {
   }
 
-  resolve(route: ActivatedRouteSnapshot): Group | Observable<Group> | Promise<Group> {
-    return this.httpService.getGroup(route.paramMap.get('ref'));
+  resolve(route: ActivatedRouteSnapshot): User | Observable<User> | Promise<User> {
+    console.log('res');
+    return this.httpService.getMe();
   }
 }

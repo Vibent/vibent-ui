@@ -12,7 +12,9 @@
 					<a href="javascript:void(0);"><h5 class="members-number" (click)="openGroupMembersDialog()">
 						{{group.memberRefs.length}} member<span *ngIf="group.memberRefs.length>1">s</span></h5></a>
 					<a href="javascript:void(0);">
-						<div class="add-group-member" (click)="openAddGroupMemberDialog()">	<div class="fa fa-user-plus"></div></div>
+						<div class="add-group-member" (click)="openAddGroupMemberDialog()">
+							<div class="fa fa-user-plus"></div>
+						</div>
 					</a>
 				</div>
 			</div>

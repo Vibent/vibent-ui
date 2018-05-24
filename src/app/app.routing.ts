@@ -6,7 +6,6 @@ import {EventsComponent} from './events/events.component';
 import {GroupsComponent} from './groups/groups.component';
 import {EventComponent} from './event/event.component';
 import {GroupComponent} from './group/group.component';
-import {GroupResolver} from './resolvers/group.resolver';
 import {GroupsResolver} from './resolvers/groups.resolver';
 import {EventsResolver} from './resolvers/events.resolver';
 import {EventResolver} from './resolvers/event.resolver';
@@ -15,6 +14,9 @@ import {GroupEventsResolver} from './resolvers/group-events.resolver';
 import {MainComponent} from './main/main.component';
 import {AuthGuardService} from './services/auth-guard.service';
 import {RegisterComponent} from './auth/register/register.component';
+import {ProfileComponent} from './me/profile.component';
+import {ProfileResolver} from './resolvers/profile.resolver';
+import {GroupResolver} from './resolvers/group.resolver';
 
 const routes: Routes = [
   {
@@ -28,6 +30,11 @@ const routes: Routes = [
   {
     path: '', component: MainComponent, pathMatch: 'prefix', canActivate: [AuthGuardService],
     children: [
+      {
+        path: 'me',
+        component: ProfileComponent,
+        resolve: {user: ProfileResolver}
+      },
       {
         path: 'events',
         component: EventsComponent,
@@ -60,7 +67,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   exports: [],
-  providers: [GroupResolver, GroupEventsResolver, GroupsResolver, EventsResolver, EventResolver, AuthGuardService]
+  providers: [GroupResolver, GroupEventsResolver, GroupsResolver, ProfileResolver, EventsResolver, EventResolver, AuthGuardService]
 
 })
 export class AppRoutingModule {
