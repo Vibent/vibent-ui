@@ -21,7 +21,7 @@
 		</div>
 	</div>
 
-	<div *ngIf="groups && groups.length > 1">
+	<div *ngIf="!groups[0].fromGroup">
 		<div class="row justify-content-center">
 			<div class="group-selection">
 				<h4 class="col-xl-12">Select a group</h4>

@@ -4,6 +4,7 @@ import {Group} from '../models/group';
 import {Event} from '../models/event';
 import {Observable} from 'rxjs/Observable';
 import {CookieService} from 'ngx-cookie-service';
+import {User} from '../models/user';
 
 @Injectable()
 export class HttpService {
@@ -58,6 +59,20 @@ export class HttpService {
     const body = JSON.stringify(event);
     return this.http.post(this.API_URL + '/event', body, this.getOptions());
   }
+
+  /** User **/
+
+  getMe(): Observable<User> {
+    return this.http.get<User>(this.API_URL + '/user/me', this.getOptions());
+  }
+
+  updateUser(user: User): Observable<User> {
+    const body = JSON.stringify(user);
+    console.log(body);
+    return this.http.patch(this.API_URL + '/user/' + user.ref, body, this.getOptions());
+  }
+
+  /** Auth **/
 
   login(loginRequest): Observable<any> {
     const httpOptions = {
