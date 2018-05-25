@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {EventCreationComponent} from './event-creation.component';
 import {OwlDateTimeModule} from 'ng-pick-datetime';
-import {OwlMomentDateTimeModule} from 'ng-pick-datetime-moment';
 import {CommonModule} from '@angular/common';
 import {ReactiveFormsModule} from '@angular/forms';
 
@@ -11,7 +10,6 @@ import {ReactiveFormsModule} from '@angular/forms';
     CommonModule,
     ReactiveFormsModule,
     OwlDateTimeModule,
-    OwlMomentDateTimeModule,
   ],
   declarations: [
     EventCreationComponent

@@ -30,6 +30,7 @@ export class EventCreationComponent implements OnInit {
               @Inject(MAT_DIALOG_DATA) data) {
 
     this.groups = data.groups;
+    console.log(this.groups);
     dialogRef.disableClose = true;
     dialogRef.updateSize('600px', '90%');
   }
@@ -55,6 +56,8 @@ export class EventCreationComponent implements OnInit {
     } else {
       groupRef = this.groups[0].ref;
     }
+    console.log(this.dateTime);
+    this.dateTime.setTime( this.dateTime.getTime() - this.dateTime.getTimezoneOffset() * 60 * 1000 );
     console.log(this.dateTime.toJSON());
     const event: Event = {
       title: this.form.value.title,

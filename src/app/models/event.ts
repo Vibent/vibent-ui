@@ -16,5 +16,6 @@ export interface Event {
   planningBubbles?: any[];
   surveyBubbles?: any[];
   travelBubbles?: any[];
+  isPassed?: boolean;
 
 }

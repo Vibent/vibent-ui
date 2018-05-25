@@ -14,15 +14,15 @@ import {HttpService} from '../http/http.service';
 export class EventsComponent implements OnInit {
 
   data;
-  // TODO: generate groupRef - groupName array for dialog
-  public groups: any[] = [];
+  public groups: any = [];
   events: Event[];
 
   constructor(public dialog: MatDialog, private route: ActivatedRoute, private httpService: HttpService) {
     this.events = this.route.snapshot.data['events'];
+    this.events.sort(this.sortEventByDate);
     this.httpService.getGroups().subscribe((groups) => {
       for (const group of groups) {
-        const g = {ref: group.ref, name: group.name};
+        const g = {ref: group.ref, name: group.name, fromGroup: false};
         this.groups.push(g);
       }
     });
@@ -37,4 +37,10 @@ export class EventsComponent implements OnInit {
     });
 
   }
+
+  sortEventByDate(a, b) {
+    const dateA = new Date(a.startDate).getTime();
+    const dateB = new Date(b.startDate).getTime();
+    return dateA < dateB ? 1 : -1;
+  };
 }

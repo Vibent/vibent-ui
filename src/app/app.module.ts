@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 
-import {MatButtonModule, MatInputModule, MatRippleModule, MatTooltipModule } from '@angular/material';
+import {MatButtonModule, MatInputModule, MatRippleModule, MatTooltipModule} from '@angular/material';
 
 import {AppRoutingModule} from './app.routing';
 import {AppComponent} from './app.component';
@@ -25,6 +25,9 @@ import {CookieService} from 'ngx-cookie-service';
 import {AddGroupMembersComponent} from './dialogs/group-members/add-group-members/add-group-members.component';
 import {MainComponent} from './main/main.component';
 import {RegisterModule} from './auth/register/register.module';
+import {ProfileModule} from './me/profile.module';
+import {ProfileSettingsModule} from './dialogs/profile-settings/profile-settings.module';
+import {ProfileSettingsComponent} from './dialogs/profile-settings/profile-settings.component';
 
 @NgModule({
   imports: [
@@ -50,7 +53,9 @@ import {RegisterModule} from './auth/register/register.module';
     HttpClientModule,
     GroupModule,
     LoginModule,
-    RegisterModule
+    RegisterModule,
+    ProfileModule,
+    ProfileSettingsModule,
   ],
   declarations: [
     AppComponent,
@@ -58,7 +63,12 @@ import {RegisterModule} from './auth/register/register.module';
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],
-  entryComponents: [EventCreationComponent, GroupCreationComponent, GroupMembersComponent, AddGroupMembersComponent]
+  entryComponents: [
+    EventCreationComponent,
+    GroupCreationComponent,
+    GroupMembersComponent,
+    AddGroupMembersComponent,
+    ProfileSettingsComponent]
 })
 export class AppModule {
 }

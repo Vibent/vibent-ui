@@ -24,6 +24,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this.listTitles = ROUTES.filter(listTitle => listTitle);
+    console.log(this.listTitles);
     const navbar: HTMLElement = this.element.nativeElement;
     this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
     this.router.events.subscribe((event) => {
@@ -118,14 +119,13 @@ export class NavbarComponent implements OnInit {
     if (titlee.charAt(0) === '#') {
       titlee = titlee.slice(2);
     }
-    titlee = titlee.split('/').pop();
-
     for (let item = 0; item < this.listTitles.length; item++) {
       if (this.listTitles[item].path === titlee) {
         return this.listTitles[item].title;
       }
     }
-    return 'Events';
+    /** Vibent is default value returned **/
+    return 'Vibent';
   }
 
   logout(): void {
