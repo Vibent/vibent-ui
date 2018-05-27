@@ -12,7 +12,6 @@ export class ProfileResolver implements Resolve<User> {
   }
 
   resolve(route: ActivatedRouteSnapshot): User | Observable<User> | Promise<User> {
-    console.log('res');
     return this.httpService.getMe();
   }
 }

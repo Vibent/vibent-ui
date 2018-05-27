@@ -44,4 +44,7 @@
 			</a>
 		</li>
 	</ul>
+	<div *ngIf="adminPanelResult.isOpen">
+		<app-group-admin-panel [groupRef]=adminPanelResult.groupRef></app-group-admin-panel>
+	</div>
 </div>

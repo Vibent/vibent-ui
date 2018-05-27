@@ -6,6 +6,7 @@ import {EventPreviewModule} from '../events/event-preview/event-preview.module';
 import {MatDialogModule} from '@angular/material/dialog';
 import {GroupMembersModule} from '../dialogs/group-members/group-members.module';
 import {AddGroupMembersModule} from '../dialogs/group-members/add-group-members/add-group-members.module';
+import {GroupSettingsModule} from '../dialogs/admin-panel/group-settings/group-settings.module';
 
 @NgModule({
   imports: [
