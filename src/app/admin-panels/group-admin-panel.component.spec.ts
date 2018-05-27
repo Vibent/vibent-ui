@@ -1,19 +1,19 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {EventComponent} from './profile.component';
+import {GroupAdminPanelComponent} from './group-admin-panel.component';
 
 describe('GroupAdminPanelComponent', () => {
-  let component: EventComponent;
-  let fixture: ComponentFixture<EventComponent>;
+  let component: GroupAdminPanelComponent;
+  let fixture: ComponentFixture<GroupAdminPanelComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [EventComponent]
+      declarations: [GroupAdminPanelComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EventComponent);
+    fixture = TestBed.createComponent(GroupAdminPanelComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

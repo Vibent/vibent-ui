@@ -1,19 +1,19 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {EventComponent} from './profile.component';
+import {GroupRightsComponent} from './group-rights.component';
 
-describe('GroupAdminPanelComponent', () => {
-  let component: EventComponent;
-  let fixture: ComponentFixture<EventComponent>;
+describe('GroupRightsComponent', () => {
+  let component: GroupRightsComponent;
+  let fixture: ComponentFixture<GroupRightsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [EventComponent]
+      declarations: [GroupRightsComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EventComponent);
+    fixture = TestBed.createComponent(GroupRightsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

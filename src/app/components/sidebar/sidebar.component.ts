@@ -1,7 +1,8 @@
-import {Component, ElementRef, OnInit} from '@angular/core';
+import {Component, ElementRef, Input, OnInit} from '@angular/core';
 import {AuthenticationService} from '../../services/authentication.service';
 import {Router} from '@angular/router';
 import {Location} from '@angular/common';
+import {AdminPanelService} from '../../services/admin-panel.service';
 
 declare const $: any;
 
@@ -26,11 +27,18 @@ export const ROUTES: RouteInfo[] = [
 export class SidebarComponent implements OnInit {
   menuItems: any[];
 
+  @Input()
+  adminPanelResult = {groupRef: null, isOpen: false};
+
   constructor(private router: Router,
-              private authenticationService: AuthenticationService) {}
+              private authenticationService: AuthenticationService,
+              private adminPanel: AdminPanelService) {}
 
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
+    this.adminPanel.change.subscribe(result => {
+      this.adminPanelResult = result;
+    });
   }
 
   isMobileMenu() {

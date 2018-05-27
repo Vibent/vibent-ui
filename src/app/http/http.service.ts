@@ -40,6 +40,11 @@ export class HttpService {
     return this.http.post(this.API_URL + '/group', body, this.getOptions());
   }
 
+  updateGroup(group: Group): Observable<Group> {
+    const body = JSON.stringify(group);
+    return this.http.patch(this.API_URL + '/group/' + group.ref, body, this.getOptions());
+  }
+
   /** Events **/
 
   getEvents(): Observable<Event[]> {
@@ -68,7 +73,6 @@ export class HttpService {
 
   updateUser(user: User): Observable<User> {
     const body = JSON.stringify(user);
-    console.log(body);
     return this.http.patch(this.API_URL + '/user/' + user.ref, body, this.getOptions());
   }
 

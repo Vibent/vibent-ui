@@ -28,6 +28,11 @@ import {RegisterModule} from './auth/register/register.module';
 import {ProfileModule} from './me/profile.module';
 import {ProfileSettingsModule} from './dialogs/profile-settings/profile-settings.module';
 import {ProfileSettingsComponent} from './dialogs/profile-settings/profile-settings.component';
+import {AdminPanelService} from './services/admin-panel.service';
+import {GroupSettingsComponent} from './dialogs/admin-panel/group-settings/group-settings.component';
+import {GroupSettingsModule} from './dialogs/admin-panel/group-settings/group-settings.module';
+import {GroupRightsModule} from './dialogs/admin-panel/group-rights/group-rights.module';
+import {GroupRightsComponent} from './dialogs/admin-panel/group-rights/group-rights.component';
 
 @NgModule({
   imports: [
@@ -56,19 +61,23 @@ import {ProfileSettingsComponent} from './dialogs/profile-settings/profile-setti
     RegisterModule,
     ProfileModule,
     ProfileSettingsModule,
+    GroupSettingsModule,
+    GroupRightsModule
   ],
   declarations: [
     AppComponent,
     MainComponent,
   ],
-  providers: [CookieService],
+  providers: [CookieService, AdminPanelService],
   bootstrap: [AppComponent],
   entryComponents: [
     EventCreationComponent,
     GroupCreationComponent,
     GroupMembersComponent,
     AddGroupMembersComponent,
-    ProfileSettingsComponent]
+    ProfileSettingsComponent,
+    GroupSettingsComponent,
+    GroupRightsComponent]
 })
 export class AppModule {
 }

@@ -1,4 +1,4 @@
-import {Component, OnInit, ElementRef} from '@angular/core';
+import {Component, OnInit, ElementRef, Input} from '@angular/core';
 import {ROUTES} from '../sidebar/sidebar.component';
 import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 import {Router} from '@angular/router';
@@ -15,6 +15,8 @@ export class NavbarComponent implements OnInit {
   mobile_menu_visible: any = 0;
   private toggleButton: any;
   private sidebarVisible: boolean;
+
+
 
   constructor(location: Location, private element: ElementRef, private router: Router,
               private authenticationService: AuthenticationService) {
@@ -120,9 +122,15 @@ export class NavbarComponent implements OnInit {
       titlee = titlee.slice(2);
     }
 
-    return this.listTitles.find(function (e) {
+    const t =  this.listTitles.find(function (e) {
       return (e.path === titlee);
-    }).title;
+    });
+
+    if (t) {
+      return t.title;
+    } else {
+      return 'Vibent';
+    }
   }
 
   logout(): void {
