@@ -4,6 +4,7 @@ import {HttpService} from '../http/http.service';
 import {Group} from '../models/group';
 import {GroupSettingsComponent} from '../dialogs/admin-panel/group-settings/group-settings.component';
 import {GroupRightsComponent} from '../dialogs/admin-panel/group-rights/group-rights.component';
+import {GroupRequestsComponent} from '../dialogs/admin-panel/group-requests/group-requests.component';
 
 @Component({
   selector: 'app-group-admin-panel',
@@ -27,13 +28,19 @@ export class GroupAdminPanelComponent implements OnInit {
   }
 
   openSettingsDialog() {
-    const dialogRef = this.dialog.open(GroupSettingsComponent, {
+    this.dialog.open(GroupSettingsComponent, {
       data: {group: this.group}
     });
   }
 
   openRightsDialog() {
-    const dialogRef = this.dialog.open(GroupRightsComponent, {
+    this.dialog.open(GroupRightsComponent, {
+      data: {group: this.group}
+    });
+  }
+
+  openRequestsDialog() {
+    this.dialog.open(GroupRequestsComponent, {
       data: {group: this.group}
     });
   }

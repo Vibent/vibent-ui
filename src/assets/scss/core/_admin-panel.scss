@@ -2,7 +2,7 @@
 .admin_card {
   padding-top: 20px;
   margin: 10px 0 20px 0;
-  background-color: #a3376d;
+  background-color: $vibent-purple;
   border-top-width: 0;
   border-bottom-width: 2px;
   -webkit-border-radius: 3px;
@@ -84,13 +84,12 @@
   position: relative;
   overflow: hidden;
   text-align: center;
-  background-color: #a3376d;
+  background-color: $vibent-purple;
 }
 
 .admin_card.hoveradmin_card .admin_cardheader {
-  background: linear-gradient(60deg, $vibent-purple, $vibent-red);
   background-size: cover;
-  height: 135px;
+  height: 56px;
 }
 
 .admin_card.hoveradmin_card .avatar {
@@ -139,8 +138,6 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    overflow: hidden;
-    margin-left: 70px;
   }
   p {
     text-align: center;
@@ -163,6 +160,112 @@
   }
 }
 
+
+.member_request_card {
+  padding-top: 20px;
+  margin: 10px 0 20px 0;
+  background-color: #ffffffcc;
+  border-top-width: 0;
+  border-bottom-width: 2px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition-duration: 0.5s;
+}
+
+.member_request_card .member_request_card-heading {
+  padding: 0 20px;
+  margin: 0;
+}
+
+.member_request_card .member_request_card-heading.simple {
+  font-size: 20px;
+  font-weight: 300;
+  color: #777;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.member_request_card .member_request_card-heading.image img {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  margin-right: 15px;
+  vertical-align: top;
+  border: 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.member_request_card.people .member_request_card-info {
+  position: absolute;
+  top: 150px;
+  display: inline-block;
+  width: 100%;
+  height: 101px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.member_request_card.hovermember_request_card {
+  position: relative;
+  padding-top: 0;
+  overflow: hidden;
+  text-align: center;
+  background-color: #ffffff87;
+}
+
+.member_request_card.hovermember_request_card .member_request_cardheader {
+  background-size: cover;
+  height: 56px;
+}
+
+.member_request_card.hovermember_request_card .avatar {
+  position: relative;
+  top: -50px;
+  margin-bottom: -50px;
+}
+
+.member_request_card.hovermember_request_card .avatar img {
+  width: 100px;
+  height: 100px;
+  max-width: 100px;
+  max-height: 100px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 5px solid rgba(255,255,255,0.5);
+}
+
+.member_request_card.hovermember_request_card .info {
+  padding: 4px 8px 10px;
+}
+
+.member_request_card.hovermember_request_card .info .title {
+  margin-bottom: 4px;
+  font-size: 24px;
+  line-height: 1;
+  color: #262626;
+  vertical-align: middle;
+}
+
+.member_request_card.hovermember_request_card .bottom {
+  padding: 0 20px;
+  margin-bottom: 17px;
+}
+
+.member_request_card:hover {
+  @include box-shadow($bmd-shadow-6dp);
+  transition-duration: 0.5s;
+}
 
 /** Switches section TODO: generic switches on another specific file **/
 

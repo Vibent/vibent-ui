@@ -33,6 +33,8 @@ import {GroupSettingsComponent} from './dialogs/admin-panel/group-settings/group
 import {GroupSettingsModule} from './dialogs/admin-panel/group-settings/group-settings.module';
 import {GroupRightsModule} from './dialogs/admin-panel/group-rights/group-rights.module';
 import {GroupRightsComponent} from './dialogs/admin-panel/group-rights/group-rights.component';
+import {GroupRequestsModule} from './dialogs/admin-panel/group-requests/group-requests.module';
+import {GroupRequestsComponent} from './dialogs/admin-panel/group-requests/group-requests.component';
 
 @NgModule({
   imports: [
@@ -62,7 +64,8 @@ import {GroupRightsComponent} from './dialogs/admin-panel/group-rights/group-rig
     ProfileModule,
     ProfileSettingsModule,
     GroupSettingsModule,
-    GroupRightsModule
+    GroupRightsModule,
+    GroupRequestsModule
   ],
   declarations: [
     AppComponent,
@@ -77,7 +80,8 @@ import {GroupRightsComponent} from './dialogs/admin-panel/group-rights/group-rig
     AddGroupMembersComponent,
     ProfileSettingsComponent,
     GroupSettingsComponent,
-    GroupRightsComponent]
+    GroupRightsComponent,
+    GroupRequestsComponent]
 })
 export class AppModule {
 }
