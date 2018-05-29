@@ -1,10 +1,11 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import * as moment from 'moment';
-import {Event} from '../../models/event';
-import {HttpService} from '../../http/http.service';
-import {Router} from '@angular/router';
+import { Event } from '../../models/event';
+import { HttpService } from '../../http/http.service';
+import { Router } from '@angular/router';
+import { Group } from '../../models/group';
 
 @Component({
   selector: 'app-event-creation',
@@ -16,12 +17,12 @@ export class EventCreationComponent implements OnInit {
   /** Minimal Date for event creation**/
   dateTime = moment().add(1, 'hours').toDate();
   /** User groups list **/
-  groups: any[];
-  title: string;
-  description: string;
-  date: Date;
-  group: string;
-  form: FormGroup;
+  public groups: Group[];
+  public title: string;
+  public description: string;
+  public date: Date;
+  public group: string;
+  public form: FormGroup;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<EventCreationComponent>,
@@ -30,7 +31,6 @@ export class EventCreationComponent implements OnInit {
               @Inject(MAT_DIALOG_DATA) data) {
 
     this.groups = data.groups;
-    console.log(this.groups);
     dialogRef.disableClose = true;
     dialogRef.updateSize('600px', '90%');
   }
@@ -44,11 +44,11 @@ export class EventCreationComponent implements OnInit {
     });
   }
 
-  public close() {
+  public close(): void {
     this.dialogRef.close();
   }
 
-  public saveEvent() {
+  public saveEvent(): void {
     this.dialogRef.close(this.form.value);
     let groupRef: string;
     if (this.form.value.group) {
@@ -57,7 +57,7 @@ export class EventCreationComponent implements OnInit {
       groupRef = this.groups[0].ref;
     }
     console.log(this.dateTime);
-    this.dateTime.setTime( this.dateTime.getTime() - this.dateTime.getTimezoneOffset() * 60 * 1000 );
+    this.dateTime.setTime(this.dateTime.getTime() - this.dateTime.getTimezoneOffset() * 60 * 1000);
     console.log(this.dateTime.toJSON());
     const event: Event = {
       title: this.form.value.title,

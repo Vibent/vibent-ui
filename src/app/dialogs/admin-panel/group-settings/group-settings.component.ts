@@ -1,10 +1,9 @@
-import {Component, EventEmitter, Inject, OnInit, Output} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
-import {FormBuilder, FormGroup} from '@angular/forms';
-import {HttpService} from '../../../http/http.service';
-import {Router} from '@angular/router';
-import {Group} from '../../../models/group';
-import {AdminPanelService} from '../../../services/admin-panel.service';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Group } from '../../../models/group';
+import { AdminPanelService } from '../../../services/admin-panel.service';
 
 @Component({
   selector: 'app-group-settings',
@@ -13,8 +12,8 @@ import {AdminPanelService} from '../../../services/admin-panel.service';
 })
 export class GroupSettingsComponent implements OnInit {
 
-  group: Group;
-  form: FormGroup;
+  public group: Group;
+  public form: FormGroup;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<GroupSettingsComponent>,
@@ -34,11 +33,11 @@ export class GroupSettingsComponent implements OnInit {
     });
   }
 
-  public close() {
+  public close(): void {
     this.dialogRef.close();
   }
 
-  public updateInfo() {
+  public updateInfo(): void {
     this.dialogRef.close(this.form.value);
     this.group.name = this.form.value.name;
     this.group.description = this.form.value.description;

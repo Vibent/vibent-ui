@@ -1,10 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {EventCreationComponent} from '../dialogs/event-creation/event-creation.component';
-import {MatDialog} from '@angular/material';
-import {Group} from '../models/group';
-import {Event} from '../models/event';
-import {ActivatedRoute} from '@angular/router';
-import {HttpService} from '../http/http.service';
+import { Component, OnInit } from '@angular/core';
+import { EventCreationComponent } from '../dialogs/event-creation/event-creation.component';
+import { MatDialog } from '@angular/material';
+import { Event } from '../models/event';
+import { ActivatedRoute } from '@angular/router';
+import { HttpService } from '../http/http.service';
 
 @Component({
   selector: 'app-events',
@@ -13,9 +12,8 @@ import {HttpService} from '../http/http.service';
 })
 export class EventsComponent implements OnInit {
 
-  data;
   public groups: any = [];
-  events: Event[];
+  public events: Event[];
 
   constructor(public dialog: MatDialog, private route: ActivatedRoute, private httpService: HttpService) {
     this.events = this.route.snapshot.data['events'];
@@ -42,5 +40,5 @@ export class EventsComponent implements OnInit {
     const dateA = new Date(a.startDate).getTime();
     const dateB = new Date(b.startDate).getTime();
     return dateA < dateB ? 1 : -1;
-  };
+  }
 }

@@ -1,10 +1,10 @@
-import {Injectable} from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Group} from '../models/group';
-import {Event} from '../models/event';
-import {Observable} from 'rxjs/Observable';
-import {CookieService} from 'ngx-cookie-service';
-import {User} from '../models/user';
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Group } from '../models/group';
+import { Event } from '../models/event';
+import { Observable } from 'rxjs/Observable';
+import { CookieService } from 'ngx-cookie-service';
+import { User } from '../models/user';
 
 @Injectable()
 export class HttpService {
@@ -15,70 +15,70 @@ export class HttpService {
               private cookieService: CookieService) {
   }
 
-  getOptions(): object {
+  public getOptions(): object {
     return {
-      'headers': new HttpHeaders({
+      headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'Authorization': this.cookieService.get('token')
       })
-    }
+    };
   }
 
-  /** Groups **/
+  /*** Groups ***/
 
-  getGroup(groupRef: string): Observable<Group> {
+  public getGroup(groupRef: string): Observable<Group> {
     return this.http.get<Group>(this.API_URL + '/group/' + groupRef, this.getOptions());
   }
 
-  getGroups(): Observable<Group[]> {
+  public getGroups(): Observable<Group[]> {
     return this.http.get<Group[]>(this.API_URL + '/group/me', this.getOptions());
   }
 
 
-  createGroup(group: Group) {
+  public createGroup(group: Group) {
     const body = JSON.stringify(group);
     return this.http.post(this.API_URL + '/group', body, this.getOptions());
   }
 
-  updateGroup(group: Group): Observable<Group> {
+  public updateGroup(group: Group): Observable<Group> {
     const body = JSON.stringify(group);
     return this.http.patch(this.API_URL + '/group/' + group.ref, body, this.getOptions());
   }
 
-  /** Events **/
+  /*** Events ***/
 
-  getEvents(): Observable<Event[]> {
+  public getEvents(): Observable<Event[]> {
     return this.http.get<Event[]>(this.API_URL + '/event/me', this.getOptions());
   }
 
-  getEvent(eventRef: string): Observable<Event> {
+  public getEvent(eventRef: string): Observable<Event> {
     return this.http.get<Event>(this.API_URL + '/event/' + eventRef, this.getOptions());
   }
 
-  getGroupEvents(groupRef: string): Observable<Event[]> {
+  public getGroupEvents(groupRef: string): Observable<Event[]> {
     return this.http.get<Event[]>(this.API_URL + '/group/' + groupRef + '/event', this.getOptions());
   }
 
-  createEvent(event: Event) {
+  public createEvent(event: Event) {
     console.log(event);
     const body = JSON.stringify(event);
     return this.http.post(this.API_URL + '/event', body, this.getOptions());
   }
 
-  /** User **/
+  /*** User ***/
 
-  getMe(): Observable<User> {
+  public getMe(): Observable<User> {
     return this.http.get<User>(this.API_URL + '/user/me', this.getOptions());
   }
 
-  updateUser(user: User): Observable<User> {
+  public updateUser(user: User): Observable<User> {
     const body = JSON.stringify(user);
     return this.http.patch(this.API_URL + '/user/' + user.ref, body, this.getOptions());
   }
 
-  /** Auth **/
+  /*** Auth ***/
 
-  login(loginRequest): Observable<any> {
+  public login(loginRequest): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({'Content-Type': 'application/json'})
     };
@@ -86,7 +86,7 @@ export class HttpService {
     return this.http.post(this.API_URL + '/auth/login', loginRequest, httpOptions);
   }
 
-  register(registrationRequest): Observable<any> {
+  public register(registrationRequest): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({'Content-Type': 'application/json'})
     };

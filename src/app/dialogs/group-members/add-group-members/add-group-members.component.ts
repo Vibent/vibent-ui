@@ -1,6 +1,6 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-group-creation',
@@ -9,7 +9,7 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 })
 export class AddGroupMembersComponent implements OnInit {
 
-  form: FormGroup;
+  public form: FormGroup;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<AddGroupMembersComponent>,
@@ -20,9 +20,9 @@ export class AddGroupMembersComponent implements OnInit {
   ngOnInit() {
   }
 
-  generateLink() {
+  public generateLink(): void {
   }
 
-  sendInvitation() {
+  public sendInvitation(): void {
   }
 }

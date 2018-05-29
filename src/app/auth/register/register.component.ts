@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../../services/authentication.service';
 import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -17,7 +16,7 @@ export class RegisterComponent implements OnInit {
     email: 'vibent@vibent.com',
     birthday: '1995-05-21T14:39:50.369Z',
     firstName: 'John',
-    lastName : 'Kras'
+    lastName: 'Kras'
   };
 
   // TODO verify passwords
@@ -25,7 +24,7 @@ export class RegisterComponent implements OnInit {
 
   constructor(private cookieService: CookieService,
               private authenticationService: AuthenticationService,
-              private router: Router ) {
+              private router: Router) {
     if (this.cookieService.check('token')) {
       this.router.navigate(['/events']);
     }
@@ -34,11 +33,11 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
-  register() {
+  public register(): void {
     this.authenticationService.register(this.model, this.onFail.bind(this));
   }
 
-  onFail(e): void {
+  public onFail(e): void {
     // TODO : add flash message or equivalent
     console.log('Error : ' + e.error.error.code);
   }

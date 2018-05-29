@@ -1,5 +1,5 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {AddGroupMembersComponent} from './add-group-members.component';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { AddGroupMembersComponent } from './add-group-members.component';
 
 describe('AddGroupMembersComponent', () => {
   let component: AddGroupMembersComponent;

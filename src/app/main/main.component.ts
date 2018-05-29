@@ -1,8 +1,7 @@
-import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
-import {NavigationEnd, NavigationStart, Router} from '@angular/router';
-import {Location, PopStateEvent} from '@angular/common';
-import {Subscription} from 'rxjs/Subscription';
-import {GroupComponent} from '../group/group.component';
+import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
+import { Location, PopStateEvent } from '@angular/common';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-main',

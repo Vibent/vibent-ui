@@ -1,5 +1,5 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {GroupRightsComponent} from './group-rights.component';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { GroupRightsComponent } from './group-rights.component';
 
 describe('GroupRequestsComponent', () => {
   let component: GroupRightsComponent;

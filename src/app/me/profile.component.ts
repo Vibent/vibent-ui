@@ -1,8 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {User} from '../models/user';
-import {MatDialog} from '@angular/material';
-import {ProfileSettingsComponent} from '../dialogs/profile-settings/profile-settings.component';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { User } from '../models/user';
+import { MatDialog } from '@angular/material';
+import { ProfileSettingsComponent } from '../dialogs/profile-settings/profile-settings.component';
 
 @Component({
   selector: 'app-profile',
@@ -11,7 +11,7 @@ import {ProfileSettingsComponent} from '../dialogs/profile-settings/profile-sett
 })
 export class ProfileComponent implements OnInit {
 
-  user: User;
+  public user: User;
 
   constructor(private route: ActivatedRoute, public dialogSettings: MatDialog) {
     this.user = this.route.snapshot.data['user'];
@@ -21,7 +21,7 @@ export class ProfileComponent implements OnInit {
 
   }
 
-  openSettingsDialog() {
+  public openSettingsDialog(): void {
     this.dialogSettings.open(ProfileSettingsComponent, {
       data: {user: this.user}
     });

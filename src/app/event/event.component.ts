@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {EventParticipant} from '../models/event-participant';
-import {ActivatedRoute} from '@angular/router';
-import {Event} from '../models/event';
+import { Component, OnInit } from '@angular/core';
+import { EventParticipant } from '../models/event-participant';
+import { ActivatedRoute } from '@angular/router';
+import { Event } from '../models/event';
 
 @Component({
   selector: 'app-event',
@@ -10,8 +10,8 @@ import {Event} from '../models/event';
 })
 export class EventComponent implements OnInit {
 
-  participants: EventParticipant[];
-  event: Event;
+  public participants: EventParticipant[];
+  public event: Event;
 
   constructor(private route: ActivatedRoute) {
     this.event = this.route.snapshot.data['event'];

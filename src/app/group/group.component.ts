@@ -1,37 +1,42 @@
-import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
-import {MatDialog} from '@angular/material';
-import {GroupMembersComponent} from '../dialogs/group-members/group-members.component';
-import {GroupPreviewMember} from '../models/group-preview-member';
-import {EventCreationComponent} from '../dialogs/event-creation/event-creation.component';
-import {Group} from '../models/group';
-import {Event} from '../models/event';
-import {ActivatedRoute} from '@angular/router';
-import {AddGroupMembersComponent} from '../dialogs/group-members/add-group-members/add-group-members.component';
-import {AdminPanelService} from '../services/admin-panel.service';
-import {GroupSettingsComponent} from '../dialogs/admin-panel/group-settings/group-settings.component';
-import {GroupRequestsComponent} from '../dialogs/admin-panel/group-requests/group-requests.component';
-import {GroupRightsComponent} from '../dialogs/admin-panel/group-rights/group-rights.component';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { GroupMembersComponent } from '../dialogs/group-members/group-members.component';
+import { GroupPreviewMember } from '../models/group-preview-member';
+import { EventCreationComponent } from '../dialogs/event-creation/event-creation.component';
+import { Group } from '../models/group';
+import { Event } from '../models/event';
+import { ActivatedRoute } from '@angular/router';
+import { AddGroupMembersComponent } from '../dialogs/group-members/add-group-members/add-group-members.component';
+import { AdminPanelService } from '../services/admin-panel.service';
+import { GroupSettingsComponent } from '../dialogs/admin-panel/group-settings/group-settings.component';
+import { GroupRequestsComponent } from '../dialogs/admin-panel/group-requests/group-requests.component';
+import { GroupRightsComponent } from '../dialogs/admin-panel/group-rights/group-rights.component';
+import { NGXLogger } from 'ngx-logger';
 
 declare const $: any;
 
 @Component({
   selector: 'app-group',
   templateUrl: './group.component.html',
-  styleUrls: ['./group.component.css']
+  styleUrls: ['./group.component.css'],
+  providers: [NGXLogger]
 })
 export class GroupComponent implements OnInit, OnDestroy {
 
-  events: Event[];
-  groupPreviewMembers: GroupPreviewMember[] = [];
-  group: Group;
+  public events: Event[];
+  public groupPreviewMembers: GroupPreviewMember[] = [];
+  public group: Group;
 
   constructor(public dialog: MatDialog,
               private route: ActivatedRoute,
-              private adminPanel: AdminPanelService) {
+              private adminPanel: AdminPanelService,
+              private logger: NGXLogger) {
 
     this.group = this.route.snapshot.data['group'];
     this.events = this.route.snapshot.data['groupEvents'];
     this.events.sort(this.sortEventByDate);​
+    this.logger.info('Group received: ', this.group);
+    this.logger.info('Group events: ', this.events);
   }
 
   ngOnDestroy() {
@@ -87,17 +92,17 @@ export class GroupComponent implements OnInit, OnDestroy {
     });
   }
 
-  openGroupMembersDialog() {
+  public openGroupMembersDialog(): void {
     this.dialog.open(GroupMembersComponent, {
       data: {groupMembers: this.groupPreviewMembers}
     });
   }
 
-  openAddGroupMemberDialog() {
+  public openAddGroupMemberDialog(): void {
     this.dialog.open(AddGroupMembersComponent);
   }
 
-  openEventCreationDialog() {
+  public openEventCreationDialog(): void {
     const groups: any[] = [];
     groups.push({ref: this.group.ref, name: this.group.name, fromGroup: true});
     this.dialog.open(EventCreationComponent, {
@@ -105,34 +110,31 @@ export class GroupComponent implements OnInit, OnDestroy {
     });
   }
 
-  openSettingsDialog() {
+  public openSettingsDialog(): void {
     this.dialog.open(GroupSettingsComponent, {
       data: {group: this.group}
     });
   }
 
-  openRightsDialog() {
+  public openRightsDialog(): void {
     this.dialog.open(GroupRightsComponent, {
       data: {group: this.group}
     });
   }
 
-  openRequestsDialog() {
+  public openRequestsDialog(): void {
     this.dialog.open(GroupRequestsComponent, {
       data: {group: this.group}
     });
   }
 
-  isMobileMenu() {
-    if ($(window).width() > 991) {
-      return false;
-    }
-    return true;
-  };
+  public isMobileMenu(): boolean {
+    return !($(window).width() > 991);
+  }
 
-  sortEventByDate(a, b) {
+  public sortEventByDate(a, b): any {
     const dateA = new Date(a.startDate).getTime();
     const dateB = new Date(b.startDate).getTime();
     return dateA < dateB ? 1 : -1;
-  };
+  }
 }

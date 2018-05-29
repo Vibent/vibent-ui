@@ -1,11 +1,9 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
-import {FormBuilder, FormGroup} from '@angular/forms';
-import {HttpSentEvent} from '@angular/common/http';
-import {HttpService} from '../../http/http.service';
-import {Group} from '../../models/group';
-import {Router} from '@angular/router';
-import 'rxjs/add/operator/map'
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { HttpService } from '../../http/http.service';
+import { Router } from '@angular/router';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-group-creation',
@@ -13,17 +11,16 @@ import 'rxjs/add/operator/map'
   styleUrls: ['./group-creation.component.css']
 })
 export class GroupCreationComponent implements OnInit {
-  title: string;
-  description: string;
-  group: string;
-  form: FormGroup;
-  result: Group;
+  public title: string;
+  public description: string;
+  public group: string;
+  public form: FormGroup;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<GroupCreationComponent>,
               private httpService: HttpService,
               @Inject(MAT_DIALOG_DATA) data,
-              private router: Router,) {
+              private router: Router) {
     dialogRef.disableClose = true;
     dialogRef.updateSize('600px', '80%');
   }
@@ -35,7 +32,7 @@ export class GroupCreationComponent implements OnInit {
     });
   }
 
-  saveGroup() {
+  public saveGroup(): void {
     this.dialogRef.close(this.form.value);
     const group = {
       name: this.form.value.title,

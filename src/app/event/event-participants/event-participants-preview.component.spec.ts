@@ -1,5 +1,5 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {EventParticipantsPreviewComponent} from './event-participants-preview.component';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { EventParticipantsPreviewComponent } from './event-participants-preview.component';
 
 
 describe('GroupPreviewMemberComponent', () => {

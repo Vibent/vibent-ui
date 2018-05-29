@@ -1,5 +1,5 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {GroupAdminPanelComponent} from './group-admin-panel.component';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { GroupAdminPanelComponent } from './group-admin-panel.component';
 
 describe('GroupAdminPanelComponent', () => {
   let component: GroupAdminPanelComponent;

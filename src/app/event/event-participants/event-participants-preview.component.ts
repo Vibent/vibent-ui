@@ -1,5 +1,5 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import {EventParticipant} from '../../models/event-participant';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { EventParticipant } from '../../models/event-participant';
 
 @Component({
   selector: 'app-event-participants-preview',
@@ -11,7 +11,7 @@ import {EventParticipant} from '../../models/event-participant';
 export class EventParticipantsPreviewComponent implements OnInit {
 
   @Input()
-  participant: EventParticipant;
+  public participant: EventParticipant;
 
   constructor() {
   }
@@ -19,9 +19,9 @@ export class EventParticipantsPreviewComponent implements OnInit {
   ngOnInit() {
   }
 
-  getResponseCss(response: string): string {
+  public getResponseCss(response: string): string {
     if (response === 'Participates') {
-      return 'participate'
+      return 'participate';
     }
     if (response === 'Don\'t know') {
       return 'idk';

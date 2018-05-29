@@ -1,9 +1,9 @@
-import {Component, EventEmitter, Inject, OnInit, Output} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
-import {FormBuilder, FormGroup} from '@angular/forms';
-import {Router} from '@angular/router';
-import {Group} from '../../../models/group';
-import {AdminPanelService} from '../../../services/admin-panel.service';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Group } from '../../../models/group';
+import { AdminPanelService } from '../../../services/admin-panel.service';
 
 @Component({
   selector: 'app-group-requests',
@@ -12,8 +12,8 @@ import {AdminPanelService} from '../../../services/admin-panel.service';
 })
 export class GroupRequestsComponent implements OnInit {
 
-  group: Group;
-  form: FormGroup;
+  public group: Group;
+  public form: FormGroup;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<GroupRequestsComponent>,
@@ -21,7 +21,7 @@ export class GroupRequestsComponent implements OnInit {
               private adminPanelService: AdminPanelService,
               @Inject(MAT_DIALOG_DATA) data) {
 
-  this.group = data.group;
+    this.group = data.group;
     dialogRef.updateSize('600px', '90%');
   }
 
@@ -32,11 +32,11 @@ export class GroupRequestsComponent implements OnInit {
     });
   }
 
-  public close() {
+  public close(): void {
     this.dialogRef.close();
   }
 
-  public updateInfo() {
+  public updateInfo(): void {
     this.dialogRef.close();
   }
 

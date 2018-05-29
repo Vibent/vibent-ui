@@ -1,6 +1,6 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {EventPreviewComponent} from './event-preview.component';
+import { EventPreviewComponent } from './event-preview.component';
 
 describe('EventPreviewComponent', () => {
   let component: EventPreviewComponent;

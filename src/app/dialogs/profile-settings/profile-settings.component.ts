@@ -1,10 +1,9 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
-import {FormBuilder, FormGroup} from '@angular/forms';
-import {Event} from '../../models/event';
-import {HttpService} from '../../http/http.service';
-import {Router} from '@angular/router';
-import {User} from 'app/models/user';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { HttpService } from '../../http/http.service';
+import { Router } from '@angular/router';
+import { User } from 'app/models/user';
 
 @Component({
   selector: 'app-profile-settings',
@@ -13,8 +12,8 @@ import {User} from 'app/models/user';
 })
 export class ProfileSettingsComponent implements OnInit {
 
-  user: User;
-  form: FormGroup;
+  public user: User;
+  public form: FormGroup;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<ProfileSettingsComponent>,
@@ -38,7 +37,7 @@ export class ProfileSettingsComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  public updateInfo() {
+  public updateInfo(): void {
     this.dialogRef.close(this.form.value);
     this.user.firstName = this.form.value.firstName;
     this.user.lastName = this.form.value.lastName;

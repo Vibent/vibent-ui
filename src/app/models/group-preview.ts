@@ -1,4 +1,4 @@
-import {GroupPreviewMember} from './group-preview-member';
+import { GroupPreviewMember } from './group-preview-member';
 
 export class GroupPreview {
 
