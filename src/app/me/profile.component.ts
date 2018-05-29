@@ -22,7 +22,7 @@ export class ProfileComponent implements OnInit {
   }
 
   openSettingsDialog() {
-    const dialogRef = this.dialogSettings.open(ProfileSettingsComponent, {
+    this.dialogSettings.open(ProfileSettingsComponent, {
       data: {user: this.user}
     });
   }

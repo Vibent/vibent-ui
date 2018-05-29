@@ -1,7 +1,7 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {GroupSettingsComponent} from './group-settings.component';
 
-describe('GroupRightsComponent', () => {
+describe('GroupRequestsComponent', () => {
   let component: GroupSettingsComponent;
   let fixture: ComponentFixture<GroupSettingsComponent>;
 

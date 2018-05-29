@@ -32,7 +32,7 @@ export class EventsComponent implements OnInit {
   }
 
   openDialog() {
-    const dialogRef = this.dialog.open(EventCreationComponent, {
+    this.dialog.open(EventCreationComponent, {
       data: {groups: this.groups}
     });
 

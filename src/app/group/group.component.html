@@ -4,9 +4,7 @@
 			<div class="col-xl-10">
 				<h2 class="group-title">{{group.name}}</h2>
 			</div>
-			<div class="col-xl-12" style="text-align: center">
-
-			</div>
+			<div class="col-xl-12" style="text-align: center"></div>
 			<div class="col-xl-12 row justify-content-center">
 				<div class="score-wrap">
 					<a href="javascript:void(0);"><h5 class="members-number" (click)="openGroupMembersDialog()">
@@ -16,6 +14,22 @@
 							<div class="fa fa-user-plus"></div>
 						</div>
 					</a>
+				</div>
+			</div>
+
+			<div class="col-xl-12 row justify-content-center">
+				<div *ngIf="isMobileMenu()">
+					<div class="nav-item dropdown">
+						<button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton"
+										data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Admin settings
+						</button>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a href="javascript:void(0);" class="dropdown-item"(click)="openRightsDialog()">Members Rights</a>
+							<a href="javascript:void(0);" class="dropdown-item"(click)="openSettingsDialog()">Group settings</a>
+							<a href="javascript:void(0);" class="dropdown-item"  (click)="openRequestsDialog()">Requests <span class="badge badge-info">4</span></a>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="col-xl-10">

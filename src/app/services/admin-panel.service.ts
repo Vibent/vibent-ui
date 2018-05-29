@@ -4,6 +4,7 @@ import {Group} from '../models/group';
 
 @Injectable()
 export class AdminPanelService {
+
   isOpen = false;
   @Output() change: EventEmitter<any> = new EventEmitter();
   @Output() groupUpdated: EventEmitter<Group> = new EventEmitter();

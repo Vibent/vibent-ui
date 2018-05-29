@@ -40,6 +40,6 @@ export class GroupsComponent implements OnInit {
   }
 
   openDialog() {
-    const dialogRef = this.dialog.open(GroupCreationComponent, {});
+    this.dialog.open(GroupCreationComponent, {});
   }
 }
