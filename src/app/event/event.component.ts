@@ -10,8 +10,8 @@ import {Event} from '../models/event';
 })
 export class EventComponent implements OnInit {
 
-  participants: EventParticipant[];
-  event: Event;
+  public participants: EventParticipant[];
+  public event: Event;
 
   constructor(private route: ActivatedRoute) {
     this.event = this.route.snapshot.data['event'];

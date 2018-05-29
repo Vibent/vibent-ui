@@ -13,8 +13,8 @@ import {AdminPanelService} from '../../../services/admin-panel.service';
 })
 export class GroupSettingsComponent implements OnInit {
 
-  group: Group;
-  form: FormGroup;
+  public group: Group;
+  public form: FormGroup;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<GroupSettingsComponent>,
@@ -34,11 +34,11 @@ export class GroupSettingsComponent implements OnInit {
     });
   }
 
-  public close() {
+  public close(): void {
     this.dialogRef.close();
   }
 
-  public updateInfo() {
+  public updateInfo(): void {
     this.dialogRef.close(this.form.value);
     this.group.name = this.form.value.name;
     this.group.description = this.form.value.description;

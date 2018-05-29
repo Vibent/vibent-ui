@@ -25,11 +25,11 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  login() {
+  public login(): void {
     this.authenticationService.login({username: this.model.username, password: this.model.password}, this.onFail.bind(this));
   }
 
-  onFail(e): void {
+  public onFail(e): void {
     // TODO : add flash message or equivalent
     console.log('Error : ' + e.error.error.code);
   }

@@ -13,17 +13,16 @@ import 'rxjs/add/operator/map'
   styleUrls: ['./group-creation.component.css']
 })
 export class GroupCreationComponent implements OnInit {
-  title: string;
-  description: string;
-  group: string;
-  form: FormGroup;
-  result: Group;
+  public title: string;
+  public description: string;
+  public group: string;
+  public form: FormGroup;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<GroupCreationComponent>,
               private httpService: HttpService,
               @Inject(MAT_DIALOG_DATA) data,
-              private router: Router,) {
+              private router: Router) {
     dialogRef.disableClose = true;
     dialogRef.updateSize('600px', '80%');
   }
@@ -35,7 +34,7 @@ export class GroupCreationComponent implements OnInit {
     });
   }
 
-  saveGroup() {
+  public saveGroup(): void {
     this.dialogRef.close(this.form.value);
     const group = {
       name: this.form.value.title,

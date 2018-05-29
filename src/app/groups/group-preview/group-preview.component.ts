@@ -9,7 +9,7 @@ import {GroupPreview} from '../../models/group-preview';
 export class GroupPreviewComponent implements OnInit {
 
   @Input()
-  groupPreview: GroupPreview;
+  public groupPreview: GroupPreview;
 
   constructor() {
   }

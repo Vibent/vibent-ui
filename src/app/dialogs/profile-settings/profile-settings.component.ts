@@ -13,8 +13,8 @@ import {User} from 'app/models/user';
 })
 export class ProfileSettingsComponent implements OnInit {
 
-  user: User;
-  form: FormGroup;
+  public user: User;
+  public form: FormGroup;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<ProfileSettingsComponent>,
@@ -38,7 +38,7 @@ export class ProfileSettingsComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  public updateInfo() {
+  public updateInfo(): void {
     this.dialogRef.close(this.form.value);
     this.user.firstName = this.form.value.firstName;
     this.user.lastName = this.form.value.lastName;

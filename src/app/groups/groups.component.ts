@@ -14,8 +14,8 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class GroupsComponent implements OnInit {
 
-  groupsPreview: GroupPreview[] = [];
-  groups: Group[];
+  public groupsPreview: GroupPreview[] = [];
+  public groups: Group[];
 
   constructor(public dialog: MatDialog, private route: ActivatedRoute) {
     const groupPreviewMembers = [
@@ -39,7 +39,7 @@ export class GroupsComponent implements OnInit {
   ngOnInit() {
   }
 
-  openDialog() {
+  public openDialog(): void {
     this.dialog.open(GroupCreationComponent, {});
   }
 }

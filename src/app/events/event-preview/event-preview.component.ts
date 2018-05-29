@@ -11,10 +11,10 @@ import {AdditionnalEventInfos} from '../../models/additionnal-event-infos';
 export class EventPreviewComponent implements OnChanges {
 
   @Input()
-  event: Event;
-  additionnalEventInfos: AdditionnalEventInfos;
-  ressourcesLoaded: Promise<boolean>;
-  opacityStyle: number;
+  public event: Event;
+  public additionnalEventInfos: AdditionnalEventInfos;
+  public ressourcesLoaded: Promise<boolean>;
+  public opacityStyle: number;
 
   constructor(private additonalEventInfoService: AdditionalEventInfoService) {}
 

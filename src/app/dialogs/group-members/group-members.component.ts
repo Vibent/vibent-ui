@@ -10,8 +10,8 @@ import {GroupPreviewMember} from '../../models/group-preview-member';
 })
 export class GroupMembersComponent implements OnInit {
 
-  form: FormGroup;
-  groupMembers: GroupPreviewMember[];
+  public form: FormGroup;
+  public groupMembers: GroupPreviewMember[];
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<GroupMembersComponent>,

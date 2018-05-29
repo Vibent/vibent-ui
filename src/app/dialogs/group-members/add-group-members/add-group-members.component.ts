@@ -9,7 +9,7 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 })
 export class AddGroupMembersComponent implements OnInit {
 
-  form: FormGroup;
+  public form: FormGroup;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<AddGroupMembersComponent>,
@@ -20,9 +20,9 @@ export class AddGroupMembersComponent implements OnInit {
   ngOnInit() {
   }
 
-  generateLink() {
+  public generateLink(): void {
   }
 
-  sendInvitation() {
+  public sendInvitation(): void {
   }
 }

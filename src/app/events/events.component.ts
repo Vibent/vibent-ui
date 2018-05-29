@@ -13,9 +13,8 @@ import {HttpService} from '../http/http.service';
 })
 export class EventsComponent implements OnInit {
 
-  data;
   public groups: any = [];
-  events: Event[];
+  public events: Event[];
 
   constructor(public dialog: MatDialog, private route: ActivatedRoute, private httpService: HttpService) {
     this.events = this.route.snapshot.data['events'];

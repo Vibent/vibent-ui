@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
     this.runOnRouteChange();
   }
 
-  isMaps(path) {
+  public isMaps(path): boolean {
     let title = this.location.prepareExternalUrl(this.location.path());
     title = title.slice(1);
     if (path === title) {
@@ -36,13 +36,13 @@ export class AppComponent implements OnInit {
     }
   }
 
-  runOnRouteChange(): void {
+  public runOnRouteChange(): void {
     if (window.matchMedia(`(min-width: 960px)`).matches && !this.isMac()) {
       const elemMainPanel = <HTMLElement>document.querySelector('.main-panel');
     }
   }
 
-  isMac(): boolean {
+  public isMac(): boolean {
     let bool = false;
     if (navigator.platform.toUpperCase().indexOf('MAC') >= 0 || navigator.platform.toUpperCase().indexOf('IPAD') >= 0) {
       bool = true;

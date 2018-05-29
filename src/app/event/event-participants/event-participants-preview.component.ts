@@ -11,7 +11,7 @@ import {EventParticipant} from '../../models/event-participant';
 export class EventParticipantsPreviewComponent implements OnInit {
 
   @Input()
-  participant: EventParticipant;
+  public participant: EventParticipant;
 
   constructor() {
   }
@@ -19,7 +19,7 @@ export class EventParticipantsPreviewComponent implements OnInit {
   ngOnInit() {
   }
 
-  getResponseCss(response: string): string {
+  public getResponseCss(response: string): string {
     if (response === 'Participates') {
       return 'participate'
     }

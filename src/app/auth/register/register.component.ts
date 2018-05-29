@@ -34,11 +34,11 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
-  register() {
+  public register(): void {
     this.authenticationService.register(this.model, this.onFail.bind(this));
   }
 
-  onFail(e): void {
+  public onFail(e): void {
     // TODO : add flash message or equivalent
     console.log('Error : ' + e.error.error.code);
   }

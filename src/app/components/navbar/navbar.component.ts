@@ -39,7 +39,7 @@ export class NavbarComponent implements OnInit {
     });
   }
 
-  sidebarOpen() {
+  public sidebarOpen(): void {
     const toggleButton = this.toggleButton;
     const body = document.getElementsByTagName('body')[0];
     setTimeout(function () {
@@ -58,7 +58,7 @@ export class NavbarComponent implements OnInit {
     body.classList.remove('nav-open');
   };
 
-  sidebarToggle() {
+  public sidebarToggle(): void {
     // const toggleButton = this.toggleButton;
     // const body = document.getElementsByTagName('body')[0];
     const $toggle = document.getElementsByClassName('navbar-toggler')[0];
@@ -70,7 +70,7 @@ export class NavbarComponent implements OnInit {
     }
     const body = document.getElementsByTagName('body')[0];
 
-    if (this.mobile_menu_visible == 1) {
+    if (this.mobile_menu_visible === 1) {
       // $('html').removeClass('nav-open');
       body.classList.remove('nav-open');
       if ($layer) {
@@ -116,7 +116,7 @@ export class NavbarComponent implements OnInit {
     }
   };
 
-  getTitle() {
+  public getTitle(): string {
     let titlee = this.location.prepareExternalUrl(this.location.path());
     if (titlee.charAt(0) === '#') {
       titlee = titlee.slice(2);
@@ -126,14 +126,10 @@ export class NavbarComponent implements OnInit {
       return (e.path === titlee);
     });
 
-    if (t) {
-      return t.title;
-    } else {
-      return 'Vibent';
-    }
+    return t.title ? t.title : 'Vibent';
   }
 
-  logout(): void {
+  public logout(): void {
     this.authenticationService.logout();
     this.router.navigate(['/login']);
   }

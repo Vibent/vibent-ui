@@ -14,8 +14,8 @@ import {GroupRequestsComponent} from '../dialogs/admin-panel/group-requests/grou
 export class GroupAdminPanelComponent implements OnInit {
 
   @Input()
-  groupRef: string;
-  group: Group;
+  public groupRef: string;
+  public group: Group;
 
   constructor(private httpService: HttpService,
               public dialog: MatDialog) {
@@ -27,19 +27,19 @@ export class GroupAdminPanelComponent implements OnInit {
     });
   }
 
-  openSettingsDialog() {
+  public openSettingsDialog(): void {
     this.dialog.open(GroupSettingsComponent, {
       data: {group: this.group}
     });
   }
 
-  openRightsDialog() {
+  openRightsDialog(): void {
     this.dialog.open(GroupRightsComponent, {
       data: {group: this.group}
     });
   }
 
-  openRequestsDialog() {
+  openRequestsDialog(): void {
     this.dialog.open(GroupRequestsComponent, {
       data: {group: this.group}
     });

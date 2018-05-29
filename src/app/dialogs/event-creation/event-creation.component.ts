@@ -5,6 +5,7 @@ import * as moment from 'moment';
 import {Event} from '../../models/event';
 import {HttpService} from '../../http/http.service';
 import {Router} from '@angular/router';
+import {Group} from '../../models/group';
 
 @Component({
   selector: 'app-event-creation',
@@ -16,12 +17,12 @@ export class EventCreationComponent implements OnInit {
   /** Minimal Date for event creation**/
   dateTime = moment().add(1, 'hours').toDate();
   /** User groups list **/
-  groups: any[];
-  title: string;
-  description: string;
-  date: Date;
-  group: string;
-  form: FormGroup;
+  public groups: Group[];
+  public title: string;
+  public description: string;
+  public date: Date;
+  public  group: string;
+  public form: FormGroup;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<EventCreationComponent>,
@@ -44,11 +45,11 @@ export class EventCreationComponent implements OnInit {
     });
   }
 
-  public close() {
+  public close(): void {
     this.dialogRef.close();
   }
 
-  public saveEvent() {
+  public saveEvent(): void {
     this.dialogRef.close(this.form.value);
     let groupRef: string;
     if (this.form.value.group) {

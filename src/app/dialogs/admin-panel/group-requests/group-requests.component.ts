@@ -12,8 +12,8 @@ import {AdminPanelService} from '../../../services/admin-panel.service';
 })
 export class GroupRequestsComponent implements OnInit {
 
-  group: Group;
-  form: FormGroup;
+  public group: Group;
+  public form: FormGroup;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<GroupRequestsComponent>,
@@ -32,11 +32,11 @@ export class GroupRequestsComponent implements OnInit {
     });
   }
 
-  public close() {
+  public close(): void {
     this.dialogRef.close();
   }
 
-  public updateInfo() {
+  public updateInfo(): void {
     this.dialogRef.close();
   }
 

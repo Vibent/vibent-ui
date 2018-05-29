@@ -25,10 +25,10 @@ export const ROUTES: RouteInfo[] = [
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
-  menuItems: any[];
 
+  public menuItems: any[];
   @Input()
-  adminPanelResult = {groupRef: null, isOpen: false};
+  public adminPanelResult = {groupRef: null, isOpen: false};
 
   constructor(private router: Router,
               private authenticationService: AuthenticationService,
@@ -41,14 +41,11 @@ export class SidebarComponent implements OnInit {
     });
   }
 
-  isMobileMenu() {
-    if ($(window).width() > 991) {
-      return false;
-    }
-    return true;
-  };
+  public isMobileMenu(): boolean {
+    return !($(window).width() > 991);
+  }
 
-  logout(): void {
+  public logout(): void {
     this.authenticationService.logout();
     this.router.navigate(['/login']);
   }
