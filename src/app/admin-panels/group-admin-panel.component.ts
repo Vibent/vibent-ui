@@ -1,10 +1,10 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {MatDialog} from '@angular/material';
-import {HttpService} from '../http/http.service';
-import {Group} from '../models/group';
-import {GroupSettingsComponent} from '../dialogs/admin-panel/group-settings/group-settings.component';
-import {GroupRightsComponent} from '../dialogs/admin-panel/group-rights/group-rights.component';
-import {GroupRequestsComponent} from '../dialogs/admin-panel/group-requests/group-requests.component';
+import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { HttpService } from '../http/http.service';
+import { Group } from '../models/group';
+import { GroupSettingsComponent } from '../dialogs/admin-panel/group-settings/group-settings.component';
+import { GroupRightsComponent } from '../dialogs/admin-panel/group-rights/group-rights.component';
+import { GroupRequestsComponent } from '../dialogs/admin-panel/group-requests/group-requests.component';
 
 @Component({
   selector: 'app-group-admin-panel',
@@ -23,7 +23,7 @@ export class GroupAdminPanelComponent implements OnInit {
 
   ngOnInit() {
     this.httpService.getGroup(this.groupRef).subscribe((group) => {
-      this.group = group
+      this.group = group;
     });
   }
 

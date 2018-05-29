@@ -8,7 +8,7 @@ export interface Event {
   groupRef: string;
   participationRefs?: string[];
 
-  /** bubbles **/
+  /*** bubbles ***/
   alimentationBubbles?: any[];
   checkboxBubbles?: any[];
   freeBubbles?: any[];

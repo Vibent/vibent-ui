@@ -1,22 +1,22 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {BrowserModule} from '@angular/platform-browser';
-import {RouterModule, Routes} from '@angular/router';
-import {EventsComponent} from './events/events.component';
-import {GroupsComponent} from './groups/groups.component';
-import {EventComponent} from './event/event.component';
-import {GroupComponent} from './group/group.component';
-import {GroupsResolver} from './resolvers/groups.resolver';
-import {EventsResolver} from './resolvers/events.resolver';
-import {EventResolver} from './resolvers/event.resolver';
-import {LoginComponent} from './auth/login/login.component';
-import {GroupEventsResolver} from './resolvers/group-events.resolver';
-import {MainComponent} from './main/main.component';
-import {AuthGuardService} from './services/auth-guard.service';
-import {RegisterComponent} from './auth/register/register.component';
-import {ProfileComponent} from './me/profile.component';
-import {ProfileResolver} from './resolvers/profile.resolver';
-import {GroupResolver} from './resolvers/group.resolver';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
+import { EventsComponent } from './events/events.component';
+import { GroupsComponent } from './groups/groups.component';
+import { EventComponent } from './event/event.component';
+import { GroupComponent } from './group/group.component';
+import { GroupsResolver } from './resolvers/groups.resolver';
+import { EventsResolver } from './resolvers/events.resolver';
+import { EventResolver } from './resolvers/event.resolver';
+import { LoginComponent } from './auth/login/login.component';
+import { GroupEventsResolver } from './resolvers/group-events.resolver';
+import { MainComponent } from './main/main.component';
+import { AuthGuardService } from './services/auth-guard.service';
+import { RegisterComponent } from './auth/register/register.component';
+import { ProfileComponent } from './me/profile.component';
+import { ProfileResolver } from './resolvers/profile.resolver';
+import { GroupResolver } from './resolvers/group.resolver';
 
 const routes: Routes = [
   {

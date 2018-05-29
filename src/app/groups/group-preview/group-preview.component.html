@@ -4,7 +4,8 @@
 			<a [routerLink]="['/groups/' + groupPreview.ref]">
 				<div class="card-header card-header-vibent-purple">
 					<h4 class="card-title ">{{groupPreview._groupName}}</h4>
-					<h4 class="card-members "><b>{{groupPreview._groupSize}}</b> member<span *ngIf="groupPreview._groupSize>1">s</span></h4>
+					<h4 class="card-members "><b>{{groupPreview._groupSize}}</b> member<span
+							*ngIf="groupPreview._groupSize>1">s</span></h4>
 					<p class="card-category">{{groupPreview._groupDescription}}</p>
 				</div>
 			</a>

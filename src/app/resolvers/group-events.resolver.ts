@@ -1,10 +1,10 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
-import {ActivatedRouteSnapshot, Resolve} from '@angular/router';
+import { ActivatedRouteSnapshot, Resolve } from '@angular/router';
 
-import {Observable} from 'rxjs/Observable';
-import {Event} from '../models/event';
-import {HttpService} from '../http/http.service';
+import { Observable } from 'rxjs/Observable';
+import { Event } from '../models/event';
+import { HttpService } from '../http/http.service';
 
 @Injectable()
 export class GroupEventsResolver implements Resolve<Event[]> {

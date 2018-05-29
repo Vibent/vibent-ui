@@ -1,10 +1,10 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
-import {ActivatedRouteSnapshot, Resolve} from '@angular/router';
+import { ActivatedRouteSnapshot, Resolve } from '@angular/router';
 
-import {Observable} from 'rxjs/Observable';
-import {HttpService} from '../http/http.service';
-import {User} from '../models/user';
+import { Observable } from 'rxjs/Observable';
+import { HttpService } from '../http/http.service';
+import { User } from '../models/user';
 
 @Injectable()
 export class ProfileResolver implements Resolve<User> {

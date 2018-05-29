@@ -1,11 +1,10 @@
-import {Component, OnInit} from '@angular/core';
-import {GroupPreview} from '../models/group-preview';
-import {GroupPreviewMember} from '../models/group-preview-member';
-import {MatDialog} from '@angular/material';
-import {GroupCreationComponent} from '../dialogs/group-creation/group-creation.component';
-import {HttpService} from '../http/http.service';
-import {Group} from '../models/group';
-import {ActivatedRoute} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { GroupPreview } from '../models/group-preview';
+import { GroupPreviewMember } from '../models/group-preview-member';
+import { MatDialog } from '@angular/material';
+import { GroupCreationComponent } from '../dialogs/group-creation/group-creation.component';
+import { Group } from '../models/group';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-groups',

@@ -1,10 +1,9 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
-import {FormBuilder, FormGroup} from '@angular/forms';
-import {Event} from '../../models/event';
-import {HttpService} from '../../http/http.service';
-import {Router} from '@angular/router';
-import {User} from 'app/models/user';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { HttpService } from '../../http/http.service';
+import { Router } from '@angular/router';
+import { User } from 'app/models/user';
 
 @Component({
   selector: 'app-profile-settings',

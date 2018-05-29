@@ -1,6 +1,6 @@
-import {Component, OnInit, ElementRef, Input} from '@angular/core';
+import {Component, ElementRef, OnInit} from '@angular/core';
 import {ROUTES} from '../sidebar/sidebar.component';
-import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
+import {Location} from '@angular/common';
 import {Router} from '@angular/router';
 import {AuthenticationService} from '../../services/authentication.service';
 
@@ -10,12 +10,11 @@ import {AuthenticationService} from '../../services/authentication.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  private listTitles: any[];
   location: Location;
   mobile_menu_visible: any = 0;
+  private listTitles: any[];
   private toggleButton: any;
   private sidebarVisible: boolean;
-
 
 
   constructor(location: Location, private element: ElementRef, private router: Router,
@@ -26,7 +25,6 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this.listTitles = ROUTES.filter(listTitle => listTitle);
-    console.log(this.listTitles);
     const navbar: HTMLElement = this.element.nativeElement;
     this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
     this.router.events.subscribe((event) => {
@@ -122,11 +120,11 @@ export class NavbarComponent implements OnInit {
       titlee = titlee.slice(2);
     }
 
-    const t =  this.listTitles.find(function (e) {
+    const t = this.listTitles.find(function (e) {
       return (e.path === titlee);
     });
 
-    return t.title ? t.title : 'Vibent';
+    return t ? t.title : 'Vibent';
   }
 
   public logout(): void {

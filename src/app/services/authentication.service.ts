@@ -1,10 +1,10 @@
 ///<reference path="../../../node_modules/@types/bcryptjs/index.d.ts"/>
 import { Injectable } from '@angular/core';
-import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/map';
 import { HttpService } from '../http/http.service';
 import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
-import * as bcrypt from 'bcryptjs'
+import * as bcrypt from 'bcryptjs';
 
 @Injectable()
 export class AuthenticationService {
@@ -25,7 +25,7 @@ export class AuthenticationService {
       })
       .catch(e => {
         onFail(e);
-      })
+      });
   }
 
   register(registrationRequest, onFail?: (e) => void): void {
@@ -39,7 +39,7 @@ export class AuthenticationService {
       })
       .catch(e => {
         onFail(e);
-      })
+      });
   }
 
   hash(password: string): string {

@@ -1,5 +1,5 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {GroupSettingsComponent} from './group-settings.component';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { GroupSettingsComponent } from './group-settings.component';
 
 describe('GroupRequestsComponent', () => {
   let component: GroupSettingsComponent;

@@ -1,5 +1,5 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import {EventParticipant} from '../../models/event-participant';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { EventParticipant } from '../../models/event-participant';
 
 @Component({
   selector: 'app-event-participants-preview',
@@ -21,7 +21,7 @@ export class EventParticipantsPreviewComponent implements OnInit {
 
   public getResponseCss(response: string): string {
     if (response === 'Participates') {
-      return 'participate'
+      return 'participate';
     }
     if (response === 'Don\'t know') {
       return 'idk';

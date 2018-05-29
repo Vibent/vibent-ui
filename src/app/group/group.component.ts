@@ -1,23 +1,25 @@
-import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
-import {MatDialog} from '@angular/material';
-import {GroupMembersComponent} from '../dialogs/group-members/group-members.component';
-import {GroupPreviewMember} from '../models/group-preview-member';
-import {EventCreationComponent} from '../dialogs/event-creation/event-creation.component';
-import {Group} from '../models/group';
-import {Event} from '../models/event';
-import {ActivatedRoute} from '@angular/router';
-import {AddGroupMembersComponent} from '../dialogs/group-members/add-group-members/add-group-members.component';
-import {AdminPanelService} from '../services/admin-panel.service';
-import {GroupSettingsComponent} from '../dialogs/admin-panel/group-settings/group-settings.component';
-import {GroupRequestsComponent} from '../dialogs/admin-panel/group-requests/group-requests.component';
-import {GroupRightsComponent} from '../dialogs/admin-panel/group-rights/group-rights.component';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { GroupMembersComponent } from '../dialogs/group-members/group-members.component';
+import { GroupPreviewMember } from '../models/group-preview-member';
+import { EventCreationComponent } from '../dialogs/event-creation/event-creation.component';
+import { Group } from '../models/group';
+import { Event } from '../models/event';
+import { ActivatedRoute } from '@angular/router';
+import { AddGroupMembersComponent } from '../dialogs/group-members/add-group-members/add-group-members.component';
+import { AdminPanelService } from '../services/admin-panel.service';
+import { GroupSettingsComponent } from '../dialogs/admin-panel/group-settings/group-settings.component';
+import { GroupRequestsComponent } from '../dialogs/admin-panel/group-requests/group-requests.component';
+import { GroupRightsComponent } from '../dialogs/admin-panel/group-rights/group-rights.component';
+import { NGXLogger } from 'ngx-logger';
 
 declare const $: any;
 
 @Component({
   selector: 'app-group',
   templateUrl: './group.component.html',
-  styleUrls: ['./group.component.css']
+  styleUrls: ['./group.component.css'],
+  providers: [NGXLogger]
 })
 export class GroupComponent implements OnInit, OnDestroy {
 
@@ -27,11 +29,14 @@ export class GroupComponent implements OnInit, OnDestroy {
 
   constructor(public dialog: MatDialog,
               private route: ActivatedRoute,
-              private adminPanel: AdminPanelService) {
+              private adminPanel: AdminPanelService,
+              private logger: NGXLogger) {
 
     this.group = this.route.snapshot.data['group'];
     this.events = this.route.snapshot.data['groupEvents'];
     this.events.sort(this.sortEventByDate);​
+    this.logger.info('Group received: ', this.group);
+    this.logger.info('Group events: ', this.events);
   }
 
   ngOnDestroy() {
@@ -131,5 +136,5 @@ export class GroupComponent implements OnInit, OnDestroy {
     const dateA = new Date(a.startDate).getTime();
     const dateB = new Date(b.startDate).getTime();
     return dateA < dateB ? 1 : -1;
-  };
+  }
 }

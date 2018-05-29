@@ -1,19 +1,18 @@
-import {Component, ElementRef, Input, OnInit} from '@angular/core';
-import {AuthenticationService} from '../../services/authentication.service';
-import {Router} from '@angular/router';
-import {Location} from '@angular/common';
-import {AdminPanelService} from '../../services/admin-panel.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { AuthenticationService } from '../../services/authentication.service';
+import { Router } from '@angular/router';
+import { AdminPanelService } from '../../services/admin-panel.service';
 
 declare const $: any;
 
-declare interface RouteInfo {
+declare interface IRouteInfo {
   path: string;
   title: string;
   icon: string;
   class: string;
 }
 
-export const ROUTES: RouteInfo[] = [
+export const ROUTES: IRouteInfo[] = [
   {path: '/events', title: 'Events', icon: 'bubble_chart', class: ''},
   {path: '/groups', title: 'Groups', icon: 'group', class: ''},
   {path: '/me', title: 'Profile', icon: 'account_circle', class: 'active-pro'},
@@ -32,7 +31,8 @@ export class SidebarComponent implements OnInit {
 
   constructor(private router: Router,
               private authenticationService: AuthenticationService,
-              private adminPanel: AdminPanelService) {}
+              private adminPanel: AdminPanelService) {
+  }
 
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);

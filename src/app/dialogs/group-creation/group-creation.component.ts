@@ -1,11 +1,9 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
-import {FormBuilder, FormGroup} from '@angular/forms';
-import {HttpSentEvent} from '@angular/common/http';
-import {HttpService} from '../../http/http.service';
-import {Group} from '../../models/group';
-import {Router} from '@angular/router';
-import 'rxjs/add/operator/map'
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { HttpService } from '../../http/http.service';
+import { Router } from '@angular/router';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-group-creation',

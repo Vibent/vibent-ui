@@ -1,10 +1,10 @@
-import {Injectable} from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Group} from '../models/group';
-import {Event} from '../models/event';
-import {Observable} from 'rxjs/Observable';
-import {CookieService} from 'ngx-cookie-service';
-import {User} from '../models/user';
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Group } from '../models/group';
+import { Event } from '../models/event';
+import { Observable } from 'rxjs/Observable';
+import { CookieService } from 'ngx-cookie-service';
+import { User } from '../models/user';
 
 @Injectable()
 export class HttpService {
@@ -17,14 +17,14 @@ export class HttpService {
 
   public getOptions(): object {
     return {
-      'headers': new HttpHeaders({
+      headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'Authorization': this.cookieService.get('token')
       })
-    }
+    };
   }
 
-  /** Groups **/
+  /*** Groups ***/
 
   public getGroup(groupRef: string): Observable<Group> {
     return this.http.get<Group>(this.API_URL + '/group/' + groupRef, this.getOptions());
@@ -45,7 +45,7 @@ export class HttpService {
     return this.http.patch(this.API_URL + '/group/' + group.ref, body, this.getOptions());
   }
 
-  /** Events **/
+  /*** Events ***/
 
   public getEvents(): Observable<Event[]> {
     return this.http.get<Event[]>(this.API_URL + '/event/me', this.getOptions());
@@ -65,7 +65,7 @@ export class HttpService {
     return this.http.post(this.API_URL + '/event', body, this.getOptions());
   }
 
-  /** User **/
+  /*** User ***/
 
   public getMe(): Observable<User> {
     return this.http.get<User>(this.API_URL + '/user/me', this.getOptions());
@@ -76,7 +76,7 @@ export class HttpService {
     return this.http.patch(this.API_URL + '/user/' + user.ref, body, this.getOptions());
   }
 
-  /** Auth **/
+  /*** Auth ***/
 
   public login(loginRequest): Observable<any> {
     const httpOptions = {

@@ -110,7 +110,7 @@
 }
 
 .admin_card.hoveradmin_card .info {
-  padding: 4px 8px 10px;
+  padding: 4px 8px 0px;
 }
 
 .admin_card.hoveradmin_card .info .title {
@@ -146,20 +146,19 @@
   margin-bottom: 10px;
   padding: 10px;
 
-  .member-name{
+  .member-name {
     display: inline-block;
     color: white;
     margin-left: 10px;
   }
 
-  .member-rights-switch{
+  .member-rights-switch {
     display: inline-block;
     padding-top: 6px;
     vertical-align: middle;
     margin-left: 10px;
   }
 }
-
 
 .member_request_card {
   padding-top: 20px;
@@ -242,11 +241,11 @@
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  border: 5px solid rgba(255,255,255,0.5);
+  border: 5px solid rgba(255, 255, 255, 0.5);
 }
 
 .member_request_card.hovermember_request_card .info {
-  padding: 4px 8px 10px;
+  padding: 4px 8px 0px;
 }
 
 .member_request_card.hovermember_request_card .info .title {
@@ -273,14 +272,13 @@ $toggle-height: 30px;
 $toggle-width: 60px;
 $switch-size: 30px;
 
-$anim-slight-bounce: cubic-bezier(0.34,1.61,0.7,1);
+$anim-slight-bounce: cubic-bezier(0.34, 1.61, 0.7, 1);
 $anim-speed-normal: 250ms;
 
 $border-color: #dadde1;
 
 //   BASE
 // -------------------------------------
-
 
 .tgl {
 
@@ -299,8 +297,8 @@ $border-color: #dadde1;
   .tgl_body {
     width: $toggle-width;
     height: $toggle-height;
-   // background: white;
-   // border: 1px solid $border-color;
+    // background: white;
+    // border: 1px solid $border-color;
     display: inline-block;
     position: relative;
     border-radius: 50px;
@@ -316,7 +314,7 @@ $border-color: #dadde1;
     top: -1px;
     border-radius: 50%;
     border: 1px solid darken($border-color, 5%);
-    @include box-shadow(0 2px 2px rgba(0,0,0,.13));
+    @include box-shadow(0 2px 2px rgba(0, 0, 0, .13));
     @include transition(left $anim-slight-bounce $anim-speed-normal, transform $anim-slight-bounce $anim-speed-normal);
     z-index: 1;
   }

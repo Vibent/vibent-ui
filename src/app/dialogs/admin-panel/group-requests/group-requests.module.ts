@@ -1,7 +1,7 @@
-import {NgModule} from '@angular/core';
-import {GroupRequestsComponent} from './group-requests.component';
-import {CommonModule} from '@angular/common';
-import {ReactiveFormsModule} from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { GroupRequestsComponent } from './group-requests.component';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [

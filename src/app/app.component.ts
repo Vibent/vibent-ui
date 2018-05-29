@@ -1,9 +1,6 @@
-import {Component, OnInit, ViewChild, AfterViewInit} from '@angular/core';
-import {Location, LocationStrategy, PathLocationStrategy, PopStateEvent} from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import 'rxjs/add/operator/filter';
-import {Router, NavigationEnd, NavigationStart} from '@angular/router';
-import {Subscription} from 'rxjs/Subscription';
-import {HttpService} from './http/http.service';
 
 declare const $: any;
 

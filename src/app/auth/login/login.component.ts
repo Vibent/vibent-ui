@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private cookieService: CookieService,
               private authenticationService: AuthenticationService,
-              private router: Router ) {
+              private router: Router) {
     if (this.cookieService.check('token')) {
       this.router.navigate(['/events']);
     }

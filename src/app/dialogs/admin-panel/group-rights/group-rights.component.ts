@@ -1,10 +1,9 @@
-import {Component, EventEmitter, Inject, OnInit, Output} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
-import {FormBuilder, FormGroup} from '@angular/forms';
-import {HttpService} from '../../../http/http.service';
-import {Router} from '@angular/router';
-import {Group} from '../../../models/group';
-import {AdminPanelService} from '../../../services/admin-panel.service';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Group } from '../../../models/group';
+import { AdminPanelService } from '../../../services/admin-panel.service';
 
 @Component({
   selector: 'app-group-settings',

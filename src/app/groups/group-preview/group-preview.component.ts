@@ -1,5 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {GroupPreview} from '../../models/group-preview';
+import { Component, Input, OnInit } from '@angular/core';
+import { GroupPreview } from '../../models/group-preview';
 
 @Component({
   selector: 'app-group-preview',

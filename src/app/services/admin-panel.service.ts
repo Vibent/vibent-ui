@@ -9,7 +9,8 @@ export class AdminPanelService {
   @Output() change: EventEmitter<any> = new EventEmitter();
   @Output() groupUpdated: EventEmitter<Group> = new EventEmitter();
 
-  constructor(private httpService: HttpService) {}
+  constructor(private httpService: HttpService) {
+  }
 
   toggleGroupPanel(response: any) {
     this.isOpen = response.isOpen;
