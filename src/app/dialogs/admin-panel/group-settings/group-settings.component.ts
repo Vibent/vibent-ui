@@ -4,6 +4,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Group } from '../../../models/group';
 import { AdminPanelService } from '../../../services/admin-panel.service';
+import Swal from 'sweetalert2';
+import {HttpService} from '../../../http/http.service';
 
 @Component({
   selector: 'app-group-settings',
@@ -19,17 +21,41 @@ export class GroupSettingsComponent implements OnInit {
               private dialogRef: MatDialogRef<GroupSettingsComponent>,
               private router: Router,
               private adminPanelService: AdminPanelService,
+              private httpService: HttpService,
               @Inject(MAT_DIALOG_DATA) data) {
 
     this.group = data.group;
     dialogRef.disableClose = true;
-    dialogRef.updateSize('600px', '65%');
+    dialogRef.updateSize('600px', '90%');
   }
 
   ngOnInit() {
     this.form = this.fb.group({
       name: [this.group.name, []],
       description: [this.group.description, []],
+    });
+  }
+
+  public removeGroup(): void {
+    Swal({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.value) {
+        this.dialogRef.close();
+        this.httpService.deleteGroup(this.group.ref).subscribe();
+        Swal(
+          'Deleted!',
+          'Group ' + this.group.name + ' has been deleted',
+          'success'
+        ).then((result) => {
+          this.router.navigate(['/groups']); });
+      }
     });
   }
 

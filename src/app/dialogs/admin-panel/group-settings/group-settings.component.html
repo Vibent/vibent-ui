@@ -12,11 +12,19 @@
 							placeholder="Description"></textarea>
 		<label for="description" class="TextArea-label">Description</label>
 	</div>
-
 	<div class="row justify-content-center" style="margin-top: 50px;">
 		<button (click)="updateInfo()" class="btn btn-round btn-add-event">Update</button>
 	</div>
 	<div class="row justify-content-center">
 		<button mat-dialog-close class="btn btn-round btn-danger" (click)="close()" style="opacity: 0.8">Cancel</button>
+	</div>
+
+	<div class="card" style="width: 100%; background-color: #ffffff47; margin-top: 35px;">
+		<div class="card-body">
+			<h5 class="card-title" style="color: white">Remove group</h5>
+			<h6 class="card-subtitle mb-2" style="color: #acacac">Removing group will cause all child events and
+				resources to be removed.</h6>
+			<button class="btn btn-danger" (click)="removeGroup()">Remove</button>
+		</div>
 	</div>
 </div>

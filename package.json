@@ -43,10 +43,12 @@
     "moment": "2.18.1",
     "ng-pick-datetime": "^5.2.6",
     "ngx-cookie-service": "^1.0.10",
+    "ngx-logger": "^3.0.0-rc1",
     "nodemailer": "^4.6.4",
     "perfect-scrollbar": "1.1.0",
     "popper.js": "1.14.3",
     "rxjs": "5.5.10",
+    "sweetalert2": "^7.21.1",
     "web-animations-js": "2.3.1",
     "zone.js": "0.8.4"
   },

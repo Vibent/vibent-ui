@@ -45,6 +45,10 @@ export class HttpService {
     return this.http.patch(this.API_URL + '/group/' + group.ref, body, this.getOptions());
   }
 
+  public deleteGroup(groupRef: string): any {
+    return this.http.delete(this.API_URL + '/group/' + groupRef, this.getOptions());
+  }
+
   /*** Events ***/
 
   public getEvents(): Observable<Event[]> {
