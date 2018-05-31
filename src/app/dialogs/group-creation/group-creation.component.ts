@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import { HttpService } from '../../http/http.service';
 import { Router } from '@angular/router';
 import 'rxjs/add/operator/map';
@@ -11,10 +11,10 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./group-creation.component.css']
 })
 export class GroupCreationComponent implements OnInit {
-  public title: string;
-  public description: string;
-  public group: string;
+
   public form: FormGroup;
+  public title: FormControl;
+  public description: FormControl;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<GroupCreationComponent>,
@@ -26,9 +26,11 @@ export class GroupCreationComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.title = new FormControl('', Validators.required);
+    this.description = new FormControl('');
     this.form = this.fb.group({
-      title: [this.title, []],
-      description: [this.description, []]
+      title: this.title,
+      description: this.description
     });
   }
 

@@ -1,9 +1,9 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import { HttpService } from '../../http/http.service';
 import { Router } from '@angular/router';
-import { User } from 'app/models/user';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-profile-settings',
@@ -14,6 +14,8 @@ export class ProfileSettingsComponent implements OnInit {
 
   public user: User;
   public form: FormGroup;
+  public firstName: FormControl;
+  public lastName: FormControl;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<ProfileSettingsComponent>,
@@ -27,9 +29,11 @@ export class ProfileSettingsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.firstName = new FormControl(this.user.firstName, Validators.required);
+    this.lastName = new FormControl(this.user.lastName, Validators.required);
     this.form = this.fb.group({
-      firstName: [this.user.firstName, []],
-      lastName: [this.user.lastName, []],
+      firstName: this.firstName,
+      lastName: this.lastName,
     });
   }
 
