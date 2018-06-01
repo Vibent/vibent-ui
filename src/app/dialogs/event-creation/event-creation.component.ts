@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import * as moment from 'moment';
 import { Event } from '../../models/event';
 import { HttpService } from '../../http/http.service';
@@ -14,15 +14,18 @@ import { Group } from '../../models/group';
 })
 export class EventCreationComponent implements OnInit {
 
-  /** Minimal Date for event creation**/
+  /*** Minimal Date for event creation***/
   dateTime = moment().add(1, 'hours').toDate();
-  /** User groups list **/
+
+  /*** User groups list ***/
   public groups: Group[];
-  public title: string;
-  public description: string;
-  public date: Date;
-  public group: string;
+
+  /*** Form ***/
   public form: FormGroup;
+  public title: FormControl;
+  public description: FormControl;
+  public date: FormControl;
+  public group: FormControl;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<EventCreationComponent>,
@@ -36,11 +39,15 @@ export class EventCreationComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.title = new FormControl('', Validators.required);
+    this.description = new FormControl('');
+    this.date = new FormControl('');
+    this.group = new FormControl('');
     this.form = this.fb.group({
-      title: [this.title, []],
-      description: [this.description, []],
-      group: [this.group, []],
-      date: [this.date, []],
+      title: this.title,
+      description: this.description,
+      group: this.group,
+      date: this.date
     });
   }
 

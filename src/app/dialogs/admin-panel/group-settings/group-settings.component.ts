@@ -1,11 +1,11 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Group } from '../../../models/group';
 import { AdminPanelService } from '../../../services/admin-panel.service';
 import Swal from 'sweetalert2';
-import {HttpService} from '../../../http/http.service';
+import { HttpService } from '../../../http/http.service';
 
 @Component({
   selector: 'app-group-settings',
@@ -16,6 +16,7 @@ export class GroupSettingsComponent implements OnInit {
 
   public group: Group;
   public form: FormGroup;
+  public name: FormControl;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<GroupSettingsComponent>,
@@ -30,9 +31,12 @@ export class GroupSettingsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.name = new FormControl(this.group.name, [
+      Validators.required
+    ]);
     this.form = this.fb.group({
-      name: [this.group.name, []],
-      description: [this.group.description, []],
+      name: this.name,
+      description: new FormControl(this.group.description),
     });
   }
 
