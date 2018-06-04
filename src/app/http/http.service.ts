@@ -9,7 +9,7 @@ import { User } from '../models/user';
 @Injectable()
 export class HttpService {
 
-  private API_URL = 'http://vibent-back.eu-west-3.elasticbeanstalk.com';
+  private API_URL = 'http://35.180.98.237:8080/';
 
   constructor(private http: HttpClient,
               private cookieService: CookieService) {
@@ -82,12 +82,12 @@ export class HttpService {
 
   /*** Auth ***/
 
-  public login(loginRequest): Observable<any> {
+  public loginEmail(loginRequest): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({'Content-Type': 'application/json'})
     };
 
-    return this.http.post(this.API_URL + '/auth/login', loginRequest, httpOptions);
+    return this.http.post(this.API_URL + '/auth/login/email', loginRequest, httpOptions);
   }
 
   public register(registrationRequest): Observable<any> {

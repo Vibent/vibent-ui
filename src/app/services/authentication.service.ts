@@ -18,7 +18,7 @@ export class AuthenticationService {
   login(loginRequest, onFail?: (e) => void): void {
     const _this = this;
     loginRequest.password = this.hash(loginRequest.password);
-    _this.httpService.login(loginRequest).toPromise()
+    _this.httpService.loginEmail(loginRequest).toPromise()
       .then(function (response) {
         _this.cookieService.set('token', response.token);
         _this.router.navigate(['/events']);
