@@ -46,7 +46,6 @@ export class ProfileSettingsComponent implements OnInit {
     this.user.firstName = this.form.value.firstName;
     this.user.lastName = this.form.value.lastName;
     const user = {
-      username: this.user.username,
       ref: this.user.ref,
       firstName: this.form.value.firstName,
       lastName: this.form.value.lastName

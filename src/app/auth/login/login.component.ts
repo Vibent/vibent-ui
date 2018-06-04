@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   public model: any = {
-    username: 'VibentUserNg',
+    email: 'vibentMailNg@vibent.com',
     password: 'VibentPassNg'
   };
 
@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
   }
 
   public login(): void {
-    this.authenticationService.login({username: this.model.username, password: this.model.password}, this.onFail.bind(this));
+    this.authenticationService.login({email: this.model.email, password: this.model.password}, this.onFail.bind(this));
   }
 
   public onFail(e): void {

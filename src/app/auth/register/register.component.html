@@ -3,13 +3,13 @@
 		<h2>Login</h2>
 		    
 		<form class="registration-form" name="form" (ngSubmit)="register()">
-			        
+
 			<div class="form-group">
-				<label for="username">Username</label>
-				<input type="text" class="form-control" id="username" name="username" [(ngModel)]="model.username"
-							 #username="ngModel"/>
+				<label for="email">Email</label>
+				<input type="email" class="form-control" id="email" name="email" [(ngModel)]="model.email" #email="ngModel"/>
 			</div>
-			      
+
+
 			<div class="form-group">  
 				<label for="password">Password</label>
 				<input type="password" class="form-control" id="password" name="password" [(ngModel)]="model.password"
@@ -21,16 +21,11 @@
 				<input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm"
 							 [(ngModel)]="passwordConfirm" #password="ngModel"/>   
 			</div>
-			 
-			<div class="form-group">
-				<label for="email">Email</label>
-				<input type="email" class="form-control" id="email" name="email" [(ngModel)]="model.email" #email="ngModel"/>
-			</div>
 
 
 			<div class="form-group">
-				<label for="email">Birthday</label><br>
-				<input matInput [matDatepicker]="picker" name="birthday" placeholder="Enter your birthday"
+				<label for="birthday">Birthday</label><br>
+				<input matInput [matDatepicker]="picker" id="birthday" name="birthday" placeholder="Enter your birthday"
 							 [(ngModel)]="model.birthday">
 				<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
 				<mat-datepicker #picker startView="year"></mat-datepicker>

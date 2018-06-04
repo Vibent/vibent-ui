@@ -18,7 +18,7 @@ export class AuthenticationService {
   login(loginRequest, onFail?: (e) => void): void {
     const _this = this;
     loginRequest.password = this.hash(loginRequest.password);
-    _this.httpService.login(loginRequest).toPromise()
+    _this.httpService.loginEmail(loginRequest).toPromise()
       .then(function (response) {
         _this.cookieService.set('token', response.token);
         _this.router.navigate(['/events']);
@@ -35,7 +35,7 @@ export class AuthenticationService {
       .then(function (response) {
         _this.cookieService.set('username', response.username);
         _this.cookieService.set('email', response.username);
-        _this.router.navigate(['/login']);
+        _this.router.navigate(['/loginEmail']);
       })
       .catch(e => {
         onFail(e);

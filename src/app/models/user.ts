@@ -7,5 +7,5 @@ export interface User {
   membershipRefs ?: string[];
   participationRefs ?: any[];
   ref ?: string;
-  username ?: string;
+  phoneNumber ?: number;
 }
