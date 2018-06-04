@@ -35,7 +35,7 @@ export class AuthenticationService {
       .then(function (response) {
         _this.cookieService.set('username', response.username);
         _this.cookieService.set('email', response.username);
-        _this.router.navigate(['/loginEmail']);
+        _this.router.navigate(['/login']);
       })
       .catch(e => {
         onFail(e);
