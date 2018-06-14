@@ -2,9 +2,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
-import { MatButtonModule, MatInputModule, MatRippleModule, MatTooltipModule } from '@angular/material';
-
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 import { AgmCoreModule } from '@agm/core';
@@ -36,6 +33,7 @@ import { GroupRightsComponent } from './dialogs/admin-panel/group-rights/group-r
 import { GroupRequestsModule } from './dialogs/admin-panel/group-requests/group-requests.module';
 import { GroupRequestsComponent } from './dialogs/admin-panel/group-requests/group-requests.component';
 import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
+import { PublicGroupModule } from './group/public-group/public-group.module';
 
 
 @NgModule({
@@ -43,10 +41,6 @@ import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
     BrowserAnimationsModule,
     FormsModule,
     RouterModule,
-    MatButtonModule,
-    MatRippleModule,
-    MatInputModule,
-    MatTooltipModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
@@ -68,6 +62,7 @@ import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
     GroupSettingsModule,
     GroupRightsModule,
     GroupRequestsModule,
+    PublicGroupModule,
     LoggerModule.forRoot({level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR}),
   ],
   declarations: [

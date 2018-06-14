@@ -9,7 +9,7 @@ import { User } from '../models/user';
 @Injectable()
 export class HttpService {
 
-  private API_URL = 'http://35.180.98.237:8080/';
+  private API_URL = 'http://35.180.98.237:8080';
 
   constructor(private http: HttpClient,
               private cookieService: CookieService) {

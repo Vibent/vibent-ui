@@ -17,6 +17,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { ProfileComponent } from './me/profile.component';
 import { ProfileResolver } from './resolvers/profile.resolver';
 import { GroupResolver } from './resolvers/group.resolver';
+import {PublicGroupComponent} from './group/public-group/public-group.component';
 
 const routes: Routes = [
   {
@@ -54,6 +55,11 @@ const routes: Routes = [
         path: 'groups/:ref',
         component: GroupComponent,
         resolve: {group: GroupResolver, groupEvents: GroupEventsResolver}
+      },
+      {
+        path: 'groups/public/:ref',
+        component: PublicGroupComponent,
+        resolve: {group: GroupResolver}
       },
       {path: '**', redirectTo: '/events', pathMatch: 'full'}
     ]

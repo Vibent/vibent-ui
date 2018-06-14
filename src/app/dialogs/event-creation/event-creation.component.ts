@@ -40,9 +40,9 @@ export class EventCreationComponent implements OnInit {
 
   ngOnInit() {
     this.title = new FormControl('', Validators.required);
-    this.description = new FormControl('');
-    this.date = new FormControl('');
-    this.group = new FormControl('');
+    this.description = new FormControl();
+    this.date = new FormControl();
+    this.group = new FormControl();
     this.form = this.fb.group({
       title: this.title,
       description: this.description,
