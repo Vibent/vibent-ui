@@ -4,6 +4,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
+import { Messages } from '../../messages-codes/messages';
 
 @Component({
   selector: 'app-register',
@@ -118,7 +119,7 @@ export class RegisterComponent implements OnInit {
       this.authenticationService.register(user, this.onFail.bind(this));
       Swal({
         type: 'success',
-        title: 'You will receive a confirmation',
+        title: Messages.REGISTER_CONFIRMATION,
         showConfirmButton: true,
       });
       this.router.navigate(['/login']);

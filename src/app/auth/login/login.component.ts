@@ -4,6 +4,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
+import { Messages } from '../../messages-codes/messages';
 
 @Component({
   selector: 'app-login',
@@ -82,7 +83,7 @@ export class LoginComponent implements OnInit {
     Swal({
       type: 'error',
       title: 'Oops...',
-      text: 'Wrong password or identifiant!',
+      text: Messages.BAD_LOGIN,
     });
   }
 
