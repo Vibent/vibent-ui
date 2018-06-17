@@ -1,54 +1,117 @@
-<div class="row">
-	<div class="col-md-6 offset-md-3">
-		<h2>Login</h2>
-		    
-		<form class="registration-form" name="form" (ngSubmit)="register()">
+<div class="my-login-page">
+	<section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-center">
+				<div class="card-wrapper">
+					<div class="brand">
+						<img src="/assets/img/vibent.png">
+					</div>
+					<div class="card fat">
+						<div class="card-body">
+							<h3 class="card-title">Register</h3>
+							<form novalidate [formGroup]="registerForm">
+								<div class="form-group"
+										 [ngClass]="{
+												'has-danger': firstName.invalid && (firstName.dirty || firstName.touched),
+												'has-success': firstName.valid && (firstName.dirty || firstName.touched)
+												}">
+									<label for="firstName">First name<span *ngIf="!formsValidAfterRegister.firstName"
+																												 class="field-error">required</span></label>
+									<input type="text" class="form-control" id="firstName" formControlName="firstName"/>
+								</div>
 
-			<div class="form-group">
-				<label for="email">Email</label>
-				<input type="email" class="form-control" id="email" name="email" [(ngModel)]="model.email" #email="ngModel"/>
+								<div class="form-group"
+										 [ngClass]="{
+												'has-danger': lastName.invalid && (lastName.dirty || lastName.touched),
+												'has-success': lastName.valid && (lastName.dirty || lastName.touched)
+												}">
+									<label for="lastName">Last name<span *ngIf="!formsValidAfterRegister.lastName"
+																											 class="field-error">required</span></label>
+									<input type="text" class="form-control" id="lastName" formControlName="lastName"/>
+								</div>
+
+								<div class="form-group"
+										 [ngClass]="{
+												'has-danger': birthday.invalid && (birthday.dirty || birthday.touched),
+												'has-success': birthday.valid && (birthday.dirty || birthday.touched)
+												}">
+									<label for="birthday">Birthday<span *ngIf="!formsValidAfterRegister.birthday"
+																											class="field-error">(MM/DD/YYYY)</span></label><br>
+									<input matInput [matDatepicker]="picker" id="birthday" formControlName="birthday"
+												 placeholder="Enter your birthday">
+									<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+									<mat-datepicker #picker startView="year"></mat-datepicker>
+								</div>
+								<div style="background-color: #eeeeee;padding: 10px; border-radius: 11px;">
+									<h4 class="card-title" style="margin-top: 10px; color: grey;margin-bottom: 0; text-align: center">
+										Email? Phone? Both?</h4>
+									<p style="text-align: center; color: gray">You can register with your email or your phone.<br/> Or
+										even both!<span *ngIf="!formsValidAfterRegister.emailOrPhone" style="color: #ff000094;"> But choose at least one!</span>
+									</p>
+									<div class="form-group"
+											 [ngClass]="{
+												'has-danger': email.invalid && (email.dirty || email.touched),
+												'has-success': email.valid && (email.dirty || email.touched)
+												}">
+										<label for="email">Email<span *ngIf="!formsValidAfterRegister.email"
+																									class="field-error">(incorrect email format)</span></label>
+										<input type="email" class="form-control" id="email" formControlName="email">
+									</div>
+
+									<div class="form-group"
+											 [ngClass]="{
+												'has-danger': phone.invalid && (phone.dirty || phone.touched),
+												'has-success': phone.valid && (phone.dirty || phone.touched)
+												}">
+										<label for="phone">Phone number<span *ngIf="!formsValidAfterRegister.phone"
+																												 class="field-error">(incorrect phone format)</span></label>
+										<input id="phone"
+													 class="form-control"
+													 ng2TelInput
+													 [ng2TelInputOptions]="{initialCountry: 'fr'}"
+													 (ng2TelOutput)="getNumber($event)">
+									</div>
+								</div>
+								<div class="form-group"
+										 [ngClass]="{
+												'has-danger': password.invalid && (password.dirty || password.touched),
+												'has-success': password.valid && (password.dirty || password.touched)
+												}"> 
+									<label for="password">Password <span *ngIf="!formsValidAfterRegister.password"
+																											 class="field-error">(8 characters)</span></label>
+									<input type="password" class="form-control" id="password" formControlName="password"/>
+								</div>
+
+								<div class="form-group"
+										 [ngClass]="{
+												'has-danger': passwordConfirmation.invalid && (passwordConfirmation.dirty || passwordConfirmation.touched),
+												'has-success': passwordConfirmation.valid && (passwordConfirmation.dirty || passwordConfirmation.touched)
+												}"> 
+									<label for="passwordConfirmation">Password Confirmation<span
+											*ngIf="!formsValidAfterRegister.passwordConfirmation"
+											class="field-error">(password not identical)</span></label>
+									<input type="password" class="form-control" id="passwordConfirmation"
+												 formControlName="passwordConfirmation"/>   
+								</div>
+
+								<div class="form-group">
+									<label>
+										<input type="checkbox" name="aggree" value="1"> I agree to the Terms and Conditions
+									</label>
+								</div>
+								        
+								<button type="submit" class="btn btn-primary btn-block" (click)="checkLoginAndRegister()">
+									Register
+								</button>
+								   
+								<div class="margin-top20 text-center">
+									Already have an account? <a href="javascript:void(0);" (click)="loginPage()">Login</a>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
 			</div>
-
-
-			<div class="form-group">  
-				<label for="password">Password</label>
-				<input type="password" class="form-control" id="password" name="password" [(ngModel)]="model.password"
-							 #password="ngModel"/>
-			</div>
-
-			<div class="form-group">
-				<label for="password">Password Confirmation</label>
-				<input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm"
-							 [(ngModel)]="passwordConfirm" #password="ngModel"/>   
-			</div>
-
-
-			<div class="form-group">
-				<label for="birthday">Birthday</label><br>
-				<input matInput [matDatepicker]="picker" id="birthday" name="birthday" placeholder="Enter your birthday"
-							 [(ngModel)]="model.birthday">
-				<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-				<mat-datepicker #picker startView="year"></mat-datepicker>
-			</div>
-
-
-			<div class="form-group">
-				<label for="first">First Name</label>
-				<input type="text" class="form-control" id="first" name="first" [(ngModel)]="model.firstName" #email="ngModel"/>
-			</div>
-
-			<div class="form-group">
-				<label for="last">last Name</label>
-				<input type="text" class="form-control" id="last" name="last" [(ngModel)]="model.lastName" #email="ngModel"/>
-			</div>
-
-			        
-			<div class="form-group">
-				<button class="btn btn-primary">Login</button>
-				    
-			</div>
-			    
-		</form>
-
-	</div>
+		</div>
+	</section>
 </div>

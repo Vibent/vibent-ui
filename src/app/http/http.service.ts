@@ -9,7 +9,7 @@ import { User } from '../models/user';
 @Injectable()
 export class HttpService {
 
-  private API_URL = 'http://35.180.98.237:8080/';
+  private API_URL = 'http://35.180.98.237:8080';
 
   constructor(private http: HttpClient,
               private cookieService: CookieService) {
@@ -88,6 +88,14 @@ export class HttpService {
     };
 
     return this.http.post(this.API_URL + '/auth/login/email', loginRequest, httpOptions);
+  }
+
+  public loginPhone(loginRequest): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
+
+    return this.http.post(this.API_URL + '/auth/login/phone', loginRequest, httpOptions);
   }
 
   public register(registrationRequest): Observable<any> {

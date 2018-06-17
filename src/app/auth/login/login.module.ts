@@ -5,6 +5,8 @@ import { AuthenticationService } from '../../services/authentication.service';
 import { LoginComponent } from './login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { Ng2TelInputModule } from 'ng2-tel-input';
+
 
 @NgModule({
   imports: [
@@ -12,7 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2TelInputModule
   ],
   declarations: [
     LoginComponent
