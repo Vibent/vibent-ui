@@ -17,7 +17,8 @@ import { RegisterComponent } from './auth/register/register.component';
 import { ProfileComponent } from './me/profile.component';
 import { ProfileResolver } from './resolvers/profile.resolver';
 import { GroupResolver } from './resolvers/group.resolver';
-import {PublicGroupComponent} from './group/public-group/public-group.component';
+import { PublicGroupComponent } from './group/public-group/public-group.component';
+import { ForgotComponent } from './auth/forgot/forgot.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'forgot',
+    component: ForgotComponent
   },
   {
     path: '', component: MainComponent, pathMatch: 'prefix', canActivate: [AuthGuardService],

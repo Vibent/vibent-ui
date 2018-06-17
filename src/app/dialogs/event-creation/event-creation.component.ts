@@ -57,15 +57,9 @@ export class EventCreationComponent implements OnInit {
 
   public saveEvent(): void {
     this.dialogRef.close(this.form.value);
-    let groupRef: string;
-    if (this.form.value.group) {
-      groupRef = this.form.value.group;
-    } else {
-      groupRef = this.groups[0].ref;
-    }
-    console.log(this.dateTime);
+    const groupRef = this.form.value.group ? this.form.value.group : this.groups[0].ref;
     this.dateTime.setTime(this.dateTime.getTime() - this.dateTime.getTimezoneOffset() * 60 * 1000);
-    console.log(this.dateTime.toJSON());
+    console.log(this.dateTime);
     const event: Event = {
       title: this.form.value.title,
       description: this.form.value.description,

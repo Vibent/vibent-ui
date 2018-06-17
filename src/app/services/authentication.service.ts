@@ -15,7 +15,7 @@ export class AuthenticationService {
               private router: Router) {
   }
 
-  login(loginRequest, onFail?: (e) => void): void {
+  emailLogin(loginRequest, onFail?: (e) => void): void {
     const _this = this;
     loginRequest.password = this.hash(loginRequest.password);
     _this.httpService.loginEmail(loginRequest).toPromise()
@@ -28,14 +28,24 @@ export class AuthenticationService {
       });
   }
 
+  phoneLogin(loginRequest, onFail?: (e) => void): void {
+    const _this = this;
+    loginRequest.password = this.hash(loginRequest.password);
+    _this.httpService.loginPhone(loginRequest).toPromise()
+    .then(function (response) {
+      _this.cookieService.set('token', response.token);
+      _this.router.navigate(['/events']);
+    })
+    .catch(e => {
+      onFail(e);
+    });
+  }
+
   register(registrationRequest, onFail?: (e) => void): void {
     const _this = this;
     registrationRequest.password = this.hash(registrationRequest.password);
     _this.httpService.register(registrationRequest).toPromise()
       .then(function (response) {
-        _this.cookieService.set('username', response.username);
-        _this.cookieService.set('email', response.username);
-        _this.router.navigate(['/login']);
       })
       .catch(e => {
         onFail(e);

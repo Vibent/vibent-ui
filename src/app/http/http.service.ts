@@ -90,6 +90,14 @@ export class HttpService {
     return this.http.post(this.API_URL + '/auth/login/email', loginRequest, httpOptions);
   }
 
+  public loginPhone(loginRequest): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
+
+    return this.http.post(this.API_URL + '/auth/login/phone', loginRequest, httpOptions);
+  }
+
   public register(registrationRequest): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({'Content-Type': 'application/json'})
