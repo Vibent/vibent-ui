@@ -3,7 +3,7 @@
 		<div class="container h-100">
 			<div class="row justify-content-center">
 				<div class="card-wrapper">
-					<div class="brand">
+					<div class="brand" (click)="loginPage()">
 						<img src="/assets/img/vibent.png">
 					</div>
 					<nav>
@@ -18,51 +18,33 @@
 						<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
 							<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tabs">
 								<div id="emailLogin" aria-labelledby="nav-home-tab" class="card-body">
-									<h3 class="card-title">Email login</h3>
+									<h3 class="card-title">Reset password by email</h3>
 									<form novalidate [formGroup]="loginForm">
-										<div class="form-group"
-												 [ngClass]="{
+										<div class="form-group" [ngClass]="{
 												'has-danger': email.invalid && (email.dirty || email.touched),
 												'has-success': email.valid && (email.dirty || email.touched)
 												}">
 											<label for="email">E-Mail</label>
 											<input id="email"
-														 type="email"
 														 class="form-control"
+														 type="email"
 														 formControlName="email"
 														 required>
-										</div>
-										<div class="form-group"
-												 [ngClass]="{
-													'has-danger': passwordEmail.invalid && (passwordEmail.dirty || passwordEmail.touched),
-													'has-success': passwordEmail.valid && (passwordEmail.dirty || passwordEmail.touched)
-										 }">
-											<label for="passwordEmail">Password
-												<a href="javascript:void(0);" (click)="forgoPassword()" class="float-right">
-													Forgot Password?
-												</a>
-											</label>
-											<input id="passwordEmail"
-														 type="password"
-														 class="form-control"
-														 formControlName="password"
-														 required>
+											<div class="form-text text-muted">
+												By clicking "Reset Password" we will send a password reset link
+											</div>
 										</div>
 										<div class="form-group no-margin">
-											<button type="submit" (click)="loginEmail()" class="btn btn-primary btn-block">
-												Login
+											<button type="submit" (click)="forgotByEmail()" class="btn btn-primary btn-block">
+												Reset password
 											</button>
-										</div>
-										<div class="margin-top20 text-center">
-											Don't have an account? <br>
-											<button class="btn btn-primary btn-sm" (click)="register()">Create One</button>
 										</div>
 									</form>
 								</div>
 							</div>
 							<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
 								<div id="phoneLogin" aria-labelledby="nav-home-tab" class="card-body">
-									<h3 class="card-title">Phone number login</h3>
+									<h3 class="card-title">Reset password by phone number</h3>
 
 									<form novalidate [formGroup]="loginForm">
 										<div class="form-group">
@@ -73,31 +55,14 @@
 														 type="text"
 														 ng2TelInput
 														 [ng2TelInputOptions]="{initialCountry: 'fr'}"
-														 (hasError)="hasError($event)"
 														 (ng2TelOutput)="getNumber($event)">
-										</div>
-										<div class="form-group"
-												 [ngClass]="{
-													'has-danger': passwordPhone.invalid && (passwordPhone.dirty || passwordPhone.touched),
-													'has-success': passwordPhone.valid && (passwordPhone.dirty || passwordPhone.touched)
-										 }">
-											<label for="passwordPhone">Password
-												<a href="javascript:void(0);" (click)="forgoPassword()" class="float-right">
-													Forgot Password?
-												</a>
-											</label>
-											<input id="passwordPhone"
-														 type="password"
-														 class="form-control"
-														 formControlName="passwordPhone"
-														 required>
+											<div class="form-text text-muted">
+												By clicking "Reset Password" we will send a password reset link
+											</div>
 										</div>
 										<div class="form-group no-margin">
-											<button type="submit" (click)="loginPhone()" class="btn btn-primary btn-block">Login</button>
-										</div>
-										<div class="margin-top20 text-center">
-											Don't have an account? <br>
-											<button class="btn btn-primary btn-sm" (click)="register()">Create One</button>
+											<button type="submit" (click)="forgotByPhone()" class="btn btn-primary btn-block">Reset password
+											</button>
 										</div>
 									</form>
 								</div>

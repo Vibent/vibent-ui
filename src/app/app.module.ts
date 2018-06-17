@@ -36,6 +36,7 @@ import { GroupRightsComponent } from './dialogs/admin-panel/group-rights/group-r
 import { GroupRequestsModule } from './dialogs/admin-panel/group-requests/group-requests.module';
 import { GroupRequestsComponent } from './dialogs/admin-panel/group-requests/group-requests.component';
 import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
+import {ForgotModule} from './auth/forgot/forgot.module';
 
 
 @NgModule({
@@ -61,6 +62,7 @@ import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
     EventModule,
     HttpClientModule,
     GroupModule,
+    ForgotModule,
     LoginModule,
     RegisterModule,
     ProfileModule,
