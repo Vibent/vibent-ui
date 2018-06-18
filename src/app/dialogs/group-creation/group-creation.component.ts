@@ -27,7 +27,7 @@ export class GroupCreationComponent implements OnInit {
 
   ngOnInit() {
     this.title = new FormControl('', Validators.required);
-    this.description = new FormControl('');
+    this.description = new FormControl();
     this.form = this.fb.group({
       title: this.title,
       description: this.description
@@ -36,11 +36,14 @@ export class GroupCreationComponent implements OnInit {
 
   public saveGroup(): void {
     this.dialogRef.close(this.form.value);
+    let description: string;
+    this.form.value.description === '' ? description = null : description = this.form.value.description;
     const group = {
       name: this.form.value.title,
-      description: this.form.value.description,
+      description: description,
       allAdmins: true
     };
+    console.log(group);
     this.httpService.createGroup(group).subscribe(res => {
       this.router.navigate(['/groups/' + res['ref']]);
     });

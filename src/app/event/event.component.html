@@ -9,24 +9,51 @@
 			</div>
 		</div>
 		<div class="row justify-content-center">
-			<div class="col-xl-9 col-lg-10 col-md-11 col-sm-12" align="center">
+			<div class="bubble">
 				<div class="row justify-content-center">
-					<div class="col-xl-4 col-md-6" align="center">
-						<div class="bubble"></div>
-					</div>
-					<div class="col-xl-4 col-md-6" align="center">
-						<div class="bubble"></div>
-					</div>
-					<div class="col-xl-4 col-md-6" align="center">
-						<div class="bubble"></div>
-					</div>
-					<div class="col-xl-4 col-md-6" align="center">
-						<div class="bubble"></div>
-					</div>
-					<div class="col-xl-4 col-md-6" align="center">
-						<div class="bubble"></div>
+					<div class="card" style="max-width: 18rem;display:inline-block">
+						<div #gmap style="width:100%;height:150px"></div>
+						<div class="proposal-avatar" matTooltip="Théo Joubert" [matTooltipPosition]="'above'"><img
+								src="/assets/img/theo.jpg"></div>
+						<div class="card-body">
+							<h3 class="card-title" style="text-align: center"><b>4</b> seats left</h3>
+							<p class="card-text" style="text-align: center">Will depart from <b>Lyon</b></p>
+							<div class="row justify-content-center">
+								<div class="proposal-traveler-avatar" matTooltip="Théo Joubert is in!" [matTooltipPosition]="'above'">
+									<img src="/assets/img/theo.jpg"></div>
+								<div class="proposal-traveler-avatar" matTooltip="Théo Joubert is in!" [matTooltipPosition]="'above'">
+									<img src="/assets/img/theo.jpg"></div>
+							</div>
+							<div class="row justify-content-center">
+								<a href="#" class="btn btn-primary">Take a seat</a>
+							</div>
+						</div>
 					</div>
 				</div>
+				<div class="row justify-content-center">
+					<div class="card" style="max-width: 18rem;display:inline-block">
+						<div class="request-avatar" matTooltip="Théo Joubert" [matTooltipPosition]="'above'"><img
+								src="/assets/img/theo.jpg"></div>
+						<div class="card-body">
+							<h3 class="card-title" style="text-align: center; margin-top: 25px">Théo requested <b>1</b> seat</h3>
+							<p class="card-text" style="text-align: center">From <b>Villeurbanne</b></p>
+							<div class="row justify-content-center">
+								<a href="#" class="btn btn-primary">Take him</a>
+							</div>
+						</div>
+					</div>
+					<div class="card" style="max-width: 18rem;display:inline-block">
+						<div class="request-avatar"><img src="/assets/img/theo.jpg"></div>
+						<div class="card-body">
+							<h3 class="card-title" style="text-align: center; margin-top: 25px">You requested <b>1</b> seat</h3>
+							<p class="card-text" style="text-align: center">From <b>Villeurbanne</b></p>
+							<div class="row justify-content-center">
+								<a href="#" class="btn btn-primary"><i class="material-icons">edit</i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
 		<div class="row">

@@ -70,12 +70,13 @@ export class GroupSettingsComponent implements OnInit {
   public updateInfo(): void {
     this.dialogRef.close(this.form.value);
     this.group.name = this.form.value.name;
-    this.group.description = this.form.value.description;
+    this.form.value.description === '' ? this.group.description = null : this.group.description = this.form.value.description;
     const group = {
       ref: this.group.ref,
       name: this.group.name,
       description: this.group.description,
     };
+    console.log(group);
     this.adminPanelService.updateGroup(group);
 
   }
