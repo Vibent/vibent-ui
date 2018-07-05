@@ -1,0 +1,52 @@
+image: docker:latest
+services:
+  - docker:dind
+
+variables:
+  DOCKER_DRIVER: overlay
+  SPRING_PROFILES_ACTIVE: gitlab-ci
+  CONTAINER_URL: registry.gitlab.com
+  CONTAINER_PATH: /vibent/vibent-ui
+  CONTAINER_IMAGE: ${CONTAINER_URL}${CONTAINER_PATH}
+
+stages:
+  - build
+  - dockerize
+  - deploy
+
+build:
+  stage: build
+  image: trion/ng-cli-karma
+  cache:
+    paths:
+      - node_modules/
+  script:
+    - npm i
+    - ng build --prod
+  artifacts:
+    paths:
+      - dist
+
+dockerize:
+  stage: dockerize
+  only:
+    - master
+  script:
+    - echo $CONTAINER_IMAGE
+    - docker version
+    - docker build -t $CONTAINER_URL .
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CONTAINER_URL
+    - docker images
+    - docker pull $CONTAINER_IMAGE:latest || true
+    - docker build --cache-from $CONTAINER_IMAGE:latest --tag $CONTAINER_IMAGE:$CI_BUILD_REF --tag $CONTAINER_IMAGE:latest .
+    - docker push $CONTAINER_IMAGE:$CI_BUILD_REF
+    - docker push $CONTAINER_IMAGE:latest
+
+deploy:
+  stage: deploy
+  only:
+    - master
+  when: manual
+  script:
+    - apk add --update curl && rm -rf /var/cache/apk/*
+    - curl -X POST -d '{"token":"#DZQ#phEGzj3C5s","restart":"vibent-ui"}' ec2-35-180-98-237.eu-west-3.compute.amazonaws.com:8081
