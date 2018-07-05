@@ -1,22 +1,23 @@
+<div class="row justify-content-center">
+	<div class="create-event-title">Create a group</div>
+</div>
 
-    <div class="row justify-content-center">
-        <div class="create-event-title">Create a group</div>
-    </div>
+<div [formGroup]="form">
+	<div class="Input">
+		<input type="text" formControlName="title" id="title" class="Input-text" placeholder="Group title">
+		<label for="title" class="Input-label">Title</label>
+	</div>
+	<div class="TextArea">
+        <textarea data-autoresize id="description" formControlName="description" class="Input-text"
+									placeholder="Group decription"></textarea>
+		<label for="description" class="TextArea-label">Description</label>
+	</div>
 
-    <div [formGroup]="form">
-        <div class="Input">
-            <input type="text" formControlName="title" id="title" class="Input-text" placeholder="Group title">
-            <label for="title" class="Input-label">Title</label>
-        </div>
-        <div class="TextArea">
-            <textarea data-autoresize id="description" formControlName="description" class="Input-text" placeholder="Group decription"></textarea>
-            <label for="description" class="TextArea-label">Description</label>
-        </div>
-
-        <div class="row justify-content-center" style="margin-top: 50px">
-            <button (click)="saveGroup()" class="btn btn-round btn-add-event">Create</button>
-        </div>
-        <div class="row justify-content-center">
-            <button mat-dialog-close class="btn btn-round btn-danger" style="opacity: 0.8">Cancel</button>
-        </div>
-    </div>
+	<div class="row justify-content-center" style="margin-top: 50px">
+		<button *ngIf="!title.invalid" (click)="saveGroup()" class="btn btn-round btn-add-event">Create</button>
+		<button *ngIf="title.invalid" class="btn btn-round btn-add-event disabled">Create</button>
+	</div>
+	<div class="row justify-content-center">
+		<button mat-dialog-close class="btn btn-round btn-danger" style="opacity: 0.8">Cancel</button>
+	</div>
+</div>

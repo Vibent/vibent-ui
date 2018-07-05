@@ -37,13 +37,13 @@
 }
 
 .scrolling-wrapper {
-  overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
 
   .group-profile {
     display: inline-block;
-    margin-left: 50px;
-    margin-bottom: 10px
+    margin-left: 25px;
+    margin-bottom: 10px;
+    margin-right: 25px;
   }
 }

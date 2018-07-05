@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {GroupPreview} from '../models/group-preview';
-import {GroupPreviewMember} from '../models/group-preview-member';
-import {MatDialog} from '@angular/material';
-import {GroupCreationComponent} from '../dialogs/group-creation/group-creation.component';
-import {HttpService} from '../http/http.service';
-import {Group} from '../models/group';
-import {ActivatedRoute} from '@angular/router';
+import { GroupPreview } from '../models/group-preview';
+import { GroupPreviewMember } from '../models/group-preview-member';
+import { MatDialog } from '@angular/material';
+import { GroupCreationComponent } from '../dialogs/group-creation/group-creation.component';
+import { Group } from '../models/group';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-groups',
@@ -14,8 +13,8 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class GroupsComponent implements OnInit {
 
-  groupsPreview: GroupPreview[] = [];
-  groups: Group[];
+  public groupsPreview: GroupPreview[] = [];
+  public groups: Group[];
 
   constructor(public dialog: MatDialog, private route: ActivatedRoute) {
     const groupPreviewMembers = [
@@ -36,10 +35,10 @@ export class GroupsComponent implements OnInit {
     }
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
-  openDialog() {
-    const dialogRef = this.dialog.open(GroupCreationComponent, {
-    });
+  public openDialog(): void {
+    this.dialog.open(GroupCreationComponent, {});
   }
 }

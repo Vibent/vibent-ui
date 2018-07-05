@@ -8,9 +8,9 @@ describe('GroupPreviewMemberComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GroupPreviewMemberComponent ]
+      declarations: [GroupPreviewMemberComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
-import {EventCreationComponent} from './event-creation.component';
-import { OwlDateTimeModule} from 'ng-pick-datetime';
-import { OwlMomentDateTimeModule } from 'ng-pick-datetime-moment';
-import {CommonModule} from '@angular/common';
-import {ReactiveFormsModule} from '@angular/forms';
+import { EventCreationComponent } from './event-creation.component';
+import { OwlDateTimeModule } from 'ng-pick-datetime';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +10,6 @@ import {ReactiveFormsModule} from '@angular/forms';
     CommonModule,
     ReactiveFormsModule,
     OwlDateTimeModule,
-    OwlMomentDateTimeModule,
   ],
   declarations: [
     EventCreationComponent
@@ -19,4 +17,5 @@ import {ReactiveFormsModule} from '@angular/forms';
   providers: [],
   exports: [EventCreationComponent]
 })
-export class EventCreationModule { }
+export class EventCreationModule {
+}

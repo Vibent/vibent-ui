@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {EventPreview} from '../models/event-preview';
-import {EventCreationComponent} from '../dialogs/event-creation/event-creation.component';
-import {MatDialog } from '@angular/material';
-import {Group} from '../models/group';
-import {Event} from '../models/event';
-import {ActivatedRoute} from '@angular/router';
-import {HttpService} from '../http/http.service';
+import { EventCreationComponent } from '../dialogs/event-creation/event-creation.component';
+import { MatDialog } from '@angular/material';
+import { Event } from '../models/event';
+import { ActivatedRoute } from '@angular/router';
+import { HttpService } from '../http/http.service';
 
 @Component({
   selector: 'app-events',
@@ -14,16 +12,15 @@ import {HttpService} from '../http/http.service';
 })
 export class EventsComponent implements OnInit {
 
-  data;
-  // TODO: generate groupRef - groupName array for dialog
-  public groups: any[] = [];
-  events: Event[];
+  public groups: any = [];
+  public events: Event[];
 
   constructor(public dialog: MatDialog, private route: ActivatedRoute, private httpService: HttpService) {
     this.events = this.route.snapshot.data['events'];
+    this.events.sort(this.sortEventByDate);
     this.httpService.getGroups().subscribe((groups) => {
       for (const group of groups) {
-        const g = {ref: group.ref, name: group.name};
+        const g = {ref: group.ref, name: group.name, fromGroup: false};
         this.groups.push(g);
       }
     });
@@ -33,9 +30,15 @@ export class EventsComponent implements OnInit {
   }
 
   openDialog() {
-    const dialogRef = this.dialog.open(EventCreationComponent, {
+    this.dialog.open(EventCreationComponent, {
       data: {groups: this.groups}
     });
 
+  }
+
+  sortEventByDate(a, b) {
+    const dateA = new Date(a.startDate).getTime();
+    const dateB = new Date(b.startDate).getTime();
+    return dateA < dateB ? 1 : -1;
   }
 }

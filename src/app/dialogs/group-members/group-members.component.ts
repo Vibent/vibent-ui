@@ -1,7 +1,7 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
-import {FormBuilder, FormGroup} from '@angular/forms';
-import {GroupPreviewMember} from '../../models/group-preview-member';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { GroupPreviewMember } from '../../models/group-preview-member';
 
 @Component({
   selector: 'app-group-creation',
@@ -9,11 +9,9 @@ import {GroupPreviewMember} from '../../models/group-preview-member';
   styleUrls: ['./group-members.component.css']
 })
 export class GroupMembersComponent implements OnInit {
-  title: string;
-  description: string;
-  group: string;
-  form: FormGroup;
-  groupMembers: GroupPreviewMember[];
+
+  public form: FormGroup;
+  public groupMembers: GroupPreviewMember[];
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<GroupMembersComponent>,

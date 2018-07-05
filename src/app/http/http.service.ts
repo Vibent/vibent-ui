@@ -1,72 +1,109 @@
-import {Injectable} from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Group} from '../models/group';
-import {Event} from '../models/event';
-import {Observable} from 'rxjs/Observable';
-import {LoginRequest} from '../models/login-request';
-import {LoginResponse} from '../models/login-response';
-import {CookieService} from 'ngx-cookie-service';
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Group } from '../models/group';
+import { Event } from '../models/event';
+import { Observable } from 'rxjs/Observable';
+import { CookieService } from 'ngx-cookie-service';
+import { User } from '../models/user';
 
 @Injectable()
 export class HttpService {
 
-  private API_URL = 'http://vibent-back.eu-west-3.elasticbeanstalk.com';
+  private API_URL = 'http://35.180.98.237:8080';
 
   constructor(private http: HttpClient,
               private cookieService: CookieService) {
   }
 
-  getOptions(): object {
+  public getOptions(): object {
     return {
-      'headers': new HttpHeaders({
+      headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'Authorization': this.cookieService.get('token')
       })
-    }
+    };
   }
 
-  /** Groups **/
+  /*** Groups ***/
 
-  getGroup(groupRef: string): Observable<Group> {
+  public getGroup(groupRef: string): Observable<Group> {
     return this.http.get<Group>(this.API_URL + '/group/' + groupRef, this.getOptions());
   }
 
-  getGroups(): Observable<Group[]> {
+  public getGroups(): Observable<Group[]> {
     return this.http.get<Group[]>(this.API_URL + '/group/me', this.getOptions());
   }
 
 
-  createGroup(group: Group) {
+  public createGroup(group: Group) {
     const body = JSON.stringify(group);
     return this.http.post(this.API_URL + '/group', body, this.getOptions());
   }
 
-  /** Events **/
+  public updateGroup(group: Group): Observable<Group> {
+    const body = JSON.stringify(group);
+    return this.http.patch(this.API_URL + '/group/' + group.ref, body, this.getOptions());
+  }
 
-  getEvents(): Observable<Event[]> {
+  public deleteGroup(groupRef: string): any {
+    return this.http.delete(this.API_URL + '/group/' + groupRef, this.getOptions());
+  }
+
+  /*** Events ***/
+
+  public getEvents(): Observable<Event[]> {
     return this.http.get<Event[]>(this.API_URL + '/event/me', this.getOptions());
   }
 
-  getEvent(eventRef: string): Observable<Event> {
+  public getEvent(eventRef: string): Observable<Event> {
     return this.http.get<Event>(this.API_URL + '/event/' + eventRef, this.getOptions());
   }
 
-  getGroupEvents(groupRef: string): Observable<Event[]> {
+  public getGroupEvents(groupRef: string): Observable<Event[]> {
     return this.http.get<Event[]>(this.API_URL + '/group/' + groupRef + '/event', this.getOptions());
   }
 
-  createEvent(event: Event) {
+  public createEvent(event: Event) {
     console.log(event);
     const body = JSON.stringify(event);
     return this.http.post(this.API_URL + '/event', body, this.getOptions());
   }
 
-  login(loginRequest: LoginRequest): Observable<LoginResponse> {
+  /*** User ***/
+
+  public getMe(): Observable<User> {
+    return this.http.get<User>(this.API_URL + '/user/me', this.getOptions());
+  }
+
+  public updateUser(user: User): Observable<User> {
+    const body = JSON.stringify(user);
+    return this.http.patch(this.API_URL + '/user/' + user.ref, body, this.getOptions());
+  }
+
+  /*** Auth ***/
+
+  public loginEmail(loginRequest): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({'Content-Type': 'application/json'})
     };
 
-    return this.http.post<LoginResponse>(this.API_URL + '/auth/login', loginRequest, httpOptions);
+    return this.http.post(this.API_URL + '/auth/login/email', loginRequest, httpOptions);
+  }
+
+  public loginPhone(loginRequest): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
+
+    return this.http.post(this.API_URL + '/auth/login/phone', loginRequest, httpOptions);
+  }
+
+  public register(registrationRequest): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
+
+    return this.http.post(this.API_URL + '/auth/register', registrationRequest, httpOptions);
   }
 
 }

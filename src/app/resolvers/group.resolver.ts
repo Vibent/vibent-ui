@@ -1,17 +1,17 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
-import {ActivatedRouteSnapshot, Resolve} from '@angular/router';
+import { ActivatedRouteSnapshot, Resolve } from '@angular/router';
 
-import {Observable} from 'rxjs/Observable';
-import {Group} from '../models/group';
-import {HttpService} from '../http/http.service';
+import { Observable } from 'rxjs/Observable';
+import { Group } from '../models/group';
+import { HttpService } from '../http/http.service';
 
 @Injectable()
 export class GroupResolver implements Resolve<Group> {
   constructor(private httpService: HttpService) {
   }
 
-  resolve(route: ActivatedRouteSnapshot): any | Observable<any> | Promise<any> {
+  resolve(route: ActivatedRouteSnapshot): Group | Observable<Group> | Promise<Group> {
     return this.httpService.getGroup(route.paramMap.get('ref'));
   }
 }

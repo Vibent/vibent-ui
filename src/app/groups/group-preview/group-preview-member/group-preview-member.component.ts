@@ -1,5 +1,5 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import {GroupPreviewMember} from '../../../models/group-preview-member';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { GroupPreviewMember } from '../../../models/group-preview-member';
 
 @Component({
   selector: 'app-group-preview-member',
@@ -13,8 +13,10 @@ export class GroupPreviewMemberComponent implements OnInit {
   @Input()
   groupPreviewMember: GroupPreviewMember;
 
-  constructor() {}
+  constructor() {
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 }

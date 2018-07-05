@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import {EventParticipant} from '../models/event-participant';
-import {ActivatedRoute} from '@angular/router';
-import {Event} from '../models/event';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { EventParticipant } from '../models/event-participant';
+import { ActivatedRoute } from '@angular/router';
+import { Event } from '../models/event';
+import { } from '@types/googlemaps';
+
+
 @Component({
   selector: 'app-event',
   templateUrl: './event.component.html',
@@ -9,14 +12,31 @@ import {Event} from '../models/event';
 })
 export class EventComponent implements OnInit {
 
-  participants: EventParticipant[];
-  event: Event;
-
+  public participants: EventParticipant[];
+  public event: Event;
+  @ViewChild('gmap') gmapElement: any;
+  map: google.maps.Map;
+  marker: google.maps.Marker;
   constructor(private route: ActivatedRoute) {
     this.event = this.route.snapshot.data['event'];
   }
 
   ngOnInit() {
+    const location = new google.maps.LatLng(45.750000, 4.850000);
+    const mapProp = {
+      center: location,
+      zoom: 12,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
+
+    this.marker = new google.maps.Marker({
+      position: location,
+      map: this.map,
+      title: 'Got you!'
+    });
+    this.map.panTo(location);
+
     this.participants = [
       new EventParticipant('Conor Ryan', '/assets/img/conor.jpg', 'Participates'),
       new EventParticipant('Francois Dupond', '/assets/img/francois.jpg', 'Participates'),

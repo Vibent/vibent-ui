@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import {GroupCreationComponent} from './group-creation.component';
+import { GroupCreationComponent } from './group-creation.component';
 
 describe('GroupCreationComponent', () => {
   let component: GroupCreationComponent;
@@ -7,9 +7,9 @@ describe('GroupCreationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GroupCreationComponent ]
+      declarations: [GroupCreationComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

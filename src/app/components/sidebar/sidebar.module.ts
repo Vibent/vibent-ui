@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {SidebarComponent} from './sidebar.component';
-import {RouterModule} from '@angular/router';
-
+import { CommonModule } from '@angular/common';
+import { SidebarComponent } from './sidebar.component';
+import { RouterModule } from '@angular/router';
+import { GroupAdminPanelModule } from '../../admin-panels/group-admin-panel.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    GroupAdminPanelModule,
   ],
   declarations: [
     SidebarComponent
@@ -15,4 +16,5 @@ import {RouterModule} from '@angular/router';
   providers: [],
   exports: [SidebarComponent]
 })
-export class SidebarModule { }
+export class SidebarModule {
+}

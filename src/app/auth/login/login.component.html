@@ -1,18 +1,111 @@
-<div class="col-md-6 col-md-offset-3">
-      <h2>Login</h2>
-      <form name="form" (ngSubmit)="login()" novalidate>
-          <div class="form-group" [ngClass]="{ 'has-error': !username.valid }">
-              <label for="username">Username</label>
-              <input type="text" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" required />
-              <div *ngIf="!username.valid" class="help-block">Username is required</div>
-          </div>
-          <div class="form-group" [ngClass]="{ 'has-error': !password.valid }">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
-              <div *ngIf="!password.valid" class="help-block">Password is required</div>
-          </div>
-          <div class="form-group">
-              <button class="btn btn-primary">Login</button>
-          </div>
-      </form>
+<div class="my-login-page">
+	<section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-center">
+				<div class="card-wrapper">
+					<div class="brand">
+						<img src="/assets/img/vibent.png">
+					</div>
+					<nav>
+						<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+							<a class="nav-item nav-link active" id="nav-home-tabs" data-toggle="tab" href="#nav-home" role="tab"
+								 aria-controls="nav-home" aria-selected="true">Email</a>
+							<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+								 aria-controls="nav-profile" aria-selected="false">Phone</a>
+						</div>
+					</nav>
+					<div class="card fat">
+						<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+							<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tabs">
+								<div id="emailLogin" aria-labelledby="nav-home-tab" class="card-body">
+									<h3 class="card-title">Email login</h3>
+									<form novalidate [formGroup]="loginForm">
+										<div class="form-group"
+												 [ngClass]="{
+												'has-danger': email.invalid && (email.dirty || email.touched),
+												'has-success': email.valid && (email.dirty || email.touched)
+												}">
+											<label for="email">E-Mail</label>
+											<input id="email"
+														 type="email"
+														 class="form-control"
+														 formControlName="email"
+														 required>
+										</div>
+										<div class="form-group"
+												 [ngClass]="{
+													'has-danger': passwordEmail.invalid && (passwordEmail.dirty || passwordEmail.touched),
+													'has-success': passwordEmail.valid && (passwordEmail.dirty || passwordEmail.touched)
+										 }">
+											<label for="passwordEmail">Password
+												<a href="javascript:void(0);" (click)="forgoPassword()" class="float-right">
+													Forgot Password?
+												</a>
+											</label>
+											<input id="passwordEmail"
+														 type="password"
+														 class="form-control"
+														 formControlName="password"
+														 required>
+										</div>
+										<div class="form-group no-margin">
+											<button type="submit" (click)="loginEmail()" class="btn btn-primary btn-block">
+												Login
+											</button>
+										</div>
+										<div class="margin-top20 text-center">
+											Don't have an account? <br>
+											<button class="btn btn-primary btn-sm" (click)="register()">Create One</button>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+								<div id="phoneLogin" aria-labelledby="nav-home-tab" class="card-body">
+									<h3 class="card-title">Phone number login</h3>
+
+									<form novalidate [formGroup]="loginForm">
+										<div class="form-group">
+											<label for="phone">Phone number</label>
+											<input id="phone"
+														 class="form-control"
+														 formControlName="phone"
+														 type="text"
+														 ng2TelInput
+														 [ng2TelInputOptions]="{initialCountry: 'fr'}"
+														 (hasError)="hasError($event)"
+														 (ng2TelOutput)="getNumber($event)">
+										</div>
+										<div class="form-group"
+												 [ngClass]="{
+													'has-danger': passwordPhone.invalid && (passwordPhone.dirty || passwordPhone.touched),
+													'has-success': passwordPhone.valid && (passwordPhone.dirty || passwordPhone.touched)
+										 }">
+											<label for="passwordPhone">Password
+												<a href="javascript:void(0);" (click)="forgoPassword()" class="float-right">
+													Forgot Password?
+												</a>
+											</label>
+											<input id="passwordPhone"
+														 type="password"
+														 class="form-control"
+														 formControlName="passwordPhone"
+														 required>
+										</div>
+										<div class="form-group no-margin">
+											<button type="submit" (click)="loginPhone()" class="btn btn-primary btn-block">Login</button>
+										</div>
+										<div class="margin-top20 text-center">
+											Don't have an account? <br>
+											<button class="btn btn-primary btn-sm" (click)="register()">Create One</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </div>

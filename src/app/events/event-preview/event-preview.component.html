@@ -1,34 +1,35 @@
 <div class="row justify-content-center">
-    <div class="col-xl-8 col-lg-9 col-md-12">
-        <a [routerLink]="['/events/' + event.ref ]">
-            <div *ngIf="ressourcesLoaded | async">
-                <div class="card card-stats">
-                    <div class="card-header card-header-vibent-green card-header-icon">
-                        <div class="card-icon">
-                            <h3>{{event.startDate | date}}</h3>
-                        </div>
-                        <p class="card-category">{{additionnalEventInfos.daysRemaining}}</p>
-                        <h4 class="card-title">4
-                            <small>participants</small>
-                        </h4>
-                        <div class="card-body">{{event.title}}
-                            <div class="card-location" *ngIf=additionnalEventInfos.location>
-                                in {{additionnalEventInfos.location}}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="stats">
-                            <i class="material-icons text-info">info</i>
-                            {{additionnalEventInfos.bubblesNumber}} bubbles!
-                        </div>
-                        <div class="event-preview-group">
-                            from {{additionnalEventInfos.groupName}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </div>
+	<div class="col-xl-8 col-lg-9 col-md-12">
+		<a [routerLink]="['/events/' + event.ref ]">
+			<div *ngIf="ressourcesLoaded | async">
+				<div class="card card-stats" [style.opacity]=opacityStyle>
+					<div class="card-header card-header-vibent-green card-header-icon">
+						<div class="card-icon">
+							<h3>{{event.startDate | date}}</h3>
+						</div>
+						<p class="card-category">{{additionnalEventInfos.daysRemaining}}</p>
+						<h4 class="card-title">4
+							<small>participants</small>
+						</h4>
+						<div class="card-body">{{event.title}}
+							<div class="card-hour">{{event.startDate | date:'shortTime'}}</div>
+							<div class="card-location" *ngIf=additionnalEventInfos.location>
+								in {{additionnalEventInfos.location}}
+							</div>
+						</div>
+					</div>
+					<div class="card-footer">
+						<div class="stats">
+							<i class="material-icons text-info">info</i>
+							{{additionnalEventInfos.bubblesNumber}} bubbles!
+						</div>
+						<div class="event-preview-group">
+							from {{additionnalEventInfos.groupName}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
 </div>
 

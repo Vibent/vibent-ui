@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import {EventParticipantsPreviewComponent} from './event-participants-preview.component';
-import {CommonModule} from '@angular/common';
+import { EventParticipantsPreviewComponent } from './event-participants-preview.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -13,4 +13,5 @@ import {CommonModule} from '@angular/common';
   providers: [],
   exports: [EventParticipantsPreviewComponent]
 })
-export class EventParticipantsPreviewModule { }
+export class EventParticipantsPreviewModule {
+}
