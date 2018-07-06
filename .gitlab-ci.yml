@@ -1,6 +1,6 @@
 image: docker:latest
 services:
-  - docker:dind
+  - docker:18.05.0-dind
 
 variables:
   DOCKER_DRIVER: overlay
@@ -16,13 +16,14 @@ stages:
 
 build:
   stage: build
-  image: trion/ng-cli-karma
+  image: node:8.11.3-alpine
   cache:
     paths:
       - node_modules/
   script:
-    - npm i
-    - ng build --prod
+    - npm install
+    - npm rebuild node-sass
+    - npm run build-prod
   artifacts:
     paths:
       - dist
