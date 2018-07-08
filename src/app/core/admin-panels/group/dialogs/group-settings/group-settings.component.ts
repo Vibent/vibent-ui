@@ -26,7 +26,7 @@ export class GroupSettingsComponent implements OnInit {
 
     this.group = data.group;
     dialogRef.disableClose = true;
-    dialogRef.updateSize('600px', '90%');
+    dialogRef.updateSize('600px', '700px');
   }
 
   ngOnInit() {

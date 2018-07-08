@@ -15,7 +15,7 @@ export class GroupMembersComponent implements OnInit {
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<GroupMembersComponent>,
               @Inject(MAT_DIALOG_DATA) data) {
-    dialogRef.updateSize('600px', '80%');
+    dialogRef.updateSize('600px', '700px');
     this.groupMembers = data.groupMembers;
   }
 

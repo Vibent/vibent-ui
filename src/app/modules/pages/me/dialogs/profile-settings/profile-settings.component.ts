@@ -24,7 +24,7 @@ export class ProfileSettingsComponent implements OnInit {
 
     this.user = data.user;
     dialogRef.disableClose = true;
-    dialogRef.updateSize('600px', '60%');
+    dialogRef.updateSize('600px', '500px');
   }
 
   ngOnInit() {

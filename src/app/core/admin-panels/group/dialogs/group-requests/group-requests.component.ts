@@ -21,7 +21,7 @@ export class GroupRequestsComponent implements OnInit {
               @Inject(MAT_DIALOG_DATA) data) {
 
     this.group = data.group;
-    dialogRef.updateSize('600px', '90%');
+    dialogRef.updateSize('600px', '700px');
   }
 
   ngOnInit() {

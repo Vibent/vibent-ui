@@ -14,11 +14,9 @@
 							<a>{{user.firstName}} {{user.lastName}}</a>
 						</div>
 						<div class="desc">Joinded on 22 may</div>
-						<div class="desc">{{user.adminshipRefs.length}} group<span *ngIf="user.adminshipRefs.length>1">s</span>
-							managed
-						</div>
-						<div class="desc">{{user.participationRefs.length}} event<span
-								*ngIf="user.participationRefs.length>1">s</span> opportunities
+						<div class="desc">{{user.memberships.length}} group<span *ngIf="user.memberships.length>1">s</span></div>
+						<div class="desc">{{user.participations.length}} event<span
+								*ngIf="user.participations.length>1">s</span> opportunities
 						</div>
 					</div>
 					<div class="bottom">

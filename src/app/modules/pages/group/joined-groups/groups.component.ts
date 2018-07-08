@@ -30,7 +30,8 @@ export class GroupsComponent implements OnInit {
     ];
     this.groups = this.route.snapshot.data['groups'];
     for (const group of this.groups) {
-      this.groupsPreview.push(new GroupPreview(group.ref, group.name, group.memberRefs.length, group.description, groupPreviewMembers));
+      console.log(group);
+      this.groupsPreview.push(new GroupPreview(group.ref, group.name, group.memberships.length, group.description, groupPreviewMembers));
     }
   }
 

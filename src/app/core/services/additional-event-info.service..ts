@@ -19,7 +19,7 @@ export class AdditionalEventInfoService {
 
     return this.httpService.getGroup(event.groupRef).toPromise().then(group => {
       const groupName = group.name;
-      const groupSize = group.memberRefs.length;
+      const groupSize = group.memberships.length;
       const daysRemaining = '4 days';
       const location = 'cannes';
       const bubblesNumber = 4;

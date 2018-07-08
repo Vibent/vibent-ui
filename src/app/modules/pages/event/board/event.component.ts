@@ -21,7 +21,7 @@ export class EventComponent implements OnInit {
   }
 
   ngOnInit() {
-    const location = new google.maps.LatLng(45.750000, 4.850000);
+   /* const location = new google.maps.LatLng(45.750000, 4.850000);
     const mapProp = {
       center: location,
       zoom: 12,
@@ -34,7 +34,7 @@ export class EventComponent implements OnInit {
       map: this.map,
       title: 'Got you!'
     });
-    this.map.panTo(location);
+    this.map.panTo(location);*/
 
     this.participants = [
       new EventParticipant('Conor Ryan', '/assets/img/conor.jpg', 'Participates'),

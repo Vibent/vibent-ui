@@ -1,3 +1,5 @@
+import { Membership } from './membership';
+
 export interface Group {
 
   name?: string;
@@ -5,8 +7,8 @@ export interface Group {
   adminRefs?: string[];
   eventRefs?: string[];
   description?: string;
-  inviteRefs?: string[];
-  memberRefs?: string[];
+  membershipRequests?: string[];
+  memberships?: Membership[];
   hasDefaultAdmin?: boolean;
   allAdmins ?: boolean;
   imagePath?: string;

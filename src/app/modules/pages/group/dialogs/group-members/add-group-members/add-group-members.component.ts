@@ -13,7 +13,7 @@ export class AddGroupMembersComponent implements OnInit {
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<AddGroupMembersComponent>,
               @Inject(MAT_DIALOG_DATA) data) {
-    dialogRef.updateSize('600px', '60%');
+    dialogRef.updateSize('600px', '500px');
   }
 
   ngOnInit() {
