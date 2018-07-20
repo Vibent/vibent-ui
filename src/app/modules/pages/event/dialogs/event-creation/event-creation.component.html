@@ -21,20 +21,6 @@
 		</div>
 	</div>
 
-	<!--
-	ERROR in src/app/dialogs/event-creation/event-creation.component.html(24,7): : Property 'fromGroup' does not exist on type 'Group'.
-	<div *ngIf="!groups[0].fromGroup">
-		<div class="row justify-content-center">
-			<div class="group-selection">
-				<h4 class="col-xl-12">Select a group</h4>
-				<select required formControlName="group">
-					<option value="{{group.ref}}" *ngFor="let group of groups">{{group.name}}</option>
-					<option value="5">No</option>
-				</select>
-			</div>
-		</div>
-	</div>
-	-->
 	<div class="row justify-content-center" style="margin-top: 50px;">
 		<button *ngIf="!title.invalid" (click)="saveEvent()" class="btn btn-round btn-add-event">Create</button>
 		<button *ngIf="title.invalid" class="btn btn-round btn-add-event disabled">Create</button>

@@ -45,7 +45,7 @@ export class GroupComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.groupPreviewMembers = [
       new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
-      new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
+      new GroupPreviewMember('Francois Duponsssssd', '/assets/img/francois.jpg', '22 May'),
       new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
       new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
       new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
@@ -98,7 +98,9 @@ export class GroupComponent implements OnInit, OnDestroy {
   }
 
   public openAddGroupMemberDialog(): void {
-    this.dialog.open(AddGroupMembersComponent);
+    this.dialog.open(AddGroupMembersComponent, {
+      data: {group: this.group}
+    });
   }
 
   public openEventCreationDialog(): void {

@@ -15,6 +15,7 @@ export class ProfileSettingsComponent implements OnInit {
   public form: FormGroup;
   public firstName: FormControl;
   public lastName: FormControl;
+  fileToUpload: File = null;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<ProfileSettingsComponent>,
@@ -24,7 +25,7 @@ export class ProfileSettingsComponent implements OnInit {
 
     this.user = data.user;
     dialogRef.disableClose = true;
-    dialogRef.updateSize('600px', '500px');
+    dialogRef.updateSize('600px', '600px');
   }
 
   ngOnInit() {
@@ -38,6 +39,7 @@ export class ProfileSettingsComponent implements OnInit {
 
   public close() {
     this.dialogRef.close();
+    this.fileToUpload = null;
   }
 
   public updateInfo(): void {
@@ -50,6 +52,25 @@ export class ProfileSettingsComponent implements OnInit {
       lastName: this.form.value.lastName
     };
     this.httpService.updateUser(user).subscribe((data) => console.log(data));
+    if (this.fileToUpload) {
+      this.httpService.uploadProfileImage(this.fileToUpload, user).subscribe((data) => console.log(data));
+    }
+  }
+
+  handleFileInput(files: FileList) {
+    this.fileToUpload = files.item(0);
+    console.log(this.fileToUpload);
+  }
+
+  onSelectFile(event) {
+    if (event.target.files && event.target.files[0]) {
+      const reader = new FileReader();
+      reader.readAsDataURL(event.target.files[0]);
+      reader.onload = (event) => {
+        const a: any = event.target;
+        this.fileToUpload = a.result;
+      };
+    }
   }
 
 }
