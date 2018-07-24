@@ -4,6 +4,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { User } from '../../../../../shared/models/user';
 import { HttpService } from '../../../../../core/http/http.service';
+import { ProfileImageService } from '../../../../../core/http/profile-image.service';
 
 @Component({
   selector: 'app-profile-settings',
@@ -15,17 +16,20 @@ export class ProfileSettingsComponent implements OnInit {
   public form: FormGroup;
   public firstName: FormControl;
   public lastName: FormControl;
-  fileToUpload: File = null;
+  fileToUpload: FileList = null;
+  userProfileImage: File = null;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<ProfileSettingsComponent>,
               private httpService: HttpService,
+              private profileImageService: ProfileImageService,
               private router: Router,
               @Inject(MAT_DIALOG_DATA) data) {
 
     this.user = data.user;
     dialogRef.disableClose = true;
-    dialogRef.updateSize('600px', '600px');
+    const dialogHeight = window.innerHeight <= 600 ? window.innerHeight - 50 + 'px' : '600px';
+    dialogRef.updateSize('600px', dialogHeight);
   }
 
   ngOnInit() {
@@ -35,6 +39,21 @@ export class ProfileSettingsComponent implements OnInit {
       firstName: this.firstName,
       lastName: this.lastName,
     });
+
+    this.profileImageService.getProfileImage(this.user.ref).subscribe((data) => {
+      this.createImageFromBlob(data);
+    });
+  }
+
+  createImageFromBlob(image: Blob) {
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
+      this.userProfileImage = reader.result;
+    }, false);
+
+    if (image) {
+      reader.readAsDataURL(image);
+    }
   }
 
   public close() {
@@ -52,23 +71,19 @@ export class ProfileSettingsComponent implements OnInit {
       lastName: this.form.value.lastName
     };
     this.httpService.updateUser(user).subscribe((data) => console.log(data));
-    if (this.fileToUpload) {
-      this.httpService.uploadProfileImage(this.fileToUpload, user).subscribe((data) => console.log(data));
+    if (this.fileToUpload && this.fileToUpload.item(0)) {
+      this.profileImageService.uploadProfileImage(this.fileToUpload.item(0), user).subscribe(() => this.profileImageService.profilePictureChanged());
     }
   }
 
   handleFileInput(files: FileList) {
-    this.fileToUpload = files.item(0);
-    console.log(this.fileToUpload);
-  }
-
-  onSelectFile(event) {
-    if (event.target.files && event.target.files[0]) {
+    this.fileToUpload = files;
+    if (files && files[0]) {
       const reader = new FileReader();
-      reader.readAsDataURL(event.target.files[0]);
+      reader.readAsDataURL(files[0]);
       reader.onload = (event) => {
         const a: any = event.target;
-        this.fileToUpload = a.result;
+        this.userProfileImage = a.result;
       };
     }
   }

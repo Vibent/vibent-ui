@@ -1,8 +1,11 @@
-import {Component, ElementRef, OnInit} from '@angular/core';
-import {ROUTES} from '../sidebar/sidebar.component';
-import {Location} from '@angular/common';
-import {Router} from '@angular/router';
-import {AuthenticationService} from '../../../core/services/authentication.service';
+import { Component, ElementRef, OnInit} from '@angular/core';
+import { ROUTES } from '../sidebar/sidebar.component';
+import { Location } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthenticationService } from '../../../core/services/authentication.service';
+import { User } from '../../../shared/models/user';
+import { ProfileImageService } from '../../../core/http/profile-image.service';
+import { HttpService } from '../../../core/http/http.service';
 
 @Component({
   selector: 'app-navbar',
@@ -15,11 +18,22 @@ export class NavbarComponent implements OnInit {
   private toggleButton: any;
   private sidebarVisible: boolean;
 
+  public userProfileImage: File = null;
+  public user: User;
 
-  constructor(location: Location, private element: ElementRef, private router: Router,
+  constructor(location: Location,
+              private element: ElementRef,
+              private router: Router,
+              private route: ActivatedRoute,
+              private profileImageService: ProfileImageService,
+              private httpService: HttpService,
               private authenticationService: AuthenticationService) {
     this.location = location;
     this.sidebarVisible = false;
+    this.httpService.getMe().subscribe((user) => {
+      this.user = user;
+      this.initValues();
+    });
   }
 
   ngOnInit() {
@@ -34,6 +48,24 @@ export class NavbarComponent implements OnInit {
         this.mobile_menu_visible = 0;
       }
     });
+    this.profileImageService.change.subscribe(() => {
+      this.initValues();
+    });
+  }
+
+  initValues() {
+    this.profileImageService.getProfileImage(this.user.ref).subscribe((data) => {this.createImageFromBlob(data); });
+  }
+
+  public createImageFromBlob(image: Blob): void {
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
+      this.userProfileImage = reader.result;
+    }, false);
+
+    if (image) {
+      reader.readAsDataURL(image);
+    }
   }
 
   public sidebarOpen(): void {

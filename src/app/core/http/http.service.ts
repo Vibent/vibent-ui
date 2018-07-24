@@ -24,16 +24,6 @@ export class HttpService {
     };
   }
 
-  public getImageOptions(): object {
-    return {
-      headers: new HttpHeaders({
-        'Accept': 'application/json',
-        'Content-Type': 'multipart/form-data',
-        'Authorization': this.cookieService.get('token')
-      })
-    };
-  }
-
   /*** Groups ***/
 
   public getGroup(groupRef: string): Observable<Group> {
@@ -60,8 +50,8 @@ export class HttpService {
   }
 
   public getInviteToken(groupRef: string): any {
-  return this.http.get(this.API_URL + '/group/' + groupRef + '/inviteToken', this.getOptions());
-}
+    return this.http.get(this.API_URL + '/group/' + groupRef + '/inviteToken', this.getOptions());
+  }
 
   /*** Events ***/
 
@@ -89,23 +79,14 @@ export class HttpService {
     return this.http.get<User>(this.API_URL + '/user/me', this.getOptions());
   }
 
+  public getUser(userRef: string): Observable<User> {
+    return this.http.get<User>(this.API_URL + '/user/' + userRef, this.getOptions());
+  }
+
   public updateUser(user: User): Observable<User> {
     const body = JSON.stringify(user);
     return this.http.patch(this.API_URL + '/user/' + user.ref, body, this.getOptions());
   }
-
-  /*** Images ***/
-
-  public uploadProfileImage(file: File, user: User) {
-    const formData = new FormData();
-    formData.append('file', file);
-    return this.http.post(this.API_URL + '/image/profile/upload/' + user.ref, formData, this.getImageOptions());
-  }
-
-  public getProfileImage(user: User): Observable<any>  {
-    return this.http.get(this.API_URL + '/image/profile/' + user.ref, this.getImageOptions());
-  }
-
 
   /*** Auth ***/
 

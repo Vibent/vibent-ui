@@ -9,10 +9,10 @@
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
-	border: 5px solid rgba(255, 255, 255, 0.5);" src="{{fileToUpload}}">
+	border: 5px solid rgba(255, 255, 255, 0.5);" src="{{userProfileImage}}">
 </div>
 <div class="row justify-content-center">
-	<input type="file" id="file" style="display: none;" (change)="onSelectFile($event)" #fileInput>
+	<input type="file" id="file" style="display: none;" (change)="handleFileInput($event.target.files)" accept="image/jpg,image/jpeg" #fileInput>
 	<div style="color: #ffffffc9; margin-top: 5px" (click)="fileInput.click()">Edit avatar</div>
 </div>
 <div [formGroup]="form">
