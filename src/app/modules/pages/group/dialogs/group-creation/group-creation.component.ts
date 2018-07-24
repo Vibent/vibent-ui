@@ -21,7 +21,8 @@ export class GroupCreationComponent implements OnInit {
               @Inject(MAT_DIALOG_DATA) data,
               private router: Router) {
     dialogRef.disableClose = true;
-    dialogRef.updateSize('600px', '700px');
+    const dialogHeight = window.innerHeight <= 700 ? window.innerHeight - 50 + 'px' : '700px';
+    dialogRef.updateSize('600px', dialogHeight);
   }
 
   ngOnInit() {

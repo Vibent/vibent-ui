@@ -19,7 +19,9 @@ export class AddGroupMembersComponent implements OnInit {
               private httpService: HttpService,
               @Inject(MAT_DIALOG_DATA) data) {
     this.group = data.group;
-    dialogRef.updateSize('600px', '500px');
+
+    const dialogHeight = window.innerHeight <= 500 ? window.innerHeight - 50 + 'px' : '500px';
+    dialogRef.updateSize('600px', dialogHeight);
   }
 
   ngOnInit() {

@@ -22,7 +22,8 @@ export class GroupRightsComponent implements OnInit {
 
     this.group = data.group;
     dialogRef.disableClose = true;
-    dialogRef.updateSize('600px', '700px');
+    const dialogHeight = window.innerHeight <= 700 ? window.innerHeight - 50 + 'px' : '700px';
+    dialogRef.updateSize('600px', dialogHeight);
   }
 
   ngOnInit() {
