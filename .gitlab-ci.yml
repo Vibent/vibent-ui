@@ -16,7 +16,7 @@ stages:
 
 build:
   stage: build
-  image: node:8.11.3-alpine
+  image: node:8.11.3
   cache:
     paths:
       - node_modules/

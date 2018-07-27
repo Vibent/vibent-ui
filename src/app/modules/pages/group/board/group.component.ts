@@ -5,7 +5,6 @@ import { EventCreationComponent } from '../../event/dialogs/event-creation/event
 import { ActivatedRoute } from '@angular/router';
 import { AddGroupMembersComponent } from '../dialogs/group-members/add-group-members/add-group-members.component';
 import { NGXLogger } from 'ngx-logger';
-import { GroupPreviewMember } from '../../../../shared/models/group-preview-member';
 import { Group } from '../../../../shared/models/group';
 import { AdminPanelService } from '../../../../core/services/admin-panel.service';
 import { GroupRequestsComponent } from '../../../../core/admin-panels/group/dialogs/group-requests/group-requests.component';
@@ -23,7 +22,6 @@ declare const $: any;
 export class GroupComponent implements OnInit, OnDestroy {
 
   public events: Event[];
-  public groupPreviewMembers: GroupPreviewMember[] = [];
   public group: Group;
 
   constructor(public dialog: MatDialog,
@@ -43,48 +41,6 @@ export class GroupComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.groupPreviewMembers = [
-      new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
-      new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
-      new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
-      new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
-      new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
-      new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
-      new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
-      new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
-      new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
-      new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
-      new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
-      new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
-      new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
-      new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
-      new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
-      new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
-      new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
-      new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
-      new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
-      new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
-      new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
-      new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
-      new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
-      new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
-      new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
-      new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
-      new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
-      new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
-      new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
-      new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
-      new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
-      new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
-      new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
-      new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
-      new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
-      new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
-      new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
-      new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
-      new GroupPreviewMember('Conor Ryan', '/assets/img/conor.jpg', '22 May'),
-      new GroupPreviewMember('Francois Dupond', '/assets/img/francois.jpg', '22 May'),
-    ];
     this.adminPanel.toggleGroupPanel({groupRef: this.group.ref, isOpen: true});
     this.adminPanel.groupUpdated.subscribe(result => {
       this.group = result;
@@ -93,12 +49,14 @@ export class GroupComponent implements OnInit, OnDestroy {
 
   public openGroupMembersDialog(): void {
     this.dialog.open(GroupMembersComponent, {
-      data: {groupMembers: this.groupPreviewMembers}
+      data: {group: this.group}
     });
   }
 
   public openAddGroupMemberDialog(): void {
-    this.dialog.open(AddGroupMembersComponent);
+    this.dialog.open(AddGroupMembersComponent, {
+      data: {group: this.group}
+    });
   }
 
   public openEventCreationDialog(): void {

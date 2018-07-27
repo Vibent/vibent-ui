@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventCreationComponent } from '../dialogs/event-creation/event-creation.component';
 import { MatDialog } from '@angular/material';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { HttpService } from '../../../../core/http/http.service';
 import { Event } from '../../../../shared/models/event';
 
@@ -14,7 +14,7 @@ export class EventsComponent implements OnInit {
   public groups: any = [];
   public events: Event[];
 
-  constructor(public dialog: MatDialog, private route: ActivatedRoute, private httpService: HttpService) {
+  constructor(public dialog: MatDialog, private route: ActivatedRoute, private router: Router, private httpService: HttpService) {
     this.events = this.route.snapshot.data['events'];
     this.events.sort(this.sortEventByDate);
     this.httpService.getGroups().subscribe((groups) => {
@@ -28,10 +28,8 @@ export class EventsComponent implements OnInit {
   ngOnInit() {
   }
 
-  openDialog() {
-    this.dialog.open(EventCreationComponent, {
-      data: {groups: this.groups}
-    });
+  goToGroupPage() {
+    this.router.navigate(['/groups']);
   }
 
   sortEventByDate(a, b) {
