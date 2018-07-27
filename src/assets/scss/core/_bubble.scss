@@ -1,6 +1,7 @@
 .bubble {
-  width: 80%;
-  height: 450px;
+  width: 95%;
+  min-height: 350px;
+  height: 100%;
   border-radius: 30px;
   background: linear-gradient(60deg, $vibent-purple, $vibent-red);
   display: inline-block;
@@ -43,4 +44,53 @@
     margin-top: -35px;
     border: 3px solid white;
   }
+}
+
+.box{
+  padding:60px 0px;
+}
+
+.box-part{
+  max-height: 250px;
+  max-width: 250px;
+  height: 250px;
+  width: 250px;
+  background:#FFF;
+  padding:60px 10px;
+  margin:10px 0px;
+  border-radius: 50%;
+  transition-duration: 0.5s;
+
+  .creator-bubble{
+    background-image:url(/assets/img/theo.jpg);
+    background-size: 50px 50px;
+    margin-top: 125px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .bubble-type{
+    margin-top: -53px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+    margin-left: 172px;
+  }
+  .title{
+    color: black;
+    font-size: 24px;
+  }
+
+  .preview{
+    margin-top: 30px;
+  }
+
+}
+.box-part:hover {
+  @include box-shadow($bmd-shadow-16dp);
+  transition-duration: 0.5s;
 }
