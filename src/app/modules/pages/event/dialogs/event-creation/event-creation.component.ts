@@ -34,7 +34,8 @@ export class EventCreationComponent implements OnInit {
 
     this.groups = data.groups;
     dialogRef.disableClose = true;
-    dialogRef.updateSize('600px', '700px');
+    const dialogHeight = window.innerHeight <= 570 ? window.innerHeight - 50 + 'px' : '570px';
+    dialogRef.updateSize('600px', dialogHeight);
   }
 
   ngOnInit() {

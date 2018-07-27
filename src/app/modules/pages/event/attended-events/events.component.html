@@ -2,7 +2,8 @@
 	<div class="container-fluid">
 		<h3 class="col-xl-12" style="text-align: center;">All events you attend!</h3>
 		<div class="row justify-content-center">
-			<div class="btn btn-round btn-add-event" (click)="openDialog()">Create an event</div>
+			<h4 class="col-xl-12" style="text-align: center;">Want to create one? Create an event in a group!</h4>
+			<div class="btn btn-round btn-add-event" (click)="goToGroupPage()">Go to groups page</div>
 		</div>
 		<app-event-preview *ngFor="let event of events" [event]=event></app-event-preview>
 	</div>

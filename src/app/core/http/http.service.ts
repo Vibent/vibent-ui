@@ -49,6 +49,10 @@ export class HttpService {
     return this.http.delete(this.API_URL + '/group/' + groupRef, this.getOptions());
   }
 
+  public getInviteToken(groupRef: string): any {
+    return this.http.get(this.API_URL + '/group/' + groupRef + '/inviteToken', this.getOptions());
+  }
+
   /*** Events ***/
 
   public getEvents(): Observable<Event[]> {
@@ -60,11 +64,11 @@ export class HttpService {
   }
 
   public getGroupEvents(groupRef: string): Observable<Event[]> {
+    console.log(groupRef);
     return this.http.get<Event[]>(this.API_URL + '/group/' + groupRef + '/event', this.getOptions());
   }
 
   public createEvent(event: Event) {
-    console.log(event);
     const body = JSON.stringify(event);
     return this.http.post(this.API_URL + '/event', body, this.getOptions());
   }
@@ -73,6 +77,10 @@ export class HttpService {
 
   public getMe(): Observable<User> {
     return this.http.get<User>(this.API_URL + '/user/me', this.getOptions());
+  }
+
+  public getUser(userRef: string): Observable<User> {
+    return this.http.get<User>(this.API_URL + '/user/' + userRef, this.getOptions());
   }
 
   public updateUser(user: User): Observable<User> {
