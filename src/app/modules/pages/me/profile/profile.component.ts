@@ -12,7 +12,6 @@ import { ProfileImageService } from '../../../../core/http/profile-image.service
 export class ProfileComponent implements OnInit {
 
   public user: User;
-  public userProfileImage: File = null;
 
   constructor(private route: ActivatedRoute,
               public dialogSettings: MatDialog,
@@ -28,18 +27,10 @@ export class ProfileComponent implements OnInit {
   }
 
   initValues() {
-    this.profileImageService.getProfileImage(this.user.ref).subscribe((data) => {this.createImageFromBlob(data); });
-  }
-
-  public createImageFromBlob(image: Blob): void {
-    const reader = new FileReader();
-    reader.addEventListener('load', () => {
-      this.userProfileImage = reader.result;
-    }, false);
-
-    if (image) {
-      reader.readAsDataURL(image);
-    }
+    this.profileImageService.getProfileImage(this.user.ref).subscribe((data) => {
+      this.profileImageService.setUserImageFromBlob(this.user, data);
+    },
+      () => this.profileImageService.setUserImageFromGravatar(this.user));
   }
 
   public openSettingsDialog(): void {

@@ -41,19 +41,13 @@ export class ProfileSettingsComponent implements OnInit {
     });
 
     this.profileImageService.getProfileImage(this.user.ref).subscribe((data) => {
-      this.createImageFromBlob(data);
-    });
-  }
-
-  createImageFromBlob(image: Blob) {
-    const reader = new FileReader();
-    reader.addEventListener('load', () => {
-      this.userProfileImage = reader.result;
-    }, false);
-
-    if (image) {
-      reader.readAsDataURL(image);
-    }
+        this.profileImageService.setUserImageFromBlob(this.user, data);
+        this.userProfileImage = this.user.imagePath;
+      },
+      () => {
+      this.profileImageService.setUserImageFromGravatar(this.user);
+      this.userProfileImage = this.user.imagePath;
+      });
   }
 
   public close() {

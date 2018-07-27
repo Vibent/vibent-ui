@@ -42,6 +42,7 @@
     "jquery": "3.2.1",
     "karma-jasmine-html-reporter": "^1.2.0",
     "mailcomposer": "^4.0.2",
+    "md5": "^2.2.1",
     "moment": "2.18.1",
     "ng-pick-datetime": "^5.2.6",
     "ng2-tel-input": "^1.0.15",
@@ -52,6 +53,7 @@
     "popper.js": "1.14.3",
     "rxjs": "5.5.10",
     "sweetalert2": "^7.21.1",
+    "ts-md5": "^1.2.4",
     "util": "^0.11.0",
     "web-animations-js": "2.3.1",
     "zone.js": "^0.8.4"

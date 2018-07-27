@@ -14,7 +14,6 @@ export class GroupPreviewMemberComponent implements OnInit {
   @Input()
   membership: Membership;
   user: User = null;
-  userProfileImage: File = null;
 
   constructor(private httpService: HttpService, private profileImageService: ProfileImageService) {
   }
@@ -22,30 +21,18 @@ export class GroupPreviewMemberComponent implements OnInit {
   ngOnInit() {
     this.httpService.getUser(this.membership.userRef).subscribe((user) => {
       this.user = user;
-    });
-    this.profileImageService.getProfileImage(this.membership.userRef).subscribe((data) => {
-      this.createImageFromBlob(data);
+      this.initValues();
     });
     this.profileImageService.change.subscribe(() => {
       this.initValues();
     });
   }
 
-
   initValues() {
     this.profileImageService.getProfileImage(this.membership.userRef).subscribe((data) => {
-      this.createImageFromBlob(data);
-    });
-  }
-  public createImageFromBlob(image: Blob): void {
-    const reader = new FileReader();
-    reader.addEventListener('load', () => {
-      this.userProfileImage = reader.result;
-    }, false);
-
-    if (image) {
-      reader.readAsDataURL(image);
-    }
+      this.profileImageService.setUserImageFromBlob(this.user, data);
+      },
+      () => this.profileImageService.setUserImageFromGravatar(this.user));
   }
 
 }
