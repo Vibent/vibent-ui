@@ -5,11 +5,12 @@ import { Event } from '../../shared/models/event';
 import { Observable } from 'rxjs/Observable';
 import { CookieService } from 'ngx-cookie-service';
 import { User } from '../../shared/models/user';
+import { AppSettings } from '../../shared/global/constants';
 
 @Injectable()
 export class HttpService {
 
-  private API_URL = 'http://35.180.98.237:8080';
+  private API_URL = AppSettings.API_ENDPOINT;
 
   constructor(private http: HttpClient,
               private cookieService: CookieService) {
@@ -34,7 +35,6 @@ export class HttpService {
     return this.http.get<Group[]>(this.API_URL + '/group/me', this.getOptions());
   }
 
-
   public createGroup(group: Group) {
     const body = JSON.stringify(group);
     return this.http.post(this.API_URL + '/group', body, this.getOptions());
@@ -51,6 +51,11 @@ export class HttpService {
 
   public getInviteToken(groupRef: string): any {
     return this.http.get(this.API_URL + '/group/' + groupRef + '/inviteToken', this.getOptions());
+  }
+
+  public validateInviteToken(content: any, token: string) {
+    const body = JSON.stringify(content);
+    return this.http.post(this.API_URL + '/group/validateInviteToken/' + token, body, this.getOptions());
   }
 
   /*** Events ***/

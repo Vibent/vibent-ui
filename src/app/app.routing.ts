@@ -19,6 +19,8 @@ import { EventComponent } from './modules/pages/event/board/event.component';
 import { GroupsComponent } from './modules/pages/group/joined-groups/groups.component';
 import { GroupComponent } from './modules/pages/group/board/group.component';
 import { PublicGroupComponent } from './modules/pages/group/public-board/public-group.component';
+import { GroupInvitationComponent } from './modules/pages/group/group-invitation/group-invitation.component';
+import { UserRightsGuardService } from './core/guards/user-rights-guard.service';
 
 const routes: Routes = [
   {
@@ -34,7 +36,7 @@ const routes: Routes = [
     component: ForgotComponent
   },
   {
-    path: '', component: MainComponent, pathMatch: 'prefix', canActivate: [AuthGuardService],
+    path: '', component: MainComponent, pathMatch: 'prefix', canActivate: [AuthGuardService],  canActivateChild: [UserRightsGuardService],
     children: [
       {
         path: 'me',
@@ -65,6 +67,10 @@ const routes: Routes = [
         path: 'groups/public/:ref',
         component: PublicGroupComponent,
         resolve: {group: GroupResolver}
+      },
+      {
+        path: 'invite/:token',
+        component: GroupInvitationComponent
       },
       {path: '**', redirectTo: '/events', pathMatch: 'full'}
     ]
