@@ -35,6 +35,7 @@ import { ProfileSettingsComponent } from './modules/pages/me/dialogs/profile-set
 import { GroupSettingsComponent } from './core/admin-panels/group/dialogs/group-settings/group-settings.component';
 import { GroupRightsComponent } from './core/admin-panels/group/dialogs/group-rights/group-rights.component';
 import { GroupRequestsComponent } from './core/admin-panels/group/dialogs/group-requests/group-requests.component';
+import { GroupInvitationModule } from './modules/pages/group/group-invitation/group-invitation.module';
 
 @NgModule({
   imports: [
@@ -54,6 +55,7 @@ import { GroupRequestsComponent } from './core/admin-panels/group/dialogs/group-
     NavbarModule,
     EventModule,
     HttpClientModule,
+    GroupInvitationModule,
     GroupModule,
     ForgotModule,
     LoginModule,

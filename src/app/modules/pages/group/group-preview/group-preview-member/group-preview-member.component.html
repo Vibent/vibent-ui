@@ -1,4 +1,4 @@
-<div *ngIf="user && user.imagePath">
+<ng-container *ngIf="user && user.imagePath">
 	<div class="group-profile">
 		<div class="group-user-avatar">
 			<img class="img" src={{user.imagePath}} >
@@ -8,4 +8,4 @@
 			<div class="group-user-additional">Joined on 22 may</div>
 		</div>
 	</div>
-</div>
+</ng-container>

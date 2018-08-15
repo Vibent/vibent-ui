@@ -18,7 +18,7 @@
 			</div>
 
 			<div class="col-xl-12 row justify-content-center">
-				<div *ngIf="isMobileMenu()">
+				<ng-container *ngIf="isMobileMenu()">
 					<div class="nav-item dropdown">
 						<button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton"
 										data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -31,7 +31,7 @@
 									class="badge badge-info">4</span></a>
 						</div>
 					</div>
-				</div>
+				</ng-container>
 			</div>
 			<div class="col-xl-10">
 				<h5 class="group-description">{{group.description}}</h5>
@@ -42,9 +42,9 @@
 			</div>
 		</div>
 	</div>
-	<div *ngIf="events && events.length>0;else no_events">
+	<ng-container *ngIf="events && events.length>0;else no_events">
 		<app-event-preview *ngFor="let event of events" [event]=event></app-event-preview>
-	</div>
+	</ng-container>
 	<ng-template #no_events>
 		<div class="col-xl-12" style="text-align: center; margin-top: 50px; color: white;">
 			<h4>No events... bouhouhou :'(</h4>

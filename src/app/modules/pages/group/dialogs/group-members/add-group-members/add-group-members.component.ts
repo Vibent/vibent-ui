@@ -3,6 +3,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { HttpService } from '../../../../../../core/http/http.service';
 import { Group } from '../../../../../../shared/models/group';
+import { AppSettings } from '../../../../../../shared/global/constants';
 
 @Component({
   selector: 'app-group-creation',
@@ -29,7 +30,7 @@ export class AddGroupMembersComponent implements OnInit {
 
   public generateLink(): void {
     this.httpService.getInviteToken(this.group.ref).subscribe((link) => {
-      this.generatedLink = link.token;
+      this.generatedLink = AppSettings.APP_URL + '/' + link.token;
     });
 
   }
