@@ -20,14 +20,15 @@
 <div class="row justify-content-center">
 	<button (click)="generateLink()" class="btn btn-round btn-add-event">Generate a link</button>
 </div>
-<div *ngIf="generatedLink">
+<ng-container *ngIf="generatedLink">
 	<div class="row justify-content-center">
 		<div class="col-xl-10">
 			<div class="input-group"><span class="input-group-addon"></span>
 				<input type="text" style="color: white; margin-top: 30px" class="form-control" name="Token" id="Token"
-							 placeholder="Token" required value="vibent.com/invite/{{generatedLink}}">
+							 placeholder="Token" required value="{{generatedLink}}">
 			</div>
 		</div>
-		<h5 style="color: white; margin-top: 20px; text-align: center;">Send this URL to your friends to allow them to join your group.</h5>
+		<h5 style="color: white; margin-top: 20px; text-align: center;">Send this URL to your friends to allow them to join
+			your group.</h5>
 	</div>
-</div>
+</ng-container>

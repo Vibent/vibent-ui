@@ -26,13 +26,12 @@ export const ROUTES: IRouteInfo[] = [
   templateUrl: './sidebar.component.html'
 })
 export class SidebarComponent implements OnInit {
-  
+
   public menuItems: any[];
   @Input()
   public adminPanelResult = {groupRef: null, isOpen: false};
-  public userProfileImage: File = null;
   public user: User;
-  
+
   constructor(private router: Router,
               private route: ActivatedRoute,
               private authenticationService: AuthenticationService,
@@ -44,7 +43,7 @@ export class SidebarComponent implements OnInit {
       this.initValues();
     });
   }
-  
+
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
     this.adminPanel.change.subscribe(result => {
@@ -54,18 +53,18 @@ export class SidebarComponent implements OnInit {
       this.initValues();
     });
   }
-  
+
   initValues() {
     this.profileImageService.getProfileImage(this.user.ref).subscribe((data) => {
         this.profileImageService.setUserImageFromBlob(this.user, data);
       },
       () => this.profileImageService.setUserImageFromGravatar(this.user));
   }
-  
+
   public isMobileMenu(): boolean {
     return !($(window).width() > 991);
   }
-  
+
   public logout(): void {
     this.authenticationService.logout();
     this.router.navigate(['/login']);

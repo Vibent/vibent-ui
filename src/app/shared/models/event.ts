@@ -6,7 +6,8 @@ export interface Event {
   endDate?: Date;
   startDate?: string;
   groupRef: string;
-  participationRefs?: string[];
+  // TODO type
+  participationRefs?: any[];
 
   /*** bubbles ***/
   alimentationBubbles?: any[];
