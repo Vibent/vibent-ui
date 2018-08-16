@@ -9,9 +9,11 @@
 			<li class="nav-item dropdown">
 				<a class="nav-link" href="http://example.com" id="navbarDropdownUser" data-toggle="dropdown"
 					 aria-haspopup="true" aria-expanded="false">
-					<div class="user-profile"><img src="{{user.imagePath}}">
-						<p>Théo Joubert</p>
-					</div>
+					<ng-container *ngIf="user && user.imagePath">
+						<div class="user-profile"><img src="{{user.imagePath}}">
+							<p>{{user.firstName}} {{user.lastName}}</p>
+						</div>
+					</ng-container>
 				</a>
 				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
 					<a class="dropdown-item" [routerLink]="['/me']">Profile</a>
