@@ -9,12 +9,14 @@ export class UserRightsGuardService implements CanActivateChild {
 
   user: User;
 
-  constructor(private httpService: HttpService,  public router: Router) {
-    this.httpService.getMe().subscribe((user) => {this.user = user; });
-  }
+  constructor(private httpService: HttpService,  public router: Router) {}
 
   canActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean>|Promise<boolean>|boolean {
-   return this.checkHavePermission(route);
+    let rights = null;
+    return this.httpService.getMe().toPromise().then((user) => {
+      this.user = user;
+      rights = this.checkHavePermission(route);
+    }).then(() => rights);
   }
 
   private checkHavePermission(route: ActivatedRouteSnapshot) {
@@ -39,6 +41,7 @@ export class UserRightsGuardService implements CanActivateChild {
 
   private getEventPermission(route: ActivatedRouteSnapshot): Promise<boolean> {
     let rights = false;
+
     return this.httpService.getEvent(route.paramMap.get('ref')).toPromise().then(event => {
       rights = event.participationRefs.some(
         p => p.userRef === this.user.ref
