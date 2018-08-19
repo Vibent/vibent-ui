@@ -9,7 +9,7 @@ import { FooterModule } from './modules/components/footer/footer.module';
 import { SidebarModule } from './modules/components/sidebar/sidebar.module';
 import { NavbarModule } from './modules/components/navbar/navbar.module';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LoginModule } from './core/authentification/login/login.module';
 import { CookieService } from 'ngx-cookie-service';
 import { MainComponent } from './modules/components/main/main.component';
@@ -36,6 +36,7 @@ import { GroupSettingsComponent } from './core/admin-panels/group/dialogs/group-
 import { GroupRightsComponent } from './core/admin-panels/group/dialogs/group-rights/group-rights.component';
 import { GroupRequestsComponent } from './core/admin-panels/group/dialogs/group-requests/group-requests.component';
 import { GroupInvitationModule } from './modules/pages/group/group-invitation/group-invitation.module';
+import { TokenInterceptor } from './shared/interceptors/token.interceptor';
 
 @NgModule({
   imports: [
@@ -72,7 +73,14 @@ import { GroupInvitationModule } from './modules/pages/group/group-invitation/gr
     AppComponent,
     MainComponent,
   ],
-  providers: [CookieService, AdminPanelService],
+  providers: [
+    CookieService,
+    AdminPanelService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }],
   bootstrap: [AppComponent],
   entryComponents: [
     EventCreationComponent,
