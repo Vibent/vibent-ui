@@ -46,7 +46,6 @@
 			</a>
 		</li>
 	</ul>
-	<div *ngIf="adminPanelResult.isOpen && !isMobileMenu()">
-		<app-group-admin-panel [groupRef]=adminPanelResult.groupRef></app-group-admin-panel>
-	</div>
+		<app-group-admin-panel *ngIf="groupAdminPanelResult.isOpen && !isMobileMenu()" [groupRef]="groupAdminPanelResult.groupRef"></app-group-admin-panel>
+		<app-event-admin-panel *ngIf="eventAdminPanelResult.isOpen && !isMobileMenu()" [eventRef]="eventAdminPanelResult.eventRef"></app-event-admin-panel>
 </div>

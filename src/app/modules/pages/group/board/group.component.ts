@@ -6,7 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { AddGroupMembersComponent } from '../dialogs/group-members/add-group-members/add-group-members.component';
 import { NGXLogger } from 'ngx-logger';
 import { Group } from '../../../../shared/models/group';
-import { AdminPanelService } from '../../../../core/services/admin-panel.service';
+import { GroupAdminPanelService } from '../../../../core/services/group-admin-panel.service';
 import { GroupRequestsComponent } from '../../../../core/admin-panels/group/dialogs/group-requests/group-requests.component';
 import { GroupRightsComponent } from '../../../../core/admin-panels/group/dialogs/group-rights/group-rights.component';
 import { GroupSettingsComponent } from '../../../../core/admin-panels/group/dialogs/group-settings/group-settings.component';
@@ -26,23 +26,20 @@ export class GroupComponent implements OnInit, OnDestroy {
 
   constructor(public dialog: MatDialog,
               private route: ActivatedRoute,
-              private adminPanel: AdminPanelService,
-              private logger: NGXLogger) {
+              private groupAdminPanelService: GroupAdminPanelService) {
 
     this.group = this.route.snapshot.data['group'];
     this.events = this.route.snapshot.data['groupEvents'];
     this.events.sort(this.sortEventByDate);​
-    this.logger.info('Group received: ', this.group);
-    this.logger.info('Group events: ', this.events);
   }
 
   ngOnDestroy() {
-    this.adminPanel.toggleGroupPanel({groupRef: null, isOpen: false});
+    this.groupAdminPanelService.toggleGroupPanel({groupRef: null, isOpen: false});
   }
 
   ngOnInit() {
-    this.adminPanel.toggleGroupPanel({groupRef: this.group.ref, isOpen: true});
-    this.adminPanel.groupUpdated.subscribe(result => {
+    this.groupAdminPanelService.toggleGroupPanel({groupRef: this.group.ref, isOpen: true});
+    this.groupAdminPanelService.groupUpdated.subscribe(result => {
       this.group = result;
     });
   }

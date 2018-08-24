@@ -1,0 +1,35 @@
+<app-alimentation-bubble-preview
+		*ngIf="this.bubble.type === BubbleType.ALIMENTATION"
+		[alimentationBubble]="this.bubble"
+		(click)="expandBubble()">
+</app-alimentation-bubble-preview>
+
+<app-checkbox-bubble-preview
+		*ngIf="this.bubble.type === BubbleType.CHECKBOX"
+		[checkboxBubble]="this.bubble"
+		(click)="expandBubble()">
+</app-checkbox-bubble-preview>
+
+<app-travel-bubble-preview
+		*ngIf="this.bubble.type === BubbleType.TRAVEL"
+		[travelBubble]="this.bubble"
+		(click)="expandBubble()">
+</app-travel-bubble-preview>
+
+<app-free-bubble-preview
+		*ngIf="this.bubble.type === BubbleType.FREE"
+		[freeBubble]="this.bubble"
+		(click)="expandBubble()">
+</app-free-bubble-preview>
+
+<app-planning-bubble-preview
+		*ngIf="this.bubble.type === BubbleType.PLANNING"
+		[planningBubble]="this.bubble"
+		(click)="expandBubble()">
+</app-planning-bubble-preview>
+
+<app-survey-bubble-preview
+		*ngIf="this.bubble.type === BubbleType.SURVEY"
+		[surveyBubble]="this.bubble"
+		(click)="expandBubble()">
+</app-survey-bubble-preview>
