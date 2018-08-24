@@ -10,6 +10,8 @@ import {
   MatRippleModule,
   MatTooltipModule,
 } from '@angular/material';
+import { BubblePreviewControllerModule } from '../bubbles-preview/bubble-preview-controller.module';
+import {ExpandedBubbleControllerModule} from './modal-expanded-bubble/expanded-bubble-controller.module';
 
 @NgModule({
   imports: [
@@ -21,9 +23,11 @@ import {
     MatInputModule,
     MatRippleModule,
     MatTooltipModule,
+    BubblePreviewControllerModule,
+    ExpandedBubbleControllerModule,
   ],
   declarations: [
-    EventComponent
+    EventComponent,
   ],
   providers: [],
 })
