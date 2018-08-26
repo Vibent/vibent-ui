@@ -38,6 +38,7 @@ import { GroupRequestsComponent } from './core/admin-panels/group/dialogs/group-
 import { GroupInvitationModule } from './modules/pages/group/group-invitation/group-invitation.module';
 import { TokenInterceptor } from './shared/interceptors/token.interceptor';
 import { EventAdminPanelService } from './core/services/event-admin-panel.service';
+import { NotificationsService } from './core/services/notifications.service';
 
 @NgModule({
   imports: [
@@ -78,6 +79,7 @@ import { EventAdminPanelService } from './core/services/event-admin-panel.servic
     CookieService,
     GroupAdminPanelService,
     EventAdminPanelService,
+    NotificationsService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,

@@ -15,6 +15,10 @@ export class ExpandedAlimentationBubbleComponent implements OnInit {
   ngOnInit() {
   }
 
+  public hideLogo(): boolean {
+    return !($(window).width() < 470);
+  }
+
   close() {
     $('#expanded-bubble').modal('hide');
   }

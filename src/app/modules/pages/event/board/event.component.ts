@@ -11,6 +11,9 @@ import { TravelBubble, TravelProposal, TravelRequest } from '../../../../shared/
 import { BubbleType, IBubble } from '../../../../shared/models/bubbles/IBubble';
 import { CheckboxAnswer, CheckboxBubble, CheckboxOption } from '../../../../shared/models/bubbles/CheckboxBubble';
 import { EventAdminPanelService } from '../../../../core/services/event-admin-panel.service';
+import { NotificationsService, NotificationType } from '../../../../core/services/notifications.service';
+
+declare const $: any;
 
 @Component({
   selector: 'app-event',
@@ -22,13 +25,18 @@ export class EventComponent implements OnInit, OnDestroy {
   public event: Event;
   public bubbles: IBubble[];
   public bubbleToExpand: IBubble;
+  public NotificationType = NotificationType;
 
-  constructor(private route: ActivatedRoute, private eventAdminPanelService: EventAdminPanelService) {
+  constructor(private route: ActivatedRoute, private eventAdminPanelService: EventAdminPanelService, public notificationService: NotificationsService) {
     this.event = this.route.snapshot.data['event'];
   }
 
   onBubbleSentForExpand(bubble: IBubble) {
     this.bubbleToExpand = bubble;
+  }
+
+  openNewBubbleModal() {
+    $('#modalSelectBubbleType').modal('show');
   }
 
   ngOnInit() {
@@ -74,6 +82,7 @@ export class EventComponent implements OnInit, OnDestroy {
     this.bubbles = [a, b, f, p, s, t];
 
   }
+
 
   ngOnDestroy() {
     this.eventAdminPanelService.toggleEventPanel({groupRef: null, isOpen: false});

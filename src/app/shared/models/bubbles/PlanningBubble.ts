@@ -1,4 +1,4 @@
-import { IBubble } from './IBubble';
+ import { IBubble } from './IBubble';
 
 export class PlanningBubble extends IBubble {
   entries ?: PlanningEntry[];
