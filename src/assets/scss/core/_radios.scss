@@ -1,0 +1,52 @@
+.event-participation-radios {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+
+}
+
+.event-participation {
+
+  .btn{
+    color: #000000;
+    background-color: white;
+  }
+
+  .btn:hover{
+    color: #000000;
+    background-color: white;
+  }
+
+  .btn-primary:not(:disabled):not(.disabled):first-child:active,
+  .btn-primary:not(:disabled):not(.disabled):first-child.active,
+  .show > .btn-primary.dropdown-toggle:first-child {
+    color: #ffffff;
+    background-color: $vibent-green;
+    border-color: $vibent-green;
+  }
+
+  .btn-primary:not(:disabled):not(.disabled):active,
+  .btn-primary:not(:disabled):not(.disabled).active,
+  .show > .btn-primary.dropdown-toggle {
+    color: #ffffff;
+    background-color: #cccccc;
+    border-color: #cccccc;
+  }
+
+  .btn-primary:not(:disabled):not(.disabled):last-child:active,
+  .btn-primary:not(:disabled):not(.disabled):last-child.active,
+  .show > .btn-primary.dropdown-toggle:last-child {
+    color: #ffffff;
+    background-color: $vibent-red;
+    border-color: $vibent-red;
+  }
+
+  .event-participation .btn-primary:not(:disabled):not(.disabled):active,
+  .event-participation .btn-primary:not(:disabled):not(.disabled).active,
+  .event-participation .show > .btn-primary.dropdown-toggle {
+    background-color: red;
+  }
+
+}

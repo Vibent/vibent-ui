@@ -30,7 +30,9 @@ export class NavbarComponent implements OnInit {
     this.sidebarVisible = false;
     this.httpService.getMe().subscribe((user) => {
       this.user = user;
-      this.initValues();
+      if (!this.user.imagePath) {
+        this.initValues();
+      }
     });
   }
 

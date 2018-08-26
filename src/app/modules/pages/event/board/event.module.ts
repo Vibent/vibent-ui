@@ -11,20 +11,21 @@ import {
   MatTooltipModule,
 } from '@angular/material';
 import { BubblePreviewControllerModule } from '../bubbles-preview/bubble-preview-controller.module';
-import {ExpandedBubbleControllerModule} from './modal-expanded-bubble/expanded-bubble-controller.module';
+import { ExpandedBubbleControllerModule} from './modal-expanded-bubble/expanded-bubble-controller.module';
+import { ModalBubbleCreationComponentModule } from './modal-bubble-creation/modal-bubble-creation.module';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     EventParticipantsPreviewModule,
-    AngularDraggableModule,
     MatButtonModule,
     MatInputModule,
     MatRippleModule,
     MatTooltipModule,
     BubblePreviewControllerModule,
     ExpandedBubbleControllerModule,
+    ModalBubbleCreationComponentModule
   ],
   declarations: [
     EventComponent,

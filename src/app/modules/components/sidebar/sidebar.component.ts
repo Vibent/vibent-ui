@@ -44,7 +44,9 @@ export class SidebarComponent implements OnInit {
               private eventAdminPanelService: EventAdminPanelService) {
     this.httpService.getMe().subscribe((user) => {
       this.user = user;
-      this.initValues();
+      if (!this.user.imagePath) {
+        this.initValues();
+      }
     });
   }
 
