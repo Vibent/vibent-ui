@@ -19,16 +19,6 @@
     background-color: white;
   }
 
-  .btn:first-child{
-    border-bottom-left-radius: 15px;
-    border-top-left-radius: 15px;
-  }
-
-  .btn:last-child{
-    border-bottom-right-radius: 15px;
-    border-top-right-radius: 15px;
-  }
-
   .btn-primary:not(:disabled):not(.disabled):first-child:active,
   .btn-primary:not(:disabled):not(.disabled):first-child.active,
   .show > .btn-primary.dropdown-toggle:first-child {

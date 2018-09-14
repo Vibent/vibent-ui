@@ -17,7 +17,9 @@ export class ProfileComponent implements OnInit {
               public dialogSettings: MatDialog,
               private profileImageService: ProfileImageService) {
     this.user = this.route.snapshot.data['user'];
-    this.initValues();
+    if (!this.user.imagePath) {
+      this.initValues();
+    }
   }
 
   ngOnInit() {

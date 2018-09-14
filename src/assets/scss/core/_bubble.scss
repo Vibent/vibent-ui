@@ -482,6 +482,57 @@ button.close {
     margin-bottom: -15px;
     margin-top: 25px;
   }
+
+
+  .card-body {
+
+    .alim-title {
+
+    }
+
+    .participant-alim{
+      background: #4caf50;
+      padding-left: 8px;
+      padding-right: 8px;
+      color: white;
+      border-radius: 6px;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+
+    .food-quantity {
+      display: inline;
+      font-size: 20px;
+      color: #4caf50;
+      font-weight: bolder;
+    }
+
+    .float-right {
+
+      img {
+        width: 40px;
+        margin-bottom: 15px;
+      }
+
+      .addAndDelete {
+        width: 25px;
+        height: 25px;
+        margin-top: 15px;
+      }
+    }
+
+    .float-left {
+
+      .delete-alim {
+        background: #e65b5b;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: white;
+        border-radius: 20px;
+        margin-top: 13px;
+      }
+    }
+  }
 }
 
 .alim-card-creation {
@@ -512,46 +563,6 @@ button.close {
     }
   }
 
-}
-
-.card-body {
-
-  .alim-title {
-
-  }
-
-  .food-quantity {
-    display: inline;
-    font-size: 20px;
-    color: #4caf50;
-    font-weight: bolder;
-  }
-
-  .float-right {
-
-    img {
-      width: 40px;
-      margin-bottom: 15px;
-    }
-
-    .addAndDelete {
-      width: 25px;
-      height: 25px;
-      margin-top: 15px;
-    }
-  }
-
-  .float-left {
-
-    .delete-alim {
-      background: #e65b5b;
-      padding-left: 10px;
-      padding-right: 10px;
-      color: white;
-      border-radius: 20px;
-      margin-top: 13px;
-    }
-  }
 }
 
 .checkbox-card {
@@ -622,15 +633,6 @@ button.close {
     z-index: 400;
   }
 
-  .float-right {
-    background: #29be29b0;
-    border-radius: 5px;
-    padding-right: 8px;
-    padding-left: 8px;
-    font-size: 11px;
-
-  }
-
   .float-right:not([href]):not([tabindex]):hover, .float-right:not([href]):not([tabindex]):focus, .float-right:not([href]):not([tabindex]) {
     color: white;
   }
@@ -642,5 +644,23 @@ button.close {
 
 }
 
+.survey-card {
+
+  .card {
+    margin-top: 0;
+
+    .progress{
+      height: 1.5rem;
+      width: 85%;
+      margin-right: 5px;
+
+      .bg-light{
+        color: black;
+        background-color: #00bcd46b !important;
+      }
+    }
+  }
+
+}
 
 

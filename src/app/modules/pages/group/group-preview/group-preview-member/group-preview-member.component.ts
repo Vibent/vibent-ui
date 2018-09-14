@@ -21,11 +21,11 @@ export class GroupPreviewMemberComponent implements OnInit {
   ngOnInit() {
     this.httpService.getUser(this.membership.userRef).subscribe((user) => {
       this.user = user;
-      this.initValues();
+      if (!this.user.imagePath) {
+        this.initValues();
+      }
     });
-    this.profileImageService.change.subscribe(() => {
-      this.initValues();
-    });
+
   }
 
   initValues() {

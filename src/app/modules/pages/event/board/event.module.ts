@@ -19,7 +19,6 @@ import { ModalBubbleCreationComponentModule } from './modal-bubble-creation/moda
     CommonModule,
     RouterModule,
     EventParticipantsPreviewModule,
-    AngularDraggableModule,
     MatButtonModule,
     MatInputModule,
     MatRippleModule,
