@@ -20,8 +20,7 @@
       "prefix": "app",
       "styles": [
         "../node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
-        "./assets/scss/vibent-material.scss",
-        "./assets/css/demo.css"
+        "./assets/scss/vibent-material.scss"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",

@@ -3,10 +3,11 @@ my-login-page {
   font-size: 14px;
 }
 
-.field-error{
+.field-error {
   color: #ff000094;
   float: right
 }
+
 .my-login-page .brand {
   width: 50%;
   margin: 0 auto;
@@ -24,7 +25,7 @@ my-login-page {
 
 .my-login-page .card {
   border-color: transparent;
-  box-shadow: 0 0 40px rgba(0,0,0,.05);
+  box-shadow: 0 0 40px rgba(0, 0, 0, .05);
 }
 
 .my-login-page .card.fat {
@@ -47,10 +48,6 @@ my-login-page {
   padding: 12px 10px;
 }
 
-.my-login-page .margin-top20 {
-  margin-top: 20px;
-}
-
 .my-login-page .no-margin {
   margin: 0;
 }
@@ -59,4 +56,10 @@ my-login-page {
   margin: 40px 0;
   color: #888;
   text-align: center;
+}
+
+.register-phone-mail {
+  background-color: #eeeeee;
+  padding: 10px;
+  border-radius: 11px;
 }

@@ -13,11 +13,11 @@
 		<label for="description" class="TextArea-label">Description</label>
 	</div>
 
-	<div class="row justify-content-center" style="margin-top: 50px">
+	<div class="row justify-content-center m-t-50">
 		<button *ngIf="!title.invalid" (click)="saveGroup()" class="btn btn-round btn-add-event">Create</button>
 		<button *ngIf="title.invalid" class="btn btn-round btn-add-event disabled">Create</button>
 	</div>
 	<div class="row justify-content-center">
-		<button mat-dialog-close class="btn btn-round btn-danger" style="opacity: 0.8">Cancel</button>
+		<button mat-dialog-close class="btn btn-round btn-danger">Cancel</button>
 	</div>
 </div>
