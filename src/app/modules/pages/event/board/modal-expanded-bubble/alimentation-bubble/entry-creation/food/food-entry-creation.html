@@ -1,0 +1,35 @@
+<div class="col-xl-12" *ngIf="toggle">
+    <div class="alim-card-creation">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="media-body text-left">
+                            <div class="foodName">
+                                <label for="foodName">Food name</label>
+                                <input type="text" class="form-control" id="foodName"/>
+                            </div>
+                            <div class="foodQuantity">
+                                <label for="quantity">Quantity</label>
+                                <input type="number" min="1" class="form-control" id="quantity"/>
+                            </div>
+                        </div>
+                        <div class="align-self-center">
+                            <div class="float-right">
+                                <img src="/assets/img/food.png"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="float-left" (click)="this.toggleCreationCard()">
+                        <div class="delete-alim">Delete</div>
+                    </div>
+                    <div class="float-right m-2">
+                        <button type="submit" class="btn btn-outline-primary btn-sm" (click)="this.addEntry()">
+                            Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

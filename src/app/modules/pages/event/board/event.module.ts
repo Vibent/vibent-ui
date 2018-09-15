@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { EventComponent } from './event.component';
 import { RouterModule } from '@angular/router';
 import { EventParticipantsPreviewModule } from './event-participants/event-participants-preview.module';
-import { AngularDraggableModule } from 'angular2-draggable';
 import {
   MatButtonModule,
   MatInputModule,
@@ -13,6 +12,8 @@ import {
 import { BubblePreviewControllerModule } from '../bubbles-preview/bubble-preview-controller.module';
 import { ExpandedBubbleControllerModule} from './modal-expanded-bubble/expanded-bubble-controller.module';
 import { ModalBubbleCreationComponentModule } from './modal-bubble-creation/modal-bubble-creation.module';
+import { AlimentationBubbleService } from "app/core/services/bubbles-services/alimentation-bubble.service.";
+import { EventUpdateService } from '../../../../core/services/bubbles-services/event-update.service';
 
 @NgModule({
   imports: [
@@ -30,7 +31,7 @@ import { ModalBubbleCreationComponentModule } from './modal-bubble-creation/moda
   declarations: [
     EventComponent,
   ],
-  providers: [],
+  providers: [AlimentationBubbleService, EventUpdateService],
 })
 export class EventModule {
 }

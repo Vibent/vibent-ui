@@ -1,11 +1,12 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { BubbleType, IBubble } from '../../../../shared/models/bubbles/IBubble';
 
 declare const $: any;
 
 @Component({
   selector: 'app-bubble',
-  templateUrl: './bubble-preview-controller.html'
+  templateUrl: './bubble-preview-controller.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BubblePreviewController implements OnInit {
 
@@ -21,6 +22,8 @@ export class BubblePreviewController implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.bubble);
+    console.log(this.bubble.type === this.BubbleType.AlimentationBubble);
   }
 
   expandBubble() {

@@ -11,15 +11,26 @@ export class ExpandedAlimentationBubbleComponent implements OnInit {
 
   @Input()
   public alimentationBubble: AlimentationBubble;
+  toggleAddFoodEntry = false;
+  toggleAddDrinkEntry = false;
+  
+  constructor(){}
 
   ngOnInit() {
-  }
-
-  public hideLogo(): boolean {
-    return !($(window).width() < 470);
   }
 
   close() {
     $('#expanded-bubble').modal('hide');
   }
+  
+  addFoodEntry() {
+    this.toggleAddFoodEntry = ! this.toggleAddFoodEntry;
+    this.toggleAddDrinkEntry = false;
+  }
+  
+  addDrinkEntry() {
+    this.toggleAddDrinkEntry = ! this.toggleAddDrinkEntry;
+    this.toggleAddFoodEntry = false;
+  }
+  
 }

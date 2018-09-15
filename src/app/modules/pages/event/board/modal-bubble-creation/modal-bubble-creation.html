@@ -1,59 +1,59 @@
-<div class="modal fade" id="modalSelectBubbleType" tabindex="-1" role="dialog"
-		 aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLongTitle">Choose a bubble type</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body" style="background: #f3f3f3;">
-				<div class="row justify-content-center">
-					<a href="javascript:void(0)" class="card-bubble alimentation">
-						<div class="overlay"></div>
-						<div class="circle">
-							<i class="fa fa-cutlery"></i>
-						</div>
-						<p>Alimentation</p>
-					</a>
-					<a href="javascript:void(0)" class="card-bubble travel">
-						<div class="overlay"></div>
-						<div class="circle">
-							<i class="fa fa-taxi"></i>
-						</div>
-						<p>Travel</p>
-					</a>
-					<a href="javascript:void(0)" class="card-bubble checkbox">
-						<div class="overlay"></div>
-						<div class="circle">
-							<i class="fa fa-check-square"></i>
-						</div>
-						<p>Checkbox</p>
-					</a>
-					<a href="javascript:void(0)" class="card-bubble survey">
-						<div class="overlay"></div>
-						<div class="circle">
-							<i class="fa fa-question-circle"></i>
-						</div>
-						<p>Survey</p>
-					</a>
-					<a href="javascript:void(0)" class="card-bubble planning">
-						<div class="overlay"></div>
-						<div class="circle">
-							<i class="fa fa-tasks"></i>
-						</div>
-						<p>Planning</p>
-					</a>
-					<a href="javascript:void(0)" class="card-bubble free">
-						<div class="overlay"></div>
-						<div class="circle">
-							<i class="fa fa-commenting"></i>
-						</div>
-						<p>Free</p>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="modal fade" id="modalSelectBubbleType" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Choose a bubble type</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body bg-light">
+                <div class="row justify-content-center">
+                    <a href="javascript:void(0)"
+                       class="card-bubble alimentation" (click)="this.createAlimentationBubble()">
+                        <div class="overlay"></div>
+                        <div class="circle">
+                            <i class="fa fa-cutlery"></i>
+                        </div>
+                        <p>Alimentation</p>
+                    </a>
+                    <a href="javascript:void(0)" class="card-bubble travel" (click)="this.createTravelBubble()">
+                        <div class="overlay"></div>
+                        <div class="circle">
+                            <i class="fa fa-taxi"></i>
+                        </div>
+                        <p>Travel</p>
+                    </a>
+                    <a href="javascript:void(0)" class="card-bubble checkbox" (click)="this.createCheckboxBubble()">
+                        <div class="overlay"></div>
+                        <div class="circle">
+                            <i class="fa fa-check-square"></i>
+                        </div>
+                        <p>Checkbox</p>
+                    </a>
+                    <a href="javascript:void(0)" class="card-bubble survey" (click)="this.createSurveyBubble()">
+                        <div class="overlay"></div>
+                        <div class="circle">
+                            <i class="fa fa-question-circle"></i>
+                        </div>
+                        <p>Survey</p>
+                    </a>
+                    <a href="javascript:void(0)" class="card-bubble planning" (click)="this.createPlanningBubble()">
+                        <div class="overlay"></div>
+                        <div class="circle">
+                            <i class="fa fa-tasks"></i>
+                        </div>
+                        <p>Planning</p>
+                    </a>
+                    <a href="javascript:void(0)" class="card-bubble free" (click)="this.createFreeBubble()">
+                        <div class="overlay"></div>
+                        <div class="circle">
+                            <i class="fa fa-commenting"></i>
+                        </div>
+                        <p>Free</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

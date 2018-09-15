@@ -1,35 +1,35 @@
 <app-alimentation-bubble-preview
-		*ngIf="this.bubble.type === BubbleType.ALIMENTATION"
+		*ngIf="this.bubble.type === BubbleType.AlimentationBubble"
 		[alimentationBubble]="this.bubble"
-		(click)="expandBubble()">
+		(click)="this.expandBubble()">
 </app-alimentation-bubble-preview>
 
 <app-checkbox-bubble-preview
-		*ngIf="this.bubble.type === BubbleType.CHECKBOX"
+		*ngIf="this.bubble.type === BubbleType.CheckboxBubble"
 		[checkboxBubble]="this.bubble"
-		(click)="expandBubble()">
+		(click)="this.expandBubble()">
 </app-checkbox-bubble-preview>
 
 <app-travel-bubble-preview
-		*ngIf="this.bubble.type === BubbleType.TRAVEL"
+		*ngIf="this.bubble.type === BubbleType.TravelBubble"
 		[travelBubble]="this.bubble"
-		(click)="expandBubble()">
+		(click)="this.expandBubble()">
 </app-travel-bubble-preview>
 
 <app-free-bubble-preview
-		*ngIf="this.bubble.type === BubbleType.FREE"
+		*ngIf="this.bubble.type === BubbleType.FreeBubble"
 		[freeBubble]="this.bubble"
-		(click)="expandBubble()">
+		(click)="this.expandBubble()">
 </app-free-bubble-preview>
 
 <app-planning-bubble-preview
-		*ngIf="this.bubble.type === BubbleType.PLANNING"
+		*ngIf="this.bubble.type === BubbleType.PlanningBubble"
 		[planningBubble]="this.bubble"
-		(click)="expandBubble()">
+		(click)="this.expandBubble()">
 </app-planning-bubble-preview>
 
 <app-survey-bubble-preview
-		*ngIf="this.bubble.type === BubbleType.SURVEY"
+		*ngIf="this.bubble.type === BubbleType.SurveyBubble"
 		[surveyBubble]="this.bubble"
-		(click)="expandBubble()">
+		(click)="this.expandBubble()">
 </app-survey-bubble-preview>

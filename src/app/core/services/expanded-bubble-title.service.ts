@@ -3,30 +3,28 @@ import { BubbleType } from '../../shared/models/bubbles/IBubble';
 
 @Injectable()
 export class ExpandedBubbleTitleService {
-
-  public BubbleType = BubbleType;
-
+  
   constructor() {
   }
 
   getTitleFromBubbleType(bubbleType: BubbleType) {
     switch (bubbleType) {
-      case BubbleType.TRAVEL: {
+      case BubbleType.TravelBubble: {
        return 'Travel';
       }
-      case BubbleType.ALIMENTATION: {
+      case BubbleType.AlimentationBubble: {
         return 'Alimentation';
       }
-      case BubbleType.SURVEY: {
+      case BubbleType.SurveyBubble: {
         return 'Survey';
       }
-      case BubbleType.CHECKBOX: {
+      case BubbleType.CheckboxBubble: {
         return 'Checkbox';
       }
-      case BubbleType.PLANNING: {
+      case BubbleType.PlanningBubble: {
         return 'Planning';
       }
-      case BubbleType.FREE: {
+      case BubbleType.FreeBubble: {
         return 'Free';
       }
       default: {

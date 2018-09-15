@@ -7,10 +7,10 @@ export class IBubble {
 
 
 export enum BubbleType {
-  ALIMENTATION,
-  CHECKBOX,
-  FREE,
-  PLANNING,
-  SURVEY,
-  TRAVEL
+  AlimentationBubble = "AlimentationBubble",
+  CheckboxBubble = "CheckboxBubble",
+  FreeBubble = "FreeBubble",
+  PlanningBubble = "PlanningBubble",
+  SurveyBubble = "SurveyBubble",
+  TravelBubble = "TravelBubble"
 }

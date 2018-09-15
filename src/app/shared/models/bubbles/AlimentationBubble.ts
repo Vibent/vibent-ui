@@ -11,16 +11,18 @@ export class AlimentationEntry {
   name ?: string;
   totalRequested: number;
   type: AlimType;
+  bubbleId ?: number;
 }
 
 export class AlimentationBring {
   id ?: number;
   quantity ?: number;
   userRef ?: string;
+  entryId ?: number;
 }
 
 export enum AlimType {
-  FOOD,
-  DRINK,
-  OTHER,
+  FOOD = "FOOD",
+  DRINK = "DRINK",
+  OTHER = "OTHER",
 }

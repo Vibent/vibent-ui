@@ -1,115 +1,29 @@
 <div class="modal-body">
-	<div class="expanded-bubble">
-		<div class="row justify-content-center">
-			<div class="addDrink drink">
-				<img src="assets/img/drink.png">
-				<img class="plusIcon" src="/assets/img/plus.png"/>
-			</div>
-			<div class="addFood food">
-				<img src="/assets/img/food.png"/>
-				<img class="plusIcon" src="/assets/img/plus.png"/>
-			</div>
-		</div>
-		<div class="col-xl-12">
-			<div class="alim-card">
-				<div class="card">
-					<div class="card-content">
-						<div class="card-body">
-							<div class="media d-flex">
-								<div class="media-body text-left">
-									<h3 class="alim-title">Coca-cola</h3>
-									<span class="badge badge-default badge-success">2 by Theo</span>
-									<span class="badge badge-default badge-success">1 by John</span>
-								</div>
-								<div class="align-self-center">
-									<div class="float-right">
-										<div class="food-quantity">3/4</div>
-										<img src="/assets/img/drink.png"/>
-									</div>
-								</div>
-							</div>
-							<div class="progress mt-1 mb-0" style="height: 7px;">
-								<div class="progress-bar bg-success" role="progressbar" style="width: 75%"></div>
-							</div>
-							<div class="float-left">
-								<div class="delete-alim">Delete</div>
-							</div>
-							<div class="float-right">
-								<img class="addAndDelete" src="/assets/img/minus.png"/>
-								<img class="addAndDelete" src="/assets/img/plus.png"/>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-xl-12">
-			<div class="alim-card">
-				<div class="card">
-					<div class="card-content">
-						<div class="card-body">
-							<div class="media d-flex">
-								<div class="media-body text-left">
-									<h3 class="alim-title">Some chips</h3>
-									<span class="badge badge-default badge-success">2 by Theo</span>
-									<span class="badge badge-default badge-success">1 by John</span>
-								</div>
-								<div class="align-self-center">
-									<div class="float-right">
-										<div class="food-quantity">1/4</div>
-										<img style="padding-left: 6px;" src="/assets/img/food.png"/>
-									</div>
-								</div>
-							</div>
-							<div class="progress mt-1 mb-0" style="height: 7px;">
-								<div class="progress-bar bg-success" role="progressbar" style="width: 25%"></div>
-							</div>
-							<div class="float-left" style="margin-top: 15px;">
-								<span>Food proposed by Théo Joubert</span>
-							</div>
-							<div class="float-right">
-								<img class="addAndDelete" src="/assets/img/minus.png"/>
-								<img class="addAndDelete" src="/assets/img/plus.png"/>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-xl-12">
-			<div class="alim-card-creation">
-				<div class="card">
-					<div class="card-content">
-						<div class="card-body">
-							<div class="media d-flex">
-								<div class="media-body text-left">
-									<div class="foodName">
-										<label for="foodName">Food name</label>
-										<input type="text" class="form-control" id="foodName"/>
-									</div>
-									<div class="foodQuantity">
-										<label for="quantity">Quantity</label>
-										<input type="number" min="1" class="form-control" id="quantity"/>
-									</div>
-								</div>
-								<div class="align-self-center">
-									<div class="float-right">
-										<img src="/assets/img/food.png"/>
-									</div>
-								</div>
-							</div>
-							<div class="float-right">
-								<button type="submit" class="btn btn-outline-primary btn-sm">Add</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-	</div>
+    <div class="expanded-bubble">
+        <div class="row justify-content-center">
+            <div class="addDrink drink" (click)="this.addDrinkEntry()">
+                <img src="assets/img/drink.png">
+                <img class="plusIcon" src="/assets/img/plus.png"/>
+            </div>
+            <div class="addFood food" (click)="this.addFoodEntry()">
+                <img src="/assets/img/food.png"/>
+                <img class="plusIcon" src="/assets/img/plus.png"/>
+            </div>
+        </div>
+        <food-entry-creation
+                [toggle]="this.toggleAddFoodEntry"
+                [bubbleId]="this.alimentationBubble.id">
+        </food-entry-creation>
+        <drink-entry-creation
+                [toggle]="this.toggleAddDrinkEntry"
+                [bubbleId]="this.alimentationBubble.id">
+        </drink-entry-creation>
+        <alimentation-entry
+                *ngFor="let entry of this.alimentationBubble.entries"
+                [alimentationEntry]="entry">
+        </alimentation-entry>
+    </div>
 </div>
 <div class="modal-footer">
-	created by Théo Joubert
+    created by Théo Joubert
 </div>

@@ -1,66 +1,66 @@
 <div class="main-content">
-	<div class="container-fluid">
-		<div class="row justify-content-center">
-			<div class="col-xl-10">
-				<h2 class="event-title">{{event.title}}</h2>
-			</div>
-			<div class="col-xl-10">
-				<h5 class="event-description">{{event.description}}</h5>
-			</div>
-		</div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-xl-10">
+                <h2 class="event-title">{{event.title}}</h2>
+            </div>
+            <div class="col-xl-10">
+                <h5 class="event-description">{{event.description}}</h5>
+            </div>
+        </div>
 
-		<div class="row justify-content-center">
-			<div class="col-xl-10 text-center">
-				<div class="btn-group event-participation" data-toggle="buttons">
-					<label class="btn btn-primary active btn-sm"
-								 (click)="this.notificationService.notify('You are participating in this event', NotificationType.SUCCESS)">
-						<input type="radio" name="options" value="red" autocomplete="off"
-									 class="event-participation-radios"> I'm in
-					</label>
-					<label class="btn btn-primary btn-sm"
-								 (click)="this.notificationService.notify('You do not know yet', NotificationType.INFO)">
-						<input type="radio" name="options" value="orange" autocomplete="off"
-									 class="event-participation-radios"> Not sure
-					</label>
-					<label class="btn btn-primary btn-sm"
-								 (click)="this.notificationService.notify('You are not participating in this event', NotificationType.DANGER)">
-						<input type="radio" name="options" value="yellow" autocomplete="off"
-									 class="event-participation-radios"> Nope
-					</label>
-				</div>
-			</div>
-		</div>
+        <div class="row justify-content-center">
+            <div class="col-xl-10 text-center">
+                <div class="btn-group event-participation" data-toggle="buttons">
+                    <label class="btn btn-primary active btn-sm"
+                            (click)="this.notificationService.notify('You are participating in this event', NotificationType.SUCCESS)">
+                        <input type="radio" name="options" value="red" autocomplete="off"
+                               class="event-participation-radios"> I'm in
+                    </label>
+                    <label class="btn btn-primary btn-sm"
+                            (click)="this.notificationService.notify('You do not know yet', NotificationType.INFO)">
+                        <input type="radio" name="options" value="orange" autocomplete="off"
+                               class="event-participation-radios"> Not sure
+                    </label>
+                    <label class="btn btn-primary btn-sm"
+                            (click)="this.notificationService.notify('You are not participating in this event', NotificationType.DANGER)">
+                        <input type="radio" name="options" value="yellow" autocomplete="off"
+                               class="event-participation-radios"> Nope
+                    </label>
+                </div>
+            </div>
+        </div>
 
-		<div class="row justify-content-center">
-			<div class="bubble">
-				<div class="row justify-content-center">
+        <div class="row justify-content-center">
+            <div class="bubble">
+                <div class="row justify-content-center">
 
-					<app-modal-bubble-creation></app-modal-bubble-creation>
+                    <app-modal-bubble-creation [eventRef]=event.ref></app-modal-bubble-creation>
 
-					<app-expanded-bubble-controller [bubble]=bubbleToExpand></app-expanded-bubble-controller>
+                    <app-expanded-bubble-controller [bubble]=bubbleToExpand></app-expanded-bubble-controller>
 
-					<div *ngFor="let bubble of bubbles" class="row col-xl-4 col-md-6 col-sm-6 justify-content-center">
-						<app-bubble [bubble]=bubble (bubbleToExpand)="onBubbleSentForExpand($event)"></app-bubble>
-					</div>
+                    <div *ngFor="let bubble of bubbles" class="row col-xl-4 col-md-6 col-sm-6 justify-content-center">
+                        <app-bubble [bubble]=bubble (bubbleToExpand)="onBubbleSentForExpand($event)"></app-bubble>
+                    </div>
 
-					<div class="row col-xl-4 col-md-6 col-sm-6 justify-content-center">
-						<a href="javascript:void(0);">
-							<div style="height: 250px" (click)="openNewBubbleModal()">
-								<i class="fa fa-plus-circle" style="font-size:48px;color:white;margin-top: 100px"></i>
-							</div>
-						</a>
-					</div>
+                    <div class="row col-xl-4 col-md-6 col-sm-6 justify-content-center">
+                        <a href="javascript:void(0);">
+                            <div class="h-250-p" (click)="openNewBubbleModal()">
+                                <i class="fa fa-plus-circle add-bubble-icon"></i>
+                            </div>
+                        </a>
+                    </div>
 
-				</div>
-			</div>
-		</div>
+                </div>
+            </div>
+        </div>
 
-		<div class="row justify-content-center">
-			<div class="scrolling-wrapper-event">
-				<app-event-participants-preview *ngFor="let participant of participants"
-																				[participant]=participant>
-				</app-event-participants-preview>
-			</div>
-		</div>
-	</div>
+        <div class="row justify-content-center">
+            <div class="scrolling-wrapper-event">
+                <app-event-participants-preview *ngFor="let participant of participants"
+                        [participant]=participant>
+                </app-event-participants-preview>
+            </div>
+        </div>
+    </div>
 </div>
