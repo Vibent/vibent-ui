@@ -21,7 +21,7 @@
   }
 }
 
-.proposal-traveler-avatar{
+.proposal-traveler-avatar {
   img {
     width: 30px;
     height: 30px;
@@ -31,10 +31,11 @@
     margin-left: 5px;
   }
 }
+
 .request-avatar {
   position: relative;
   img {
-    left:50%;
+    left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     width: 70px;
@@ -46,23 +47,23 @@
   }
 }
 
-.box{
-  padding:60px 0px;
+.box {
+  padding: 60px 0px;
 }
 
-.box-part{
+.box-part {
   max-height: 250px;
   max-width: 250px;
   height: 250px;
   width: 250px;
-  background:#FFF;
-  padding:60px 10px;
-  margin:10px 0px;
+  background: #FFF;
+  padding: 60px 10px;
+  margin: 10px 0px;
   border-radius: 50%;
   transition-duration: 0.5s;
 
-  .creator-bubble{
-    background-image:url(/assets/img/theo.jpg);
+  .creator-bubble {
+    background-image: url(/assets/img/theo.jpg);
     background-size: 50px 50px;
     margin-top: 125px;
     width: 50px;
@@ -71,7 +72,7 @@
     position: absolute;
   }
 
-  .bubble-type{
+  .bubble-type {
     margin-top: -53px;
     width: 35px;
     height: 35px;
@@ -79,18 +80,61 @@
     position: absolute;
     background-color: white;
     margin-left: 172px;
+
+    @mixin bubble-icon() {
+      margin-top: 5px;
+      margin-left: 4px;
+      font-size: 18px;
+    }
+    .alim-bubble-icon {
+      color: #f27c8b;
+      @include bubble-icon();
+    }
+
+    .checkbox-bubble-icon {
+      color: #6ebf74;
+      @include bubble-icon();
+    }
+
+    .travel-bubble-icon {
+      color: #7687c0;
+      @include bubble-icon();
+    }
+
+    .free-bubble-icon {
+      color: #b33a69;
+      @include bubble-icon();
+    }
+
+    .planning-bubble-icon {
+      color: #08b6b3;
+      @include bubble-icon();
+    }
+
+    .survey-bubble-icon {
+      color: #ff9236;
+      @include bubble-icon();
+    }
+
   }
-  .title{
+  .title {
     color: black;
     font-size: 24px;
   }
 
-  .preview{
+  .preview {
     margin-top: 30px;
   }
 
 }
+
 .box-part:hover {
   @include box-shadow($bmd-shadow-16dp);
   transition-duration: 0.5s;
+}
+
+.add-bubble-icon {
+  font-size: 48px;
+  color: white;
+  margin-top: 100px
 }
