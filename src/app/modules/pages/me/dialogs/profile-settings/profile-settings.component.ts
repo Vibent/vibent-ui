@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { User } from '../../../../../shared/models/user';
 import { HttpService } from '../../../../../core/http/http.service';
 import { ProfileImageService } from '../../../../../core/http/profile-image.service';
+import { UserManagementService } from '../../../../../core/services/user-management.service';
 
 @Component({
   selector: 'app-profile-settings',
@@ -12,26 +13,43 @@ import { ProfileImageService } from '../../../../../core/http/profile-image.serv
 })
 export class ProfileSettingsComponent implements OnInit {
 
-  public user: User;
-  public form: FormGroup;
-  public firstName: FormControl;
-  public lastName: FormControl;
-  fileToUpload: FileList = null;
-  userProfileImage: File = null;
+  user: User;
+  form: FormGroup;
+  firstName: FormControl;
+  lastName: FormControl;
+  fileToUpload: File = null;
+  croppedImage: any;
+  imageChangedEvent: any = '';
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<ProfileSettingsComponent>,
               private httpService: HttpService,
               private profileImageService: ProfileImageService,
               private router: Router,
-              @Inject(MAT_DIALOG_DATA) data) {
-
-    this.user = data.user;
+              @Inject(MAT_DIALOG_DATA) data,
+              private userManagementService: UserManagementService) {
     dialogRef.disableClose = true;
     const dialogHeight = window.innerHeight <= 600 ? window.innerHeight - 50 + 'px' : '600px';
     dialogRef.updateSize('600px', dialogHeight);
+    this.user = this.userManagementService.getMe();
+    this.croppedImage = this.user.imagePath;
   }
 
+  fileChangeEvent(event: any): void {
+    this.imageChangedEvent = event;
+  }
+
+  imageCropped(image: string) {
+    this.croppedImage = image;
+  }
+
+  imageCroppedFile(file: File) {
+    this.fileToUpload = file;
+  }
+
+  imageChangedEventToNull() {
+    this.imageChangedEvent = null;
+  }
   ngOnInit() {
     this.firstName = new FormControl(this.user.firstName, Validators.required);
     this.lastName = new FormControl(this.user.lastName, Validators.required);
@@ -39,15 +57,6 @@ export class ProfileSettingsComponent implements OnInit {
       firstName: this.firstName,
       lastName: this.lastName,
     });
-
-    this.profileImageService.getProfileImage(this.user.ref).subscribe((data) => {
-        this.profileImageService.setUserImageFromBlob(this.user, data);
-        this.userProfileImage = this.user.imagePath;
-      },
-      () => {
-      this.profileImageService.setUserImageFromGravatar(this.user);
-      this.userProfileImage = this.user.imagePath;
-      });
   }
 
   public close() {
@@ -65,20 +74,8 @@ export class ProfileSettingsComponent implements OnInit {
       lastName: this.form.value.lastName
     };
     this.httpService.updateUser(user).subscribe((data) => console.log(data));
-    if (this.fileToUpload && this.fileToUpload.item(0)) {
-      this.profileImageService.uploadProfileImage(this.fileToUpload.item(0), user).subscribe(() => this.profileImageService.profilePictureChanged());
-    }
-  }
-
-  handleFileInput(files: FileList) {
-    this.fileToUpload = files;
-    if (files && files[0]) {
-      const reader = new FileReader();
-      reader.readAsDataURL(files[0]);
-      reader.onload = (event) => {
-        const a: any = event.target;
-        this.userProfileImage = a.result;
-      };
+    if (this.fileToUpload) {
+      this.profileImageService.uploadProfileImage(this.fileToUpload, user).subscribe(() => this.userManagementService.setMe());
     }
   }
 

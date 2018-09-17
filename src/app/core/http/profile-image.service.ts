@@ -1,7 +1,5 @@
-import { EventEmitter, Injectable, Output } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
-import { CookieService } from 'ngx-cookie-service';
 import { User } from '../../shared/models/user';
 import { Md5 } from 'ts-md5';
 import { AppSettings } from '../../shared/global/constants';
@@ -9,35 +7,34 @@ import { AppSettings } from '../../shared/global/constants';
 @Injectable()
 export class ProfileImageService {
 
-  @Output() change: EventEmitter<boolean> = new EventEmitter();
-
-  constructor(private http: HttpClient,
-              private cookieService: CookieService) {
+  constructor(private http: HttpClient) {
   }
 
   public getHeaders(): HttpHeaders {
     return new HttpHeaders({
-      Accept: 'application/json',
-      Authorization: this.cookieService.get('token')
+      Accept: 'application/json'
     });
+  }
+
+  getProfileImageOfUser(user: User) {
+    this.getProfileImage(user.ref).subscribe((data) => {
+        this.setUserImageFromBlob(user, data);
+      },
+      () => this.setUserImageFromGravatar(user)
+    );
   }
 
   public uploadProfileImage(file: File, user: User) {
     const formData = new FormData();
     formData.append('file', file);
-    this.change.emit(true);
     return this.http.post(AppSettings.API_ENDPOINT + '/image/profile/upload/' + user.ref, formData, {headers: this.getHeaders()});
   }
 
-  public getProfileImage(userRef: string): Observable<any> {
+  public getProfileImage(userRef: string) {
     return this.http.get(AppSettings.API_ENDPOINT + '/image/profile/' + userRef + '.jpg', {
       headers: this.getHeaders(),
       responseType: 'blob'
     });
-  }
-
-  public profilePictureChanged(): void {
-    this.change.emit(true);
   }
 
   public setUserImageFromBlob(user: User, file: Blob) {
