@@ -6,6 +6,7 @@ import { AuthenticationService } from '../../../core/services/authentication.ser
 import { User } from '../../../shared/models/user';
 import { ProfileImageService } from '../../../core/http/profile-image.service';
 import { HttpService } from '../../../core/http/http.service';
+import { UserManagementService } from '../../../core/services/user-management.service';
 
 @Component({
   selector: 'app-navbar',
@@ -17,25 +18,23 @@ export class NavbarComponent implements OnInit {
   private listTitles: any[];
   private toggleButton: any;
   private sidebarVisible: boolean;
-  
+
   public userProfileImage: File = null;
   public user: User;
-  
+
   constructor(location: Location,
               private element: ElementRef,
               private router: Router,
               private route: ActivatedRoute,
               private profileImageService: ProfileImageService,
+              private userManagementService: UserManagementService,
               private httpService: HttpService,
               private authenticationService: AuthenticationService) {
     this.location = location;
     this.sidebarVisible = false;
-    this.httpService.getMe().subscribe((user) => {
-      this.user = user;
-      this.initValues();
-    });
+    this.user = this.userManagementService.getMe();
   }
-  
+
   ngOnInit() {
     this.listTitles = ROUTES.filter(listTitle => listTitle);
     const navbar: HTMLElement = this.element.nativeElement;
@@ -48,36 +47,29 @@ export class NavbarComponent implements OnInit {
         this.mobile_menu_visible = 0;
       }
     });
-    this.profileImageService.change.subscribe(() => {
-      this.initValues();
+    this.userManagementService.change.subscribe(() => {
+      this.user = this.userManagementService.getMe();
     });
   }
-  
-  initValues() {
-    this.profileImageService.getProfileImage(this.user.ref).subscribe((data) => {
-        this.profileImageService.setUserImageFromBlob(this.user, data);
-      },
-      () => this.profileImageService.setUserImageFromGravatar(this.user));
-  }
-  
+
   public sidebarOpen(): void {
     const toggleButton = this.toggleButton;
     const body = document.getElementsByTagName('body')[0];
     setTimeout(function () {
       toggleButton.classList.add('toggled');
     }, 500);
-    
+
     body.classList.add('nav-open');
-    
+
     this.sidebarVisible = true;
-  };
-  
+  }
+
   sidebarClose() {
     const body = document.getElementsByTagName('body')[0];
     this.toggleButton.classList.remove('toggled');
     this.sidebarVisible = false;
     body.classList.remove('nav-open');
-  };
+  }
   
   public sidebarToggle(): void {
     // const toggleButton = this.toggleButton;

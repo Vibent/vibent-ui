@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MatDialog } from '@angular/material';
 import { ProfileSettingsComponent } from '../dialogs/profile-settings/profile-settings.component';
 import { User } from '../../../../shared/models/user';
-import { ProfileImageService } from '../../../../core/http/profile-image.service';
+import { UserManagementService } from '../../../../core/services/user-management.service';
 
 @Component({
   selector: 'app-profile',
@@ -15,22 +15,14 @@ export class ProfileComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               public dialogSettings: MatDialog,
-              private profileImageService: ProfileImageService) {
-    this.user = this.route.snapshot.data['user'];
-    this.initValues();
+              private userManagementService: UserManagementService) {
+    this.user = this.userManagementService.getMe();
   }
 
   ngOnInit() {
-    this.profileImageService.change.subscribe(() => {
-      this.initValues();
+    this.userManagementService.change.subscribe(() => {
+      this.user = this.userManagementService.getMe();
     });
-  }
-
-  initValues() {
-    this.profileImageService.getProfileImage(this.user.ref).subscribe((data) => {
-      this.profileImageService.setUserImageFromBlob(this.user, data);
-    },
-      () => this.profileImageService.setUserImageFromGravatar(this.user));
   }
 
   public openSettingsDialog(): void {
