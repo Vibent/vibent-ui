@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationEnd, NavigationStart, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { Location, PopStateEvent } from '@angular/common';
 import { Subscription } from 'rxjs/Subscription';
+import { UserManagementService } from '../../../core/services/user-management.service';
 
 @Component({
   selector: 'app-main',
@@ -13,8 +14,8 @@ export class MainComponent implements OnInit {
   private lastPoppedUrl: string;
   private yScrollStack: number[] = [];
 
-  constructor(private location: Location, private router: Router) {
-
+  constructor(private route: ActivatedRoute, private location: Location, private router: Router, private userManagementService: UserManagementService) {
+    this.userManagementService.setMe();
   }
 
   ngOnInit() {
