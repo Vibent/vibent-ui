@@ -37,6 +37,8 @@ import { GroupRightsComponent } from './core/admin-panels/group/dialogs/group-ri
 import { GroupRequestsComponent } from './core/admin-panels/group/dialogs/group-requests/group-requests.component';
 import { GroupInvitationModule } from './modules/pages/group/group-invitation/group-invitation.module';
 import { TokenInterceptor } from './shared/interceptors/token.interceptor';
+import { UserManagementService } from './core/services/user-management.service';
+import { LoaderModule } from './core/loader/loader.module';
 
 @NgModule({
   imports: [
@@ -67,6 +69,7 @@ import { TokenInterceptor } from './shared/interceptors/token.interceptor';
     GroupRightsModule,
     GroupRequestsModule,
     PublicGroupModule,
+    LoaderModule,
     LoggerModule.forRoot({level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR}),
   ],
   declarations: [
@@ -75,6 +78,7 @@ import { TokenInterceptor } from './shared/interceptors/token.interceptor';
   ],
   providers: [
     CookieService,
+    UserManagementService,
     AdminPanelService,
     {
       provide: HTTP_INTERCEPTORS,
