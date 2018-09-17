@@ -1,15 +1,8 @@
 <div class="row justify-content-center">
 	<div class="create-event-title">Update your infos</div>
 </div>
-<div class="row justify-content-center" style="margin-top: 25px">
-	<img id="avatarProfile" style="width: 100px;
-	height: 100px;
-	max-width: 100px;
-	max-height: 100px;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	border-radius: 50%;
-	border: 5px solid rgba(255, 255, 255, 0.5);" (click)="fileInput.click()" src="{{croppedImage}}">
+<div class="row justify-content-center m-t-25">
+	<img id="avatarProfile" class="avatar-profile-settings (click)="fileInput.click()" src="{{croppedImage}}">
 </div>
 
 <image-cropper *ngIf="imageChangedEvent"
@@ -25,7 +18,7 @@
 	<button *ngIf="imageChangedEvent" (click)="imageChangedEventToNull()" class="btn btn-round btn-sm">Crop image</button>
 </div>
 <div class="row justify-content-center">
-	<input type="file" id="file" style="display: none;" (change)="fileChangeEvent($event)" accept="image/jpg,image/jpeg"
+	<input type="file" id="file" class="d-none" (change)="fileChangeEvent($event)" accept="image/jpg,image/jpeg"
 				 #fileInput>
 </div>
 <div [formGroup]="form">
@@ -38,13 +31,13 @@
 		<label for="lastName" class="Input-label">LastName</label>
 	</div>
 
-	<div class="row justify-content-center" style="margin-top: 50px;">
+	<div class="row justify-content-center m-t-50">
 		<button *ngIf="!firstName.invalid && !lastName.invalid" (click)="updateInfo()" class="btn btn-round btn-add-event">
 			Update
 		</button>
 		<button *ngIf="firstName.invalid || lastName.invalid" class="btn btn-round btn-add-event disabled">Update</button>
 	</div>
 	<div class="row justify-content-center">
-		<button mat-dialog-close class="btn btn-round btn-danger" (click)="close()" style="opacity: 0.8">Cancel</button>
+		<button mat-dialog-close class="btn btn-round btn-danger" (click)="close()">Cancel</button>
 	</div>
 </div>
