@@ -84,7 +84,6 @@ import { LoaderModule } from './core/loader/loader.module';
     EventAdminPanelService,
     NotificationsService,
     UserManagementService,
-    AdminPanelService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,

@@ -561,6 +561,14 @@ button.close {
         width: 25px;
         height: 25px;
         margin-top: 15px;
+        cursor: pointer;
+      }
+
+      .addAndDeleteUnavailable {
+        width: 25px;
+        height: 25px;
+        margin-top: 15px;
+        opacity: 0.5;
       }
     }
 

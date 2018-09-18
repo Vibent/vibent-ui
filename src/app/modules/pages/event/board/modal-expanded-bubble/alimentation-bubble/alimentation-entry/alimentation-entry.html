@@ -6,30 +6,32 @@
                     <div class="media d-flex">
                         <div class="media-body text-left">
                             <h3 class="alim-title">{{this.alimentationEntry.name}}</h3>
-                            <span class="badge badge-default badge-success">2 by Theo</span>
-                            <span class="badge badge-default badge-success">1 by John</span>
+                            <span *ngFor="let b of alimentationDataModel.bringingsByUsers"
+                                  class="badge badge-default badge-success">{{b.quantity}} by {{b.userName}}</span>
                         </div>
                         <div class="align-self-center">
                             <div class="float-right">
-                                <div class="food-quantity">{{this.alimentationEntry.currentBringing}}
-                                    /{{this.alimentationEntry.totalRequested}}</div>
+                                <div class="food-quantity">{{this.alimentationDataModel.ratio}}
+                                </div>
                                 <img *ngIf="this.alimentationEntry.type === AlimType.DRINK"
-                                        src="/assets/img/drink.png"/>
+                                     src="/assets/img/drink.png"/>
                                 <img *ngIf="this.alimentationEntry.type === AlimType.FOOD"
-                                        class="p-l-5"
-                                        src="/assets/img/food.png"/>
+                                     class="p-l-5"
+                                     src="/assets/img/food.png"/>
                             </div>
                         </div>
                     </div>
                     <div class="progress mt-1 mb-0 h-5-p">
-                        <div class="progress-bar bg-success w-75" role="progressbar"></div>
+                        <div class="progress-bar bg-success" [style.width]="this.alimentationDataModel.progressWidth"
+                             role="progressbar"></div>
                     </div>
                     <div class="float-left">
-                        <div class="delete-alim">Delete</div>
+                        <div class="delete-alim" (click)="deleteEntry()">Delete</div>
                     </div>
                     <div class="float-right">
-                        <img class="addAndDelete" src="/assets/img/minus.png"/>
-                        <img class="addAndDelete" src="/assets/img/plus.png"/>
+                        <img class="{{this.alimentationDataModel.deleteBringButtonClass}}" (click)="deleteBring()"
+                             src="/assets/img/minus.png"/>
+                        <img class="addAndDelete" (click)="addBring()" src="/assets/img/plus.png"/>
                     </div>
                 </div>
             </div>

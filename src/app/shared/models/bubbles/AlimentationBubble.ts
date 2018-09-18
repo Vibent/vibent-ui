@@ -22,7 +22,19 @@ export class AlimentationBring {
 }
 
 export enum AlimType {
-  FOOD = "FOOD",
-  DRINK = "DRINK",
-  OTHER = "OTHER",
+  FOOD = 'FOOD',
+  DRINK = 'DRINK',
+  OTHER = 'OTHER',
+}
+
+export class AlimentationDataModel {
+  ratio: string;
+  bringingsByUsers: BringsByUser[];
+  progressWidth: string;
+  deleteBringButtonClass: string;
+}
+
+export class BringsByUser {
+  userName ?: any;
+  quantity ?: number;
 }

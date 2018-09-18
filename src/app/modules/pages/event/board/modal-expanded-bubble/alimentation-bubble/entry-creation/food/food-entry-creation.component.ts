@@ -1,15 +1,16 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { AlimentationBubbleService } from '../../../../../../../../core/services/bubbles-services/alimentation-bubble.service.';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AlimentationHttpService } from '../../../../../../../../core/services/bubbles-services/alimentation/http/alimentation-http.service';
 import { AlimentationBubble, AlimType } from '../../../../../../../../shared/models/bubbles/AlimentationBubble';
 import { EventUpdateService } from '../../../../../../../../core/services/bubbles-services/event-update.service';
-import { FormControl, FormGroup, FormsModule } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'food-entry-creation',
-  templateUrl: './food-entry-creation.html'
+  templateUrl: './food-entry-creation.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FoodEntryCreationComponent implements OnInit {
-  
+
   @Input()
   toggle: boolean;
   @Input()
@@ -18,38 +19,37 @@ export class FoodEntryCreationComponent implements OnInit {
   eventRef: string;
   @Output()
   updatedAlimentationBubble = new EventEmitter<AlimentationBubble>();
-  
+
   form: FormGroup;
   name: FormControl;
   quantity: FormControl;
-  
-  constructor(private alimentationBubbleService: AlimentationBubbleService,
+
+  constructor(private alimentationBubbleService: AlimentationHttpService,
               private eventUpdateService: EventUpdateService) {
   }
-  
+
   ngOnInit() {
     this.form = new FormGroup({
       name: this.name = new FormControl(),
       quantity: this.quantity = new FormControl()
     });
   }
-  
-  toggleCreationCard() {
+
+  closeCreationCard() {
     this.toggle = false;
   }
-  
+
   addEntry() {
     this.alimentationBubbleService.createEntry({
-      "bubbleId": this.bubbleId,
-      "name": this.name.value,
-      "totalRequested": this.quantity.value,
-      "type": AlimType.FOOD
+      bubbleId: this.bubbleId,
+      name: this.name.value,
+      totalRequested: this.quantity.value,
+      type: AlimType.FOOD
     }).subscribe((updatedBubble) => {
       this.updatedAlimentationBubble.emit(<AlimentationBubble>updatedBubble);
-      this.toggleCreationCard();
+      this.closeCreationCard();
       this.eventUpdateService.updateEvent(this.eventRef);
     });
   }
-  
-  
+
 }

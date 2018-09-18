@@ -12,7 +12,7 @@ import {
 import { BubblePreviewControllerModule } from '../bubbles-preview/bubble-preview-controller.module';
 import { ExpandedBubbleControllerModule} from './modal-expanded-bubble/expanded-bubble-controller.module';
 import { ModalBubbleCreationComponentModule } from './modal-bubble-creation/modal-bubble-creation.module';
-import { AlimentationBubbleService } from "app/core/services/bubbles-services/alimentation-bubble.service.";
+import { AlimentationHttpService } from "app/core/services/bubbles-services/alimentation/http/alimentation-http.service";
 import { EventUpdateService } from '../../../../core/services/bubbles-services/event-update.service';
 
 @NgModule({
@@ -31,7 +31,7 @@ import { EventUpdateService } from '../../../../core/services/bubbles-services/e
   declarations: [
     EventComponent,
   ],
-  providers: [AlimentationBubbleService, EventUpdateService],
+  providers: [EventUpdateService],
 })
 export class EventModule {
 }

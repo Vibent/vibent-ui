@@ -12,7 +12,7 @@ export class ExpandedBubbleControllerComponent implements OnInit {
   bubble: IBubble;
   @Input()
   eventRef: string;
-  
+
   public BubbleType = BubbleType;
 
   constructor(public expandedBubbleTitleService: ExpandedBubbleTitleService) {}

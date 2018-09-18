@@ -6,6 +6,8 @@ import { AlimentationEntryModule } from './alimentation-entry/alimentation-entry
 import { FoodEntryCreationComponent } from './entry-creation/food/food-entry-creation.component';
 import { DrinkEntryCreationComponent } from './entry-creation/drink/drink-entry-creation.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AlimentationHttpService } from '../../../../../../core/services/bubbles-services/alimentation/http/alimentation-http.service';
+import { AlimentationDataService } from '../../../../../../core/services/bubbles-services/alimentation/data/alimentation-data.service';
 
 @NgModule({
   imports: [
@@ -20,7 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FoodEntryCreationComponent,
     DrinkEntryCreationComponent
   ],
-  providers: [],
+  providers: [AlimentationHttpService, AlimentationDataService],
   exports: [ExpandedAlimentationBubbleComponent, FoodEntryCreationComponent, DrinkEntryCreationComponent]
 })
 export class ExpandedAlimentationBubbleComponentModule {

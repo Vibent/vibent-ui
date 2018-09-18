@@ -24,7 +24,10 @@
         </drink-entry-creation>
         <alimentation-entry
                 *ngFor="let entry of this.alimentationBubble.entries"
-                [alimentationEntry]="entry">
+                [alimentationEntry]="entry"
+                [bubbleId]="this.alimentationBubble.id"
+                [eventRef]="this.eventRef"
+                (updatedAlimentationBubble)="this.onBubbleUpdate($event)">
         </alimentation-entry>
     </div>
 </div>

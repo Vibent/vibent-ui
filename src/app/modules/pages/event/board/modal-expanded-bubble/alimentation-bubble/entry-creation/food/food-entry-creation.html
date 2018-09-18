@@ -6,11 +6,11 @@
                     <div class="media d-flex">
                         <div class="media-body text-left">
                             <form novalidate [formGroup]="this.form">
-                                <div class="form-group foodName">
+                                <div class="foodName">
                                     <label for="foodName">Food name</label>
                                     <input type="text" class="form-control" formControlName="name" id="foodName"/>
                                 </div>
-                                <div class="form-group foodQuantity">
+                                <div class="foodQuantity">
                                     <label for="quantity">Quantity</label>
                                     <input type="number" formControlName="quantity" min="1" class="form-control"
                                            id="quantity"/>
@@ -23,7 +23,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="float-left" (click)="this.toggleCreationCard()">
+                    <div class="float-left" (click)="this.closeCreationCard()">
                         <div class="delete-alim">Delete</div>
                     </div>
                     <div class="float-right m-2">

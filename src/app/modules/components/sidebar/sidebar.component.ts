@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AuthenticationService } from '../../../core/services/authentication.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AdminPanelService } from '../../../core/services/admin-panel.service';
 import { GroupAdminPanelService } from '../../../core/services/group-admin-panel.service';
 import { ProfileImageService } from '../../../core/http/profile-image.service';
 import { User } from '../../../shared/models/user';
@@ -42,7 +41,9 @@ export class SidebarComponent implements OnInit {
               private authenticationService: AuthenticationService,
               private userManagementService: UserManagementService,
               private httpService: HttpService,
-              private adminPanel: AdminPanelService) {
+              private groupAdminPanelService: GroupAdminPanelService,
+              private eventAdminPanelService: EventAdminPanelService
+  ) {
     this.user = this.userManagementService.getMe();
   }
 
