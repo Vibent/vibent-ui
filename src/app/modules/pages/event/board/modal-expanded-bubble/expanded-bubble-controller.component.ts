@@ -10,6 +10,9 @@ export class ExpandedBubbleControllerComponent implements OnInit {
 
   @Input()
   bubble: IBubble;
+  @Input()
+  eventRef: string;
+  
   public BubbleType = BubbleType;
 
   constructor(public expandedBubbleTitleService: ExpandedBubbleTitleService) {}

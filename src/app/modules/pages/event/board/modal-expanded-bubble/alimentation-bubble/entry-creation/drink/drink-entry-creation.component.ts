@@ -1,19 +1,37 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AlimentationBubbleService } from '../../../../../../../../core/services/bubbles-services/alimentation-bubble.service.';
-import { AlimType } from '../../../../../../../../shared/models/bubbles/AlimentationBubble';
+import { AlimentationBubble, AlimType } from '../../../../../../../../shared/models/bubbles/AlimentationBubble';
+import { EventUpdateService } from '../../../../../../../../core/services/bubbles-services/event-update.service';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'drink-entry-creation',
   templateUrl: './drink-entry-creation.html'
 })
-export class DrinkEntryCreationComponent {
+export class DrinkEntryCreationComponent implements OnInit {
   
   @Input()
   toggle: boolean;
   @Input()
   bubbleId: number;
+  @Input()
+  eventRef: string;
+  @Output()
+  updatedAlimentationBubble = new EventEmitter<AlimentationBubble>();
   
-  constructor(private alimentationBubbleService: AlimentationBubbleService) {
+  form: FormGroup;
+  name: FormControl;
+  quantity: FormControl;
+  
+  constructor(private alimentationBubbleService: AlimentationBubbleService,
+              private eventUpdateService: EventUpdateService) {
+  }
+  
+  ngOnInit() {
+    this.form = new FormGroup({
+      name: this.name = new FormControl(),
+      quantity: this.quantity = new FormControl()
+    });
   }
   
   toggleCreationCard() {
@@ -23,12 +41,17 @@ export class DrinkEntryCreationComponent {
   addEntry() {
     this.alimentationBubbleService.createEntry({
       "bubbleId": this.bubbleId,
-      "name": "drikk",
-      "totalRequested": 115,
+      "name": this.name.value,
+      "totalRequested": this.quantity.value,
       "type": AlimType.DRINK
-    }).subscribe((v) => {
-      console.log(v);
+    }).subscribe((updatedBubble) => {
+      this.updatedAlimentationBubble.emit(<AlimentationBubble>updatedBubble);
+      this.eventUpdateService.updateEvent(this.eventRef);
       this.toggleCreationCard();
     });
+  }
+  
+  deleteEntry(){
+  
   }
 }

@@ -12,11 +12,15 @@
         </div>
         <food-entry-creation
                 [toggle]="this.toggleAddFoodEntry"
-                [bubbleId]="this.alimentationBubble.id">
+                [bubbleId]="this.alimentationBubble.id"
+                [eventRef]="this.eventRef"
+                (updatedAlimentationBubble)="this.onBubbleUpdate($event)">
         </food-entry-creation>
         <drink-entry-creation
                 [toggle]="this.toggleAddDrinkEntry"
-                [bubbleId]="this.alimentationBubble.id">
+                [bubbleId]="this.alimentationBubble.id"
+                [eventRef]="this.eventRef"
+                (updatedAlimentationBubble)="this.onBubbleUpdate($event)">
         </drink-entry-creation>
         <alimentation-entry
                 *ngFor="let entry of this.alimentationBubble.entries"

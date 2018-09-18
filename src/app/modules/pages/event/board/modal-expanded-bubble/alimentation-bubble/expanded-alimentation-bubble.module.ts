@@ -5,12 +5,15 @@ import { ExpandedAlimentationBubbleComponent } from './expanded-alimentation-bub
 import { AlimentationEntryModule } from './alimentation-entry/alimentation-entry.module.';
 import { FoodEntryCreationComponent } from './entry-creation/food/food-entry-creation.component';
 import { DrinkEntryCreationComponent } from './entry-creation/drink/drink-entry-creation.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    AlimentationEntryModule
+    AlimentationEntryModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     ExpandedAlimentationBubbleComponent,

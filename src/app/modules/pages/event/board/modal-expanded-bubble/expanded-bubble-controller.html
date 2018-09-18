@@ -11,8 +11,11 @@
             <app-expanded-travel-bubble *ngIf="this.bubble?.type === BubbleType.TravelBubble"
                     [travelBubble]="this.bubble"></app-expanded-travel-bubble>
 
-            <app-expanded-alimentation-bubble *ngIf="this.bubble?.type === BubbleType.AlimentationBubble"
-                    [alimentationBubble]="this.bubble"></app-expanded-alimentation-bubble>
+            <app-expanded-alimentation-bubble
+                    *ngIf="this.bubble?.type === BubbleType.AlimentationBubble"
+                    [alimentationBubble]="this.bubble"
+                    [eventRef]="this.eventRef">
+            </app-expanded-alimentation-bubble>
 
             <app-expanded-planning-bubble *ngIf="this.bubble?.type === BubbleType.PlanningBubble"
                     [planningBubble]="this.bubble"></app-expanded-planning-bubble>

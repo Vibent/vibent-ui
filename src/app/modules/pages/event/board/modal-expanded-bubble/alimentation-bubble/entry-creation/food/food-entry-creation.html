@@ -5,14 +5,17 @@
                 <div class="card-body">
                     <div class="media d-flex">
                         <div class="media-body text-left">
-                            <div class="foodName">
-                                <label for="foodName">Food name</label>
-                                <input type="text" class="form-control" id="foodName"/>
-                            </div>
-                            <div class="foodQuantity">
-                                <label for="quantity">Quantity</label>
-                                <input type="number" min="1" class="form-control" id="quantity"/>
-                            </div>
+                            <form novalidate [formGroup]="this.form">
+                                <div class="form-group foodName">
+                                    <label for="foodName">Food name</label>
+                                    <input type="text" class="form-control" formControlName="name" id="foodName"/>
+                                </div>
+                                <div class="form-group foodQuantity">
+                                    <label for="quantity">Quantity</label>
+                                    <input type="number" formControlName="quantity" min="1" class="form-control"
+                                           id="quantity"/>
+                                </div>
+                            </form>
                         </div>
                         <div class="align-self-center">
                             <div class="float-right">
@@ -24,7 +27,8 @@
                         <div class="delete-alim">Delete</div>
                     </div>
                     <div class="float-right m-2">
-                        <button type="submit" class="btn btn-outline-primary btn-sm" (click)="this.addEntry()">
+                        <button [disabled]="!this.quantity.value || !this.name.value"
+                                class="btn btn-primary btn-sm" (click)="this.addEntry()">
                             Add
                         </button>
                     </div>

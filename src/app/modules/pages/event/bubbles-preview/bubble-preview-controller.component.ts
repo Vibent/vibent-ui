@@ -4,7 +4,7 @@ import { BubbleType, IBubble } from '../../../../shared/models/bubbles/IBubble';
 declare const $: any;
 
 @Component({
-  selector: 'app-bubble',
+  selector: 'bubble-preview-controller',
   templateUrl: './bubble-preview-controller.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
@@ -22,8 +22,6 @@ export class BubblePreviewController implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.bubble);
-    console.log(this.bubble.type === this.BubbleType.AlimentationBubble);
   }
 
   expandBubble() {

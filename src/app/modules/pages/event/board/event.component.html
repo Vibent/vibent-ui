@@ -37,10 +37,16 @@
 
                     <app-modal-bubble-creation [eventRef]=event.ref></app-modal-bubble-creation>
 
-                    <app-expanded-bubble-controller [bubble]=bubbleToExpand></app-expanded-bubble-controller>
+                    <app-expanded-bubble-controller
+                            [bubble]=bubbleToExpand
+                            [eventRef]="event.ref" >
+                    </app-expanded-bubble-controller>
 
                     <div *ngFor="let bubble of bubbles" class="row col-xl-4 col-md-6 col-sm-6 justify-content-center">
-                        <app-bubble [bubble]=bubble (bubbleToExpand)="onBubbleSentForExpand($event)"></app-bubble>
+                        <bubble-preview-controller
+                                [bubble]=bubble
+                                (bubbleToExpand)="onBubbleSentForExpand($event)">
+                        </bubble-preview-controller>
                     </div>
 
                     <div class="row col-xl-4 col-md-6 col-sm-6 justify-content-center">
