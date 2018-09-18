@@ -47,6 +47,7 @@
     "ng-pick-datetime": "^5.2.6",
     "ng2-tel-input": "^1.0.15",
     "ngx-cookie-service": "^1.0.10",
+    "ngx-image-cropper": "^1.0.2",
     "ngx-logger": "^3.0.0-rc1",
     "nodemailer": "^4.6.4",
     "perfect-scrollbar": "1.1.0",

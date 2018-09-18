@@ -1,11 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AuthenticationService } from '../../../core/services/authentication.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AdminPanelService } from '../../../core/services/admin-panel.service';
 import { GroupAdminPanelService } from '../../../core/services/group-admin-panel.service';
 import { ProfileImageService } from '../../../core/http/profile-image.service';
 import { User } from '../../../shared/models/user';
 import { HttpService } from '../../../core/http/http.service';
 import { EventAdminPanelService } from '../../../core/services/event-admin-panel.service';
+import { UserManagementService } from '../../../core/services/user-management.service';
 
 declare const $: any;
 
@@ -38,16 +40,10 @@ export class SidebarComponent implements OnInit {
   constructor(private router: Router,
               private route: ActivatedRoute,
               private authenticationService: AuthenticationService,
-              private profileImageService: ProfileImageService,
+              private userManagementService: UserManagementService,
               private httpService: HttpService,
-              private groupAdminPanelService: GroupAdminPanelService,
-              private eventAdminPanelService: EventAdminPanelService) {
-    this.httpService.getMe().subscribe((user) => {
-      this.user = user;
-      if (!this.user.imagePath) {
-        this.initValues();
-      }
-    });
+              private adminPanel: AdminPanelService) {
+    this.user = this.userManagementService.getMe();
   }
 
   ngOnInit() {
@@ -58,16 +54,9 @@ export class SidebarComponent implements OnInit {
     this.eventAdminPanelService.change.subscribe(result => {
       this.eventAdminPanelResult = result;
     });
-    this.profileImageService.change.subscribe(() => {
-      this.initValues();
+    this.userManagementService.change.subscribe(() => {
+      this.user = this.userManagementService.getMe();
     });
-  }
-
-  initValues() {
-    this.profileImageService.getProfileImage(this.user.ref).subscribe((data) => {
-        this.profileImageService.setUserImageFromBlob(this.user, data);
-      },
-      () => this.profileImageService.setUserImageFromGravatar(this.user));
   }
 
   public isMobileMenu(): boolean {

@@ -2,11 +2,24 @@
 	<div class="create-event-title">Update your infos</div>
 </div>
 <div class="row justify-content-center m-t-25">
-	<img id="avatarProfile" class="avatar-profile-settings" (click)="fileInput.click()" src="{{userProfileImage}}">
+	<img id="avatarProfile" class="avatar-profile-settings" (click)="fileInput.click()" src="{{croppedImage}}">
+</div>
+
+<image-cropper *ngIf="imageChangedEvent"
+		[imageChangedEvent]="imageChangedEvent"
+		[maintainAspectRatio]="true"
+		[aspectRatio]="1"
+		format="png"
+		(imageCroppedBase64)="imageCropped($event)"
+		(imageCroppedFile)="imageCroppedFile($event)"
+></image-cropper>
+
+<div class="row justify-content-center">
+	<button *ngIf="imageChangedEvent" (click)="imageChangedEventToNull()" class="btn btn-round btn-sm">Crop image</button>
 </div>
 <div class="row justify-content-center">
-	<input type="file" id="file" class="d-none" (change)="handleFileInput($event.target.files)" accept="image/jpg,image/jpeg" #fileInput>
-	<div class="edit-avatar" (click)="fileInput.click()">Edit avatar</div>
+	<input type="file" id="file" class="d-none" (change)="fileChangeEvent($event)" accept="image/jpg,image/jpeg"
+				 #fileInput>
 </div>
 <div [formGroup]="form">
 	<div class="Input">
@@ -19,7 +32,9 @@
 	</div>
 
 	<div class="row justify-content-center m-t-50">
-		<button *ngIf="!firstName.invalid && !lastName.invalid" (click)="updateInfo()" class="btn btn-round btn-add-event">Update</button>
+		<button *ngIf="!firstName.invalid && !lastName.invalid" (click)="updateInfo()" class="btn btn-round btn-add-event">
+			Update
+		</button>
 		<button *ngIf="firstName.invalid || lastName.invalid" class="btn btn-round btn-add-event disabled">Update</button>
 	</div>
 	<div class="row justify-content-center">

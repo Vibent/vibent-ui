@@ -39,6 +39,8 @@ import { GroupInvitationModule } from './modules/pages/group/group-invitation/gr
 import { TokenInterceptor } from './shared/interceptors/token.interceptor';
 import { EventAdminPanelService } from './core/services/event-admin-panel.service';
 import { NotificationsService } from './core/services/notifications.service';
+import { UserManagementService } from './core/services/user-management.service';
+import { LoaderModule } from './core/loader/loader.module';
 
 @NgModule({
   imports: [
@@ -69,6 +71,7 @@ import { NotificationsService } from './core/services/notifications.service';
     GroupRightsModule,
     GroupRequestsModule,
     PublicGroupModule,
+    LoaderModule,
     LoggerModule.forRoot({level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR}),
   ],
   declarations: [
@@ -80,6 +83,8 @@ import { NotificationsService } from './core/services/notifications.service';
     GroupAdminPanelService,
     EventAdminPanelService,
     NotificationsService,
+    UserManagementService,
+    AdminPanelService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
