@@ -7,10 +7,18 @@
                         <div class="media-body text-left">
                             <h3 class="alim-title">{{this.alimentationEntry.name}}</h3>
                             <span *ngFor="let b of alimentationDataModel.bringingsByUsers"
-                                  class="badge badge-default badge-success">{{b.quantity}} by {{b.userName}}</span>
+                                  class="badge badge-default badge-success">{{b.quantity}} by {{(b.user | async)?.firstName}}</span>
                         </div>
                         <div class="align-self-center">
                             <div class="float-right">
+                                <i *ngIf="alimentationEntry.currentBringing >= alimentationEntry.totalRequested"
+                                   class="fa fa-check" style="color: white;
+                                                        background-color: #4caf50;
+                                                        padding: 3px;
+                                                        border-radius: 50%;
+                                                        margin-top: 0px;
+                                                        margin: 6px;">
+                                </i>
                                 <div class="food-quantity">{{this.alimentationDataModel.ratio}}
                                 </div>
                                 <img *ngIf="this.alimentationEntry.type === AlimType.DRINK"

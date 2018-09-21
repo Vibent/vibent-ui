@@ -26,8 +26,11 @@
             <app-expanded-free-bubble *ngIf="this.bubble?.type === BubbleType.FreeBubble"
                     [freeBubble]="this.bubble"></app-expanded-free-bubble>
 
-            <app-expanded-checkbox-bubble *ngIf="this.bubble?.type === BubbleType.CheckboxBubble"
-                    [checkboxBubble]="this.bubble"></app-expanded-checkbox-bubble>
+            <app-expanded-checkbox-bubble
+                    *ngIf="this.bubble?.type === BubbleType.CheckboxBubble"
+                    [checkboxBubble]="this.bubble"
+                    [eventRef]="this.eventRef">
+            </app-expanded-checkbox-bubble>
         </div>
     </div>
 </div>

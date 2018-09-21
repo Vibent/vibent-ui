@@ -1,4 +1,6 @@
 import { IBubble } from './IBubble';
+import { User } from '../user';
+import { Observable } from 'rxjs';
 
 export class AlimentationBubble extends IBubble {
   entries ?: AlimentationEntry[];
@@ -35,6 +37,6 @@ export class AlimentationDataModel {
 }
 
 export class BringsByUser {
-  userName ?: any;
+  user ?: Observable<User>;
   quantity ?: number;
 }

@@ -25,7 +25,6 @@ export class BubblePreviewController implements OnInit {
   }
 
   expandBubble() {
-    console.log(this.bubble);
     this.bubbleToExpand.emit(this.bubble);
     $('#expanded-bubble').modal('show');
   }

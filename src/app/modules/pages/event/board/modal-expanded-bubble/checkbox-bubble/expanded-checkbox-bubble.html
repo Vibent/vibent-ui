@@ -1,82 +1,46 @@
 <div class="modal-body">
-	<div class="expanded-bubble">
-		<div class="card-body text-center">
-			<div class="card-header mb-2">
-				<span class="success">Your bubble checkbox title</span>
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="insights px-2">
-							<span class="text-success h3">5/7</span>
-						</div>
-					</div>
-					<div class="col-lg-12">
-						<img class="w-20-p" src="/assets/img/plus.png"/>
-					</div>
-					<!--
-					<div class="progress progress-md mt-1 mb-0">
-						<div class="progress-bar bg-success" role="progressbar" style="width: 82%"></div>
-					</div>
-					-->
-				</div>
-			</div>
-			<div class="checkbox-card">
-				<div class="card">
-					<div class="card-content">
-						<div id="daily-activity" class="table-responsive">
-							<table class="table table-hover mb-0">
-								<tbody>
-								<tr>
-									<td class="text-truncate">
-										<div class="custom-control custom-checkbox">
-											<input type="checkbox" class="custom-control-input" id="customCheck1">
-											<label class="custom-control-label" for="customCheck1"></label>
-										</div>
-									</td>
-									<td class="text-truncate">Blablablaba oh yes blablbalbala</td>
-									<td class="text-truncate">
-										<span class="badge badge-default badge-success">by Théo Joubert</span>
-									</td>
-								</tr>
-								<tr>
-									<td class="text-truncate">
-										<div class="custom-control custom-checkbox">
-											<input type="checkbox" class="custom-control-input" id="customCheck2">
-											<label class="custom-control-label" for="customCheck2"></label>
-										</div>
-									</td>
-									<td class="text-truncate">Blablablaba oh yes blablbalbala</td>
-									<td class="text-truncate">
-										<span class="badge badge-default badge-danger">Undone</span>
-									</td>
-								</tr><!--
-									<tr>
-										<td class="text-truncate"></td>
-										<td class="text-truncate"></td>
-										<td class="text-truncate"><img src="/assets/img/plus.png"/></td>
-
-									</tr>-->
-
-								<!-- Row to display when add is clicked -->
-								<tr>
-									<td class="text-truncate">
-										Add one:
-									</td>
-									<td class="text-truncate">
-										<input type="text" class="form-control"/></td>
-									<td class="text-truncate">
-										<button type="submit" class="btn btn-outline-primary btn-sm">Add</button>
-									</td>
-								</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="expanded-bubble">
+        <div class="card-body text-center">
+            <div class="card-header mb-2">
+                <span class="success">{{checkboxBubble.title}}</span>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="insights px-2">
+                            <span class="text-success h3">{{this.ratio}}</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <img class="w-20-p cursor-pointer" (click)="addOptionCreation()" src="/assets/img/plus.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="checkbox-card">
+                <div class="card">
+                    <div class="card-content">
+                        <table class="table">
+                            <tbody>
+                            <tr option-creation
+                                [toggle]="this.toggleOptionCreation"
+                                [bubbleId]="checkboxBubble.id"
+                                (updatedCheckboxBubble)="this.onBubbleUpdate($event)"
+                                [eventRef]="eventRef">
+                            </tr>
+                            <tr *ngFor="let option of checkboxBubble.options"
+                                checkbox-option
+                                [checkboxOption]="option"
+                                [bubbleId]="checkboxBubble.id"
+                                (updatedCheckboxOptions)="this.onCheckboxOptionUpdate($event)"
+                                [eventRef]="eventRef">
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="modal-footer">
-	created by Théo Joubert
+    created by Théo Joubert
 </div>
 

@@ -8,15 +8,14 @@ import {
 import { AlimentationHttpService } from '../../../../../../../core/services/bubbles-services/alimentation/http/alimentation-http.service';
 import { EventUpdateService } from '../../../../../../../core/services/bubbles-services/event-update.service';
 import { User } from '../../../../../../../shared/models/user';
-import {
-  AlimentationDataService
-} from '../../../../../../../core/services/bubbles-services/alimentation/data/alimentation-data.service';
+import { AlimentationDataService } from '../../../../../../../core/services/bubbles-services/alimentation/data/alimentation-data.service';
 import Swal from 'sweetalert2';
 import { UserManagementService } from '../../../../../../../core/services/user-management.service';
 
 @Component({
   selector: 'alimentation-entry',
-  templateUrl: './alimentation-entry.html'
+  templateUrl: './alimentation-entry.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AlimentationEntryComponent implements OnInit {
 
@@ -43,7 +42,6 @@ export class AlimentationEntryComponent implements OnInit {
   ngOnInit(): void {
     this.constructAlimentationDataModel();
     console.log(this.alimentationDataModel);
-    this.alimentationDataModel.bringingsByUsers.push({userName: 'dd', quantity: 5});
   }
 
   constructAlimentationDataModel() {

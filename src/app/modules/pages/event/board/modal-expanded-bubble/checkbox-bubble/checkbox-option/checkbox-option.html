@@ -1,0 +1,15 @@
+<td>
+    <div class="custom-control custom-checkbox">
+        <input (click)="onCheckBoxClick($event)" type="checkbox" [checked]="checkboxOption.answers.length>0"
+               class="custom-control-input"
+               id="{{checkboxOption.id}}">
+        <label class="custom-control-label" for="{{checkboxOption.id}}"></label>
+    </div>
+</td>
+<td>{{checkboxOption.content}}</td>
+<td>
+        <span *ngIf="checkboxDataModel?.answerUsers.length>0; else unchecked" class="badge badge-default badge-success">
+        {{(checkboxDataModel.answerUsers[0] | async)?.firstName}} {{(checkboxDataModel.answerUsers[0] | async)?.lastName}}
+    </span>
+    <ng-template #unchecked><span class="badge badge-default badge-danger">Unchecked</span></ng-template>
+</td>

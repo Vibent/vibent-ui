@@ -1,0 +1,12 @@
+<ng-container *ngIf="toggle">
+    <td>
+        Add one:
+    </td>
+    <td>
+        <form novalidate [formGroup]="this.form">
+            <input id="checkboxTitle" formControlName="optionContent" type="text" class="form-control"/>
+        </form>
+    <td>
+        <button type="submit" class="btn btn-outline-primary btn-sm" (click)="createOption()">Add</button>
+    </td>
+</ng-container>

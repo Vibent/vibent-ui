@@ -1,44 +1,27 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { BubbleCreationService } from '../../../../../core/services/bubbles-services/bubble-creation.service.';
+import { BubbleType } from '../../../../../shared/models/bubbles/IBubble';
 
 @Component({
   selector: 'app-modal-bubble-creation',
   templateUrl: './modal-bubble-creation.html'
 })
 export class ModalBubbleCreationComponent implements OnInit {
-  
-  constructor(private bubbleCreationService: BubbleCreationService) {
+
+  BubbleType = BubbleType;
+  bubbleType: BubbleType = null;
+
+  constructor() {
   }
-  
+
   @Input()
   eventRef: string;
-  
+
   ngOnInit(): void {
-  
+
   }
-  
-  createAlimentationBubble() {
-    this.bubbleCreationService.createAlimentationBubble(this.eventRef).subscribe((v) => console.log(v));
+
+  onBubbleTypeSent(bubbleType: BubbleType) {
+    this.bubbleType = bubbleType;
   }
-  
-  createTravelBubble() {
-    this.bubbleCreationService.createTravelBubble(this.eventRef).subscribe((v) => console.log(v));
-  }
-  
-  createCheckboxBubble() {
-    this.bubbleCreationService.createCheckboxBubble(this.eventRef).subscribe((v) => console.log(v));
-  }
-  
-  createSurveyBubble() {
-    this.bubbleCreationService.createSurveyBubble(this.eventRef).subscribe((v) => console.log(v));
-  }
-  
-  createPlanningBubble() {
-    this.bubbleCreationService.createPlanningBubble(this.eventRef).subscribe((v) => console.log(v));
-  }
-  
-  createFreeBubble() {
-    this.bubbleCreationService.createFreeBubble(this.eventRef).subscribe((v) => console.log(v));
-  }
-  
+
 }

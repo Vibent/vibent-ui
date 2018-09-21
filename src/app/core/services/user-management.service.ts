@@ -12,6 +12,30 @@ export class UserManagementService {
               private profileImageService: ProfileImageService) {
   }
 
+  public manageUser(user: User) {
+    if (!this.getUserSaved(user.ref)) {
+      this.addUserToSession(user);
+    }
+  }
+
+  public setItemIfNotExist(index: string, item: any) {
+    if (!window.sessionStorage.getItem(index)) {
+      window.sessionStorage.setItem(index, JSON.stringify(item));
+    }
+  }
+
+  public addUserToSession(user: User) {
+    this.setItemIfNotExist('usersInfos', []);
+    const users = JSON.parse(window.sessionStorage.getItem('usersInfos'));
+    window.sessionStorage.setItem('usersInfos', users.push(user));
+  }
+
+  public getUserSaved(userRef: string) {
+    this.setItemIfNotExist('usersInfos', []);
+    const users = JSON.parse(window.sessionStorage.getItem('usersInfos'));
+    return users.find(u => u.userRef === userRef);
+  }
+
   public setMe() {
     this.httpService.getMe().subscribe((user) => {
       this.profileImageService.getProfileImage(user.ref).subscribe((data) => {
@@ -46,6 +70,8 @@ export class UserManagementService {
       reader.readAsDataURL(file);
     }
   }
+
+
 
 }
 

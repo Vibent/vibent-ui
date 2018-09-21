@@ -26,39 +26,39 @@ declare const $: any;
   templateUrl: './event.component.html'
 })
 export class EventComponent implements OnInit, OnDestroy {
-  
+
   public participants: EventParticipant[];
   public event: Event;
   public bubbles: IBubble[];
   public bubbleToExpand: IBubble;
   public NotificationType = NotificationType;
-  
+
   constructor(private route: ActivatedRoute,
               private eventAdminPanelService: EventAdminPanelService,
               private eventUpdateService: EventUpdateService,
               public notificationService: NotificationsService) {
     this.event = this.route.snapshot.data['event'];
   }
-  
+
   onBubbleSentForExpand(bubble: IBubble) {
     this.bubbleToExpand = bubble;
   }
-  
+
   openNewBubbleModal() {
     $('#modalSelectBubbleType').modal('show');
   }
-  
+
   ngOnInit() {
     this.eventAdminPanelService.toggleEventPanel({eventRef: this.event.ref, isOpen: true});
     this.eventAdminPanelService.eventUpdated.subscribe(event => {
       this.event = event;
     });
-    
+
     this.eventUpdateService.eventUpdated.subscribe(event => {
       this.event = event;
       this.pushBubbles();
     });
-    
+
     this.participants = [
       new EventParticipant('Conor Ryan', '/assets/img/conor.jpg', 'Participates'),
       new EventParticipant('Francois Dupond', '/assets/img/francois.jpg', 'Participates'),
@@ -71,27 +71,27 @@ export class EventComponent implements OnInit, OnDestroy {
       new EventParticipant('Conor Ryan', '/assets/img/conor.jpg', 'Doesn\'t come'),
       new EventParticipant('Francois Dupond', '/assets/img/francois.jpg', 'Doesn\'t come'),
     ];
-    
-    
+
+
     this.pushBubbles();
   }
-  
+
   ngOnDestroy() {
     this.eventAdminPanelService.toggleEventPanel({groupRef: null, isOpen: false});
   }
-  
+
   pushBubbles() {
-    
+
     let bubbles = [];
     console.log(this.event);
     bubbles = bubbles.concat(this.event.alimentationBubbles, this.event.travelBubbles, this.event.checkboxBubbles, this.event.planningBubbles, this.event.surveyBubbles, this.event.freeBubbles);
     this.bubbles = bubbles;
     console.log(this.bubbles);
   }
-  
+
   pushBubbles2() {
-    
-    
+/*
+
     const b1: AlimentationBring = {id: 0, quantity: 5, userRef: 'ref'};
     const e0: AlimentationEntry = {
       id: 0,
@@ -116,7 +116,7 @@ export class EventComponent implements OnInit, OnDestroy {
       entries: [e0, ee1],
       type: BubbleType.AlimentationBubble
     };
-    
+
     const a0: CheckboxAnswer = {id: 0, userRef: 'ref'};
     const o0: CheckboxOption = {id: 0, answers: [a0], content: 'content', userRef: 'ref'};
     const b: CheckboxBubble = {
@@ -127,7 +127,7 @@ export class EventComponent implements OnInit, OnDestroy {
       title: 'title',
       type: BubbleType.CheckboxBubble
     };
-    
+
     const f: FreeBubble = {
       id: 2,
       eventRef: 'ref',
@@ -136,7 +136,7 @@ export class EventComponent implements OnInit, OnDestroy {
       title: 'title',
       type: BubbleType.FreeBubble
     };
-    
+
     const e1: PlanningEntry = {id: 0, content: 'content', end: 'end', start: 'start'};
     const p: PlanningBubble = {
       id: 3,
@@ -146,7 +146,7 @@ export class EventComponent implements OnInit, OnDestroy {
       title: 'title',
       type: BubbleType.PlanningBubble
     };
-    
+
     const a1: SurveyAnswer = {id: 0, userRef: 'ref'};
     const o1: SurveyOption = {id: 0, answers: [a1], content: 'content', userRef: 'ref'};
     const s: SurveyBubble = {
@@ -157,7 +157,7 @@ export class EventComponent implements OnInit, OnDestroy {
       title: 'title',
       type: BubbleType.SurveyBubble
     };
-    
+
     const p0: TravelProposal = {id: 0, capacity: 5, passByCities: 'cities', userRef: 'ref'};
     const r0: TravelRequest = {id: 0, capacity: 2, userRef: 'ref'};
     const t: TravelBubble = {
@@ -168,8 +168,8 @@ export class EventComponent implements OnInit, OnDestroy {
       requests: [r0],
       type: BubbleType.TravelBubble
     };
-    
-    this.bubbles = [a, b, f, p, s, t];
+
+    this.bubbles = [a, b, f, p, s, t];*/
   }
-  
+
 }

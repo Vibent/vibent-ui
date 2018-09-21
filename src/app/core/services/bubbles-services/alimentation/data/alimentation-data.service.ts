@@ -6,7 +6,6 @@ import {
 import { UserManagementService } from '../../../user-management.service';
 import { User } from '../../../../../shared/models/user';
 import { HttpService } from '../../../../http/http.service';
-import { Observable } from 'rxjs';
 
 @Injectable()
 export class AlimentationDataService {
@@ -42,25 +41,16 @@ export class AlimentationDataService {
   }
 
   private getBringsByUser(): BringsByUser[] {
-
     const bringsByUsers: BringsByUser[] = [];
-    const observables = this.alimentationEntry.brings.map(bring => bringsByUsers.push({userName: this.httpService.getUser(bring.userRef).subscribe(), quantity: bring.quantity}));
-    // const source = Observable.forkJoin(observables);
-
-/*
-    const bringsByUsers: BringsByUser[] = [];
-    for (const b of this.alimentationEntry.brings) {
-      this.httpService.getUser(b.userRef).map((user) => {
-        bringsByUsers.push({userName: user.firstName, quantity: b.quantity});
-      });
-    }*/
-    console.log(bringsByUsers);
+    this.alimentationEntry.brings.map(bring => bringsByUsers.push({
+      user: this.httpService.getUser(bring.userRef),
+      quantity: bring.quantity
+    }));
     return bringsByUsers;
   }
 
   private getClassForDeleteBring(): string {
     if (this.alimentationEntry.brings.find(bring => bring.userRef === this.user.ref)) {
-      console.log('enabled');
       return this.ENABLED_BUTTON;
     }
     return this.DISABLED_BUTTON;
