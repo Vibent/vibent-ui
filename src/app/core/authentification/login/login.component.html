@@ -41,8 +41,8 @@
 													'has-success': passwordEmail.valid && (passwordEmail.dirty || passwordEmail.touched)
 										 }">
                                             <label for="passwordEmail">Password
-                                                <a href="javascript:void(0);" (click)="forgoPassword()"
-                                                   class="float-right">
+                                                <a (click)="forgoPassword()"
+                                                   class="float-right cursor-pointer">
                                                     Forgot Password?
                                                 </a>
                                             </label>
@@ -89,8 +89,8 @@
 													'has-success': passwordPhone.valid && (passwordPhone.dirty || passwordPhone.touched)
 										 }">
                                             <label for="passwordPhone">Password
-                                                <a href="javascript:void(0);" (click)="forgoPassword()"
-                                                   class="float-right">
+                                                <a (click)="forgoPassword()"
+                                                   class="float-right cursor-pointer">
                                                     Forgot Password?
                                                 </a>
                                             </label>
