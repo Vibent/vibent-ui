@@ -11,32 +11,32 @@
                             <h3 class="card-title">Register</h3>
                             <form novalidate [formGroup]="registerForm">
                                 <div class="form-group"
-                                        [ngClass]="{
+                                     [ngClass]="{
 												'has-danger': firstName.invalid && (firstName.dirty || firstName.touched),
 												'has-success': firstName.valid && (firstName.dirty || firstName.touched)
 												}">
                                     <label for="firstName">First name<span *ngIf="!formsValidAfterRegister.firstName"
-                                            class="field-error">required</span></label>
+                                                                           class="field-error">required</span></label>
                                     <input type="text" class="form-control" id="firstName" formControlName="firstName"/>
                                 </div>
 
                                 <div class="form-group"
-                                        [ngClass]="{
+                                     [ngClass]="{
 												'has-danger': lastName.invalid && (lastName.dirty || lastName.touched),
 												'has-success': lastName.valid && (lastName.dirty || lastName.touched)
 												}">
                                     <label for="lastName">Last name<span *ngIf="!formsValidAfterRegister.lastName"
-                                            class="field-error">required</span></label>
+                                                                         class="field-error">required</span></label>
                                     <input type="text" class="form-control" id="lastName" formControlName="lastName"/>
                                 </div>
 
                                 <div class="form-group"
-                                        [ngClass]="{
+                                     [ngClass]="{
 												'has-danger': birthday.invalid && (birthday.dirty || birthday.touched),
 												'has-success': birthday.valid && (birthday.dirty || birthday.touched)
 												}">
                                     <label for="birthday">Birthday<span *ngIf="!formsValidAfterRegister.birthday"
-                                            class="field-error">(MM/DD/YYYY)</span></label><br>
+                                                                        class="field-error">(MM/DD/YYYY)</span></label><br>
                                     <input matInput [matDatepicker]="picker" id="birthday" formControlName="birthday"
                                            placeholder="Enter your birthday">
                                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
@@ -51,43 +51,43 @@
                                             But choose at least one!</span>
                                     </p>
                                     <div class="form-group"
-                                            [ngClass]="{
+                                         [ngClass]="{
 												'has-danger': email.invalid && (email.dirty || email.touched),
 												'has-success': email.valid && (email.dirty || email.touched)
 												}">
                                         <label for="email">Email<span *ngIf="!formsValidAfterRegister.email"
-                                                class="field-error">(incorrect email format)</span></label>
+                                                                      class="field-error">(incorrect email format)</span></label>
                                         <input type="email" class="form-control" id="email" formControlName="email">
                                     </div>
 
                                     <div class="form-group"
-                                            [ngClass]="{
+                                         [ngClass]="{
 												'has-danger': phone.invalid && (phone.dirty || phone.touched),
 												'has-success': phone.valid && (phone.dirty || phone.touched)
 												}">
                                         <label for="phone">Phone number
                                             <span *ngIf="!formsValidAfterRegister.phone"
-                                                    class="field-error">(incorrect phone format)</span></label>
+                                                  class="field-error">(incorrect phone format)</span></label>
                                         <input id="phone"
                                                class="form-control"
                                                ng2TelInput
-                                                [ng2TelInputOptions]="{initialCountry: 'fr'}"
-                                                (ng2TelOutput)="getNumber($event)">
+                                               [ng2TelInputOptions]="{initialCountry: 'fr'}"
+                                               (ng2TelOutput)="getNumber($event)">
                                     </div>
                                 </div>
                                 <div class="form-group"
-                                        [ngClass]="{
+                                     [ngClass]="{
 												'has-danger': password.invalid && (password.dirty || password.touched),
 												'has-success': password.valid && (password.dirty || password.touched)
 												}"> 
                                     <label for="password">Password <span *ngIf="!formsValidAfterRegister.password"
-                                            class="field-error">(8 characters)</span></label>
+                                                                         class="field-error">(8 characters)</span></label>
                                     <input type="password" class="form-control" id="password"
                                            formControlName="password"/>
                                 </div>
 
                                 <div class="form-group"
-                                        [ngClass]="{
+                                     [ngClass]="{
 												'has-danger': passwordConfirmation.invalid && (passwordConfirmation.dirty || passwordConfirmation.touched),
 												'has-success': passwordConfirmation.valid && (passwordConfirmation.dirty || passwordConfirmation.touched)
 												}"> 
@@ -111,8 +111,7 @@
                                 </button>
                                    
                                 <div class="text-center m-t-20">
-                                    Already have an account? <a
-                                        href="javascript:void(0);" (click)="loginPage()">Login</a>
+                                    Already have an account? <a (click)="loginPage()" class="cursor-pointer">Login</a>
                                 </div>
                             </form>
                         </div>
