@@ -1,25 +1,22 @@
 import { EventEmitter, Injectable, Output } from '@angular/core';
 import { HttpService } from '../http/http.service';
-import { Group } from '../../shared/models/group';
+import { Event } from '../../shared/models/event';
 
 @Injectable()
-export class AdminPanelService {
+export class EventAdminPanelService {
 
   isOpen = false;
   @Output() change: EventEmitter<any> = new EventEmitter();
-  @Output() groupUpdated: EventEmitter<Group> = new EventEmitter();
+  @Output() eventUpdated: EventEmitter<Event> = new EventEmitter();
 
   constructor(private httpService: HttpService) {
   }
 
-  toggleGroupPanel(response: any) {
+  toggleEventPanel(response: any) {
     this.isOpen = response.isOpen;
     this.change.emit(response);
   }
 
-  updateGroup(group: Group) {
-    this.httpService.updateGroup(group).subscribe((updatedGroup) => {
-      this.groupUpdated.emit(updatedGroup);
-    });
+  updateEvent(event: Event) {
   }
 }

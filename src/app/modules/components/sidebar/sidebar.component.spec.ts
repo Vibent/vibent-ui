@@ -4,7 +4,7 @@ import { SidebarComponent } from './sidebar.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AuthenticationService } from '../../../core/services/authentication.service';
-import { AdminPanelService } from '../../../core/services/admin-panel.service';
+import { GroupAdminPanelService } from '../../../core/services/group-admin-panel.service';
 import { Observable } from 'rxjs/Observable';
 
 fdescribe('SidebarComponent', () => {
@@ -24,7 +24,7 @@ fdescribe('SidebarComponent', () => {
       imports: [RouterTestingModule],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       providers: [{provide: AuthenticationService, useClass: MockAuthenticationService},
-        {provide: AdminPanelService, useValue: mockAdminPanelService}]
+        {provide: GroupAdminPanelService, useValue: mockAdminPanelService}]
     })
       .compileComponents();
   }));

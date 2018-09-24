@@ -5,88 +5,56 @@
                 <h2 class="event-title">{{event.title}}</h2>
             </div>
             <div class="col-xl-10">
-                <h5 class="event-description">{{event.description}}.</h5>
+                <h5 class="event-description">{{event.description}}</h5>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-xl-10 text-center">
+                <div class="btn-group event-participation" data-toggle="buttons">
+                    <label class="btn btn-primary active btn-sm"
+                            (click)="this.notificationService.notify('You are participating in this event', NotificationType.SUCCESS)">
+                        <input type="radio" name="options" value="red" autocomplete="off"
+                               class="event-participation-radios"> I'm in
+                    </label>
+                    <label class="btn btn-primary btn-sm"
+                            (click)="this.notificationService.notify('You do not know yet', NotificationType.INFO)">
+                        <input type="radio" name="options" value="orange" autocomplete="off"
+                               class="event-participation-radios"> Not sure
+                    </label>
+                    <label class="btn btn-primary btn-sm"
+                            (click)="this.notificationService.notify('You are not participating in this event', NotificationType.DANGER)">
+                        <input type="radio" name="options" value="yellow" autocomplete="off"
+                               class="event-participation-radios"> Nope
+                    </label>
+                </div>
             </div>
         </div>
 
         <div class="row justify-content-center">
             <div class="bubble">
                 <div class="row justify-content-center">
-                    <div class="row col-xl-4 col-md-6 col-sm-6 justify-content-center">
-                        <div class="box-part text-center">
-                            <div class="creator-bubble"></div>
-                            <div class="bubble-type"><i class="fa fa-check-square checkbox-bubble-icon"></i></div>
-                            <div class="title">
-                                Some stuff to bring
-                            </div>
-                            <div class="preview">
-                                5 checkbox to be checked<br>
-                                2 checked
-                            </div>
-                        </div>
+
+                    <app-modal-bubble-creation [eventRef]=event.ref></app-modal-bubble-creation>
+
+                    <app-expanded-bubble-controller
+                            [bubble]=bubbleToExpand
+                            [eventRef]="event.ref" >
+                    </app-expanded-bubble-controller>
+
+                    <div *ngFor="let bubble of bubbles" class="row col-xl-4 col-md-6 col-sm-6 justify-content-center">
+                        <bubble-preview-controller
+                                [bubble]=bubble
+                                (bubbleToExpand)="onBubbleSentForExpand($event)">
+                        </bubble-preview-controller>
                     </div>
+
                     <div class="row col-xl-4 col-md-6 col-sm-6 justify-content-center">
-                        <div class="box-part text-center">
-                            <div class="creator-bubble"></div>
-                            <div class="bubble-type"><i class="fa fa-taxi travel-bubble-icon"></i></div>
-                            <div class="title">
-                                Travel
+                        <a href="javascript:void(0);">
+                            <div class="h-250-p" (click)="openNewBubbleModal()">
+                                <i class="fa fa-plus-circle add-bubble-icon"></i>
                             </div>
-                            <div class="preview">
-                                2 providers<br>
-                                2 requests
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row col-xl-4 col-md-6 col-sm-6 justify-content-center">
-                        <div class="box-part text-center">
-                            <div class="creator-bubble"></div>
-                            <div class="bubble-type"><i class="fa fa-commenting free-bubble-icon"></i></div>
-                            <div class="title m-t-40">
-                                Do not forget your swimsuit!
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row col-xl-4 col-md-6 col-sm-6 justify-content-center">
-                        <div class="box-part text-center">
-                            <div class="creator-bubble"></div>
-                            <div class="bubble-type"><i class="fa fa-cutlery alim-bubble-icon"></i></div>
-                            <div class="title">
-                                Alimentation
-                            </div>
-                            <div class="preview">
-                                2 providers<br>
-                                2 requests
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row col-xl-4 col-md-6 col-sm-6 justify-content-center">
-                        <div class="box-part text-center">
-                            <div class="creator-bubble"></div>
-                            <div class="bubble-type"><i class="fa fa-question-circle survey-bubble-icon"></i></div>
-                            <div class="title">
-                                Who's the best for sex?
-                            </div>
-                            <div class="preview">
-                                4 possible answers<br>
-                                <b>Andy</b> (most voted)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row col-xl-4 col-md-6 col-sm-6 justify-content-center">
-                        <div class="box-part text-center">
-                            <div class="creator-bubble"></div>
-                            <div class="bubble-type"><i class="fa fa-tasks planning-bubble-icon"></i></div>
-                            <div class="title">
-                                Day planning
-                            </div>
-                            <div class="preview">
-                                4 stuffs planned
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row col-xl-4 col-md-6 col-sm-6 justify-content-center h-250-p">
-                        <i class="fa fa-plus-circle add-bubble-icon"></i>
+                        </a>
                     </div>
 
                 </div>

@@ -14,7 +14,7 @@ import { LoginModule } from './core/authentification/login/login.module';
 import { CookieService } from 'ngx-cookie-service';
 import { MainComponent } from './modules/components/main/main.component';
 import { RegisterModule } from './core/authentification/register/register.module';
-import { AdminPanelService } from './core/services/admin-panel.service';
+import { GroupAdminPanelService } from './core/services/group-admin-panel.service';
 import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 import { ForgotModule } from './core/authentification/forgot/forgot.module';
 import { GroupsModule } from './modules/pages/group/joined-groups/groups.module';
@@ -37,6 +37,8 @@ import { GroupRightsComponent } from './core/admin-panels/group/dialogs/group-ri
 import { GroupRequestsComponent } from './core/admin-panels/group/dialogs/group-requests/group-requests.component';
 import { GroupInvitationModule } from './modules/pages/group/group-invitation/group-invitation.module';
 import { TokenInterceptor } from './shared/interceptors/token.interceptor';
+import { EventAdminPanelService } from './core/services/event-admin-panel.service';
+import { NotificationsService } from './core/services/notifications.service';
 import { UserManagementService } from './core/services/user-management.service';
 import { LoaderModule } from './core/loader/loader.module';
 
@@ -78,8 +80,10 @@ import { LoaderModule } from './core/loader/loader.module';
   ],
   providers: [
     CookieService,
+    GroupAdminPanelService,
+    EventAdminPanelService,
+    NotificationsService,
     UserManagementService,
-    AdminPanelService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,

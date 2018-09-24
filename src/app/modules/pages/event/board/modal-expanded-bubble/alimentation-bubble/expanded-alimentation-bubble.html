@@ -1,0 +1,36 @@
+<div class="modal-body">
+    <div class="expanded-bubble">
+        <div class="row justify-content-center">
+            <div class="addDrink drink" (click)="this.addDrinkEntry()">
+                <img src="assets/img/drink.png">
+                <img class="plusIcon" src="/assets/img/plus.png"/>
+            </div>
+            <div class="addFood food" (click)="this.addFoodEntry()">
+                <img src="/assets/img/food.png"/>
+                <img class="plusIcon" src="/assets/img/plus.png"/>
+            </div>
+        </div>
+        <food-entry-creation
+                [toggle]="this.toggleAddFoodEntry"
+                [bubbleId]="this.alimentationBubble.id"
+                [eventRef]="this.eventRef"
+                (updatedAlimentationBubble)="this.onBubbleUpdate($event)">
+        </food-entry-creation>
+        <drink-entry-creation
+                [toggle]="this.toggleAddDrinkEntry"
+                [bubbleId]="this.alimentationBubble.id"
+                [eventRef]="this.eventRef"
+                (updatedAlimentationBubble)="this.onBubbleUpdate($event)">
+        </drink-entry-creation>
+        <alimentation-entry
+                *ngFor="let entry of this.alimentationBubble.entries"
+                [alimentationEntry]="entry"
+                [bubbleId]="this.alimentationBubble.id"
+                [eventRef]="this.eventRef"
+                (updatedAlimentationBubble)="this.onBubbleUpdate($event)">
+        </alimentation-entry>
+    </div>
+</div>
+<div class="modal-footer">
+    created by Théo Joubert
+</div>
