@@ -7,9 +7,9 @@
 			<div class="col-xl-12 text-center"></div>
 			<div class="col-xl-12 row justify-content-center">
 				<div class="score-wrap">
-					<a href="javascript:void(0);"><h5 class="members-number" (click)="openGroupMembersDialog()">
+					<a class="cursor-pointer"><h5 class="members-number" (click)="openGroupMembersDialog()">
 						{{group.memberships.length}} member<span *ngIf="group.memberships.length>1">s</span></h5></a>
-					<a href="javascript:void(0);">
+					<a class="cursor-pointer">
 						<div class="add-group-member" (click)="openAddGroupMemberDialog()">
 							<div class="fa fa-user-plus"></div>
 						</div>
@@ -25,9 +25,9 @@
 							Admin settings
 						</button>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a href="javascript:void(0);" class="dropdown-item" (click)="openRightsDialog()">Members Rights</a>
-							<a href="javascript:void(0);" class="dropdown-item" (click)="openSettingsDialog()">Group settings</a>
-							<a href="javascript:void(0);" class="dropdown-item" (click)="openRequestsDialog()">Requests <span
+							<a class="dropdown-item cursor-pointer" (click)="openRightsDialog()">Members Rights</a>
+							<a class="dropdown-item cursor-pointer" (click)="openSettingsDialog()">Group settings</a>
+							<a class="dropdown-item cursor-pointer" (click)="openRequestsDialog()">Requests <span
 									class="badge badge-info">4</span></a>
 						</div>
 					</div>

@@ -22,19 +22,19 @@
 					<div class="bottom">
 						{{user.email}}
 						<div class="row justify-content-center">
-							<a class="btn btn-primary btn-twitter btn-sm" href="javascript:void(0);">
+							<a class="btn btn-primary btn-twitter btn-sm cursor-pointer">
 								<i class="fa fa-twitter"></i>
 								<i class="fa fa-times-circle"></i>
 							</a>
-							<a class="btn btn-danger btn-sm" rel="publisher" href="javascript:void(0);">
+							<a class="btn btn-danger btn-sm cursor-pointer" rel="publisher">
 								<i class="fa fa-google-plus"></i>
 								<i class="fa fa-times-circle"></i>
 							</a>
-							<a class="btn btn-primary btn-sm" rel="publisher" href="javascript:void(0);">
+							<a class="btn btn-primary btn-sm cursor-pointer" rel="publisher">
 								<i class="fa fa-facebook"></i>
 								<i class="fa fa-times-circle"></i>
 							</a>
-							<a class="btn btn-warning btn-sm" rel="publisher" href="javascript:void(0);">
+							<a class="btn btn-warning btn-sm cursor-pointer" rel="publisher">
 								<i class="fa fa-snapchat"></i>
 								<i class="fa fa-times-circle"></i>
 							</a>
@@ -44,7 +44,7 @@
 			</div>
 
 		</div>
-		<a href="javascript:void(0);" (click)="openSettingsDialog()"  class="text-black-50">
+		<a (click)="openSettingsDialog()"  class="text-black-50 cursor-pointer">
 			<h5 class="col-xl-12 text-center">
 				<i class="fa fa-cog"></i> Settings
 			</h5>
