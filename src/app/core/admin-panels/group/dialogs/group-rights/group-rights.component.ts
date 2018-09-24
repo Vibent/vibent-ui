@@ -3,7 +3,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Group } from '../../../../../shared/models/group';
-import { AdminPanelService } from '../../../../services/admin-panel.service';
+import { GroupAdminPanelService } from '../../../../services/group-admin-panel.service';
 
 @Component({
   selector: 'app-group-settings',
@@ -17,7 +17,7 @@ export class GroupRightsComponent implements OnInit {
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<GroupRightsComponent>,
               private router: Router,
-              private adminPanelService: AdminPanelService,
+              private adminPanelService: GroupAdminPanelService,
               @Inject(MAT_DIALOG_DATA) data) {
 
     this.group = data.group;

@@ -50,6 +50,7 @@ export class ProfileSettingsComponent implements OnInit {
   imageChangedEventToNull() {
     this.imageChangedEvent = null;
   }
+
   ngOnInit() {
     this.firstName = new FormControl(this.user.firstName, Validators.required);
     this.lastName = new FormControl(this.user.lastName, Validators.required);
@@ -73,7 +74,7 @@ export class ProfileSettingsComponent implements OnInit {
       firstName: this.form.value.firstName,
       lastName: this.form.value.lastName
     };
-    this.httpService.updateUser(user).subscribe((data) => console.log(data));
+    this.httpService.updateUser(user).subscribe(() => this.userManagementService.setMe());
     if (this.fileToUpload) {
       this.profileImageService.uploadProfileImage(this.fileToUpload, user).subscribe(() => this.userManagementService.setMe());
     }

@@ -3,7 +3,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Group } from '../../../../../shared/models/group';
-import { AdminPanelService } from '../../../../services/admin-panel.service';
+import { GroupAdminPanelService } from '../../../../services/group-admin-panel.service';
 import Swal from 'sweetalert2';
 import { HttpService } from '../../../../http/http.service';
 
@@ -20,7 +20,7 @@ export class GroupSettingsComponent implements OnInit {
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<GroupSettingsComponent>,
               private router: Router,
-              private adminPanelService: AdminPanelService,
+              private adminPanelService: GroupAdminPanelService,
               private httpService: HttpService,
               @Inject(MAT_DIALOG_DATA) data) {
 

@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Bubble } from './bubble.component';
 import { RouterModule } from '@angular/router';
-import { AdditionalEventInfoService } from '../../../../core/services/additional-event-info.service.';
+import { TravelBubblePreviewComponent } from './travel-bubble-preview.component';
 
 @NgModule({
   imports: [
@@ -10,10 +9,10 @@ import { AdditionalEventInfoService } from '../../../../core/services/additional
     RouterModule
   ],
   declarations: [
-    Bubble
+    TravelBubblePreviewComponent
   ],
   providers: [],
-  exports: [Bubble]
+  exports: [TravelBubblePreviewComponent]
 })
-export class BubbleModule {
+export class TravelBubblePreviewComponentModule {
 }

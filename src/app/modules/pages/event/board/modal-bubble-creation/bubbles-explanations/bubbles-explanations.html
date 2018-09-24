@@ -1,0 +1,7 @@
+<span class="fa fa-chevron-left position-absolute" style="cursor: pointer" (click)="backToList()"></span>
+<alimentation-explanation *ngIf="bubbleType === BubbleType.AlimentationBubble"
+                          [eventRef]="eventRef">
+</alimentation-explanation>
+<checkbox-explanation *ngIf="bubbleType === BubbleType.CheckboxBubble"
+                      [eventRef]="eventRef">
+</checkbox-explanation>

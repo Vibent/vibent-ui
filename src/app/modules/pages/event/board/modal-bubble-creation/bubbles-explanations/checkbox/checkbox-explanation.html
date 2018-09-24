@@ -1,0 +1,18 @@
+<div class="row justify-content-center">
+    <h2>Alimentation bubble</h2>
+</div>
+<div class="row justify-content-center">
+    <p>some illustrations and description</p>
+</div>
+<div class="row justify-content-center">
+    <p>Type the checkbox title:</p>
+</div>
+<form novalidate [formGroup]="this.form">
+    <div class="row justify-content-center">
+        <input type="text" class="form-control w-75" id="checkboxTitle" formControlName="checkboxTitle"/>
+    </div>
+</form>
+
+<div class="row justify-content-center">
+    <button (click)="createBubble()" class="btn btn-round btn-add-event">Create</button>
+</div>

@@ -1,9 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AuthenticationService } from '../../../core/services/authentication.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AdminPanelService } from '../../../core/services/admin-panel.service';
+import { GroupAdminPanelService } from '../../../core/services/group-admin-panel.service';
+import { ProfileImageService } from '../../../core/http/profile-image.service';
 import { User } from '../../../shared/models/user';
 import { HttpService } from '../../../core/http/http.service';
+import { EventAdminPanelService } from '../../../core/services/event-admin-panel.service';
 import { UserManagementService } from '../../../core/services/user-management.service';
 
 declare const $: any;
@@ -29,7 +31,9 @@ export class SidebarComponent implements OnInit {
 
   public menuItems: any[];
   @Input()
-  public adminPanelResult = {groupRef: null, isOpen: false};
+  public groupAdminPanelResult = {groupRef: null, isOpen: false};
+  @Input()
+  public eventAdminPanelResult = {eventRef: null, isOpen: false};
   public user: User;
 
   constructor(private router: Router,
@@ -37,14 +41,19 @@ export class SidebarComponent implements OnInit {
               private authenticationService: AuthenticationService,
               private userManagementService: UserManagementService,
               private httpService: HttpService,
-              private adminPanel: AdminPanelService) {
+              private groupAdminPanelService: GroupAdminPanelService,
+              private eventAdminPanelService: EventAdminPanelService
+  ) {
     this.user = this.userManagementService.getMe();
   }
 
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
-    this.adminPanel.change.subscribe(result => {
-      this.adminPanelResult = result;
+    this.groupAdminPanelService.change.subscribe(result => {
+      this.groupAdminPanelResult = result;
+    });
+    this.eventAdminPanelService.change.subscribe(result => {
+      this.eventAdminPanelResult = result;
     });
     this.userManagementService.change.subscribe(() => {
       this.user = this.userManagementService.getMe();
