@@ -18,7 +18,8 @@ export class CheckboxDataService {
   constructCheckboxDataModel(checkboxOption: CheckboxOption): CheckboxDataModel {
     this.checkboxOption = checkboxOption;
     return {
-      answerUsers: this.getAnswerUsers()
+      answerUsers: this.getAnswerUsers(),
+      disabled: this.getCheckIsDisabled()
     };
   }
 
@@ -26,6 +27,10 @@ export class CheckboxDataService {
     const users = [];
     this.checkboxOption.answers.map(answer => users.push(this.httpService.getUser(answer.userRef)));
     return users;
+  }
+
+  getCheckIsDisabled() {
+    return !!this.checkboxOption.answers.find(answer => answer.userRef !== this.user.ref);
   }
 
 }
