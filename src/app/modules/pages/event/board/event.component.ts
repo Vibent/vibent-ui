@@ -1,20 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {} from '@types/googlemaps';
 import { EventParticipant } from '../../../../shared/models/event-participant';
 import { Event } from '../../../../shared/models/event';
-import {
-  AlimentationBring,
-  AlimentationBubble,
-  AlimentationEntry,
-  AlimType
-} from '../../../../shared/models/bubbles/AlimentationBubble';
-import { FreeBubble } from '../../../../shared/models/bubbles/FreeBubble';
-import { PlanningBubble, PlanningEntry } from '../../../../shared/models/bubbles/PlanningBubble';
-import { SurveyAnswer, SurveyBubble, SurveyOption } from '../../../../shared/models/bubbles/SurveyBubble';
-import { TravelBubble, TravelProposal, TravelRequest } from '../../../../shared/models/bubbles/TravelBubble';
-import { BubbleType, IBubble } from '../../../../shared/models/bubbles/IBubble';
-import { CheckboxAnswer, CheckboxBubble, CheckboxOption } from '../../../../shared/models/bubbles/CheckboxBubble';
+import { IBubble } from '../../../../shared/models/bubbles/IBubble';
 import { EventAdminPanelService } from '../../../../core/services/event-admin-panel.service';
 import { NotificationsService, NotificationType } from '../../../../core/services/notifications.service';
 import { EventUpdateService } from '../../../../core/services/bubbles-services/event-update.service';
@@ -81,7 +69,6 @@ export class EventComponent implements OnInit, OnDestroy {
   }
 
   pushBubbles() {
-
     let bubbles = [];
     console.log(this.event);
     bubbles = bubbles.concat(this.event.alimentationBubbles, this.event.travelBubbles, this.event.checkboxBubbles, this.event.planningBubbles, this.event.surveyBubbles, this.event.freeBubbles);

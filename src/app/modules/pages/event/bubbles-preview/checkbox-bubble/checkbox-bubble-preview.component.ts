@@ -1,15 +1,18 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CheckboxBubble } from '../../../../../shared/models/bubbles/CheckboxBubble';
-
-declare const $: any;
 
 @Component({
   selector: 'app-checkbox-bubble-preview',
   templateUrl: './checkbox-bubble-preview.html'
 })
-export class CheckboxBubblePreviewComponent {
+export class CheckboxBubblePreviewComponent implements OnInit {
 
   @Input()
-  public checkboxBubble: CheckboxBubble;
+  checkboxBubble: CheckboxBubble;
+  answersCount: number;
+
+  ngOnInit(): void {
+   this.answersCount = this.checkboxBubble.options.filter(option => option.answers.length > 0).length;
+  }
 
 }
