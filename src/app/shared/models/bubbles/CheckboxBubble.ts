@@ -23,4 +23,5 @@ export class CheckboxAnswer {
 
 export class CheckboxDataModel {
   answerUsers: Observable<User>[];
+  disabled: boolean;
 }
