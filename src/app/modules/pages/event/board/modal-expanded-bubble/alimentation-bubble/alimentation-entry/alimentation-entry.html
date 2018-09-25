@@ -7,7 +7,7 @@
                         <div class="media-body text-left">
                             <h3 class="alim-title">{{this.alimentationEntry.name}}</h3>
                             <span *ngFor="let b of alimentationDataModel.bringingsByUsers"
-                                  class="badge badge-default badge-success">{{b.quantity}} by {{(b.user | async)?.firstName}}</span>
+                                  class="badge badge-default badge-success m-r-2">{{b.quantity}} by {{(b.user | async)?.firstName}}</span>
                         </div>
                         <div class="align-self-center">
                             <div class="float-right">
