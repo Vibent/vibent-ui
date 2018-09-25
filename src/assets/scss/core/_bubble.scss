@@ -9,6 +9,10 @@
   z-index: 2;
 }
 
+.card-body {
+  padding: 0;
+}
+
 .bubble {
   width: 95%;
   min-height: 300px;
@@ -528,12 +532,7 @@ button.close {
     margin-top: 25px;
   }
 
-
   .card-body {
-
-    .alim-title {
-
-    }
 
     .participant-alim{
       background: #4caf50;
