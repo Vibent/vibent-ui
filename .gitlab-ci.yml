@@ -1,6 +1,6 @@
 image: docker:latest
 services:
-  - docker:18.05.0-dind
+  - docker:18.06.0-dind
 
 variables:
   DOCKER_DRIVER: overlay
