@@ -7,6 +7,7 @@ import { User } from '../../../shared/models/user';
 import { ProfileImageService } from '../../../core/http/profile-image.service';
 import { HttpService } from '../../../core/http/http.service';
 import { UserManagementService } from '../../../core/services/user-management.service';
+import { LoaderSize } from '../../../shared/global/constants';
 
 @Component({
   selector: 'app-navbar',
@@ -15,12 +16,11 @@ import { UserManagementService } from '../../../core/services/user-management.se
 export class NavbarComponent implements OnInit {
   location: Location;
   mobile_menu_visible: any = 0;
+  loaderSize = LoaderSize.ultraSmall;
+  user: User;
   private listTitles: any[];
   private toggleButton: any;
   private sidebarVisible: boolean;
-
-  public userProfileImage: File = null;
-  public user: User;
 
   constructor(location: Location,
               private element: ElementRef,
