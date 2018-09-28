@@ -3,6 +3,9 @@
 		<div class="navbar-wrapper">
 			<a class="navbar-brand">{{getTitle()}}</a>
 		</div>
+		<loader [condition]="false"
+				[withLogo]="false"
+				[size]="loaderSize"></loader>
 		<button mat-raised-button class="navbar-toggler" type="button" (click)="sidebarToggle()">
 			<span class="sr-only">Toggle navigation</span>
 			<span class="navbar-toggler-icon icon-bar"></span>

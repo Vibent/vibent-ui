@@ -13,6 +13,7 @@ import { BubblePreviewControllerModule } from '../bubbles-preview/bubble-preview
 import { ExpandedBubbleControllerModule } from './modal-expanded-bubble/expanded-bubble-controller.module';
 import { ModalBubbleCreationComponentModule } from './modal-bubble-creation/modal-bubble-creation.module';
 import { EventUpdateService } from '../../../../core/services/bubbles-services/event-update.service';
+import { BlacknoteService } from '../../../../core/services/blacknote/blacknote.service';
 
 @NgModule({
   imports: [
@@ -30,7 +31,7 @@ import { EventUpdateService } from '../../../../core/services/bubbles-services/e
   declarations: [
     EventComponent,
   ],
-  providers: [EventUpdateService],
+  providers: [EventUpdateService, BlacknoteService],
 })
 export class EventModule {
 }

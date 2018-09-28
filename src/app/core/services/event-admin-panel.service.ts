@@ -1,15 +1,13 @@
 import { EventEmitter, Injectable, Output } from '@angular/core';
 import { HttpService } from '../http/http.service';
-import { Event } from '../../shared/models/event';
 
 @Injectable()
 export class EventAdminPanelService {
 
   isOpen = false;
   @Output() change: EventEmitter<any> = new EventEmitter();
-  @Output() eventUpdated: EventEmitter<Event> = new EventEmitter();
 
-  constructor(private httpService: HttpService) {
+  constructor() {
   }
 
   toggleEventPanel(response: any) {
@@ -17,6 +15,4 @@ export class EventAdminPanelService {
     this.change.emit(response);
   }
 
-  updateEvent(event: Event) {
-  }
 }
