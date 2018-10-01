@@ -54,3 +54,9 @@ import 'zone.js/dist/zone'; // Included with Angular CLI.
  * Needed for: All but Chrome, Firefox, Edge, IE11 and Safari 10
  */
 // import 'intl';  // Run `npm install --save intl`.
+
+/***************************************************************************************************
+ * Related to https://github.com/socketio/socket.io-client/issues/1166
+ */
+// Add global to window, assigning the value of window itself.
+(window as any).global = window;
