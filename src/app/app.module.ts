@@ -41,6 +41,7 @@ import { EventAdminPanelService } from './core/services/event-admin-panel.servic
 import { NotificationsService } from './core/services/notifications.service';
 import { UserManagementService } from './core/services/user-management.service';
 import { LoaderModule } from './core/loader/loader.module';
+import { LoaderService } from './core/services/loader/loader.service';
 
 @NgModule({
   imports: [
@@ -80,6 +81,7 @@ import { LoaderModule } from './core/loader/loader.module';
   ],
   providers: [
     CookieService,
+    LoaderService,
     GroupAdminPanelService,
     EventAdminPanelService,
     NotificationsService,

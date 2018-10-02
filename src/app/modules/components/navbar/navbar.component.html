@@ -3,7 +3,8 @@
 		<div class="navbar-wrapper">
 			<a class="navbar-brand">{{getTitle()}}</a>
 		</div>
-		<loader [condition]="false"
+		<loader [condition]="loaderService.displayLoader()"
+				[eventUpdated] = "loaderService.eventUpdated"
 				[withLogo]="false"
 				[size]="loaderSize"></loader>
 		<button mat-raised-button class="navbar-toggler" type="button" (click)="sidebarToggle()">

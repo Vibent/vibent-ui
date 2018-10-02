@@ -1,6 +1,19 @@
 body, html {
   height: 100%;
 }
+%spinner{
+  width: 200px;
+  animation: rotate 2s linear infinite;
+  transform-origin: center center;
+}
+@mixin path() {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  animation: dash 1.5s ease-in-out infinite;
+  stroke-linecap: round;
+  stroke: #ddd;
+}
+
 .vibent-loading {
   position: relative;
   display: flex;
@@ -8,24 +21,25 @@ body, html {
   align-items: center;
   justify-content: center;
   height: 100%;
-}
-.vibent-loading .spinner {
-  width: 200px;
-  animation: rotate 2s linear infinite;
-  transform-origin: center center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-.vibent-loading .spinner .path {
-  stroke-dasharray: 1, 200;
-  stroke-dashoffset: 0;
-  animation: dash 1.5s ease-in-out infinite;
-  stroke-linecap: round;
-  stroke: #ddd;
+
+  .spinner-absolute {
+    @extend %spinner;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    .path {
+      @include path();
+    }
+  }
+  .spinner {
+    @extend %spinner;
+    .path {
+      @include path();
+    }
+  }
 }
 @keyframes rotate {
   100% {
