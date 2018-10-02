@@ -3,6 +3,7 @@ import * as io from 'socket.io-client';
 import { Event } from '../../../shared/models/event';
 import { HttpService } from '../../http/http.service';
 import { AppSettings } from '../../../shared/global/constants';
+import { LoaderService } from '../loader/loader.service';
 
 @Injectable()
 export class BlacknoteService {
@@ -13,7 +14,7 @@ export class BlacknoteService {
   NEW_EVENT_LISTENER = 'eventListener';
   EVENT_UPDATE_EMIT = 'eventUpdate';
 
-  constructor(private httpService: HttpService) {
+  constructor(private httpService: HttpService, private loaderService: LoaderService) {
   }
 
   updateEvent(eventRef: string) {
@@ -35,6 +36,7 @@ export class BlacknoteService {
     this.socket.emit(this.NEW_EVENT_LISTENER, eventRef);
 
     this.socket.on(this.EVENT_UPDATE_EMIT, (eventRef) => {
+      this.loaderService.displayForEventUpdate();
       this.updateEvent(eventRef);
     });
   }

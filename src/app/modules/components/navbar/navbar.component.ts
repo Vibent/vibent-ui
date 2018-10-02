@@ -8,6 +8,7 @@ import { ProfileImageService } from '../../../core/http/profile-image.service';
 import { HttpService } from '../../../core/http/http.service';
 import { UserManagementService } from '../../../core/services/user-management.service';
 import { LoaderSize } from '../../../shared/global/constants';
+import { LoaderService } from '../../../core/services/loader/loader.service';
 
 @Component({
   selector: 'app-navbar',
@@ -23,6 +24,7 @@ export class NavbarComponent implements OnInit {
   private sidebarVisible: boolean;
 
   constructor(location: Location,
+              public loaderService: LoaderService,
               private element: ElementRef,
               private router: Router,
               private route: ActivatedRoute,
@@ -139,7 +141,7 @@ export class NavbarComponent implements OnInit {
       return (e.path === titlee);
     });
     
-    return t ? t.title : 'Vibent';
+    return t ? t.title : 'Event board';
   }
   
   public logout(): void {

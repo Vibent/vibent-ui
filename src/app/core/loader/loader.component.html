@@ -1,6 +1,8 @@
-<div *ngIf="condition" class="vibent-loading">
-	<div *ngIf="withLogo" class="logo"></div>
-	<svg [style.width]="size" class="spinner" viewBox="25 25 50 50">
-		<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-	</svg>
+<div *ngIf="condition || eventUpdated" [@fadeInOut] class="vibent-loading">
+    <div *ngIf="withLogo" class="logo"></div>
+    <svg [style.width]="size" class="spinner" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+    </svg>
+</div>
+<div *ngIf="eventUpdated" [@fadeInOut] class="small text-gray">updating
 </div>
