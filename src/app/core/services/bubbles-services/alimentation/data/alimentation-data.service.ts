@@ -6,6 +6,7 @@ import {
 import { UserManagementService } from '../../../user-management.service';
 import { User } from '../../../../../shared/models/user';
 import { HttpService } from '../../../../http/http.service';
+import 'rxjs/add/observable/of';
 
 @Injectable()
 export class AlimentationDataService {
@@ -21,14 +22,12 @@ export class AlimentationDataService {
     this.user = this.userManagementService.getMe();
   }
 
-  constructAlimentationDataModel(alimentationEntry: AlimentationEntry): AlimentationDataModel {
+  constructAlimentationDataModel(alimentationDataModel: AlimentationDataModel, alimentationEntry: AlimentationEntry) {
     this.alimentationEntry = alimentationEntry;
-    return {
-      ratio: this.getRatio(),
-      bringingsByUsers: this.getBringsByUser(),
-      progressWidth: this.getBarWidth(),
-      deleteBringButtonClass: this.getClassForDeleteBring()
-    };
+    alimentationDataModel.progressWidth = this.getBarWidth();
+    alimentationDataModel.deleteBringButtonClass = this.getClassForDeleteBring();
+    alimentationDataModel.ratio = this.getRatio();
+    this.updateBringsByUser(alimentationDataModel, alimentationEntry);
   }
 
   private getRatio(): string {
@@ -40,9 +39,44 @@ export class AlimentationDataService {
     return Math.floor(this.alimentationEntry.currentBringing / this.alimentationEntry.totalRequested * 100) + '%';
   }
 
+  updateBringsByUser(alimentationDataModel: AlimentationDataModel, alimentationEntry: AlimentationEntry) {
+    if (!alimentationDataModel.bringingsByUsers) {
+      alimentationDataModel.bringingsByUsers = this.getBringsByUser();
+    }
+    else {
+      this.mergeArrays(alimentationDataModel.bringingsByUsers, this.getBringsByUser());
+    }
+  }
+
+  mergeArrays(old: BringsByUser[], updated: BringsByUser[]) {
+    for (const updatedBring of updated) {
+      let bringIsOldBrings = false;
+      for (const oldBring of old) {
+        if (updatedBring.id === oldBring.id) {
+          // we do not care about user profile changes
+          if (updatedBring.quantity !== oldBring.quantity) {
+            oldBring.quantity = updatedBring.quantity;
+          }
+          bringIsOldBrings = true;
+        }
+      }
+      if (!bringIsOldBrings) {
+        old.push(updatedBring);
+      }
+    }
+
+    for (const oldBring of old) {
+      const indexOldBrings = updated.find(bring => bring.id === oldBring.id);
+      if (!indexOldBrings) {
+        old.splice(old.findIndex(bring => bring.id === oldBring.id), 1);
+      }
+    }
+  }
+
   private getBringsByUser(): BringsByUser[] {
     const bringsByUsers: BringsByUser[] = [];
     this.alimentationEntry.brings.map(bring => bringsByUsers.push({
+      id: bring.id,
       user: this.httpService.getUser(bring.userRef),
       quantity: bring.quantity
     }));

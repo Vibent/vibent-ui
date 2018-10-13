@@ -9,11 +9,13 @@ import { ExpandedCheckboxBubbleComponentModule } from './checkbox-bubble/expande
 import { ExpandedPlanningBubbleComponentModule } from './planning-bubble/expanded-planning-bubble.module';
 import { ExpandedSurveyBubbleComponentModule } from './survey-bubble/expanded-survey-bubble.module';
 import { ExpandedBubbleTitleService } from '../../../../../core/services/expanded-bubble-title.service';
+import { LoaderModule } from '../../../../../core/loader/loader.module';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
+    LoaderModule,
     ExpandedTravelBubbleComponentModule,
     ExpandedAlimentationBubbleComponentModule,
     ExpandedFreeBubbleComponentModule,

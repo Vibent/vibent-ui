@@ -16,12 +16,28 @@ import {
 } from '../../../../../../../shared/models/bubbles/CheckboxBubble';
 import { CheckboxDataService } from '../../../../../../../core/services/bubbles-services/checkbox/data/checkbox-data.service';
 import { CheckboxHttpService } from '../../../../../../../core/services/bubbles-services/checkbox/http/checkbox-http.service';
-
-declare const $: any;
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: '[checkbox-option]',
   templateUrl: './checkbox-option.html',
+  animations: [
+    trigger('fadeInOut', [
+
+      // the "in" style determines the "resting" state of the element when it is visible.
+      state('in', style({opacity: 1})),
+
+      // fade in when created. this could also be written as transition('void => *')
+      transition(':enter', [
+        style({opacity: 0}),
+        animate(600)
+      ]),
+
+      // fade out when destroyed. this could also be written as transition('void => *')
+      transition(':leave',
+        animate(600, style({opacity: 0})))
+    ])
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CheckboxOptionComponent implements OnInit {

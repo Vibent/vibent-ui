@@ -4,11 +4,17 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitle">
                     {{this.expandedBubbleTitleService.getTitleFromBubbleType(this.bubble?.type)}} bubble</h5>
+                <loader [mainCondition]="false"
+                        [eventUpdated]="false"
+                        [expandedBubble]="loaderService.eventUpdated"
+                        [withLogo]="false"
+                        [mainSize]="null"></loader>
                 <button type="button" class="close" data-dismiss="modal">
                     <span>&times;</span>
                 </button>
             </div>
-            <app-expanded-travel-bubble *ngIf="this.bubble?.type === BubbleType.TravelBubble"
+            <app-expanded-travel-bubble
+                    *ngIf="this.bubble?.type === BubbleType.TravelBubble"
                     [travelBubble]="this.bubble"></app-expanded-travel-bubble>
 
             <app-expanded-alimentation-bubble
@@ -17,13 +23,18 @@
                     [eventRef]="this.eventRef">
             </app-expanded-alimentation-bubble>
 
-            <app-expanded-planning-bubble *ngIf="this.bubble?.type === BubbleType.PlanningBubble"
+            <app-expanded-planning-bubble
+                    *ngIf="this.bubble?.type === BubbleType.PlanningBubble"
                     [planningBubble]="this.bubble"></app-expanded-planning-bubble>
 
-            <app-expanded-survey-bubble *ngIf="this.bubble?.type === BubbleType.SurveyBubble"
-                    [surveyBubble]="this.bubble"></app-expanded-survey-bubble>
+            <app-expanded-survey-bubble
+                    *ngIf="this.bubble?.type === BubbleType.SurveyBubble"
+                    [surveyBubble]="this.bubble"
+                    [eventRef]="this.eventRef">
+            </app-expanded-survey-bubble>
 
-            <app-expanded-free-bubble *ngIf="this.bubble?.type === BubbleType.FreeBubble"
+            <app-expanded-free-bubble
+                    *ngIf="this.bubble?.type === BubbleType.FreeBubble"
                     [freeBubble]="this.bubble"></app-expanded-free-bubble>
 
             <app-expanded-checkbox-bubble

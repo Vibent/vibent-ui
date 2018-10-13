@@ -8,11 +8,17 @@
                             <form novalidate [formGroup]="this.form">
                                 <div class="foodName">
                                     <label for="foodName">Food name</label>
-                                    <input type="text" class="form-control" formControlName="name" id="foodName"/>
+                                    <input type="text"
+                                           class="form-control"
+                                           formControlName="name"
+                                           id="foodName"/>
                                 </div>
                                 <div class="foodQuantity">
                                     <label for="quantity">Quantity</label>
-                                    <input type="number" formControlName="quantity" min="1" class="form-control"
+                                    <input type="number"
+                                           formControlName="quantity"
+                                           min="1"
+                                           class="form-control"
                                            id="quantity"/>
                                 </div>
                             </form>
@@ -28,7 +34,8 @@
                     </div>
                     <div class="float-right m-2">
                         <button [disabled]="!this.quantity.value || !this.name.value"
-                                class="btn btn-primary btn-sm" (click)="this.addEntry()">
+                                class="btn btn-primary btn-sm"
+                                (click)="this.addEntry()">
                             Add
                         </button>
                     </div>

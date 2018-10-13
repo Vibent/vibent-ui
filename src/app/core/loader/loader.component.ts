@@ -34,10 +34,11 @@ import { animate, style, transition, trigger } from '@angular/animations';
 
 export class LoaderComponent {
 
-  @Input() size: any;
-  @Input() condition: boolean;
+  @Input() mainSize: any;
+  @Input() mainCondition: boolean;
   @Input() eventUpdated: boolean;
   @Input() withLogo: boolean;
+  @Input() expandedBubble: boolean;
 
   constructor() {
 

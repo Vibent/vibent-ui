@@ -37,6 +37,7 @@ export class AlimentationDataModel {
 }
 
 export class BringsByUser {
+  id: number;
   user ?: Observable<User>;
   quantity ?: number;
 }

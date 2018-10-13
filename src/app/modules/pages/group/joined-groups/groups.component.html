@@ -1,11 +1,19 @@
 <div class="main-content">
-	<div class="container-fluid">
-		<h3 class="col-xl-12 text-center">You don't have a lot of friends, don't you?</h3>
-		<div class="row justify-content-center">
-			<button mat-raised-button type="submit" class="btn btn-round btn-join-group" (click)="openDialog()">Create a
-				group
-			</button>
-		</div>
-			<app-group-preview *ngFor="let group of groups" [group]=group></app-group-preview>
-	</div>
+    <div class="container-fluid">
+        <h3 class="col-xl-12 text-center">
+            You don't have a lot of friends, don't you?
+        </h3>
+        <div class="row justify-content-center">
+            <button mat-raised-button
+                    type="submit"
+                    class="btn btn-round btn-join-group"
+                    (click)="openDialog()">
+                Create a group
+            </button>
+        </div>
+        <app-group-preview
+                *ngFor="let group of groups"
+                [group]=group>
+        </app-group-preview>
+    </div>
 </div>

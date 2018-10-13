@@ -6,18 +6,18 @@
                     <div class="media d-flex">
                         <div class="media-body text-left">
                             <h3 class="alim-title">{{this.alimentationEntry.name}}</h3>
-                            <span *ngFor="let b of alimentationDataModel.bringingsByUsers"
-                                  class="badge badge-default badge-success m-r-2">{{b.quantity}} by {{(b.user | async)?.firstName}}</span>
+                            <ng-container *ngFor="let b of alimentationDataModel.bringingsByUsers">
+                                <span [@fadeInOut]
+                                      *ngIf="b.user | async as user"
+                                      class="badge badge-default badge-success m-r-2">
+                                    {{b.quantity}} by {{user.firstName}} {{user.lastName}}
+                                </span>
+                            </ng-container>
                         </div>
                         <div class="align-self-center">
-                            <div class="float-right">
+                            <div class="float-right text-center">
                                 <i *ngIf="alimentationEntry.currentBringing >= alimentationEntry.totalRequested"
-                                   class="fa fa-check" style="color: white;
-                                                        background-color: #4caf50;
-                                                        padding: 3px;
-                                                        border-radius: 50%;
-                                                        margin-top: 0px;
-                                                        margin: 6px;">
+                                   class="fa fa-check entry-checked">
                                 </i>
                                 <div class="food-quantity">{{this.alimentationDataModel.ratio}}
                                 </div>
@@ -36,7 +36,7 @@
                     <div class="float-left">
                         <div class="delete-alim" (click)="deleteEntry()">Delete</div>
                     </div>
-                    <div class="float-right">
+                    <div class="float-right text-center">
                         <img class="{{this.alimentationDataModel.deleteBringButtonClass}}" (click)="deleteBring()"
                              src="/assets/img/minus.png"/>
                         <img class="addAndDelete" (click)="addBring()" src="/assets/img/plus.png"/>

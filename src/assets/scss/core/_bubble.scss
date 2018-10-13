@@ -165,6 +165,7 @@
   color: white;
   margin-top: 100px
 }
+
 //BOOTSTRAP OVERRIDE
 
 .modal-body {
@@ -298,7 +299,6 @@ button.close {
   transition: all 0.3s ease-out;
   text-decoration: none;
 }
-
 
 .card-bubble:hover .overlay {
   transform: scale(4) translateZ(0);
@@ -534,7 +534,7 @@ button.close {
 
   .card-body {
 
-    .participant-alim{
+    .participant-alim {
       background: #4caf50;
       padding-left: 8px;
       padding-right: 8px;
@@ -549,6 +549,14 @@ button.close {
       font-size: 20px;
       color: #4caf50;
       font-weight: bolder;
+    }
+
+    .entry-checked {
+      color: white;
+      background-color: #4caf50;
+      padding: 3px;
+      border-radius: 50%;
+      margin: 6px;
     }
 
     .float-right {
@@ -715,12 +723,12 @@ button.close {
   .card {
     margin-top: 0;
 
-    .progress{
+    .progress {
       height: 1.5rem;
       width: 85%;
       margin-right: 5px;
 
-      .bg-light{
+      .bg-light {
         color: black;
         background-color: #00bcd46b !important;
       }

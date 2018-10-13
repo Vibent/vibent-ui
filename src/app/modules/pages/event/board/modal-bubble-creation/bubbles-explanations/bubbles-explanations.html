@@ -1,7 +1,13 @@
 <span class="fa fa-chevron-left position-absolute" style="cursor: pointer" (click)="backToList()"></span>
-<alimentation-explanation *ngIf="bubbleType === BubbleType.AlimentationBubble"
-                          [eventRef]="eventRef">
+<alimentation-explanation
+        *ngIf="bubbleType === BubbleType.AlimentationBubble"
+        [eventRef]="eventRef">
 </alimentation-explanation>
-<checkbox-explanation *ngIf="bubbleType === BubbleType.CheckboxBubble"
-                      [eventRef]="eventRef">
+<checkbox-explanation
+        *ngIf="bubbleType === BubbleType.CheckboxBubble"
+        [eventRef]="eventRef">
 </checkbox-explanation>
+<survey-explanation
+        *ngIf="bubbleType === BubbleType.SurveyBubble"
+        [eventRef]="eventRef">
+</survey-explanation>

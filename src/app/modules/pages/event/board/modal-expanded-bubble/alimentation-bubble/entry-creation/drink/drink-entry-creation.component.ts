@@ -51,8 +51,4 @@ export class DrinkEntryCreationComponent implements OnInit {
       this.closeCreationCard();
     });
   }
-
-  deleteEntry() {
-
-  }
 }
