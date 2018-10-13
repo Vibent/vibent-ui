@@ -5,6 +5,8 @@ import { ProfileSettingsComponent } from '../dialogs/profile-settings/profile-se
 import { User } from '../../../../shared/models/user';
 import { UserManagementService } from '../../../../core/services/user-management.service';
 
+declare const $: any;
+
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html'
@@ -22,6 +24,9 @@ export class ProfileComponent implements OnInit {
   ngOnInit() {
     this.userManagementService.change.subscribe(() => {
       this.user = this.userManagementService.getMe();
+    });
+    $(() => {
+      $('.tooltip-activation').tooltip();
     });
   }
 

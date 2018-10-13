@@ -1,53 +1,65 @@
 <div class="main-content-group">
-	<div class="container-fluid">
-		<div class="row justify-content-center">
-			<div class="col-xl-10">
-				<h2 class="group-title">{{group.name}}</h2>
-			</div>
-			<div class="col-xl-12 text-center"></div>
-			<div class="col-xl-12 row justify-content-center">
-				<div class="score-wrap">
-					<a class="cursor-pointer"><h5 class="members-number" (click)="openGroupMembersDialog()">
-						{{group.memberships.length}} member<span *ngIf="group.memberships.length>1">s</span></h5></a>
-					<a class="cursor-pointer">
-						<div class="add-group-member" (click)="openAddGroupMemberDialog()">
-							<div class="fa fa-user-plus"></div>
-						</div>
-					</a>
-				</div>
-			</div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-xl-10">
+                <h2 class="group-title">{{group.name}}</h2>
+            </div>
+            <div class="col-xl-12 text-center"></div>
+            <div class="col-xl-12 row justify-content-center">
+                <div class="score-wrap">
+                    <a class="cursor-pointer">
+                        <h5 class="members-number"
+                            (click)="openGroupMembersDialog()">
+                            {{group.memberships.length}} member
+                            <span *ngIf="group.memberships.length>1">s</span>
+                        </h5>
+                    </a>
+                    <a class="cursor-pointer">
+                        <div class="add-group-member"
+                             (click)="openAddGroupMemberDialog()">
+                            <div class="fa fa-user-plus"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
-			<div class="col-xl-12 row justify-content-center">
-				<ng-container *ngIf="isMobileMenu()">
-					<div class="nav-item dropdown">
-						<button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton"
-										data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Admin settings
-						</button>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item cursor-pointer" (click)="openRightsDialog()">Members Rights</a>
-							<a class="dropdown-item cursor-pointer" (click)="openSettingsDialog()">Group settings</a>
-							<a class="dropdown-item cursor-pointer" (click)="openRequestsDialog()">Requests <span
-									class="badge badge-info">4</span></a>
-						</div>
-					</div>
-				</ng-container>
-			</div>
-			<div class="col-xl-10">
-				<h5 class="group-description">{{group.description}}</h5>
-			</div>
-			<div class="col-xl-12 text-center">
-				<div class="btn btn-round btn-add-event-in-group" (click)="openEventCreationDialog()">Create an event
-				</div>
-			</div>
-		</div>
-	</div>
-	<ng-container *ngIf="events && events.length>0;else no_events">
-		<app-event-preview *ngFor="let event of events" [event]=event></app-event-preview>
-	</ng-container>
-	<ng-template #no_events>
-		<div class="col-xl-12 text-center m-t-50 text-white">
-			<h4>No events... bouhouhou :'(</h4>
-		</div>
-	</ng-template>
+            <div class="col-xl-12 row justify-content-center">
+                <ng-container *ngIf="isMobileMenu()">
+                    <div class="nav-item dropdown">
+                        <button class="btn btn-secondary btn-sm dropdown-toggle"
+                                type="button"
+                                id="dropdownMenuButton"
+                                data-toggle="dropdown">
+                            Admin settings
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item cursor-pointer" (click)="openRightsDialog()">Members Rights</a>
+                            <a class="dropdown-item cursor-pointer" (click)="openSettingsDialog()">Group settings</a>
+                            <a class="dropdown-item cursor-pointer" (click)="openRequestsDialog()">Requests
+                                <span class="badge badge-info">4</span>
+                            </a>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+            <div class="col-xl-10">
+                <h5 class="group-description">{{group.description}}</h5>
+            </div>
+            <div class="col-xl-12 text-center">
+                <div class="btn btn-round btn-add-event-in-group" (click)="openEventCreationDialog()">Create an event
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-container *ngIf="events && events.length>0;else no_events">
+        <app-event-preview
+                *ngFor="let event of events"
+                [event]=event>
+        </app-event-preview>
+    </ng-container>
+    <ng-template #no_events>
+        <div class="col-xl-12 text-center m-t-50 text-white">
+            <h4>No events... bouhouhou :'(</h4>
+        </div>
+    </ng-template>
 </div>

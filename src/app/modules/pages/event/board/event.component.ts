@@ -35,6 +35,7 @@ export class EventComponent implements OnInit, OnDestroy {
   }
 
   onBubbleSentForExpand(bubble: IBubble) {
+    console.log(bubble);
     this.bubbleToExpand = bubble;
   }
 
@@ -53,6 +54,7 @@ export class EventComponent implements OnInit, OnDestroy {
     this.blackServiceEventUpdateSubscribtion = this.blacknoteService.eventUpdated.subscribe(event => {
       this.event = event;
       this.pushBubbles();
+      this.updateExpandedBubble();
     });
 
     this.participants = [
@@ -82,6 +84,14 @@ export class EventComponent implements OnInit, OnDestroy {
     let bubbles = [];
     bubbles = bubbles.concat(this.event.alimentationBubbles, this.event.travelBubbles, this.event.checkboxBubbles, this.event.planningBubbles, this.event.surveyBubbles, this.event.freeBubbles);
     this.bubbles = bubbles;
+  }
+
+  updateExpandedBubble() {
+    const b = this.bubbles.find(bubble => bubble.id === this.bubbleToExpand.id);
+    if (b) {
+      console.log(b);
+      this.bubbleToExpand = b;
+    }
   }
 
 }

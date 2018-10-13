@@ -26,5 +26,14 @@ export class BubblesCreationsSwalAlerts {
     });
   }
 
+  alertSurveyBubbleCreated() {
+    Swal({
+      type: 'success',
+      title: Messages.BUBBLE_CREATED,
+      text: Messages.SURVEY_BUBBLE_CREATED,
+      showConfirmButton: true,
+    });
+  }
+
 
 }

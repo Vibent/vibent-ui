@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CheckboxBubble, CheckboxOption } from '../../../../../../shared/models/bubbles/CheckboxBubble';
 
-declare const $: any;
-
 @Component({
   selector: 'app-expanded-checkbox-bubble',
   templateUrl: './expanded-checkbox-bubble.html'

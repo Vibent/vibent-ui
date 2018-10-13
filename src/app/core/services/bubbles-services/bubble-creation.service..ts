@@ -29,8 +29,8 @@ export class BubbleCreationService {
     return this.http.post(this.API_URL + '/bubble/checkbox', body, httpOptions);
   }
 
-  createSurveyBubble(eventRef: string) {
-    const body = JSON.stringify({eventRef: eventRef});
+  createSurveyBubble(eventRef: string, title: string) {
+    const body = JSON.stringify({eventRef: eventRef, title: title});
     return this.http.post(this.API_URL + '/bubble/survey', body, httpOptions);
   }
 

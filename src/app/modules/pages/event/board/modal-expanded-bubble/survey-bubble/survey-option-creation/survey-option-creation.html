@@ -1,0 +1,6 @@
+<li *ngIf="toggle" class="list-group-item d-flex align-items-center justify-content-center">
+    <form novalidate class="w-100" [formGroup]="this.form">
+        <input type="text" formControlName="content" class="form-control col-10"/>
+    </form>
+    <button class="ml-auto btn btn-outline-primary btn-sm" (click)="addOption()">Add</button>
+</li>

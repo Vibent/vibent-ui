@@ -1,4 +1,5 @@
 @media all and (max-width: 991px) {
+
   [class*="navbar-expand-"] > .container,
   [class*="navbar-expand-"] > .container-fluid {
     padding-left: 15px;
@@ -7,6 +8,14 @@
 
   .navbar .navbar-collapse .navbar-nav > li.button-container {
     padding: 15px;
+  }
+
+  .navbar.navbar-absolute{
+    height: 60px;
+  }
+
+  .main-panel .main-content {
+    margin-top: 50px;
   }
 
   .carousel .card .card-body {
@@ -223,6 +232,7 @@
 }
 
 @media screen and (max-width: 767px) {
+
   .presentation-page {
     .section-components {
       .components-macbook {
@@ -456,9 +466,6 @@
   .navbar-transparent {
     padding-top: 15px;
     background-color: rgba(0, 0, 0, 0.45);
-  }
-  body {
-    position: relative;
   }
 
   .nav-open {

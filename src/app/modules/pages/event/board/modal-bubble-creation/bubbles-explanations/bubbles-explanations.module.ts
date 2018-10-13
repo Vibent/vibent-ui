@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { AlimentationExplanationComponent } from './alimentation/alimentation-explanation.component';
 import { CheckboxExplanationComponent } from './checkbox/checkbox-explanation.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SurveyExplanationComponent } from './survey/survey-explanation.component';
 
 @NgModule({
   imports: [
@@ -13,8 +14,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [BubblesExplanationsComponent, AlimentationExplanationComponent, CheckboxExplanationComponent],
-  exports: [BubblesExplanationsComponent, AlimentationExplanationComponent, CheckboxExplanationComponent],
+  declarations: [
+    BubblesExplanationsComponent,
+    AlimentationExplanationComponent,
+    CheckboxExplanationComponent,
+    SurveyExplanationComponent],
+  exports: [
+    BubblesExplanationsComponent,
+    AlimentationExplanationComponent,
+    CheckboxExplanationComponent,
+    SurveyExplanationComponent],
 })
 export class ModalBubbleExplanationComponentModule {
 }

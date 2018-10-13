@@ -1,51 +1,70 @@
 <div class="logo">
-	<div class="logo-img">
-		<img src="/assets/img/vibent.svg"/>
-	</div>
+    <div class="logo-img">
+        <img src="/assets/img/vibent.svg"/>
+    </div>
 </div>
 <div class="sidebar-wrapper">
-	<div *ngIf="isMobileMenu()">
-		<ul class="nav navbar-nav nav-mobile-menu">
-			<li class="nav-item dropdown">
-				<a class="nav-link" href="http://example.com" id="navbarDropdownUser" data-toggle="dropdown"
-					 aria-haspopup="true" aria-expanded="false">
-					<ng-container *ngIf="user && user.imagePath">
-						<div class="user-profile"><img src="{{user.imagePath}}">
-							<p>{{user.firstName}} {{user.lastName}}</p>
-						</div>
-					</ng-container>
-				</a>
-				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-					<a class="dropdown-item" [routerLink]="['/me']">Profile</a>
-					<a class="dropdown-item" (click)="logout()">Logout</a>
-				</div>
-			</li>
-			<li class="nav-item dropdown">
-				<a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"
-					 aria-haspopup="true" aria-expanded="false">
-					<i class="material-icons">notifications</i>
-					<span class="notification">5</span>
-					<p>
-						<span class="d-lg-none d-md-block">Some Actions</span>
-					</p>
-				</a>
-				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-					<a class="dropdown-item" href="#">You have 5 events</a>
-					<a class="dropdown-item" href="#">You're now friend with Andrew</a>
-					<a class="dropdown-item" href="#">Another Notification</a>
-					<a class="dropdown-item" href="#">Another One</a>
-				</div>
-			</li>
-		</ul>
-	</div>
-	<ul class="nav">
-		<li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
-			<a class="nav-link" [routerLink]="[menuItem.path]">
-				<i class="material-icons">{{menuItem.icon}}</i>
-				<p>{{menuItem.title}}</p>
-			</a>
-		</li>
-	</ul>
-		<app-group-admin-panel *ngIf="groupAdminPanelResult.isOpen && !isMobileMenu()" [groupRef]="groupAdminPanelResult.groupRef"></app-group-admin-panel>
-		<app-event-admin-panel *ngIf="eventAdminPanelResult.isOpen && !isMobileMenu()" [eventRef]="eventAdminPanelResult.eventRef"></app-event-admin-panel>
+    <div *ngIf="isMobileMenu()">
+        <ul class="nav navbar-nav nav-mobile-menu">
+            <li class="nav-item dropdown">
+                <a class="nav-link"
+                   href="http://example.com"
+                   id="navbarDropdownUser"
+                   data-toggle="dropdown">
+                    <ng-container *ngIf="user && user.imagePath">
+                        <div class="user-profile"><img src="{{user.imagePath}}">
+                            <p>{{user.firstName}} {{user.lastName}}</p>
+                        </div>
+                    </ng-container>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item"
+                       [routerLink]="['/me']">
+                        Profile
+                    </a>
+                    <a class="dropdown-item"
+                       (click)="logout()">
+                        Logout
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link"
+                   href="http://example.com"
+                   id="navbarDropdownMenuLink"
+                   data-toggle="dropdown">
+                    <i class="material-icons">notifications</i>
+                    <span class="notification">5</span>
+                    <p>
+                        <span class="d-lg-none d-md-block">Some Actions</span>
+                    </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">You have 5 events</a>
+                    <a class="dropdown-item" href="#">You're now friend with Andrew</a>
+                    <a class="dropdown-item" href="#">Another Notification</a>
+                    <a class="dropdown-item" href="#">Another One</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <ul class="nav">
+        <li routerLinkActive="active"
+            *ngFor="let menuItem of menuItems"
+            class="{{menuItem.class}} nav-item">
+            <a class="nav-link"
+               [routerLink]="[menuItem.path]">
+                <i class="material-icons">{{menuItem.icon}}</i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+    </ul>
+    <app-group-admin-panel
+            *ngIf="groupAdminPanelResult.isOpen && !isMobileMenu()"
+            [groupRef]="groupAdminPanelResult.groupRef">
+    </app-group-admin-panel>
+    <app-event-admin-panel
+            *ngIf="eventAdminPanelResult.isOpen && !isMobileMenu()"
+            [eventRef]="eventAdminPanelResult.eventRef">
+    </app-event-admin-panel>
 </div>

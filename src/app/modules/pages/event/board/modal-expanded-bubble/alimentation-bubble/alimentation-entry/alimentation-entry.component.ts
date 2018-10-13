@@ -11,10 +11,30 @@ import { User } from '../../../../../../../shared/models/user';
 import { AlimentationDataService } from '../../../../../../../core/services/bubbles-services/alimentation/data/alimentation-data.service';
 import Swal from 'sweetalert2';
 import { UserManagementService } from '../../../../../../../core/services/user-management.service';
+import { animate, state, style, transition, trigger } from '@angular/animations';
+
+declare const $: any;
 
 @Component({
   selector: 'alimentation-entry',
   templateUrl: './alimentation-entry.html',
+  animations: [
+    trigger('fadeInOut', [
+
+      // the "in" style determines the "resting" state of the element when it is visible.
+      state('in', style({opacity: 1})),
+
+      // fade in when created. this could also be written as transition('void => *')
+      transition(':enter', [
+        style({opacity: 0}),
+        animate(600)
+      ]),
+
+      // fade out when destroyed. this could also be written as transition('void => *')
+      transition(':leave',
+        animate(600, style({opacity: 0})))
+    ])
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AlimentationEntryComponent implements OnInit {
@@ -30,7 +50,7 @@ export class AlimentationEntryComponent implements OnInit {
   @Output()
   updatedAlimentationBubble = new EventEmitter<AlimentationBubble>();
   user: User;
-  alimentationDataModel: AlimentationDataModel;
+  alimentationDataModel: AlimentationDataModel = new AlimentationDataModel();
 
   constructor(private alimentationHttpService: AlimentationHttpService,
               private alimentationDataService: AlimentationDataService,
@@ -40,12 +60,15 @@ export class AlimentationEntryComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.constructAlimentationDataModel();
     console.log(this.alimentationDataModel);
+    this.constructAlimentationDataModel();
+    $(() => {
+      $('.tooltip-activation').tooltip();
+    });
   }
 
   constructAlimentationDataModel() {
-    this.alimentationDataModel = this.alimentationDataService.constructAlimentationDataModel(this.alimentationEntry);
+    this.alimentationDataService.constructAlimentationDataModel(this.alimentationDataModel, this.alimentationEntry);
   }
 
   deleteEntry(): void {
@@ -54,6 +77,7 @@ export class AlimentationEntryComponent implements OnInit {
       text: "You won't be able to revert this!",
       type: 'warning',
       showCancelButton: true,
+      reverseButtons: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
       confirmButtonText: 'Yes, delete it!'
@@ -79,6 +103,7 @@ export class AlimentationEntryComponent implements OnInit {
         quantity: 1
       });
     }
+
     this.constructAlimentationDataModel();
     this.alimentationHttpService.changeBring({
       entryId: this.alimentationEntry.id,
