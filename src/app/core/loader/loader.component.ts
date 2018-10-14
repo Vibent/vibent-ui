@@ -27,8 +27,8 @@ import { animate, style, transition, trigger } from '@angular/animations';
           height: '0',
           opacity: '0'
         }))
-      ])
-    ])
+      ]),
+    ]),
   ]
 })
 
@@ -39,9 +39,9 @@ export class LoaderComponent {
   @Input() eventUpdated: boolean;
   @Input() withLogo: boolean;
   @Input() expandedBubble: boolean;
+  @Input() fade: boolean;
 
   constructor() {
-
   }
 
 }

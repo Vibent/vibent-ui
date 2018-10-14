@@ -9,37 +9,10 @@
             </div>
         </div>
 
-        <div class="row justify-content-center">
-            <div class="col-xl-10 text-center">
-                <div class="btn-group event-participation"
-                     data-toggle="buttons">
-                    <label class="btn btn-primary active btn-sm"
-                            (click)="this.notificationService.notify('You are participating in this event', NotificationType.SUCCESS)">
-                        <input type="radio"
-                               name="options"
-                               value="red"
-                               autocomplete="off"
-                               class="event-participation-radios"> I'm in
-                    </label>
-                    <label class="btn btn-primary btn-sm"
-                            (click)="this.notificationService.notify('You do not know yet', NotificationType.INFO)">
-                        <input type="radio"
-                               name="options"
-                               value="orange"
-                               autocomplete="off"
-                               class="event-participation-radios"> Not sure
-                    </label>
-                    <label class="btn btn-primary btn-sm"
-                            (click)="this.notificationService.notify('You are not participating in this event', NotificationType.DANGER)">
-                        <input type="radio"
-                               name="options"
-                               value="yellow"
-                               autocomplete="off"
-                               class="event-participation-radios"> Nope
-                    </label>
-                </div>
-            </div>
-        </div>
+        <event-participants-choice
+                (userParticipationEmiter)="this.onParticipationUpdate($event)"
+                [eventRef]=event.ref>
+        </event-participants-choice>
 
         <div class="row justify-content-center">
             <div class="bubble">
@@ -78,7 +51,7 @@
         <div class="row justify-content-center">
             <div class="scrolling-wrapper-event">
                 <app-event-participants-preview
-                        *ngFor="let participant of participants"
+                        *ngFor="let participant of event.participationRefs"
                         [participant]=participant>
                 </app-event-participants-preview>
             </div>

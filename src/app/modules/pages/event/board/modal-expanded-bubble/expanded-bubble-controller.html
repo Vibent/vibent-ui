@@ -4,11 +4,12 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitle">
                     {{this.expandedBubbleTitleService.getTitleFromBubbleType(this.bubble?.type)}} bubble</h5>
-                <loader [mainCondition]="false"
-                        [eventUpdated]="false"
+                <loader [mainCondition]=false
+                        [eventUpdated]=false
+                        [fade]=true
                         [expandedBubble]="loaderService.eventUpdated"
-                        [withLogo]="false"
-                        [mainSize]="null"></loader>
+                        [withLogo]=false
+                        [mainSize]=null></loader>
                 <button type="button" class="close" data-dismiss="modal">
                     <span>&times;</span>
                 </button>

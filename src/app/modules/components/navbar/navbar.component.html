@@ -3,10 +3,11 @@
 		<div class="navbar-wrapper">
 			<a class="navbar-brand">{{getTitle()}}</a>
 		</div>
-		<loader [mainCondition]="loaderService.displayLoader()"
-                [eventUpdated] = "loaderService.eventUpdated"
-                [withLogo]="false"
-				[mainSize]="loaderSize"></loader>
+		<loader [mainCondition]=loaderService.displayLoader()
+                [eventUpdated] = loaderService.eventUpdated
+                [withLogo]=false
+				[fade]=true
+				[mainSize]=loaderSize></loader>
 		<button mat-raised-button
 				class="navbar-toggler"
 				type="button"

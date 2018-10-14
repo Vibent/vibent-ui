@@ -1,0 +1,20 @@
+<div *ngIf="user" class="participant-profile">
+    <div class="participant-avatar">
+        <loader [mainCondition]=!user?.imagePath
+                [fade]=false
+                [withLogo]=false
+                [mainSize]=loaderSize></loader>
+        <img *ngIf="user?.imagePath" class="img" src={{user?.imagePath}}/>
+    </div>
+    <div class="participant-user-body">
+        <div class="participant-user-name">{{user?.firstName}} {{user?.lastName}}</div>
+        <div class="participant-user-additional-{{this.getResponseCss(participant.answer)}}">
+            {{participant.answer}}
+        </div>
+    </div>
+</div>
+
+<div *ngIf="!user" class="participant-skeleton">
+    <div class="participant-avatar-skeleton"></div>
+    <div class="participant-name-skeleton"></div>
+</div>

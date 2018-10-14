@@ -1,3 +1,5 @@
+import { EventParticipant } from './event-participant';
+
 export interface Event {
 
   title: string;
@@ -7,7 +9,7 @@ export interface Event {
   startDate?: string;
   groupRef: string;
   // TODO type
-  participationRefs?: any[];
+  participationRefs?: EventParticipant[];
 
   /*** bubbles ***/
   alimentationBubbles?: any[];
