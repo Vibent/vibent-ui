@@ -10,35 +10,7 @@
   margin-top: 55px;
   text-align: center;
 
-  .participant-avatar-participate {
-    margin: -50px auto 0;
-    border-radius: 50%;
-    overflow: hidden;
-    padding: 0;
-    max-width: 100px;
-    max-height: 100px;
-    @include shadow-4dp();
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-
-  .participant-avatar-idk {
-    margin: -50px auto 0;
-    border-radius: 50%;
-    overflow: hidden;
-    padding: 0;
-    max-width: 100px;
-    max-height: 100px;
-    @include shadow-4dp();
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-
-  .participant-avatar-dontparticipate {
+  .participant-avatar {
     margin: -50px auto 0;
     border-radius: 50%;
     overflow: hidden;
@@ -56,34 +28,34 @@
     margin-top: 10px;
   }
 
-  .participant-user-additional-participate {
+  @mixin participant-user-additional() {
     color: white;
     margin-top: -8px;
     font-size: 11px;
     border-radius: 14px;
     display: inline-block;
     padding: 0px 12px;
+  }
+
+  .participant-user-additional-yes {
+    @include participant-user-additional();
     background-color: $vibent-green;
   }
 
-  .participant-user-additional-idk {
-    color: black;
-    margin-top: -8px;
-    font-size: 11px;
-    border-radius: 14px;
-    display: inline-block;
-    padding: 0px 12px;
-    background-color: white;
+  .participant-user-additional-no {
+    @include participant-user-additional();
+    background-color: $vibent-red;
   }
 
-  .participant-user-additional-dontparticipate {
-    color: white;
-    margin-top: -8px;
-    font-size: 11px;
-    border-radius: 14px;
-    display: inline-block;
-    padding: 0px 12px;
-    background-color: $vibent-red;
+  .participant-user-additional-maybe {
+    @include participant-user-additional();
+    background-color: white;
+    color: black;
+  }
+
+  .participant-user-additional-unanswered {
+    @include participant-user-additional();
+    background-color: black;
   }
 
   .participant-user-name {
@@ -95,6 +67,7 @@
 .scrolling-wrapper-event {
   overflow-y: hidden;
   white-space: nowrap;
+  height: 200px;
 
   .participant-profile {
     display: inline-block;
@@ -102,9 +75,5 @@
     margin-bottom: 15px
   }
 
-  margin-top: 100px;
-}
-
-.test {
-  background: #0d47a1;
+  margin-top: 50px;
 }

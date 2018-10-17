@@ -5,6 +5,7 @@ import { Event } from '../../shared/models/event';
 import { Observable } from 'rxjs/Observable';
 import { User } from '../../shared/models/user';
 import { AppSettings } from '../../shared/global/constants';
+import { EventParticipant } from '../../shared/models/event-participant';
 
 @Injectable()
 export class HttpService {
@@ -88,6 +89,15 @@ export class HttpService {
     return this.http.patch(this.API_URL + '/user/' + user.ref, body, this.getOptions());
   }
 
+  /*** Participation ***/
+  public getEventParticipations(eventRef: string) {
+    return this.http.get<EventParticipant[]>(this.API_URL + '/participation/event/' + eventRef, this.getOptions());
+  }
+
+  public patchEventParticipations(participation: EventParticipant) {
+    const body = JSON.stringify(participation);
+    return this.http.patch(this.API_URL + '/participation/' + participation.id, body, this.getOptions());
+  }
   /*** Auth ***/
 
   public loginEmail(loginRequest): Observable<any> {

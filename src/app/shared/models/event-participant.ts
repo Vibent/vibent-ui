@@ -1,8 +1,14 @@
 export class EventParticipant {
+  id?: number;
+  userRef?: string;
+  eventRef?: string;
+  isVisible?: boolean;
+  answer?: EventParticipantAnswer;
+}
 
-  constructor(public _participantName: string,
-              public _participantAvatar: string,
-              public _participantResponse: string) {
-  }
-
+export enum EventParticipantAnswer {
+  YES = 'YES',
+  NO = 'NO',
+  MAYBE = 'MAYBE',
+  UNANSWERED = 'UNANSWERED',
 }

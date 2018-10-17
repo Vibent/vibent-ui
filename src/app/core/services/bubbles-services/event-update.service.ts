@@ -18,4 +18,8 @@ export class EventUpdateService {
     });
   }
 
+  updateEventExclusive(eventRef: string) {
+    this.blacknoteService.sendEventUpdate(eventRef);
+  }
+
 }

@@ -10,12 +10,17 @@
     padding: 15px;
   }
 
-  .navbar.navbar-absolute{
+  .navbar.navbar-absolute {
     height: 60px;
   }
 
-  .main-panel .main-content {
-    margin-top: 50px;
+  .main-panel {
+    .main-content {
+      margin-top: 50px;
+    }
+    .main-content-group {
+      margin-top: 55px;
+    }
   }
 
   .carousel .card .card-body {
