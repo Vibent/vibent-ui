@@ -49,4 +49,4 @@ deploy:
     - master
   script:
     - apk add --update curl && rm -rf /var/cache/apk/*
-    - curl -X POST -d '{"token":"#DZQ#phEGzj3C5s","restart":"vibent-ui"}' admin.dev.vibent.com
+    - curl -X POST -d '{"token":"#DZQ#phEGzj3C5s","restart":"vibent-ui"}' https://admin.dev.vibent.com
