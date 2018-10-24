@@ -1,4 +1,10 @@
 import { EventParticipant } from './event-participant';
+import { AlimentationBubble } from './bubbles/AlimentationBubble';
+import { CheckboxBubble } from './bubbles/CheckboxBubble';
+import { FreeBubble } from './bubbles/FreeBubble';
+import { PlanningBubble } from './bubbles/PlanningBubble';
+import { SurveyBubble } from './bubbles/SurveyBubble';
+import { TravelBubble } from './bubbles/TravelBubble';
 
 export interface Event {
 
@@ -12,12 +18,12 @@ export interface Event {
   participationRefs?: EventParticipant[];
 
   /*** bubbles ***/
-  alimentationBubbles?: any[];
-  checkboxBubbles?: any[];
-  freeBubbles?: any[];
+  alimentationBubbles?: AlimentationBubble[];
+  checkboxBubbles?: CheckboxBubble[];
+  freeBubbles?: FreeBubble[];
   locationBubbles?: any[];
-  planningBubbles?: any[];
-  surveyBubbles?: any[];
-  travelBubbles?: any[];
+  planningBubbles?: PlanningBubble[];
+  surveyBubbles?: SurveyBubble[];
+  travelBubbles?: TravelBubble[];
 
 }
