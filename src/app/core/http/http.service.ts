@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Group } from '../../shared/models/group';
+import { Group, MailInvite } from '../../shared/models/group';
 import { Event } from '../../shared/models/event';
 import { Observable } from 'rxjs/Observable';
-import { User } from '../../shared/models/user';
+import { Email, PasswordReset, User } from '../../shared/models/user';
 import { AppSettings } from '../../shared/global/constants';
 import { EventParticipant } from '../../shared/models/event-participant';
 
@@ -53,6 +53,11 @@ export class HttpService {
   public validateInviteToken(content: any, token: string) {
     const body = JSON.stringify(content);
     return this.http.post(this.API_URL + '/group/validateInviteToken/' + token, body, this.getOptions());
+  }
+
+  public mailInvite(mailInvite: MailInvite) {
+    const body = JSON.stringify(mailInvite);
+    return this.http.post(this.API_URL + '/group/mailInvite', body, this.getOptions());
   }
 
   /*** Events ***/
@@ -110,6 +115,16 @@ export class HttpService {
 
   public register(registrationRequest): Observable<any> {
     return this.http.post(this.API_URL + '/auth/register', registrationRequest, this.getOptions());
+  }
+
+  public requestPasswordResetEmail(email: Email) {
+    const body = JSON.stringify(email);
+    return this.http.post(this.API_URL + '/auth/passwordReset', body, this.getOptions());
+  }
+
+  public validatePasswordReset(passwordReset: PasswordReset) {
+    const body = JSON.stringify(passwordReset);
+    return this.http.post(this.API_URL + '/auth/validatePasswordReset', body, this.getOptions());
   }
 
 }

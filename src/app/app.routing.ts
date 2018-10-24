@@ -12,7 +12,7 @@ import { AuthGuardService } from './core/guards/auth-guard.service';
 import { RegisterComponent } from './core/authentification/register/register.component';
 import { ProfileResolver } from './shared/resolvers/profile.resolver';
 import { GroupResolver } from './shared/resolvers/group.resolver';
-import { ForgotComponent } from './core/authentification/forgot/forgot.component';
+import { ForgotComponent } from './core/authentification/forgot/forgot-password/forgot.component';
 import { ProfileComponent } from './modules/pages/me/profile/profile.component';
 import { EventsComponent } from './modules/pages/event/attended-events/events.component';
 import { EventComponent } from './modules/pages/event/board/event.component';
@@ -21,6 +21,7 @@ import { GroupComponent } from './modules/pages/group/board/group.component';
 import { PublicGroupComponent } from './modules/pages/group/public-board/public-group.component';
 import { GroupInvitationComponent } from './modules/pages/group/group-invitation/group-invitation.component';
 import { UserRightsGuardService } from './core/guards/user-rights-guard.service';
+import { ResetPasswordComponent } from './core/authentification/forgot/reset-password/reset-password.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'forgot',
     component: ForgotComponent
+  },
+  {
+    path: 'passwordReset/:token',
+    component: ResetPasswordComponent
   },
   {
     path: '', component: MainComponent, pathMatch: 'prefix', canActivate: [AuthGuardService],  canActivateChild: [UserRightsGuardService],

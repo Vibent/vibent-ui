@@ -9,3 +9,12 @@ export interface User {
   membershipRequests?: any[];
   imagePath?: any;
 }
+
+export interface Email {
+  email: string;
+}
+
+export interface PasswordReset {
+  newPassword: string;
+  token: string;
+}
