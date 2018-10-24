@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Event } from '../../../../shared/models/event';
-import { IBubble } from '../../../../shared/models/bubbles/IBubble';
+import { BubbleType, IBubble } from '../../../../shared/models/bubbles/IBubble';
 import { EventAdminPanelService } from '../../../../core/services/event-admin-panel.service';
 import { EventUpdateService } from '../../../../core/services/bubbles-services/event-update.service';
 import { BlacknoteService } from '../../../../core/services/blacknote/blacknote.service';
@@ -67,9 +67,23 @@ export class EventComponent implements OnInit, OnDestroy {
   }
 
   pushBubbles() {
-    let bubbles = [];
-    bubbles = bubbles.concat(this.event.alimentationBubbles, this.event.travelBubbles, this.event.checkboxBubbles, this.event.planningBubbles, this.event.surveyBubbles, this.event.freeBubbles);
+    let bubbles: IBubble[] = [];
+    this.event.alimentationBubbles.forEach(bubble => bubble.type = BubbleType.AlimentationBubble);
+    this.event.travelBubbles.forEach(bubble => bubble.type = BubbleType.TravelBubble);
+    this.event.checkboxBubbles.forEach(bubble => bubble.type = BubbleType.CheckboxBubble);
+    this.event.planningBubbles.forEach(bubble => bubble.type = BubbleType.PlanningBubble);
+    this.event.surveyBubbles.forEach(bubble => bubble.type = BubbleType.SurveyBubble);
+    this.event.freeBubbles.forEach(bubble => bubble.type = BubbleType.FreeBubble);
+
+    bubbles = bubbles.concat(
+      this.event.alimentationBubbles,
+      this.event.travelBubbles,
+      this.event.checkboxBubbles,
+      this.event.planningBubbles,
+      this.event.surveyBubbles,
+      this.event.freeBubbles);
     this.bubbles = bubbles;
+    console.log(this.bubbles);
   }
 
   updateExpandedBubble() {
