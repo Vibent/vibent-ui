@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from '../../services/authentication.service';
+import { AuthenticationService } from '../../../services/authentication.service';
 import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { HttpService } from '../../../http/http.service';
+import Swal from "sweetalert2";
+import { Messages } from '../../../../shared/messages-codes/messages';
 
 @Component({
   selector: 'app-login',
@@ -17,6 +20,7 @@ export class ForgotComponent implements OnInit {
   currentPhone: string;
 
   constructor(private cookieService: CookieService,
+              private httpService: HttpService,
               private authenticationService: AuthenticationService,
               private router: Router) {
     if (this.cookieService.check('token')) {
@@ -29,7 +33,7 @@ export class ForgotComponent implements OnInit {
     this.createForm();
   }
 
-  public createFormControls(): void {
+  createFormControls(): void {
     this.email = new FormControl('', [
       Validators.required,
       Validators.pattern('^[\\w\\-\\+]+(\\.[\\w\\-]+)*@[\\w\\-]+(\\.[\\w\\-]+)*\\.[\\w\\-]{2,4}$')
@@ -40,30 +44,43 @@ export class ForgotComponent implements OnInit {
     ]);
   }
 
-  public createForm(): void {
+  createForm(): void {
     this.loginForm = new FormGroup({
       email: this.email,
       phone: this.phone,
     });
   }
 
-  public loginPage(): void {
+  loginPage(): void {
     this.router.navigate(['/login']);
   }
 
-  public getNumber(event): void  {
+  getNumber(event): void {
     this.currentPhone = event;
   }
 
-  public forgotByEmail(): void {
-   // TODO
+  // TODO translate error code to message
+  forgotByEmail(): void {
+    this.httpService.requestPasswordResetEmail({email: this.email.value}).subscribe(
+      () => {
+        this.loginPage();
+        Swal({
+          type: 'success',
+          title: Messages.PASSWORD_RESET_SENT,
+          showConfirmButton: true,
+        });
+      },
+      (e) => {
+        Swal({
+          type: 'error',
+          title: e.error.error.code,
+          showConfirmButton: true,
+        });
+      });
   }
 
-  public forgotByPhone(): void {
+  forgotByPhone(): void {
     // TODO
   }
 
-  public onFail(e): void {
-    // TODO
-  }
 }

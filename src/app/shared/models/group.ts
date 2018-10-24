@@ -14,3 +14,8 @@ export interface Group {
   imagePath?: string;
 
 }
+
+export interface MailInvite {
+  groupRef: string;
+  recipients: string[];
+}

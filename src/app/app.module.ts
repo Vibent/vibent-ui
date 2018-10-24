@@ -16,7 +16,7 @@ import { MainComponent } from './modules/components/main/main.component';
 import { RegisterModule } from './core/authentification/register/register.module';
 import { GroupAdminPanelService } from './core/services/group-admin-panel.service';
 import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
-import { ForgotModule } from './core/authentification/forgot/forgot.module';
+import { ForgotModule } from './core/authentification/forgot/forgot-password/forgot.module';
 import { GroupsModule } from './modules/pages/group/joined-groups/groups.module';
 import { EventsModule } from './modules/pages/event/attended-events/events.module';
 import { EventModule } from './modules/pages/event/board/event.module';
@@ -42,6 +42,7 @@ import { NotificationsService } from './core/services/notifications.service';
 import { UserManagementService } from './core/services/user-management.service';
 import { LoaderModule } from './core/loader/loader.module';
 import { LoaderService } from './core/services/loader/loader.service';
+import { ResetPasswordModule } from './core/authentification/forgot/reset-password/reset-password.module';
 
 @NgModule({
   imports: [
@@ -64,6 +65,7 @@ import { LoaderService } from './core/services/loader/loader.service';
     GroupInvitationModule,
     GroupModule,
     ForgotModule,
+    ResetPasswordModule,
     LoginModule,
     RegisterModule,
     ProfileModule,
