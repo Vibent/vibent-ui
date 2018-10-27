@@ -127,4 +127,8 @@ export class HttpService {
     return this.http.post(this.API_URL + '/auth/validatePasswordReset', body, this.getOptions());
   }
 
+  public confirmEmail(token: string) {
+    return this.http.post(this.API_URL + '/auth/confirmEmail/' + token, this.getOptions());
+}
+
 }
