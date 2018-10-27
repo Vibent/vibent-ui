@@ -9,7 +9,7 @@ import { LoginComponent } from './core/authentification/login/login.component';
 import { GroupEventsResolver } from './shared/resolvers/group-events.resolver';
 import { MainComponent } from './modules/components/main/main.component';
 import { AuthGuardService } from './core/guards/auth-guard.service';
-import { RegisterComponent } from './core/authentification/register/register.component';
+import { RegisterComponent } from './core/authentification/register/register/register.component';
 import { ProfileResolver } from './shared/resolvers/profile.resolver';
 import { GroupResolver } from './shared/resolvers/group.resolver';
 import { ForgotComponent } from './core/authentification/forgot/forgot-password/forgot.component';
@@ -22,6 +22,7 @@ import { PublicGroupComponent } from './modules/pages/group/public-board/public-
 import { GroupInvitationComponent } from './modules/pages/group/group-invitation/group-invitation.component';
 import { UserRightsGuardService } from './core/guards/user-rights-guard.service';
 import { ResetPasswordComponent } from './core/authentification/forgot/reset-password/reset-password.component';
+import { MailConfirmationComponent } from './core/authentification/register/mail-confirmation/mail-confirmation.component';
 
 const routes: Routes = [
   {
@@ -41,7 +42,15 @@ const routes: Routes = [
     component: ResetPasswordComponent
   },
   {
-    path: '', component: MainComponent, pathMatch: 'prefix', canActivate: [AuthGuardService],  canActivateChild: [UserRightsGuardService],
+    path: 'confirmEmail/:token',
+    component: MailConfirmationComponent
+  },
+  {
+    path: '',
+    component: MainComponent,
+    pathMatch: 'prefix',
+    canActivate: [AuthGuardService],
+    canActivateChild: [UserRightsGuardService],
     children: [
       {
         path: 'me',

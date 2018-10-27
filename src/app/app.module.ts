@@ -13,7 +13,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LoginModule } from './core/authentification/login/login.module';
 import { CookieService } from 'ngx-cookie-service';
 import { MainComponent } from './modules/components/main/main.component';
-import { RegisterModule } from './core/authentification/register/register.module';
+import { RegisterModule } from './core/authentification/register/register/register.module';
 import { GroupAdminPanelService } from './core/services/group-admin-panel.service';
 import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 import { ForgotModule } from './core/authentification/forgot/forgot-password/forgot.module';

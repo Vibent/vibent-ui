@@ -11,5 +11,7 @@ export class Messages {
   public static readonly BAD_EMAIL = 'Email incorrect.';
   public static readonly PASSWORD_RESET_SENT = 'You will receive an email to update your password.';
   public static readonly PASSWORD_RESET = 'Your password has been updated';
+  public static readonly EMAIL_CONFIRMED = 'Your email is verified.';
+  public static readonly EMAIL_UNCONFIRMED = 'An error occured during your email verification.';
 
 }
