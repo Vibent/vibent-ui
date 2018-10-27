@@ -20,7 +20,6 @@ import { GroupsComponent } from './modules/pages/group/joined-groups/groups.comp
 import { GroupComponent } from './modules/pages/group/board/group.component';
 import { PublicGroupComponent } from './modules/pages/group/public-board/public-group.component';
 import { GroupInvitationComponent } from './modules/pages/group/group-invitation/group-invitation.component';
-import { UserRightsGuardService } from './core/guards/user-rights-guard.service';
 import { ResetPasswordComponent } from './core/authentification/forgot/reset-password/reset-password.component';
 import { MailConfirmationComponent } from './core/authentification/register/mail-confirmation/mail-confirmation.component';
 
@@ -50,7 +49,6 @@ const routes: Routes = [
     component: MainComponent,
     pathMatch: 'prefix',
     canActivate: [AuthGuardService],
-    canActivateChild: [UserRightsGuardService],
     children: [
       {
         path: 'me',

@@ -6,7 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { GroupCreationModule } from '../dialogs/group-creation/group-creation.module';
 import { MatDialogModule } from '@angular/material/dialog';
 import { RouterModule } from '@angular/router';
-import {UserRightsGuardService} from '../../../../core/guards/user-rights-guard.service';
 
 @NgModule({
   imports: [
