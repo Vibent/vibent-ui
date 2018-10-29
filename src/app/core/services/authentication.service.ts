@@ -12,24 +12,24 @@ export class AuthenticationService {
               private router: Router) {
   }
 
-  emailLogin(loginRequest, onFail?: (e) => void): void {
+  emailLogin(loginRequest, returnUrl: string, onFail?: (e) => void): void {
     const _this = this;
     _this.httpService.loginEmail(loginRequest).toPromise()
       .then(function (response) {
         _this.cookieService.set('token', response.token);
-        _this.router.navigate(['/events']);
+        _this.router.navigateByUrl(returnUrl);
       })
       .catch(e => {
         onFail(e);
       });
   }
 
-  phoneLogin(loginRequest, onFail?: (e) => void): void {
+  phoneLogin(loginRequest, returnUrl: string, onFail?: (e) => void): void {
     const _this = this;
     _this.httpService.loginPhone(loginRequest).toPromise()
     .then(function (response) {
       _this.cookieService.set('token', response.token);
-      _this.router.navigate(['/events']);
+      _this.router.navigateByUrl(returnUrl);
     })
     .catch(e => {
       onFail(e);

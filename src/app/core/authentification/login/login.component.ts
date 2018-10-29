@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../../services/authentication.service';
 import { CookieService } from 'ngx-cookie-service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { Messages } from '../../../shared/messages-codes/messages';
@@ -22,7 +22,10 @@ export class LoginComponent implements OnInit {
   currentPhone: string;
   currentpasswordPhoneValidator: boolean;
 
+  returnUrl: string;
+
   constructor(private cookieService: CookieService,
+              private route: ActivatedRoute,
               private authenticationService: AuthenticationService,
               private router: Router) {
     if (this.cookieService.check('token')) {
@@ -33,6 +36,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.createFormControls();
     this.createForm();
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
   createFormControls() {
@@ -63,19 +67,26 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  public hasError(event): void  {
+  public hasError(event): void {
     this.currentpasswordPhoneValidator = event;
   }
-  public getNumber(event): void  {
+
+  public getNumber(event): void {
     this.currentPhone = event;
   }
 
   public loginEmail(): void {
-    this.authenticationService.emailLogin({email: this.email.value, password: this.passwordEmail.value}, this.onFail.bind(this));
+    this.authenticationService.emailLogin({
+      email: this.email.value,
+      password: this.passwordEmail.value
+    }, this.returnUrl, this.onFail.bind(this));
   }
 
   public loginPhone(): void {
-    this.authenticationService.phoneLogin({phone: this.currentPhone, password: this.passwordPhone.value}, this.onFail.bind(this));
+    this.authenticationService.phoneLogin({
+      phone: this.currentPhone,
+      password: this.passwordPhone.value
+    }, this.returnUrl, this.onFail.bind(this));
   }
 
   public onFail(e): void {
