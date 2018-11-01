@@ -6,17 +6,13 @@ import {
   OnInit,
   Output
 } from '@angular/core';
-import { EventUpdateService } from '../../../../../../../core/services/bubbles-services/event-update.service';
-import { User } from '../../../../../../../shared/models/user';
-import { UserManagementService } from '../../../../../../../core/services/user-management.service';
-import {
-  CheckboxBubble,
-  CheckboxDataModel,
-  CheckboxOption
-} from '../../../../../../../shared/models/bubbles/CheckboxBubble';
-import { CheckboxDataService } from '../../../../../../../core/services/bubbles-services/checkbox/data/checkbox-data.service';
-import { CheckboxHttpService } from '../../../../../../../core/services/bubbles-services/checkbox/http/checkbox-http.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { User } from '../../../../../../../../shared/models/user';
+import { CheckboxDataService } from '../../../../../../../../core/services/bubbles-services/checkbox/data/checkbox-data.service';
+import { CheckboxDataModel, CheckboxOption } from '../../../../../../../../shared/models/bubbles/CheckboxBubble';
+import { EventUpdateService } from '../../../../../../../../core/services/bubbles-services/event-update.service';
+import { UserManagementService } from '../../../../../../../../core/services/user-management.service';
+import { CheckboxHttpService } from '../../../../../../../../core/services/bubbles-services/checkbox/http/checkbox-http.service';
 
 @Component({
   selector: '[checkbox-option]',

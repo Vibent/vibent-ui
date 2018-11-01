@@ -47,6 +47,7 @@ export class GroupSettingsComponent implements OnInit {
       type: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
+      reverseButtons: true,
       cancelButtonColor: '#d33',
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {

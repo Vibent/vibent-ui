@@ -12,7 +12,8 @@ export class HttpService {
 
   private API_URL = AppSettings.API_ENDPOINT;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   public getOptions(): object {
     return {
@@ -103,6 +104,7 @@ export class HttpService {
     const body = JSON.stringify(participation);
     return this.http.patch(this.API_URL + '/participation/' + participation.id, body, this.getOptions());
   }
+
   /*** Auth ***/
 
   public loginEmail(loginRequest): Observable<any> {
@@ -129,6 +131,6 @@ export class HttpService {
 
   public confirmEmail(token: string) {
     return this.http.post(this.API_URL + '/auth/confirmEmail/' + token, this.getOptions());
-}
+  }
 
 }

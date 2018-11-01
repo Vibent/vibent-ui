@@ -8,33 +8,22 @@ declare const $: any;
   templateUrl: './expanded-alimentation-bubble.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ExpandedAlimentationBubbleComponent implements OnInit {
-
+export class ExpandedAlimentationBubbleComponent {
   @Input()
   alimentationBubble: AlimentationBubble;
   @Input()
   eventRef: string;
-  toggleAddFoodEntry = false;
-  toggleAddDrinkEntry = false;
+  contentDisplayed = true;
 
   constructor() {
   }
 
-  ngOnInit() {
+  openBubbleSettings() {
+    this.contentDisplayed = false;
   }
 
-  addFoodEntry() {
-    this.toggleAddFoodEntry = !this.toggleAddFoodEntry;
-    this.toggleAddDrinkEntry = false;
-  }
-
-  addDrinkEntry() {
-    this.toggleAddDrinkEntry = !this.toggleAddDrinkEntry;
-    this.toggleAddFoodEntry = false;
-  }
-
-  onBubbleUpdate(updatedBubble: AlimentationBubble) {
-    this.alimentationBubble = updatedBubble;
+  onBackToContentSent() {
+    this.contentDisplayed = true;
   }
 
 }

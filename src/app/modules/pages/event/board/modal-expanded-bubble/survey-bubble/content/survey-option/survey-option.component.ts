@@ -8,13 +8,13 @@ import {
   Output,
   SimpleChanges
 } from '@angular/core';
-import { EventUpdateService } from '../../../../../../../core/services/bubbles-services/event-update.service';
-import { User } from '../../../../../../../shared/models/user';
-import { UserManagementService } from '../../../../../../../core/services/user-management.service';
+import { EventUpdateService } from '../../../../../../../../core/services/bubbles-services/event-update.service';
+import { User } from '../../../../../../../../shared/models/user';
+import { UserManagementService } from '../../../../../../../../core/services/user-management.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { SurveyDataModel, SurveyOption } from '../../../../../../../shared/models/bubbles/SurveyBubble';
-import { SurveyDataService } from '../../../../../../../core/services/bubbles-services/survey/data/survey-data.service';
-import { SurveyHttpService } from '../../../../../../../core/services/bubbles-services/survey/http/survey-http.service';
+import { SurveyDataModel, SurveyOption } from '../../../../../../../../shared/models/bubbles/SurveyBubble';
+import { SurveyDataService } from '../../../../../../../../core/services/bubbles-services/survey/data/survey-data.service';
+import { SurveyHttpService } from '../../../../../../../../core/services/bubbles-services/survey/http/survey-http.service';
 
 declare const $: any;
 
@@ -60,11 +60,9 @@ export class SurveyOptionComponent implements OnInit, OnChanges, OnDestroy {
               private eventUpdateService: EventUpdateService,
               private userManagementService: UserManagementService) {
     this.user = this.userManagementService.getMe();
-    console.log('constructor');
   }
 
   ngOnInit(): void {
-    console.log('init');
     $('body').on('click', (e) => {
       if ($(e.target).data('toggle') !== 'popover'
         && $(e.target).parents('.popover.in').length === 0) {
@@ -74,9 +72,6 @@ export class SurveyOptionComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('change');
-    console.log(changes);
-    console.log(this.surveyOption);
     this.constructAlimentationDataModel();
   }
 
@@ -103,7 +98,6 @@ export class SurveyOptionComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   constructAlimentationDataModel() {
-    console.log('construct');
     this.surveyDataService.constructSurveyDataModel(this.surveyDataModel, this.surveyOption, this.answerCount);
     this.surveyDataModel.votersNames.then((value) => {
       $(() => {
@@ -116,7 +110,6 @@ export class SurveyOptionComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    console.log('destroy');
   }
 
 }

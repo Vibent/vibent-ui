@@ -16,7 +16,8 @@
             </div>
             <app-expanded-travel-bubble
                     *ngIf="this.bubble?.type === BubbleType.TravelBubble"
-                    [travelBubble]="this.bubble"></app-expanded-travel-bubble>
+                    [travelBubble]="this.bubble">
+            </app-expanded-travel-bubble>
 
             <app-expanded-alimentation-bubble
                     *ngIf="this.bubble?.type === BubbleType.AlimentationBubble"
@@ -26,7 +27,8 @@
 
             <app-expanded-planning-bubble
                     *ngIf="this.bubble?.type === BubbleType.PlanningBubble"
-                    [planningBubble]="this.bubble"></app-expanded-planning-bubble>
+                    [planningBubble]="this.bubble">
+            </app-expanded-planning-bubble>
 
             <app-expanded-survey-bubble
                     *ngIf="this.bubble?.type === BubbleType.SurveyBubble"
@@ -36,7 +38,8 @@
 
             <app-expanded-free-bubble
                     *ngIf="this.bubble?.type === BubbleType.FreeBubble"
-                    [freeBubble]="this.bubble"></app-expanded-free-bubble>
+                    [freeBubble]="this.bubble">
+            </app-expanded-free-bubble>
 
             <app-expanded-checkbox-bubble
                     *ngIf="this.bubble?.type === BubbleType.CheckboxBubble"

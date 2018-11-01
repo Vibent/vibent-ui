@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SurveyBubble } from '../../../../../../shared/models/bubbles/SurveyBubble';
 
 declare const $: any;
@@ -7,31 +7,22 @@ declare const $: any;
   selector: 'app-expanded-survey-bubble',
   templateUrl: './expanded-survey-bubble.html'
 })
-export class ExpandedSurveyBubbleComponent implements OnInit {
+export class ExpandedSurveyBubbleComponent {
 
   @Input()
   surveyBubble: SurveyBubble;
   @Input()
   eventRef: string;
-  toggleOptionCreation = false;
+  contentDisplayed = true;
 
-  ngOnInit() {
-    console.log('init');
+  constructor() {
   }
 
-  onSurveyOptionUpdate(answerCount: number) {
-    console.log('onSurveyUpdate');
-    this.surveyBubble.answerCount = answerCount;
-    console.log(this.surveyBubble.answerCount);
+  openBubbleSettings() {
+    this.contentDisplayed = false;
   }
 
-  addOptionCard() {
-    this.toggleOptionCreation = !this.toggleOptionCreation;
+  onBackToContentSent() {
+    this.contentDisplayed = true;
   }
-
-  onBubbleUpdate(updatedBubble: SurveyBubble) {
-    console.log('onBubbleUpdate');
-    this.surveyBubble = updatedBubble;
-  }
-
 }
