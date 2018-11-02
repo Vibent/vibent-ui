@@ -1,37 +1,26 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { CheckboxBubble, CheckboxOption } from '../../../../../../shared/models/bubbles/CheckboxBubble';
+import { Component, Input } from '@angular/core';
+import { CheckboxBubble } from '../../../../../../shared/models/bubbles/CheckboxBubble';
 
 @Component({
   selector: 'app-expanded-checkbox-bubble',
   templateUrl: './expanded-checkbox-bubble.html'
 })
-export class ExpandedCheckboxBubbleComponent implements OnInit {
+export class ExpandedCheckboxBubbleComponent {
 
   @Input()
   checkboxBubble: CheckboxBubble;
   @Input()
   eventRef: string;
-  toggleOptionCreation = false;
-  ratio: string;
+  contentDisplayed = true;
 
-  ngOnInit() {
-    this.getRatioFromOptions();
+  constructor() {
   }
 
-  addOptionCreation() {
-    this.toggleOptionCreation = !this.toggleOptionCreation;
+  openBubbleSettings() {
+    this.contentDisplayed = false;
   }
 
-  onBubbleUpdate(updatedBubble: CheckboxBubble) {
-    this.checkboxBubble = updatedBubble;
-  }
-
-  onCheckboxOptionUpdate(updatedOptions: CheckboxOption) {
-    this.checkboxBubble.options[this.checkboxBubble.options.findIndex(option => option.id === updatedOptions.id)] = updatedOptions;
-    this.getRatioFromOptions();
-  }
-
-  getRatioFromOptions() {
-    this.ratio = this.checkboxBubble.options.filter((option) => option.answers.length > 0).length + '/' + this.checkboxBubble.options.length;
+  onBackToContentSent() {
+    this.contentDisplayed = true;
   }
 }

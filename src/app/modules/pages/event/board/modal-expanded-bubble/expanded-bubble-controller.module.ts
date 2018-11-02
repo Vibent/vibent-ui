@@ -21,7 +21,7 @@ import { LoaderModule } from '../../../../../core/loader/loader.module';
     ExpandedFreeBubbleComponentModule,
     ExpandedCheckboxBubbleComponentModule,
     ExpandedPlanningBubbleComponentModule,
-    ExpandedSurveyBubbleComponentModule
+    ExpandedSurveyBubbleComponentModule,
   ],
   declarations: [ExpandedBubbleControllerComponent],
   exports: [ExpandedBubbleControllerComponent],

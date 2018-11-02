@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { SurveyBubble } from '../../../../../../../shared/models/bubbles/SurveyBubble';
-import { EventUpdateService } from '../../../../../../../core/services/bubbles-services/event-update.service';
-import { SurveyHttpService } from '../../../../../../../core/services/bubbles-services/survey/http/survey-http.service';
+import { SurveyBubble } from '../../../../../../../../shared/models/bubbles/SurveyBubble';
+import { EventUpdateService } from '../../../../../../../../core/services/bubbles-services/event-update.service';
+import { SurveyHttpService } from '../../../../../../../../core/services/bubbles-services/survey/http/survey-http.service';
 
 @Component({
   selector: 'survey-option-creation',

@@ -1,36 +1,19 @@
 <div class="modal-body">
-    <div class="expanded-bubble">
-        <div class="row justify-content-center">
-            <div class="addDrink drink" (click)="this.addDrinkEntry()">
-                <img src="assets/img/drink.png">
-                <img class="plusIcon" src="/assets/img/plus.png"/>
-            </div>
-            <div class="addFood food" (click)="this.addFoodEntry()">
-                <img src="/assets/img/food.png"/>
-                <img class="plusIcon" src="/assets/img/plus.png"/>
-            </div>
-        </div>
-        <food-entry-creation
-                [toggle]="this.toggleAddFoodEntry"
-                [bubbleId]="this.alimentationBubble.id"
-                [eventRef]="this.eventRef"
-                (updatedAlimentationBubble)="this.onBubbleUpdate($event)">
-        </food-entry-creation>
-        <drink-entry-creation
-                [toggle]="this.toggleAddDrinkEntry"
-                [bubbleId]="this.alimentationBubble.id"
-                [eventRef]="this.eventRef"
-                (updatedAlimentationBubble)="this.onBubbleUpdate($event)">
-        </drink-entry-creation>
-        <alimentation-entry
-                *ngFor="let entry of this.alimentationBubble.entries"
-                [alimentationEntry]="entry"
-                [bubbleId]="this.alimentationBubble.id"
-                [eventRef]="this.eventRef"
-                (updatedAlimentationBubble)="this.onBubbleUpdate($event)">
-        </alimentation-entry>
-    </div>
+    <alimentation-content
+            *ngIf=contentDisplayed
+            [alimentationBubble]=this.alimentationBubble
+            [eventRef]=this.eventRef>
+    </alimentation-content>
+    <alimentation-settings
+            *ngIf=!contentDisplayed
+            [alimentationBubble] = this.alimentationBubble
+            [eventRef]=this.eventRef
+            (bubbleDeleted)=onBackToContentSent()
+            (backToContent)=onBackToContentSent($event)>
+    </alimentation-settings>
 </div>
-<div class="modal-footer">
-    created by Théo Joubert
+<div class="modal-footer" *ngIf="contentDisplayed">
+    <a (click)="openBubbleSettings()" class="text-black-50 cursor-pointer">
+        <i class="fa fa-cog"></i> Settings
+    </a>
 </div>

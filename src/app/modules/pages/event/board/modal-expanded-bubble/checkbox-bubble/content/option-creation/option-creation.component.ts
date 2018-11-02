@@ -3,13 +3,13 @@ import {
   Component, EventEmitter, Input,
   OnInit, Output
 } from '@angular/core';
-import { User } from '../../../../../../../shared/models/user';
-import { UserManagementService } from '../../../../../../../core/services/user-management.service';
+import { User } from '../../../../../../../../shared/models/user';
+import { UserManagementService } from '../../../../../../../../core/services/user-management.service';
 import { FormControl, FormGroup } from '@angular/forms';
-import { AlimentationBubble, AlimType } from '../../../../../../../shared/models/bubbles/AlimentationBubble';
-import { CheckboxHttpService } from '../../../../../../../core/services/bubbles-services/checkbox/http/checkbox-http.service';
-import { CheckboxBubble } from '../../../../../../../shared/models/bubbles/CheckboxBubble';
-import { EventUpdateService } from '../../../../../../../core/services/bubbles-services/event-update.service';
+import { AlimentationBubble, AlimType } from '../../../../../../../../shared/models/bubbles/AlimentationBubble';
+import { CheckboxHttpService } from '../../../../../../../../core/services/bubbles-services/checkbox/http/checkbox-http.service';
+import { CheckboxBubble } from '../../../../../../../../shared/models/bubbles/CheckboxBubble';
+import { EventUpdateService } from '../../../../../../../../core/services/bubbles-services/event-update.service';
 
 @Component({
   selector: '[option-creation]',

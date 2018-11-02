@@ -4,13 +4,13 @@ import {
   AlimentationDataModel,
   AlimentationEntry,
   AlimType
-} from '../../../../../../../shared/models/bubbles/AlimentationBubble';
-import { AlimentationHttpService } from '../../../../../../../core/services/bubbles-services/alimentation/http/alimentation-http.service';
-import { EventUpdateService } from '../../../../../../../core/services/bubbles-services/event-update.service';
-import { User } from '../../../../../../../shared/models/user';
-import { AlimentationDataService } from '../../../../../../../core/services/bubbles-services/alimentation/data/alimentation-data.service';
+} from '../../../../../../../../shared/models/bubbles/AlimentationBubble';
+import { AlimentationHttpService } from '../../../../../../../../core/services/bubbles-services/alimentation/http/alimentation-http.service';
+import { EventUpdateService } from '../../../../../../../../core/services/bubbles-services/event-update.service';
+import { User } from '../../../../../../../../shared/models/user';
+import { AlimentationDataService } from '../../../../../../../../core/services/bubbles-services/alimentation/data/alimentation-data.service';
 import Swal from 'sweetalert2';
-import { UserManagementService } from '../../../../../../../core/services/user-management.service';
+import { UserManagementService } from '../../../../../../../../core/services/user-management.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
 declare const $: any;

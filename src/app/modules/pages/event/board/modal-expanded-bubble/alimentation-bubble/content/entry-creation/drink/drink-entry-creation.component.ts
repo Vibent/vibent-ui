@@ -1,15 +1,15 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { AlimentationHttpService } from '../../../../../../../../core/services/bubbles-services/alimentation/http/alimentation-http.service';
-import { AlimentationBubble, AlimType } from '../../../../../../../../shared/models/bubbles/AlimentationBubble';
-import { EventUpdateService } from '../../../../../../../../core/services/bubbles-services/event-update.service';
+import { AlimentationHttpService } from '../../../../../../../../../core/services/bubbles-services/alimentation/http/alimentation-http.service';
+import { AlimentationBubble, AlimType } from '../../../../../../../../../shared/models/bubbles/AlimentationBubble';
+import { EventUpdateService } from '../../../../../../../../../core/services/bubbles-services/event-update.service';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'food-entry-creation',
-  templateUrl: './food-entry-creation.html',
+  selector: 'drink-entry-creation',
+  templateUrl: './drink-entry-creation.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FoodEntryCreationComponent implements OnInit {
+export class DrinkEntryCreationComponent implements OnInit {
 
   @Input()
   toggle: boolean;
@@ -44,12 +44,11 @@ export class FoodEntryCreationComponent implements OnInit {
       bubbleId: this.bubbleId,
       name: this.name.value,
       totalRequested: this.quantity.value,
-      type: AlimType.FOOD
+      type: AlimType.DRINK
     }).subscribe((updatedBubble) => {
       this.updatedAlimentationBubble.emit(<AlimentationBubble>updatedBubble);
-      this.closeCreationCard();
       this.eventUpdateService.updateEvent(this.eventRef);
+      this.closeCreationCard();
     });
   }
-
 }

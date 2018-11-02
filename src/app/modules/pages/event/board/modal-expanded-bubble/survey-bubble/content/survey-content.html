@@ -1,0 +1,38 @@
+<div class="modal-body">
+    <div class="expanded-bubble">
+        <div class="card-body text-center">
+            <div class="card-header mb-2">
+                <span class="success">{{surveyBubble.title}}</span>
+            </div>
+            <div class="survey-card">
+                <div class="card">
+                    <div class="card-content">
+                        <ul class="list-group">
+                            <survey-option
+                                    *ngFor="let option of this.surveyBubble.options"
+                                    [surveyOption]="option"
+                                    [answerCount]="surveyBubble.answerCount"
+                                    [bubbleId]="surveyBubble.id"
+                                    [eventRef]="eventRef"
+                                    (updatedAnswerCount)="this.onSurveyOptionUpdate($event)">
+                            </survey-option>
+                            <li class="list-group-item d-flex align-items-center justify-content-center">
+                                <a class="badge badge-secondary cursor-pointer text-white"
+                                   (click)="addOptionCard()">
+                                    Add an option
+                                </a>
+                            </li>
+                            <survey-option-creation
+                                    [toggle]="this.toggleOptionCreation"
+                                    [bubbleId]="this.surveyBubble.id"
+                                    [eventRef]="this.eventRef"
+                                    (updatedSurveyBubble)="this.onBubbleUpdate($event)">
+                            </survey-option-creation>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
