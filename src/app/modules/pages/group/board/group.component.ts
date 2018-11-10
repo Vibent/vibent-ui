@@ -29,8 +29,7 @@ export class GroupComponent implements OnInit, OnDestroy {
               private groupAdminPanelService: GroupAdminPanelService) {
 
     this.group = this.route.snapshot.data['group'];
-    this.events = this.route.snapshot.data['groupEvents'];
-    this.events.sort(this.sortEventByDate);​
+    this.events = this.route.snapshot.data['groupEvents'].sort(this.sortEventByDate);
   }
 
   ngOnDestroy() {

@@ -32,7 +32,7 @@
   .navbar-collapse {
     position: fixed;
     display: block;
-    top: 0px;
+    top: 0;
     height: 100vh;
     width: 230px;
     right: 0;
@@ -417,7 +417,7 @@
     }
 
     .form-group {
-      margin-top: 0px;
+      margin-top: 0;
     }
 
     .checkbox-radios {
@@ -551,7 +551,7 @@
     overflow-y: visible;
     border-top: none;
     text-align: left;
-    padding-right: 0px;
+    padding-right: 0;
     padding-left: 0;
 
     @include transform-translate-x(260px);
@@ -579,7 +579,7 @@
     }
 
     .navbar-form {
-      margin: 10px 0px;
+      margin: 10px 0;
       float: none !important;
       padding-top: 1px;
       padding-bottom: 1px;
@@ -663,14 +663,14 @@
 
   .navbar-toggler {
     .icon-bar:nth-child(2) {
-      top: 0px;
+      top: 0;
       @include bar-animation($topbar-back);
     }
     .icon-bar:nth-child(3) {
       opacity: 1;
     }
     .icon-bar:nth-child(4) {
-      bottom: 0px;
+      bottom: 0;
       @include bar-animation($bottombar-back);
     }
 

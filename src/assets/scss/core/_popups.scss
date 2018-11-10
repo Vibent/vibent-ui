@@ -1,6 +1,6 @@
 .popover {
   font-size: $font-size-base;
-  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.2);
   border: none;
   line-height: 1.7;
   max-width: 240px;
@@ -80,5 +80,5 @@
   background-color: $white-color;
   font-size: $font-size-base;
   color: inherit;
-  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.2);
 }

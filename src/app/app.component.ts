@@ -25,11 +25,7 @@ export class AppComponent implements OnInit {
   public isMaps(path): boolean {
     let title = this.location.prepareExternalUrl(this.location.path());
     title = title.slice(1);
-    if (path === title) {
-      return false;
-    } else {
-      return true;
-    }
+    return path !== title;
   }
 
   public runOnRouteChange(): void {

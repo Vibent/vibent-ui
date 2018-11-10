@@ -169,7 +169,7 @@
     background: #f44336;
     color: #FFFFFF;
     min-width: 20px;
-    padding: 0px 5px;
+    padding: 0 5px;
     height: 20px;
     border-radius: 10px;
     text-align: center;
@@ -231,12 +231,12 @@
 
         &:not(.btn) .material-icons {
           margin-top: -3px;
-          top: 0px;
+          top: 0;
           position: relative;
           margin-right: 3px;
         }
         .notification {
-          top: 0px;
+          top: 0;
         }
       }
     }

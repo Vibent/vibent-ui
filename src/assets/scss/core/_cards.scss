@@ -52,7 +52,7 @@
 
   .card-body {
     & + .card-footer {
-      padding-top: 0rem;
+      padding-top: 0;
       border: 0;
       border-radius: $border-radius-large;
     }
@@ -539,7 +539,7 @@
     }
   }
   [class*="card-header-"] {
-    margin: 0px 15px 0;
+    margin: 0 15px 0;
     padding: 0;
 
     .card-title + .card-category + .card-members {
@@ -565,7 +565,7 @@
       float: left;
 
       h3 {
-        margin: 0px;
+        margin: 0;
       }
     }
 
@@ -579,7 +579,7 @@
       display: inline-block;
 
       h3 {
-        margin: 0px;
+        margin: 0;
       }
     }
 
@@ -706,7 +706,7 @@
   }
 
   .input-group-text {
-    padding: 6px 15px 0px !important;
+    padding: 6px 15px 0 !important;
   }
   .card-footer {
     border-top: none !important;
