@@ -10,7 +10,7 @@ import {
   MatTooltipModule,
 } from '@angular/material';
 import { BubblePreviewControllerModule } from '../bubbles-preview/bubble-preview-controller.module';
-import { ExpandedBubbleControllerModule } from './modal-expanded-bubble/expanded-bubble-controller.module';
+import { ExpandedBubbleControllerModule } from './modal-expanded-bubble/controller/expanded-bubble-controller.module';
 import { ModalBubbleCreationComponentModule } from './modal-bubble-creation/modal-bubble-creation.module';
 import { EventUpdateService } from '../../../../core/services/bubbles-services/event-update.service';
 import { BlacknoteService } from '../../../../core/services/blacknote/blacknote.service';
