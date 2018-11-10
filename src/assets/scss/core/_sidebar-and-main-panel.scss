@@ -190,8 +190,6 @@
     margin: 10px 15px 0;
     border-radius: $border-radius-base;
     color: $black-color;
-    padding-left: 10px;
-    padding-right: 10px;
     text-transform: capitalize;
     font-size: $font-paragraph - 1;
     padding: 10px 15px;
@@ -221,7 +219,7 @@
   }
 
   .logo {
-    padding: 15px 0px;
+    padding: 15px 0;
     margin: 0;
     display: block;
     position: relative;
@@ -246,10 +244,10 @@
       line-height: 20px;
     }
 
+    //noinspection CssOverwrittenProperties
     .simple-text {
       text-transform: uppercase;
       padding: $padding-small-vertical $padding-zero;
-      display: inline-block;
       font-size: 18px;
       color: $black-color;
       white-space: nowrap;
