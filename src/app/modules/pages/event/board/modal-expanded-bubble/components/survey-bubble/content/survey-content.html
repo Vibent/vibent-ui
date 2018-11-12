@@ -22,13 +22,13 @@
                                     Add an option
                                 </a>
                             </li>
-                            <survey-option-creation
-                                    [toggle]="this.toggleOptionCreation"
-                                    [bubbleId]="this.surveyBubble.id"
-                                    [eventRef]="this.eventRef"
-                                    (updatedSurveyBubble)="this.onBubbleUpdate($event)">
-                            </survey-option-creation>
                         </ul>
+                        <survey-option-creation
+                                [toggle]="this.toggleOptionCreation"
+                                [bubbleId]="this.surveyBubble.id"
+                                [eventRef]="this.eventRef"
+                                (updatedSurveyBubble)="this.onBubbleUpdate($event)">
+                        </survey-option-creation>
                     </div>
                 </div>
             </div>

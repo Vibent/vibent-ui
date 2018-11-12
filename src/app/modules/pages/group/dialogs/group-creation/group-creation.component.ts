@@ -4,6 +4,8 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import 'rxjs/add/operator/map';
 import { HttpService } from '../../../../../core/http/http.service';
+import { NotificationsService, NotificationType } from '../../../../../core/services/notifications.service';
+import { Messages } from '../../../../../shared/messages-codes/messages';
 
 @Component({
   selector: 'app-group-creation',
@@ -11,18 +13,18 @@ import { HttpService } from '../../../../../core/http/http.service';
 })
 export class GroupCreationComponent implements OnInit {
 
-  public form: FormGroup;
-  public title: FormControl;
-  public description: FormControl;
+  form: FormGroup;
+  title: FormControl;
+  description: FormControl;
+  titleValidSetted = true;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<GroupCreationComponent>,
+              private notificationService: NotificationsService,
               private httpService: HttpService,
               @Inject(MAT_DIALOG_DATA) data,
               private router: Router) {
     dialogRef.disableClose = true;
-    const dialogHeight = window.innerHeight <= 700 ? window.innerHeight - 50 + 'px' : '700px';
-    dialogRef.updateSize('600px', dialogHeight);
   }
 
   ngOnInit() {
@@ -35,19 +37,25 @@ export class GroupCreationComponent implements OnInit {
   }
 
   public saveGroup(): void {
-    this.dialogRef.close(this.form.value);
+    this.titleValidSetted = this.title.valid;
     let description: string;
     this.form.value.description === '' ? description = null : description = this.form.value.description;
     const group = {
-      name: this.form.value.title,
+      name: this.title.value,
       description: description,
       allAdmins: true
     };
     console.log(group);
     this.httpService.createGroup(group).subscribe(res => {
+      this.close();
       this.router.navigate(['/groups/' + res['ref']]);
+      this.notificationService.notify(Messages.GROUP_CREATED, NotificationType.SUCCESS)
     });
 
+  }
+
+  close() {
+    this.dialogRef.close();
   }
 }
 

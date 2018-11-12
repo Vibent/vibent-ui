@@ -1,43 +1,48 @@
-<div class="row justify-content-center">
-	<div class="create-event-title">Update your infos</div>
-</div>
-<div class="row justify-content-center m-t-25">
-	<img id="avatarProfile" class="avatar-profile-settings" (click)="fileInput.click()" src="{{croppedImage}}">
-</div>
-
-<image-cropper *ngIf="imageChangedEvent"
-		[imageChangedEvent]="imageChangedEvent"
-		[maintainAspectRatio]="true"
-		[aspectRatio]="1"
-		format="png"
-		(imageCroppedBase64)="imageCropped($event)"
-		(imageCroppedFile)="imageCroppedFile($event)"
-></image-cropper>
-
-<div class="row justify-content-center">
-	<button *ngIf="imageChangedEvent" (click)="imageChangedEventToNull()" class="btn btn-round btn-sm">Crop image</button>
-</div>
-<div class="row justify-content-center">
-	<input type="file" id="file" class="d-none" (change)="fileChangeEvent($event)" accept="image/jpg,image/jpeg"
-				 #fileInput>
-</div>
-<div [formGroup]="form">
-	<div class="Input">
-		<input type="text" formControlName="firstName" id="firstName" class="Input-text" placeholder="FirstName">
-		<label for="firstName" class="Input-label">FirstName</label>
+<div class="container">
+	<div class="row justify-content-end">
+		<img class="cursor-pointer modal-close" src="/assets/img/close.png" (click)="close()">
 	</div>
-	<div class="Input">
-		<input type="text" id="lastName" formControlName="lastName" class="Input-text" placeholder="LastName">
-		<label for="lastName" class="Input-label">LastName</label>
+</div>
+<div class="container vibent-modal">
+	<h2><b>Update your infos</b></h2>
+	<p class="lead">You can change some informations about you here.</p>
+	<div class="row justify-content-center m-t-25">
+		<img id="avatarProfile" class="avatar-profile-settings" (click)="fileInput.click()" src="{{croppedImage}}">
 	</div>
 
-	<div class="row justify-content-center m-t-50">
-		<button *ngIf="!firstName.invalid && !lastName.invalid" (click)="updateInfo()" class="btn btn-round btn-add-event">
-			Update
-		</button>
-		<button *ngIf="firstName.invalid || lastName.invalid" class="btn btn-round btn-add-event disabled">Update</button>
+	<image-cropper *ngIf="imageChangedEvent"
+				   [imageChangedEvent]="imageChangedEvent"
+				   [maintainAspectRatio]="true"
+				   [aspectRatio]="1"
+				   format="png"
+				   (imageCroppedBase64)="imageCropped($event)"
+				   (imageCroppedFile)="imageCroppedFile($event)"
+	></image-cropper>
+	<div class="row justify-content-center">
+		<button *ngIf="imageChangedEvent" (click)="imageChangedEventToNull()" class="btn btn-round btn-sm">Crop image</button>
 	</div>
 	<div class="row justify-content-center">
-		<button mat-dialog-close class="btn btn-round btn-danger" (click)="close()">Cancel</button>
+		<input type="file" id="file" class="d-none" (change)="fileChangeEvent($event)" accept="image/jpg,image/jpeg"
+			   #fileInput>
+	</div>
+
+	<div [formGroup]="form">
+		<div class="form-group">
+			<label for="profile-firstname"><b>First name</b>
+				<span *ngIf="!firstnameValidSetted"
+					  class="incorrect-input">First name is required</span></label>
+			<input type="text" class="form-control" id="profile-firstname" formControlName="firstName"/>
+		</div>
+		<div class="form-group">
+			<label for="profile-lastname"><b>Last name</b>
+				<span *ngIf="!lastnameValidSetted"
+					  class="incorrect-input">Last name is required</span></label>
+			<input type="text" class="form-control" id="profile-lastname" formControlName="lastName"/>
+		</div>
+
+
+		<div class="row justify-content-center m-t-50">
+			<button (click)="updateInfo()" class="btn btn-round btn-add-event">Update</button>
+		</div>
 	</div>
 </div>

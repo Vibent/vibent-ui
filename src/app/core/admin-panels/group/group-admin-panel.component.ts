@@ -28,6 +28,9 @@ export class GroupAdminPanelComponent implements OnInit {
 
   public openSettingsDialog(): void {
     this.dialog.open(GroupSettingsComponent, {
+      maxWidth: '100vw',
+      maxHeight: '100vh',
+      panelClass: 'full-screen-dialog',
       data: {group: this.group}
     });
   }

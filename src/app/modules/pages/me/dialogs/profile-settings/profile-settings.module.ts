@@ -8,7 +8,7 @@ import { ImageCropperModule } from 'ngx-image-cropper';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    ImageCropperModule
+    ImageCropperModule,
   ],
   declarations: [
     ProfileSettingsComponent

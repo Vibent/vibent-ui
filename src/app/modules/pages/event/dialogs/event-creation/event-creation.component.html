@@ -1,31 +1,33 @@
-<div class="row justify-content-center">
-	<div class="create-event-title">Create an event</div>
+<div class="container">
+    <div class="row justify-content-end">
+        <img class="cursor-pointer modal-close" src="/assets/img/close.png" (click)="close()">
+    </div>
 </div>
-
-<div [formGroup]="form">
-	<div class="Input">
-		<input type="text" formControlName="title" id="title" class="Input-text" placeholder="Event title">
-		<label for="title" class="Input-label">Title</label>
-	</div>
-	<div class="TextArea">
-		<textarea data-autoresize id="description" formControlName="description" class="Input-text"
-							placeholder="Event decription"></textarea>
-		<label for="description" class="TextArea-label">Description</label>
-	</div>
-
-	<div class="row justify-content-center">
-		<div class="Input">
-			<input formControlName="date" [min]="dateTime" [(ngModel)]="dateTime" [owlDateTime]="dt" class="calendar"
-						 [owlDateTimeTrigger]="dt" placeholder="Date">
-			<owl-date-time #dt></owl-date-time>
-		</div>
-	</div>
-
-	<div class="row justify-content-center m-t-50">
-		<button *ngIf="!title.invalid" (click)="saveEvent()" class="btn btn-round btn-add-event">Create</button>
-		<button *ngIf="title.invalid" class="btn btn-round btn-add-event disabled">Create</button>
-	</div>
-	<div class="row justify-content-center">
-		<button mat-dialog-close class="btn btn-round btn-danger" (click)="close()">Cancel</button>
-	</div>
+<div class="container vibent-modal">
+    <h2><b>Create an event</b></h2>
+    <p class="lead">You are about to create an event.</p>
+    <div [formGroup]="form">
+        <div class="form-group">
+            <label for="event-title"><b>Title</b>
+                <span *ngIf="!titleValidSetted"
+                      class="incorrect-input">Title is required</span></label>
+            <input type="text" class="form-control" id="event-title" formControlName="title"/>
+        </div>
+        <div class="form-group">
+            <label for="event-description"><b>Description (optional)</b></label>
+            <textarea type="text" class="form-control" id="event-description"
+                      formControlName="description"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="event-datetime"><b>Date</b>
+                <span *ngIf="!dateSetted"
+                      class="incorrect-input">Date is required</span></label>
+            <input [min]="dateTime" [owlDateTime]="dt" class="calendar"
+                   [owlDateTimeTrigger]="dt" type="text" class="form-control" id="event-datetime" formControlName="date"/>
+            <owl-date-time #dt></owl-date-time>
+        </div>
+        <div class="row justify-content-center m-t-50">
+            <button (click)="saveEvent()" class="btn btn-round btn-add-event">Create</button>
+        </div>
+    </div>
 </div>

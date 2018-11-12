@@ -1,41 +1,36 @@
-<div class="form-group">
-    <div class="row justify-content-center">
-        <div class="col-xl-10">
-            <label>Email</label>
-            <form novalidate [formGroup]="this.form">
-            <div class="input-group"><span class="input-group-addon"></span>
-
-                    <input type="text"
-                           class="form-control text-white"
-                           formControlName="email"
-                           name="Email"
-                           id="Email"
-                           placeholder="Requested Email">
-
-            </div>   </form>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <button (click)="sendInvitation()" class="btn btn-round btn-add-event-in-group m-t-15">Send
-            invitation
-        </button>
+<div class="container">
+    <div class="row justify-content-end">
+        <img class="cursor-pointer modal-close" src="/assets/img/close.png" (click)="close()">
     </div>
 </div>
-<div class="row justify-content-center m-t-20">
-    <h5 class="text-center text-white">Or generate a link to share it with people:</h5>
-</div>
-<div class="row justify-content-center">
-    <button (click)="generateLink()" class="btn btn-round btn-add-event">Generate a link</button>
-</div>
-<ng-container *ngIf="generatedLink">
-    <div class="row justify-content-center">
-        <div class="col-xl-10">
-            <div class="input-group"><span class="input-group-addon"></span>
-                <input type="text" class="form-control m-t-30 text-white" name="Token" id="Token"
-                       placeholder="Token" required value="{{generatedLink}}">
-            </div>
+<div class="container vibent-modal">
+    <h2><b>Add people by email</b></h2>
+    <p class="lead">You can invite people by email</p>
+    <div [formGroup]="form">
+        <div class="form-group">
+            <label for="email-invite"><b>Email</b>
+                <span *ngIf="!emailValidSetted"
+                      class="incorrect-input">Email is required</span></label>
+            <input type="text" class="form-control" id="email-invite" formControlName="email"/>
         </div>
-        <h5 class="text-center m-t-20 text-white">Send this URL to your friends to allow them to join
+        <div class="row justify-content-center">
+            <button (click)="sendInvitation()" class="btn btn-round btn-add-event-in-group m-t-15">Send
+                invitation
+            </button>
+        </div>
+    </div>
+    <h2 class="m-t-50"><b>Add people with a magic link</b></h2>
+    <p class="lead">You can invite people by sending them a magic link</p>
+    <div class="row justify-content-center">
+        <button (click)="generateLink()" class="btn btn-round btn-add-event">Generate a link</button>
+    </div>
+    <ng-container *ngIf="generatedLink">
+        <div class="form-group">
+            <label for="invite-token"><b>Magic link</b></label>
+            <input type="text" class="form-control" id="invite-token" value="{{generatedLink}}"/>
+        </div>
+        <h5 class="text-center m-t-20">Send this URL to your friends to allow them to join
             your group.</h5>
-    </div>
-</ng-container>
+
+    </ng-container>
+</div>

@@ -3,9 +3,10 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import * as moment from 'moment';
 import { Router } from '@angular/router';
-import { Group } from '../../../../../shared/models/group';
 import { HttpService } from '../../../../../core/http/http.service';
 import { Event } from '../../../../../shared/models/event';
+import { NotificationsService, NotificationType } from '../../../../../core/services/notifications.service';
+import { Messages } from '../../../../../shared/messages-codes/messages';
 
 @Component({
   selector: 'app-event-creation',
@@ -16,37 +17,34 @@ export class EventCreationComponent implements OnInit {
   /*** Minimal Date for event creation***/
   dateTime = moment().add(1, 'hours').toDate();
 
-  /*** User groups list ***/
-  public groups: Group[];
+  groupRef: string;
 
-  /*** Form ***/
-  public form: FormGroup;
-  public title: FormControl;
-  public description: FormControl;
-  public date: FormControl;
-  public group: FormControl;
+  form: FormGroup;
+  title: FormControl;
+  description: FormControl;
+  date: FormControl;
+
+  titleValidSetted = true;
+  dateSetted = true;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<EventCreationComponent>,
               private httpService: HttpService,
+              private notificationService: NotificationsService,
               private router: Router,
               @Inject(MAT_DIALOG_DATA) data) {
 
-    this.groups = data.groups;
+    this.groupRef = data.groupRef;
     dialogRef.disableClose = true;
-    const dialogHeight = window.innerHeight <= 570 ? window.innerHeight - 50 + 'px' : '570px';
-    dialogRef.updateSize('600px', dialogHeight);
   }
 
   ngOnInit() {
     this.title = new FormControl('', Validators.required);
     this.description = new FormControl();
-    this.date = new FormControl();
-    this.group = new FormControl();
+    this.date = new FormControl('', Validators.required);
     this.form = this.fb.group({
       title: this.title,
       description: this.description,
-      group: this.group,
       date: this.date
     });
   }
@@ -56,18 +54,20 @@ export class EventCreationComponent implements OnInit {
   }
 
   public saveEvent(): void {
-    this.dialogRef.close(this.form.value);
-    const groupRef = this.form.value.group ? this.form.value.group : this.groups[0].ref;
-    this.dateTime.setTime(this.dateTime.getTime() - this.dateTime.getTimezoneOffset() * 60 * 1000);
-    console.log(this.dateTime);
+    this.titleValidSetted = this.title.valid;
+    this.dateSetted = this.date.valid;
+
     const event: Event = {
       title: this.form.value.title,
       description: this.form.value.description,
-      startDate: this.dateTime.toJSON(),
-      groupRef: groupRef,
+      startDate: this.date.value.toJSON(),
+      groupRef: this.groupRef,
     };
+
     this.httpService.createEvent(event).subscribe(res => {
+      this.dialogRef.close(this.form.value);
       this.router.navigate(['/events/' + res['ref']]);
+      this.notificationService.notify(Messages.EVENT_CREATED, NotificationType.SUCCESS);
     });
   }
 

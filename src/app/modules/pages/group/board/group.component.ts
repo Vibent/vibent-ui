@@ -51,15 +51,19 @@ export class GroupComponent implements OnInit, OnDestroy {
 
   public openAddGroupMemberDialog(): void {
     this.dialog.open(AddGroupMembersComponent, {
+      maxWidth: '100vw',
+      maxHeight: '100vh',
+      panelClass: 'full-screen-dialog',
       data: {group: this.group}
     });
   }
 
   public openEventCreationDialog(): void {
-    const groups: any[] = [];
-    groups.push({ref: this.group.ref, name: this.group.name, fromGroup: true});
     this.dialog.open(EventCreationComponent, {
-      data: {groups: groups}
+      maxWidth: '100vw',
+      maxHeight: '100vh',
+      panelClass: 'full-screen-dialog',
+      data: {groupRef: this.group.ref}
     });
   }
 

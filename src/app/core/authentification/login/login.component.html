@@ -20,11 +20,7 @@
                                 <div id="emailLogin" class="card-body">
                                     <h3 class="card-title">Email login</h3>
                                     <form novalidate [formGroup]="loginForm">
-                                        <div class="form-group"
-                                                [ngClass]="{
-												'has-danger': email.invalid && (email.dirty || email.touched),
-												'has-success': email.valid && (email.dirty || email.touched)
-												}">
+                                        <div class="form-group">
                                             <label for="email">E-Mail</label>
                                             <input id="email"
                                                    type="email"
@@ -32,11 +28,7 @@
                                                    formControlName="email"
                                                    required>
                                         </div>
-                                        <div class="form-group"
-                                                [ngClass]="{
-													'has-danger': passwordEmail.invalid && (passwordEmail.dirty || passwordEmail.touched),
-													'has-success': passwordEmail.valid && (passwordEmail.dirty || passwordEmail.touched)
-										 }">
+                                        <div class="form-group">
                                             <label for="passwordEmail">Password
                                                 <a (click)="forgoPassword()"
                                                    class="float-right cursor-pointer">
@@ -79,11 +71,7 @@
                                                     (hasError)="hasError($event)"
                                                     (ng2TelOutput)="getNumber($event)">
                                         </div>
-                                        <div class="form-group"
-                                                [ngClass]="{
-													'has-danger': passwordPhone.invalid && (passwordPhone.dirty || passwordPhone.touched),
-													'has-success': passwordPhone.valid && (passwordPhone.dirty || passwordPhone.touched)
-										 }">
+                                        <div class="form-group">
                                             <label for="passwordPhone">Password
                                                 <a (click)="forgoPassword()"
                                                    class="float-right cursor-pointer">

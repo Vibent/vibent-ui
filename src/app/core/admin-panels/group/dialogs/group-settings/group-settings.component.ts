@@ -13,9 +13,11 @@ import { HttpService } from '../../../../http/http.service';
 })
 export class GroupSettingsComponent implements OnInit {
 
-  public group: Group;
-  public form: FormGroup;
-  public name: FormControl;
+  group: Group;
+  form: FormGroup;
+  name: FormControl;
+
+  nameValidSetted = true;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<GroupSettingsComponent>,
@@ -23,19 +25,12 @@ export class GroupSettingsComponent implements OnInit {
               private adminPanelService: GroupAdminPanelService,
               private httpService: HttpService,
               @Inject(MAT_DIALOG_DATA) data) {
-
     this.group = data.group;
-    dialogRef.disableClose = true;
-    const dialogHeight = window.innerHeight <= 700 ? window.innerHeight - 50 + 'px' : '700px';
-    dialogRef.updateSize('600px', dialogHeight);
   }
 
   ngOnInit() {
-    this.name = new FormControl(this.group.name, [
-      Validators.required
-    ]);
     this.form = this.fb.group({
-      name: this.name,
+      name: new FormControl(this.group.name, Validators.required),
       description: new FormControl(this.group.description),
     });
   }
@@ -59,7 +54,8 @@ export class GroupSettingsComponent implements OnInit {
           'Group ' + this.group.name + ' has been deleted',
           'success'
         ).then((result) => {
-          this.router.navigate(['/groups']); });
+          this.router.navigate(['/groups']);
+        });
       }
     });
   }
@@ -69,6 +65,7 @@ export class GroupSettingsComponent implements OnInit {
   }
 
   public updateInfo(): void {
+    this.nameValidSetted = this.form.value.name.valid;
     this.dialogRef.close(this.form.value);
     this.group.name = this.form.value.name;
     this.form.value.description === '' ? this.group.description = null : this.group.description = this.form.value.description;

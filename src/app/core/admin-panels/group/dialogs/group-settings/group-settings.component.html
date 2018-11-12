@@ -1,31 +1,33 @@
-<div class="row justify-content-center">
-	<div class="create-event-title">Update group infos</div>
+<div class="container">
+    <div class="row justify-content-end">
+        <img class="cursor-pointer modal-close" src="/assets/img/close.png" (click)="close()">
+    </div>
 </div>
-
-<div [formGroup]="form">
-	<div class="Input">
-		<input type="text" formControlName="name" id="name" class="Input-text" placeholder="Name">
-		<label for="name" class="Input-label">Name</label>
-	</div>
-	<div class="TextArea">
-		<textarea data-autoresize id="description" formControlName="description" class="Input-text"
-							placeholder="Description"></textarea>
-		<label for="description" class="TextArea-label">Description</label>
-	</div>
-	<div class="row justify-content-center m-t-50">
-			<button *ngIf="!name.invalid" (click)="updateInfo()" class="btn btn-round btn-add-event">Update</button>
-			<button *ngIf="name.invalid" class="btn btn-round btn-add-event disabled">Update</button>
-	</div>
-	<div class="row justify-content-center">
-		<button mat-dialog-close class="btn btn-round btn-danger" (click)="close()">Cancel</button>
-	</div>
-
-	<div class="card card-group-remove">
-		<div class="card-body">
-			<h5 class="card-title">Remove group</h5>
-			<h6 class="card-subtitle mb-2">Removing group will cause all child events and
-				resources to be removed.</h6>
-			<button class="btn btn-danger" (click)="removeGroup()">Remove</button>
-		</div>
-	</div>
+<div class="container vibent-modal">
+    <h2><b>Group settings</b></h2>
+    <p class="lead">Update your group infos.</p>
+    <div [formGroup]="form">
+        <div class="form-group">
+            <label for="group-name"><b>Name</b>
+                <span *ngIf="!nameValidSetted"
+                      class="incorrect-input">Name is required</span></label>
+            <input type="text" class="form-control" id="group-name" formControlName="name"/>
+        </div>
+        <div class="form-group">
+            <label for="group-description"><b>Description (optional)</b></label>
+            <textarea type="text" class="form-control" id="group-description"
+                      formControlName="description"></textarea>
+        </div>
+    </div>
+    <div class="card card-group-remove">
+        <div class="card-body">
+            <h5 class="card-title text-dark">Remove group</h5>
+            <h6 class="card-subtitle mb-2 text-dark">Removing group will cause all child events and
+                resources to be removed.</h6>
+            <button class="btn btn-danger" (click)="removeGroup()">Remove</button>
+        </div>
+    </div>
+    <div class="row justify-content-center m-t-50">
+        <button (click)="updateInfo()" class="btn btn-round btn-add-event">Update</button>
+    </div>
 </div>

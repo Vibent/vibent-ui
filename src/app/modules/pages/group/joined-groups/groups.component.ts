@@ -20,6 +20,10 @@ export class GroupsComponent implements OnInit {
   }
 
   public openDialog(): void {
-    this.dialog.open(GroupCreationComponent, {});
+    this.dialog.open(GroupCreationComponent, {
+      maxWidth: '100vw',
+      maxHeight: '100vh',
+      panelClass: 'full-screen-dialog',
+    });
   }
 }

@@ -4,7 +4,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpService } from '../../../http/http.service';
-import Swal from "sweetalert2";
+import Swal from 'sweetalert2';
 import { Messages } from '../../../../shared/messages-codes/messages';
 
 @Component({
