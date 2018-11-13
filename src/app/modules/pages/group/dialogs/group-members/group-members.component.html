@@ -1,4 +1,13 @@
-<div class="row justify-content-center">
-	<app-group-preview-member *ngFor="let membership of group.memberships" [membership]=membership>
-	</app-group-preview-member>
+<div class="container">
+    <div class="row justify-content-end">
+        <img class="cursor-pointer modal-close" src="/assets/img/close.png" (click)="close()">
+    </div>
+</div>
+<div class="container vibent-modal">
+    <h2><b>Group members</b></h2>
+    <p class="lead">The greatest healing therapy is friendship and love.</p>
+    <div class="row justify-content-center m-t-50">
+        <app-group-preview-member *ngFor="let membership of group.memberships" [membership]=membership>
+        </app-group-preview-member>
+    </div>
 </div>
