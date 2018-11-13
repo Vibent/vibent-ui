@@ -32,6 +32,9 @@ export class ProfileComponent implements OnInit {
 
   public openSettingsDialog(): void {
     this.dialogSettings.open(ProfileSettingsComponent, {
+      maxWidth: '100vw',
+      maxHeight: '100vh',
+      panelClass: 'full-screen-dialog',
       data: {user: this.user}
     });
   }

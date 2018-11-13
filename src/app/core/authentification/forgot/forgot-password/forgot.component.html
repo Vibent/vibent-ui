@@ -20,10 +20,7 @@
                                 <div id="emailLogin" class="card-body">
                                     <h3 class="card-title">Reset password by email</h3>
                                     <form novalidate [formGroup]="loginForm">
-                                        <div class="form-group" [ngClass]="{
-												'has-danger': email.invalid && (email.dirty || email.touched),
-												'has-success': email.valid && (email.dirty || email.touched)
-												}">
+                                        <div class="form-group">
                                             <label for="email">E-Mail</label>
                                             <input id="email"
                                                    class="form-control"

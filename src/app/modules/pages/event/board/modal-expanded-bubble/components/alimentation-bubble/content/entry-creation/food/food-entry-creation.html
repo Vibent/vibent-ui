@@ -6,19 +6,19 @@
                     <div class="media d-flex">
                         <div class="media-body text-left">
                             <form novalidate [formGroup]="this.form">
-                                <div class="foodName">
+                                <div class="form-group">
                                     <label for="foodName">Food name</label>
                                     <input type="text"
-                                           class="form-control"
                                            formControlName="name"
+                                           class="form-control w-75"
                                            id="foodName"/>
                                 </div>
-                                <div class="foodQuantity">
+                                <div class="form-group">
                                     <label for="quantity">Quantity</label>
                                     <input type="number"
                                            formControlName="quantity"
                                            min="1"
-                                           class="form-control"
+                                           class="form-control w-50"
                                            id="quantity"/>
                                 </div>
                             </form>

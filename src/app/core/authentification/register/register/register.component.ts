@@ -16,7 +16,6 @@ export class RegisterComponent implements OnInit {
 
   public firstName: FormControl;
   public lastName: FormControl;
-  public birthday: FormControl;
   public email: FormControl;
   public phone: FormControl;
   public password: FormControl;
@@ -25,7 +24,6 @@ export class RegisterComponent implements OnInit {
   public formsValidAfterRegister: any = {
     firstName: true,
     lastName: true,
-    birthday: true,
     email: true,
     phone: true,
     password: true,
@@ -56,9 +54,6 @@ export class RegisterComponent implements OnInit {
       Validators.required,
       Validators.minLength(1)
     ]);
-    this.birthday = new FormControl('', [
-      Validators.required,
-    ]);
     this.email = new FormControl('', [
       Validators.pattern('^[\\w\\-\\+]+(\\.[\\w\\-]+)*@[\\w\\-]+(\\.[\\w\\-]+)*\\.[\\w\\-]{2,4}$')
     ]);
@@ -83,7 +78,6 @@ export class RegisterComponent implements OnInit {
     this.registerForm = new FormGroup({
       firstName: this.firstName,
       lastName: this.lastName,
-      birthday: this.birthday,
       email: this.email,
       phone: this.phone,
       password: this.password,
@@ -95,7 +89,6 @@ export class RegisterComponent implements OnInit {
     this.formsValidAfterRegister = {
       firstName: this.firstName.valid,
       lastName: this.lastName.valid,
-      birthday: this.birthday.valid,
       email: this.email.valid,
       // TODO: find a good way to check phone validity
       phone: true,
@@ -105,15 +98,12 @@ export class RegisterComponent implements OnInit {
     };
 
     this.formsValidAfterRegister.email = this.email.value !== '' ? this.email.valid : true;
-    if (this.formsAllCorrects()) {
-      const birthday = new Date(this.birthday.value.setTime(this.birthday.value.getTime() - this.birthday.value.getTimezoneOffset() * 60 * 1000));
-      const user = {
+    if (this.formsAllCorrects()) { const user = {
         email: this.email.value,
         firstName: this.firstName.value,
         lastName: this.lastName.value,
         password: this.password.value,
-        phoneNumber: this.currentPhone,
-        birthday: birthday.toJSON(),
+        phoneNumber: this.currentPhone
       };
       this.authenticationService.register(user, this.onFail.bind(this));
       Swal({

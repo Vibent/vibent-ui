@@ -21,6 +21,9 @@ export class ProfileSettingsComponent implements OnInit {
   croppedImage: any;
   imageChangedEvent: any = '';
 
+  firstnameValidSetted = true;
+  lastnameValidSetted = true;
+
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<ProfileSettingsComponent>,
               private httpService: HttpService,
@@ -29,8 +32,6 @@ export class ProfileSettingsComponent implements OnInit {
               @Inject(MAT_DIALOG_DATA) data,
               private userManagementService: UserManagementService) {
     dialogRef.disableClose = true;
-    const dialogHeight = window.innerHeight <= 600 ? window.innerHeight - 50 + 'px' : '600px';
-    dialogRef.updateSize('600px', dialogHeight);
     this.user = this.userManagementService.getMe();
     this.croppedImage = this.user.imagePath;
   }
@@ -66,7 +67,9 @@ export class ProfileSettingsComponent implements OnInit {
   }
 
   public updateInfo(): void {
-    this.dialogRef.close(this.form.value);
+    this.firstnameValidSetted = this.firstName.valid;
+    this.lastnameValidSetted = this.lastName.valid;
+
     this.user.firstName = this.form.value.firstName;
     this.user.lastName = this.form.value.lastName;
     const user = {
@@ -74,7 +77,11 @@ export class ProfileSettingsComponent implements OnInit {
       firstName: this.form.value.firstName,
       lastName: this.form.value.lastName
     };
-    this.httpService.updateUser(user).subscribe(() => this.userManagementService.setMe());
+
+    this.httpService.updateUser(user).subscribe(() => {
+      this.dialogRef.close(this.form.value);
+      this.userManagementService.setMe();
+    });
     if (this.fileToUpload) {
       this.profileImageService.uploadProfileImage(this.fileToUpload, user).subscribe(() => this.userManagementService.setMe());
     }

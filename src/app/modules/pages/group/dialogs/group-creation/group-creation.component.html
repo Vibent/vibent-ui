@@ -1,23 +1,26 @@
-<div class="row justify-content-center">
-	<div class="create-event-title">Create a group</div>
+<div class="container">
+	<div class="row justify-content-end">
+		<img class="cursor-pointer modal-close" src="/assets/img/close.png" (click)="close()">
+	</div>
 </div>
+<div class="container vibent-modal">
+	<h2><b>Create a group</b></h2>
+	<p class="lead">You are about to create a group.</p>
+	<div [formGroup]="form">
+		<div class="form-group">
+			<label for="group-title"><b>Title</b>
+				<span *ngIf="!titleValidSetted"
+					  class="incorrect-input">Title is required</span></label>
+			<input type="text" class="form-control" id="group-title" formControlName="title"/>
+		</div>
+		<div class="form-group">
+			<label for="group-description"><b>Description (optional)</b></label>
+			<textarea type="text" class="form-control" id="group-description"
+					  formControlName="description"></textarea>
+		</div>
 
-<div [formGroup]="form">
-	<div class="Input">
-		<input type="text" formControlName="title" id="title" class="Input-text" placeholder="Group title">
-		<label for="title" class="Input-label">Title</label>
-	</div>
-	<div class="TextArea">
-        <textarea data-autoresize id="description" formControlName="description" class="Input-text"
-									placeholder="Group decription"></textarea>
-		<label for="description" class="TextArea-label">Description</label>
-	</div>
-
-	<div class="row justify-content-center m-t-50">
-		<button *ngIf="!title.invalid" (click)="saveGroup()" class="btn btn-round btn-add-event">Create</button>
-		<button *ngIf="title.invalid" class="btn btn-round btn-add-event disabled">Create</button>
-	</div>
-	<div class="row justify-content-center">
-		<button mat-dialog-close class="btn btn-round btn-danger">Cancel</button>
+		<div class="row justify-content-center m-t-50">
+			<button (click)="saveGroup()" class="btn btn-round btn-add-event">Create</button>
+		</div>
 	</div>
 </div>
