@@ -32,33 +32,33 @@
                             Admin settings
                         </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item cursor-pointer" (click)="openRightsDialog()">Members Rights</a>
+                            <!--<a class="dropdown-item cursor-pointer" (click)="openRightsDialog()">Members Rights</a>-->
                             <a class="dropdown-item cursor-pointer" (click)="openSettingsDialog()">Group settings</a>
-                            <a class="dropdown-item cursor-pointer" (click)="openRequestsDialog()">Requests
-                                <span class="badge badge-info">4</span>
-                            </a>
-                        </div>
-                    </div>
-                </ng-container>
-            </div>
-            <div class="col-xl-10">
-                <h5 class="group-description">{{group.description}}</h5>
-            </div>
-            <div class="col-xl-12 text-center">
-                <div class="btn btn-round btn-add-event-in-group" (click)="openEventCreationDialog()">Create an event
-                </div>
-            </div>
-        </div>
-    </div>
-    <ng-container *ngIf="events && events.length>0;else no_events">
-        <app-event-preview
-                *ngFor="let event of events"
-                [event]=event>
-        </app-event-preview>
-    </ng-container>
-    <ng-template #no_events>
-        <div class="col-xl-12 text-center m-t-50 text-white">
-            <h4>No events... bouhouhou :'(</h4>
-        </div>
-    </ng-template>
-</div>
+                            <!-- <a class="dropdown-item cursor-pointer" (click)="openRequestsDialog()">Requests
+                                 <span class="badge badge-info">4</span>
+                             </a>-->
+                         </div>
+                     </div>
+                 </ng-container>
+             </div>
+             <div class="col-xl-10">
+                 <h5 class="group-description">{{group.description}}</h5>
+             </div>
+             <div class="col-xl-12 text-center">
+                 <div class="btn btn-round btn-add-event-in-group" (click)="openEventCreationDialog()">Create an event
+                 </div>
+             </div>
+         </div>
+     </div>
+     <ng-container *ngIf="events && events.length>0;else no_events">
+         <app-event-preview
+                 *ngFor="let event of events"
+                 [event]=event>
+         </app-event-preview>
+     </ng-container>
+     <ng-template #no_events>
+         <div class="col-xl-12 text-center m-t-50 text-white">
+             <h4>No events... bouhouhou :'(</h4>
+         </div>
+     </ng-template>
+ </div>
