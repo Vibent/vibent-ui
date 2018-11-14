@@ -1,0 +1,6 @@
+<a>{{this.planningDataModel.start | date }} at {{this.planningDataModel.start | date:'shortTime' }}</a>
+<a class="float-right"><span
+        class="badge badge-default badge-success m-r-10">
+    by {{(this.planningDataModel.user | async)?.firstName}} {{(this.planningDataModel.user | async)?.lastName}}</span>
+</a>
+<p>{{planningEntry.content}}</p>

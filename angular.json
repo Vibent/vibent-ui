@@ -32,7 +32,11 @@
               "node_modules/moment/moment.js",
               "node_modules/bootstrap-notify/bootstrap-notify.js",
               "node_modules/chartist/dist/chartist.js",
-              "node_modules/moment/min/moment.min.js"
+              "node_modules/moment/min/moment.min.js",
+              "src/assets/datepicker/datepicker.min.js",
+              "src/assets/datepicker/i18n/datepicker.en.js",
+              "src/assets/datepicker/i18n/datepicker.fr.js",
+              "src/assets/timepicker/jquery.timepicker.min.js"
             ]
           },
           "configurations": {

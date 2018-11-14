@@ -27,7 +27,8 @@
 
             <app-expanded-planning-bubble
                     *ngIf="this.bubble?.type === BubbleType.PlanningBubble"
-                    [planningBubble]="this.bubble">
+                    [planningBubble]="this.bubble"
+                    [eventRef]="this.eventRef">
             </app-expanded-planning-bubble>
 
             <app-expanded-survey-bubble
