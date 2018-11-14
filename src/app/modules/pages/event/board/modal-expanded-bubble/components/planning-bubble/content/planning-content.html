@@ -1,0 +1,31 @@
+<div class="expanded-bubble">
+    <div class="card-body">
+        <div class="card-header mb-2 text-center">
+            <span class="success">Your bubble planning title</span>
+        </div>
+        <div class="planning-card">
+            <div class="card">
+                <div class="card-content">
+                    <div class="row justify-content-center">
+                        <img class="cursor-pointer" (click)="addEntryCreation()" src="/assets/img/plus.png"/>
+                    </div>
+                    <planning-entry-creation
+                            [toggle]="toggleEntryCreation"
+                            [eventRef]="this.eventRef"
+                            [bubbleId]="planningBubble.id"
+                            (updatedPlanningBubble)="this.onBubbleUpdate($event)">
+                    </planning-entry-creation>
+                    <ul class="planning-timeline">
+                        <li *ngFor="let entry of planningBubble.entries"
+                            planning-entry
+                            [planningEntry]="entry"
+                            [bubbleId]="planningBubble.id"
+                            [eventRef]="this.eventRef">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -52,7 +52,7 @@ export class OptionCreationComponent implements OnInit {
       bubbleId: this.bubbleId,
       content: this.optionContent.value
     }).subscribe((updatedBubble) => {
-      this.updatedCheckboxBubble.emit(<AlimentationBubble>updatedBubble);
+      this.updatedCheckboxBubble.emit(<CheckboxBubble>updatedBubble);
       this.eventUpdateService.updateEvent(this.eventRef);
       this.closeCreationCard();
     });

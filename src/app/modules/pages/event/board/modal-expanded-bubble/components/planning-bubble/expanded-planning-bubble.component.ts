@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { PlanningBubble } from '../../../../../../../shared/models/bubbles/PlanningBubble';
 
-declare const $: any;
 
 @Component({
   selector: 'app-expanded-planning-bubble',
@@ -10,10 +9,24 @@ declare const $: any;
 export class ExpandedPlanningBubbleComponent implements OnInit {
 
   @Input()
-  public planningBubble: PlanningBubble;
+  planningBubble: PlanningBubble;
+  @Input()
+  eventRef: string;
+  contentDisplayed = true;
 
+  constructor() {
+  }
+
+  openBubbleSettings() {
+    this.contentDisplayed = false;
+  }
+
+  onBackToContentSent() {
+    this.contentDisplayed = true;
+  }
 
   ngOnInit() {
 
   }
+
 }

@@ -1,11 +1,13 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
-import { BubbleType, IBubble } from '../../../../../../../shared/models/bubbles/IBubble';
 import { AlimentationHttpService } from '../../../../../../../core/services/bubbles-services/alimentation/http/alimentation-http.service';
-import Swal from 'sweetalert2';
-import { EventUpdateService } from '../../../../../../../core/services/bubbles-services/event-update.service';
-import { NotificationsService, NotificationType } from '../../../../../../../core/services/notifications.service';
 import { SurveyHttpService } from '../../../../../../../core/services/bubbles-services/survey/http/survey-http.service';
 import { CheckboxHttpService } from '../../../../../../../core/services/bubbles-services/checkbox/http/checkbox-http.service';
+import { NotificationsService, NotificationType } from '../../../../../../../core/services/notifications.service';
+import { BubbleType, IBubble } from '../../../../../../../shared/models/bubbles/IBubble';
+import { PlanningHttpService } from '../../../../../../../core/services/bubbles-services/planning/http/planning-http.service';
+import { EventUpdateService } from '../../../../../../../core/services/bubbles-services/event-update.service';
+
+import Swal from 'sweetalert2';
 
 declare const $: any;
 
@@ -19,6 +21,7 @@ export class SettingsDeleteBubbleComponent {
   constructor(private alimentationHttpService: AlimentationHttpService,
               private surveyHttpService: SurveyHttpService,
               private checkboxHttpService: CheckboxHttpService,
+              private planningHttpService: PlanningHttpService,
               private notificationService: NotificationsService,
               private eventUpdateService: EventUpdateService) {
   }
@@ -59,6 +62,9 @@ export class SettingsDeleteBubbleComponent {
         break;
       case BubbleType.CheckboxBubble:
         this.checkboxHttpService.deleteBubble(this.bubble).subscribe(() => this.eventUpdateService.updateEvent(this.eventRef));
+        break;
+      case BubbleType.PlanningBubble:
+        this.planningHttpService.deleteBubble(this.bubble).subscribe(() => this.eventUpdateService.updateEvent(this.eventRef));
         break;
       default:
         break;

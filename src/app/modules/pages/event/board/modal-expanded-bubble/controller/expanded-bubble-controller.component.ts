@@ -16,7 +16,8 @@ export class ExpandedBubbleControllerComponent implements OnInit {
 
   public BubbleType = BubbleType;
 
-  constructor(public expandedBubbleTitleService: ExpandedBubbleTitleService, public loaderService: LoaderService) {}
+  constructor(public expandedBubbleTitleService: ExpandedBubbleTitleService,
+              public loaderService: LoaderService) {}
 
   ngOnInit(): void {
 

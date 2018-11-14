@@ -644,6 +644,11 @@ button.close {
   }
 }
 
+.card-planning-entry{
+  max-width: 350px;
+  margin-top: 15px;
+}
+
 .planning-card {
 
   .card {
@@ -651,8 +656,6 @@ button.close {
   }
 
   .card-content {
-    padding-right: 20px;
-
     img {
       width: 25px;
       height: 25px;
