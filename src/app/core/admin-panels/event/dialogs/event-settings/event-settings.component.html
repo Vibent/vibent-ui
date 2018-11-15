@@ -4,8 +4,8 @@
     </div>
 </div>
 <div class="container vibent-modal">
-    <h2><b>Create an event</b></h2>
-    <p class="lead">You are about to create an event.</p>
+    <h2><b>Event settings</b></h2>
+    <p class="lead">Update your event infos.</p>
     <div [formGroup]="form">
         <div class="form-group">
             <label for="event-title"><b>Title</b>
@@ -19,14 +19,20 @@
                       formControlName="description"></textarea>
         </div>
         <div class="form-group">
-            <label for="event-datetime"><b>Date</b>
+            <label for="event-date"><b>Date</b>
                 <span *ngIf="!dateValidSetted"
                       class="incorrect-input">Date incorrect or not in the future</span></label>
-            <input type="text" class="form-control" id="event-datetime" formControlName="date"/>
-
+            <input type="text" class="form-control" formControlName="date" id="event-date">
         </div>
-        <div class="row justify-content-center m-t-50">
-            <button (click)="saveEvent()" class="btn btn-round btn-add-event">Create</button>
+    </div>
+    <div class="card card-group-remove">
+        <div class="card-body">
+            <h5 class="card-title text-dark">Delete event</h5>
+            <h6 class="card-subtitle mb-2 text-dark">Deleting event is irreversible</h6>
+            <button class="btn btn-danger" (click)="deleteEvent()">Delete</button>
         </div>
+    </div>
+    <div class="row justify-content-center m-t-50">
+        <button (click)="updateInfo()" class="btn btn-round btn-add-event">Update</button>
     </div>
 </div>

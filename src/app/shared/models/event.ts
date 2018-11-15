@@ -8,12 +8,12 @@ import { TravelBubble } from './bubbles/TravelBubble';
 
 export interface Event {
 
-  title: string;
+  title?: string;
   ref?: string;
   description?: string;
   endDate?: Date;
   startDate?: string;
-  groupRef: string;
+  groupRef?: string;
   // TODO type
   participationRefs?: EventParticipant[];
 

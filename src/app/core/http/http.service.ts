@@ -80,6 +80,15 @@ export class HttpService {
     return this.http.post(this.API_URL + '/event', body, this.getOptions());
   }
 
+  public deleteEvent(eventRef: string): any {
+    return this.http.delete(this.API_URL + '/event/' + eventRef, this.getOptions());
+  }
+
+  public updateEvent(event: Event): Observable<Event> {
+    const body = JSON.stringify(event);
+    return this.http.patch<Event>(this.API_URL + '/event/' + event.ref, body, this.getOptions());
+  }
+
   /*** User ***/
 
   public getMe(): Observable<User> {

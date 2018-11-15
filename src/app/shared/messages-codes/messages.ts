@@ -17,6 +17,7 @@ export class Messages {
   public static readonly EMAIL_UNCONFIRMED = 'An error occured during your email verification.';
   public static readonly EVENT_CREATED = 'Your event is created, you can now add some bubbles to it.';
   public static readonly GROUP_CREATED = 'Your group is created, you can now invite some people.';
+  public static readonly EVENT_UPDATED = 'Event updated.';
 
 
 }
