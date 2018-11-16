@@ -51,7 +51,7 @@
         <div class="row justify-content-center">
             <div class="scrolling-wrapper-event">
                 <app-event-participants-preview
-                        *ngFor="let participant of event.participationRefs"
+                        *ngFor="let participant of this.participationRefs"
                         [participant]=participant>
                 </app-event-participants-preview>
             </div>

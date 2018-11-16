@@ -20,6 +20,7 @@ export class EventComponent implements OnInit, OnDestroy {
   bubbleToExpand: IBubble;
   eventUpdateSubscribtion: EventEmitter<Event>;
   blackServiceEventUpdateSubscribtion: EventEmitter<Event>;
+  participationRefs: EventParticipant[] = [];
 
   constructor(private route: ActivatedRoute,
               private eventAdminPanelService: EventAdminPanelService,
@@ -30,6 +31,9 @@ export class EventComponent implements OnInit, OnDestroy {
     this.blacknoteService.initConnectionForEventUpdate(this.event.ref);
   }
 
+  /**
+   * Outputs methods
+   */
   onBubbleSentForExpand(bubble: IBubble) {
     this.bubbleToExpand = bubble;
   }
@@ -38,21 +42,26 @@ export class EventComponent implements OnInit, OnDestroy {
     $('#modalSelectBubbleType').modal('show');
   }
 
+  onParticipationUpdate(eventParticipation: EventParticipant) {
+    this.event.participationRefs[this.event.participationRefs.findIndex(p => p.userRef === eventParticipation.userRef)] = eventParticipation;
+    this.participationRefs = this.event.participationRefs;
+  }
+
   ngOnInit() {
     this.eventAdminPanelService.toggleEventPanel({eventRef: this.event.ref, isOpen: true});
 
     this.eventUpdateSubscribtion = this.eventUpdateService.eventUpdated.subscribe(event => {
       this.event = event;
-      this.pushBubbles();
+      this.refreshBubblesAndParticipations();
     });
 
     this.blackServiceEventUpdateSubscribtion = this.blacknoteService.eventUpdated.subscribe(event => {
       this.event = event;
-      this.pushBubbles();
+      this.refreshBubblesAndParticipations();
       this.updateExpandedBubble();
     });
 
-    this.pushBubbles();
+    this.refreshBubblesAndParticipations();
   }
 
   ngOnDestroy() {
@@ -62,11 +71,11 @@ export class EventComponent implements OnInit, OnDestroy {
     this.blackServiceEventUpdateSubscribtion.unsubscribe();
   }
 
-  onParticipationUpdate(eventParticipation: EventParticipant) {
-    this.event.participationRefs[this.event.participationRefs.findIndex(p => p.userRef === eventParticipation.userRef)] = eventParticipation;
-  }
-
-  pushBubbles() {
+  /**
+   * Concat bubbles to pass them in bubbles-preview controller
+   * Refresh participations
+   */
+  refreshBubblesAndParticipations() {
     let bubbles: IBubble[] = [];
     this.event.alimentationBubbles.forEach(bubble => bubble.type = BubbleType.AlimentationBubble);
     this.event.travelBubbles.forEach(bubble => bubble.type = BubbleType.TravelBubble);
@@ -83,15 +92,28 @@ export class EventComponent implements OnInit, OnDestroy {
       this.event.surveyBubbles,
       this.event.freeBubbles);
     this.bubbles = bubbles;
-    console.log(this.bubbles);
+    this.compareParticipations();
   }
 
+  /**
+   * Update the current opened bubble, in case blacknote pushed some changes
+   */
   updateExpandedBubble() {
     if (this.bubbleToExpand) {
       const b = this.bubbles.find(bubble => bubble.id === this.bubbleToExpand.id);
       if (b) {
         this.bubbleToExpand = b;
       }
+    }
+  }
+
+  /**
+   * Duplicate participations and check for changes on each event update
+   * Allow to not push new input in participations component, to not reload pariticpants avatars
+   */
+  compareParticipations() {
+    if (!(JSON.stringify(this.event.participationRefs) === JSON.stringify(this.participationRefs))) {
+      this.participationRefs = this.event.participationRefs;
     }
   }
 
