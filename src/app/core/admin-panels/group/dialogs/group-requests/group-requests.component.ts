@@ -21,7 +21,6 @@ export class GroupRequestsComponent implements OnInit {
               @Inject(MAT_DIALOG_DATA) data) {
 
     this.group = data.group;
-    console.log(window.innerHeight);
     const dialogHeight = window.innerHeight <= 700 ? window.innerHeight - 50 + 'px' : '700px';
     dialogRef.updateSize('600px', dialogHeight);
   }

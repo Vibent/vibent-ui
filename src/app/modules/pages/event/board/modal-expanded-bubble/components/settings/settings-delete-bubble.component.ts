@@ -42,7 +42,7 @@ export class SettingsDeleteBubbleComponent {
       confirmButtonColor: '#3085d6',
       reverseButtons: true,
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonText: 'Delete'
     }).then((result) => {
       if (result.value) {
         this.delete();
@@ -52,7 +52,6 @@ export class SettingsDeleteBubbleComponent {
   }
 
   delete() {
-    console.log(this.bubble);
     switch (this.bubble.type) {
       case BubbleType.AlimentationBubble:
         this.alimentationHttpService.deleteBubble(this.bubble).subscribe(() => this.eventUpdateService.updateEvent(this.eventRef));

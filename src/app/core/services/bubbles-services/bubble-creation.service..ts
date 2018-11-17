@@ -36,7 +36,6 @@ export class BubbleCreationService {
 
   createPlanningBubble(eventRef: string, title: string) {
     const body = JSON.stringify({eventRef: eventRef, title: title});
-    console.log(body);
     return this.http.post(this.API_URL + '/bubble/planning', body, httpOptions);
   }
 

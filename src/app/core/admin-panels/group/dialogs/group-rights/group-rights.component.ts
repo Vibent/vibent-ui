@@ -17,7 +17,6 @@ export class GroupRightsComponent implements OnInit {
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<GroupRightsComponent>,
               private router: Router,
-              private adminPanelService: GroupAdminPanelService,
               @Inject(MAT_DIALOG_DATA) data) {
 
     this.group = data.group;

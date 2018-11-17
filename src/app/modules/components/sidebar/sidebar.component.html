@@ -4,7 +4,7 @@
     </div>
 </div>
 <div class="sidebar-wrapper">
-    <div *ngIf="isMobileMenu()">
+    <div *ngIf="screenSizesService.isMobileMenu()">
         <ul class="nav navbar-nav nav-mobile-menu">
             <li class="nav-item dropdown">
                 <a class="nav-link"
@@ -60,11 +60,11 @@
         </li>
     </ul>
     <app-group-admin-panel
-            *ngIf="groupAdminPanelResult.isOpen && !isMobileMenu()"
+            *ngIf="groupAdminPanelResult.isOpen && !screenSizesService.isMobileMenu()"
             [groupRef]="groupAdminPanelResult.groupRef">
     </app-group-admin-panel>
     <app-event-admin-panel
-            *ngIf="eventAdminPanelResult.isOpen && !isMobileMenu()"
+            *ngIf="eventAdminPanelResult.isOpen && !screenSizesService.isMobileMenu()"
             [eventRef]="eventAdminPanelResult.eventRef">
     </app-event-admin-panel>
 </div>

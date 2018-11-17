@@ -1,5 +1,4 @@
 import { EventEmitter, Injectable, Output } from '@angular/core';
-import { HttpService } from '../http/http.service';
 
 @Injectable()
 export class EventAdminPanelService {

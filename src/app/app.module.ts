@@ -43,6 +43,9 @@ import { UserManagementService } from './core/services/user-management.service';
 import { LoaderModule } from './core/loader/loader.module';
 import { LoaderService } from './core/services/loader/loader.service';
 import { ResetPasswordModule } from './core/authentification/forgot/reset-password/reset-password.module';
+import { EventSettingsComponent } from './core/admin-panels/event/dialogs/event-settings/event-settings.component';
+import { EventSettingsModule } from './core/admin-panels/event/dialogs/event-settings/event-settings.module';
+import { ScreenSizesService } from './core/services/screen-sizes.service';
 
 @NgModule({
   imports: [
@@ -71,6 +74,7 @@ import { ResetPasswordModule } from './core/authentification/forgot/reset-passwo
     ProfileModule,
     ProfileSettingsModule,
     GroupSettingsModule,
+    EventSettingsModule,
     GroupRightsModule,
     GroupRequestsModule,
     PublicGroupModule,
@@ -83,6 +87,7 @@ import { ResetPasswordModule } from './core/authentification/forgot/reset-passwo
   ],
   providers: [
     CookieService,
+    ScreenSizesService,
     LoaderService,
     GroupAdminPanelService,
     EventAdminPanelService,
@@ -96,6 +101,7 @@ import { ResetPasswordModule } from './core/authentification/forgot/reset-passwo
   bootstrap: [AppComponent],
   entryComponents: [
     EventCreationComponent,
+    EventSettingsComponent,
     GroupCreationComponent,
     GroupMembersComponent,
     AddGroupMembersComponent,

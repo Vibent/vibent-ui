@@ -60,7 +60,6 @@ export class AlimentationEntryComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.alimentationDataModel);
     this.constructAlimentationDataModel();
     $(() => {
       $('.tooltip-activation').tooltip();
@@ -80,7 +79,7 @@ export class AlimentationEntryComponent implements OnInit {
       reverseButtons: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonText: 'Delete'
     }).then((result) => {
       if (result.value) {
         this.alimentationHttpService.deleteEntry(this.alimentationEntry).subscribe(() => {

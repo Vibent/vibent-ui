@@ -11,6 +11,7 @@ import { GroupRequestsComponent } from '../../../../core/admin-panels/group/dial
 import { GroupRightsComponent } from '../../../../core/admin-panels/group/dialogs/group-rights/group-rights.component';
 import { GroupSettingsComponent } from '../../../../core/admin-panels/group/dialogs/group-settings/group-settings.component';
 import { Event } from '../../../../shared/models/event';
+import { ScreenSizesService } from '../../../../core/services/screen-sizes.service';
 
 declare const $: any;
 
@@ -25,6 +26,7 @@ export class GroupComponent implements OnInit, OnDestroy {
   public group: Group;
 
   constructor(public dialog: MatDialog,
+              public screenSizesService: ScreenSizesService,
               private route: ActivatedRoute,
               private groupAdminPanelService: GroupAdminPanelService) {
 
@@ -72,6 +74,9 @@ export class GroupComponent implements OnInit, OnDestroy {
 
   public openSettingsDialog(): void {
     this.dialog.open(GroupSettingsComponent, {
+      maxWidth: '100vw',
+      maxHeight: '100vh',
+      panelClass: 'full-screen-dialog',
       data: {group: this.group}
     });
   }
@@ -86,10 +91,6 @@ export class GroupComponent implements OnInit, OnDestroy {
     this.dialog.open(GroupRequestsComponent, {
       data: {group: this.group}
     });
-  }
-
-  public isMobileMenu(): boolean {
-    return !($(window).width() > 991);
   }
 
   public sortEventByDate(a, b): any {

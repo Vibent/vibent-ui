@@ -7,6 +7,7 @@ import { User } from '../../../shared/models/user';
 import { HttpService } from '../../../core/http/http.service';
 import { EventAdminPanelService } from '../../../core/services/event-admin-panel.service';
 import { UserManagementService } from '../../../core/services/user-management.service';
+import { ScreenSizesService } from '../../../core/services/screen-sizes.service';
 
 declare const $: any;
 
@@ -29,12 +30,10 @@ export const ROUTES: IRouteInfo[] = [
 })
 export class SidebarComponent implements OnInit {
 
-  public menuItems: any[];
-  @Input()
-  public groupAdminPanelResult = {groupRef: null, isOpen: false};
-  @Input()
-  public eventAdminPanelResult = {eventRef: null, isOpen: false};
-  public user: User;
+  menuItems: any[];
+  groupAdminPanelResult = {groupRef: null, isOpen: false};
+  eventAdminPanelResult = {eventRef: null, isOpen: false};
+  user: User;
 
   constructor(private router: Router,
               private route: ActivatedRoute,
@@ -42,7 +41,8 @@ export class SidebarComponent implements OnInit {
               private userManagementService: UserManagementService,
               private httpService: HttpService,
               private groupAdminPanelService: GroupAdminPanelService,
-              private eventAdminPanelService: EventAdminPanelService
+              private eventAdminPanelService: EventAdminPanelService,
+              public screenSizesService: ScreenSizesService
   ) {
     this.user = this.userManagementService.getMe();
   }
@@ -58,10 +58,6 @@ export class SidebarComponent implements OnInit {
     this.userManagementService.change.subscribe(() => {
       this.user = this.userManagementService.getMe();
     });
-  }
-
-  public isMobileMenu(): boolean {
-    return !($(window).width() > 991);
   }
 
   public logout(): void {
