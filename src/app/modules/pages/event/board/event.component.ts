@@ -120,7 +120,8 @@ export class EventComponent implements OnInit, OnDestroy {
     if (!(JSON.stringify(this.event.participationRefs) === JSON.stringify(this.participationRefs))) {
       this.participationRefs = this.event.participationRefs;
     }
-    
+  }
+
   openSettingsDialog() {
       this.dialog.open(EventSettingsComponent, {
       maxWidth: '100vw',
