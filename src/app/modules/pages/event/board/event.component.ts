@@ -6,6 +6,9 @@ import { EventAdminPanelService } from '../../../../core/services/event-admin-pa
 import { EventUpdateService } from '../../../../core/services/bubbles-services/event-update.service';
 import { BlacknoteService } from '../../../../core/services/blacknote/blacknote.service';
 import { EventParticipant } from '../../../../shared/models/event-participant';
+import { ScreenSizesService } from '../../../../core/services/screen-sizes.service';
+import { EventSettingsComponent } from '../../../../core/admin-panels/event/dialogs/event-settings/event-settings.component';
+import { MatDialog } from '@angular/material';
 
 declare const $: any;
 
@@ -24,7 +27,9 @@ export class EventComponent implements OnInit, OnDestroy {
   constructor(private route: ActivatedRoute,
               private eventAdminPanelService: EventAdminPanelService,
               private eventUpdateService: EventUpdateService,
-              private blacknoteService: BlacknoteService) {
+              private blacknoteService: BlacknoteService,
+              public dialog: MatDialog,
+              public screenSizesService: ScreenSizesService) {
 
     this.event = this.route.snapshot.data['event'];
     this.blacknoteService.initConnectionForEventUpdate(this.event.ref);
@@ -83,7 +88,6 @@ export class EventComponent implements OnInit, OnDestroy {
       this.event.surveyBubbles,
       this.event.freeBubbles);
     this.bubbles = bubbles;
-    console.log(this.bubbles);
   }
 
   updateExpandedBubble() {
@@ -93,6 +97,15 @@ export class EventComponent implements OnInit, OnDestroy {
         this.bubbleToExpand = b;
       }
     }
+  }
+
+  openSettingsDialog() {
+      this.dialog.open(EventSettingsComponent, {
+      maxWidth: '100vw',
+      maxHeight: '100vh',
+      panelClass: 'full-screen-dialog',
+      data: {event: this.event}
+    });
   }
 
 }

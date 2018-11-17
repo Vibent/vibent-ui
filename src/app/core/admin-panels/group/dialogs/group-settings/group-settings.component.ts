@@ -16,7 +16,7 @@ export class GroupSettingsComponent implements OnInit {
   group: Group;
   form: FormGroup;
   name: FormControl;
-
+  description: FormControl;
   nameValidSetted = true;
 
   constructor(private fb: FormBuilder,
@@ -30,8 +30,8 @@ export class GroupSettingsComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.fb.group({
-      name: new FormControl(this.group.name, Validators.required),
-      description: new FormControl(this.group.description),
+      name: this.name = new FormControl(this.group.name, Validators.required),
+      description: this.description = new FormControl(this.group.description),
     });
   }
 
@@ -44,7 +44,7 @@ export class GroupSettingsComponent implements OnInit {
       confirmButtonColor: '#3085d6',
       reverseButtons: true,
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonText: 'Delete'
     }).then((result) => {
       if (result.value) {
         this.dialogRef.close();
@@ -65,17 +65,18 @@ export class GroupSettingsComponent implements OnInit {
   }
 
   public updateInfo(): void {
-    this.nameValidSetted = this.form.value.name.valid;
-    this.dialogRef.close(this.form.value);
-    this.group.name = this.form.value.name;
+    this.nameValidSetted = this.name.valid;
+    this.group.name = this.name.value;
     this.form.value.description === '' ? this.group.description = null : this.group.description = this.form.value.description;
     const group = {
       ref: this.group.ref,
       name: this.group.name,
       description: this.group.description,
     };
-    console.log(group);
-    this.adminPanelService.updateGroup(group);
+    this.httpService.updateGroup(group).subscribe(() => {
+      this.dialogRef.close();
+      this.adminPanelService.updateGroup(group);
+    });
 
   }
 

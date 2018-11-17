@@ -17,7 +17,6 @@ export class PlanningDataService {
   }
 
   constructPlanningDataModel(planningEntry: PlanningEntry): PlanningDataModel {
-    console.log(moment(planningEntry.start).toDate());
     return {
       user: this.httpService.getUser(planningEntry.userRef),
       start: moment(planningEntry.start).toDate()

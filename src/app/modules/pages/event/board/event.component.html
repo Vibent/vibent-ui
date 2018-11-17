@@ -8,6 +8,23 @@
                 <h5 class="event-description">{{event.description}}</h5>
             </div>
         </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-10 text-center">
+                <ng-container *ngIf="screenSizesService.isMobileMenu()">
+                    <div class="nav-item dropdown">
+                        <button class="btn btn-secondary btn-sm dropdown-toggle"
+                                type="button"
+                                id="event_admin_mobile"
+                                data-toggle="dropdown">
+                            Admin settings
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item cursor-pointer" (click)="openSettingsDialog()">Event settings</a>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
 
         <event-participants-choice
                 (userParticipationEmiter)="this.onParticipationUpdate($event)"

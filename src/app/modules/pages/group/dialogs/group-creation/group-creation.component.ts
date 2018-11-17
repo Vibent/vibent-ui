@@ -45,7 +45,6 @@ export class GroupCreationComponent implements OnInit {
       description: description,
       allAdmins: true
     };
-    console.log(group);
     this.httpService.createGroup(group).subscribe(res => {
       this.close();
       this.router.navigate(['/groups/' + res['ref']]);
