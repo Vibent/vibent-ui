@@ -16,7 +16,7 @@ declare const $: any;
   selector: 'app-event',
   templateUrl: './event.component.html'
 })
-export class EventComponent implements OnInit, OnDestroy {
+export class EventComponent implements OnInit, OnDestroy  {
 
   event: Event;
   bubbles: IBubble[];
@@ -31,7 +31,6 @@ export class EventComponent implements OnInit, OnDestroy {
               private blacknoteService: BlacknoteService,
               public dialog: MatDialog,
               public screenSizesService: ScreenSizesService) {
-
     this.event = this.route.snapshot.data['event'];
     this.blacknoteService.initConnectionForEventUpdate(this.event.ref);
   }
@@ -54,7 +53,6 @@ export class EventComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.eventAdminPanelService.toggleEventPanel({eventRef: this.event.ref, isOpen: true});
-
     this.eventUpdateSubscribtion = this.eventUpdateService.eventUpdated.subscribe(event => {
       this.event = event;
       this.refreshBubblesAndParticipations();

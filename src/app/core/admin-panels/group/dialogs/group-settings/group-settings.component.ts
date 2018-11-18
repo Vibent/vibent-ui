@@ -6,6 +6,8 @@ import { Group } from '../../../../../shared/models/group';
 import { GroupAdminPanelService } from '../../../../services/group-admin-panel.service';
 import Swal from 'sweetalert2';
 import { HttpService } from '../../../../http/http.service';
+import { LoaderService } from '../../../../services/loader/service/loader.service';
+import { Messages } from '../../../../../shared/messages-codes/messages';
 
 @Component({
   selector: 'app-group-settings',
@@ -23,6 +25,7 @@ export class GroupSettingsComponent implements OnInit {
               private dialogRef: MatDialogRef<GroupSettingsComponent>,
               private router: Router,
               private adminPanelService: GroupAdminPanelService,
+              private loaderService: LoaderService,
               private httpService: HttpService,
               @Inject(MAT_DIALOG_DATA) data) {
     this.group = data.group;
@@ -37,21 +40,21 @@ export class GroupSettingsComponent implements OnInit {
 
   public removeGroup(): void {
     Swal({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      title: Messages.ARE_YOU_SURE,
+      text: Messages.NO_REVERT,
       type: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       reverseButtons: true,
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Delete'
+      confirmButtonText: Messages.DELETE
     }).then((result) => {
       if (result.value) {
         this.dialogRef.close();
         this.httpService.deleteGroup(this.group.ref).subscribe();
         Swal(
-          'Deleted!',
-          'Group ' + this.group.name + ' has been deleted',
+          Messages.DELETED,
+          Messages.GROUP_DELETED,
           'success'
         ).then((result) => {
           this.router.navigate(['/groups']);
@@ -65,6 +68,8 @@ export class GroupSettingsComponent implements OnInit {
   }
 
   public updateInfo(): void {
+    this.close();
+    this.loaderService.displayLoadingPageModal();
     this.nameValidSetted = this.name.valid;
     this.group.name = this.name.value;
     this.form.value.description === '' ? this.group.description = null : this.group.description = this.form.value.description;
@@ -74,7 +79,6 @@ export class GroupSettingsComponent implements OnInit {
       description: this.group.description,
     };
     this.httpService.updateGroup(group).subscribe(() => {
-      this.dialogRef.close();
       this.adminPanelService.updateGroup(group);
     });
 

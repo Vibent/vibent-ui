@@ -2,6 +2,7 @@ import { EventEmitter, Injectable, Output } from '@angular/core';
 import { HttpService } from '../http/http.service';
 import { User } from '../../shared/models/user';
 import { ProfileImageService } from '../http/profile-image.service';
+import { LoaderService } from './loader/service/loader.service';
 
 @Injectable()
 export class UserManagementService {
@@ -9,6 +10,7 @@ export class UserManagementService {
   @Output() change: EventEmitter<boolean> = new EventEmitter();
 
   constructor(private httpService: HttpService,
+              private loaderService: LoaderService,
               private profileImageService: ProfileImageService) {
   }
 
@@ -55,6 +57,7 @@ export class UserManagementService {
   public setMeOnCookie(user: User) {
     window.sessionStorage.removeItem('me');
     window.sessionStorage.setItem('me', JSON.stringify(user));
+    this.loaderService.closeLoadingPageModal();
     this.change.emit(true);
   }
 

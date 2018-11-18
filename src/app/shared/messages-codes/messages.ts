@@ -17,7 +17,15 @@ export class Messages {
   public static readonly EMAIL_UNCONFIRMED = 'An error occured during your email verification.';
   public static readonly EVENT_CREATED = 'Your event is created, you can now add some bubbles to it.';
   public static readonly GROUP_CREATED = 'Your group is created, you can now invite some people.';
+  public static readonly GROUP_UPDATED = 'Group updated.';
   public static readonly EVENT_UPDATED = 'Event updated.';
+  public static readonly EVENT_DELETED = 'Event deleted.';
+
+  public static readonly ARE_YOU_SURE = 'Are you sure?';
+  public static readonly DELETE = 'Delete';
+  public static readonly NO_REVERT = 'You won\'t be able to revert this!';
+  public static readonly GROUP_DELETED = 'Group deleted';
+  public static readonly DELETED = 'Deleted';
 
 
 }

@@ -11,7 +11,7 @@ import { Observable } from 'rxjs/Observable';
 import { CookieService } from 'ngx-cookie-service';
 import 'rxjs/add/operator/do';
 import { Router } from '@angular/router';
-import { LoaderService } from '../../core/services/loader/loader.service';
+import { LoaderService } from '../../core/services/loader/service/loader.service';
 
 @Injectable()
 export class TokenInterceptor implements HttpInterceptor {

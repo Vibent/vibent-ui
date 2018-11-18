@@ -6,6 +6,7 @@ import 'rxjs/add/operator/map';
 import { HttpService } from '../../../../../core/http/http.service';
 import { NotificationsService, NotificationType } from '../../../../../core/services/notifications.service';
 import { Messages } from '../../../../../shared/messages-codes/messages';
+import { LoaderService } from '../../../../../core/services/loader/service/loader.service';
 
 @Component({
   selector: 'app-group-creation',
@@ -20,6 +21,7 @@ export class GroupCreationComponent implements OnInit {
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<GroupCreationComponent>,
+              private loaderService: LoaderService,
               private notificationService: NotificationsService,
               private httpService: HttpService,
               @Inject(MAT_DIALOG_DATA) data,
@@ -37,6 +39,8 @@ export class GroupCreationComponent implements OnInit {
   }
 
   public saveGroup(): void {
+    this.close();
+    this.loaderService.displayLoadingPageModal();
     this.titleValidSetted = this.title.valid;
     let description: string;
     this.form.value.description === '' ? description = null : description = this.form.value.description;
@@ -46,7 +50,7 @@ export class GroupCreationComponent implements OnInit {
       allAdmins: true
     };
     this.httpService.createGroup(group).subscribe(res => {
-      this.close();
+      this.loaderService.closeLoadingPageModal();
       this.router.navigate(['/groups/' + res['ref']]);
       this.notificationService.notify(Messages.GROUP_CREATED, NotificationType.SUCCESS)
     });

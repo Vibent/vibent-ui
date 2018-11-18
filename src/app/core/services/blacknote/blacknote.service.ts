@@ -3,7 +3,7 @@ import * as io from 'socket.io-client';
 import { Event } from '../../../shared/models/event';
 import { HttpService } from '../../http/http.service';
 import { AppSettings } from '../../../shared/global/constants';
-import { LoaderService } from '../loader/loader.service';
+import { LoaderService } from '../loader/service/loader.service';
 
 @Injectable()
 export class BlacknoteService {

@@ -7,9 +7,9 @@ import { HttpService } from '../../../../http/http.service';
 import { Event } from '../../../../../shared/models/event';
 import { EventAdminPanelService } from '../../../../services/event-admin-panel.service';
 import * as moment from 'moment';
-import { NotificationsService, NotificationType } from '../../../../services/notifications.service';
 import { Messages } from '../../../../../shared/messages-codes/messages';
 import { EventUpdateService } from '../../../../services/bubbles-services/event-update.service';
+import { LoaderService } from '../../../../services/loader/service/loader.service';
 
 declare const $: any;
 
@@ -31,8 +31,8 @@ export class EventSettingsComponent implements OnInit {
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<EventSettingsComponent>,
+              private loaderService: LoaderService,
               private eventUpdateService: EventUpdateService,
-              private notificationService: NotificationsService,
               private router: Router,
               private adminPanelService: EventAdminPanelService,
               private httpService: HttpService,
@@ -56,21 +56,21 @@ export class EventSettingsComponent implements OnInit {
 
   public deleteEvent(): void {
     Swal({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      title: Messages.ARE_YOU_SURE,
+      text: Messages.NO_REVERT,
       type: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       reverseButtons: true,
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Delete'
+      confirmButtonText: Messages.DELETE
     }).then((result) => {
       if (result.value) {
         this.dialogRef.close();
         this.httpService.deleteEvent(this.event.ref).subscribe();
         Swal(
-          'Deleted!',
-          'Event ' + this.event.title + ' has been deleted',
+          Messages.DELETED,
+          Messages.EVENT_DELETED,
           'success'
         ).then((result) => {
           this.router.navigate(['/events']);
@@ -84,6 +84,8 @@ export class EventSettingsComponent implements OnInit {
   }
 
   public updateInfo(): void {
+    this.close();
+    this.loaderService.displayLoadingPageModal();
     this.dateValidSetted = true;
     this.titleValidSetted = this.title.valid;
     this.event.title = this.title.value;
@@ -95,9 +97,7 @@ export class EventSettingsComponent implements OnInit {
       description: this.event.description,
     };
     this.httpService.updateEvent(event).subscribe(() => {
-      this.close();
-      this.eventUpdateService.updateEvent(this.event.ref);
-      this.notificationService.notify(Messages.EVENT_UPDATED, NotificationType.SUCCESS);
+      this.adminPanelService.updateEvent(event);
     }, () => {
       this.dateValidSetted = false;
     });

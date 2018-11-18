@@ -6,6 +6,13 @@
   height: 100vh;
 }
 
+.full-screen-dialog-loader .mat-dialog-container {
+  max-width: 100vw !important;
+  width: 100vw;
+  height: 100vh;
+  background: #4343434f;
+}
+
 .vibent-modal{
   max-width: 640px;
 }

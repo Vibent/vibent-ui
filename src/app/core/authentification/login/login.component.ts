@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { Messages } from '../../../shared/messages-codes/messages';
+import { LoadingPageComponent } from '../../services/loader/loading-page/loading-page.component';
 
 @Component({
   selector: 'app-login',

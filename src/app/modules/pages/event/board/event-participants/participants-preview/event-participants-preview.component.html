@@ -7,7 +7,8 @@
         <img *ngIf="user?.imagePath" class="img" src={{user?.imagePath}}/>
     </div>
     <div class="participant-user-body">
-        <div class="participant-user-name">{{user?.firstName}} {{user?.lastName}}</div>
+        <div class="participant-user-name">{{user?.firstName}}</div>
+        <div class="participant-user-name">{{user?.lastName}}</div>
         <div class="participant-user-additional-{{this.getResponseCss(participant.answer)}}">
             {{participant.answer}}
         </div>
