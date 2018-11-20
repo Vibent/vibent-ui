@@ -9,6 +9,9 @@
 	<div class="row justify-content-center m-t-25">
 		<img id="avatarProfile" class="avatar-profile-settings" (click)="fileInput.click()" src="{{croppedImage}}">
 	</div>
+	<div class="row justify-content-center">
+		<span class="cursor-pointer" (click)="fileInput.click()">Edit avatar</span>
+	</div>
 
 	<image-cropper *ngIf="imageChangedEvent"
 				   [imageChangedEvent]="imageChangedEvent"
