@@ -24,6 +24,7 @@ export class AuthenticationService {
         _this.loaderService.closeLoadingPageModal();
       })
       .catch(e => {
+        _this.loaderService.closeLoadingPageModal();
         onFail(e);
       });
   }
@@ -38,6 +39,7 @@ export class AuthenticationService {
       _this.router.navigateByUrl(returnUrl);
     })
     .catch(e => {
+      _this.loaderService.closeLoadingPageModal();
       onFail(e);
     });
   }
