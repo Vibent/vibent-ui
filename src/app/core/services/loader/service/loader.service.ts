@@ -1,11 +1,18 @@
 import { Injectable } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material';
+import { LoadingPageComponent } from '../loading-page/loading-page.component';
 
 @Injectable()
 export class LoaderService {
 
-  private pendingRequests = 0;
   eventUpdated = false;
   eventUpdateCanBeDisplayed = true;
+  dialogRef: MatDialogRef<LoadingPageComponent> = null;
+  private pendingRequests = 0;
+  private modalDisplayedCount = 0;
+
+  constructor(public dialog: MatDialog) {
+  }
 
   addPendingRequest() {
     this.pendingRequests++;
@@ -42,6 +49,27 @@ export class LoaderService {
         this.pendingRequests = 0;
       }
     }, 7000);
+  }
+
+  displayLoadingPageModal() {
+    this.modalDisplayedCount++;
+    if (!this.dialogRef) {
+      this.dialogRef = this.dialog.open(LoadingPageComponent, {
+        maxWidth: '100vw',
+        maxHeight: '100vh',
+        panelClass: 'full-screen-dialog-loader',
+      });
+    }
+  }
+
+  closeLoadingPageModal() {
+    if (this.modalDisplayedCount > 0) {
+      this.modalDisplayedCount--;
+    }
+    if (this.dialogRef && this.modalDisplayedCount === 0) {
+      this.dialogRef.close();
+      this.dialogRef = null;
+    }
   }
 
 }

@@ -6,6 +6,7 @@ import { User } from '../../../../../shared/models/user';
 import { HttpService } from '../../../../../core/http/http.service';
 import { ProfileImageService } from '../../../../../core/http/profile-image.service';
 import { UserManagementService } from '../../../../../core/services/user-management.service';
+import { LoaderService } from '../../../../../core/services/loader/service/loader.service';
 
 @Component({
   selector: 'app-profile-settings',
@@ -28,6 +29,7 @@ export class ProfileSettingsComponent implements OnInit {
               private dialogRef: MatDialogRef<ProfileSettingsComponent>,
               private httpService: HttpService,
               private profileImageService: ProfileImageService,
+              private loaderService: LoaderService,
               private router: Router,
               @Inject(MAT_DIALOG_DATA) data,
               private userManagementService: UserManagementService) {
@@ -67,6 +69,8 @@ export class ProfileSettingsComponent implements OnInit {
   }
 
   public updateInfo(): void {
+    this.loaderService.displayLoadingPageModal();
+    this.dialogRef.close();
     this.firstnameValidSetted = this.firstName.valid;
     this.lastnameValidSetted = this.lastName.valid;
 
@@ -79,11 +83,13 @@ export class ProfileSettingsComponent implements OnInit {
     };
 
     this.httpService.updateUser(user).subscribe(() => {
-      this.dialogRef.close(this.form.value);
       this.userManagementService.setMe();
     });
     if (this.fileToUpload) {
-      this.profileImageService.uploadProfileImage(this.fileToUpload, user).subscribe(() => this.userManagementService.setMe());
+      this.loaderService.displayLoadingPageModal();
+      this.profileImageService.uploadProfileImage(this.fileToUpload, user).subscribe(() => {
+        this.userManagementService.setMe();
+      });
     }
   }
 

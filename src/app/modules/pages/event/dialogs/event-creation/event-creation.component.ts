@@ -7,6 +7,7 @@ import { HttpService } from '../../../../../core/http/http.service';
 import { Event } from '../../../../../shared/models/event';
 import { NotificationsService, NotificationType } from '../../../../../core/services/notifications.service';
 import { Messages } from '../../../../../shared/messages-codes/messages';
+import { LoaderService } from '../../../../../core/services/loader/service/loader.service';
 
 declare const $: any;
 
@@ -30,6 +31,7 @@ export class EventCreationComponent implements OnInit {
               private dialogRef: MatDialogRef<EventCreationComponent>,
               private httpService: HttpService,
               private notificationService: NotificationsService,
+              private loaderService: LoaderService,
               private router: Router,
               @Inject(MAT_DIALOG_DATA) data) {
 
@@ -52,6 +54,8 @@ export class EventCreationComponent implements OnInit {
   }
 
   public saveEvent(): void {
+    this.close();
+    this.loaderService.displayLoadingPageModal();
     this.titleValidSetted = this.title.valid;
     this.dateValidSetted = this.date.valid;
 
@@ -63,7 +67,7 @@ export class EventCreationComponent implements OnInit {
     };
 
     this.httpService.createEvent(event).subscribe(res => {
-      this.dialogRef.close();
+      this.loaderService.closeLoadingPageModal();
       this.router.navigate(['/events/' + res['ref']]);
       this.notificationService.notify(Messages.EVENT_CREATED, NotificationType.SUCCESS);
     }, () => {
@@ -74,7 +78,5 @@ export class EventCreationComponent implements OnInit {
   public close(): void {
     this.dialogRef.close();
   }
-
-
 
 }

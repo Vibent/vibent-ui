@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+
 declare var $: any;
 
 export enum NotificationType {
@@ -10,19 +11,19 @@ export enum NotificationType {
 
 @Injectable()
 export class NotificationsService {
-  
+
   constructor() {
   }
-  
+
   public notify(message: string, type: NotificationType): void {
-    
+
     $.notify({
-      icon: "notifications",
+      icon: 'notifications',
       message: message
-    
-    },{
+    }, {
       type: type,
-      timer: 4000,
+      delay: 1000,
+      timer: 1000,
       placement: {
         from: 'bottom',
         align: 'right'

@@ -41,11 +41,13 @@ import { EventAdminPanelService } from './core/services/event-admin-panel.servic
 import { NotificationsService } from './core/services/notifications.service';
 import { UserManagementService } from './core/services/user-management.service';
 import { LoaderModule } from './core/loader/loader.module';
-import { LoaderService } from './core/services/loader/loader.service';
+import { LoaderService } from './core/services/loader/service/loader.service';
 import { ResetPasswordModule } from './core/authentification/forgot/reset-password/reset-password.module';
 import { EventSettingsComponent } from './core/admin-panels/event/dialogs/event-settings/event-settings.component';
 import { EventSettingsModule } from './core/admin-panels/event/dialogs/event-settings/event-settings.module';
 import { ScreenSizesService } from './core/services/screen-sizes.service';
+import { LoadingPageComponent } from './core/services/loader/loading-page/loading-page.component';
+import { LoadingPageModule } from './core/services/loader/loading-page/loading-page.module';
 
 @NgModule({
   imports: [
@@ -64,6 +66,7 @@ import { ScreenSizesService } from './core/services/screen-sizes.service';
     SidebarModule,
     NavbarModule,
     EventModule,
+    LoadingPageModule,
     HttpClientModule,
     GroupInvitationModule,
     GroupModule,
@@ -83,7 +86,7 @@ import { ScreenSizesService } from './core/services/screen-sizes.service';
   ],
   declarations: [
     AppComponent,
-    MainComponent,
+    MainComponent
   ],
   providers: [
     CookieService,
@@ -100,6 +103,7 @@ import { ScreenSizesService } from './core/services/screen-sizes.service';
     }],
   bootstrap: [AppComponent],
   entryComponents: [
+    LoadingPageComponent,
     EventCreationComponent,
     EventSettingsComponent,
     GroupCreationComponent,
