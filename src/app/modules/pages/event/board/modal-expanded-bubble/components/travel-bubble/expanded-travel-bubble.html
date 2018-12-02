@@ -1,63 +1,19 @@
 <div class="modal-body">
-	<div class="expanded-bubble">
-		<div class="card-body text-center">
-			<div class="card-header mb-2">
-				<span class="success">Travel with your friends</span>
-			</div>
-			<div class="survey-card">
-				<div class="card">
-					<div class="card-content">
-						<div class="row justify-content-center">
-							<div class="card" style="max-width: 18rem;display:inline-block">
-								<div #gmap class="w-100 h-150-p"></div>
-								<div class="proposal-avatar" matTooltip="Théo Joubert" [matTooltipPosition]="'above'"><img
-										src="/assets/img/theo.jpg"></div>
-								<div class="card-body">
-									<h3 class="card-title" style="text-align: center"><b>4</b> seats left</h3>
-									<p class="card-text" style="text-align: center">Will depart from <b>Lyon</b></p>
-									<div class="row justify-content-center">
-										<div class="proposal-traveler-avatar" matTooltip="Théo Joubert is in!"
-												 [matTooltipPosition]="'above'">
-											<img src="/assets/img/theo.jpg"></div>
-										<div class="proposal-traveler-avatar" matTooltip="Théo Joubert is in!"
-												 [matTooltipPosition]="'above'">
-											<img src="/assets/img/theo.jpg"></div>
-									</div>
-									<div class="row justify-content-center">
-										<a href="#" class="btn btn-primary">Take a seat</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row justify-content-center">
-							<div class="card" style="max-width: 18rem;display:inline-block">
-								<div class="request-avatar" matTooltip="Théo Joubert" [matTooltipPosition]="'above'"><img
-										src="/assets/img/theo.jpg"></div>
-								<div class="card-body">
-									<h3 class="card-title" style="text-align: center; margin-top: 25px">Théo requested <b>1</b> seat</h3>
-									<p class="card-text" style="text-align: center">From <b>Villeurbanne</b></p>
-									<div class="row justify-content-center">
-										<a href="#" class="btn btn-primary">Take him</a>
-									</div>
-								</div>
-							</div>
-							<div class="card" style="max-width: 18rem;display:inline-block">
-								<div class="request-avatar"><img src="/assets/img/theo.jpg"></div>
-								<div class="card-body">
-									<h3 class="card-title" style="text-align: center; margin-top: 25px">You requested <b>1</b> seat</h3>
-									<p class="card-text" style="text-align: center">From <b>Villeurbanne</b></p>
-									<div class="row justify-content-center">
-										<a href="#" class="btn btn-primary"><i class="material-icons">edit</i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <travel-content
+            *ngIf=contentDisplayed
+            [travelBubble]=this.travelBubble
+            [eventRef]=this.eventRef>
+    </travel-content>
+    <travel-settings
+            *ngIf=!contentDisplayed
+            [travelBubble]=this.travelBubble
+            [eventRef]=this.eventRef
+            (bubbleDeleted)=onBackToContentSent()
+            (backToContent)=onBackToContentSent($event)>
+    </travel-settings>
 </div>
-<div class="modal-footer">
-	created by Théo Joubert
+<div class="modal-footer" *ngIf="contentDisplayed">
+    <a (click)="openBubbleSettings()" class="text-black-50 cursor-pointer">
+        <i class="fa fa-cog"></i> Settings
+    </a>
 </div>

@@ -103,7 +103,7 @@ export class EventComponent implements OnInit, OnDestroy  {
    */
   updateExpandedBubble() {
     if (this.bubbleToExpand) {
-      const b = this.bubbles.find(bubble => bubble.id === this.bubbleToExpand.id);
+      const b = this.bubbles.find(bubble => bubble.id === this.bubbleToExpand.id && bubble.type === this.bubbleToExpand.type);
       if (b) {
         this.bubbleToExpand = b;
       }

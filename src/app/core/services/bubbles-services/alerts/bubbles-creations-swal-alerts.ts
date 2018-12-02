@@ -44,4 +44,13 @@ export class BubblesCreationsSwalAlerts {
     });
   }
 
+  alertTravelBubbleCreated() {
+    Swal({
+      type: 'success',
+      title: Messages.BUBBLE_CREATED,
+      text: Messages.TRAVEL_BUBBLE_CREATED,
+      showConfirmButton: true,
+    });
+  }
+
 }

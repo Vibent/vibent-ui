@@ -8,6 +8,8 @@ import { PlanningHttpService } from '../../../../../../../core/services/bubbles-
 import { EventUpdateService } from '../../../../../../../core/services/bubbles-services/event-update.service';
 
 import Swal from 'sweetalert2';
+import { TravelHttpService } from '../../../../../../../core/services/bubbles-services/travel/http/travel-http.service';
+import { Messages, SwalColors } from '../../../../../../../shared/messages-codes/messages';
 
 declare const $: any;
 
@@ -18,14 +20,6 @@ declare const $: any;
 })
 export class SettingsDeleteBubbleComponent {
 
-  constructor(private alimentationHttpService: AlimentationHttpService,
-              private surveyHttpService: SurveyHttpService,
-              private checkboxHttpService: CheckboxHttpService,
-              private planningHttpService: PlanningHttpService,
-              private notificationService: NotificationsService,
-              private eventUpdateService: EventUpdateService) {
-  }
-
   @Input()
   bubble: IBubble;
   @Input()
@@ -33,16 +27,25 @@ export class SettingsDeleteBubbleComponent {
   @Output()
   bubbleDeleted = new EventEmitter<any>();
 
+  constructor(private alimentationHttpService: AlimentationHttpService,
+              private surveyHttpService: SurveyHttpService,
+              private checkboxHttpService: CheckboxHttpService,
+              private planningHttpService: PlanningHttpService,
+              private travelHttpService: TravelHttpService,
+              private notificationService: NotificationsService,
+              private eventUpdateService: EventUpdateService) {
+  }
+
   deleteBubble() {
     Swal({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
       type: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
+      confirmButtonColor: SwalColors.CONFIRM_BUTTON,
       reverseButtons: true,
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Delete'
+      cancelButtonColor: SwalColors.CANCEL_BUTTON,
+      confirmButtonText: Messages.DELETE
     }).then((result) => {
       if (result.value) {
         this.delete();
@@ -64,6 +67,9 @@ export class SettingsDeleteBubbleComponent {
         break;
       case BubbleType.PlanningBubble:
         this.planningHttpService.deleteBubble(this.bubble).subscribe(() => this.eventUpdateService.updateEvent(this.eventRef));
+        break;
+      case BubbleType.TravelBubble:
+        this.travelHttpService.deleteBubble(this.bubble).subscribe(() => this.eventUpdateService.updateEvent(this.eventRef));
         break;
       default:
         break;

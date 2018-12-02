@@ -7,7 +7,7 @@ import { GroupAdminPanelService } from '../../../../services/group-admin-panel.s
 import Swal from 'sweetalert2';
 import { HttpService } from '../../../../http/http.service';
 import { LoaderService } from '../../../../services/loader/service/loader.service';
-import { Messages } from '../../../../../shared/messages-codes/messages';
+import { Messages, SwalColors } from '../../../../../shared/messages-codes/messages';
 
 @Component({
   selector: 'app-group-settings',
@@ -44,9 +44,9 @@ export class GroupSettingsComponent implements OnInit {
       text: Messages.NO_REVERT,
       type: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
+      confirmButtonColor: SwalColors.CONFIRM_BUTTON,
       reverseButtons: true,
-      cancelButtonColor: '#d33',
+      cancelButtonColor: SwalColors.CANCEL_BUTTON,
       confirmButtonText: Messages.DELETE
     }).then((result) => {
       if (result.value) {

@@ -53,4 +53,10 @@ export class ProfileImageService {
     user.imagePath = 'https://gravatar.com/avatar/' + md5.appendStr(user.ref).end() + '.jpg?s=272&d=retro';
   }
 
+  getUserProfileImage(userRef: string) {
+    const md5 = new Md5();
+   // return AppSettings.S3_BUCKET_PROFILE_URL + userRef;
+    return  'https://gravatar.com/avatar/' + md5.appendStr(userRef).end() + '.jpg?s=272&d=retro';
+  }
+
 }

@@ -8,6 +8,23 @@ export class Messages {
   public static readonly CHECKBOX_BUBBLE_CREATED = 'Your checkbox bubble is ready! You can now list some things to do, where anyone can help you to check.';
   public static readonly SURVEY_BUBBLE_CREATED = 'Your survey bubble is ready! Anyone can now add options and vote!';
   public static readonly PLANNING_BUBBLE_CREATED = 'Your planning bubble is ready! Anyone can now add some plans !';
+  public static readonly TRAVEL_BUBBLE_CREATED = 'Your travel bubble is ready! Let\'s for a transport organization.' ;
+  public static readonly ATTACH_REQUEST = 'Attach your request to this proposal?.';
+  public static readonly ATTACH_REQUEST_TEXT = 'You have an existing request, want to attach it to this proposal? Your request will no longer appear because you will have booked a place in this car';
+  public static readonly TAKE_A_SEAT = 'Take a seat?';
+  public static readonly TAKE_A_SEAT_TEXT = 'You\'re about to book a seat in this car. Are you sure you think the person proposing this route will be able to pick you up easily?';
+  public static readonly DELETE_BOOKING = 'Delete your booking?';
+  public static readonly DELETE_BOOKING_TEXT = 'You\'re about to cancel your reservation and free a place.';
+  public static readonly NEED_CREATE_PROPOSAL = 'Create a proposal first.';
+  public static readonly NEED_CREATE_PROPOSAL_TEXT = 'You need to create a proposal to take a person in your car. Do it in "Providers" section.';
+  public static readonly NO_SEAT_IN_CAR = 'No more seat.';
+  public static readonly NO_SEAT_IN_CAR_TEXT = 'There is no more remaining seat in your car.';
+  public static readonly TAKE_HIM = 'Take him in your car';
+  public static readonly TAKE_HIM_TEXT = 'You agree to pick up the person by picking him up at the indicated place, are you sure?';
+  public static readonly DELETE_REQUEST = 'Delete your request?';
+  public static readonly DELETE_REQUEST_TEXT = 'You\'re about to delete your request';
+  public static readonly DELETE_PROPOSAL = 'Delete your proposal?';
+  public static readonly DELETE_PROPOSAL_TEXT = 'You\'re about to delete your proposal';
 
   public static readonly INVITATION_SENT = 'Invitation sent.';
   public static readonly BAD_EMAIL = 'Email incorrect.';
@@ -26,6 +43,16 @@ export class Messages {
   public static readonly NO_REVERT = 'You won\'t be able to revert this!';
   public static readonly GROUP_DELETED = 'Group deleted';
   public static readonly DELETED = 'Deleted';
+  public static readonly BOOK = 'Book';
+  public static readonly YES = 'Yes';
+  public static readonly OOPS = 'Oops...';
 
+  public static readonly MUST_SELECT_PROPOSAL_LOCATION = 'You must select a place of departure for your proposal';
+  public static readonly MUST_SELECT_REQUEST_LOCATION = 'You must select a place from where you want to be taken';
 
+}
+
+export class SwalColors {
+  public static readonly CONFIRM_BUTTON = '#3085d6';
+  public static readonly CANCEL_BUTTON = '#d33';
 }

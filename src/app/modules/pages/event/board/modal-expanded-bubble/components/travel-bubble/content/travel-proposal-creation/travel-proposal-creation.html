@@ -1,0 +1,39 @@
+<div class="d-flex justify-content-center">
+    <div [hidden]="!toggle" class="card-travel-provider-creation card">
+        <div class="card-body">
+            <h4 class="card-title">Propose a car</h4>
+            <div class="card-description">You are about to offer other participants places in your car
+                to go to the event
+            </div>
+        </div>
+
+        <div class="card-body">
+            <form novalidate [formGroup]="this.form">
+                <div class="form-group">
+                    <label for="address-input">Where do you go from?</label>
+                    <input type="search"
+                           style="padding-right: 30px"
+                           autocomplete="off"
+                           id="address-input"
+                           class="form-control"
+                           name="date">
+                </div>
+                <div class="form-group">
+                    <label for="entry-time">Seats available</label>
+                    <input type="number"
+                           min="1"
+                           id="entry-time"
+                           class="form-control"
+                           formControlName="capacity"
+                           name="time">
+                </div>
+                <button (click)="closeProposalCreationCard()" class="btn btn-outline-danger">
+                    Delete
+                </button>
+                <button (click)="createProposal()" class="btn btn-outline-primary">
+                    Add
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

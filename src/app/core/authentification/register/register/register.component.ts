@@ -130,7 +130,7 @@ export class RegisterComponent implements OnInit {
   public onFail(e): void {
     Swal({
       type: 'error',
-      title: 'Oops...',
+      title:  Messages.OOPS,
       text: e.error.error.code,
     });
   }

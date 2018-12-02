@@ -16,7 +16,8 @@
             </div>
             <app-expanded-travel-bubble
                     *ngIf="this.bubble?.type === BubbleType.TravelBubble"
-                    [travelBubble]="this.bubble">
+                    [travelBubble]="this.bubble"
+                    [eventRef]="this.eventRef">
             </app-expanded-travel-bubble>
 
             <app-expanded-alimentation-bubble
