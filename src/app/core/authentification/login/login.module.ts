@@ -6,7 +6,7 @@ import { LoginComponent } from './login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Ng2TelInputModule } from 'ng2-tel-input';
-
+import { SocialAuthModule } from '../social/social-auth.module';
 
 @NgModule({
   imports: [
@@ -15,7 +15,8 @@ import { Ng2TelInputModule } from 'ng2-tel-input';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    Ng2TelInputModule
+    Ng2TelInputModule,
+    SocialAuthModule,
   ],
   declarations: [
     LoginComponent
