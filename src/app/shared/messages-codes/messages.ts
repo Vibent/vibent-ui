@@ -26,6 +26,8 @@ export class Messages {
   public static readonly DELETE_REQUEST_TEXT = 'You\'re about to delete your request';
   public static readonly DELETE_PROPOSAL = 'Delete your proposal?';
   public static readonly DELETE_PROPOSAL_TEXT = 'You\'re about to delete your proposal';
+  public static readonly GROUP_JOINED = 'Group joined.';
+  public static readonly GROUP_JOINED_TEXT = 'Go to groups page.';
 
   public static readonly INVITATION_SENT = 'Invitation sent.';
   public static readonly BAD_EMAIL = 'Email incorrect.';

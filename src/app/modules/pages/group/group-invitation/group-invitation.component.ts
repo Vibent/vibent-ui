@@ -17,15 +17,16 @@ export class GroupInvitationComponent implements OnInit {
   }
 
   joinGroup(): void {
+    const self = this;
     this.httpService.getMe().subscribe((user) => {
       this.httpService.validateInviteToken({membershipRequests: {userRef: user.ref}}, this.route.snapshot.paramMap.get('token')).toPromise()
       .then(function () {
         Swal({
           type: 'success',
-          title: 'Group joined',
-          text: 'Lets go in!',
+          title: Messages.GROUP_JOINED,
+          text: Messages.GROUP_JOINED_TEXT,
         }).then(() => {
-          this.router.navigate(['/groups']); });
+            self.router.navigate(['/groups']); });
       })
       .catch(e => {
         Swal({
