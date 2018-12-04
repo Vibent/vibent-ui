@@ -2,6 +2,7 @@ export class Messages {
   public static readonly PHONE_ALREADY_TAKEN = 'This phone number is already registred.';
   public static readonly EMAIL_ALREADY_TAKEN = 'This email is already registred.';
   public static readonly BAD_LOGIN = 'Incorrect password or email/phone!';
+  public static readonly SOCIAL_LOGIN_FAIL = 'Failed social network login';
   public static readonly REGISTER_CONFIRMATION = 'You will receive a confirmation.';
   public static readonly BUBBLE_CREATED = 'The bubble is created';
   public static readonly ALIMENTATION_BUBBLE_CREATED = 'Your alimentation bubble is ready! You can now list food and drink that you need by going in.';
