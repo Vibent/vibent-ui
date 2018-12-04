@@ -10,6 +10,7 @@ import { EventUpdateService } from '../../../../../../../core/services/bubbles-s
 import Swal from 'sweetalert2';
 import { TravelHttpService } from '../../../../../../../core/services/bubbles-services/travel/http/travel-http.service';
 import { Messages, SwalColors } from '../../../../../../../shared/messages-codes/messages';
+import { FreeHttpService } from '../../../../../../../core/services/bubbles-services/free/http/free-http.service';
 
 declare const $: any;
 
@@ -32,14 +33,15 @@ export class SettingsDeleteBubbleComponent {
               private checkboxHttpService: CheckboxHttpService,
               private planningHttpService: PlanningHttpService,
               private travelHttpService: TravelHttpService,
+              private freeHttpService: FreeHttpService,
               private notificationService: NotificationsService,
               private eventUpdateService: EventUpdateService) {
   }
 
   deleteBubble() {
     Swal({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      title: Messages.ARE_YOU_SURE,
+      text: Messages.NO_REVERT,
       type: 'warning',
       showCancelButton: true,
       confirmButtonColor: SwalColors.CONFIRM_BUTTON,
@@ -70,6 +72,9 @@ export class SettingsDeleteBubbleComponent {
         break;
       case BubbleType.TravelBubble:
         this.travelHttpService.deleteBubble(this.bubble).subscribe(() => this.eventUpdateService.updateEvent(this.eventRef));
+        break;
+      case BubbleType.FreeBubble:
+        this.freeHttpService.deleteBubble(this.bubble).subscribe(() => this.eventUpdateService.updateEvent(this.eventRef));
         break;
       default:
         break;

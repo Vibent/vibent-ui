@@ -53,4 +53,14 @@ export class BubblesCreationsSwalAlerts {
     });
   }
 
+  alertFreeBubbleCreated() {
+    Swal({
+      type: 'success',
+      title: Messages.BUBBLE_CREATED,
+      text: Messages.FREE_BUBBLE_CREATED,
+      showConfirmButton: true,
+    });
+  }
+
+
 }

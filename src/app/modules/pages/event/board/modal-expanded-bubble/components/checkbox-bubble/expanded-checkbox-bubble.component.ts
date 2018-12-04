@@ -6,7 +6,7 @@ import { AbstractExpandedBubbleComponent } from '../../abstract-components/abstr
   selector: 'app-expanded-checkbox-bubble',
   templateUrl: './expanded-checkbox-bubble.html'
 })
-export class ExpandedCheckboxBubbleComponent extends AbstractExpandedBubbleComponent{
+export class ExpandedCheckboxBubbleComponent extends AbstractExpandedBubbleComponent {
 
   @Input()
   checkboxBubble: CheckboxBubble;

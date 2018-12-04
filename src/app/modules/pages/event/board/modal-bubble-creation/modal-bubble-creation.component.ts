@@ -9,12 +9,11 @@ export class ModalBubbleCreationComponent implements OnInit {
 
   BubbleType = BubbleType;
   bubbleType: BubbleType = null;
+  @Input()
+  eventRef: string;
 
   constructor() {
   }
-
-  @Input()
-  eventRef: string;
 
   ngOnInit(): void {
 

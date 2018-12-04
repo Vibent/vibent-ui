@@ -10,6 +10,7 @@ export class Messages {
   public static readonly SURVEY_BUBBLE_CREATED = 'Your survey bubble is ready! Anyone can now add options and vote!';
   public static readonly PLANNING_BUBBLE_CREATED = 'Your planning bubble is ready! Anyone can now add some plans !';
   public static readonly TRAVEL_BUBBLE_CREATED = 'Your travel bubble is ready! Let\'s for a transport organization.' ;
+  public static readonly FREE_BUBBLE_CREATED = 'Your Free bubble is ready! Add a comment for everyone.' ;
   public static readonly ATTACH_REQUEST = 'Attach your request to this proposal?.';
   public static readonly ATTACH_REQUEST_TEXT = 'You have an existing request, want to attach it to this proposal? Your request will no longer appear because you will have booked a place in this car';
   public static readonly TAKE_A_SEAT = 'Take a seat?';
