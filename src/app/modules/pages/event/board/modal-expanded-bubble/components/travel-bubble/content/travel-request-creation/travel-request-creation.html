@@ -1,0 +1,28 @@
+<div class="d-flex justify-content-center">
+    <div [hidden]="!toggle" class="card-travel-provider-creation card">
+        <div class="card-body">
+            <h4 class="card-title">Request a car</h4>
+            <div class="card-description">Tell participants that you need a car to be taken to the event</div>
+        </div>
+
+        <div class="card-body">
+            <form novalidate>
+                <div class="form-group">
+                    <label for="address-input-request">Where do you need someone to pick you up?</label>
+                    <input type="search"
+                           style="padding-right: 30px"
+                           autocomplete="off"
+                           id="address-input-request"
+                           class="form-control"
+                           name="date">
+                </div>
+                <button (click)="closeRequestCreationCard()" class="btn btn-outline-danger">
+                    Delete
+                </button>
+                <button (click)="createRequest()" class="btn btn-outline-primary">
+                    Add
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,9 @@
+html.swal2-shown,
+body.swal2-shown {
+  overflow-y: hidden !important;
+}
+
+
 .alert {
   border: 0;
   border-radius: 3px;

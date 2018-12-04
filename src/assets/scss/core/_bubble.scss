@@ -69,10 +69,6 @@
 .expanded-bubble {
   width: 100%;
   min-height: 300px;
-  /* height: 400px; */
-  /* border-radius: 70px; */
-  /* background: whitesmoke; */
-  /* display: inline-block; */
   padding: 10px 10px;
 }
 
@@ -644,7 +640,7 @@ button.close {
   }
 }
 
-.card-planning-entry{
+.card-planning-entry {
   max-width: 350px;
   margin-top: 15px;
 }
@@ -724,4 +720,145 @@ button.close {
 
 }
 
+.travel-header {
+  padding: 0;
+}
 
+.card-travel-provider-creation {
+  max-width: 350px;
+  margin-top: 15px !important;
+}
+
+.add-provider {
+  background: #dadada;
+  padding-left: 11px;
+  padding-top: 8px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+
+  i {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  .plusIcon {
+    width: 15px;
+    margin-left: 21px;
+    margin-top: -21px;
+  }
+}
+
+.add-request {
+  background: #dadada;
+  padding-left: 11px;
+  padding-top: 8px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+
+  i {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-left: 2px;
+  }
+  .plusIcon {
+    width: 15px;
+    margin-left: 21px;
+    margin-top: -21px;
+  }
+}
+
+.travel-entity-creation {
+  font-size: 18px;
+  margin-left: 43px;
+}
+
+.travel-card {
+  .card {
+    margin-top: 0;
+  }
+
+  .card-without-bs {
+    background: none;
+    box-shadow: none;
+  }
+
+  .delete-button {
+    background: #e65b5b;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    border-radius: 20px;
+    margin-top: 13px;
+    cursor: pointer;
+  }
+
+  .travel-proposal {
+    margin-bottom: 5px;
+    border-radius: 25px !important;
+
+    .proposal-header {
+      padding: 0;
+
+      .proposal-trip {
+        font-size: 16px;
+      }
+
+      .proposal-seats {
+        font-size: 14px;
+      }
+
+      .avatar {
+        img {
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          float: left;
+        }
+      }
+    }
+
+    .user-seat-taker {
+      color: #c90000;
+      font-size: 20px;
+      margin-left: 35px;
+      background: white;
+      border-radius: 50%;
+      padding: 1px 1px 1px 3px;
+      position: absolute;
+    }
+
+    .proposal-seat-taker {
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+    }
+
+    .proposal-seat-taker-plus {
+      background: #e8e8e8;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      padding-top: 14px;
+      padding-left: 19px;
+
+      &:hover {
+        background: #d3d3d3;
+      }
+    }
+    .proposal-seat-taker-plus-disabled {
+      background: #e8e8e8;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      padding-top: 14px;
+      padding-left: 19px;
+      opacity: 0.5;
+    }
+
+  }
+}

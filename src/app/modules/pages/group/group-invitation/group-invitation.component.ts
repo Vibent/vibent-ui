@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../../../../core/http/http.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import Swal from 'sweetalert2';
+import { Messages } from '../../../../shared/messages-codes/messages';
 
 @Component({
   selector: 'app-group-invitation',
@@ -29,7 +30,7 @@ export class GroupInvitationComponent implements OnInit {
       .catch(e => {
         Swal({
           type: 'error',
-          title: 'Oops...',
+          title:  Messages.OOPS,
           text: e.error.error.code,
         });
       });

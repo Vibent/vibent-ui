@@ -93,7 +93,7 @@ export class LoginComponent implements OnInit {
   public onFail(e): void {
     Swal({
       type: 'error',
-      title: 'Oops...',
+      title: Messages.OOPS,
       text: Messages.BAD_LOGIN,
     });
   }

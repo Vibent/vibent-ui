@@ -7,7 +7,7 @@ import { HttpService } from '../../../../http/http.service';
 import { Event } from '../../../../../shared/models/event';
 import { EventAdminPanelService } from '../../../../services/event-admin-panel.service';
 import * as moment from 'moment';
-import { Messages } from '../../../../../shared/messages-codes/messages';
+import { Messages, SwalColors } from '../../../../../shared/messages-codes/messages';
 import { EventUpdateService } from '../../../../services/bubbles-services/event-update.service';
 import { LoaderService } from '../../../../services/loader/service/loader.service';
 
@@ -60,9 +60,9 @@ export class EventSettingsComponent implements OnInit {
       text: Messages.NO_REVERT,
       type: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
+      confirmButtonColor: SwalColors.CONFIRM_BUTTON,
       reverseButtons: true,
-      cancelButtonColor: '#d33',
+      cancelButtonColor: SwalColors.CANCEL_BUTTON,
       confirmButtonText: Messages.DELETE
     }).then((result) => {
       if (result.value) {

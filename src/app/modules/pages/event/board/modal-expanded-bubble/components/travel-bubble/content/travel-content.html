@@ -1,0 +1,70 @@
+<div class="expanded-bubble">
+    <div class="card-header travel-header mb-2">
+        <div class="d-flex justify-content-between">
+            <div class="p-2"></div>
+            <div class="p-2 align-self-center travel-entity-creation">Providers</div>
+            <div class="p-2">
+                <div class="add-provider" (click)="toggleProposalCreation()">
+                    <i class="fa fa-car"></i>
+                    <img class="plusIcon" src="/assets/img/plus.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="travel-card">
+        <div class="card-without-bs card">
+            <div class="card-content">
+                <travel-proposal-creation
+                        [travelBubble]="travelBubble"
+                        [eventRef]="eventRef"
+                        [toggle]="openProposalCreation"
+                        (updatedTravelBubble)="this.onBubbleUpdate($event)">
+                </travel-proposal-creation>
+                <div class="accordion" id="proposal-accordion">
+                    <travel-proposal
+                            *ngFor="let proposal of travelBubble.proposals"
+                            [bubbleId]="travelBubble.id"
+                            [travelBubble]="travelBubble"
+                            [travelProposal]="proposal"
+                            [eventRef]="eventRef">
+                    </travel-proposal>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-header travel-header mb-2">
+        <div class="d-flex justify-content-between">
+            <div class="p-2"></div>
+            <div class="p-2 align-self-center travel-entity-creation">Requesters</div>
+            <div class="p-2">
+                <div class="add-request" (click)="toggleRequestCreation()">
+                    <i class="fa fa-binoculars"></i>
+                    <img class="plusIcon" src="/assets/img/plus.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="travel-card">
+        <div class="card-without-bs card">
+            <div class="card-content">
+                <travel-request-creation
+                        [travelBubble]="travelBubble"
+                        [eventRef]="eventRef"
+                        [toggle]="openRequestCreation"
+                        (updatedTravelBubble)="this.onBubbleUpdate($event)">
+                </travel-request-creation>
+                <div class="accordion" id="request-accordion">
+                    <travel-request
+                            *ngFor="let request of travelBubble.requests"
+                            [bubbleId]="travelBubble.id"
+                            [travelRequest]="request"
+                            [travelBubble]="travelBubble"
+                            [eventRef]="eventRef"
+                            (updatedTravelBubble)="this.onBubbleUpdate($event)">
+                    </travel-request>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

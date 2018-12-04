@@ -12,6 +12,7 @@ import { AlimentationDataService } from '../../../../../../../../../core/service
 import Swal from 'sweetalert2';
 import { UserManagementService } from '../../../../../../../../../core/services/user-management.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { Messages, SwalColors } from '../../../../../../../../../shared/messages-codes/messages';
 
 declare const $: any;
 
@@ -72,14 +73,14 @@ export class AlimentationEntryComponent implements OnInit {
 
   deleteEntry(): void {
     Swal({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      title: Messages.ARE_YOU_SURE,
+      text: Messages.NO_REVERT,
       type: 'warning',
       showCancelButton: true,
       reverseButtons: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Delete'
+      confirmButtonColor: SwalColors.CONFIRM_BUTTON,
+      cancelButtonColor: SwalColors.CANCEL_BUTTON,
+      confirmButtonText: Messages.DELETE
     }).then((result) => {
       if (result.value) {
         this.alimentationHttpService.deleteEntry(this.alimentationEntry).subscribe(() => {

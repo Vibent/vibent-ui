@@ -7,6 +7,7 @@ import { CheckboxExplanationComponent } from './checkbox/checkbox-explanation.co
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SurveyExplanationComponent } from './survey/survey-explanation.component';
 import { PlanningExplanationComponent } from './planning/planning-explanation.component';
+import { TravelExplanationComponent } from './travel/travel-explanation.component';
 
 @NgModule({
   imports: [
@@ -20,11 +21,13 @@ import { PlanningExplanationComponent } from './planning/planning-explanation.co
     AlimentationExplanationComponent,
     CheckboxExplanationComponent,
     PlanningExplanationComponent,
+    TravelExplanationComponent,
     SurveyExplanationComponent],
   exports: [
     BubblesExplanationsComponent,
     AlimentationExplanationComponent,
     CheckboxExplanationComponent,
+    TravelExplanationComponent,
     PlanningExplanationComponent,
     SurveyExplanationComponent],
 })

@@ -60,3 +60,10 @@ import 'zone.js/dist/zone'; // Included with Angular CLI.
  */
 // Add global to window, assigning the value of window itself.
 (window as any).global = window;
+
+/***************************************************************************************************
+ * Related to https://github.com/algolia/algoliasearch-client-javascript/pull/692
+ */
+(window as any).process = {
+  env: { DEBUG: undefined },
+};

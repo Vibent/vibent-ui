@@ -1,0 +1,43 @@
+<div class="card travel-proposal">
+    <div class="card-header proposal-header cursor-pointer" id="headingTwo"
+         data-toggle="collapse"
+         (click)="resizeMapbox()"
+         [attr.data-target]="'#request-collapse-'+ travelRequest.id">
+        <div class="d-flex flex-row">
+            <div class="p-2 align-self-center">
+                <div class="avatar">
+                    <img src="{{profileImageService.getUserProfileImage(travelRequest.userRef)}}">
+                </div>
+            </div>
+            <div class="p-2 align-self-center">
+                <div class="proposal-trip">Need a car from {{travelDataModel.headerLocation}}</div>
+            </div>
+            <div class="ml-auto p-2 m-r-10 align-self-center">
+                <div class="cursor-pointer float-right collapsed">
+                    <i class="fa fa-caret-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div [attr.id]="'request-collapse-'+ travelRequest.id" class="collapse">
+        <div class="card-body">
+            <div class="d-flex justify-content-center">
+                <div class="p-2 align-self-center">{{(user | async)?.firstName}} {{(user | async)?.lastName}}
+                    need a car to go to event from {{travelDataModel.completeAddress}}
+                </div>
+            </div>
+            <div *ngIf="!isConnectedUserRequest" class="d-flex justify-content-center">
+                <div class="p-2 align-self-center">
+                    <button class="ml-auto btn btn-outline-primary btn-sm" (click)="takeHim()">Take him</button>
+                </div>
+            </div>
+            <div [attr.id]="'request-map-'+ travelRequest.id" class="w-100 h-150-p m-t-10"></div>
+            <div *ngIf="isConnectedUserRequest" class="d-flex justify-content-end">
+                <div class="p-2">
+                    <div class="delete-button" (click)="deleteRequest()">Delete</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
