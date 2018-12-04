@@ -39,8 +39,6 @@ export class GroupCreationComponent implements OnInit {
   }
 
   public saveGroup(): void {
-    this.close();
-    this.loaderService.displayLoadingPageModal();
     this.titleValidSetted = this.title.valid;
     let description: string;
     this.form.value.description === '' ? description = null : description = this.form.value.description;
@@ -49,12 +47,17 @@ export class GroupCreationComponent implements OnInit {
       description: description,
       allAdmins: true
     };
-    this.httpService.createGroup(group).subscribe(res => {
-      this.loaderService.closeLoadingPageModal();
-      this.router.navigate(['/groups/' + res['ref']]);
-      this.notificationService.notify(Messages.GROUP_CREATED, NotificationType.SUCCESS)
-    });
-
+    if(this.titleValidSetted) {
+      this.loaderService.displayLoadingPageModal();
+      this.httpService.createGroup(group).subscribe(res => {
+        this.close();
+        this.loaderService.closeLoadingPageModal();
+        this.router.navigate(['/groups/' + res['ref']]);
+        this.notificationService.notify(Messages.GROUP_CREATED, NotificationType.SUCCESS);
+      }, () => {
+        this.loaderService.closeLoadingPageModal();
+      });
+    }
   }
 
   close() {

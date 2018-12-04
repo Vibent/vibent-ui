@@ -54,8 +54,6 @@ export class EventCreationComponent implements OnInit {
   }
 
   public saveEvent(): void {
-    this.close();
-    this.loaderService.displayLoadingPageModal();
     this.titleValidSetted = this.title.valid;
     this.dateValidSetted = this.date.valid;
 
@@ -66,13 +64,18 @@ export class EventCreationComponent implements OnInit {
       groupRef: this.groupRef,
     };
 
-    this.httpService.createEvent(event).subscribe(res => {
-      this.loaderService.closeLoadingPageModal();
-      this.router.navigate(['/events/' + res['ref']]);
-      this.notificationService.notify(Messages.EVENT_CREATED, NotificationType.SUCCESS);
-    }, () => {
-      this.dateValidSetted = false;
-    });
+    if(this.titleValidSetted && this.dateValidSetted) {
+      this.loaderService.displayLoadingPageModal();
+      this.httpService.createEvent(event).subscribe(res => {
+        this.close();
+        this.loaderService.closeLoadingPageModal();
+        this.router.navigate(['/events/' + res['ref']]);
+        this.notificationService.notify(Messages.EVENT_CREATED, NotificationType.SUCCESS);
+      }, () => {
+        this.dateValidSetted = false;
+        this.loaderService.closeLoadingPageModal();
+      });
+    }
   }
 
   public close(): void {
