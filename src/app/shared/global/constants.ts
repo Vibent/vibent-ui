@@ -7,6 +7,8 @@ export class AppSettings {
   public static ALGOLIA_API_KEY = 'd01c3ce0b5cd3b4c95cadfbb5625e331';
   public static MAPBOX_API_KEY = 'pk.eyJ1Ijoiam91YmVydG0iLCJhIjoiY2pwNDBhZWI2MGluZDNwbnoxNzRyNHk3cSJ9.3RRXSfVswsjicSOoUeROLw';
   public static MAPBOX_STYLE = 'mapbox://styles/mapbox/streets-v9';
+  public static GOOGLE_CLIENT_ID = '821632933125-0re06sp9j4l9nurpql79glsfm4k64sai.apps.googleusercontent.com';
+  public static FACEBOOK_CLIENT_ID = '203432600535344';
 }
 
 export class LoaderSize {

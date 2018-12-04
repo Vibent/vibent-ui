@@ -44,6 +44,20 @@ export class AuthenticationService {
     });
   }
 
+  socialLogin(loginRequest, returnUrl: string, onFail?: (e) => void): void {
+    this.loaderService.displayLoadingPageModal();
+    this.httpService.loginSocial(loginRequest).toPromise()
+      .then( (response) => {
+        this.cookieService.set('token', response.token);
+        this.loaderService.closeLoadingPageModal();
+        this.router.navigateByUrl(returnUrl);
+      })
+      .catch(e => {
+        this.loaderService.closeLoadingPageModal();
+        onFail(e);
+      });
+  }
+
   register(registrationRequest, onFail?: (e) => void): void {
     const _this = this;
     _this.httpService.register(registrationRequest).toPromise()
@@ -59,7 +73,7 @@ export class AuthenticationService {
   }
 
   logout(): void {
-    this.cookieService.deleteAll();
+    this.cookieService.delete('token');
   }
 }
 

@@ -124,6 +124,10 @@ export class HttpService {
     return this.http.post(this.API_URL + '/auth/login/phone', loginRequest, this.getOptions());
   }
 
+  public loginSocial(loginRequest): Observable<any> {
+    return this.http.post(this.API_URL + '/auth/social/login', loginRequest, this.getOptions());
+  }
+
   public register(registrationRequest): Observable<any> {
     return this.http.post(this.API_URL + '/auth/register', registrationRequest, this.getOptions());
   }

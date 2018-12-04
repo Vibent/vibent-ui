@@ -29,6 +29,7 @@
     "@types/socket.io-client": "^1.4.32",
     "ajv": "6.4.0",
     "angular2-draggable": "^1.4.2",
+    "angularx-social-login": "^1.2.5",
     "arrive": "2.4.1",
     "bootstrap": "4.1.1",
     "bootstrap-material-design": "4.1.1",
