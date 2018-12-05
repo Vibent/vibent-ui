@@ -29,6 +29,7 @@ export class Messages {
   public static readonly DELETE_PROPOSAL_TEXT = 'You\'re about to delete your proposal';
   public static readonly GROUP_JOINED = 'Group joined.';
   public static readonly GROUP_JOINED_TEXT = 'Go to groups page.';
+  public static readonly NO_EVENT_GROUP = 'There is no event in this group. You can create one by clicking on the button just above. Group members can then participate and help you organize';
 
   public static readonly INVITATION_SENT = 'Invitation sent.';
   public static readonly BAD_EMAIL = 'Email incorrect.';

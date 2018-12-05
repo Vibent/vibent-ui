@@ -4,7 +4,7 @@
             <div class="col-xl-10">
                 <h2 class="event-title">{{event.title}}</h2>
             </div>
-            <div class="col-xl-10">
+            <div *ngIf="event.description" class="col-xl-10">
                 <h5 class="event-description">{{event.description}}</h5>
             </div>
         </div>

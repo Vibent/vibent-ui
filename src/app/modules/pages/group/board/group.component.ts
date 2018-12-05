@@ -12,8 +12,7 @@ import { GroupRightsComponent } from '../../../../core/admin-panels/group/dialog
 import { GroupSettingsComponent } from '../../../../core/admin-panels/group/dialogs/group-settings/group-settings.component';
 import { Event } from '../../../../shared/models/event';
 import { ScreenSizesService } from '../../../../core/services/screen-sizes.service';
-
-declare const $: any;
+import { Messages } from '../../../../shared/messages-codes/messages';
 
 @Component({
   selector: 'app-group',
@@ -22,8 +21,9 @@ declare const $: any;
 })
 export class GroupComponent implements OnInit, OnDestroy {
 
-  public events: Event[];
-  public group: Group;
+  events: Event[];
+  group: Group;
+  Messages =  Messages;
 
   constructor(public dialog: MatDialog,
               public screenSizesService: ScreenSizesService,

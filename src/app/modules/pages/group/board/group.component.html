@@ -22,43 +22,44 @@
                 </div>
             </div>
 
-            <div class="col-xl-12 row justify-content-center">
-                <ng-container *ngIf="screenSizesService.isMobileMenu()">
-                    <div class="nav-item dropdown">
-                        <button class="btn btn-secondary btn-sm dropdown-toggle"
-                                type="button"
-                                id="dropdownMenuButton"
-                                data-toggle="dropdown">
-                            Admin settings
-                        </button>
-                        <div class="dropdown-menu">
-                            <!--<a class="dropdown-item cursor-pointer" (click)="openRightsDialog()">Members Rights</a>-->
-                            <a class="dropdown-item cursor-pointer" (click)="openSettingsDialog()">Group settings</a>
-                            <!-- <a class="dropdown-item cursor-pointer" (click)="openRequestsDialog()">Requests
-                                 <span class="badge badge-info">4</span>
-                             </a>-->
-                         </div>
-                     </div>
-                 </ng-container>
-             </div>
-             <div class="col-xl-10">
-                 <h5 class="group-description">{{group.description}}</h5>
-             </div>
-             <div class="col-xl-12 text-center">
-                 <div class="btn btn-round btn-add-event-in-group" (click)="openEventCreationDialog()">Create an event
-                 </div>
-             </div>
-         </div>
-     </div>
-     <ng-container *ngIf="events && events.length>0;else no_events">
-         <app-event-preview
-                 *ngFor="let event of events"
-                 [event]=event>
-         </app-event-preview>
-     </ng-container>
-     <ng-template #no_events>
-         <div class="col-xl-12 text-center m-t-50 text-white">
-             <h4>No events... bouhouhou :'(</h4>
-         </div>
-     </ng-template>
- </div>
+            <div *ngIf="screenSizesService.isMobileMenu()" class="col-xl-12 row justify-content-center">
+                <div class="nav-item dropdown">
+                    <button class="btn btn-secondary btn-sm dropdown-toggle"
+                            type="button"
+                            id="dropdownMenuButton"
+                            data-toggle="dropdown">
+                        Admin settings
+                    </button>
+                    <div class="dropdown-menu">
+                        <!--<a class="dropdown-item cursor-pointer" (click)="openRightsDialog()">Members Rights</a>-->
+                        <a class="dropdown-item cursor-pointer" (click)="openSettingsDialog()">Group settings</a>
+                        <!-- <a class="dropdown-item cursor-pointer" (click)="openRequestsDialog()">Requests
+                             <span class="badge badge-info">4</span>
+                         </a>-->
+                    </div>
+                </div>
+
+            </div>
+            <div *ngIf="group.description" class="col-xl-10">
+                <h5 class="group-description">{{group.description}}</h5>
+            </div>
+            <div class="col-xl-12 text-center">
+                <div class="btn btn-round btn-add-event-in-group" (click)="openEventCreationDialog()">Create an event
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-container *ngIf="events && events.length>0;else no_events">
+        <app-event-preview
+                *ngFor="let event of events"
+                [event]=event>
+        </app-event-preview>
+    </ng-container>
+    <ng-template #no_events>
+        <div class="row justify-content-center" #no_events>
+            <div class="col-6 text-center m-t-50 text-white">
+                <h4>{{Messages.NO_EVENT_GROUP}}</h4>
+            </div>
+        </div>
+    </ng-template>
+</div>
