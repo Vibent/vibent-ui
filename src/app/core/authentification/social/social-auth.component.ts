@@ -3,7 +3,8 @@ import Swal from 'sweetalert2';
 import { Messages } from '../../../shared/messages-codes/messages';
 import { ActivatedRoute } from '@angular/router';
 import { AuthenticationService } from '../../services/authentication.service';
-import { AuthService, FacebookLoginProvider, GoogleLoginProvider, SocialUser } from 'angularx-social-login';
+import { AuthService, SocialUser } from 'angularx-social-login';
+import SOCIAL_PROVIDERS from '../../../shared/global/social-providers';
 
 @Component({
   selector: 'social-auth',
@@ -12,8 +13,9 @@ import { AuthService, FacebookLoginProvider, GoogleLoginProvider, SocialUser } f
 })
 export class SocialAuthComponent implements OnInit, OnDestroy {
 
-  private alreadyLoggedIn = false;
+  private blockLogin = true;
   private authStateSubscription;
+  private providers = SOCIAL_PROVIDERS;
 
   returnUrl: string;
 
@@ -24,9 +26,9 @@ export class SocialAuthComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.authStateSubscription = this.socialAuthService.authState.subscribe((user) => {
-      if (user !== null && !this.alreadyLoggedIn) {
-        this.alreadyLoggedIn = true;
-        this.login(user);
+      if (user !== null && !this.blockLogin) {
+        this.blockLogin = true;
+        this.performSignIn(user);
         this.socialAuthService.signOut(true);
       }
     });
@@ -37,15 +39,12 @@ export class SocialAuthComponent implements OnInit, OnDestroy {
     this.authStateSubscription.unsubscribe();
   }
 
-  public googleSignIn(): void {
-    this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID);
+  public requestSignIn(providerId: string): void {
+    this.blockLogin = false;
+    this.socialAuthService.signIn(providerId);
   }
 
-  public facebookSignIn(): void {
-    this.socialAuthService.signIn(FacebookLoginProvider.PROVIDER_ID);
-  }
-
-  public login(user: SocialUser): void {
+  public performSignIn(user: SocialUser): void {
     this.authenticationService.socialLogin({
       idToken: user.idToken,
       authToken: user.authToken,
@@ -54,10 +53,10 @@ export class SocialAuthComponent implements OnInit, OnDestroy {
   }
 
   public onFail(e): void {
-    this.alreadyLoggedIn = false;
+    this.blockLogin = false;
     Swal({
       type: 'error',
-      title: 'Oops...',
+      title: Messages.OOPS,
       text: Messages.SOCIAL_LOGIN_FAIL,
     });
   }

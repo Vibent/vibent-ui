@@ -4,6 +4,7 @@ import { ProfileComponent } from './profile.component';
 import { RouterModule } from '@angular/router';
 import { ProfileImageService } from '../../../../core/http/profile-image.service';
 import { MatButtonModule, MatInputModule, MatRippleModule, MatTooltipModule } from '@angular/material';
+import { ConnectedSocialModule } from '../connected-social/connected-social.module';
 
 @NgModule({
   imports: [
@@ -13,6 +14,7 @@ import { MatButtonModule, MatInputModule, MatRippleModule, MatTooltipModule } fr
     MatInputModule,
     MatRippleModule,
     MatTooltipModule,
+    ConnectedSocialModule
   ],
   declarations: [
     ProfileComponent

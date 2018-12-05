@@ -33,21 +33,21 @@ export class AuthenticationService {
     const _this = this;
     _this.loaderService.displayLoadingPageModal();
     _this.httpService.loginPhone(loginRequest).toPromise()
-    .then(function (response) {
-      _this.cookieService.set('token', response.token);
-      _this.loaderService.closeLoadingPageModal();
-      _this.router.navigateByUrl(returnUrl);
-    })
-    .catch(e => {
-      _this.loaderService.closeLoadingPageModal();
-      onFail(e);
-    });
+      .then(function (response) {
+        _this.cookieService.set('token', response.token);
+        _this.loaderService.closeLoadingPageModal();
+        _this.router.navigateByUrl(returnUrl);
+      })
+      .catch(e => {
+        _this.loaderService.closeLoadingPageModal();
+        onFail(e);
+      });
   }
 
   socialLogin(loginRequest, returnUrl: string, onFail?: (e) => void): void {
     this.loaderService.displayLoadingPageModal();
-    this.httpService.loginSocial(loginRequest).toPromise()
-      .then( (response) => {
+    this.httpService.socialLogin(loginRequest).toPromise()
+      .then((response) => {
         this.cookieService.set('token', response.token);
         this.loaderService.closeLoadingPageModal();
         this.router.navigateByUrl(returnUrl);

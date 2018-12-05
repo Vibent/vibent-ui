@@ -21,32 +21,7 @@
                     </div>
                     <div class="bottom">
                         {{user.email}}
-                        <div class="row justify-content-center">
-                            <a class="btn btn-primary btn-twitter btn-sm cursor-pointer text-white tooltip-activation"
-                               data-placement="top"
-                               title="Twitter account not linked">
-                                <i class="fa fa-twitter"></i>
-                                <i class="fa fa-times-circle"></i>
-                            </a>
-                            <a class="btn btn-danger btn-sm cursor-pointer text-white tooltip-activation"
-                               data-placement="top"
-                               title="Google account not linked">
-                                <i class="fa fa-google-plus"></i>
-                                <i class="fa fa-times-circle"></i>
-                            </a>
-                            <a class="btn btn-primary btn-sm cursor-pointer text-white tooltip-activation"
-                               data-placement="top"
-                               title="Facebook account not linked">
-                                <i class="fa fa-facebook"></i>
-                                <i class="fa fa-times-circle"></i>
-                            </a>
-                            <a class="btn btn-warning btn-sm cursor-pointer text-white tooltip-activation"
-                               data-placement="top"
-                               title="Snapchat account not linked">
-                                <i class="fa fa-snapchat"></i>
-                                <i class="fa fa-times-circle"></i>
-                            </a>
-                        </div>
+                        <connected-social [user]="user"></connected-social>
                     </div>
                 </div>
             </div>
