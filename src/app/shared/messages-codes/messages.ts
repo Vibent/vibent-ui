@@ -2,7 +2,6 @@ export class Messages {
   public static readonly PHONE_ALREADY_TAKEN = 'This phone number is already registred.';
   public static readonly EMAIL_ALREADY_TAKEN = 'This email is already registred.';
   public static readonly BAD_LOGIN = 'Incorrect password or email/phone!';
-  public static readonly SOCIAL_LOGIN_FAIL = 'Failed social network login';
   public static readonly REGISTER_CONFIRMATION = 'You will receive a confirmation.';
   public static readonly BUBBLE_CREATED = 'The bubble is created';
   public static readonly ALIMENTATION_BUBBLE_CREATED = 'Your alimentation bubble is ready! You can now list food and drink that you need by going in.';
@@ -55,6 +54,11 @@ export class Messages {
   public static readonly MUST_SELECT_PROPOSAL_LOCATION = 'You must select a place of departure for your proposal';
   public static readonly MUST_SELECT_REQUEST_LOCATION = 'You must select a place from where you want to be taken';
 
+  public static readonly SOCIAL_LOGIN_FAIL = 'Failed social network login';
+  public static readonly SOCIAL_LINK_FAIL = 'Failed linking the social network account';
+  public static readonly SOCIAL_UNLINK_FAIL = 'Failed unlinking the social network account';
+  public static readonly SOCIAL_ARE_YOU_SURE_UNLINK= 'Are you sure you want to unlink your ${name} account ?';
+  public static readonly SOCIAL_CAN_RELINK = 'You can relink it after if you wish';
 }
 
 export class SwalColors {

@@ -7,6 +7,7 @@ export interface User {
   memberships ?: any[];
   participations ?: any[];
   membershipRequests?: any[];
+  socialCredentials?: object;
   imagePath?: any;
 }
 

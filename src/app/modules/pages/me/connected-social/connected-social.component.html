@@ -1,0 +1,12 @@
+<div class="row justify-content-center">
+    <a *ngFor="let provider of providers"
+       class="btn btn-{{provider.id | lowercase}} btn-sm tooltip-activation"
+       data-placement="top"
+       title="{{provider.label}} account {{isLinked(provider) ? 'linked' : 'not linked'}}.
+       Click to {{isLinked(provider) ? 'unlink' : 'link'}}"
+       (click)="toggleLink(provider)"
+       [style.background-color]="provider.color">
+        <i class="fa fa-{{provider.id | lowercase}}"></i>&nbsp;
+        <i class="fa {{isLinked(provider) ? 'fa-check-circle' : 'fa-times-circle'}}"></i>
+    </a>
+</div>

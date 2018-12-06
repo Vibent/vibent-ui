@@ -1,2 +1,4 @@
-<div (click)="facebookSignIn();" class="fa fa-facebook"></div>
-<div (click)="googleSignIn();" class="fa fa-google"></div>
+<div *ngFor="let provider of providers"
+     (click)="requestSignIn(provider.id);"
+     class="fa fa-{{provider.id | lowercase}}"
+     [style.background-color]="provider.color"></div>

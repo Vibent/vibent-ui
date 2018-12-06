@@ -74,7 +74,30 @@ export class UserManagementService {
     }
   }
 
+  socialLink(linkRequest, onFail?: (e) => void): void {
+    this.loaderService.displayLoadingPageModal();
+    this.httpService.socialLink(linkRequest).toPromise()
+      .then(() => {
+        this.loaderService.closeLoadingPageModal();
+        this.setMe();
+      })
+      .catch(e => {
+        this.loaderService.closeLoadingPageModal();
+        onFail(e);
+      });
+  }
 
-
+  socialUnlink(unlinkRequest, onFail?: (e) => void): void {
+    this.loaderService.displayLoadingPageModal();
+    this.httpService.socialUnlink(unlinkRequest).toPromise()
+      .then(() => {
+        this.loaderService.closeLoadingPageModal();
+        this.setMe();
+      })
+      .catch(e => {
+        this.loaderService.closeLoadingPageModal();
+        onFail(e);
+      });
+  }
 }
 

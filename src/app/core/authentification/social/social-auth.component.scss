@@ -1,23 +1,15 @@
 .fa {
     padding: 10px;
+    margin: 5px;
     font-size: 30px;
     text-align: center;
     text-decoration: none;
     width: 50px;
     cursor: pointer;
     border-radius: 3.2px;
+    color: white;
 }
 
 .fa:hover {
     opacity: 0.7;
-}
-
-.fa-facebook {
-    background: #3B5998;
-    color: white;
-}
-
-.fa-google {
-    background: #dc483c;
-    color: white;
 }
