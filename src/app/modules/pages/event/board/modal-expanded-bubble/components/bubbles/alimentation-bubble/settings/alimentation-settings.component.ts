@@ -1,0 +1,12 @@
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { AbstractBubbleSettingsComponent } from '../../../abstract/abstract-bubble-settings.component';
+
+@Component({
+  selector: 'alimentation-settings',
+  templateUrl: './alimentation-settings.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class AlimentationSettingsComponent extends AbstractBubbleSettingsComponent{
+
+
+}
