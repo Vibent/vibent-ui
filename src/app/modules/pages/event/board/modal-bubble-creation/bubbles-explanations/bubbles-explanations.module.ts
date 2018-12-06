@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SurveyExplanationComponent } from './survey/survey-explanation.component';
 import { PlanningExplanationComponent } from './planning/planning-explanation.component';
 import { TravelExplanationComponent } from './travel/travel-explanation.component';
+import { FreeExplanationComponent } from './free/free-explanation.component';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { TravelExplanationComponent } from './travel/travel-explanation.componen
     CheckboxExplanationComponent,
     PlanningExplanationComponent,
     TravelExplanationComponent,
+    FreeExplanationComponent,
     SurveyExplanationComponent],
   exports: [
     BubblesExplanationsComponent,
@@ -29,6 +31,7 @@ import { TravelExplanationComponent } from './travel/travel-explanation.componen
     CheckboxExplanationComponent,
     TravelExplanationComponent,
     PlanningExplanationComponent,
+    FreeExplanationComponent,
     SurveyExplanationComponent],
 })
 export class ModalBubbleExplanationComponentModule {

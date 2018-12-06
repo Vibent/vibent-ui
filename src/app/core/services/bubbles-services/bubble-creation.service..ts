@@ -39,8 +39,8 @@ export class BubbleCreationService {
     return this.http.post(this.API_URL + '/bubble/planning', body, httpOptions);
   }
 
-  createFreeBubble(eventRef: string) {
-    const body = JSON.stringify({eventRef: eventRef});
+  createFreeBubble(eventRef: string, title: string, content: string) {
+    const body = JSON.stringify({eventRef: eventRef, title: title, content: content });
     return this.http.post(this.API_URL + '/bubble/free', body, httpOptions);
   }
 

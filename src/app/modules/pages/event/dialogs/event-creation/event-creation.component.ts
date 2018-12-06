@@ -64,7 +64,7 @@ export class EventCreationComponent implements OnInit {
       groupRef: this.groupRef,
     };
 
-    if(this.titleValidSetted && this.dateValidSetted) {
+    if (this.titleValidSetted) {
       this.loaderService.displayLoadingPageModal();
       this.httpService.createEvent(event).subscribe(res => {
         this.close();

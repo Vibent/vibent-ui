@@ -1,19 +1,19 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FreeBubble } from '../../../../../../../shared/models/bubbles/FreeBubble';
-
-declare const $: any;
+import { AbstractExpandedBubbleComponent } from '../../abstract-components/abstract-expanded-bubble.component';
 
 @Component({
   selector: 'app-expanded-free-bubble',
   templateUrl: './expanded-free-bubble.html'
 })
-export class ExpandedFreeBubbleComponent implements OnInit {
+export class ExpandedFreeBubbleComponent extends AbstractExpandedBubbleComponent {
 
   @Input()
-  public freeBubble: FreeBubble;
+  freeBubble: FreeBubble;
+  @Input()
+  eventRef: string;
 
-
-  ngOnInit() {
-
+  constructor() {
+    super();
   }
 }

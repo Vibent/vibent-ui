@@ -1,0 +1,26 @@
+<div class="d-flex flex-row justify-content-center">
+    <div class="p-2">
+        <h2 class="text-center">Free bubble</h2>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <p>some illustrations and description</p>
+</div>
+<div class="row justify-content-center">
+    <p>Type a title:</p>
+</div>
+<form novalidate [formGroup]="this.form">
+    <div class="row justify-content-center">
+        <input type="text" class="form-control w-75" id="freeTitle" formControlName="freeTitle"/>
+    </div>
+    <div class="row justify-content-center m-t-20">
+        <p>Type a content:</p>
+    </div>
+    <div class="row justify-content-center">
+        <textarea type="text" class="form-control w-75" id="freeContent" formControlName="freeContent"></textarea>
+    </div>
+</form>
+
+<div class="row justify-content-center">
+    <button (click)="createBubble()" class="btn btn-round btn-add-event">Create</button>
+</div>

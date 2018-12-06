@@ -16,7 +16,7 @@ export class BubblePreviewController implements OnInit {
   @Output()
   bubbleToExpand = new EventEmitter<IBubble>();
 
-  public BubbleType = BubbleType;
+  BubbleType = BubbleType;
 
   constructor() {
   }
