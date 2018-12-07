@@ -1,12 +1,12 @@
 <div class="modal-body">
     <planning-content
             *ngIf=contentDisplayed
-            [planningBubble]=this.planningBubble
+            [planningBubble]=this.bubble
             [eventRef]=this.eventRef>
     </planning-content>
     <planning-settings
             *ngIf=!contentDisplayed
-            [bubble]=this.planningBubble
+            [bubble]=this.bubble
             [eventRef]=this.eventRef
             (bubbleDeleted)=onBackToContentSent()
             (backToContent)=onBackToContentSent($event)>

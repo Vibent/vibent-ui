@@ -16,37 +16,37 @@
             </div>
             <app-expanded-travel-bubble
                     *ngIf="this.bubble?.type === BubbleType.TravelBubble"
-                    [travelBubble]="this.bubble"
+                    [bubble]="this.bubble"
                     [eventRef]="this.eventRef">
             </app-expanded-travel-bubble>
 
             <app-expanded-alimentation-bubble
                     *ngIf="this.bubble?.type === BubbleType.AlimentationBubble"
-                    [alimentationBubble]="this.bubble"
+                    [bubble]="this.bubble"
                     [eventRef]="this.eventRef">
             </app-expanded-alimentation-bubble>
 
             <app-expanded-planning-bubble
                     *ngIf="this.bubble?.type === BubbleType.PlanningBubble"
-                    [planningBubble]="this.bubble"
+                    [bubble]="this.bubble"
                     [eventRef]="this.eventRef">
             </app-expanded-planning-bubble>
 
             <app-expanded-survey-bubble
                     *ngIf="this.bubble?.type === BubbleType.SurveyBubble"
-                    [surveyBubble]="this.bubble"
+                    [bubble]="this.bubble"
                     [eventRef]="this.eventRef">
             </app-expanded-survey-bubble>
 
             <app-expanded-free-bubble
                     *ngIf="this.bubble?.type === BubbleType.FreeBubble"
-                    [freeBubble]="this.bubble"
+                    [bubble]="this.bubble"
                     [eventRef]="this.eventRef">
             </app-expanded-free-bubble>
 
             <app-expanded-checkbox-bubble
                     *ngIf="this.bubble?.type === BubbleType.CheckboxBubble"
-                    [checkboxBubble]="this.bubble"
+                    [bubble]="this.bubble"
                     [eventRef]="this.eventRef">
             </app-expanded-checkbox-bubble>
         </div>

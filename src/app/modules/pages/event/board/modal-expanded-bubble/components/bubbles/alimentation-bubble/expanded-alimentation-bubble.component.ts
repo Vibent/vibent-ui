@@ -10,10 +10,6 @@ declare const $: any;
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExpandedAlimentationBubbleComponent extends AbstractExpandedBubbleComponent {
-  @Input()
-  alimentationBubble: AlimentationBubble;
-  @Input()
-  eventRef: string;
 
   constructor() {
     super();

@@ -1,31 +1,13 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { TravelBubble } from '../../../../../../../../shared/models/bubbles/TravelBubble';
+import { Component, OnInit } from '@angular/core';
+import { AbstractExpandedBubbleComponent } from '../../abstract/abstract-expanded-bubble.component';
 
 @Component({
   selector: 'app-expanded-travel-bubble',
   templateUrl: './expanded-travel-bubble.html'
 })
-export class ExpandedTravelBubbleComponent implements OnInit {
-
-  @Input()
-  public travelBubble: TravelBubble;
-  @Input()
-  eventRef: string;
-
-  contentDisplayed = true;
+export class ExpandedTravelBubbleComponent extends AbstractExpandedBubbleComponent implements OnInit {
 
   ngOnInit(): void {
-
   }
-
-  openBubbleSettings() {
-    this.contentDisplayed = false;
-  }
-
-  onBackToContentSent() {
-    this.contentDisplayed = true;
-  }
-
-
 
 }

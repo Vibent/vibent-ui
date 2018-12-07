@@ -1,12 +1,12 @@
 <div class="modal-body">
     <survey-content
             *ngIf=contentDisplayed
-            [surveyBubble]=this.surveyBubble
+            [surveyBubble]=this.bubble
             [eventRef]=this.eventRef>
     </survey-content>
     <survey-settings
             *ngIf=!contentDisplayed
-            [bubble]=this.surveyBubble
+            [bubble]=this.bubble
             [eventRef]=this.eventRef
             (bubbleDeleted)=onBackToContentSent()
             (backToContent)=onBackToContentSent($event)>

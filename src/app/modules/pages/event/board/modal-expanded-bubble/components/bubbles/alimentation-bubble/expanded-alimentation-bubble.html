@@ -1,12 +1,12 @@
 <div class="modal-body">
     <alimentation-content
             *ngIf=contentDisplayed
-            [alimentationBubble]=this.alimentationBubble
+            [alimentationBubble]=this.bubble
             [eventRef]=this.eventRef>
     </alimentation-content>
     <alimentation-settings
             *ngIf=!contentDisplayed
-            [bubble] = this.alimentationBubble
+            [bubble] = this.bubble
             [eventRef]=this.eventRef
             (bubbleDeleted)=onBackToContentSent()
             (backToContent)=onBackToContentSent($event)>

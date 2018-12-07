@@ -1,12 +1,12 @@
 <div class="modal-body">
     <travel-content
             *ngIf=contentDisplayed
-            [travelBubble]=this.travelBubble
+            [travelBubble]=this.bubble
             [eventRef]=this.eventRef>
     </travel-content>
     <travel-settings
             *ngIf=!contentDisplayed
-            [bubble]=this.travelBubble
+            [bubble]=this.bubble
             [eventRef]=this.eventRef
             (bubbleDeleted)=onBackToContentSent()
             (backToContent)=onBackToContentSent($event)>

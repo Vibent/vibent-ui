@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { CheckboxBubble } from '../../../../../../../../shared/models/bubbles/CheckboxBubble';
+import { Component } from '@angular/core';
 import { AbstractExpandedBubbleComponent } from '../../abstract/abstract-expanded-bubble.component';
 
 @Component({
@@ -7,11 +6,6 @@ import { AbstractExpandedBubbleComponent } from '../../abstract/abstract-expande
   templateUrl: './expanded-checkbox-bubble.html'
 })
 export class ExpandedCheckboxBubbleComponent extends AbstractExpandedBubbleComponent {
-
-  @Input()
-  checkboxBubble: CheckboxBubble;
-  @Input()
-  eventRef: string;
 
   constructor() {
     super();
