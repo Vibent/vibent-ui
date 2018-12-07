@@ -1,12 +1,12 @@
 <div class="modal-body">
     <checkbox-content
             *ngIf=contentDisplayed
-            [checkboxBubble]=this.checkboxBubble
+            [checkboxBubble]=this.bubble
             [eventRef]=this.eventRef>
     </checkbox-content>
     <checkbox-settings
             *ngIf=!contentDisplayed
-            [bubble] = this.checkboxBubble
+            [bubble] = this.bubble
             [eventRef]=this.eventRef
             (bubbleDeleted)=onBackToContentSent()
             (backToContent)=onBackToContentSent($event)>

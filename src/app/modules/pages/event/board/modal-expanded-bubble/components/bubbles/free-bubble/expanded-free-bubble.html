@@ -1,12 +1,12 @@
 <div class="modal-body">
 	<free-content
 			*ngIf=contentDisplayed
-			[freeBubble]=this.freeBubble
+			[freeBubble]=this.bubble
 			[eventRef]=this.eventRef>|
 	</free-content>
 	<free-settings
 			*ngIf=!contentDisplayed
-			[bubble] = this.freeBubble
+			[bubble]=this.bubble
 			[eventRef]=this.eventRef
 			(bubbleDeleted)=onBackToContentSent()
 			(backToContent)=onBackToContentSent($event)>

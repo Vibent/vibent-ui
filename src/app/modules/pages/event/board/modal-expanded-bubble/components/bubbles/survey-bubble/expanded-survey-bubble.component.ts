@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { SurveyBubble } from '../../../../../../../../shared/models/bubbles/SurveyBubble';
+import { Component } from '@angular/core';
 import { AbstractExpandedBubbleComponent } from '../../abstract/abstract-expanded-bubble.component';
 
 declare const $: any;
@@ -9,11 +8,6 @@ declare const $: any;
   templateUrl: './expanded-survey-bubble.html'
 })
 export class ExpandedSurveyBubbleComponent extends AbstractExpandedBubbleComponent {
-
-  @Input()
-  surveyBubble: SurveyBubble;
-  @Input()
-  eventRef: string;
 
   constructor() {
     super();
