@@ -7,8 +7,8 @@
 						<div class="card-icon">
 							<h3>{{event.startDate | date}}</h3>
 						</div>
-						<p class="card-category">{{additionnalEventInfos.daysRemaining}}</p>
-						<h4 class="card-title">4
+						<p class="card-category">{{additionnalEventInfos.remainingDays <= 0 ? 'Today' : 'in ' + additionnalEventInfos.remainingDays + ' days'}}</p>
+						<h4 class="card-title">{{additionnalEventInfos.participants}}
 							<small>participants</small>
 						</h4>
 						<div class="card-body">{{event.title}}
@@ -21,7 +21,7 @@
 					<div class="card-footer">
 						<div class="stats">
 							<i class="material-icons text-info">info</i>
-							{{additionnalEventInfos.bubblesNumber}} bubbles!
+							{{additionnalEventInfos.bubblesNumber}} bubbles
 						</div>
 						<div class="event-preview-group">
 							from {{additionnalEventInfos.groupName}}

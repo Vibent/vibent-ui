@@ -1,7 +1,7 @@
 <div class="expanded-bubble">
     <div class="card-body text-center">
         <blockquote class="blockquote">
-            <p class="mb-0">{{freeBubble.content}}</p>
+            <p class="mb-0">{{freeBubble.title}}<br>{{freeBubble.content}}</p>
             <footer class="blockquote-footer">by <cite title="Source Title">{{(user | async)?.firstName}} {{(user | async)?.lastName}}</cite></footer>
         </blockquote>
     </div>
