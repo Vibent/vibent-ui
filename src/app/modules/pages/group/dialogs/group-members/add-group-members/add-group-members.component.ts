@@ -41,20 +41,22 @@ export class AddGroupMembersComponent implements OnInit {
 
   public sendInvitation(): void {
     this.emailValidSetted = this.email.valid;
-    this.httpService.mailInvite({groupRef: this.group.ref, recipients: [this.email.value]}).subscribe(() => {
-      this.email.reset();
-      Swal({
-        type: 'success',
-        title: Messages.INVITATION_SENT,
-        showConfirmButton: true,
+    if (this.emailValidSetted) {
+      this.httpService.mailInvite({groupRef: this.group.ref, recipients: [this.email.value]}).subscribe(() => {
+        this.email.reset();
+        Swal({
+          type: 'success',
+          title: Messages.INVITATION_SENT,
+          showConfirmButton: true,
+        });
+      }, () => {
+        Swal({
+          type: 'error',
+          title: Messages.BAD_EMAIL,
+          showConfirmButton: true,
+        });
       });
-    }, () => {
-      Swal({
-        type: 'error',
-        title: Messages.BAD_EMAIL,
-        showConfirmButton: true,
-      });
-    });
+    }
   }
 
   close() {

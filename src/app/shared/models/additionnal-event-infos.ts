@@ -1,7 +1,8 @@
 export interface AdditionnalEventInfos {
   groupName: string;
   groupSize: number;
-  daysRemaining: string;
+  remainingDays: number;
   location: string;
   bubblesNumber: number;
+  participants: number;
 }

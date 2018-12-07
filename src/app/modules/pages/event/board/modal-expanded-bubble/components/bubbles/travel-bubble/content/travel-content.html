@@ -21,6 +21,11 @@
                         (updatedTravelBubble)="this.onBubbleUpdate($event)">
                 </travel-proposal-creation>
                 <div class="accordion" id="proposal-accordion">
+                    <div *ngIf="!travelBubble.proposals[0] && !openProposalCreation" class="d-flex justify-content-center m-t-15">
+                        <div class="p-2">
+                            There is no providers yet. Be one !
+                        </div>
+                    </div>
                     <travel-proposal
                             *ngFor="let proposal of travelBubble.proposals"
                             [bubbleId]="travelBubble.id"
@@ -54,6 +59,11 @@
                         (updatedTravelBubble)="this.onBubbleUpdate($event)">
                 </travel-request-creation>
                 <div class="accordion" id="request-accordion">
+                    <div *ngIf="!travelBubble.requests[0] && !openRequestCreation" class="d-flex justify-content-center m-t-15">
+                        <div class="p-2">
+                            No pending request.
+                        </div>
+                    </div>
                     <travel-request
                             *ngFor="let request of travelBubble.requests"
                             [bubbleId]="travelBubble.id"
