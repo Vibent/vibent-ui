@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { CheckboxBubble, CheckboxOption } from '../../../../../../../../../shared/models/bubbles/CheckboxBubble';
+import { OptionCreationComponent } from './option-creation/option-creation.component';
 
 @Component({
   selector: 'checkbox-content',
@@ -11,7 +12,8 @@ export class CheckboxContentComponent implements OnInit {
   checkboxBubble: CheckboxBubble;
   @Input()
   eventRef: string;
-  toggleOptionCreation = false;
+  @ViewChild(OptionCreationComponent)
+  private optionCreationComponent: OptionCreationComponent;
   ratio: string;
 
   ngOnInit() {
@@ -19,7 +21,7 @@ export class CheckboxContentComponent implements OnInit {
   }
 
   addOptionCreation() {
-    this.toggleOptionCreation = !this.toggleOptionCreation;
+    this.optionCreationComponent.toggleCreationCard();
   }
 
   onBubbleUpdate(updatedBubble: CheckboxBubble) {

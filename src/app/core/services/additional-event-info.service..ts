@@ -41,17 +41,12 @@ export class AdditionalEventInfoService {
     let additionnalInfos: AdditionnalEventInfos;
 
     return this.httpService.getGroup(event.groupRef).toPromise().then(group => {
-      const groupName = group.name;
-      const groupSize = group.memberships.length;
-      const daysRemaining = '4 days';
-      const location = '';
-
       additionnalInfos = {
-        groupName: groupName,
-        groupSize: groupSize,
+        groupName: group.name,
+        groupSize: group.memberships.length,
         remainingDays: this.getRemainingDays(event),
         participants: this.getParticipants(event),
-        location: location,
+        location: '',
         bubblesNumber: this.getbubblesSum(event)
       };
     }).then(() => additionnalInfos);

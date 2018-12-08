@@ -8,23 +8,21 @@ import { EventUpdateService } from '../../../../../../../../../../core/services/
 import Swal from 'sweetalert2';
 import { Messages } from '../../../../../../../../../../shared/messages-codes/messages';
 import { AppSettings } from '../../../../../../../../../../shared/global/constants';
+import { AbstractBubbleEntityCreationComponent } from '../../../../abstract/abstract-bubble-entity-creation.component';
 declare const $: any;
 
 @Component({
   selector: 'travel-proposal-creation',
   templateUrl: './travel-proposal-creation.html'
 })
-export class TravelProposalCreationComponent implements OnInit {
+export class TravelProposalCreationComponent extends AbstractBubbleEntityCreationComponent implements OnInit {
 
   @Input()
   travelBubble: TravelBubble;
   @Input()
-  toggle: boolean;
-  @Input()
   eventRef: string;
   @Output()
   updatedTravelBubble = new EventEmitter<TravelBubble>();
-
   form: FormGroup;
   capacity: FormControl;
   placesAutocomplete: any;
@@ -33,6 +31,7 @@ export class TravelProposalCreationComponent implements OnInit {
   constructor(private algoliaPlacesService: AlgoliaPlacesService,
               private eventUpdateService: EventUpdateService,
               private travelHttpService: TravelHttpService) {
+    super();
   }
 
   ngOnInit() {
@@ -68,7 +67,7 @@ export class TravelProposalCreationComponent implements OnInit {
     }).subscribe((updatedBubble) => {
         this.updatedTravelBubble.emit(<TravelBubble> updatedBubble);
         this.eventUpdateService.updateEvent(this.eventRef);
-        this.closeProposalCreationCard();
+        this.toggleCreationCard();
       },
       (e) => {
         Swal({
@@ -77,10 +76,6 @@ export class TravelProposalCreationComponent implements OnInit {
           text: e.error.error.message,
         });
       });
-  }
-
-  closeProposalCreationCard() {
-    this.toggle = false;
   }
 
 }

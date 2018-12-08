@@ -17,11 +17,10 @@
                 <travel-proposal-creation
                         [travelBubble]="travelBubble"
                         [eventRef]="eventRef"
-                        [toggle]="openProposalCreation"
                         (updatedTravelBubble)="this.onBubbleUpdate($event)">
                 </travel-proposal-creation>
                 <div class="accordion" id="proposal-accordion">
-                    <div *ngIf="!travelBubble.proposals[0] && !openProposalCreation" class="d-flex justify-content-center m-t-15">
+                    <div *ngIf="!travelBubble.proposals[0] && !proposalCreationExpanded()" class="d-flex justify-content-center m-t-15">
                         <div class="p-2">
                             There is no providers yet. Be one !
                         </div>
@@ -55,11 +54,10 @@
                 <travel-request-creation
                         [travelBubble]="travelBubble"
                         [eventRef]="eventRef"
-                        [toggle]="openRequestCreation"
                         (updatedTravelBubble)="this.onBubbleUpdate($event)">
                 </travel-request-creation>
                 <div class="accordion" id="request-accordion">
-                    <div *ngIf="!travelBubble.requests[0] && !openRequestCreation" class="d-flex justify-content-center m-t-15">
+                    <div *ngIf="!travelBubble.requests[0] && !requestCreationExpanded()" class="d-flex justify-content-center m-t-15">
                         <div class="p-2">
                             No pending request.
                         </div>

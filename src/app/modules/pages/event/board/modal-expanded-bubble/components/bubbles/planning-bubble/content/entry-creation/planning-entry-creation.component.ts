@@ -6,6 +6,7 @@ import { PlanningBubble } from '../../../../../../../../../../shared/models/bubb
 import { PlanningHttpService } from '../../../../../../../../../../core/services/bubbles-services/planning/http/planning-http.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import * as moment from 'moment';
+import { AbstractBubbleEntityCreationComponent } from '../../../../abstract/abstract-bubble-entity-creation.component';
 
 declare const $: any;
 
@@ -13,10 +14,8 @@ declare const $: any;
   selector: 'planning-entry-creation',
   templateUrl: './planning-entry-creation.html'
 })
-export class PlanningEntryCreationComponent implements OnInit {
+export class PlanningEntryCreationComponent extends AbstractBubbleEntityCreationComponent implements OnInit {
 
-  @Input()
-  toggle: boolean;
   @Input()
   eventRef: string;
   @Input()
@@ -35,6 +34,7 @@ export class PlanningEntryCreationComponent implements OnInit {
   constructor(private userManagementService: UserManagementService,
               private planningHttpService: PlanningHttpService,
               private eventUpdateService: EventUpdateService) {
+    super();
     this.user = this.userManagementService.getMe();
   }
 
@@ -55,12 +55,6 @@ export class PlanningEntryCreationComponent implements OnInit {
     });
   }
 
-  closeCreationCard() {
-    this.toggle = false;
-    $('#entry-date').val('');
-    $('#entry-time').val('');
-    this.content.reset();
-  }
 
   createPlanningEntry() {
     const start = moment($('#entry-date').val() + ' ' + $('#entry-time').val(), 'MM/DD/YYYY HH:mm');
@@ -75,7 +69,7 @@ export class PlanningEntryCreationComponent implements OnInit {
     }).subscribe((updatedBubble) => {
       this.updatedPlanningBubble.emit(<PlanningBubble>updatedBubble);
       this.eventUpdateService.updateEvent(this.eventRef);
-      this.closeCreationCard();
+      this.toggleCreationCard();
     }, () => {
       this.timeInvalid = true;
       this.dateInvalid = true;

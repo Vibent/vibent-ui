@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { PlanningBubble } from '../../../../../../../../../shared/models/bubbles/PlanningBubble';
+import { PlanningEntryCreationComponent } from './entry-creation/planning-entry-creation.component';
 
 @Component({
   selector: 'planning-content',
@@ -11,14 +12,15 @@ export class PlanningContentComponent implements OnInit {
   planningBubble: PlanningBubble;
   @Input()
   eventRef: string;
-  toggleEntryCreation = false;
+  @ViewChild(PlanningEntryCreationComponent)
+  private planningEntryCreationComponent: PlanningEntryCreationComponent;
 
   ngOnInit() {
     this.sortEntries();
   }
 
   addEntryCreation() {
-    this.toggleEntryCreation = !this.toggleEntryCreation;
+    this.planningEntryCreationComponent.toggleCreationCard();
   }
 
   onBubbleUpdate(updatedBubble: PlanningBubble) {

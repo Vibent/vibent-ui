@@ -6,34 +6,30 @@ import {
 import { User } from '../../../../../../../../../../shared/models/user';
 import { UserManagementService } from '../../../../../../../../../../core/services/user-management.service';
 import { FormControl, FormGroup } from '@angular/forms';
-import { AlimentationBubble, AlimType } from '../../../../../../../../../../shared/models/bubbles/AlimentationBubble';
 import { CheckboxHttpService } from '../../../../../../../../../../core/services/bubbles-services/checkbox/http/checkbox-http.service';
 import { CheckboxBubble } from '../../../../../../../../../../shared/models/bubbles/CheckboxBubble';
 import { EventUpdateService } from '../../../../../../../../../../core/services/bubbles-services/event-update.service';
+import { AbstractBubbleEntityCreationComponent } from '../../../../abstract/abstract-bubble-entity-creation.component';
 
 @Component({
   selector: '[option-creation]',
-  templateUrl: './option-creation.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  templateUrl: './option-creation.html'
 })
-export class OptionCreationComponent implements OnInit {
-  @Input()
-  toggle: boolean;
+export class OptionCreationComponent extends AbstractBubbleEntityCreationComponent implements OnInit {
   @Input()
   eventRef: string;
   @Input()
   bubbleId: number;
-  user: User;
-
   @Output()
   updatedCheckboxBubble = new EventEmitter<CheckboxBubble>();
-
+  user: User;
   form: FormGroup;
   optionContent: FormControl;
 
   constructor(private userManagementService: UserManagementService,
               private checkboxHttpService: CheckboxHttpService,
               private eventUpdateService: EventUpdateService) {
+    super();
     this.user = this.userManagementService.getMe();
   }
 
@@ -43,10 +39,6 @@ export class OptionCreationComponent implements OnInit {
     });
   }
 
-  closeCreationCard() {
-    this.toggle = false;
-  }
-
   createOption() {
     this.checkboxHttpService.createOption({
       bubbleId: this.bubbleId,
@@ -54,7 +46,7 @@ export class OptionCreationComponent implements OnInit {
     }).subscribe((updatedBubble) => {
       this.updatedCheckboxBubble.emit(<CheckboxBubble>updatedBubble);
       this.eventUpdateService.updateEvent(this.eventRef);
-      this.closeCreationCard();
+      this.toggleCreationCard();
     });
   }
 

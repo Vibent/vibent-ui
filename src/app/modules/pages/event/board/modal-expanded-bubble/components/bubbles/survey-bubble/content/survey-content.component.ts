@@ -1,7 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { SurveyBubble } from '../../../../../../../../../shared/models/bubbles/SurveyBubble';
-
-declare const $: any;
+import { SurveyOptionCreationComponent } from './survey-option-creation/survey-option-creation.component';
 
 @Component({
   selector: 'survey-content',
@@ -13,14 +12,15 @@ export class SurveyContentComponent {
   surveyBubble: SurveyBubble;
   @Input()
   eventRef: string;
-  toggleOptionCreation = false;
+  @ViewChild(SurveyOptionCreationComponent)
+  private surveyOptionCreationComponent: SurveyOptionCreationComponent;
 
   onSurveyOptionUpdate(answerCount: number) {
     this.surveyBubble.answerCount = answerCount;
   }
 
   addOptionCard() {
-    this.toggleOptionCreation = !this.toggleOptionCreation;
+    this.surveyOptionCreationComponent.toggleCreationCard();
   }
 
   onBubbleUpdate(updatedBubble: SurveyBubble) {

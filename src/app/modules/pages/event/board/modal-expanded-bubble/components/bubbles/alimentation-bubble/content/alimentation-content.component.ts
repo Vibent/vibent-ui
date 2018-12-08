@@ -1,5 +1,7 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, ViewChild } from '@angular/core';
 import { AlimentationBubble } from '../../../../../../../../../shared/models/bubbles/AlimentationBubble';
+import { DrinkEntryCreationComponent } from './entry-creation/drink/drink-entry-creation.component';
+import { FoodEntryCreationComponent } from './entry-creation/food/food-entry-creation.component';
 
 declare const $: any;
 
@@ -14,8 +16,10 @@ export class AlimentationContentComponent implements OnInit {
   alimentationBubble: AlimentationBubble;
   @Input()
   eventRef: string;
-  toggleAddFoodEntry = false;
-  toggleAddDrinkEntry = false;
+  @ViewChild(DrinkEntryCreationComponent)
+  private drinkEntryCreationComponent: DrinkEntryCreationComponent;
+  @ViewChild(FoodEntryCreationComponent)
+  private foodkEntryCreationComponent: FoodEntryCreationComponent;
 
   constructor() {
   }
@@ -24,13 +28,17 @@ export class AlimentationContentComponent implements OnInit {
   }
 
   addFoodEntry() {
-    this.toggleAddFoodEntry = !this.toggleAddFoodEntry;
-    this.toggleAddDrinkEntry = false;
+    if (this.drinkEntryCreationComponent.toggle) {
+      this.drinkEntryCreationComponent.toggleCreationCard();
+    }
+    this.foodkEntryCreationComponent.toggleCreationCard();
   }
 
   addDrinkEntry() {
-    this.toggleAddDrinkEntry = !this.toggleAddDrinkEntry;
-    this.toggleAddFoodEntry = false;
+    if (this.foodkEntryCreationComponent.toggle) {
+      this.foodkEntryCreationComponent.toggleCreationCard();
+    }
+    this.drinkEntryCreationComponent.toggleCreationCard();
   }
 
   onBubbleUpdate(updatedBubble: AlimentationBubble) {
