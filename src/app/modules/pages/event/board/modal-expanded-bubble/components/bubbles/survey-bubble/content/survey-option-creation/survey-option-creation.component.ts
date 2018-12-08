@@ -3,16 +3,14 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { SurveyBubble } from '../../../../../../../../../../shared/models/bubbles/SurveyBubble';
 import { EventUpdateService } from '../../../../../../../../../../core/services/bubbles-services/event-update.service';
 import { SurveyHttpService } from '../../../../../../../../../../core/services/bubbles-services/survey/http/survey-http.service';
+import { AbstractBubbleEntityCreationComponent } from '../../../../abstract/abstract-bubble-entity-creation.component';
 
 @Component({
   selector: 'survey-option-creation',
-  templateUrl: './survey-option-creation.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  templateUrl: './survey-option-creation.html'
 })
-export class SurveyOptionCreationComponent implements OnInit {
+export class SurveyOptionCreationComponent extends AbstractBubbleEntityCreationComponent implements OnInit {
 
-  @Input()
-  toggle: boolean;
   @Input()
   bubbleId: number;
   @Input()
@@ -25,16 +23,13 @@ export class SurveyOptionCreationComponent implements OnInit {
 
   constructor(private surveyHttpService: SurveyHttpService,
               private eventUpdateService: EventUpdateService) {
+    super();
   }
 
   ngOnInit() {
     this.form = new FormGroup({
       content: this.content = new FormControl()
     });
-  }
-
-  closeCreationCard() {
-    this.toggle = false;
   }
 
   addOption() {
@@ -44,7 +39,7 @@ export class SurveyOptionCreationComponent implements OnInit {
     }).subscribe((updatedBubble) => {
       this.updatedSurveyBubble.emit(<SurveyBubble>updatedBubble);
       this.eventUpdateService.updateEvent(this.eventRef);
-      this.closeCreationCard();
+      this.toggleCreationCard();
     });
   }
 

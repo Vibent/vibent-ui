@@ -9,7 +9,7 @@
 						</div>
 						<p class="card-category">{{additionnalEventInfos.remainingDays <= 0 ? 'Today' : 'in ' + additionnalEventInfos.remainingDays + ' days'}}</p>
 						<h4 class="card-title">{{additionnalEventInfos.participants}}
-							<small>participants</small>
+							<small>participant<span *ngIf="additionnalEventInfos.participants > 1">s</span></small>
 						</h4>
 						<div class="card-body">{{event.title}}
 							<div class="card-hour">{{event.startDate | date:'shortTime'}}</div>
@@ -21,7 +21,7 @@
 					<div class="card-footer">
 						<div class="stats">
 							<i class="material-icons text-info">info</i>
-							{{additionnalEventInfos.bubblesNumber}} bubbles
+							{{additionnalEventInfos.bubblesNumber}} bubble<span *ngIf="additionnalEventInfos.bubblesNumber > 1">s</span>
 						</div>
 						<div class="event-preview-group">
 							from {{additionnalEventInfos.groupName}}

@@ -10,13 +10,11 @@
         </div>
     </div>
     <food-entry-creation
-            [toggle]=this.toggleAddFoodEntry
             [bubbleId]=this.alimentationBubble.id
             [eventRef]=this.eventRef
             (updatedAlimentationBubble)=this.onBubbleUpdate($event)>
     </food-entry-creation>
     <drink-entry-creation
-            [toggle]=this.toggleAddDrinkEntry
             [bubbleId]=this.alimentationBubble.id
             [eventRef]=this.eventRef
             (updatedAlimentationBubble)=this.onBubbleUpdate($event)>

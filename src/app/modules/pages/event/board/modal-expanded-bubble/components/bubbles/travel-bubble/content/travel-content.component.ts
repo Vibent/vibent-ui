@@ -1,9 +1,11 @@
 import {
   Component,
   Input,
-  OnInit
+  OnInit, ViewChild
 } from '@angular/core';
 import { TravelBubble } from '../../../../../../../../../shared/models/bubbles/TravelBubble';
+import { TravelProposalCreationComponent } from './travel-proposal-creation/travel-proposal-creation.component';
+import { TravelRequestCreationComponent } from './travel-request-creation/travel-request-creation.component';
 
 @Component({
   selector: 'travel-content',
@@ -15,23 +17,30 @@ export class TravelContentComponent implements OnInit {
   travelBubble: TravelBubble;
   @Input()
   eventRef: string;
-  openProposalCreation = false;
-  openRequestCreation = false;
-
+  @ViewChild(TravelProposalCreationComponent)
+  private travelProposalCreationComponent: TravelProposalCreationComponent;
+  @ViewChild(TravelRequestCreationComponent)
+  private travelRequestCreationComponent: TravelRequestCreationComponent;
   constructor() {
-
   }
 
   ngOnInit() {
-    
+  }
+
+  proposalCreationExpanded() {
+    return this.travelProposalCreationComponent.toggle;
+  }
+
+  requestCreationExpanded() {
+    return this.travelRequestCreationComponent.toggle;
   }
 
   toggleProposalCreation() {
-    this.openProposalCreation = !this.openProposalCreation;
+    this.travelProposalCreationComponent.toggleCreationCard();
   }
 
   toggleRequestCreation() {
-    this.openRequestCreation = !this.openRequestCreation;
+    this.travelRequestCreationComponent.toggleCreationCard();
   }
 
   onBubbleUpdate(updatedBubble: TravelBubble) {

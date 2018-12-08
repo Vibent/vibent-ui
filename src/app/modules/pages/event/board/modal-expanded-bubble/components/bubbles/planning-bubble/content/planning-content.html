@@ -10,7 +10,6 @@
                         <img class="cursor-pointer" (click)="addEntryCreation()" src="/assets/img/plus.png"/>
                     </div>
                     <planning-entry-creation
-                            [toggle]="toggleEntryCreation"
                             [eventRef]="this.eventRef"
                             [bubbleId]="planningBubble.id"
                             (updatedPlanningBubble)="this.onBubbleUpdate($event)">
