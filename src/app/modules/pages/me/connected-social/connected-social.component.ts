@@ -18,7 +18,7 @@ export class ConnectedSocialComponent implements OnInit {
 
   @Input()
   public user: User;
-  private providers = SOCIAL_PROVIDERS;
+  providers = SOCIAL_PROVIDERS;
 
   constructor(private socialAuthService: AuthService,
               private userService: UserManagementService) {
