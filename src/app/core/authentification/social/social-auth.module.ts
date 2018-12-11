@@ -6,9 +6,9 @@ import { AuthServiceConfig, SocialLoginModule } from 'angularx-social-login';
 import { SocialAuthComponent } from './social-auth.component';
 import SOCIAL_PROVIDERS from '../../../shared/global/social-providers';
 
-let config = new AuthServiceConfig(SOCIAL_PROVIDERS);
+const config = new AuthServiceConfig(SOCIAL_PROVIDERS);
 
-function provideConfig() {
+export  function provideConfig() {
   return config;
 }
 

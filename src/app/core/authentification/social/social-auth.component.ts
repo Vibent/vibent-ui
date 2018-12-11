@@ -15,7 +15,7 @@ export class SocialAuthComponent implements OnInit, OnDestroy {
 
   private blockLogin = true;
   private authStateSubscription;
-  private providers = SOCIAL_PROVIDERS;
+  providers = SOCIAL_PROVIDERS;
 
   returnUrl: string;
 
