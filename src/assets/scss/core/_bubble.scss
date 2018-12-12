@@ -604,19 +604,16 @@ button.close {
     }
   }
 
-  .float-left {
+}
 
-    .delete-alim {
-      background: #e65b5b;
-      padding-left: 10px;
-      padding-right: 10px;
-      color: white;
-      border-radius: 20px;
-      margin-top: 13px;
-      cursor: pointer;
-    }
-  }
-
+.delete-button {
+  background: #e65b5b;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  border-radius: 20px;
+  margin-top: 13px;
+  cursor: pointer;
 }
 
 .checkbox-card {
@@ -783,16 +780,6 @@ button.close {
   .card-without-bs {
     background: none;
     box-shadow: none;
-  }
-
-  .delete-button {
-    background: #e65b5b;
-    padding-left: 10px;
-    padding-right: 10px;
-    color: white;
-    border-radius: 20px;
-    margin-top: 13px;
-    cursor: pointer;
   }
 
   .travel-proposal {

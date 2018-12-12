@@ -19,6 +19,12 @@
                       formControlName="description"></textarea>
         </div>
     </div>
+    <div *ngIf="group.memberships.length > 1" class="card card-group-remove">
+        <div class="card-body">
+            <h5 class="card-title text-dark">Leave group</h5>
+            <button class="btn btn-social" (click)="leaveGroup()">Leave</button>
+        </div>
+    </div>
     <div class="card card-group-remove">
         <div class="card-body">
             <h5 class="card-title text-dark">Remove group</h5>

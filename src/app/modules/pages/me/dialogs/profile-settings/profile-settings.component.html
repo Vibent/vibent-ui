@@ -14,12 +14,10 @@
 	</div>
 
 	<image-cropper *ngIf="imageChangedEvent"
-				   [imageChangedEvent]="imageChangedEvent"
+				   [imageBase64]="imageChangedEvent"
 				   [maintainAspectRatio]="true"
 				   [aspectRatio]="1"
-				   format="png"
-				   (imageCroppedBase64)="imageCropped($event)"
-				   (imageCroppedFile)="imageCroppedFile($event)"
+				   (imageCropped) = "imageCropped($event)"
 	></image-cropper>
 	<div class="row justify-content-center">
 		<button *ngIf="imageChangedEvent" (click)="imageChangedEventToNull()" class="btn btn-round btn-sm">Crop image</button>
@@ -48,4 +46,5 @@
 			<button (click)="updateInfo()" class="btn btn-round btn-add-event">Update</button>
 		</div>
 	</div>
+
 </div>

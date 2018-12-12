@@ -50,7 +50,7 @@
                 <div class="p-2 align-self-center">Depart from {{travelDataModel.completeAddress}}</div>
             </div>
             <div [attr.id]="'proposal-map-'+ this.travelProposal.id" class="w-100 h-150-p m-t-10"></div>
-            <div *ngIf="isConnectedUserRequest" class="d-flex justify-content-end">
+            <div *ngIf="isConnectedUserRequest" class="d-flex justify-content-start">
                 <div class="p-2">
                     <div class="delete-button" (click)="deleteProposal()">Delete</div>
                 </div>

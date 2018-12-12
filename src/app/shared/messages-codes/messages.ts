@@ -29,6 +29,8 @@ export class Messages {
   public static readonly GROUP_JOINED = 'Group joined.';
   public static readonly GROUP_JOINED_TEXT = 'Go to groups page.';
   public static readonly NO_EVENT_GROUP = 'There is no event in this group. You can create one by clicking on the button just above. Group members can then participate and help you organize';
+  public static readonly SIZE_TOO_BIG = 'Image too big';
+  public static readonly SIZE_TOO_BIG_TEXT = 'Your image is too big, please select another one.';
 
   public static readonly INVITATION_SENT = 'Invitation sent.';
   public static readonly BAD_EMAIL = 'Email incorrect.';
@@ -41,6 +43,8 @@ export class Messages {
   public static readonly GROUP_UPDATED = 'Group updated.';
   public static readonly EVENT_UPDATED = 'Event updated.';
   public static readonly EVENT_DELETED = 'Event deleted.';
+  public static readonly LEAVE_GROUP = 'Leave the group?';
+  public static readonly LEAVE_GROUP_TEXT = 'You\'re about to leave the group. Are you sure?';
 
   public static readonly ARE_YOU_SURE = 'Are you sure?';
   public static readonly DELETE = 'Delete';
@@ -57,7 +61,7 @@ export class Messages {
   public static readonly SOCIAL_LOGIN_FAIL = 'Failed social network login';
   public static readonly SOCIAL_LINK_FAIL = 'Failed linking the social network account';
   public static readonly SOCIAL_UNLINK_FAIL = 'Failed unlinking the social network account';
-  public static readonly SOCIAL_ARE_YOU_SURE_UNLINK= 'Are you sure you want to unlink your ${name} account ?';
+  public static readonly SOCIAL_ARE_YOU_SURE_UNLINK = 'Are you sure you want to unlink your ${name} account ?';
   public static readonly SOCIAL_CAN_RELINK = 'You can relink it after if you wish';
 }
 
