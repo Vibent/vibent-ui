@@ -6,75 +6,72 @@
   text-align: center;
 }
 
-.participant-profile {
-  margin-top: 55px;
-  text-align: center;
+@mixin participant-user-additional() {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  bottom: 0.2em;
+  right: 0.1em;
+  border: 1.5px solid white;
+}
 
-  .participant-avatar {
-    margin: -50px auto 0;
-    border-radius: 50%;
-    overflow: hidden;
-    padding: 0;
-    max-width: 100px;
-    max-height: 100px;
-    @include shadow-4dp();
-    img {
-      width: 100%;
-      height: auto;
-    }
+.participant-user-additional-yes {
+  @include participant-user-additional();
+  background-color: $vibent-green;
+}
+
+.participant-user-additional-no {
+  @include participant-user-additional();
+  background-color: $vibent-red;
+}
+
+.participant-user-additional-maybe {
+  @include participant-user-additional();
+  background-color: grey;
+}
+
+.participant-user-additional-unanswered {
+  @include participant-user-additional();
+  background-color: black;
+}
+
+
+.participant-avatar {
+  position: relative;
+  height: 50px;
+  width: 50px;
+
+  .avatar {
+    height: 50px;
+    width: 50px;
+    border: 1.5px solid #f5f6fa;
   }
+}
 
-  .participant-user-body {
-    margin-top: 10px;
-  }
+.participant-infos {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 4px;
 
-  @mixin participant-user-additional() {
-    color: white;
-    margin-top: -8px;
-    font-size: 11px;
-    border-radius: 14px;
-    display: inline-block;
-    padding: 0 12px;
-  }
-
-  .participant-user-additional-yes {
-    @include participant-user-additional();
-    background-color: $vibent-green;
-  }
-
-  .participant-user-additional-no {
-    @include participant-user-additional();
-    background-color: $vibent-red;
-  }
-
-  .participant-user-additional-maybe {
-    @include participant-user-additional();
-    background-color: white;
+  p {
+    font-size: 12px;
     color: black;
+    margin-bottom: -6px;
+    margin-top: -5px;
   }
+}
 
-  .participant-user-additional-unanswered {
-    @include participant-user-additional();
-    background-color: black;
-  }
-
-  .participant-user-name {
-    margin-top: -3px;
-  }
-
+.event-participant {
+  display: inline-flex;
+  margin-right: 10px;
+  background-color: white;
+  border-radius: 35px;
+  padding: 3px 15px 3px 5px;
+  margin-bottom: 10px;
 }
 
 .scrolling-wrapper-event {
   overflow-y: hidden;
   white-space: nowrap;
-  height: 200px;
-
-  .participant-profile {
-    display: inline-block;
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-bottom: 15px
-  }
-
-  margin-top: 50px;
 }
