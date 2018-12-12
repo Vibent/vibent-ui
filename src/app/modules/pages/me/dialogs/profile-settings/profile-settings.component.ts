@@ -7,6 +7,9 @@ import { HttpService } from '../../../../../core/http/http.service';
 import { ProfileImageService } from '../../../../../core/http/profile-image.service';
 import { UserManagementService } from '../../../../../core/services/user-management.service';
 import { LoaderService } from '../../../../../core/services/loader/service/loader.service';
+import Compressor from 'compressorjs';
+import Swal from 'sweetalert2';
+import { Messages } from '../../../../../shared/messages-codes/messages';
 
 @Component({
   selector: 'app-profile-settings',
@@ -21,9 +24,11 @@ export class ProfileSettingsComponent implements OnInit {
   fileToUpload: File = null;
   croppedImage: any;
   imageChangedEvent: any = '';
-
   firstnameValidSetted = true;
   lastnameValidSetted = true;
+  compressorQuality = 0.2;
+  // in bytes
+  fileMaximumSize = 200000;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<ProfileSettingsComponent>,
@@ -39,15 +44,40 @@ export class ProfileSettingsComponent implements OnInit {
   }
 
   fileChangeEvent(event: any): void {
-    this.imageChangedEvent = event;
+    const self = this;
+
+    new Compressor(event.target.files[0], {
+      quality: this.compressorQuality,
+      success(result) {
+        if (result.size > self.fileMaximumSize) {
+          Swal({
+            type: 'error',
+            title: Messages.SIZE_TOO_BIG,
+            text: Messages.SIZE_TOO_BIG_TEXT,
+            showConfirmButton: true,
+          });
+        }
+        else {
+          self.getBase64(result);
+        }
+      },
+    });
   }
 
-  imageCropped(image: string) {
-    this.croppedImage = image;
+  getBase64(file) {
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
+      this.imageChangedEvent = reader.result;
+    }, false);
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
   }
 
-  imageCroppedFile(file: File) {
-    this.fileToUpload = file;
+  imageCropped(event) {
+    this.fileToUpload = event.file;
+    this.croppedImage = event.base64;
   }
 
   imageChangedEventToNull() {

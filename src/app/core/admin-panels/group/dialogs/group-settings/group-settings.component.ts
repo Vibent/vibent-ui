@@ -40,8 +40,8 @@ export class GroupSettingsComponent implements OnInit {
 
   public removeGroup(): void {
     Swal({
-      title: Messages.ARE_YOU_SURE,
-      text: Messages.NO_REVERT,
+      title: Messages.LEAVE_GROUP,
+      text: Messages.LEAVE_GROUP_TEXT,
       type: 'warning',
       showCancelButton: true,
       confirmButtonColor: SwalColors.CONFIRM_BUTTON,
@@ -59,6 +59,29 @@ export class GroupSettingsComponent implements OnInit {
         ).then((result) => {
           this.router.navigate(['/groups']);
         });
+      }
+    });
+  }
+
+  public leaveGroup(): void {
+    Swal({
+      title: Messages.ARE_YOU_SURE,
+      text: Messages.NO_REVERT,
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: SwalColors.CONFIRM_BUTTON,
+      reverseButtons: true,
+      cancelButtonColor: SwalColors.CANCEL_BUTTON,
+      confirmButtonText: Messages.YES
+    }).then((result) => {
+      if (result.value) {
+        this.loaderService.displayLoadingPageModal();
+        this.httpService.leaveGroup(this.group.ref).subscribe(() => {
+          this.loaderService.closeLoadingPageModal();
+          this.dialogRef.close();
+          this.router.navigate(['/groups']);
+        });
+
       }
     });
   }

@@ -47,6 +47,10 @@ export class HttpService {
     return this.http.delete(this.API_URL + '/group/' + groupRef, this.getOptions());
   }
 
+  public leaveGroup(groupRef: string) {
+    return this.http.post(this.API_URL + '/group/' + groupRef + '/leave', this.getOptions());
+  }
+
   public getInviteToken(groupRef: string): any {
     return this.http.get(this.API_URL + '/group/' + groupRef + '/inviteToken', this.getOptions());
   }
