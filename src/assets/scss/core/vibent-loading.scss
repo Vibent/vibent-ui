@@ -115,32 +115,29 @@ body, html {
   }
 }
 
-.participant-skeleton {
-  display: inline-block;
-  margin-left: 50px;
-  margin-bottom: 15px;
-  opacity: 0.7;
-  .participant-avatar-skeleton {
-    @include shadow-4dp();
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(60deg, $vibent-purple, $vibent-red);
-    background-size: 400% 400%;
-    -webkit-animation: Gradient 3s ease infinite;
-    -moz-animation: Gradient 3s ease infinite;
-    animation: Gradient 3s ease infinite;
-    margin-bottom: 13px;
-  }
+.participant-avatar-skeleton {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: linear-gradient(60deg, $vibent-purple, $vibent-red);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 3s ease infinite;
+  -moz-animation: Gradient 3s ease infinite;
+  animation: Gradient 3s ease infinite;
+}
 
-  .participant-name-skeleton {
-    height: 20px;
-    background: linear-gradient(60deg, $vibent-purple, $vibent-red);
-    background-size: 400% 400%;
-    -webkit-animation: Gradient 3s ease infinite;
-    -moz-animation: Gradient 3s ease infinite;
-    animation: Gradient 3s ease infinite;
-  }
+.participant-infos-skeleton {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 4px;
+  height: 20px;
+  width: 40px;
+  background: linear-gradient(60deg, $vibent-purple, $vibent-red);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 3s ease infinite;
+  -moz-animation: Gradient 3s ease infinite;
+  animation: Gradient 3s ease infinite;
 }
 
 
