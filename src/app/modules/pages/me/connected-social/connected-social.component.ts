@@ -17,7 +17,7 @@ declare const $: any;
 export class ConnectedSocialComponent implements OnInit {
 
   @Input()
-  public user: User;
+  user: User;
   providers = SOCIAL_PROVIDERS;
 
   constructor(private socialAuthService: AuthService,
