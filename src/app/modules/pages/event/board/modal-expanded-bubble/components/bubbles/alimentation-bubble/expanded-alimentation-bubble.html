@@ -2,7 +2,8 @@
     <alimentation-content
             *ngIf=contentDisplayed
             [alimentationBubble]=this.bubble
-            [eventRef]=this.eventRef>
+            [eventRef]=this.eventRef
+            (updatedAlimentationBubble)=this.onBubbleUpdate($event)>
     </alimentation-content>
     <alimentation-settings
             *ngIf=!contentDisplayed

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { AlimentationBubble } from '../../../../../../../../../shared/models/bubbles/AlimentationBubble';
 import { DrinkEntryCreationComponent } from './entry-creation/drink/drink-entry-creation.component';
 import { FoodEntryCreationComponent } from './entry-creation/food/food-entry-creation.component';
@@ -16,6 +16,8 @@ export class AlimentationContentComponent implements OnInit {
   alimentationBubble: AlimentationBubble;
   @Input()
   eventRef: string;
+  @Output()
+  updatedAlimentationBubble = new EventEmitter<AlimentationBubble>();
   @ViewChild(DrinkEntryCreationComponent)
   private drinkEntryCreationComponent: DrinkEntryCreationComponent;
   @ViewChild(FoodEntryCreationComponent)
@@ -43,6 +45,7 @@ export class AlimentationContentComponent implements OnInit {
 
   onBubbleUpdate(updatedBubble: AlimentationBubble) {
     this.alimentationBubble = updatedBubble;
+    this.updatedAlimentationBubble.emit(updatedBubble);
   }
 
 }

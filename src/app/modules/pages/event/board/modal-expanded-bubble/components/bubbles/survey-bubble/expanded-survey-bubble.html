@@ -2,7 +2,8 @@
     <survey-content
             *ngIf=contentDisplayed
             [surveyBubble]=this.bubble
-            [eventRef]=this.eventRef>
+            [eventRef]=this.eventRef
+            (updatedSurveyBubble)=this.onBubbleUpdate($event)>
     </survey-content>
     <survey-settings
             *ngIf=!contentDisplayed

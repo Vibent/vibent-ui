@@ -2,7 +2,8 @@
     <checkbox-content
             *ngIf=contentDisplayed
             [checkboxBubble]=this.bubble
-            [eventRef]=this.eventRef>
+            [eventRef]=this.eventRef
+            (updatedCheckboxBubble)=this.onBubbleUpdate($event)>
     </checkbox-content>
     <checkbox-settings
             *ngIf=!contentDisplayed

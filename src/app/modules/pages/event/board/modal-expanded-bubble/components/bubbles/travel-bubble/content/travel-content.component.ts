@@ -1,11 +1,12 @@
 import {
-  Component,
+  Component, EventEmitter,
   Input,
-  OnInit, ViewChild
+  OnInit, Output, ViewChild
 } from '@angular/core';
 import { TravelBubble } from '../../../../../../../../../shared/models/bubbles/TravelBubble';
 import { TravelProposalCreationComponent } from './travel-proposal-creation/travel-proposal-creation.component';
 import { TravelRequestCreationComponent } from './travel-request-creation/travel-request-creation.component';
+import { AlimentationBubble } from '../../../../../../../../../shared/models/bubbles/AlimentationBubble';
 
 @Component({
   selector: 'travel-content',
@@ -17,6 +18,8 @@ export class TravelContentComponent implements OnInit {
   travelBubble: TravelBubble;
   @Input()
   eventRef: string;
+  @Output()
+  updatedTravelBubble = new EventEmitter<TravelBubble>();
   @ViewChild(TravelProposalCreationComponent)
   private travelProposalCreationComponent: TravelProposalCreationComponent;
   @ViewChild(TravelRequestCreationComponent)
@@ -45,6 +48,7 @@ export class TravelContentComponent implements OnInit {
 
   onBubbleUpdate(updatedBubble: TravelBubble) {
     this.travelBubble = updatedBubble;
+    this.updatedTravelBubble.emit(updatedBubble);
   }
 
 
