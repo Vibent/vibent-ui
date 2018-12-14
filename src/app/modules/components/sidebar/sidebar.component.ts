@@ -20,8 +20,7 @@ declare interface IRouteInfo {
 
 export const ROUTES: IRouteInfo[] = [
   {path: '/events', title: 'Events', icon: 'bubble_chart', class: ''},
-  {path: '/groups', title: 'Groups', icon: 'group', class: ''},
-  {path: '/me', title: 'Profile', icon: 'account_circle', class: 'active-pro'},
+  {path: '/groups', title: 'Groups', icon: 'group', class: ''}
 ];
 
 @Component({

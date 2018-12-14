@@ -8,14 +8,14 @@
         <ul class="nav navbar-nav nav-mobile-menu">
             <li class="nav-item dropdown">
                 <a class="nav-link"
-                   href="http://example.com"
                    id="navbarDropdownUser"
                    data-toggle="dropdown">
-                    <ng-container *ngIf="user && user.imagePath">
-                        <div class="user-profile"><img src="{{user.imagePath}}">
+                    <div *ngIf="user && user.imagePath" class="d-flex flex-row justify-content-center">
+                        <div class="user-profile p-2 align-self-center text-center">
+                            <img src="{{user.imagePath}}">
                             <p>{{user.firstName}} {{user.lastName}}</p>
                         </div>
-                    </ng-container>
+                    </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
                     <a class="dropdown-item"
@@ -26,24 +26,6 @@
                        (click)="logout()">
                         Logout
                     </a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link"
-                   href="http://example.com"
-                   id="navbarDropdownMenuLink"
-                   data-toggle="dropdown">
-                    <i class="material-icons">notifications</i>
-                    <span class="notification">5</span>
-                    <p>
-                        <span class="d-lg-none d-md-block">Some Actions</span>
-                    </p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="#">You have 5 events</a>
-                    <a class="dropdown-item" href="#">You're now friend with Andrew</a>
-                    <a class="dropdown-item" href="#">Another Notification</a>
-                    <a class="dropdown-item" href="#">Another One</a>
                 </div>
             </li>
         </ul>
