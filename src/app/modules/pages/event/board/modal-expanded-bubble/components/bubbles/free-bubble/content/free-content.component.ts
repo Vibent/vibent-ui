@@ -6,7 +6,8 @@ import { HttpService } from '../../../../../../../../../core/http/http.service';
 
 @Component({
   selector: 'free-content',
-  templateUrl: './free-content.html'
+  templateUrl: './free-content.html',
+  styleUrls: ['./free-content.scss']
 })
 export class FreeContentComponent implements OnInit {
 
