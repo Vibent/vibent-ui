@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { PlanningBubble } from '../../../../../../../../../shared/models/bubbles/PlanningBubble';
 import { PlanningEntryCreationComponent } from './entry-creation/planning-entry-creation.component';
-import { CheckboxBubble } from '../../../../../../../../../shared/models/bubbles/CheckboxBubble';
 
 @Component({
   selector: 'planning-content',

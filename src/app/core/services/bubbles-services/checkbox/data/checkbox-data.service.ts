@@ -33,4 +33,8 @@ export class CheckboxDataService {
     return !!this.checkboxOption.answers.find(answer => answer.userRef !== this.user.ref);
   }
 
+  isCurrentUserOption(checkboxOption: CheckboxOption) {
+    return checkboxOption.userRef === this.user.ref;
+  }
+
 }

@@ -26,8 +26,10 @@
                         <tr *ngFor="let option of checkboxBubble.options"
                             checkbox-option
                             [checkboxOption]="option"
+                            [checkboxBubble] = this.checkboxBubble
                             [bubbleId]="checkboxBubble.id"
                             (updatedCheckboxOptions)="this.onCheckboxOptionUpdate($event)"
+                            (updatedCheckboxBubble)="this.onBubbleUpdate($event)"
                             [eventRef]="eventRef">
                         </tr>
                         </tbody>

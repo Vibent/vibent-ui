@@ -13,4 +13,5 @@
         {{(checkboxDataModel.answerUsers[0] | async)?.firstName}} {{(checkboxDataModel.answerUsers[0] | async)?.lastName}}
     </span>
     <ng-template #unchecked><span class="badge badge-default badge-danger">Unchecked</span></ng-template>
+    <div *ngIf="isCurrentUserOption" class="float-right delete-button-sm m-r-5 m-t-3" (click)="deleteOption()">Delete</div>
 </td>

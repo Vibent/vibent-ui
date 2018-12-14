@@ -10,6 +10,7 @@ export class PlanningBubble extends IBubble {
 export class PlanningEntry {
   content ?: string;
   end ?: string;
+  id ?: number;
   bubbleId ?: number;
   start ?: string;
   userRef ?: string;
