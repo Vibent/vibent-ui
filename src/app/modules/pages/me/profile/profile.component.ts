@@ -25,9 +25,6 @@ export class ProfileComponent implements OnInit {
     this.userManagementService.change.subscribe(() => {
       this.user = this.userManagementService.getMe();
     });
-    $(() => {
-      $('.tooltip-activation').tooltip();
-    });
   }
 
   public openSettingsDialog(): void {
