@@ -34,9 +34,11 @@ export class AddGroupMembersComponent implements OnInit {
   }
 
   public generateLink(): void {
-    this.httpService.getInviteToken(this.group.ref).subscribe((link) => {
-      this.generatedLink = AppSettings.APP_URL + '/invite/' + link.token;
-    });
+    if (!this.generatedLink) {
+      this.httpService.getInviteToken(this.group.ref).subscribe((link) => {
+        this.generatedLink = AppSettings.APP_URL + '/invite/' + link.token;
+      });
+    }
   }
 
   public sendInvitation(): void {
