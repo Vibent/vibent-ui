@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { SurveyBubble } from '../../../../../../../../../shared/models/bubbles/SurveyBubble';
 import { SurveyOptionCreationComponent } from './survey-option-creation/survey-option-creation.component';
 
@@ -12,6 +12,8 @@ export class SurveyContentComponent {
   surveyBubble: SurveyBubble;
   @Input()
   eventRef: string;
+  @Output()
+  updatedSurveyBubble = new EventEmitter<SurveyBubble>();
   @ViewChild(SurveyOptionCreationComponent)
   private surveyOptionCreationComponent: SurveyOptionCreationComponent;
 
@@ -25,6 +27,7 @@ export class SurveyContentComponent {
 
   onBubbleUpdate(updatedBubble: SurveyBubble) {
     this.surveyBubble = updatedBubble;
+    this.updatedSurveyBubble.emit(updatedBubble);
   }
 
 }

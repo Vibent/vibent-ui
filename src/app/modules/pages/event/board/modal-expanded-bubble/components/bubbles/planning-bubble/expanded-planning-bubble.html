@@ -2,7 +2,8 @@
     <planning-content
             *ngIf=contentDisplayed
             [planningBubble]=this.bubble
-            [eventRef]=this.eventRef>
+            [eventRef]=this.eventRef
+            (updatedPlanningBubble)=this.onBubbleUpdate($event)>
     </planning-content>
     <planning-settings
             *ngIf=!contentDisplayed

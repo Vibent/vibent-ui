@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { CheckboxBubble, CheckboxOption } from '../../../../../../../../../shared/models/bubbles/CheckboxBubble';
 import { OptionCreationComponent } from './option-creation/option-creation.component';
 
@@ -12,6 +12,8 @@ export class CheckboxContentComponent implements OnInit {
   checkboxBubble: CheckboxBubble;
   @Input()
   eventRef: string;
+  @Output()
+  updatedCheckboxBubble = new EventEmitter<CheckboxBubble>();
   @ViewChild(OptionCreationComponent)
   private optionCreationComponent: OptionCreationComponent;
   ratio: string;
@@ -26,6 +28,7 @@ export class CheckboxContentComponent implements OnInit {
 
   onBubbleUpdate(updatedBubble: CheckboxBubble) {
     this.checkboxBubble = updatedBubble;
+    this.updatedCheckboxBubble.emit(updatedBubble);
   }
 
   onCheckboxOptionUpdate(updatedOptions: CheckboxOption) {

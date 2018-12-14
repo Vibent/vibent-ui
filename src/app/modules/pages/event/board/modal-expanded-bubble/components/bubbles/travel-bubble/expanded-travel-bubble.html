@@ -2,7 +2,8 @@
     <travel-content
             *ngIf=contentDisplayed
             [travelBubble]=this.bubble
-            [eventRef]=this.eventRef>
+            [eventRef]=this.eventRef
+            (updatedTravelBubble)=this.onBubbleUpdate($event)>
     </travel-content>
     <travel-settings
             *ngIf=!contentDisplayed
