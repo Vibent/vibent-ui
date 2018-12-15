@@ -13,6 +13,7 @@ import { GroupSettingsComponent } from '../../../../core/admin-panels/group/dial
 import { Event } from '../../../../shared/models/event';
 import { ScreenSizesService } from '../../../../core/services/screen-sizes.service';
 import { Messages } from '../../../../shared/messages-codes/messages';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-group',
@@ -23,7 +24,8 @@ export class GroupComponent implements OnInit, OnDestroy {
 
   events: Event[];
   group: Group;
-  Messages =  Messages;
+  Messages = Messages;
+  subscriptions: Subscription[] = [];
 
   constructor(public dialog: MatDialog,
               public screenSizesService: ScreenSizesService,
@@ -35,14 +37,14 @@ export class GroupComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.groupAdminPanelService.toggleGroupPanel({groupRef: null, isOpen: false});
+    this.groupAdminPanelService.closeGroupPanel();
   }
 
   ngOnInit() {
-    this.groupAdminPanelService.toggleGroupPanel({groupRef: this.group.ref, isOpen: true});
-    this.groupAdminPanelService.groupUpdated.subscribe(result => {
+    this.groupAdminPanelService.toggleGroupPanel(this.group.ref);
+    this.subscriptions.push(this.groupAdminPanelService.groupUpdated$.subscribe(result => {
       this.group = result;
-    });
+    }));
   }
 
   public openGroupMembersDialog(): void {

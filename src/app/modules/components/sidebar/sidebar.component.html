@@ -42,11 +42,11 @@
         </li>
     </ul>
     <app-group-admin-panel
-            *ngIf="groupAdminPanelResult.isOpen && !screenSizesService.isMobileMenu()"
-            [groupRef]="groupAdminPanelResult.groupRef">
+            *ngIf="groupAdminPanelInput && !screenSizesService.isMobileMenu()"
+            [groupRef]="groupAdminPanelInput">
     </app-group-admin-panel>
     <app-event-admin-panel
-            *ngIf="eventAdminPanelResult.isOpen && !screenSizesService.isMobileMenu()"
-            [eventRef]="eventAdminPanelResult.eventRef">
+            *ngIf="eventAdminPanelInput && !screenSizesService.isMobileMenu()"
+            [eventRef]="eventAdminPanelInput">
     </app-event-admin-panel>
 </div>

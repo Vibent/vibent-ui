@@ -1,13 +1,14 @@
-import { EventEmitter, Injectable, Output } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Event } from '../../../shared/models/event';
 import { HttpService } from '../../http/http.service';
 import { BlacknoteService } from '../blacknote/blacknote.service';
 import { LoaderService } from '../loader/service/loader.service';
+import { Subject } from 'rxjs';
 
 @Injectable()
 export class EventUpdateService {
 
-  @Output() eventUpdated: EventEmitter<Event> = new EventEmitter();
+  eventUpdated$ = new Subject<Event>();
 
   constructor(private httpService: HttpService,
               private loaderService: LoaderService,
@@ -17,7 +18,7 @@ export class EventUpdateService {
   updateEvent(eventRef: string) {
     this.blacknoteService.sendEventUpdate(eventRef);
     this.httpService.getEvent(eventRef).subscribe((event) => {
-      this.eventUpdated.emit(event);
+      this.eventUpdated$.next(event);
     });
   }
 

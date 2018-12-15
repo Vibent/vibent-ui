@@ -1,30 +1,34 @@
-import { EventEmitter, Injectable, Output } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpService } from '../http/http.service';
 import { LoaderService } from './loader/service/loader.service';
 import { Event } from '../../shared/models/event';
 import { NotificationsService, NotificationType } from './notifications.service';
 import { Messages } from '../../shared/messages-codes/messages';
+import { EventUpdateService } from './bubbles-services/event-update.service';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class EventAdminPanelService {
 
-  isOpen = false;
-  @Output() change: EventEmitter<any> = new EventEmitter();
-  @Output() eventUpdated: EventEmitter<Event> = new EventEmitter();
+  change$ = new BehaviorSubject(null);
 
   constructor(private httpService: HttpService,
+              private eventUpdateService: EventUpdateService,
               private notificationService: NotificationsService,
               private loaderService: LoaderService) {
   }
 
-  toggleEventPanel(response: any) {
-    this.isOpen = response.isOpen;
-    this.change.emit(response);
+  toggleEventPanel(eventRef: string) {
+    this.change$.next(eventRef);
+  }
+
+  closeEventPanel() {
+    this.change$.next(null);
   }
 
   updateEvent(event: Event) {
-    this.httpService.updateEvent(event).subscribe((updatedEvent) => {
-      this.eventUpdated.emit(updatedEvent);
+    this.httpService.updateEvent(event).subscribe(() => {
+      this.eventUpdateService.updateEvent(event.ref);
       this.loaderService.closeLoadingPageModal();
       this.notificationService.notify(Messages.EVENT_UPDATED, NotificationType.SUCCESS);
     });

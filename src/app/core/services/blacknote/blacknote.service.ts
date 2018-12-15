@@ -1,16 +1,17 @@
-import { EventEmitter, Injectable, OnInit, Output } from '@angular/core';
+import { Injectable } from '@angular/core';
 import * as io from 'socket.io-client';
 import { Event } from '../../../shared/models/event';
 import { HttpService } from '../../http/http.service';
 import { AppSettings } from '../../../shared/global/constants';
 import { LoaderService } from '../loader/service/loader.service';
+import { Subject } from 'rxjs';
 
 @Injectable()
 export class BlacknoteService {
 
   private BLACKNOTE_URL = AppSettings.BLACKNOTE_URL;
   private socket;
-  @Output() eventUpdated: EventEmitter<Event> = new EventEmitter();
+  eventUpdated$ = new Subject<Event>();
   NEW_EVENT_LISTENER = 'eventListener';
   EVENT_UPDATE_EMIT = 'eventUpdate';
 
@@ -19,7 +20,7 @@ export class BlacknoteService {
 
   updateEvent(eventRef: string) {
     this.httpService.getEvent(eventRef).subscribe((event) => {
-      this.eventUpdated.emit(event);
+      this.eventUpdated$.next(event);
     });
   }
 
