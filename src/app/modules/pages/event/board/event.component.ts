@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Event } from '../../../../shared/models/event';
 import { BubbleType, IBubble } from '../../../../shared/models/bubbles/IBubble';
@@ -9,6 +9,7 @@ import { EventParticipant } from '../../../../shared/models/event-participant';
 import { ScreenSizesService } from '../../../../core/services/screen-sizes.service';
 import { EventSettingsComponent } from '../../../../core/admin-panels/event/dialogs/event-settings/event-settings.component';
 import { MatDialog } from '@angular/material';
+import { Subscription } from 'rxjs';
 
 declare const $: any;
 
@@ -16,14 +17,13 @@ declare const $: any;
   selector: 'app-event',
   templateUrl: './event.component.html'
 })
-export class EventComponent implements OnInit, OnDestroy  {
+export class EventComponent implements OnInit, OnDestroy {
 
   event: Event;
   bubbles: IBubble[];
   bubbleToExpand: IBubble;
-  eventUpdateSubscribtion: EventEmitter<Event>;
-  blackServiceEventUpdateSubscribtion: EventEmitter<Event>;
   participationRefs: EventParticipant[] = [];
+  subscriptions: Subscription[] = [];
 
   constructor(private route: ActivatedRoute,
               private eventAdminPanelService: EventAdminPanelService,
@@ -52,26 +52,28 @@ export class EventComponent implements OnInit, OnDestroy  {
   }
 
   ngOnInit() {
-    this.eventAdminPanelService.toggleEventPanel({eventRef: this.event.ref, isOpen: true});
-    this.eventUpdateSubscribtion = this.eventUpdateService.eventUpdated.subscribe(event => {
+    this.eventAdminPanelService.toggleEventPanel(this.event.ref);
+
+    this.subscriptions.push(this.eventUpdateService.eventUpdated$.subscribe(event => {
       this.event = event;
       this.refreshBubblesAndParticipations();
-    });
+    }));
 
-    this.blackServiceEventUpdateSubscribtion = this.blacknoteService.eventUpdated.subscribe(event => {
+    this.subscriptions.push(this.blacknoteService.eventUpdated$.subscribe(event => {
       this.event = event;
       this.refreshBubblesAndParticipations();
       this.updateExpandedBubble();
-    });
+    }));
 
     this.refreshBubblesAndParticipations();
   }
 
   ngOnDestroy() {
-    this.eventAdminPanelService.toggleEventPanel({groupRef: null, isOpen: false});
+    this.eventAdminPanelService.closeEventPanel();
     this.blacknoteService.disconnect();
-    this.eventUpdateSubscribtion.unsubscribe();
-    this.blackServiceEventUpdateSubscribtion.unsubscribe();
+    this.subscriptions.forEach((subscription: Subscription) => {
+      subscription.unsubscribe();
+    });
   }
 
   /**
@@ -121,7 +123,7 @@ export class EventComponent implements OnInit, OnDestroy  {
   }
 
   openSettingsDialog() {
-      this.dialog.open(EventSettingsComponent, {
+    this.dialog.open(EventSettingsComponent, {
       maxWidth: '100vw',
       maxHeight: '100vh',
       panelClass: 'full-screen-dialog',

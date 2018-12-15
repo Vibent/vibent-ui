@@ -1,15 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AuthenticationService } from '../../../core/services/authentication.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GroupAdminPanelService } from '../../../core/services/group-admin-panel.service';
-import { ProfileImageService } from '../../../core/http/profile-image.service';
 import { User } from '../../../shared/models/user';
 import { HttpService } from '../../../core/http/http.service';
 import { EventAdminPanelService } from '../../../core/services/event-admin-panel.service';
 import { UserManagementService } from '../../../core/services/user-management.service';
 import { ScreenSizesService } from '../../../core/services/screen-sizes.service';
-
-declare const $: any;
+import { Subscription } from 'rxjs';
 
 declare interface IRouteInfo {
   path: string;
@@ -27,12 +25,13 @@ export const ROUTES: IRouteInfo[] = [
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html'
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent implements OnInit, OnDestroy {
 
   menuItems: any[];
-  groupAdminPanelResult = {groupRef: null, isOpen: false};
-  eventAdminPanelResult = {eventRef: null, isOpen: false};
+  groupAdminPanelInput = null;
+  eventAdminPanelInput = null;
   user: User;
+  subscriptions: Subscription[] = [];
 
   constructor(private router: Router,
               private route: ActivatedRoute,
@@ -41,26 +40,33 @@ export class SidebarComponent implements OnInit {
               private httpService: HttpService,
               private groupAdminPanelService: GroupAdminPanelService,
               private eventAdminPanelService: EventAdminPanelService,
-              public screenSizesService: ScreenSizesService
-  ) {
+              public screenSizesService: ScreenSizesService) {
     this.user = this.userManagementService.getMe();
   }
 
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
-    this.groupAdminPanelService.change.subscribe(result => {
-      this.groupAdminPanelResult = result;
-    });
-    this.eventAdminPanelService.change.subscribe(result => {
-      this.eventAdminPanelResult = result;
-    });
-    this.userManagementService.change.subscribe(() => {
-      this.user = this.userManagementService.getMe();
-    });
+    this.subscriptions.push(
+      this.groupAdminPanelService.change$.subscribe(result => {
+        this.groupAdminPanelInput = result;
+      }),
+      this.eventAdminPanelService.change$.subscribe(result => {
+        this.eventAdminPanelInput = result;
+      }),
+      this.userManagementService.change$.subscribe(() => {
+        this.user = this.userManagementService.getMe();
+      })
+    );
   }
 
   public logout(): void {
     this.authenticationService.logout();
     this.router.navigate(['/login']);
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.forEach((subscription: Subscription) => {
+      subscription.unsubscribe();
+    });
   }
 }
