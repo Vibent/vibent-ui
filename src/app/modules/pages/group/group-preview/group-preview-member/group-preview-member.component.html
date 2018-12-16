@@ -1,11 +1,11 @@
 <div class="group-profile">
 	<ng-container *ngIf="user">
 		<div class="group-user-avatar">
-			<loader [mainCondition]=!user.imagePath
+			<loader [mainCondition]=!user.profilePicLocation
 					[fade]=true
                     [withLogo]=false
 					[mainSize]=loaderSize></loader>
-			<img *ngIf="user.imagePath" class="img" src={{user.imagePath}}>
+			<img class="img" src={{user.profilePicLocation}}>
 		</div>
 		<div class="group-user-body">
 			<div class="group-user-name">{{user.firstName}}</div>

@@ -6,7 +6,7 @@
         <div class="d-flex flex-row">
             <div class="p-2 align-self-center">
                 <div class="avatar">
-                    <img src="{{profileImageService.getUserProfileImage(travelProposal.userRef)}}">
+                    <img *ngIf="proposerUser" src="{{proposerUser.profilePicLocation}}">
                 </div>
             </div>
             <div class="p-2 align-self-center">
@@ -35,7 +35,7 @@
                         <i *ngIf="request.userRef === user.ref"
                            class="fa fa-times-circle user-seat-taker cursor-pointer"
                            (click)="deleteRequest(request)"></i>
-                        <img src="{{profileImageService.getUserProfileImage(request.userRef)}}">
+                        <img *ngIf="requesterUsers[request.userRef]" src="{{requesterUsers[request.userRef].profilePicLocation}}">
                     </div>
                 </div>
                 <div *ngFor="let dummy of travelDataModel.availableSeatsList" class="p-2 align-self-center">

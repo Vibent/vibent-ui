@@ -1,6 +1,6 @@
 <div *ngIf="user" class="event-participant">
     <div class="participant-avatar">
-        <img class="rounded-circle avatar" src={{user?.imagePath}}/>
+        <img class="rounded-circle avatar" src={{user?.profilePicLocation}}/>
         <span class="participant-user-additional-{{this.getResponseCss(participant.answer)}}"></span>
     </div>
     <div class="participant-infos">

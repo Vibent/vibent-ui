@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpService } from '../http/http.service';
 import { User } from '../../shared/models/user';
-import { ProfileImageService } from '../http/profile-image.service';
 import { LoaderService } from './loader/service/loader.service';
 import { BehaviorSubject } from 'rxjs';
 
@@ -11,8 +10,7 @@ export class UserManagementService {
   change$ = new BehaviorSubject<boolean>(false);
 
   constructor(private httpService: HttpService,
-              private loaderService: LoaderService,
-              private profileImageService: ProfileImageService) {
+              private loaderService: LoaderService) {
   }
 
   public manageUser(user: User) {
@@ -41,13 +39,7 @@ export class UserManagementService {
 
   public setMe() {
     this.httpService.getMe().subscribe((user) => {
-      this.profileImageService.getProfileImage(user.ref).subscribe((data) => {
-          this.getUserImageFromBlob(user, data);
-        },
-        () => {
-          this.profileImageService.setUserImageFromGravatar(user);
-          this.setMeOnCookie(user);
-        });
+      this.setMeOnCookie(user);
     });
   }
 
@@ -60,19 +52,6 @@ export class UserManagementService {
     window.sessionStorage.setItem('me', JSON.stringify(user));
     this.loaderService.closeLoadingPageModal();
     this.change$.next(true);
-  }
-
-  // Need to duplicate it to add this.setMeOnCookie(user) after load
-  public getUserImageFromBlob(user: User, file: Blob) {
-    const reader = new FileReader();
-    reader.addEventListener('load', () => {
-      user.imagePath = reader.result;
-      this.setMeOnCookie(user);
-    }, false);
-
-    if (file) {
-      reader.readAsDataURL(file);
-    }
   }
 
   socialLink(linkRequest, onFail?: (e) => void): void {

@@ -3,7 +3,6 @@ import { EventParticipant, EventParticipantAnswer } from '../../../../../../shar
 import { User } from '../../../../../../shared/models/user';
 import { LoaderSize } from '../../../../../../shared/global/constants';
 import { HttpService } from '../../../../../../core/http/http.service';
-import { ProfileImageService } from '../../../../../../core/http/profile-image.service';
 
 @Component({
   selector: 'app-event-participants-preview',
@@ -17,13 +16,12 @@ export class EventParticipantsPreviewComponent implements OnInit {
   user: User = null;
   loaderSize = LoaderSize.small;
 
-  constructor(private httpService: HttpService, private profileImageService: ProfileImageService) {
+  constructor(private httpService: HttpService) {
   }
 
   ngOnInit() {
     this.httpService.getUser(this.participant.userRef).subscribe((user) => {
       this.user = user;
-      this.profileImageService.getProfileImageOfUser(this.user);
     });
   }
 

@@ -1,9 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { User } from '../../../../../shared/models/user';
 import { HttpService } from '../../../../../core/http/http.service';
-import { ProfileImageService } from '../../../../../core/http/profile-image.service';
 import { Membership } from '../../../../../shared/models/membership';
-import { AppSettings, LoaderSize } from '../../../../../shared/global/constants';
+import { LoaderSize } from '../../../../../shared/global/constants';
 
 @Component({
   selector: 'app-group-preview-member',
@@ -17,15 +16,12 @@ export class GroupPreviewMemberComponent implements OnInit {
   user: User = null;
   loaderSize = LoaderSize.small;
 
-  constructor(private httpService: HttpService, private profileImageService: ProfileImageService) {
+  constructor(private httpService: HttpService) {
   }
 
   ngOnInit() {
     this.httpService.getUser(this.membership.userRef).subscribe((user) => {
       this.user = user;
-      this.profileImageService.getProfileImageOfUser(this.user);
     });
-
   }
-
 }

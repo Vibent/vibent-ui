@@ -24,9 +24,8 @@
 					<a class="nav-link"
 					   id="navUserProfile"
 					   data-toggle="dropdown">
-						<div *ngIf="user && user.imagePath"
-							 class="user-profile">
-							<img src="{{user.imagePath}}">
+						<div class="user-profile">
+							<img *ngIf="user" src="{{user.profilePicLocation}}">
 						</div>
 						<div class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item"
