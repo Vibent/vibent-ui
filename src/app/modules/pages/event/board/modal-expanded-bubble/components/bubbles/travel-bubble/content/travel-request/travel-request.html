@@ -6,7 +6,7 @@
         <div class="d-flex flex-row">
             <div class="p-2 align-self-center">
                 <div class="avatar">
-                    <img src="{{profileImageService.getUserProfileImage(travelRequest.userRef)}}">
+                    <img src="{{(requesterUser | async)?.profilePicLocation}}">
                 </div>
             </div>
             <div class="p-2 align-self-center">
@@ -23,7 +23,7 @@
     <div [attr.id]="'request-collapse-'+ travelRequest.id" class="collapse">
         <div class="card-body">
             <div class="d-flex justify-content-center">
-                <div class="p-2 align-self-center">{{(user | async)?.firstName}} {{(user | async)?.lastName}}
+                <div class="p-2 align-self-center">{{(requesterUser | async)?.firstName}} {{(requesterUser | async)?.lastName}}
                     need a car to go to event from {{travelDataModel.completeAddress}}
                 </div>
             </div>

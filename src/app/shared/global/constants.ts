@@ -1,5 +1,5 @@
 export class AppSettings {
-  public static API_ENDPOINT = 'https://api.dev.vibent.com';
+  public static API_ENDPOINT = 'http://localhost:8080';
   public static BLACKNOTE_URL = 'https://blacknote.dev.vibent.com';
   public static APP_URL = 'https://dev.vibent.com';
   public static S3_BUCKET_PROFILE_URL = 'https://s3.eu-west-3.amazonaws.com/vibent/profile/';

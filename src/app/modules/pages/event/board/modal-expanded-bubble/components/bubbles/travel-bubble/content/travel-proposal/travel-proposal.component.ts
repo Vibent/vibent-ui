@@ -1,10 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  OnInit,
-  Output
-} from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import {
   TravelBubble,
   TravelDataModel,
@@ -14,17 +8,14 @@ import {
 import { AlgoliaPlacesService } from '../../../../../../../../../../core/services/algolia-places/algolia-places.service';
 import { TravelHttpService } from '../../../../../../../../../../core/services/bubbles-services/travel/http/travel-http.service';
 import { TravelDataService } from '../../../../../../../../../../core/services/bubbles-services/travel/data/travel-data.service';
-import { ProfileImageService } from '../../../../../../../../../../core/http/profile-image.service';
 import { UserManagementService } from '../../../../../../../../../../core/services/user-management.service';
 import { User } from '../../../../../../../../../../shared/models/user';
 import mapboxgl from 'mapbox-gl';
 import Swal from 'sweetalert2';
-import {
-  Messages,
-  SwalColors
-} from '../../../../../../../../../../shared/messages-codes/messages';
+import { Messages, SwalColors } from '../../../../../../../../../../shared/messages-codes/messages';
 import { EventUpdateService } from '../../../../../../../../../../core/services/bubbles-services/event-update.service';
 import { AppSettings } from '../../../../../../../../../../shared/global/constants';
+import { HttpService } from '../../../../../../../../../../core/http/http.service';
 
 @Component({
   selector: 'travel-proposal',
@@ -43,6 +34,8 @@ export class TravelProposalComponent implements OnInit {
   @Output()
   updatedTravelBubble = new EventEmitter<TravelBubble>();
   user: User;
+  proposerUser: User;
+  requesterUsers = {};
   firstClick = true;
   place: { locale_names: any, _geoloc: any, city: any, is_city: boolean };
   travelDataModel: TravelDataModel = new TravelDataModel();
@@ -50,7 +43,7 @@ export class TravelProposalComponent implements OnInit {
   map: any;
 
   constructor(
-    public profileImageService: ProfileImageService,
+    public httpService: HttpService,
     private userManagementService: UserManagementService,
     private algoliaPlacesService: AlgoliaPlacesService,
     private eventUpdateService: EventUpdateService,
@@ -60,6 +53,11 @@ export class TravelProposalComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.requesterUsers[this.user.ref] = this.user;
+    this.httpService.getUser(this.travelProposal.userRef).subscribe((user) => this.proposerUser = user);
+    this.travelProposal.attachedRequests.forEach(req => {
+      this.httpService.getUser(req.userRef).subscribe((user) => this.requesterUsers[req.userRef] = user);
+    });
     this.algoliaPlacesService.getPlace(this.travelProposal.passByCities).subscribe((place) => {
       this.place = place;
       this.populateTravelDataModel(place);

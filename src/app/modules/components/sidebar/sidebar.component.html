@@ -10,9 +10,9 @@
                 <a class="nav-link"
                    id="navbarDropdownUser"
                    data-toggle="dropdown">
-                    <div *ngIf="user && user.imagePath" class="d-flex flex-row justify-content-center">
+                    <div class="d-flex flex-row justify-content-center">
                         <div class="user-profile p-2 align-self-center text-center">
-                            <img src="{{user.imagePath}}">
+                            <img src="{{user.profilePicLocation}}">
                             <p>{{user.firstName}} {{user.lastName}}</p>
                         </div>
                     </div>

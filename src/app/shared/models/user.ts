@@ -8,7 +8,7 @@ export interface User {
   participations ?: any[];
   membershipRequests?: any[];
   socialCredentials?: object;
-  imagePath?: any;
+  profilePicLocation?: string;
 }
 
 export interface Email {

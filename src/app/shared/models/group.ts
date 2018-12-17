@@ -11,7 +11,6 @@ export interface Group {
   memberships?: Membership[];
   hasDefaultAdmin?: boolean;
   allAdmins ?: boolean;
-  imagePath?: string;
 
 }
 

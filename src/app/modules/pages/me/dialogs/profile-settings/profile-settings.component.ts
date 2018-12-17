@@ -7,9 +7,6 @@ import { HttpService } from '../../../../../core/http/http.service';
 import { ProfileImageService } from '../../../../../core/http/profile-image.service';
 import { UserManagementService } from '../../../../../core/services/user-management.service';
 import { LoaderService } from '../../../../../core/services/loader/service/loader.service';
-import Compressor from 'compressorjs';
-import Swal from 'sweetalert2';
-import { Messages } from '../../../../../shared/messages-codes/messages';
 
 @Component({
   selector: 'app-profile-settings',
@@ -26,9 +23,6 @@ export class ProfileSettingsComponent implements OnInit {
   imageChangedEvent: any = '';
   firstnameValidSetted = true;
   lastnameValidSetted = true;
-  compressorQuality = 0.2;
-  // in bytes
-  fileMaximumSize = 200000;
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<ProfileSettingsComponent>,
@@ -40,28 +34,12 @@ export class ProfileSettingsComponent implements OnInit {
               private userManagementService: UserManagementService) {
     dialogRef.disableClose = true;
     this.user = this.userManagementService.getMe();
-    this.croppedImage = this.user.imagePath;
+    this.croppedImage = this.user.profilePicLocation;
   }
 
   fileChangeEvent(event: any): void {
     const self = this;
-
-    new Compressor(event.target.files[0], {
-      quality: this.compressorQuality,
-      success(result) {
-        if (result.size > self.fileMaximumSize) {
-          Swal({
-            type: 'error',
-            title: Messages.SIZE_TOO_BIG,
-            text: Messages.SIZE_TOO_BIG_TEXT,
-            showConfirmButton: true,
-          });
-        }
-        else {
-          self.getBase64(result);
-        }
-      },
-    });
+    self.getBase64(event.target.files[0]);
   }
 
   getBase64(file) {
@@ -117,7 +95,7 @@ export class ProfileSettingsComponent implements OnInit {
     });
     if (this.fileToUpload) {
       this.loaderService.displayLoadingPageModal();
-      this.profileImageService.uploadProfileImage(this.fileToUpload, user).subscribe(() => {
+      this.profileImageService.uploadProfilePic(this.fileToUpload).subscribe(() => {
         this.userManagementService.setMe();
       });
     }

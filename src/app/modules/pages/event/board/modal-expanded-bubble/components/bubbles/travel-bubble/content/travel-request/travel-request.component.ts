@@ -45,7 +45,7 @@ export class TravelRequestComponent implements OnInit {
   bubbleId: number;
   @Output()
   updatedTravelBubble = new EventEmitter<TravelBubble>();
-  user: Observable<User>;
+  requesterUser: Observable<User>;
   firstClick = true;
   place: { locale_names: any, _geoloc: any, city: any, is_city: boolean };
   travelDataModel: TravelDataModel = new TravelDataModel();
@@ -65,7 +65,6 @@ export class TravelRequestComponent implements OnInit {
   }
 
   resizeMapbox() {
-    this.user = this.httpService.getUser(this.travelRequest.userRef);
     if (this.firstClick && !$('#request-collapse-' + this.travelRequest.id).hasClass('in')) {
       this.firstClick = this.place ?
         !!this.constructMap(this.place) :
@@ -102,7 +101,7 @@ export class TravelRequestComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.user = this.httpService.getUser(this.travelRequest.userRef);
+    this.requesterUser = this.httpService.getUser(this.travelRequest.userRef);
     this.algoliaPlacesService.getPlace(this.travelRequest.passByCities).subscribe((place) => {
       this.place = place;
       this.populateTravelDataModel(place);

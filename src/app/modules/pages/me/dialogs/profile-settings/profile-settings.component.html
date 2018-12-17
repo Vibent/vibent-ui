@@ -15,8 +15,9 @@
 
 	<image-cropper *ngIf="imageChangedEvent"
 				   [imageBase64]="imageChangedEvent"
-				   [maintainAspectRatio]="true"
 				   [aspectRatio]="1"
+				   [resizeToWidth]="128"
+				   format="jpeg"
 				   (imageCropped) = "imageCropped($event)"
 	></image-cropper>
 	<div class="row justify-content-center">
