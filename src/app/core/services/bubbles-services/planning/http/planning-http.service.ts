@@ -34,7 +34,7 @@ export class PlanningHttpService {
   }
 
   deleteEntry(entry: PlanningEntry) {
-    return this.http.delete(this.API_URL + '/bubble/planning/entry/' + entry.bubbleId, httpOptions);
+    return this.http.delete(this.API_URL + '/bubble/planning/entry/' + entry.id, httpOptions);
   }
 
 }

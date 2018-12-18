@@ -23,4 +23,8 @@ export class PlanningDataService {
     };
   }
 
+  isCurrentUserEntry(planningEntry: PlanningEntry) {
+    return planningEntry.userRef === this.user.ref;
+  }
+
 }

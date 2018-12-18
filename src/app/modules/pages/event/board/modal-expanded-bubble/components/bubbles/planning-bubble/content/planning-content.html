@@ -17,9 +17,11 @@
                     <ul class="planning-timeline">
                         <li *ngFor="let entry of planningBubble.entries"
                             planning-entry
+                            [planningBubble] = this.planningBubble
                             [planningEntry]="entry"
                             [bubbleId]="planningBubble.id"
-                            [eventRef]="this.eventRef">
+                            [eventRef]="this.eventRef"
+                            (updatedPlanningBubble)="this.onBubbleUpdate($event)">
                         </li>
                     </ul>
                 </div>

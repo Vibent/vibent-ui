@@ -615,6 +615,17 @@ button.close {
   cursor: pointer;
 }
 
+.delete-button-sm {
+  background: #e65b5b;
+  padding-left: 6px;
+  padding-right: 6px;
+  font-size: 13px;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  line-height: 20px;
+}
+
 .checkbox-card {
 
   .card {
