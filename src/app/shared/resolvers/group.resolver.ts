@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { ActivatedRouteSnapshot, Resolve } from '@angular/router';
 
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { Group } from '../models/group';
 import { HttpService } from '../../core/http/http.service';
 

@@ -2,7 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import 'rxjs/add/operator/map';
+
 import { HttpService } from '../../../../../core/http/http.service';
 import { NotificationsService, NotificationType } from '../../../../../core/services/notifications.service';
 import { Messages } from '../../../../../shared/messages-codes/messages';

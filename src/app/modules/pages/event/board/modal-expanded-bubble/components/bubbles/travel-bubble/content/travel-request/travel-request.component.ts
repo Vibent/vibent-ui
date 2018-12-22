@@ -13,7 +13,6 @@ import {
 import { AlgoliaPlacesService } from '../../../../../../../../../../core/services/algolia-places/algolia-places.service';
 import { TravelHttpService } from '../../../../../../../../../../core/services/bubbles-services/travel/http/travel-http.service';
 import { TravelDataService } from '../../../../../../../../../../core/services/bubbles-services/travel/data/travel-data.service';
-import { ProfileImageService } from '../../../../../../../../../../core/http/profile-image.service';
 import { UserManagementService } from '../../../../../../../../../../core/services/user-management.service';
 import { User } from '../../../../../../../../../../shared/models/user';
 import mapboxgl from 'mapbox-gl';
@@ -54,7 +53,6 @@ export class TravelRequestComponent implements OnInit {
   map: any;
 
   constructor(
-    public profileImageService: ProfileImageService,
     private userManagementService: UserManagementService,
     private algoliaPlacesService: AlgoliaPlacesService,
     private eventUpdateService: EventUpdateService,
@@ -98,6 +96,8 @@ export class TravelRequestComponent implements OnInit {
     setTimeout(() => {
       this.map.resize();
     });
+
+    return true;
   }
 
   ngOnInit() {
