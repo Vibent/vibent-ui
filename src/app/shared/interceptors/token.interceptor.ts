@@ -1,3 +1,5 @@
+
+import {tap} from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import {
   HttpErrorResponse,
@@ -7,9 +9,9 @@ import {
   HttpRequest,
   HttpResponse
 } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { CookieService } from 'ngx-cookie-service';
-import 'rxjs/add/operator/do';
+
 import { Router } from '@angular/router';
 import { LoaderService } from '../../core/services/loader/service/loader.service';
 
@@ -26,7 +28,7 @@ export class TokenInterceptor implements HttpInterceptor {
       }
     });
 
-    return next.handle(request).do((event: HttpEvent<any>) => {
+    return next.handle(request).pipe(tap((event: HttpEvent<any>) => {
       if (event instanceof HttpResponse) {
         this.loaderService.deletePendingRequest();
       }
@@ -37,6 +39,6 @@ export class TokenInterceptor implements HttpInterceptor {
           this.router.navigate(['/login']);
         }
       }
-    });
+    }));
   }
 }

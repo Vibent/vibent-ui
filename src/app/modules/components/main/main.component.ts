@@ -1,7 +1,9 @@
+
+import {filter} from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { Location, PopStateEvent } from '@angular/common';
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 import { UserManagementService } from '../../../core/services/user-management.service';
 
 @Component({
@@ -39,7 +41,7 @@ export class MainComponent implements OnInit {
         }
       }
     });
-    this._router = this.router.events.filter(event => event instanceof NavigationEnd).subscribe((event: NavigationEnd) => {
+    this._router = this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: NavigationEnd) => {
       elemMainPanel.scrollTop = 0;
       elemSidebar.scrollTop = 0;
     });

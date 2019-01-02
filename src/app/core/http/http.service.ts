@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Group, MailInvite } from '../../shared/models/group';
 import { Event } from '../../shared/models/event';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { Email, PasswordReset, User } from '../../shared/models/user';
 import { AppSettings } from '../../shared/global/constants';
 import { EventParticipant } from '../../shared/models/event-participant';

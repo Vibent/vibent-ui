@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import 'rxjs/add/operator/map';
+
 import { HttpService } from '../http/http.service';
 import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';

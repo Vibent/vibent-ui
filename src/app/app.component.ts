@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import 'rxjs/add/operator/filter';
+
 
 declare const $: any;
 

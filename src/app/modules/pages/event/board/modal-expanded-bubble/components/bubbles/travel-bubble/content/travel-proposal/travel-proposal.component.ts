@@ -98,6 +98,8 @@ export class TravelProposalComponent implements OnInit {
     setTimeout(() => {
       this.map.resize();
     });
+
+    return true;
   }
 
   populateTravelDataModel(place) {

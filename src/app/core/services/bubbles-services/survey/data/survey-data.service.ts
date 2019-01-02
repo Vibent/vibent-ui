@@ -3,7 +3,8 @@ import { UserManagementService } from '../../../user-management.service';
 import { User } from '../../../../../shared/models/user';
 import { HttpService } from '../../../../http/http.service';
 import { SurveyDataModel, SurveyOption } from '../../../../../shared/models/bubbles/SurveyBubble';
-import { Observable } from 'rxjs';
+import { forkJoin, Observable } from 'rxjs';
+
 
 @Injectable()
 export class SurveyDataService {
@@ -43,7 +44,7 @@ export class SurveyDataService {
         resolve('No voters');
       });
     }
-    return await Observable.forkJoin(observables).toPromise().then((users) => {
+    return await forkJoin(observables).toPromise().then((users) => {
       for (const user of users) {
         usersString += user.firstName + ' ' + user.lastName + '<br\>';
       }

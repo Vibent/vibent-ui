@@ -6,7 +6,7 @@ import {
 import { UserManagementService } from '../../../user-management.service';
 import { User } from '../../../../../shared/models/user';
 import { HttpService } from '../../../../http/http.service';
-import 'rxjs/add/observable/of';
+
 
 @Injectable()
 export class AlimentationDataService {
