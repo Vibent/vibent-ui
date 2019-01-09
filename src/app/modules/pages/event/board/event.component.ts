@@ -5,7 +5,7 @@ import { BubbleType, IBubble } from '../../../../shared/models/bubbles/IBubble';
 import { EventAdminPanelService } from '../../../../core/services/event-admin-panel.service';
 import { EventUpdateService } from '../../../../core/services/bubbles-services/event-update.service';
 import { BlacknoteService } from '../../../../core/services/blacknote/blacknote.service';
-import { EventParticipant } from '../../../../shared/models/event-participant';
+import { EventParticipant, EventParticipantAnswer } from '../../../../shared/models/event-participant';
 import { ScreenSizesService } from '../../../../core/services/screen-sizes.service';
 import { EventSettingsComponent } from '../../../../core/admin-panels/event/dialogs/event-settings/event-settings.component';
 import { MatDialog } from '@angular/material';
@@ -14,7 +14,7 @@ import { Subscription } from 'rxjs';
 declare const $: any;
 
 @Component({
-  selector: 'app-event',
+  selector: 'event',
   templateUrl: './event.component.html'
 })
 export class EventComponent implements OnInit, OnDestroy {
@@ -48,7 +48,7 @@ export class EventComponent implements OnInit, OnDestroy {
 
   onParticipationUpdate(eventParticipation: EventParticipant) {
     this.event.participationRefs[this.event.participationRefs.findIndex(p => p.userRef === eventParticipation.userRef)] = eventParticipation;
-    this.participationRefs = this.event.participationRefs;
+    this.participationRefs = this.sortParticipations(this.event.participationRefs);
   }
 
   ngOnInit() {
@@ -114,12 +114,29 @@ export class EventComponent implements OnInit, OnDestroy {
 
   /**
    * Duplicate participations and check for changes on each event update
-   * Allow to not push new input in participations component, to not reload pariticpants avatars
+   * Allow to not push new input in participations component, to not reload participants avatars
    */
   compareParticipations() {
-    if (!(JSON.stringify(this.event.participationRefs) === JSON.stringify(this.participationRefs))) {
-      this.participationRefs = this.event.participationRefs;
+    if (JSON.stringify(this.event.participationRefs) !== JSON.stringify(this.participationRefs)) {
+      this.participationRefs = this.sortParticipations(this.event.participationRefs);
     }
+  }
+
+  /**
+   * Sort participations according to local variable sortedAnswers order.
+   * @param participationRefs
+   */
+  sortParticipations(participationRefs: EventParticipant[]): EventParticipant[] {
+    const participations = [];
+    const sortedAnswers = [EventParticipantAnswer.YES, EventParticipantAnswer.MAYBE, EventParticipantAnswer.NO, EventParticipantAnswer.UNANSWERED];
+    for (const answer of sortedAnswers) {
+      participationRefs.forEach(participation => {
+        if (participation.answer === answer) {
+          participations.push(participation);
+        }
+      });
+    }
+    return participations;
   }
 
   openSettingsDialog() {
