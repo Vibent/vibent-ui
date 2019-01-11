@@ -33,7 +33,7 @@
                 <div *ngFor="let request of travelProposal.attachedRequests" class="p-2 align-self-center">
                     <div class="proposal-seat-taker">
                         <i *ngIf="request.userRef === user.ref"
-                           class="fa fa-times-circle user-seat-taker cursor-pointer"
+                           class="fa fa-minus-circle user-seat-taker cursor-pointer"
                            (click)="deleteRequest(request)"></i>
                         <img *ngIf="requesterUsers[request.userRef]" src="{{requesterUsers[request.userRef].profilePicLocation}}">
                     </div>

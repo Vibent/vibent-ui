@@ -1,14 +1,12 @@
 <div class="row">
     <div class="col-lg-12">
-        <div class="card">
-            <a [routerLink]="['/groups/' + group.ref]">
-                <div class="card-header card-header-vibent-purple">
-                    <h4 class="card-title ">{{group.name}}</h4>
-                    <h4 class="card-members "><b>{{group.memberships.length}}</b> member<span
-                            *ngIf="group.memberships.length>1">s</span></h4>
-                    <p class="card-category">{{group.description}}</p>
-                </div>
-            </a>
+        <div [routerLink]="['/groups/' + group.ref]" class="card">
+            <div class="card-header card-header-vibent-purple">
+                <h4 class="card-title ">{{group.name}}</h4>
+                <h4 class="card-members "><b>{{group.memberships.length}}</b> member<span
+                        *ngIf="group.memberships.length>1">s</span></h4>
+                <p class="card-category">{{group.description}}</p>
+            </div>
             <div class="card-body">
                 <div class="row justify-content-center">
                     <div class="scrolling-wrapper">
