@@ -1,12 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import {
-  AlimentationBring,
-  AlimentationBubble,
-  AlimentationEntry, BringsByUser
-} from '../../../../../shared/models/bubbles/AlimentationBubble';
-import { AppSettings } from '../../../../../shared/global/constants';
 import { CheckboxAnswer, CheckboxBubble, CheckboxOption } from '../../../../../shared/models/bubbles/CheckboxBubble';
+import { environment } from '../../../../../../environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -15,7 +10,7 @@ const httpOptions = {
 @Injectable()
 export class CheckboxHttpService {
 
-  private API_URL = AppSettings.API_ENDPOINT;
+  private API_URL = environment.apiEndpoint;
 
   constructor(private http: HttpClient) {
   }

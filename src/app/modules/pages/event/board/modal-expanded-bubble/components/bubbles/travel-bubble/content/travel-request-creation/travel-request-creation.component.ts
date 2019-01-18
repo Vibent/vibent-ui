@@ -6,8 +6,8 @@ import places from 'places.js';
 import { EventUpdateService } from '../../../../../../../../../../core/services/bubbles-services/event-update.service';
 import Swal from 'sweetalert2';
 import { Messages } from '../../../../../../../../../../shared/messages-codes/messages';
-import { AppSettings } from '../../../../../../../../../../shared/global/constants';
 import { AbstractBubbleEntityCreationComponent } from '../../../../abstract/abstract-bubble-entity-creation.component';
+import { AppSettings } from '../../../../../../../../../../shared/global/constants';
 
 @Component({
   selector: 'travel-request-creation',

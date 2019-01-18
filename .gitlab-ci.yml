@@ -11,7 +11,8 @@ variables:
 stages:
 - build
 - dockerize
-- deploy
+- deploy-dev
+- deploy-prod
 
 build:
   stage: build
@@ -22,10 +23,14 @@ build:
   - echo "VERSION=$(jq -r ".version" ./package.json)" > env.sh
   - npm install
   - npm rebuild node-sass
+  - npm run build-dev
+  - mv dist dist-dev
   - npm run build-prod
+  - mv dist dist-prod
   artifacts:
     paths:
-    - dist
+    - dist-dev
+    - dist-prod
     - env.sh
 
 dockerize:
@@ -44,10 +49,19 @@ dockerize:
   dependencies:
   - build
 
-deploy:
-  stage: deploy
+deploy-dev:
+  stage: deploy-dev
   only:
   - develop
   script:
   - apk add --update curl && rm -rf /var/cache/apk/*
-  - curl -X POST -d "{\"token\":\"$AWS_UTIL_TOKEN\",\"restart\":\"vibent-ui\"}" https://admin.dev.vibent.com
+  - curl -X POST -d "{\"token\":\"$AWS_UTIL_TOKEN\",\"restart\":\"vibent-ui-dev\"}" https://admin.vibent.com
+
+deploy-prod:
+  stage: deploy-prod
+  only:
+  - develop
+  when: manual
+  script:
+  - apk add --update curl && rm -rf /var/cache/apk/*
+  - curl -X POST -d "{\"token\":\"$AWS_UTIL_TOKEN\",\"restart\":\"vibent-ui-prod\"}" https://admin.vibent.com

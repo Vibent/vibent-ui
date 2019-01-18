@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { AppSettings } from '../../../shared/global/constants';
+import { environment } from '../../../../environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -9,7 +9,7 @@ const httpOptions = {
 @Injectable()
 export class BubbleCreationService {
 
-  private API_URL = AppSettings.API_ENDPOINT;
+  private API_URL = environment.apiEndpoint;
 
   constructor(private http: HttpClient) {
   }

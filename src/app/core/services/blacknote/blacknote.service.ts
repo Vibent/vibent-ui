@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import * as io from 'socket.io-client';
 import { Event } from '../../../shared/models/event';
 import { HttpService } from '../../http/http.service';
-import { AppSettings } from '../../../shared/global/constants';
 import { LoaderService } from '../loader/service/loader.service';
 import { Subject } from 'rxjs';
+import { environment } from '../../../../environments/environment';
 
 @Injectable()
 export class BlacknoteService {
 
-  private BLACKNOTE_URL = AppSettings.BLACKNOTE_URL;
+  private BLACKNOTE_URL = environment.blackNoteUrl;
   private socket;
   eventUpdated$ = new Subject<Event>();
   NEW_EVENT_LISTENER = 'eventListener';

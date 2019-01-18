@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  prod: true,
+  apiEndpoint: 'https://api.vibent.com',
+  blackNoteUrl: 'https://blacknote.vibent.com',
+  appUrl: 'https://vibent.com'
 };
