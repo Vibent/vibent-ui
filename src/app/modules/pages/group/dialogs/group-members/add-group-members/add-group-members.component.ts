@@ -3,9 +3,9 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpService } from '../../../../../../core/http/http.service';
 import { Group } from '../../../../../../shared/models/group';
-import { AppSettings } from '../../../../../../shared/global/constants';
 import Swal from 'sweetalert2';
 import { Messages } from '../../../../../../shared/messages-codes/messages';
+import { environment } from '../../../../../../../environments/environment';
 
 @Component({
   selector: 'app-group-creation',
@@ -36,7 +36,7 @@ export class AddGroupMembersComponent implements OnInit {
   public generateLink(): void {
     if (!this.generatedLink) {
       this.httpService.getInviteToken(this.group.ref).subscribe((link) => {
-        this.generatedLink = AppSettings.APP_URL + '/invite/' + link.token;
+        this.generatedLink = environment.appUrl + '/invite/' + link.token;
       });
     }
   }

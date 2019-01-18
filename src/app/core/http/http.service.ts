@@ -4,13 +4,13 @@ import { Group, MailInvite } from '../../shared/models/group';
 import { Event } from '../../shared/models/event';
 import { Observable } from 'rxjs';
 import { Email, PasswordReset, User } from '../../shared/models/user';
-import { AppSettings } from '../../shared/global/constants';
 import { EventParticipant } from '../../shared/models/event-participant';
+import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class HttpService {
 
-  private API_URL = AppSettings.API_ENDPOINT;
+  private API_URL = environment.apiEndpoint;
 
   constructor(private http: HttpClient) {
   }

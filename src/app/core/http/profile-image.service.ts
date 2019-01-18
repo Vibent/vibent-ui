@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { AppSettings } from '../../shared/global/constants';
+import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class ProfileImageService {
@@ -11,6 +11,6 @@ export class ProfileImageService {
   public uploadProfilePic(file: File) {
     const formData = new FormData();
     formData.append('file', file);
-    return this.http.post(AppSettings.API_ENDPOINT + '/image/profile/upload', formData);
+    return this.http.post(environment.apiEndpoint + '/image/profile/upload', formData);
   }
 }

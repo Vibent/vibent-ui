@@ -4,5 +4,8 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  prod: false,
+  apiEndpoint: 'https://dev.api.vibent.com',
+  blackNoteUrl: 'https://dev.blacknote.vibent.com',
+  appUrl: 'https://dev.vibent.com'
 };

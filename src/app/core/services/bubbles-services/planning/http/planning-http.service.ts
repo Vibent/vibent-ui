@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { AppSettings } from '../../../../../shared/global/constants';
 import { PlanningBubble, PlanningEntry } from '../../../../../shared/models/bubbles/PlanningBubble';
+import { environment } from '../../../../../../environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -10,7 +10,7 @@ const httpOptions = {
 @Injectable()
 export class PlanningHttpService {
 
-  private API_URL = AppSettings.API_ENDPOINT;
+  private API_URL = environment.apiEndpoint;
 
   constructor(private http: HttpClient) {
   }
