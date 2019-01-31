@@ -127,6 +127,10 @@ export class RegisterComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
+  aboutPage() {
+    this.router.navigate(['/login']);
+  }
+
   public onFail(e): void {
     Swal({
       type: 'error',
