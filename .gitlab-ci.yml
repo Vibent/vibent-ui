@@ -24,13 +24,11 @@ build:
   - npm install
   - npm rebuild node-sass
   - npm run build-dev
-  - mv dist dist-dev
   - npm run build-prod
-  - mv dist dist-prod
+  - npm run build-cordova
   artifacts:
     paths:
-    - dist-dev
-    - dist-prod
+    - dist-*
     - env.sh
 
 dockerize:
