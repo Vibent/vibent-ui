@@ -1,30 +1,25 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { BubbleType } from '../../../../../../shared/models/bubbles/IBubble';
-
-declare const $: any;
 
 @Component({
   selector: 'bubbles-explanations',
   templateUrl: './bubbles-explanations.html'
 })
-export class BubblesExplanationsComponent implements OnInit {
+export class BubblesExplanationsComponent {
 
-  BubbleType =  BubbleType;
+  BubbleType = BubbleType;
   @Input()
   bubbleType: BubbleType;
   @Input()
   eventRef: string;
   @Output()
-  sendNullToList = new EventEmitter<any>();
+  sendNullToList = new EventEmitter();
 
   constructor() {
   }
 
-  ngOnInit(): void {
-  }
-
   backToList() {
-    this.sendNullToList.emit(null);
+    this.sendNullToList.emit();
   }
 
 

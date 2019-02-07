@@ -1,25 +1,31 @@
 <span class="fa fa-chevron-left position-absolute" style="cursor: pointer" (click)="backToList()"></span>
 <alimentation-explanation
         *ngIf="bubbleType === BubbleType.AlimentationBubble"
+        (sendNullToList)=backToList()
         [eventRef]="eventRef">
 </alimentation-explanation>
 <checkbox-explanation
         *ngIf="bubbleType === BubbleType.CheckboxBubble"
+        (sendNullToList)=backToList()
         [eventRef]="eventRef">
 </checkbox-explanation>
 <survey-explanation
         *ngIf="bubbleType === BubbleType.SurveyBubble"
+        (sendNullToList)=backToList()
         [eventRef]="eventRef">
 </survey-explanation>
 <planning-explanation
         *ngIf="bubbleType === BubbleType.PlanningBubble"
+        (sendNullToList)=backToList()
         [eventRef]="eventRef">
 </planning-explanation>
 <travel-explanation
         *ngIf="bubbleType === BubbleType.TravelBubble"
+        (sendNullToList)=backToList()
         [eventRef]="eventRef">
 </travel-explanation>
 <free-explanation
         *ngIf="bubbleType === BubbleType.FreeBubble"
+        (sendNullToList)=backToList()
         [eventRef]="eventRef">
 </free-explanation>
