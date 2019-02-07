@@ -3,6 +3,7 @@ import { BubbleCreationService } from '../../../../../../../core/services/bubble
 import { EventUpdateService } from '../../../../../../../core/services/bubbles-services/event-update.service';
 import { BubblesCreationsSwalAlerts } from '../../../../../../../core/services/bubbles-services/alerts/bubbles-creations-swal-alerts';
 import { FormControl, FormGroup } from '@angular/forms';
+import { AbstractExplanation } from '../abstract-bubble-explanation/abstract-explanation';
 
 declare const $: any;
 
@@ -10,16 +11,15 @@ declare const $: any;
   selector: 'planning-explanation',
   templateUrl: './planning-explanation.html'
 })
-export class PlanningExplanationComponent implements OnInit {
+export class PlanningExplanationComponent extends AbstractExplanation implements OnInit {
 
-  @Input()
-  eventRef: string;
   form: FormGroup;
   planningTitle: FormControl;
 
   constructor(private bubbleCreationService: BubbleCreationService,
-              private eventUpdateService: EventUpdateService,
+              protected eventUpdateService: EventUpdateService,
               private bubblesCreationsSwalAlerts: BubblesCreationsSwalAlerts) {
+    super(eventUpdateService);
   }
 
   ngOnInit(): void {
@@ -31,7 +31,7 @@ export class PlanningExplanationComponent implements OnInit {
   createBubble() {
     $('#modalSelectBubbleType').modal('hide');
     this.bubbleCreationService.createPlanningBubble(this.eventRef, this.planningTitle.value).subscribe(() => {
-      this.eventUpdateService.updateEvent(this.eventRef);
+      this.onBubbleCreated();
       this.bubblesCreationsSwalAlerts.alertPlanningBubbleCreated();
     });
   }

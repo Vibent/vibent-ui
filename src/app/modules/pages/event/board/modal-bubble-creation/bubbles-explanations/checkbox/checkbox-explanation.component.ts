@@ -3,6 +3,7 @@ import { BubbleCreationService } from '../../../../../../../core/services/bubble
 import { EventUpdateService } from '../../../../../../../core/services/bubbles-services/event-update.service';
 import { BubblesCreationsSwalAlerts } from '../../../../../../../core/services/bubbles-services/alerts/bubbles-creations-swal-alerts';
 import { FormControl, FormGroup } from '@angular/forms';
+import { AbstractExplanation } from '../abstract-bubble-explanation/abstract-explanation';
 
 declare const $: any;
 
@@ -10,17 +11,17 @@ declare const $: any;
   selector: 'checkbox-explanation',
   templateUrl: './checkbox-explanation.html'
 })
-export class CheckboxExplanationComponent implements OnInit {
+export class CheckboxExplanationComponent extends AbstractExplanation implements OnInit {
 
-  @Input()
-  eventRef: string;
   form: FormGroup;
   checkboxTitle: FormControl;
 
   constructor(private bubbleCreationService: BubbleCreationService,
-              private eventUpdateService: EventUpdateService,
+              protected eventUpdateService: EventUpdateService,
               private bubblesCreationsSwalAlerts: BubblesCreationsSwalAlerts) {
+    super(eventUpdateService);
   }
+
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -31,7 +32,7 @@ export class CheckboxExplanationComponent implements OnInit {
   createBubble() {
     $('#modalSelectBubbleType').modal('hide');
     this.bubbleCreationService.createCheckboxBubble(this.eventRef, this.checkboxTitle.value).subscribe(() => {
-      this.eventUpdateService.updateEvent(this.eventRef);
+      this.onBubbleCreated();
       this.bubblesCreationsSwalAlerts.alertCheckboxBubbleCreated();
     });
   }
