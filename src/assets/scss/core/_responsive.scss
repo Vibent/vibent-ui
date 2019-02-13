@@ -857,3 +857,14 @@
     display: none !important;
   }
 }
+
+// full screen modal under 500px width screen
+@media (max-width: 500px) {
+  .modal-body {
+    padding: 0;
+  }
+
+  .modal-dialog{
+    margin: 0 !important;
+  }
+}

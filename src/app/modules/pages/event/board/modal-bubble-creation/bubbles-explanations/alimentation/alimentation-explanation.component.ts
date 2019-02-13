@@ -8,7 +8,8 @@ declare const $: any;
 
 @Component({
   selector: 'alimentation-explanation',
-  templateUrl: './alimentation-explanation.html'
+  templateUrl: './alimentation-explanation.html',
+  styleUrls: ['./alimentation-explanation.scss']
 })
 export class AlimentationExplanationComponent extends AbstractExplanation {
 

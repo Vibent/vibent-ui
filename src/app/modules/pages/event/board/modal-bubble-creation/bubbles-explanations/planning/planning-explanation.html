@@ -1,20 +1,18 @@
-<div class="d-flex flex-row justify-content-center">
-    <div class="p-2">
-        <h2 class="text-center">Planning bubble</h2>
+<div class="d-flex flex-wrap justify-content-center">
+    <div class="p-2 align-self-center">
+        <img src="./assets/img/planning-illustration.png" class="planning-illustration">
     </div>
-</div>
-<div class="row justify-content-center">
-    <p>some illustrations and description</p>
-</div>
-<div class="row justify-content-center">
-    <p>Type the planning title:</p>
-</div>
-<form novalidate [formGroup]="this.form">
-    <div class="row justify-content-center">
-        <input type="text" class="form-control w-75" id="planningTitle" formControlName="planningTitle"/>
+    <div class="explanations p-2 align-self-center">
+        <h2>Planning bubble</h2>
+        <p>Organize your planning for your event. Specify what you want to do and when.</p>
+        <p>Type the planning title:</p>
+        <form novalidate [formGroup]="this.form">
+            <div class="row justify-content-center m-0">
+                <input type="text" class="form-control" id="planningTitle" formControlName="planningTitle"/>
+            </div>
+        </form>
+        <div class="d-flex justify-content-center m-t-10">
+            <button (click)="createBubble()" class="btn btn-round btn-add-event">Create</button>
+        </div>
     </div>
-</form>
-
-<div class="row justify-content-center">
-    <button (click)="createBubble()" class="btn btn-round btn-add-event">Create</button>
 </div>

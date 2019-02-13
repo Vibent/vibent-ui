@@ -1,26 +1,22 @@
-<div class="d-flex flex-row justify-content-center">
-    <div class="p-2">
-        <h2 class="text-center">Free bubble</h2>
+<div class="d-flex flex-wrap justify-content-center">
+    <div class="p-2 align-self-center">
+        <img src="./assets/img/free-illustration.png" class="free-illustration">
     </div>
-</div>
-<div class="row justify-content-center">
-    <p>some illustrations and description</p>
-</div>
-<div class="row justify-content-center">
-    <p>Type a title:</p>
-</div>
-<form novalidate [formGroup]="this.form">
-    <div class="row justify-content-center">
-        <input type="text" class="form-control w-75" id="freeTitle" formControlName="freeTitle"/>
+    <div class="explanations p-2 align-self-center">
+        <h2>Free bubble</h2>
+        <p>Organize your planning for your event. Specify what you want to do and when. </p>
+        <p class="m-t-20">Type the free title:</p>
+        <form novalidate [formGroup]="this.form">
+            <div class="row justify-content-center m-0">
+                <input type="text" class="form-control" id="freeTitle" formControlName="freeTitle"/>
+            </div>
+            <p class="m-t-20">Type a content: (optional)</p>
+            <div class="row justify-content-center m-0">
+                <textarea type="text" class="form-control" id="freeContent" formControlName="freeContent"></textarea>
+            </div>
+        </form>
+        <div class="d-flex justify-content-center m-t-10">
+            <button (click)="createBubble()" class="btn btn-round btn-add-event">Create</button>
+        </div>
     </div>
-    <div class="row justify-content-center m-t-20">
-        <p>Type a content: (optional)</p>
-    </div>
-    <div class="row justify-content-center">
-        <textarea type="text" class="form-control w-75" id="freeContent" formControlName="freeContent"></textarea>
-    </div>
-</form>
-
-<div class="row justify-content-center">
-    <button (click)="createBubble()" class="btn btn-round btn-add-event">Create</button>
 </div>

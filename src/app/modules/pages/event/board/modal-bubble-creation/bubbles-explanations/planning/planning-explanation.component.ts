@@ -9,7 +9,8 @@ declare const $: any;
 
 @Component({
   selector: 'planning-explanation',
-  templateUrl: './planning-explanation.html'
+  templateUrl: './planning-explanation.html',
+  styleUrls: ['./planning-explanation.scss']
 })
 export class PlanningExplanationComponent extends AbstractExplanation implements OnInit {
 

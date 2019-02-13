@@ -8,7 +8,8 @@ declare const $: any;
 
 @Component({
   selector: 'travel-explanation',
-  templateUrl: './travel-explanation.html'
+  templateUrl: './travel-explanation.html',
+  styleUrls: ['./travel-explanation.scss']
 })
 export class TravelExplanationComponent extends AbstractExplanation {
 
