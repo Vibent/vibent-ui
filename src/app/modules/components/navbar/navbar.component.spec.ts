@@ -6,7 +6,7 @@ import { ProfileImageService } from '../../../core/http/profile-image.service';
 import { HttpService } from '../../../core/http/http.service';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-fdescribe('NavbarComponent', () => {
+fdescribe('HomeComponent', () => {
   let component: NavbarComponent;
   let fixture: ComponentFixture<NavbarComponent>;
   let mockHttpService = null;

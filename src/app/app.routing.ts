@@ -22,15 +22,24 @@ import { PublicGroupComponent } from './modules/pages/group/public-board/public-
 import { GroupInvitationComponent } from './modules/pages/group/group-invitation/group-invitation.component';
 import { ResetPasswordComponent } from './core/authentification/forgot/reset-password/reset-password.component';
 import { MailConfirmationComponent } from './core/authentification/register/mail-confirmation/mail-confirmation.component';
+import { HomeComponent } from './modules/components/home/home.component';
+import { LoginResolver } from './shared/resolvers/login.resolver';
 
 const routes: Routes = [
   {
+    path: '',
+    component: HomeComponent,
+    resolve: {LoginResolver}
+  },
+  {
     path: 'register',
-    component: RegisterComponent
+    component: RegisterComponent,
+    resolve: {LoginResolver}
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    resolve: {LoginResolver}
   },
   {
     path: 'forgot',
@@ -96,7 +105,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   exports: [],
-  providers: [GroupResolver, GroupEventsResolver, GroupsResolver, ProfileResolver, EventsResolver, EventResolver, AuthGuardService]
+  providers: [GroupResolver, GroupEventsResolver, GroupsResolver, ProfileResolver, EventsResolver, LoginResolver, EventResolver, AuthGuardService]
 
 })
 export class AppRoutingModule {

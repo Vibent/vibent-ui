@@ -84,15 +84,22 @@
     > .mat-button-focus-overlay, .mat-button-ripple {
       border-radius: $border-radius-extreme;
     }
-    &.btn-add-event {
+    &.green-button {
       background: $vibent-green;
     }
-    &.btn-join-group {
-      background: #a73974 /*linear-gradient(60deg, $vibent-purple, $vibent-red)*/
-    ;
+    &.purple-button {
+      background: #a73974;
     }
 
-    &.btn-add-event-in-group {
+    &.google-button {
+      background: #f23737;
+    }
+
+    &.facebook-button {
+      background: #3b5998;
+    }
+
+    &.white-button {
       background: white;
       color: #000;
     }

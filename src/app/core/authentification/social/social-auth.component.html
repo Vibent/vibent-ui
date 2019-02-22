@@ -1,4 +1,6 @@
-<div *ngFor="let provider of providers"
-     (click)="requestSignIn(provider.id);"
-     class="fa fa-{{provider.id | lowercase}}"
-     [style.background-color]="provider.color"></div>
+<div *ngFor="let provider of providers" class="row justify-content-center m-0">
+    <button (click)="requestSignIn(provider.id);"
+            class="btn btn-round {{provider.label | lowercase}}-button w-300-p {{provider.label | lowercase}}-icon">
+        <i class="fa fa-{{provider.label | lowercase}}"></i> Login with a {{provider.label | lowercase}} account
+    </button>
+</div>
