@@ -9,7 +9,8 @@ declare const $: any;
 
 @Component({
   selector: 'checkbox-explanation',
-  templateUrl: './checkbox-explanation.html'
+  templateUrl: './checkbox-explanation.html',
+  styleUrls: ['./checkbox-explanation.scss']
 })
 export class CheckboxExplanationComponent extends AbstractExplanation implements OnInit {
 
