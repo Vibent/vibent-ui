@@ -9,7 +9,8 @@ declare const $: any;
 
 @Component({
   selector: 'free-explanation',
-  templateUrl: './free-explanation.html'
+  templateUrl: './free-explanation.html',
+  styleUrls: ['./free-explanation.scss']
 })
 export class FreeExplanationComponent extends AbstractExplanation implements OnInit {
 
