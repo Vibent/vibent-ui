@@ -32,5 +32,11 @@
                 <i class="fa fa-cog"></i> Settings
             </h5>
         </a>
+
+        <a *ngIf="screenSizesService.isMobileMenu()" (click)="logout()" class="text-black-50 cursor-pointer">
+            <h5 class="col-xl-12 text-center">
+                <i class="fa fa-sign-out"></i> Logout
+            </h5>
+        </a>
     </div>
 </div>

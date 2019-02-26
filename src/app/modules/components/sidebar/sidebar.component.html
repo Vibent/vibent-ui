@@ -4,32 +4,6 @@
     </div>
 </div>
 <div class="sidebar-wrapper">
-    <div *ngIf="screenSizesService.isMobileMenu()">
-        <ul class="nav navbar-nav nav-mobile-menu">
-            <li class="nav-item dropdown">
-                <a class="nav-link"
-                   id="navbarDropdownUser"
-                   data-toggle="dropdown">
-                    <div class="d-flex flex-row justify-content-center">
-                        <div class="user-profile p-2 align-self-center text-center">
-                            <img src="{{user.profilePicLocation}}">
-                            <p>{{user.firstName}} {{user.lastName}}</p>
-                        </div>
-                    </div>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item"
-                       [routerLink]="['/me']">
-                        Profile
-                    </a>
-                    <a class="dropdown-item"
-                       (click)="logout()">
-                        Logout
-                    </a>
-                </div>
-            </li>
-        </ul>
-    </div>
     <ul class="nav">
         <li routerLinkActive="active"
             *ngFor="let menuItem of menuItems"
