@@ -55,7 +55,8 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "outputPath": "dist-prod"
             },
             "dev": {
               "optimization": true,
@@ -66,7 +67,8 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "outputPath": "dist-dev",
             }
           }
         },

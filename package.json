@@ -8,6 +8,7 @@
     "build": "cross-env NODE_OPTIONS=--max_old_space_size=8192 webpack",
     "build-dev": "node --max_old_space_size=5048 ./node_modules/@angular/cli/bin/ng build --configuration=dev",
     "build-prod": "ng build --configuration=prod",
+    "build-cordova": "ng build --configuration=prod --output-path ./dist-cordova  --base-href ./",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

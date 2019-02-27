@@ -22,10 +22,10 @@
                                 <div class="food-quantity">{{this.alimentationDataModel.ratio}}
                                 </div>
                                 <img *ngIf="this.alimentationEntry.type === AlimType.DRINK"
-                                     src="/assets/img/drink.png"/>
+                                     src="./assets/img/drink.png"/>
                                 <img *ngIf="this.alimentationEntry.type === AlimType.FOOD"
                                      class="p-l-5"
-                                     src="/assets/img/food.png"/>
+                                     src="./assets/img/food.png"/>
                             </div>
                         </div>
                     </div>
@@ -38,8 +38,8 @@
                     </div>
                     <div class="float-right text-center">
                         <img class="{{this.alimentationDataModel.deleteBringButtonClass}}" (click)="deleteBring()"
-                             src="/assets/img/minus.png"/>
-                        <img class="addAndDelete" (click)="addBring()" src="/assets/img/plus.png"/>
+                             src="./assets/img/minus.png"/>
+                        <img class="addAndDelete" (click)="addBring()" src="./assets/img/plus.png"/>
                     </div>
                 </div>
             </div>
