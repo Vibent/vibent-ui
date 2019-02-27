@@ -48,6 +48,7 @@ import { EventSettingsModule } from './core/admin-panels/event/dialogs/event-set
 import { ScreenSizesService } from './core/services/screen-sizes.service';
 import { LoadingPageComponent } from './core/services/loader/loading-page/loading-page.component';
 import { LoadingPageModule } from './core/services/loader/loading-page/loading-page.module';
+import { HomeModule } from './modules/components/home/home.module';
 
 @NgModule({
   imports: [
@@ -74,6 +75,7 @@ import { LoadingPageModule } from './core/services/loader/loading-page/loading-p
     ResetPasswordModule,
     LoginModule,
     RegisterModule,
+    HomeModule,
     ProfileModule,
     ProfileSettingsModule,
     GroupSettingsModule,

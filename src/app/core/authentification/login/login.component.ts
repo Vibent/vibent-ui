@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.createFormControls();
     this.createForm();
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/events';
   }
 
   createFormControls() {

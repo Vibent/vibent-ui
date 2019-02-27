@@ -1,0 +1,31 @@
+.header {
+  height: 350px;
+  background: #88d4ed;
+  margin-bottom: -1px;
+}
+
+.vibent-header {
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+.brand {
+  margin: 40px auto;
+  text-align: center;
+  img {
+    width: 200px;
+  }
+}
+
+.home-background {
+  width: 100%;
+  height: 750px;
+  background: url('../../../../assets/img/accueil.svg') no-repeat center center;
+  background-size: cover
+}
+
+.footer {
+  height: 300px;
+  background: #94cf9a;
+  margin-top: -1px;
+}

@@ -32,7 +32,7 @@ export class SocialAuthComponent implements OnInit, OnDestroy {
         this.socialAuthService.signOut(true);
       }
     });
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/events';
   }
 
   ngOnDestroy(): void {
