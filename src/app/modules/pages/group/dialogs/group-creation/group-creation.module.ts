@@ -1,6 +1,4 @@
 import { NgModule } from '@angular/core';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { CommonModule } from '@angular/common';
@@ -12,8 +10,6 @@ import { HttpService } from '../../../../../core/http/http.service';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    MatDialogModule,
-    MatDatepickerModule,
     MatFormFieldModule,
     OwlDateTimeModule,
     OwlNativeDateTimeModule,

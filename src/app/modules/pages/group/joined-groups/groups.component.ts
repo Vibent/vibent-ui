@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
-import { GroupCreationComponent } from '../dialogs/group-creation/group-creation.component';
 import { ActivatedRoute } from '@angular/router';
 import { Group } from '../../../../shared/models/group';
+
+declare var $: any;
 
 @Component({
   selector: 'app-groups',
@@ -19,11 +20,7 @@ export class GroupsComponent implements OnInit {
     this.groups = this.route.snapshot.data['groups'];
   }
 
-  public openDialog(): void {
-    this.dialog.open(GroupCreationComponent, {
-      maxWidth: '100vw',
-      maxHeight: '100vh',
-      panelClass: 'full-screen-dialog',
-    });
+  public openGroupCreationModal() {
+    $('#modalGroupCreation').modal('show');
   }
 }

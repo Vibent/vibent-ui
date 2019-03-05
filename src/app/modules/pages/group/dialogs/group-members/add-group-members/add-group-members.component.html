@@ -1,34 +1,45 @@
-<div class="container">
-    <div class="row justify-content-end">
-        <img class="cursor-pointer modal-close" src="./assets/img/close.png" (click)="close()">
-    </div>
-</div>
-<div class="container vibent-modal">
-    <h2><b>Add people by email</b></h2>
-    <p class="lead">You can invite people by email</p>
-    <div [formGroup]="form">
-        <div class="form-group">
-            <label for="email-invite"><b>Email</b>
-                <span *ngIf="!emailValidSetted"
-                      class="incorrect-input">Email is required</span></label>
-            <input type="text" class="form-control" id="email-invite" formControlName="email"/>
-        </div>
-        <div class="row justify-content-center">
-            <button (click)="sendInvitation()" class="btn btn-round white-button m-t-15">Send
-                invitation
-            </button>
-        </div>
-    </div>
-    <h2 class="m-t-50"><b>Add people with a magic link</b></h2>
-    <p class="lead">You can invite people by sending them a magic link</p>
-    <div class="form-group">
-        <label for="invite-token"><b>Magic link</b></label>
-        <input readonly type="text" class="form-control" id="invite-token" value="{{generatedLink}}"/>
-    </div>
-    <h5 class="text-center m-t-20">Send this URL to your friends to allow them to join
-        your group.</h5>
-    <div class="row justify-content-center">
-        <button (click)="generateLink()" class="btn btn-round green-button">Generate a link</button>
-    </div>
+<div class="modal fade" id="modalAddGroupMembers" tabindex="-1" role="dialog">
+    <div class="modal-dialog full-bootstrap-modal" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button"
+                        class="close black-close"
+                        data-dismiss="modal"
+                        (click)="close">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body bg-light">
+                <div class="container vibent-modal">
+                    <h2><b>Add people by email</b></h2>
+                    <p class="lead">You can invite people by email</p>
+                    <div [formGroup]="form">
+                        <div class="form-group">
+                            <label for="email-invite"><b>Email</b>
+                                <span *ngIf="!emailValidSetted"
+                                      class="incorrect-input">Email is required</span></label>
+                            <input type="text" class="form-control" id="email-invite" formControlName="email"/>
+                        </div>
+                        <div class="row justify-content-center">
+                            <button (click)="sendInvitation()" class="btn btn-round white-button m-t-15">Send
+                                invitation
+                            </button>
+                        </div>
+                    </div>
+                    <h2 class="m-t-50"><b>Add people with a magic link</b></h2>
+                    <p class="lead">You can invite people by sending them a magic link</p>
+                    <div class="form-group">
+                        <label for="invite-token"><b>Magic link</b></label>
+                        <input readonly type="text" class="form-control" id="invite-token" value="{{generatedLink}}"/>
+                    </div>
+                    <h5 class="text-center m-t-20">Send this URL to your friends to allow them to join
+                        your group.</h5>
+                    <div class="row justify-content-center">
+                        <button (click)="generateLink()" class="btn btn-round green-button">Generate a link</button>
+                    </div>
+                </div>
 
+            </div>
+        </div>
+    </div>
 </div>

@@ -15,6 +15,7 @@ import { ModalBubbleCreationComponentModule } from './modal-bubble-creation/moda
 import { EventUpdateService } from '../../../../core/services/bubbles-services/event-update.service';
 import { BlacknoteService } from '../../../../core/services/blacknote/blacknote.service';
 import { EventParticipantsChoiceModule } from './event-participants/participants-choice/event-participants-choice.module';
+import { EventSettingsModule } from '../../../../core/admin-panels/event/dialogs/event-settings/event-settings.module';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { EventParticipantsChoiceModule } from './event-participants/participants
     RouterModule,
     EventParticipantsPreviewModule,
     EventParticipantsChoiceModule,
+    EventSettingsModule,
     MatButtonModule,
     MatInputModule,
     MatRippleModule,

@@ -1,5 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from '../../../../../shared/models/user';
@@ -8,12 +7,15 @@ import { ProfileImageService } from '../../../../../core/http/profile-image.serv
 import { UserManagementService } from '../../../../../core/services/user-management.service';
 import { LoaderService } from '../../../../../core/services/loader/service/loader.service';
 
+declare const $: any;
+
 @Component({
-  selector: 'app-profile-settings',
+  selector: 'profile-settings',
   templateUrl: './profile-settings.component.html'
 })
 export class ProfileSettingsComponent implements OnInit {
 
+  @Input()
   user: User;
   form: FormGroup;
   firstName: FormControl;
@@ -25,16 +27,11 @@ export class ProfileSettingsComponent implements OnInit {
   lastnameValidSetted = true;
 
   constructor(private fb: FormBuilder,
-              private dialogRef: MatDialogRef<ProfileSettingsComponent>,
               private httpService: HttpService,
               private profileImageService: ProfileImageService,
               private loaderService: LoaderService,
               private router: Router,
-              @Inject(MAT_DIALOG_DATA) data,
               private userManagementService: UserManagementService) {
-    dialogRef.disableClose = true;
-    this.user = this.userManagementService.getMe();
-    this.croppedImage = this.user.profilePicLocation;
   }
 
   fileChangeEvent(event: any): void {
@@ -63,6 +60,7 @@ export class ProfileSettingsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.croppedImage = this.user.profilePicLocation;
     this.firstName = new FormControl(this.user.firstName, Validators.required);
     this.lastName = new FormControl(this.user.lastName, Validators.required);
     this.form = this.fb.group({
@@ -72,13 +70,13 @@ export class ProfileSettingsComponent implements OnInit {
   }
 
   public close() {
-    this.dialogRef.close();
+    $('#modalProfileSettings').modal('hide');
     this.fileToUpload = null;
   }
 
   public updateInfo(): void {
     this.loaderService.displayLoadingPageModal();
-    this.dialogRef.close();
+    this.close();
     this.firstnameValidSetted = this.firstName.valid;
     this.lastnameValidSetted = this.lastName.valid;
 

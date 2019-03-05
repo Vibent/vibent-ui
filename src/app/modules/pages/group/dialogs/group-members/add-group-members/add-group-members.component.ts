@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpService } from '../../../../../../core/http/http.service';
@@ -7,12 +7,15 @@ import Swal from 'sweetalert2';
 import { Messages } from '../../../../../../shared/messages-codes/messages';
 import { environment } from '../../../../../../../environments/environment';
 
+declare const $: any;
+
 @Component({
-  selector: 'app-group-creation',
+  selector: 'add-group-members',
   templateUrl: './add-group-members.component.html'
 })
 export class AddGroupMembersComponent implements OnInit {
 
+  @Input()
   group: Group;
   form: FormGroup;
   email: FormControl;
@@ -21,10 +24,7 @@ export class AddGroupMembersComponent implements OnInit {
   emailValidSetted = true;
 
   constructor(private fb: FormBuilder,
-              private dialogRef: MatDialogRef<AddGroupMembersComponent>,
-              private httpService: HttpService,
-              @Inject(MAT_DIALOG_DATA) data) {
-    this.group = data.group;
+              private httpService: HttpService) {
   }
 
   ngOnInit(): void {
@@ -62,6 +62,6 @@ export class AddGroupMembersComponent implements OnInit {
   }
 
   close() {
-    this.dialogRef.close();
+    $('#modalAddGroupMembers').modal('hide');
   }
 }

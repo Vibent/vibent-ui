@@ -7,8 +7,6 @@ import { EventUpdateService } from '../../../../core/services/bubbles-services/e
 import { BlacknoteService } from '../../../../core/services/blacknote/blacknote.service';
 import { EventParticipant, EventParticipantAnswer } from '../../../../shared/models/event-participant';
 import { ScreenSizesService } from '../../../../core/services/screen-sizes.service';
-import { EventSettingsComponent } from '../../../../core/admin-panels/event/dialogs/event-settings/event-settings.component';
-import { MatDialog } from '@angular/material';
 import { Subscription } from 'rxjs';
 
 declare const $: any;
@@ -29,7 +27,6 @@ export class EventComponent implements OnInit, OnDestroy {
               private eventAdminPanelService: EventAdminPanelService,
               private eventUpdateService: EventUpdateService,
               private blacknoteService: BlacknoteService,
-              public dialog: MatDialog,
               public screenSizesService: ScreenSizesService) {
     this.event = this.route.snapshot.data['event'];
     this.blacknoteService.initConnectionForEventUpdate(this.event.ref);
@@ -139,13 +136,8 @@ export class EventComponent implements OnInit, OnDestroy {
     return participations;
   }
 
-  openSettingsDialog() {
-    this.dialog.open(EventSettingsComponent, {
-      maxWidth: '100vw',
-      maxHeight: '100vh',
-      panelClass: 'full-screen-dialog',
-      data: {event: this.event}
-    });
+  openSettingsModal() {
+    $('#modalEventSettings').modal('show');
   }
 
 }

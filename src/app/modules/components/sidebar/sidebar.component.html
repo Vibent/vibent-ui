@@ -15,12 +15,8 @@
             </a>
         </li>
     </ul>
-    <app-group-admin-panel
-            *ngIf="groupAdminPanelInput && !screenSizesService.isMobileMenu()"
-            [groupRef]="groupAdminPanelInput">
-    </app-group-admin-panel>
-    <app-event-admin-panel
-            *ngIf="eventAdminPanelInput && !screenSizesService.isMobileMenu()"
-            [eventRef]="eventAdminPanelInput">
-    </app-event-admin-panel>
+    <group-admin-panel *ngIf="groupAdminPanelInput && !screenSizesService.isMobileMenu()">
+    </group-admin-panel>
+    <event-admin-panel *ngIf="eventAdminPanelInput && !screenSizesService.isMobileMenu()">
+    </event-admin-panel>
 </div>
