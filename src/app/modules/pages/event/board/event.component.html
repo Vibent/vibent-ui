@@ -19,7 +19,7 @@
                             Admin settings
                         </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item cursor-pointer" (click)="openSettingsDialog()">Event settings</a>
+                            <a class="dropdown-item cursor-pointer" (click)="openSettingsModal()">Event settings</a>
                         </div>
                     </div>
                 </ng-container>
@@ -76,3 +76,5 @@
 
     </div>
 </div>
+
+<event-settings [event]="event"></event-settings>

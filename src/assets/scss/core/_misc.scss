@@ -2,9 +2,6 @@ body {
   background-color: #eee;
   color: $black-color;
   font-weight: 300;
-  //Added for Swal Alert, avoid a padding-right sum
-  padding-right: 0 !important;
-
 }
 
 legend {

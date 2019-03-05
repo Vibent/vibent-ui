@@ -1,12 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { MatDialog } from '@angular/material';
-import { ProfileSettingsComponent } from '../dialogs/profile-settings/profile-settings.component';
-import { User } from '../../../../shared/models/user';
+import { ActivatedRoute, Router } from '@angular/router';import { User } from '../../../../shared/models/user';
 import { UserManagementService } from '../../../../core/services/user-management.service';
 import { Subscription } from 'rxjs';
 import { AuthenticationService } from '../../../../core/services/authentication.service';
 import { ScreenSizesService } from '../../../../core/services/screen-sizes.service';
+
+declare const $: any;
 
 @Component({
   selector: 'app-profile',
@@ -21,7 +20,6 @@ export class ProfileComponent implements OnInit, OnDestroy {
               public screenSizesService: ScreenSizesService,
               private authenticationService: AuthenticationService,
               private router: Router,
-              public dialogSettings: MatDialog,
               private userManagementService: UserManagementService) {
     this.user = this.userManagementService.getMe();
   }
@@ -33,12 +31,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
   }
 
   public openSettingsDialog(): void {
-    this.dialogSettings.open(ProfileSettingsComponent, {
-      maxWidth: '100vw',
-      maxHeight: '100vh',
-      panelClass: 'full-screen-dialog',
-      data: {user: this.user}
-    });
+    $('#modalProfileSettings').modal('show');
   }
 
   ngOnDestroy(): void {

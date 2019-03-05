@@ -1,5 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
@@ -15,11 +14,13 @@ declare const $: any;
 
 @Component({
   selector: 'event-settings',
-  templateUrl: './event-settings.component.html'
+  templateUrl: './event-settings.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class EventSettingsComponent implements OnInit {
 
+  @Input()
   event: Event;
   form: FormGroup;
   title: FormControl;
@@ -30,14 +31,11 @@ export class EventSettingsComponent implements OnInit {
   dateValidSetted = true;
 
   constructor(private fb: FormBuilder,
-              private dialogRef: MatDialogRef<EventSettingsComponent>,
               private loaderService: LoaderService,
               private eventUpdateService: EventUpdateService,
               private router: Router,
               private adminPanelService: EventAdminPanelService,
-              private httpService: HttpService,
-              @Inject(MAT_DIALOG_DATA) data) {
-    this.event = data.event;
+              private httpService: HttpService) {
   }
 
   ngOnInit() {
@@ -66,7 +64,7 @@ export class EventSettingsComponent implements OnInit {
       confirmButtonText: Messages.DELETE
     }).then((result) => {
       if (result.value) {
-        this.dialogRef.close();
+        this.close();
         this.httpService.deleteEvent(this.event.ref).subscribe();
         Swal(
           Messages.DELETED,
@@ -79,8 +77,8 @@ export class EventSettingsComponent implements OnInit {
     });
   }
 
-  public close(): void {
-    this.dialogRef.close();
+  close(): void {
+    $('#modalEventSettings').modal('hide');
   }
 
   public updateInfo(): void {

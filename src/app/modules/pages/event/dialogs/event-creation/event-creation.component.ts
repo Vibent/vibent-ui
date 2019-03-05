@@ -1,5 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import * as moment from 'moment';
 import { Router } from '@angular/router';
@@ -12,11 +11,13 @@ import { LoaderService } from '../../../../../core/services/loader/service/loade
 declare const $: any;
 
 @Component({
-  selector: 'app-event-creation',
-  templateUrl: './event-creation.component.html'
+  selector: 'event-creation',
+  templateUrl: './event-creation.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EventCreationComponent implements OnInit {
 
+  @Input()
   groupRef: string;
 
   form: FormGroup;
@@ -28,14 +29,10 @@ export class EventCreationComponent implements OnInit {
   dateValidSetted = true;
 
   constructor(private fb: FormBuilder,
-              private dialogRef: MatDialogRef<EventCreationComponent>,
               private httpService: HttpService,
               private notificationService: NotificationsService,
               private loaderService: LoaderService,
-              private router: Router,
-              @Inject(MAT_DIALOG_DATA) data) {
-
-    this.groupRef = data.groupRef;
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -67,9 +64,9 @@ export class EventCreationComponent implements OnInit {
     if (this.titleValidSetted) {
       this.loaderService.displayLoadingPageModal();
       this.httpService.createEvent(event).subscribe(res => {
-        this.close();
         this.loaderService.closeLoadingPageModal();
         this.router.navigate(['/events/' + res['ref']]);
+        this.close();
         this.notificationService.notify(Messages.EVENT_CREATED, NotificationType.SUCCESS);
       }, () => {
         this.dateValidSetted = false;
@@ -78,8 +75,8 @@ export class EventCreationComponent implements OnInit {
     }
   }
 
-  public close(): void {
-    this.dialogRef.close();
+  close(): void {
+    $('#modalEventCreation').modal('hide');
   }
 
 }

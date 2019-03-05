@@ -1,5 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Group } from '../../../../../shared/models/group';
@@ -9,12 +8,15 @@ import { HttpService } from '../../../../http/http.service';
 import { LoaderService } from '../../../../services/loader/service/loader.service';
 import { Messages, SwalColors } from '../../../../../shared/messages-codes/messages';
 
+declare const $: any;
+
 @Component({
-  selector: 'app-group-settings',
+  selector: 'group-settings',
   templateUrl: './group-settings.component.html'
 })
 export class GroupSettingsComponent implements OnInit {
 
+  @Input()
   group: Group;
   form: FormGroup;
   name: FormControl;
@@ -22,13 +24,10 @@ export class GroupSettingsComponent implements OnInit {
   nameValidSetted = true;
 
   constructor(private fb: FormBuilder,
-              private dialogRef: MatDialogRef<GroupSettingsComponent>,
               private router: Router,
               private adminPanelService: GroupAdminPanelService,
               private loaderService: LoaderService,
-              private httpService: HttpService,
-              @Inject(MAT_DIALOG_DATA) data) {
-    this.group = data.group;
+              private httpService: HttpService) {
   }
 
   ngOnInit() {
@@ -50,7 +49,7 @@ export class GroupSettingsComponent implements OnInit {
       confirmButtonText: Messages.DELETE
     }).then((result) => {
       if (result.value) {
-        this.dialogRef.close();
+        this.close();
         this.httpService.deleteGroup(this.group.ref).subscribe();
         Swal(
           Messages.DELETED,
@@ -78,7 +77,7 @@ export class GroupSettingsComponent implements OnInit {
         this.loaderService.displayLoadingPageModal();
         this.httpService.leaveGroup(this.group.ref).subscribe(() => {
           this.loaderService.closeLoadingPageModal();
-          this.dialogRef.close();
+          this.close();
           this.router.navigate(['/groups']);
         });
 
@@ -86,8 +85,8 @@ export class GroupSettingsComponent implements OnInit {
     });
   }
 
-  public close(): void {
-    this.dialogRef.close();
+  close(): void {
+    $('#modalGroupSettings').modal('hide');
   }
 
   public updateInfo(): void {

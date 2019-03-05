@@ -1,5 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -8,9 +7,12 @@ import { NotificationsService, NotificationType } from '../../../../../core/serv
 import { Messages } from '../../../../../shared/messages-codes/messages';
 import { LoaderService } from '../../../../../core/services/loader/service/loader.service';
 
+declare const $: any;
+
 @Component({
-  selector: 'app-group-creation',
-  templateUrl: './group-creation.component.html'
+  selector: 'modal-group-creation',
+  templateUrl: './group-creation.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GroupCreationComponent implements OnInit {
 
@@ -20,13 +22,10 @@ export class GroupCreationComponent implements OnInit {
   titleValidSetted = true;
 
   constructor(private fb: FormBuilder,
-              private dialogRef: MatDialogRef<GroupCreationComponent>,
               private loaderService: LoaderService,
               private notificationService: NotificationsService,
               private httpService: HttpService,
-              @Inject(MAT_DIALOG_DATA) data,
               private router: Router) {
-    dialogRef.disableClose = true;
   }
 
   ngOnInit() {
@@ -47,7 +46,7 @@ export class GroupCreationComponent implements OnInit {
       description: description,
       allAdmins: true
     };
-    if(this.titleValidSetted) {
+    if (this.titleValidSetted) {
       this.loaderService.displayLoadingPageModal();
       this.httpService.createGroup(group).subscribe(res => {
         this.close();
@@ -61,7 +60,7 @@ export class GroupCreationComponent implements OnInit {
   }
 
   close() {
-    this.dialogRef.close();
+    $('#modalGroupCreation').modal('hide');
   }
 }
 

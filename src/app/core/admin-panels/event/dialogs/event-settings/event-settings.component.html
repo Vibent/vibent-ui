@@ -1,38 +1,49 @@
-<div class="container">
-    <div class="row justify-content-end">
-        <img class="cursor-pointer modal-close" src="./assets/img/close.png" (click)="close()">
-    </div>
-</div>
-<div class="container vibent-modal">
-    <h2><b>Event settings</b></h2>
-    <p class="lead">Update your event infos.</p>
-    <div [formGroup]="form">
-        <div class="form-group">
-            <label for="event-title"><b>Title</b>
-                <span *ngIf="!titleValidSetted"
-                      class="incorrect-input">Title is required</span></label>
-            <input type="text" class="form-control" id="event-title" formControlName="title"/>
+<div class="modal fade" id="modalEventSettings" tabindex="-1" role="dialog">
+    <div class="modal-dialog full-bootstrap-modal" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button"
+                        class="close black-close"
+                        data-dismiss="modal"
+                        (click)="close">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body bg-light">
+                <div class="container vibent-modal">
+                    <h2><b>Event settings</b></h2>
+                    <p class="lead">Update your event infos.</p>
+                    <div [formGroup]="form">
+                        <div class="form-group">
+                            <label for="event-title"><b>Title</b>
+                                <span *ngIf="!titleValidSetted"
+                                      class="incorrect-input">Title is required</span></label>
+                            <input type="text" class="form-control" id="event-title" formControlName="title"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-description"><b>Description (optional)</b></label>
+                            <textarea type="text" class="form-control" id="event-description"
+                                      formControlName="description"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-date"><b>Date</b>
+                                <span *ngIf="!dateValidSetted"
+                                      class="incorrect-input">Date incorrect or not in the future</span></label>
+                            <input type="text" class="form-control" formControlName="date" id="event-date">
+                        </div>
+                    </div>
+                    <div class="card card-group-remove">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Delete event</h5>
+                            <h6 class="card-subtitle mb-2 text-dark">Deleting event is irreversible</h6>
+                            <button class="btn btn-danger" (click)="deleteEvent()">Delete</button>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center m-t-50">
+                        <button (click)="updateInfo()" class="btn btn-round green-button">Update</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="event-description"><b>Description (optional)</b></label>
-            <textarea type="text" class="form-control" id="event-description"
-                      formControlName="description"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="event-date"><b>Date</b>
-                <span *ngIf="!dateValidSetted"
-                      class="incorrect-input">Date incorrect or not in the future</span></label>
-            <input type="text" class="form-control" formControlName="date" id="event-date">
-        </div>
-    </div>
-    <div class="card card-group-remove">
-        <div class="card-body">
-            <h5 class="card-title text-dark">Delete event</h5>
-            <h6 class="card-subtitle mb-2 text-dark">Deleting event is irreversible</h6>
-            <button class="btn btn-danger" (click)="deleteEvent()">Delete</button>
-        </div>
-    </div>
-    <div class="row justify-content-center m-t-50">
-        <button (click)="updateInfo()" class="btn btn-round green-button">Update</button>
     </div>
 </div>

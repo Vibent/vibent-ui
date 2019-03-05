@@ -1,27 +1,21 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component, Input } from '@angular/core';
 import { Group } from '../../../../../shared/models/group';
 
+declare const $: any;
+
 @Component({
-  selector: 'app-group-creation',
+  selector: 'group-members',
   templateUrl: './group-members.component.html'
 })
-export class GroupMembersComponent implements OnInit {
+export class GroupMembersComponent {
 
-  public form: FormGroup;
-  public group: Group;
+  @Input()
+  group: Group;
 
-  constructor(private fb: FormBuilder,
-              private dialogRef: MatDialogRef<GroupMembersComponent>,
-              @Inject(MAT_DIALOG_DATA) data) {
-    this.group = data.group;
-  }
-
-  ngOnInit() {
+  constructor() {
   }
 
   close() {
-    this.dialogRef.close();
+    $('#modalGroupMembers').modal('hide');
   }
 }

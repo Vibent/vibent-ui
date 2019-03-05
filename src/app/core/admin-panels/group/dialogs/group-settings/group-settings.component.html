@@ -1,39 +1,50 @@
-<div class="container">
-    <div class="row justify-content-end">
-        <img class="cursor-pointer modal-close" src="./assets/img/close.png" (click)="close()">
-    </div>
-</div>
-<div class="container vibent-modal">
-    <h2><b>Group settings</b></h2>
-    <p class="lead">Update your group infos.</p>
-    <div [formGroup]="form">
-        <div class="form-group">
-            <label for="group-name"><b>Name</b>
-                <span *ngIf="!nameValidSetted"
-                      class="incorrect-input">Name is required</span></label>
-            <input type="text" class="form-control" id="group-name" formControlName="name"/>
+<div class="modal fade" id="modalGroupSettings" tabindex="-1" role="dialog">
+    <div class="modal-dialog full-bootstrap-modal" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button"
+                        class="close black-close"
+                        data-dismiss="modal"
+                        (click)="close">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body bg-light">
+                <div class="container vibent-modal">
+                    <h2><b>Group settings</b></h2>
+                    <p class="lead">Update your group infos.</p>
+                    <div [formGroup]="form">
+                        <div class="form-group">
+                            <label for="group-name"><b>Name</b>
+                                <span *ngIf="!nameValidSetted"
+                                      class="incorrect-input">Name is required</span></label>
+                            <input type="text" class="form-control" id="group-name" formControlName="name"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="group-description"><b>Description (optional)</b></label>
+                            <textarea type="text" class="form-control" id="group-description"
+                                      formControlName="description"></textarea>
+                        </div>
+                    </div>
+                    <div *ngIf="group.memberships.length > 1" class="card card-group-remove">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Leave group</h5>
+                            <button class="btn btn-social" (click)="leaveGroup()">Leave</button>
+                        </div>
+                    </div>
+                    <div class="card card-group-remove">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Remove group</h5>
+                            <h6 class="card-subtitle mb-2 text-dark">Removing group will cause all child events and
+                                resources to be removed.</h6>
+                            <button class="btn btn-danger" (click)="removeGroup()">Remove</button>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center m-t-50">
+                        <button (click)="updateInfo()" class="btn btn-round green-button">Update</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="group-description"><b>Description (optional)</b></label>
-            <textarea type="text" class="form-control" id="group-description"
-                      formControlName="description"></textarea>
-        </div>
-    </div>
-    <div *ngIf="group.memberships.length > 1" class="card card-group-remove">
-        <div class="card-body">
-            <h5 class="card-title text-dark">Leave group</h5>
-            <button class="btn btn-social" (click)="leaveGroup()">Leave</button>
-        </div>
-    </div>
-    <div class="card card-group-remove">
-        <div class="card-body">
-            <h5 class="card-title text-dark">Remove group</h5>
-            <h6 class="card-subtitle mb-2 text-dark">Removing group will cause all child events and
-                resources to be removed.</h6>
-            <button class="btn btn-danger" (click)="removeGroup()">Remove</button>
-        </div>
-    </div>
-    <div class="row justify-content-center m-t-50">
-        <button (click)="updateInfo()" class="btn btn-round green-button">Update</button>
     </div>
 </div>
