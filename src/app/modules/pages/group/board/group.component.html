@@ -5,7 +5,7 @@
                 <h2 class="group-title">{{group.name}}</h2>
             </div>
             <div class="col-xl-12 text-center"></div>
-            <div class="col-xl-12 row justify-content-center">
+            <div class="col-xl-12 text-center">
                 <div class="score-wrap">
                     <a class="cursor-pointer">
                         <h5 class="members-number"
@@ -22,7 +22,7 @@
                 </div>
             </div>
 
-            <div *ngIf="screenSizesService.isMobileMenu()" class="col-xl-12 row justify-content-center">
+            <div *ngIf="screenSizesService.isMobileMenu()" class="col-xl-12 text-center">
                 <div class="nav-item dropdown">
                     <button class="btn btn-secondary btn-sm dropdown-toggle"
                             type="button"
@@ -31,11 +31,7 @@
                         Admin settings
                     </button>
                     <div class="dropdown-menu">
-                        <!--<a class="dropdown-item cursor-pointer" (click)="openRightsDialog()">Members Rights</a>-->
                         <a class="dropdown-item cursor-pointer" (click)="openSettingsDialog()">Group settings</a>
-                        <!-- <a class="dropdown-item cursor-pointer" (click)="openRequestsDialog()">Requests
-                             <span class="badge badge-info">4</span>
-                         </a>-->
                     </div>
                 </div>
 
