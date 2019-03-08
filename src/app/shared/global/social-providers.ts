@@ -32,8 +32,25 @@ const PROD_SOCIAL_PROVIDERS: Provider[] = [
   }
 ];
 
+const CORDOVA_SOCIAL_PROVIDERS: Provider[] = [
+  {
+    id: GoogleLoginProvider.PROVIDER_ID,
+    label: 'Google',
+    provider: new GoogleLoginProvider('634029875861-60qmoo8pplj30g69lq5pbni34epru07f.apps.googleusercontent.com'),
+    color: '#DC483C',
+  },
+  {
+    id: FacebookLoginProvider.PROVIDER_ID,
+    label: 'Facebook',
+    provider: new FacebookLoginProvider('203432600535344'),
+    color: '#3B5998',
+  }
+];
+
 let SOCIAL_PROVIDERS;
-if(environment.prod){
+if(environment.cordova){
+  SOCIAL_PROVIDERS = CORDOVA_SOCIAL_PROVIDERS;
+} else if (environment.prod) {
   SOCIAL_PROVIDERS = PROD_SOCIAL_PROVIDERS;
 } else {
   SOCIAL_PROVIDERS = DEV_SOCIAL_PROVIDERS;
