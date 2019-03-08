@@ -5,6 +5,7 @@
 
 export const environment = {
   prod: false,
+  cordova: false,
   apiEndpoint: 'https://dev.api.vibent.com',
   blackNoteUrl: 'https://dev.blacknote.vibent.com',
   appUrl: 'https://dev.vibent.com'
