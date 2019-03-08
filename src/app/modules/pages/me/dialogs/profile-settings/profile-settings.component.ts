@@ -76,7 +76,6 @@ export class ProfileSettingsComponent implements OnInit {
 
   public updateInfo(): void {
     this.loaderService.displayLoadingPageModal();
-    this.close();
     this.firstnameValidSetted = this.firstName.valid;
     this.lastnameValidSetted = this.lastName.valid;
 
@@ -97,6 +96,7 @@ export class ProfileSettingsComponent implements OnInit {
         this.userManagementService.setMe();
       });
     }
+    this.close();
   }
 
 }
