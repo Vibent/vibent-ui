@@ -18,24 +18,6 @@
     border-color: $focus-border;
   }
 
-  &:active,
-  &.active,
-  .open > &.dropdown-toggle,
-  .show > &.dropdown-toggle {
-    color: $color;
-    background-color: $focus-background;
-    border-color: $focus-border;
-    @include shadow-2dp-color($background);
-
-    &:hover,
-    &:focus,
-    &.focus {
-      color: $color;
-      background-color: $active-background;
-      border-color: $active-border;
-    }
-  }
-
   // when it is an icon, kill the active bg on open dropdown, but stabilize on hover
   .open > &.dropdown-toggle.bmd-btn-icon {
     color: inherit;
