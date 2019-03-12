@@ -7,12 +7,16 @@ import { User } from '../../../shared/models/user';
 import { ProfileImageService } from '../../../core/http/profile-image.service';
 import { HttpService } from '../../../core/http/http.service';
 import { UserManagementService } from '../../../core/services/user-management.service';
-import { LoaderSize } from '../../../shared/global/constants';
+import { AppSettings, LoaderSize } from '../../../shared/global/constants';
 import { LoaderService } from '../../../core/services/loader/service/loader.service';
+import { CookieService } from 'ngx-cookie-service';
+
+declare const $: any;
 
 @Component({
   selector: 'app-navbar',
-  templateUrl: './navbar.component.html'
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
   location: Location;
@@ -28,7 +32,8 @@ export class NavbarComponent implements OnInit {
               private profileImageService: ProfileImageService,
               private userManagementService: UserManagementService,
               private httpService: HttpService,
-              private authenticationService: AuthenticationService) {
+              private authenticationService: AuthenticationService,
+              private cookieService: CookieService) {
     this.location = location;
     this.user = this.userManagementService.getMe();
   }
@@ -51,6 +56,16 @@ export class NavbarComponent implements OnInit {
     });
 
     return t ? t.title : 'Event board';
+  }
+
+  public toggleLanguagesSubmenu(e: Event) {
+    $('#languageMenu').collapse('toggle');
+    e.stopPropagation();
+  }
+
+  public changeLanguage(code: string) {
+    this.cookieService.set(AppSettings.LANGUAGE_HEADER, code);
+    window.location.reload(true);
   }
 
   public logout(): void {
