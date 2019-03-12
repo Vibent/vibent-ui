@@ -27,8 +27,125 @@
     height: 45vw;
   }
 }
-.footer {
-  height: 300px;
-  background: #94cf9a;
+
+.home-explanations {
+  border-top: 3px solid #eaeaea;
+  background: #ffffff;
   margin-top: -1px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.explanation-line{
+  display: inline-flex;
+  align-items: center;
+}
+
+.explanation-block {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.explanation-block-counter{
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background: #92de9b;
+  height: 48px;
+  width: 48px;
+  border-radius: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 auto 1.389rem;
+}
+.explanation-block-title {
+  display: inline-block;
+  padding-left: 15px;
+  font-size: 1.6em;
+  line-height: 1.15;
+  font-weight: 700;
+  padding-bottom: 1.389rem;
+  max-width: 350px;
+}
+
+.explanation-block-description {
+  font-size: 1.389em;
+  line-height: 1.4;
+  max-width: 350px;
+}
+
+.checkbox-illustration {
+  width: 315px;
+  height: 380px;
+}
+
+.alimentation-illustration {
+  width: 425px;
+  height: 360px;
+}
+
+.planning-illustration {
+  width: 365px;
+  height: 237px;
+}
+
+.travel-illustration {
+  width: 330px;
+  height: 380px;
+}
+
+.free-illustration {
+  width: 330px;
+  height: 350px;
+}
+
+.survey-illustration {
+  width: 370px;
+  height: 230px;
+}
+
+.explanations {
+  max-width: 335px
+}
+
+.how-it-works {
+  background: #fafafa;
+}
+
+.our-bubbles {
+  background: white;
+  padding-top: 40px;
+}
+
+.btn .label {
+  display: inline-flex;
+  padding-left: 10px;
+}
+
+.bubble-btn {
+  border: 0;
+  border-radius: 6px;
+  color: white;
+  background: var(--bg-color);
+  width: 150px;
+  margin-right: 3px;
+  margin-left: 3px;
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    box-shadow: 0 0 0 0.2rem var(--bg-shadow-color);
+  }
+
+  i {
+    margin-left: -8px;
+  }
+}
+
+.bubbles-explanations {
+  min-height: 525px;
+}
+
+.footer {
+  background: #353748;
 }

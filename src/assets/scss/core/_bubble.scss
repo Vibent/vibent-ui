@@ -85,16 +85,6 @@
   position: relative;
   cursor: pointer;
 
-  .creator-bubble {
-    background-image: url(/assets/img/theo.jpg);
-    background-size: 50px 50px;
-    margin-top: 125px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: absolute;
-  }
-
   .bubble-type {
     margin-top: -53px;
     width: 35px;
@@ -164,6 +154,7 @@
 
 .alimentation {
   --bg-color: #f27c8b;
+  --bg-shadow-color: #f27c8b61;
   --bg-color-light: #f1f1f1;
   --text-color-hover: white;
   --box-shadow-color: rgba(255, 98, 152, 0.48);
@@ -172,6 +163,7 @@
 
 .travel {
   --bg-color: #7687c0;
+  --bg-shadow-color: #d0ddfb;
   --bg-color-light: #f1f1f1;
   --text-color-hover: white;
   --box-shadow-color: rgba(51, 107, 249, 0.48);
@@ -180,6 +172,7 @@
 
 .checkbox {
   --bg-color: #6ebf74;
+  --bg-shadow-color:#1eb13152;
   --bg-color-light: #f1f1f1;
   --text-color-hover: white;
   --box-shadow-color: rgba(35, 255, 50, 0.48);
@@ -188,6 +181,7 @@
 
 .survey {
   --bg-color: #ff9236;
+  --bg-shadow-color:#ff92365c;
   --bg-color-light: #f1f1f1;
   --text-color-hover: #fff;
   --box-shadow-color: rgba(252, 112, 18, 0.48);
@@ -196,6 +190,7 @@
 
 .planning {
   --bg-color: #08b6b3;
+  --bg-shadow-color:#08b6b359;
   --bg-color-light: #f1f1f1;
   --text-color-hover: white;
   --box-shadow-color: rgba(32, 165, 255, 0.48);
@@ -204,6 +199,7 @@
 
 .free {
   --bg-color: #b33a69;
+  --bg-shadow-color:#b33a6961;
   --bg-color-light: #f1f1f1;
   --text-color-hover: white;
   --box-shadow-color: rgba(255, 33, 127, 0.48);

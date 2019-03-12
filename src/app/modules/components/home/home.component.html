@@ -14,4 +14,159 @@
     </div>
 </div>
 <div class="home-background"></div>
-<div class="footer"></div>
+<div class="home-explanations">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="explanation-block col-md-4">
+                <div class="explanation-line">
+                    <div class="explanation-block-counter">1</div>
+                    <div class="explanation-block-title">Create or join a group</div>
+                </div>
+                <div class="explanation-block-description">Keep connected with your friends, colleagues or family and
+                    band together in a group.
+                </div>
+            </div>
+            <div class="explanation-block col-md-4">
+                <div class="explanation-line">
+                    <div class="explanation-block-counter">2</div>
+                    <div class="explanation-block-title">Create events</div>
+                </div>
+                <div class="explanation-block-description">An outing, a birthday or a special event? Create events in a
+                    group.
+                </div>
+            </div>
+            <div class="explanation-block col-md-4">
+                <div class="explanation-line">
+                    <div class="explanation-block-counter">3</div>
+                    <div class="explanation-block-title">Organize collaboratively</div>
+                </div>
+                <div class="explanation-block-description">Allow everyone to help organize, by seeing all
+                    contributions in real time.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="how-it-works">
+    <div class="container">
+        <div class="row px-3 px-md-0 justify-content-center flex-sm-column align-items-sm-center flex-lg-row">
+            <div class="col-sm-10 col-md-8 col-lg-5">
+                <div class="explanation-block-title p-t-4">How it works?</div>
+                <div class="explanation-block-description">An event is a composition of multiple
+                    bubble. Each bubble has a type, to provide specific help
+                    in your organization. In a bubble, everyone participates and can contribute.
+                </div>
+            </div>
+            <div class="text-center col-sm-10 col-md-8 col-lg-5">
+                <img class="w-250-p" src="./assets/img/travel-illustration.png">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="our-bubbles">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="explanation-block-title p-0">Our bubbles</div>
+            <p class="col-12 text-center">Click on each one to see details</p>
+        </div>
+        <div class="row justify-content-center">
+            <button (click)="bubbleDisplayed=BubbleType.AlimentationBubble"
+                    [class.active]="bubbleDisplayed==BubbleType.AlimentationBubble"
+                    class="btn bubble-btn alimentation"><i
+                    class="fa fa-cutlery"></i>
+                <span class="label">Alimentation</span></button>
+            <button (click)="bubbleDisplayed=BubbleType.TravelBubble"
+                    [class.active]="bubbleDisplayed==BubbleType.TravelBubble"
+                    class="btn bubble-btn travel"><i
+                    class="fa fa-taxi"></i>
+                <span class="label">Travel</span></button>
+            <button (click)="bubbleDisplayed=BubbleType.CheckboxBubble"
+                    [class.active]="bubbleDisplayed==BubbleType.CheckboxBubble"
+                    class="btn bubble-btn checkbox"><i
+                    class="fa fa-check-square"></i>
+                <span class="label">Checkbox</span></button>
+            <button (click)="bubbleDisplayed=BubbleType.SurveyBubble"
+                    [class.active]="bubbleDisplayed==BubbleType.SurveyBubble"
+                    class="btn bubble-btn survey"><i
+                    class="fa fa-question-circle"></i>
+                <span class="label">Survey</span></button>
+            <button (click)="bubbleDisplayed=BubbleType.PlanningBubble"
+                    [class.active]="bubbleDisplayed==BubbleType.PlanningBubble"
+                    class="btn bubble-btn planning"><i
+                    class="fa fa-tasks"></i>
+                <span class="label">Planning</span></button>
+            <button (click)="bubbleDisplayed=BubbleType.FreeBubble"
+                    [class.active]="bubbleDisplayed==BubbleType.FreeBubble"
+                    class="btn bubble-btn free"><i
+                    class="fa fa-commenting"></i>
+                <span class="label">Free</span></button>
+        </div>
+        <div class="bubbles-explanations d-flex flex-wrap justify-content-center">
+            <ng-container [ngSwitch]="bubbleDisplayed">
+                <ng-container *ngSwitchCase="BubbleType.AlimentationBubble">
+                    <div class="p-2 align-self-center">
+                        <img src="./assets/img/alim-illustration.png" class="alimentation-illustration">
+                    </div>
+                    <div class="explanations p-2 align-self-center">
+                        <h2>Alimentation bubble</h2>
+                        <p>Indicate what you plan to bring, ask participants to bring some drinks and food. Manage
+                            supplies for the event to make sure you don't miss out on anything!
+                    </div>
+                </ng-container>
+                <ng-container *ngSwitchCase="BubbleType.CheckboxBubble">
+                    <div class="p-2 align-self-center">
+                        <img src="./assets/img/checkbox-illustration.png" class="checkbox-illustration">
+                    </div>
+                    <div class="explanations p-2 align-self-center">
+                        <h2>Checkbox bubble</h2>
+                        <p>Make a list of things to do, to plan, to organize for the event. Participants will be able to
+                            check the elements of the list.</p>
+                    </div>
+                </ng-container>
+                <ng-container *ngSwitchCase="BubbleType.PlanningBubble">
+                    <div class="p-2 align-self-center">
+                        <img src="./assets/img/planning-illustration.png" class="planning-illustration">
+                    </div>
+                    <div class="explanations p-2 align-self-center">
+                        <h2>Planning bubble</h2>
+                        <p>Organize your planning for your event. Specify what you want to do and when.</p>
+                    </div>
+                </ng-container>
+                <ng-container *ngSwitchCase="BubbleType.TravelBubble">
+                    <div class="p-2 align-self-center">
+                        <img src="./assets/img/travel-illustration.png" class="travel-illustration">
+                    </div>
+                    <div class="explanations p-2 align-self-center">
+                        <h2>Travel bubble</h2>
+                        <p>Help participants organize their travel to the event! Some people will be able to offer seats
+                            in their cars, and others will be able to ask for them to be picked up!</p>
+                    </div>
+                </ng-container>
+                <ng-container *ngSwitchCase="BubbleType.FreeBubble">
+                    <div class="p-2 align-self-center">
+                        <img src="./assets/img/free-illustration.png" class="free-illustration">
+                    </div>
+                    <div class="explanations p-2 align-self-center">
+                        <h2>Free bubble</h2>
+                        <p>Organize your planning for your event. Specify what you want to do and when. </p>
+                    </div>
+                </ng-container>
+                <ng-container *ngSwitchCase="BubbleType.SurveyBubble">
+                    <div class="p-2 align-self-center">
+                        <img src="./assets/img/survey-illustration.png" class="survey-illustration">
+                    </div>
+                    <div class="explanations p-2 align-self-center">
+                        <h2>Survey bubble</h2>
+                        <p>Conduct a survey to solicit feedback from participants.</p>
+                    </div>
+                </ng-container>
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">Copyright © {{date | date:'yyyy'}} Vibent. All rights reserved</p>
+    </div>
+</footer>

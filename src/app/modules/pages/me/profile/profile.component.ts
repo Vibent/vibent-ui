@@ -42,7 +42,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
 
   public logout(): void {
     this.authenticationService.logout();
-    this.router.navigate(['/login']);
+    this.router.navigate(['']);
   }
 
 }
