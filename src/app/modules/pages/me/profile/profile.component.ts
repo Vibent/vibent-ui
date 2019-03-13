@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';import { User } from '.
 import { UserManagementService } from '../../../../core/services/user-management.service';
 import { Subscription } from 'rxjs';
 import { AuthenticationService } from '../../../../core/services/authentication.service';
-import { ScreenSizesService } from '../../../../core/services/screen-sizes.service';
+import { ScreenService } from '../../../../core/services/screen.service';
 
 declare const $: any;
 
@@ -17,7 +17,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
   subscriptions: Subscription[] = [];
 
   constructor(private route: ActivatedRoute,
-              public screenSizesService: ScreenSizesService,
+              public screenSizesService: ScreenService,
               private authenticationService: AuthenticationService,
               private router: Router,
               private userManagementService: UserManagementService) {

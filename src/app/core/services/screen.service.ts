@@ -2,10 +2,14 @@ import { Injectable } from '@angular/core';
 declare var $: any;
 
 @Injectable()
-export class ScreenSizesService {
+export class ScreenService {
 
-  public isMobileMenu(): boolean {
+  isMobileMenu(): boolean {
     return !($(window).width() > 991);
+  }
+
+  scrollToTop() {
+    document.body.scrollTop = 0;
   }
 
 }

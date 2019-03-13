@@ -6,7 +6,7 @@ import { EventAdminPanelService } from '../../../../core/services/event-admin-pa
 import { EventUpdateService } from '../../../../core/services/bubbles-services/event-update.service';
 import { BlacknoteService } from '../../../../core/services/blacknote/blacknote.service';
 import { EventParticipant, EventParticipantAnswer } from '../../../../shared/models/event-participant';
-import { ScreenSizesService } from '../../../../core/services/screen-sizes.service';
+import { ScreenService } from '../../../../core/services/screen.service';
 import { Subscription } from 'rxjs';
 
 declare const $: any;
@@ -27,7 +27,7 @@ export class EventComponent implements OnInit, OnDestroy {
               private eventAdminPanelService: EventAdminPanelService,
               private eventUpdateService: EventUpdateService,
               private blacknoteService: BlacknoteService,
-              public screenSizesService: ScreenSizesService) {
+              public screenSizesService: ScreenService) {
     this.event = this.route.snapshot.data['event'];
     this.blacknoteService.initConnectionForEventUpdate(this.event.ref);
   }
