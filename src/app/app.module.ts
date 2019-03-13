@@ -27,14 +27,6 @@ import { GroupSettingsModule } from './core/admin-panels/group/dialogs/group-set
 import { PublicGroupModule } from './modules/pages/group/public-board/public-group.module';
 import { GroupRequestsModule } from './core/admin-panels/group/dialogs/group-requests/group-requests.module';
 import { GroupRightsModule } from './core/admin-panels/group/dialogs/group-rights/group-rights.module';
-import { EventCreationComponent } from './modules/pages/event/dialogs/event-creation/event-creation.component';
-import { GroupCreationComponent } from './modules/pages/group/dialogs/group-creation/group-creation.component';
-import { GroupMembersComponent } from './modules/pages/group/dialogs/group-members/group-members.component';
-import { AddGroupMembersComponent } from './modules/pages/group/dialogs/group-members/add-group-members/add-group-members.component';
-import { ProfileSettingsComponent } from './modules/pages/me/dialogs/profile-settings/profile-settings.component';
-import { GroupSettingsComponent } from './core/admin-panels/group/dialogs/group-settings/group-settings.component';
-import { GroupRightsComponent } from './core/admin-panels/group/dialogs/group-rights/group-rights.component';
-import { GroupRequestsComponent } from './core/admin-panels/group/dialogs/group-requests/group-requests.component';
 import { GroupInvitationModule } from './modules/pages/group/group-invitation/group-invitation.module';
 import { TokenInterceptor } from './shared/interceptors/token.interceptor';
 import { EventAdminPanelService } from './core/services/event-admin-panel.service';
@@ -43,9 +35,8 @@ import { UserManagementService } from './core/services/user-management.service';
 import { LoaderModule } from './core/loader/loader.module';
 import { LoaderService } from './core/services/loader/service/loader.service';
 import { ResetPasswordModule } from './core/authentification/forgot/reset-password/reset-password.module';
-import { EventSettingsComponent } from './core/admin-panels/event/dialogs/event-settings/event-settings.component';
 import { EventSettingsModule } from './core/admin-panels/event/dialogs/event-settings/event-settings.module';
-import { ScreenSizesService } from './core/services/screen-sizes.service';
+import { ScreenService } from './core/services/screen.service';
 import { LoadingPageComponent } from './core/services/loader/loading-page/loading-page.component';
 import { LoadingPageModule } from './core/services/loader/loading-page/loading-page.module';
 import { HomeModule } from './modules/components/home/home.module';
@@ -92,7 +83,7 @@ import { HomeModule } from './modules/components/home/home.module';
   ],
   providers: [
     CookieService,
-    ScreenSizesService,
+    ScreenService,
     LoaderService,
     GroupAdminPanelService,
     EventAdminPanelService,
@@ -105,16 +96,8 @@ import { HomeModule } from './modules/components/home/home.module';
     }],
   bootstrap: [AppComponent],
   entryComponents: [
-    LoadingPageComponent,
-    EventCreationComponent,
-    EventSettingsComponent,
-    GroupCreationComponent,
-    GroupMembersComponent,
-    AddGroupMembersComponent,
-    ProfileSettingsComponent,
-    GroupSettingsComponent,
-    GroupRightsComponent,
-    GroupRequestsComponent]
+    LoadingPageComponent
+  ]
 })
 export class AppModule {
 }

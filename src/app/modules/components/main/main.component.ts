@@ -1,10 +1,10 @@
-
-import {filter} from 'rxjs/operators';
+import { filter } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { Location, PopStateEvent } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { UserManagementService } from '../../../core/services/user-management.service';
+import { ScreenService } from '../../../core/services/screen.service';
 
 @Component({
   selector: 'app-main',
@@ -16,7 +16,11 @@ export class MainComponent implements OnInit {
   private lastPoppedUrl: string;
   private yScrollStack: number[] = [];
 
-  constructor(private route: ActivatedRoute, private location: Location, private router: Router, private userManagementService: UserManagementService) {
+  constructor(public screenService: ScreenService,
+              private route: ActivatedRoute,
+              private location: Location,
+              private router: Router,
+              private userManagementService: UserManagementService) {
     this.userManagementService.setMe();
   }
 

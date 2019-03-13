@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Group } from '../../../../shared/models/group';
 import { GroupAdminPanelService } from '../../../../core/services/group-admin-panel.service';
 import { Event } from '../../../../shared/models/event';
-import { ScreenSizesService } from '../../../../core/services/screen-sizes.service';
+import { ScreenService } from '../../../../core/services/screen.service';
 import { Messages } from '../../../../shared/messages-codes/messages';
 import { Subscription } from 'rxjs';
 
@@ -22,7 +22,7 @@ export class GroupComponent implements OnInit, OnDestroy {
   subscriptions: Subscription[] = [];
 
   constructor(public dialog: MatDialog,
-              public screenSizesService: ScreenSizesService,
+              public screenSizesService: ScreenService,
               private route: ActivatedRoute,
               private groupAdminPanelService: GroupAdminPanelService) {
 
