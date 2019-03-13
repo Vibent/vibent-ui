@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpService } from '../../../http/http.service';
 import Swal from 'sweetalert2';
-import { Messages } from '../../../../shared/messages-codes/messages';
+import { MessageService } from '../../../services/i18n/message.service';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +22,8 @@ export class ResetPasswordComponent implements OnInit {
 
   constructor(private httpService: HttpService,
               private route: ActivatedRoute,
-              private router: Router) {
+              private router: Router,
+              private messageService: MessageService) {
   }
 
   ngOnInit() {
@@ -60,7 +61,7 @@ export class ResetPasswordComponent implements OnInit {
         this.loginPage();
         Swal({
           type: 'success',
-          title: Messages.PASSWORD_RESET,
+          title: this.messageService.PASSWORD_RESET,
           showConfirmButton: true,
         });
       }, (e) => {

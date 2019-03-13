@@ -1,106 +1,92 @@
 <div class="login-page">
-    <section class="h-100">
-        <div class="container h-100">
-            <div class="row justify-content-center">
-                <div class="card-wrapper">
-                    <div class="brand">
-                        <img src="./assets/img/vibent.svg">
-                    </div>
-                    <nav>
-                        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                            <a class="nav-item nav-link active" id="nav-home-tabs" data-toggle="tab" href="#nav-home"
-                               role="tab">Email</a>
-                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
-                               role="tab">Phone</a>
-                        </div>
-                    </nav>
-                    <div class="card fat m-t-25">
-                        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
-                                <div id="emailLogin" class="card-body">
-                                    <h3 class="card-title">Email login</h3>
-                                    <form novalidate [formGroup]="loginForm">
-                                        <div class="form-group">
-                                            <label for="email">E-Mail</label>
-                                            <input id="email"
-                                                   type="email"
-                                                   class="form-control"
-                                                   formControlName="email"
-                                                   required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="passwordEmail">Password
-                                                <a (click)="forgoPassword()"
-                                                   class="float-right cursor-pointer">
-                                                    Forgot Password?
-                                                </a>
-                                            </label>
-                                            <input id="passwordEmail"
-                                                   type="password"
-                                                   class="form-control"
-                                                   formControlName="password"
-                                                   required>
-                                        </div>
-                                        <div class="form-group no-margin">
-                                            <button type="submit" (click)="loginEmail()"
-                                                    class="btn btn-primary btn-block">
-                                                Login
-                                            </button>
-                                        </div>
-                                        <div class="text-center m-t-20">
-                                            Don't have an account? <br>
-                                            <button class="btn btn-primary btn-sm" (click)="register()">Create One
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="nav-profile" role="tabpanel">
-                                <div id="phoneLogin" class="card-body">
-                                    <h3 class="card-title">Phone number login</h3>
-
-                                    <form novalidate [formGroup]="loginForm">
-                                        <div class="form-group">
-                                            <label for="phone">Phone number</label>
-                                            <input id="phone"
-                                                   class="form-control"
-                                                   formControlName="phone"
-                                                   type="text"
-                                                   ng2TelInput
-                                                   [ng2TelInputOptions]="{initialCountry: 'fr'}"
-                                                   (hasError)="hasError($event)"
-                                                   (ng2TelOutput)="getNumber($event)">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="passwordPhone">Password
-                                                <a (click)="forgoPassword()"
-                                                   class="float-right cursor-pointer">
-                                                    Forgot Password?
-                                                </a>
-                                            </label>
-                                            <input id="passwordPhone"
-                                                   type="password"
-                                                   class="form-control"
-                                                   formControlName="passwordPhone"
-                                                   required>
-                                        </div>
-                                        <div class="form-group no-margin">
-                                            <button type="submit" (click)="loginPhone()"
-                                                    class="btn btn-primary btn-block">Login
-                                            </button>
-                                        </div>
-                                        <div class="text-center m-t-20">
-                                            Don't have an account? <br>
-                                            <button class="btn btn-primary btn-sm" (click)="register()">Create One
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <section class="h-100">
+    <div class="container h-100">
+      <div class="row justify-content-center">
+        <div class="card-wrapper">
+          <div class="brand">
+            <img src="./assets/img/vibent.svg">
+          </div>
+          <nav>
+            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active" id="nav-home-tabs" data-toggle="tab" href="#nav-home" role="tab"
+                 i18n="@@email">Email</a>
+              <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                 i18n="@@phone">Phone</a>
             </div>
+          </nav>
+          <div class="card fat m-t-25">
+            <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
+                <div id="emailLogin" class="card-body">
+                  <h3 class="card-title" i18n="@@email-login">Email login</h3>
+                  <form novalidate [formGroup]="loginForm">
+                    <div class="form-group">
+                      <label for="email" i18n="@@email">Email</label>
+                      <input id="email" type="email" class="form-control" formControlName="email" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="passwordEmail">
+                        <span i18n="@@password">Password</span>
+                        <a (click)="forgotPassword()" class="float-right cursor-pointer"
+                           i18n="@@forgot-password-question">
+                          Forgot Password?
+                        </a>
+                      </label>
+                      <input id="passwordEmail" type="password" class="form-control" formControlName="password"
+                             required>
+                    </div>
+                    <div class="form-group no-margin">
+                      <button type="submit" (click)="loginEmail()" class="btn btn-primary btn-block" i18n="@@login">
+                        Login
+                      </button>
+                    </div>
+                    <div class="text-center m-t-20">
+                      <span i18n="@@dont-have-account-question">Don't have an account?</span> <br>
+                      <button class="btn btn-primary btn-sm" (click)="register()" i18n="@@create-one">Create One
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="nav-profile" role="tabpanel">
+                <div id="phoneLogin" class="card-body">
+                  <h3 class="card-title" i18n="@@phone-login">Phone login</h3>
+
+                  <form novalidate [formGroup]="loginForm">
+                    <div class="form-group">
+                      <label for="phone" i18n="@@phone-number">Phone number</label>
+                      <input id="phone" class="form-control" formControlName="phone" type="text" ng2TelInput
+                             [ng2TelInputOptions]="{initialCountry: 'fr'}" (hasError)="hasError($event)"
+                             (ng2TelOutput)="getNumber($event)">
+                    </div>
+                    <div class="form-group">
+                      <label for="passwordPhone">
+                        <span i18n="@@password">Password</span>
+                        <a (click)="forgotPassword()" class="float-right cursor-pointer" i18n="@@forgot-password">
+                          Forgot Password?
+                        </a>
+                      </label>
+                      <input id="passwordPhone" type="password" class="form-control" formControlName="passwordPhone"
+                             required>
+                    </div>
+                    <div class="form-group no-margin">
+                      <button type="submit" (click)="loginPhone()"
+                              class="btn btn-primary btn-block" i18n="@@login">Login
+                      </button>
+                    </div>
+                    <div class="text-center m-t-20">
+                      <span i18n="@@dont-have-account-question">Don't have an account?</span> <br>
+                      <button class="btn btn-primary btn-sm" (click)="register()"
+                              i18n="@@create-one">Create One
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 </div>

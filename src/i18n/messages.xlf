@@ -1,46 +1,878 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" datatype="plaintext" original="ng2.template">
-        <body>
-            <trans-unit id="navbar.profile" datatype="html">
-                <source>
-                    Profile
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="events" datatype="html">
+        <source>Events</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/sidebar/sidebar.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="groups" datatype="html">
+        <source>Groups</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/sidebar/sidebar.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="event-board" datatype="html">
+        <source>Event Board</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="group-information" datatype="html">
+        <source>Group Information</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="profile" datatype="html">
+        <source>Profile</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="language" datatype="html">
+        <source>Language</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="logout" datatype="html">
+        <source>
+                Logout
+              </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login-vibent" datatype="html">
+        <source>
+          Login / Sign up with a Vibent account
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="create-join-group" datatype="html">
+        <source>Create or join a group</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="create-join-group-description" datatype="html">
+        <source>
+          Keep connected with your friends, colleagues or family and organize together in a group.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="create-events" datatype="html">
+        <source>Create events</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="create-events-description" datatype="html">
+        <source>
+          An outing, a birthday or a special event? Create events in one of your groups.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="organize-collaboratively" datatype="html">
+        <source>Organize collaboratively</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="organize-collaboratively-description" datatype="html">
+        <source>
+          Allow everyone to help organize, by seeing all contributions in real time.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="how-it-works" datatype="html">
+        <source>How it works</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="how-it-works-description" datatype="html">
+        <source>
+          An event is composed of multiple bubbles. Each bubble has a type and each type allows you to organize a
+          specific
+          aspect of your event. In a bubble, everyone is a participant and can contribute.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="our-bubbles" datatype="html">
+        <source>Our bubbles</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="click-each-one-details" datatype="html">
+        <source>Click on each one to see details about it</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="alimentation" datatype="html">
+        <source>Alimentation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="travel" datatype="html">
+        <source>Travel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="checkbox" datatype="html">
+        <source>Checkbox</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="survey" datatype="html">
+        <source>Survey</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="planning" datatype="html">
+        <source>Planning</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="free" datatype="html">
+        <source>Free</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="alimentation-bubble" datatype="html">
+        <source>Alimentation bubble</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">111</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="alimentation-bubble-description" datatype="html">
+        <source>Indicate what you plan to bring, ask participants to bring other
+              food and drinks. Manage supplies for the event to make sure you don&apos;t miss out on anything!
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">112</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="checkbox-bubble" datatype="html">
+        <source>Checkbox bubble</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">122</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="checkbox-bubble-description" datatype="html">
+        <source>Make a list of things to do, plan or organize for the event.
+              Participants will be able to check one or more elements of the list.
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">123</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="planning-bubble" datatype="html">
+        <source>Planning bubble</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">133</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="planning-bubble-description" datatype="html">
+        <source>
+              Organize the planning for your event. Specify what, when and where you have planned for the event.
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">134</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="travel-bubble" datatype="html">
+        <source>Travel bubble</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">144</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="travel-bubble-description" datatype="html">
+        <source>
+              Help participants organize their travelling plans to the event! Some people will be able to offer seats in
+              their cars, and others will be able to ask to be picked up.
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">145</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="free-bubble" datatype="html">
+        <source>Free bubble</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">156</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="free-bubble-description" datatype="html">
+        <source>For anything else you might have to say about the event, you can use
+              a free bubble where anything goes.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">157</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="survey-bubble" datatype="html">
+        <source>Survey bubble</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">166</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="survey-bubble-description" datatype="html">
+        <source>Conduct a survey to get feedback from participants on a specific
+              issue.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">167</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="group-settings" datatype="html">
+        <source>Group settings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/group/group-admin-panel.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="group-settings-description" datatype="html">
+        <source>Update your group&apos;s info</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="name" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="required-name" datatype="html">
+        <source>A name is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="optional-description" datatype="html">
+        <source>Description
+                (optional)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="leave-group" datatype="html">
+        <source>Leave group</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="leave" datatype="html">
+        <source>Leave</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="remove-group" datatype="html">
+        <source>Remove group</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="remove-group-description" datatype="html">
+        <source>
+                Removing group will cause all child events and resources to be removed.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="remove" datatype="html">
+        <source>Remove</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="update" datatype="html">
+        <source>Update</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="event-settings" datatype="html">
+        <source>Event settings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/event/event-admin-panel.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="event-settings.update-info" datatype="html">
+        <source>Update your event&apos;s info</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title" datatype="html">
+        <source>Title</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="required-title" datatype="html">
+        <source>A title is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="date" datatype="html">
+        <source>Date</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="incorrect-date" datatype="html">
+        <source>Incorrect or past date</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="delete-event" datatype="html">
+        <source>Delete event</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="delete-event-irreversible" datatype="html">
+        <source>
+                Deleting an event is irreversible
+              </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="delete" datatype="html">
+        <source>Delete</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="updating" datatype="html">
+        <source>
+  supdating
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/loader/loader.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/loader/loader.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="email" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="phone" datatype="html">
+        <source>Phone</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="email-login" datatype="html">
+        <source>Email login</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="password" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgot-password-question" datatype="html">
+        <source>
+                          Forgot Password?
+                        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login" datatype="html">
+        <source>
+                        Login
+                      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dont-have-account-question" datatype="html">
+        <source>Don&apos;t have an account?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="create-one" datatype="html">
+        <source>Create One
+                      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="phone-login" datatype="html">
+        <source>Phone login</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="phone-number" datatype="html">
+        <source>Phone number</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgot-password" datatype="html">
+        <source>
+                          Forgot Password?
+                        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register" datatype="html">
+        <source>Register</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="first-name" datatype="html">
+        <source>First name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="required" datatype="html">
+        <source>required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="last-name" datatype="html">
+        <source>Last name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="email-phone-both-question" datatype="html">
+        <source>
+                    Email? Phone? Both?
+                  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-email-phone-both" datatype="html">
+        <source>You can register with your email or your phone.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> Or even both!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="email-phone-choose-one" datatype="html">
+        <source>But choose at least one!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="incorrect-email" datatype="html">
+        <source>(incorrect email format)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="incorrect-phone" datatype="html">
+        <source>(incorrect phone number format)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8-characters" datatype="html">
+        <source>(8 characters)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="password-confirmation" datatype="html">
+        <source>Password Confirmation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="password-not-identical" datatype="html">
+        <source>(password not identical)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="agree-terms-conditions" datatype="html">
+        <source>
+                  By clicking on Sign Up, you agree to our
+                  <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/> Terms and Conditions<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
                 </source>
-                <target>
-                    dsgis
-                </target>
-                <context-group purpose="location">
-                    <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-                    <context context-type="linenumber">24</context>
-                </context-group>
-                <context-group purpose="location">
-                    <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-                    <context context-type="linenumber">51</context>
-                </context-group>
-            </trans-unit>
-            <trans-unit id="navbar.logout" datatype="html">
-                <source>
-                    Logout
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sign-up" datatype="html">
+        <source>
+                  Sign up
                 </source>
-                <context-group purpose="location">
-                    <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-                    <context context-type="linenumber">28</context>
-                </context-group>
-            </trans-unit>
-            <trans-unit id="navbar.events" datatype="html">
-                <source>Events</source>
-                <context-group purpose="location">
-                    <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-                    <context context-type="linenumber">43</context>
-                </context-group>
-            </trans-unit>
-            <trans-unit id="navbar.groups" datatype="html">
-                <source>Groups</source>
-                <context-group purpose="location">
-                    <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-                    <context context-type="linenumber">47</context>
-                </context-group>
-            </trans-unit>
-        </body>
-    </file>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="already-have-account" datatype="html">
+        <source>Already have an account?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reset-password-email" datatype="html">
+        <source>Reset password by email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reset-password-confirm" datatype="html">
+        <source>
+                        By clicking on &quot;Reset Password&quot; we will send you a password reset link
+                      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="send-email" datatype="html">
+        <source>
+                        Send email
+                      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="back-to-login" datatype="html">
+        <source>
+                        Back to login
+                      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/forgot/reset-password/reset-password.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reset-password-phone" datatype="html">
+        <source>Reset password by phone
+                    number</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="send-sms" datatype="html">
+        <source>
+                        Send SMS
+                      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="no-event-in-group" datatype="html">
+        <source>There is no event in this group. You can create one by clicking on the button
+          just above. Group members can then participate and help you organize</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/group/board/group.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reset-password" datatype="html">
+        <source>Let&apos;s reset your password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/forgot/reset-password/reset-password.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/forgot/reset-password/reset-password.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="new-password" datatype="html">
+        <source>
+                    New password <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>(8 characters)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
+                  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/forgot/reset-password/reset-password.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="new-password-confirm" datatype="html">
+        <source>New password Confirmation<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>(password not identical)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
+                  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/forgot/reset-password/reset-password.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="manage-group" datatype="html">
+        <source>Manage group</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/group/group-admin-panel.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="manage-group-description" datatype="html">
+        <source>
+      You&apos;re an admin, you can change the group settings and manage membership requests here
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/group/group-admin-panel.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="manage-event" datatype="html">
+        <source>Manage event</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/event/event-admin-panel.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="manage-event-description" datatype="html">
+        <source>
+      You&apos;re an admin, you can change the event settings here
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/admin-panels/event/event-admin-panel.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="social-login" datatype="html">
+        <source>Login with a <x id="INTERPOLATION" equiv-text="{{provider.label | lowercase}}"/> account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/social/social-auth.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer-text" datatype="html">
+        <source>Copyright © <x id="INTERPOLATION" equiv-text="{{date | date:&apos;yyyy&apos;}}"/> Vibent. All rights reserved</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/footer/footer.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
 </xliff>

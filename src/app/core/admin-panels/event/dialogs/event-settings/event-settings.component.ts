@@ -6,9 +6,9 @@ import { HttpService } from '../../../../http/http.service';
 import { Event } from '../../../../../shared/models/event';
 import { EventAdminPanelService } from '../../../../services/event-admin-panel.service';
 import * as moment from 'moment';
-import { Messages, SwalColors } from '../../../../../shared/messages-codes/messages';
 import { EventUpdateService } from '../../../../services/bubbles-services/event-update.service';
 import { LoaderService } from '../../../../services/loader/service/loader.service';
+import { MessageService } from '../../../../services/i18n/message.service';
 
 declare const $: any;
 
@@ -35,7 +35,8 @@ export class EventSettingsComponent implements OnInit {
               private eventUpdateService: EventUpdateService,
               private router: Router,
               private adminPanelService: EventAdminPanelService,
-              private httpService: HttpService) {
+              private httpService: HttpService,
+              private messageService: MessageService) {
   }
 
   ngOnInit() {
@@ -54,21 +55,21 @@ export class EventSettingsComponent implements OnInit {
 
   public deleteEvent(): void {
     Swal({
-      title: Messages.ARE_YOU_SURE,
-      text: Messages.NO_REVERT,
+      title: this.messageService.ARE_YOU_SURE,
+      text: this.messageService.NO_REVERT,
       type: 'warning',
       showCancelButton: true,
-      confirmButtonColor: SwalColors.CONFIRM_BUTTON,
+      confirmButtonColor: this.messageService.CONFIRM_BUTTON_COLOR,
       reverseButtons: true,
-      cancelButtonColor: SwalColors.CANCEL_BUTTON,
-      confirmButtonText: Messages.DELETE
+      cancelButtonColor: this.messageService.CANCEL_BUTTON_COLOR,
+      confirmButtonText: this.messageService.DELETE
     }).then((result) => {
       if (result.value) {
         this.close();
         this.httpService.deleteEvent(this.event.ref).subscribe();
         Swal(
-          Messages.DELETED,
-          Messages.EVENT_DELETED,
+          this.messageService.DELETED,
+          this.messageService.EVENT_DELETED,
           'success'
         ).then((result) => {
           this.router.navigate(['/events']);

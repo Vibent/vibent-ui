@@ -6,7 +6,7 @@ import { GroupAdminPanelService } from '../../../../services/group-admin-panel.s
 import Swal from 'sweetalert2';
 import { HttpService } from '../../../../http/http.service';
 import { LoaderService } from '../../../../services/loader/service/loader.service';
-import { Messages, SwalColors } from '../../../../../shared/messages-codes/messages';
+import { MessageService } from '../../../../services/i18n/message.service';
 
 declare const $: any;
 
@@ -27,7 +27,8 @@ export class GroupSettingsComponent implements OnInit {
               private router: Router,
               private adminPanelService: GroupAdminPanelService,
               private loaderService: LoaderService,
-              private httpService: HttpService) {
+              private httpService: HttpService,
+              private messageService: MessageService) {
   }
 
   ngOnInit() {
@@ -39,21 +40,21 @@ export class GroupSettingsComponent implements OnInit {
 
   public removeGroup(): void {
     Swal({
-      title: Messages.LEAVE_GROUP,
-      text: Messages.LEAVE_GROUP_TEXT,
+      title: this.messageService.LEAVE_GROUP,
+      text: this.messageService.LEAVE_GROUP_TEXT,
       type: 'warning',
       showCancelButton: true,
-      confirmButtonColor: SwalColors.CONFIRM_BUTTON,
+      confirmButtonColor: this.messageService.CONFIRM_BUTTON_COLOR,
       reverseButtons: true,
-      cancelButtonColor: SwalColors.CANCEL_BUTTON,
-      confirmButtonText: Messages.DELETE
+      cancelButtonColor: this.messageService.CANCEL_BUTTON_COLOR,
+      confirmButtonText: this.messageService.DELETE
     }).then((result) => {
       if (result.value) {
         this.close();
         this.httpService.deleteGroup(this.group.ref).subscribe();
         Swal(
-          Messages.DELETED,
-          Messages.GROUP_DELETED,
+          this.messageService.DELETED,
+          this.messageService.GROUP_DELETED,
           'success'
         ).then((result) => {
           this.router.navigate(['/groups']);
@@ -64,14 +65,14 @@ export class GroupSettingsComponent implements OnInit {
 
   public leaveGroup(): void {
     Swal({
-      title: Messages.ARE_YOU_SURE,
-      text: Messages.NO_REVERT,
+      title: this.messageService.ARE_YOU_SURE,
+      text: this.messageService.NO_REVERT,
       type: 'warning',
       showCancelButton: true,
-      confirmButtonColor: SwalColors.CONFIRM_BUTTON,
+      confirmButtonColor: this.messageService.CONFIRM_BUTTON_COLOR,
       reverseButtons: true,
-      cancelButtonColor: SwalColors.CANCEL_BUTTON,
-      confirmButtonText: Messages.YES
+      cancelButtonColor: this.messageService.CANCEL_BUTTON_COLOR,
+      confirmButtonText: this.messageService.YES
     }).then((result) => {
       if (result.value) {
         this.loaderService.displayLoadingPageModal();

@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
-import { Messages } from '../../../shared/messages-codes/messages';
 import { ActivatedRoute } from '@angular/router';
 import { AuthenticationService } from '../../services/authentication.service';
 import { AuthService, SocialUser } from 'angularx-social-login';
 import SOCIAL_PROVIDERS from '../../../shared/global/social-providers';
+import { MessageService } from '../../services/i18n/message.service';
 
 @Component({
   selector: 'social-auth',
@@ -21,7 +21,8 @@ export class SocialAuthComponent implements OnInit, OnDestroy {
 
   constructor(private socialAuthService: AuthService,
               private authenticationService: AuthenticationService,
-              private route: ActivatedRoute) {
+              private route: ActivatedRoute,
+              private messageService: MessageService) {
   }
 
   ngOnInit() {
@@ -56,8 +57,8 @@ export class SocialAuthComponent implements OnInit, OnDestroy {
     this.blockLogin = false;
     Swal({
       type: 'error',
-      title: Messages.OOPS,
-      text: Messages.SOCIAL_LOGIN_FAIL,
+      title: this.messageService.OOPS,
+      text: this.messageService.SOCIAL_LOGIN_FAIL,
     });
   }
 }

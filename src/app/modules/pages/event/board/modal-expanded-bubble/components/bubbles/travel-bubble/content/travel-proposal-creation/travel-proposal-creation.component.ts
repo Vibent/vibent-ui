@@ -6,9 +6,10 @@ import { AlgoliaPlacesService } from '../../../../../../../../../../core/service
 import places from 'places.js';
 import { EventUpdateService } from '../../../../../../../../../../core/services/bubbles-services/event-update.service';
 import Swal from 'sweetalert2';
-import { Messages } from '../../../../../../../../../../shared/messages-codes/messages';
 import { AbstractBubbleEntityCreationComponent } from '../../../../abstract/abstract-bubble-entity-creation.component';
 import { AppSettings } from '../../../../../../../../../../shared/global/constants';
+import { MessageService } from '../../../../../../../../../../core/services/i18n/message.service';
+
 declare const $: any;
 
 @Component({
@@ -30,7 +31,8 @@ export class TravelProposalCreationComponent extends AbstractBubbleEntityCreatio
 
   constructor(private algoliaPlacesService: AlgoliaPlacesService,
               private eventUpdateService: EventUpdateService,
-              private travelHttpService: TravelHttpService) {
+              private travelHttpService: TravelHttpService,
+              private messageService: MessageService) {
     super();
   }
 
@@ -56,8 +58,8 @@ export class TravelProposalCreationComponent extends AbstractBubbleEntityCreatio
     if (!this.inputPlace) {
       Swal({
         type: 'error',
-        title:  Messages.OOPS,
-        text: Messages.MUST_SELECT_PROPOSAL_LOCATION,
+        title: this.messageService.OOPS,
+        text: this.messageService.MUST_SELECT_PROPOSAL_LOCATION,
       });
     }
     this.travelHttpService.createProposal({
@@ -72,7 +74,7 @@ export class TravelProposalCreationComponent extends AbstractBubbleEntityCreatio
       (e) => {
         Swal({
           type: 'error',
-          title:  Messages.OOPS,
+          title: this.messageService.OOPS,
           text: e.error.error.message,
         });
       });

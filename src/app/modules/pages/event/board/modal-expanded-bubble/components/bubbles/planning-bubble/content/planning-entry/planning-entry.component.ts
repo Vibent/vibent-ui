@@ -15,7 +15,7 @@ import { PlanningHttpService } from '../../../../../../../../../../core/services
 import { PlanningDataService } from '../../../../../../../../../../core/services/bubbles-services/planning/data/planning-data.service';
 import { EventUpdateService } from '../../../../../../../../../../core/services/bubbles-services/event-update.service';
 import Swal from 'sweetalert2';
-import { Messages, SwalColors } from '../../../../../../../../../../shared/messages-codes/messages';
+import { MessageService } from '../../../../../../../../../../core/services/i18n/message.service';
 
 @Component({
   selector: '[planning-entry]',
@@ -39,7 +39,8 @@ export class PlanningEntryComponent implements OnInit {
 
   constructor(private planningHttpService: PlanningHttpService,
               private eventUpdateService: EventUpdateService,
-              private planningDataService: PlanningDataService) {
+              private planningDataService: PlanningDataService,
+              private messageService: MessageService) {
   }
 
   ngOnInit(): void {
@@ -54,14 +55,14 @@ export class PlanningEntryComponent implements OnInit {
 
   deleteEntry() {
     Swal({
-      title: Messages.ARE_YOU_SURE,
-      text: Messages.NO_REVERT,
+      title: this.messageService.ARE_YOU_SURE,
+      text: this.messageService.NO_REVERT,
       type: 'warning',
       showCancelButton: true,
       reverseButtons: true,
-      confirmButtonColor: SwalColors.CONFIRM_BUTTON,
-      cancelButtonColor: SwalColors.CANCEL_BUTTON,
-      confirmButtonText: Messages.DELETE
+      confirmButtonColor: this.messageService.CONFIRM_BUTTON_COLOR,
+      cancelButtonColor: this.messageService.CANCEL_BUTTON_COLOR,
+      confirmButtonText: this.messageService.DELETE
     }).then((result) => {
       if (result.value) {
         this.planningHttpService.deleteEntry(this.planningEntry).subscribe(() => {

@@ -6,20 +6,8 @@ import { User } from '../../../shared/models/user';
 import { HttpService } from '../../../core/http/http.service';
 import { EventAdminPanelService } from '../../../core/services/event-admin-panel.service';
 import { UserManagementService } from '../../../core/services/user-management.service';
-import { ScreenService } from '../../../core/services/screen.service';
 import { Subscription } from 'rxjs';
-
-declare interface IRouteInfo {
-  path: string;
-  title: string;
-  icon: string;
-  class: string;
-}
-
-export const ROUTES: IRouteInfo[] = [
-  {path: '/events', title: 'Events', icon: 'bubble_chart', class: ''},
-  {path: '/groups', title: 'Groups', icon: 'group', class: ''}
-];
+import { ScreenService } from '../../../core/services/screen.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -27,7 +15,6 @@ export const ROUTES: IRouteInfo[] = [
 })
 export class SidebarComponent implements OnInit, OnDestroy {
 
-  menuItems: any[];
   groupAdminPanelInput = null;
   eventAdminPanelInput = null;
   user: User;
@@ -45,7 +32,6 @@ export class SidebarComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.menuItems = ROUTES.filter(menuItem => menuItem);
     this.subscriptions.push(
       this.groupAdminPanelService.change$.subscribe(result => {
         this.groupAdminPanelInput = result;

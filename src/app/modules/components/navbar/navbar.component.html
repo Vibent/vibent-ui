@@ -1,64 +1,67 @@
 <nav class="navbar navbar-expand-lg navbar-absolute">
-    <div class="container-fluid">
-        <div class="navbar-wrapper">
-            <img src="./assets/img/vibent.svg" style="width: 90px">
-            <a class="navbar-brand">{{getTitle()}}</a>
-        </div>
-        <loader [mainCondition]=loaderService.displayLoader()
-                [eventUpdated]=loaderService.eventUpdated
-                [withLogo]=false
-                [fade]=true
-                [mainSize]=loaderSize></loader>
-        <div class="collapse navbar-collapse justify-content-end" id="navigation">
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link" id="navUserProfile" data-toggle="dropdown">
-                        <div class="user-profile">
-                            <img *ngIf="user" src="{{user.profilePicLocation}}">
-                        </div>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                        <li>
-                            <a class="dropdown-item" i18n="@@navbar.profile"
-                               [routerLink]="['/me']">
-                                Profile
-                            </a>
-                        </li>
-
-                        <li>
-                            <a id="languageToggle" (click)="toggleLanguagesSubmenu($event)" class="dropdown-item">Language</a>
-                            <ul id="languageMenu" class="collapse">
-                                <li>
-                                    <a (click)="changeLanguage('en')"><span class="flag-icon flag-icon-gb"></span>English</a>
-                                    <a (click)="changeLanguage('fr')"><span class="flag-icon flag-icon-fr"></span>Français</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li><a class="dropdown-item cursor-pointer"
-                               (click)="logout()" i18n="@@navbar.logout">
-                            Logout
-                        </a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+  <div class="container-fluid">
+    <div class="navbar-wrapper">
+      <img src="./assets/img/vibent.svg" style="width: 90px">
+      <span class="navbar-brand" [ngSwitch]="this.activeRoute">
+        <span *ngSwitchCase="'events'" i18n="@@events">Events</span>
+        <span *ngSwitchCase="'events/:ref'" i18n="@@event-board">Event Board</span>
+        <span *ngSwitchCase="'groups'" i18n="@@groups">Groups</span>
+        <span *ngSwitchCase="'groups/:ref'" i18n="@@group-information">Group Information</span>
+        <span *ngSwitchCase="'me'" i18n="@@profile">Profile</span>
+      </span>
     </div>
+    <loader [mainCondition]=loaderService.displayLoader() [eventUpdated]=loaderService.eventUpdated [withLogo]=false
+            [fade]=true [mainSize]=loaderSize></loader>
+    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link" id="navUserProfile" data-toggle="dropdown">
+            <div class="user-profile">
+              <img *ngIf="user" src="{{user.profilePicLocation}}">
+            </div>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li>
+              <a class="dropdown-item" i18n="@@profile" [routerLink]="['/me']">
+                Profile
+              </a>
+            </li>
+
+            <li>
+              <a id="languageToggle" (click)="toggleLanguagesSubmenu($event)" class="dropdown-item" i18n="@@language">Language</a>
+              <ul id="languageMenu" class="collapse">
+                <li>
+                  <a (click)="changeLanguage('en')"><span class="flag-icon flag-icon-gb"></span>English</a>
+                  <a (click)="changeLanguage('fr')"><span class="flag-icon flag-icon-fr"></span>Français</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a class="dropdown-item cursor-pointer" (click)="logout()" i18n="@@logout">
+                Logout
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
 <nav class="navbar navbar-expand-lg navbar-absolute bottom-navbar">
-    <div class="d-flex justify-content-around">
-        <div class="text-center cursor-pointer" [routerLink]="['/events']">
-            <i class="material-icons">bubble_chart</i>
-            <div class="menu-title" i18n="@@navbar.events">Events</div>
-        </div>
-        <div class="text-center cursor-pointer" [routerLink]="['/groups']">
-            <i class="material-icons">group</i>
-            <div class="menu-title" i18n="@@navbar.groups">Groups</div>
-        </div>
-        <div class="text-center cursor-pointer" [routerLink]="['/me']">
-            <i class="material-icons">person</i>
-            <div class="menu-title" i18n="@@navbar.profile">Profile</div>
-        </div>
+  <div class="d-flex justify-content-around">
+    <div class="text-center cursor-pointer" [routerLink]="['/events']">
+      <i class="material-icons">bubble_chart</i>
+      <div class="menu-title" i18n="@@events">Events</div>
     </div>
+    <div class="text-center cursor-pointer" [routerLink]="['/groups']">
+      <i class="material-icons">group</i>
+      <div class="menu-title" i18n="@@groups">Groups</div>
+    </div>
+    <div class="text-center cursor-pointer" [routerLink]="['/me']">
+      <i class="material-icons">person</i>
+      <div class="menu-title" i18n="@@profile">Profile</div>
+    </div>
+  </div>
 </nav>

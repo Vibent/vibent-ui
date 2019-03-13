@@ -3,9 +3,9 @@ import { HttpService } from '../http/http.service';
 import { LoaderService } from './loader/service/loader.service';
 import { Event } from '../../shared/models/event';
 import { NotificationsService, NotificationType } from './notifications.service';
-import { Messages } from '../../shared/messages-codes/messages';
 import { EventUpdateService } from './bubbles-services/event-update.service';
 import { BehaviorSubject } from 'rxjs';
+import { MessageService } from './i18n/message.service';
 
 @Injectable()
 export class EventAdminPanelService {
@@ -15,7 +15,8 @@ export class EventAdminPanelService {
   constructor(private httpService: HttpService,
               private eventUpdateService: EventUpdateService,
               private notificationService: NotificationsService,
-              private loaderService: LoaderService) {
+              private loaderService: LoaderService,
+              private messageService: MessageService) {
   }
 
   toggleEventPanel(eventRef: string) {
@@ -30,7 +31,7 @@ export class EventAdminPanelService {
     this.httpService.updateEvent(event).subscribe(() => {
       this.eventUpdateService.updateEvent(event.ref);
       this.loaderService.closeLoadingPageModal();
-      this.notificationService.notify(Messages.EVENT_UPDATED, NotificationType.SUCCESS);
+      this.notificationService.notify(this.messageService.EVENT_UPDATED, NotificationType.SUCCESS);
     });
   }
 

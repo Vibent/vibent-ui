@@ -1,25 +1,28 @@
 <div class="admin_card hoveradmin_card">
-    <div class="info">
-        <div class="title">
-            <a>Manage group</a>
-        </div>
-        <div class="desc">You're an admin, you can change here some group settings or manage members requests</div>
+  <div class="info">
+    <div class="title">
+      <a i18n="@@manage-group">Manage group</a>
     </div>
-    <div class="bottom">
-        <!--<button type="button" class="btn btn-warning btn-sm w-100" (click)="openRightsDialog()">
-            Members rights
-        </button>-->
-
-        <button type="button"
-                class="btn btn-danger btn-sm w-100"
-                (click)="openSettingsDialog()">
-            Group settings
-        </button>
-
-        <!--<button type="button" style="background: #2caf97" class="btn btn-primary btn-sm w-100"
-                        (click)="openRequestsDialog()">
-            Requests <span class="badge badge-light">4</span>
-        </button>-->
-
+    <div class="desc" i18n="@@manage-group-description">
+      You're an admin, you can change the group settings and manage membership requests here
     </div>
+  </div>
+  <div class="bottom">
+    <!--<button type="button" class="btn btn-warning btn-sm w-100" (click)="openRightsDialog()">
+        Members rights
+    </button>-->
+
+    <button type="button"
+            class="btn btn-danger btn-sm w-100"
+            (click)="openSettingsDialog()"
+            i18n="@@group-settings">
+      Group settings
+    </button>
+
+    <!--<button type="button" style="background: #2caf97" class="btn btn-primary btn-sm w-100"
+                    (click)="openRequestsDialog()">
+        Requests <span class="badge badge-light">4</span>
+    </button>-->
+
+  </div>
 </div>

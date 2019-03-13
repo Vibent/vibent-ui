@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { LoaderModule } from '../../../core/loader/loader.module';
 import { SocialAuthModule } from '../../../core/authentification/social/social-auth.module';
+import { FooterModule } from '../footer/footer.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { SocialAuthModule } from '../../../core/authentification/social/social-a
     CommonModule,
     BrowserModule,
     SocialAuthModule,
-    RouterModule
+    RouterModule,
+    FooterModule
   ],
   declarations: [
     HomeComponent

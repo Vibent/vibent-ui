@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 import { AgmCoreModule } from '@agm/core';
-import { FooterModule } from './modules/components/footer/footer.module';
 import { SidebarModule } from './modules/components/sidebar/sidebar.module';
 import { NavbarModule } from './modules/components/navbar/navbar.module';
 import { CommonModule } from '@angular/common';
@@ -40,6 +39,7 @@ import { ScreenService } from './core/services/screen.service';
 import { LoadingPageComponent } from './core/services/loader/loading-page/loading-page.component';
 import { LoadingPageModule } from './core/services/loader/loading-page/loading-page.module';
 import { HomeModule } from './modules/components/home/home.module';
+import { I18nModule } from './core/services/i18n/i18n.module';
 
 @NgModule({
   imports: [
@@ -54,7 +54,6 @@ import { HomeModule } from './modules/components/home/home.module';
     RouterModule,
     GroupsModule,
     EventsModule,
-    FooterModule,
     SidebarModule,
     NavbarModule,
     EventModule,
@@ -76,6 +75,7 @@ import { HomeModule } from './modules/components/home/home.module';
     PublicGroupModule,
     LoaderModule,
     LoggerModule.forRoot({level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR}),
+    I18nModule,
   ],
   declarations: [
     AppComponent,

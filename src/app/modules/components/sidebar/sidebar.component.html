@@ -1,22 +1,26 @@
 <div class="logo">
-    <div class="logo-img">
-        <img src="./assets/img/vibent.svg"/>
-    </div>
+  <div class="logo-img">
+    <img src="./assets/img/vibent.svg"/>
+  </div>
 </div>
 <div class="sidebar-wrapper">
-    <ul class="nav">
-        <li routerLinkActive="active"
-            *ngFor="let menuItem of menuItems"
-            class="{{menuItem.class}} nav-item">
-            <a class="nav-link"
-               [routerLink]="[menuItem.path]">
-                <i class="material-icons">{{menuItem.icon}}</i>
-                <p>{{menuItem.title}}</p>
-            </a>
-        </li>
-    </ul>
-    <group-admin-panel *ngIf="groupAdminPanelInput && !screenSizesService.isMobileMenu()">
-    </group-admin-panel>
-    <event-admin-panel *ngIf="eventAdminPanelInput && !screenSizesService.isMobileMenu()">
-    </event-admin-panel>
+  <ul class="nav">
+    <li routerLinkActive="active" class="nav-item">
+      <a class="nav-link" [routerLink]="['/events']">
+        <i class="material-icons">bubble_chart</i>
+        <p i18n="@@events">Events</p>
+      </a>
+    </li>
+    <li routerLinkActive="active" class="nav-item">
+      <a class="nav-link" [routerLink]="['/groups']">
+        <i class="material-icons">group</i>
+        <p i18n="@@groups">Groups</p>
+      </a>
+    </li>
+
+  </ul>
+  <group-admin-panel *ngIf="groupAdminPanelInput && !screenSizesService.isMobileMenu()">
+  </group-admin-panel>
+  <event-admin-panel *ngIf="eventAdminPanelInput && !screenSizesService.isMobileMenu()">
+  </event-admin-panel>
 </div>

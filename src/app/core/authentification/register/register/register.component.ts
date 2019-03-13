@@ -4,7 +4,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
-import { Messages } from '../../../../shared/messages-codes/messages';
+import { MessageService } from '../../../services/i18n/message.service';
 
 @Component({
   selector: 'app-register',
@@ -34,7 +34,8 @@ export class RegisterComponent implements OnInit {
 
   constructor(private cookieService: CookieService,
               private authenticationService: AuthenticationService,
-              private router: Router) {
+              private router: Router,
+              private messageService: MessageService) {
     if (this.cookieService.check('token')) {
       this.router.navigate(['/events']);
     }
@@ -108,7 +109,7 @@ export class RegisterComponent implements OnInit {
       this.authenticationService.register(user, this.onFail.bind(this));
       Swal({
         type: 'success',
-        title: Messages.REGISTER_CONFIRMATION,
+        title: this.messageService.REGISTER_CONFIRMATION,
         showConfirmButton: true,
       });
       this.router.navigate(['/login']);
@@ -134,7 +135,7 @@ export class RegisterComponent implements OnInit {
   public onFail(e): void {
     Swal({
       type: 'error',
-      title:  Messages.OOPS,
+      title:  this.messageService.OOPS,
       text: e.error.error.code,
     });
   }

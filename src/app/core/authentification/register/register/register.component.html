@@ -1,86 +1,94 @@
 <div class="login-page">
-    <section class="h-100">
-        <div class="container h-100">
-            <div class="row justify-content-center">
-                <div class="card-wrapper">
-                    <div class="brand">
-                        <img src="./assets/img/vibent.svg">
-                    </div>
-                    <div class="card fat">
-                        <div class="card-body">
-                            <h3 class="card-title">Register</h3>
-                            <form novalidate [formGroup]="registerForm">
-                                <div class="form-group">
-                                    <label for="firstName">First name<span *ngIf="!formsValidAfterRegister.firstName"
-                                                                           class="incorrect-input">required</span></label>
-                                    <input type="text" class="form-control" id="firstName" formControlName="firstName"/>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="lastName">Last name<span *ngIf="!formsValidAfterRegister.lastName"
-                                                                         class="incorrect-input">required</span></label>
-                                    <input type="text" class="form-control" id="lastName" formControlName="lastName"/>
-                                </div>
-
-                                <div class="register-phone-mail">
-                                    <h4 class="card-title text-center m-t-10 m-b-0 text-gray">
-                                        Email? Phone? Both?</h4>
-                                    <p class="text-center text-gray">You can register with your email or your
-                                        phone.<br/> Or
-                                        even both!<span *ngIf="!formsValidAfterRegister.emailOrPhone" class="text-red">
-                                            But choose at least one!</span>
-                                    </p>
-                                    <div class="form-group">
-                                        <label for="email">Email<span *ngIf="!formsValidAfterRegister.email"
-                                                                      class="incorrect-input">(incorrect email format)</span></label>
-                                        <input type="email" class="form-control" id="email" formControlName="email">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="phone">Phone number
-                                            <span *ngIf="!formsValidAfterRegister.phone"
-                                                  class="incorrect-input">(incorrect phone format)</span></label>
-                                        <input id="phone"
-                                               class="form-control"
-                                               ng2TelInput
-                                               [ng2TelInputOptions]="{initialCountry: 'fr'}"
-                                               (ng2TelOutput)="getNumber($event)">
-                                    </div>
-                                </div>
-                                <div class="form-group"> 
-                                    <label for="password">Password <span *ngIf="!formsValidAfterRegister.password"
-                                                                         class="incorrect-input">(8 characters)</span></label>
-                                    <input type="password" class="form-control" id="password"
-                                           formControlName="password"/>
-                                </div>
-
-                                <div class="form-group"> 
-                                    <label for="passwordConfirmation">Password Confirmation<span
-                                            *ngIf="!formsValidAfterRegister.passwordConfirmation"
-                                            class="incorrect-input">(password not identical)</span></label>
-                                    <input type="password" class="form-control" id="passwordConfirmation"
-                                           formControlName="passwordConfirmation"/>   
-                                </div>
-
-                                <div class="form-group">
-                                    By clicking Sign Up, you agree to our
-                                    <a target="_blank" class="cursor-pointer text-primary" (click)="aboutPage()"> Terms and Conditions</a>
-                                </div>
-                                        
-                                <button type="submit"
-                                        class="btn btn-primary btn-block" (click)="checkLoginAndRegister()">
-                                    Sign up
-                                </button>
-                                   
-                                <div class="text-center m-t-20">
-                                    Already have an account? <a (click)="loginPage()"
-                                                                class="cursor-pointer text-primary">Login</a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+  <section class="h-100">
+    <div class="container h-100">
+      <div class="row justify-content-center">
+        <div class="card-wrapper">
+          <div class="brand">
+            <img src="./assets/img/vibent.svg">
+          </div>
+          <div class="card fat">
+            <div class="card-body">
+              <h3 class="card-title" i18n="@@register">Register</h3>
+              <form novalidate [formGroup]="registerForm">
+                <div class="form-group">
+                  <label for="firstName">
+                    <span i18n="@@first-name">First name</span>
+                    <span *ngIf="!formsValidAfterRegister.firstName" class="incorrect-input"
+                          i18n="@@required">required</span>
+                  </label>
+                  <input type="text" class="form-control" id="firstName" formControlName="firstName"/>
                 </div>
+
+                <div class="form-group">
+                  <label for="lastName">
+                    <span i18n="@@last-name">Last name</span>
+                    <span *ngIf="!formsValidAfterRegister.lastName" class="incorrect-input"
+                          i18n="@@required">required</span>
+                  </label>
+                  <input type="text" class="form-control" id="lastName" formControlName="lastName"/>
+                </div>
+
+                <div class="register-phone-mail">
+                  <h4 class="card-title text-center m-t-10 m-b-0 text-gray" i18n="@@email-phone-both-question">
+                    Email? Phone? Both?
+                  </h4>
+                  <p class="text-center text-gray">
+                    <span i18n="@@register-email-phone-both">You can register with your email or your phone.<br/> Or even both!</span>
+                    <span *ngIf="!formsValidAfterRegister.emailOrPhone" class="text-red"
+                          i18n="@@email-phone-choose-one">But choose at least one!</span>
+                  </p>
+                  <div class="form-group">
+                    <label for="email">
+                      <span i18n="@@email">Email</span>
+                      <span *ngIf="!formsValidAfterRegister.email" class="incorrect-input" i18n="@@incorrect-email">(incorrect email format)</span>
+                    </label>
+                    <input type="email" class="form-control" id="email" formControlName="email">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="phone">
+                      <span i18n="@@phone-number">Phone number</span>
+                      <span *ngIf="!formsValidAfterRegister.phone" class="incorrect-input" i18n="@@incorrect-phone">(incorrect phone number format)</span></label>
+                    <input id="phone" class="form-control" ng2TelInput [ng2TelInputOptions]="{initialCountry: 'fr'}"
+                           (ng2TelOutput)="getNumber($event)">
+                  </div>
+                </div>
+                <div class="form-group"> 
+                  <label for="password">
+                    <span i18n="@@password">Password</span>
+                    <span *ngIf="!formsValidAfterRegister.password" class="incorrect-input" i18n="@@8-characters">(8 characters)</span></label>
+                  <input type="password" class="form-control" id="password"
+                         formControlName="password"/>
+                </div>
+
+                <div class="form-group"> 
+                  <label for="passwordConfirmation">
+                    <span i18n="@@password-confirmation">Password Confirmation</span>
+                    <span *ngIf="!formsValidAfterRegister.passwordConfirmation" class="incorrect-input"
+                          i18n="@@password-not-identical">(password not identical)</span></label>
+                  <input type="password" class="form-control" id="passwordConfirmation"
+                         formControlName="passwordConfirmation"/>   
+                </div>
+
+                <div class="form-group" i18n="@@agree-terms-conditions">
+                  By clicking on Sign Up, you agree to our
+                  <a target="_blank" class="cursor-pointer text-primary" (click)="aboutPage()"> Terms and Conditions</a>
+                </div>
+                        
+                <button type="submit" class="btn btn-primary btn-block" (click)="checkLoginAndRegister()"
+                        i18n="@@sign-up">
+                  Sign up
+                </button>
+                   
+                <div class="text-center m-t-20">
+                  <span i18n="@@already-have-account">Already have an account?</span>
+                  <a (click)="loginPage()" class="cursor-pointer text-primary" i18n="@@login">Login</a>
+                </div>
+              </form>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 </div>

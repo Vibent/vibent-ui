@@ -3,8 +3,8 @@ import { HttpService } from '../http/http.service';
 import { Group } from '../../shared/models/group';
 import { LoaderService } from './loader/service/loader.service';
 import { NotificationsService, NotificationType } from './notifications.service';
-import { Messages } from '../../shared/messages-codes/messages';
 import { BehaviorSubject, Subject } from 'rxjs';
+import { MessageService } from './i18n/message.service';
 
 @Injectable()
 export class GroupAdminPanelService {
@@ -14,7 +14,8 @@ export class GroupAdminPanelService {
 
   constructor(private httpService: HttpService,
               private notificationService: NotificationsService,
-              private loaderService: LoaderService) {
+              private loaderService: LoaderService,
+              private messageService: MessageService) {
   }
 
   toggleGroupPanel(groupRef: string) {
@@ -29,7 +30,7 @@ export class GroupAdminPanelService {
     this.httpService.updateGroup(group).subscribe((updatedGroup) => {
       this.groupUpdated$.next(updatedGroup);
       this.loaderService.closeLoadingPageModal();
-      this.notificationService.notify(Messages.GROUP_UPDATED, NotificationType.SUCCESS);
+      this.notificationService.notify(this.messageService.GROUP_UPDATED, NotificationType.SUCCESS);
     });
   }
 }

@@ -1,11 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  EventEmitter,
-  Input,
-  OnInit,
-  Output
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { User } from '../../../../../../../../../../shared/models/user';
 import { CheckboxDataService } from '../../../../../../../../../../core/services/bubbles-services/checkbox/data/checkbox-data.service';
@@ -18,7 +11,7 @@ import { EventUpdateService } from '../../../../../../../../../../core/services/
 import { UserManagementService } from '../../../../../../../../../../core/services/user-management.service';
 import { CheckboxHttpService } from '../../../../../../../../../../core/services/bubbles-services/checkbox/http/checkbox-http.service';
 import Swal from 'sweetalert2';
-import { Messages, SwalColors } from '../../../../../../../../../../shared/messages-codes/messages';
+import { MessageService } from '../../../../../../../../../../core/services/i18n/message.service';
 
 @Component({
   selector: '[checkbox-option]',
@@ -63,7 +56,8 @@ export class CheckboxOptionComponent implements OnInit {
   constructor(private checkboxHttpService: CheckboxHttpService,
               private checkboxDataService: CheckboxDataService,
               private eventUpdateService: EventUpdateService,
-              private userManagementService: UserManagementService) {
+              private userManagementService: UserManagementService,
+              private messageService: MessageService) {
     this.user = this.userManagementService.getMe();
   }
 
@@ -93,14 +87,14 @@ export class CheckboxOptionComponent implements OnInit {
 
   deleteOption() {
     Swal({
-      title: Messages.ARE_YOU_SURE,
-      text: Messages.NO_REVERT,
+      title: this.messageService.ARE_YOU_SURE,
+      text: this.messageService.NO_REVERT,
       type: 'warning',
       showCancelButton: true,
       reverseButtons: true,
-      confirmButtonColor: SwalColors.CONFIRM_BUTTON,
-      cancelButtonColor: SwalColors.CANCEL_BUTTON,
-      confirmButtonText: Messages.DELETE
+      confirmButtonColor: this.messageService.CONFIRM_BUTTON_COLOR,
+      cancelButtonColor: this.messageService.CANCEL_BUTTON_COLOR,
+      confirmButtonText: this.messageService.DELETE
     }).then((result) => {
       if (result.value) {
         this.checkboxHttpService.deleteOption(this.checkboxOption).subscribe(() => {

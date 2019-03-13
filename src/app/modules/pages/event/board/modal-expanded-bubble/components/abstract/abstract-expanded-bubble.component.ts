@@ -1,6 +1,5 @@
-import { EventEmitter, Input, Output } from '@angular/core';
+import { Input } from '@angular/core';
 import { IBubble } from '../../../../../../../shared/models/bubbles/IBubble';
-import { PlanningBubble } from '../../../../../../../shared/models/bubbles/PlanningBubble';
 
 /**
  * Abstract component for expanded bubbles

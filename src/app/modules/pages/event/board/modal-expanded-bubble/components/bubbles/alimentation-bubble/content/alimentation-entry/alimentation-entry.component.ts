@@ -12,7 +12,7 @@ import { AlimentationDataService } from '../../../../../../../../../../core/serv
 import Swal from 'sweetalert2';
 import { UserManagementService } from '../../../../../../../../../../core/services/user-management.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Messages, SwalColors } from '../../../../../../../../../../shared/messages-codes/messages';
+import { MessageService } from '../../../../../../../../../../core/services/i18n/message.service';
 
 declare const $: any;
 
@@ -56,7 +56,8 @@ export class AlimentationEntryComponent implements OnInit {
   constructor(private alimentationHttpService: AlimentationHttpService,
               private alimentationDataService: AlimentationDataService,
               private eventUpdateService: EventUpdateService,
-              private userManagementService: UserManagementService) {
+              private userManagementService: UserManagementService,
+              private messageService: MessageService) {
     this.user = this.userManagementService.getMe();
   }
 
@@ -73,14 +74,14 @@ export class AlimentationEntryComponent implements OnInit {
 
   deleteEntry(): void {
     Swal({
-      title: Messages.ARE_YOU_SURE,
-      text: Messages.NO_REVERT,
+      title: this.messageService.ARE_YOU_SURE,
+      text: this.messageService.NO_REVERT,
       type: 'warning',
       showCancelButton: true,
       reverseButtons: true,
-      confirmButtonColor: SwalColors.CONFIRM_BUTTON,
-      cancelButtonColor: SwalColors.CANCEL_BUTTON,
-      confirmButtonText: Messages.DELETE
+      confirmButtonColor: this.messageService.CONFIRM_BUTTON_COLOR,
+      cancelButtonColor: this.messageService.CANCEL_BUTTON_COLOR,
+      confirmButtonText: this.messageService.DELETE
     }).then((result) => {
       if (result.value) {
         this.alimentationHttpService.deleteEntry(this.alimentationEntry).subscribe(() => {
