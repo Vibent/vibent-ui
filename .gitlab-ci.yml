@@ -37,20 +37,22 @@ build:env:
 
 build:npm:dev:
   extends: .build
+  except:
+  - develop
   variables:
     BUILD_TARGET: dev
-build:npm:prod:
+build:npm:dev-i18n:
   extends: .build
   only:
   - develop
   variables:
-    BUILD_TARGET: prod
-build:npm:cordova:
+    BUILD_TARGET: dev-i18n
+build:npm:prod-i18n:
   extends: .build
   only:
   - develop
   variables:
-    BUILD_TARGET: cordova
+    BUILD_TARGET: prod-i18n
 
 dockerize:
   stage: dockerize

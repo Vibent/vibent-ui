@@ -1,0 +1,22 @@
+#languageToggle, #languageMenu a {
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#languageMenu {
+    list-style: none;
+    padding: 0;
+
+    li {
+        background-color: #eee;
+    }
+}
+
+.flag-icon {
+    margin-right: 10px;
+    line-height: 1.5em;
+}

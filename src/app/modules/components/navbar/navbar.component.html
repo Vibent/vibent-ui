@@ -9,27 +9,37 @@
                 [withLogo]=false
                 [fade]=true
                 [mainSize]=loaderSize></loader>
-        <div class="collapse navbar-collapse justify-content-end"
-             id="navigation">
+        <div class="collapse navbar-collapse justify-content-end" id="navigation">
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
-                    <a class="nav-link"
-                       id="navUserProfile"
-                       data-toggle="dropdown">
+                    <a class="nav-link" id="navUserProfile" data-toggle="dropdown">
                         <div class="user-profile">
                             <img *ngIf="user" src="{{user.profilePicLocation}}">
                         </div>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item"
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li>
+                            <a class="dropdown-item" i18n="@@navbar.profile"
                                [routerLink]="['/me']">
                                 Profile
                             </a>
-                            <a class="dropdown-item cursor-pointer"
-                               (click)="logout()">
-                                Logout
-                            </a>
-                        </div>
-                    </a>
+                        </li>
+
+                        <li>
+                            <a id="languageToggle" (click)="toggleLanguagesSubmenu($event)" class="dropdown-item">Language</a>
+                            <ul id="languageMenu" class="collapse">
+                                <li>
+                                    <a (click)="changeLanguage('en')"><span class="flag-icon flag-icon-gb"></span>English</a>
+                                    <a (click)="changeLanguage('fr')"><span class="flag-icon flag-icon-fr"></span>Français</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li><a class="dropdown-item cursor-pointer"
+                               (click)="logout()" i18n="@@navbar.logout">
+                            Logout
+                        </a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -40,15 +50,15 @@
     <div class="d-flex justify-content-around">
         <div class="text-center cursor-pointer" [routerLink]="['/events']">
             <i class="material-icons">bubble_chart</i>
-            <div class="menu-title">Events</div>
+            <div class="menu-title" i18n="@@navbar.events">Events</div>
         </div>
         <div class="text-center cursor-pointer" [routerLink]="['/groups']">
             <i class="material-icons">group</i>
-            <div class="menu-title">Groups</div>
+            <div class="menu-title" i18n="@@navbar.groups">Groups</div>
         </div>
         <div class="text-center cursor-pointer" [routerLink]="['/me']">
             <i class="material-icons">person</i>
-            <div class="menu-title">Profile</div>
+            <div class="menu-title" i18n="@@navbar.profile">Profile</div>
         </div>
     </div>
 </nav>

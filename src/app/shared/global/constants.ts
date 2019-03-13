@@ -3,6 +3,8 @@ export class AppSettings {
   public static ALGOLIA_API_KEY = 'd01c3ce0b5cd3b4c95cadfbb5625e331';
   public static MAPBOX_API_KEY = 'pk.eyJ1Ijoiam91YmVydG0iLCJhIjoiY2pwNDBhZWI2MGluZDNwbnoxNzRyNHk3cSJ9.3RRXSfVswsjicSOoUeROLw';
   public static MAPBOX_STYLE = 'mapbox://styles/mapbox/streets-v9';
+
+  public static LANGUAGE_HEADER = 'requested_language';
 }
 
 export class LoaderSize {
