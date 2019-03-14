@@ -352,15 +352,13 @@
   width: $sidebar-width;
   @include transition (0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1));
 
-  .main-content {
-    margin-top: 70px;
+  .main-content, .colored-main-content {
+    margin-top: 50px;
     padding: 30px 15px;
-    min-height: calc(100vh - 55px);
+    min-height: calc(100vh - 50px);
   }
-  .main-content-group {
-    margin-top: 70px;
-    padding: 30px 15px;
-    min-height: calc(100vh - 55px);
+
+  .colored-main-content{
     background: linear-gradient(60deg, $vibent-purple, $vibent-red);
   }
 
