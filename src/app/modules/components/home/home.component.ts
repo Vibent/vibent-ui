@@ -11,7 +11,6 @@ import { BubbleType } from '../../../shared/models/bubbles/IBubble';
 export class HomeComponent implements OnInit {
 
   returnUrl: string;
-  date: Date = new Date();
   bubbleDisplayed: BubbleType = BubbleType.AlimentationBubble;
   BubbleType = BubbleType;
 

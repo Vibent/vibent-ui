@@ -1,85 +1,77 @@
 <div class="login-page">
-    <section class="h-100">
-        <div class="container h-100">
-            <div class="row justify-content-center">
-                <div class="card-wrapper">
-                    <div class="brand" (click)="loginPage()">
-                        <img src="./assets/img/vibent.svg">
-                    </div>
-                    <nav>
-                        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                            <a class="nav-item nav-link active" id="nav-home-tabs" data-toggle="tab" href="#nav-home"
-                               role="tab">Email</a>
-                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
-                               role="tab">Phone</a>
-                        </div>
-                    </nav>
-                    <div class="card fat m-t-25">
-                        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
-                                <div id="emailLogin" class="card-body">
-                                    <h3 class="card-title">Reset password by email</h3>
-                                    <form novalidate [formGroup]="loginForm">
-                                        <div class="form-group">
-                                            <label for="email">E-Mail</label>
-                                            <input id="email"
-                                                   class="form-control"
-                                                   type="email"
-                                                   formControlName="email"
-                                                   required>
-                                            <div class="form-text text-muted">
-                                                By clicking "Reset Password" we will send a password reset link
-                                            </div>
-                                        </div>
-                                        <div class="form-group no-margin">
-                                            <button type="submit" (click)="forgotByEmail()"
-                                                    class="btn btn-primary btn-block">
-                                                Send email
-                                            </button>
-                                        </div>
-                                        <div class="text-center m-t-20">
-                                            <a (click)="loginPage()" class="cursor-pointer text-primary">
-                                                Back to login
-                                            </a>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="nav-profile" role="tabpanel">
-                                <div id="phoneLogin" class="card-body">
-                                    <h3 class="card-title">Reset password by phone number</h3>
-
-                                    <form novalidate [formGroup]="loginForm">
-                                        <div class="form-group">
-                                            <label for="phone">Phone number</label>
-                                            <input id="phone"
-                                                   class="form-control"
-                                                   formControlName="phone"
-                                                   type="text"
-                                                   ng2TelInput
-                                                   [ng2TelInputOptions]="{initialCountry: 'fr'}"
-                                                   (ng2TelOutput)="getNumber($event)">
-                                            <div class="form-text text-muted">
-                                                By clicking "Reset Password" we will send a password reset link
-                                            </div>
-                                        </div>
-                                        <div class="form-group no-margin">
-                                            <button type="submit" (click)="forgotByPhone()"
-                                                    class="btn btn-primary btn-block">
-                                                Send email
-                                            </button>
-                                        </div>
-                                        <div class="text-center m-t-20">
-                                            <a (click)="loginPage()" class="cursor-pointer text-primary">Back to
-                                                login</a>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <section class="h-100">
+    <div class="container h-100">
+      <div class="row justify-content-center">
+        <div class="card-wrapper">
+          <div class="brand" (click)="loginPage()">
+            <img src="./assets/img/vibent.svg">
+          </div>
+          <nav>
+            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active" id="nav-home-tabs" data-toggle="tab" href="#nav-home"
+                 role="tab" i18n="@@email">Email</a>
+              <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
+                 role="tab" i18n="@@phone">Phone</a>
             </div>
+          </nav>
+          <div class="card fat m-t-25">
+            <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
+                <div id="emailLogin" class="card-body">
+                  <h3 class="card-title" i18n="@@reset-password-email">Reset password by email</h3>
+                  <form novalidate [formGroup]="loginForm">
+                    <div class="form-group">
+                      <label for="email" i18n="@@email">Email</label>
+                      <input id="email" class="form-control" type="email" formControlName="email" required>
+                      <div class="form-text text-muted" i18n="@@reset-password-confirm">
+                        By clicking on "Reset Password" we will send you a password reset link
+                      </div>
+                    </div>
+                    <div class="form-group no-margin">
+                      <button type="submit" (click)="forgotByEmail()" class="btn btn-primary btn-block"
+                              i18n="@@send-email">
+                        Send email
+                      </button>
+                    </div>
+                    <div class="text-center m-t-20">
+                      <a (click)="loginPage()" class="cursor-pointer text-primary" i18n="@@back-to-login">
+                        Back to login
+                      </a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="nav-profile" role="tabpanel">
+                <div id="phoneLogin" class="card-body">
+                  <h3 class="card-title" i18n="@@reset-password-phone">Reset password by phone
+                    number</h3>
+
+                  <form novalidate [formGroup]="loginForm">
+                    <div class="form-group">
+                      <label for="phone" i18n="@@phone-number">Phone number</label>
+                      <input id="phone" class="form-control" formControlName="phone" type="text" ng2TelInput
+                             [ng2TelInputOptions]="{initialCountry: 'fr'}" (ng2TelOutput)="getNumber($event)">
+                      <div class="form-text text-muted" i18n="@@reset-password-confirm">
+                        By clicking on "Reset Password" we will send you a password reset link
+                      </div>
+                    </div>
+                    <div class="form-group no-margin">
+                      <button type="submit" (click)="forgotByPhone()" class="btn btn-primary btn-block"
+                              i18n="@@send-sms">
+                        Send SMS
+                      </button>
+                    </div>
+                    <div class="text-center m-t-20">
+                      <a (click)="loginPage()" class="cursor-pointer text-primary" i18n="@@back-to-login">
+                        Back to login</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 </div>

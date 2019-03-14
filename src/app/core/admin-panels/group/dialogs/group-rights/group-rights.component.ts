@@ -3,7 +3,6 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Group } from '../../../../../shared/models/group';
-import { GroupAdminPanelService } from '../../../../services/group-admin-panel.service';
 
 @Component({
   selector: 'app-group-settings',

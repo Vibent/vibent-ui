@@ -5,8 +5,8 @@ import { Router } from '@angular/router';
 import { HttpService } from '../../../../../core/http/http.service';
 import { Event } from '../../../../../shared/models/event';
 import { NotificationsService, NotificationType } from '../../../../../core/services/notifications.service';
-import { Messages } from '../../../../../shared/messages-codes/messages';
 import { LoaderService } from '../../../../../core/services/loader/service/loader.service';
+import { MessageService } from '../../../../../core/services/i18n/message.service';
 
 declare const $: any;
 
@@ -32,7 +32,8 @@ export class EventCreationComponent implements OnInit {
               private httpService: HttpService,
               private notificationService: NotificationsService,
               private loaderService: LoaderService,
-              private router: Router) {
+              private router: Router,
+              private messageService: MessageService) {
   }
 
   ngOnInit() {
@@ -67,7 +68,7 @@ export class EventCreationComponent implements OnInit {
         this.loaderService.closeLoadingPageModal();
         this.router.navigate(['/events/' + res['ref']]);
         this.close();
-        this.notificationService.notify(Messages.EVENT_CREATED, NotificationType.SUCCESS);
+        this.notificationService.notify(this.messageService.EVENT_CREATED, NotificationType.SUCCESS);
       }, () => {
         this.dateValidSetted = false;
         this.loaderService.closeLoadingPageModal();

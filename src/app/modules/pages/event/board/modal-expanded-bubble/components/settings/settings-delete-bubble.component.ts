@@ -9,8 +9,8 @@ import { EventUpdateService } from '../../../../../../../core/services/bubbles-s
 
 import Swal from 'sweetalert2';
 import { TravelHttpService } from '../../../../../../../core/services/bubbles-services/travel/http/travel-http.service';
-import { Messages, SwalColors } from '../../../../../../../shared/messages-codes/messages';
 import { FreeHttpService } from '../../../../../../../core/services/bubbles-services/free/http/free-http.service';
+import { MessageService } from '../../../../../../../core/services/i18n/message.service';
 
 declare const $: any;
 
@@ -35,19 +35,20 @@ export class SettingsDeleteBubbleComponent {
               private travelHttpService: TravelHttpService,
               private freeHttpService: FreeHttpService,
               private notificationService: NotificationsService,
-              private eventUpdateService: EventUpdateService) {
+              private eventUpdateService: EventUpdateService,
+              private messageService: MessageService) {
   }
 
   deleteBubble() {
     Swal({
-      title: Messages.ARE_YOU_SURE,
-      text: Messages.NO_REVERT,
+      title: this.messageService.ARE_YOU_SURE,
+      text: this.messageService.NO_REVERT,
       type: 'warning',
       showCancelButton: true,
-      confirmButtonColor: SwalColors.CONFIRM_BUTTON,
+      confirmButtonColor: this.messageService.CONFIRM_BUTTON_COLOR,
       reverseButtons: true,
-      cancelButtonColor: SwalColors.CANCEL_BUTTON,
-      confirmButtonText: Messages.DELETE
+      cancelButtonColor: this.messageService.CANCEL_BUTTON_COLOR,
+      confirmButtonText: this.messageService.DELETE
     }).then((result) => {
       if (result.value) {
         this.delete();

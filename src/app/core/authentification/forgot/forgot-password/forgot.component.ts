@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpService } from '../../../http/http.service';
 import Swal from 'sweetalert2';
-import { Messages } from '../../../../shared/messages-codes/messages';
+import { MessageService } from '../../../services/i18n/message.service';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +22,8 @@ export class ForgotComponent implements OnInit {
   constructor(private cookieService: CookieService,
               private httpService: HttpService,
               private authenticationService: AuthenticationService,
-              private router: Router) {
+              private router: Router,
+              private messageService: MessageService) {
     if (this.cookieService.check('token')) {
       this.router.navigate(['/events']);
     }
@@ -66,7 +67,7 @@ export class ForgotComponent implements OnInit {
         this.loginPage();
         Swal({
           type: 'success',
-          title: Messages.PASSWORD_RESET_SENT,
+          title: this.messageService.PASSWORD_RESET_SENT,
           showConfirmButton: true,
         });
       },

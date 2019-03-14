@@ -1,11 +1,10 @@
-import { Component, Inject, Input, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpService } from '../../../../../../core/http/http.service';
 import { Group } from '../../../../../../shared/models/group';
 import Swal from 'sweetalert2';
-import { Messages } from '../../../../../../shared/messages-codes/messages';
 import { environment } from '../../../../../../../environments/environment';
+import { MessageService } from '../../../../../../core/services/i18n/message.service';
 
 declare const $: any;
 
@@ -24,7 +23,8 @@ export class AddGroupMembersComponent implements OnInit {
   emailValidSetted = true;
 
   constructor(private fb: FormBuilder,
-              private httpService: HttpService) {
+              private httpService: HttpService,
+              private messageService: MessageService) {
   }
 
   ngOnInit(): void {
@@ -48,13 +48,13 @@ export class AddGroupMembersComponent implements OnInit {
         this.email.reset();
         Swal({
           type: 'success',
-          title: Messages.INVITATION_SENT,
+          title: this.messageService.INVITATION_SENT,
           showConfirmButton: true,
         });
       }, () => {
         Swal({
           type: 'error',
-          title: Messages.BAD_EMAIL,
+          title: this.messageService.BAD_EMAIL,
           showConfirmButton: true,
         });
       });

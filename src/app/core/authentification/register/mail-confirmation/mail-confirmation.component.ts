@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpService } from '../../../http/http.service';
 import Swal from 'sweetalert2';
-import { Messages } from '../../../../shared/messages-codes/messages';
 import { CookieService } from 'ngx-cookie-service';
+import { MessageService } from '../../../services/i18n/message.service';
 
 @Component({
   template: ''
@@ -13,7 +13,8 @@ export class MailConfirmationComponent implements OnInit {
   constructor(private httpService: HttpService,
               private cookieService: CookieService,
               private router: Router,
-              private route: ActivatedRoute) {
+              private route: ActivatedRoute,
+              private messageService: MessageService) {
   }
 
   ngOnInit() {
@@ -22,14 +23,14 @@ export class MailConfirmationComponent implements OnInit {
       this.loginPage();
       Swal({
         type: 'success',
-        title: Messages.EMAIL_CONFIRMED,
+        title: this.messageService.EMAIL_CONFIRMED,
         showConfirmButton: true,
       });
     }, () => {
       this.loginPage();
       Swal({
         type: 'error',
-        title: Messages.EMAIL_UNCONFIRMED,
+        title: this.messageService.EMAIL_UNCONFIRMED,
         showConfirmButton: true,
       });
     });

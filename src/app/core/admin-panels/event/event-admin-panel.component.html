@@ -1,15 +1,15 @@
 <div class="admin_card hoveradmin_card">
-    <div class="info">
-        <div class="title">
-            <a>Manage event</a>
-        </div>
-        <div class="desc">You're an admin, you can change here some event settings</div>
+  <div class="info">
+    <div class="title">
+      <a i18n="@@manage-event">Manage event</a>
     </div>
-    <div class="bottom">
-        <button type="button"
-                class="btn btn-danger btn-sm w-100"
-                (click)="openSettingsModal()">
-            Event settings
-        </button>
+    <div class="desc" i18n="@@manage-event-description">
+      You're an admin, you can change the event settings here
     </div>
+  </div>
+  <div class="bottom">
+    <button type="button" class="btn btn-danger btn-sm w-100" (click)="openSettingsModal()" i18n="@@event-settings">
+      Event settings
+    </button>
+  </div>
 </div>

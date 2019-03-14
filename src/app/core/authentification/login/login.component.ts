@@ -4,8 +4,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
-import { Messages } from '../../../shared/messages-codes/messages';
-import { LoadingPageComponent } from '../../services/loader/loading-page/loading-page.component';
+import { MessageService } from '../../services/i18n/message.service';
 
 @Component({
   selector: 'app-login',
@@ -28,7 +27,8 @@ export class LoginComponent implements OnInit {
   constructor(private cookieService: CookieService,
               private route: ActivatedRoute,
               private authenticationService: AuthenticationService,
-              private router: Router) {
+              private router: Router,
+              private messageService: MessageService) {
     if (this.cookieService.check('token')) {
       this.router.navigate(['/events']);
     }
@@ -93,12 +93,12 @@ export class LoginComponent implements OnInit {
   public onFail(e): void {
     Swal({
       type: 'error',
-      title: Messages.OOPS,
-      text: Messages.BAD_LOGIN,
+      title: this.messageService.OOPS,
+      text: this.messageService.BAD_LOGIN,
     });
   }
 
-  public forgoPassword(): void {
+  public forgotPassword(): void {
     this.router.navigate(['/forgot']);
   }
 

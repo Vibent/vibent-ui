@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 
 import { HttpService } from '../../../../../core/http/http.service';
 import { NotificationsService, NotificationType } from '../../../../../core/services/notifications.service';
-import { Messages } from '../../../../../shared/messages-codes/messages';
 import { LoaderService } from '../../../../../core/services/loader/service/loader.service';
+import { MessageService } from '../../../../../core/services/i18n/message.service';
 
 declare const $: any;
 
@@ -25,7 +25,8 @@ export class GroupCreationComponent implements OnInit {
               private loaderService: LoaderService,
               private notificationService: NotificationsService,
               private httpService: HttpService,
-              private router: Router) {
+              private router: Router,
+              private messageService: MessageService) {
   }
 
   ngOnInit() {
@@ -52,7 +53,7 @@ export class GroupCreationComponent implements OnInit {
         this.close();
         this.loaderService.closeLoadingPageModal();
         this.router.navigate(['/groups/' + res['ref']]);
-        this.notificationService.notify(Messages.GROUP_CREATED, NotificationType.SUCCESS);
+        this.notificationService.notify(this.messageService.GROUP_CREATED, NotificationType.SUCCESS);
       }, () => {
         this.loaderService.closeLoadingPageModal();
       });

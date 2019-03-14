@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BubbleCreationService } from '../../../../../../../core/services/bubbles-services/bubble-creation.service.';
 import { EventUpdateService } from '../../../../../../../core/services/bubbles-services/event-update.service';
 import { BubblesCreationsSwalAlerts } from '../../../../../../../core/services/bubbles-services/alerts/bubbles-creations-swal-alerts';

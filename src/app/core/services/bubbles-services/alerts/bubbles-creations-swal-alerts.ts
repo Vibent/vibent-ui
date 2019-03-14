@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
 import Swal from 'sweetalert2';
-import { Messages } from '../../../../shared/messages-codes/messages';
+import { MessageService } from '../../i18n/message.service';
 
 @Injectable()
 export class BubblesCreationsSwalAlerts {
 
-  constructor() {
+  constructor(private messageService: MessageService) {
   }
 
   alertAlimentationBubbleCreated() {
     Swal({
       type: 'success',
-      title: Messages.BUBBLE_CREATED,
-      text: Messages.ALIMENTATION_BUBBLE_CREATED,
+      title: this.messageService.BUBBLE_CREATED,
+      text: this.messageService.ALIMENTATION_BUBBLE_CREATED,
       showConfirmButton: true,
     });
   }
@@ -20,8 +20,8 @@ export class BubblesCreationsSwalAlerts {
   alertCheckboxBubbleCreated() {
     Swal({
       type: 'success',
-      title: Messages.BUBBLE_CREATED,
-      text: Messages.CHECKBOX_BUBBLE_CREATED,
+      title: this.messageService.BUBBLE_CREATED,
+      text: this.messageService.CHECKBOX_BUBBLE_CREATED,
       showConfirmButton: true,
     });
   }
@@ -29,8 +29,8 @@ export class BubblesCreationsSwalAlerts {
   alertSurveyBubbleCreated() {
     Swal({
       type: 'success',
-      title: Messages.BUBBLE_CREATED,
-      text: Messages.SURVEY_BUBBLE_CREATED,
+      title: this.messageService.BUBBLE_CREATED,
+      text: this.messageService.SURVEY_BUBBLE_CREATED,
       showConfirmButton: true,
     });
   }
@@ -38,8 +38,8 @@ export class BubblesCreationsSwalAlerts {
   alertPlanningBubbleCreated() {
     Swal({
       type: 'success',
-      title: Messages.BUBBLE_CREATED,
-      text: Messages.PLANNING_BUBBLE_CREATED,
+      title: this.messageService.BUBBLE_CREATED,
+      text: this.messageService.PLANNING_BUBBLE_CREATED,
       showConfirmButton: true,
     });
   }
@@ -47,8 +47,8 @@ export class BubblesCreationsSwalAlerts {
   alertTravelBubbleCreated() {
     Swal({
       type: 'success',
-      title: Messages.BUBBLE_CREATED,
-      text: Messages.TRAVEL_BUBBLE_CREATED,
+      title: this.messageService.BUBBLE_CREATED,
+      text: this.messageService.TRAVEL_BUBBLE_CREATED,
       showConfirmButton: true,
     });
   }
@@ -56,8 +56,8 @@ export class BubblesCreationsSwalAlerts {
   alertFreeBubbleCreated() {
     Swal({
       type: 'success',
-      title: Messages.BUBBLE_CREATED,
-      text: Messages.FREE_BUBBLE_CREATED,
+      title: this.messageService.BUBBLE_CREATED,
+      text: this.messageService.FREE_BUBBLE_CREATED,
       showConfirmButton: true,
     });
   }

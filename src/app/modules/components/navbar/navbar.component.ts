@@ -1,15 +1,15 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
-import { ROUTES } from '../sidebar/sidebar.component';
-import { Location } from '@angular/common';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { AuthenticationService } from '../../../core/services/authentication.service';
 import { User } from '../../../shared/models/user';
 import { ProfileImageService } from '../../../core/http/profile-image.service';
 import { HttpService } from '../../../core/http/http.service';
 import { UserManagementService } from '../../../core/services/user-management.service';
-import { AppSettings, LoaderSize } from '../../../shared/global/constants';
+import { LoaderSize } from '../../../shared/global/constants';
 import { LoaderService } from '../../../core/services/loader/service/loader.service';
 import { CookieService } from 'ngx-cookie-service';
+import { Subscription } from 'rxjs';
+import { LanguageService } from '../../../core/services/i18n/language.service';
 
 declare const $: any;
 
@@ -18,14 +18,13 @@ declare const $: any;
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
-  location: Location;
+export class NavbarComponent implements OnInit, OnDestroy {
   loaderSize = LoaderSize.ultraSmall;
   user: User;
-  private listTitles: any[];
+  subscriptions: Subscription[] = [];
+  public activeRoute: string;
 
-  constructor(location: Location,
-              public loaderService: LoaderService,
+  constructor(public loaderService: LoaderService,
               private element: ElementRef,
               private router: Router,
               private route: ActivatedRoute,
@@ -33,29 +32,27 @@ export class NavbarComponent implements OnInit {
               private userManagementService: UserManagementService,
               private httpService: HttpService,
               private authenticationService: AuthenticationService,
-              private cookieService: CookieService) {
-    this.location = location;
+              private cookieService: CookieService,
+              private languageService: LanguageService) {
     this.user = this.userManagementService.getMe();
+    this.activeRoute = this.route.firstChild.routeConfig.path;
   }
 
   ngOnInit() {
-    this.listTitles = ROUTES.filter(listTitle => listTitle);
-    this.userManagementService.change$.subscribe(() => {
+    const userSub = this.userManagementService.change$.subscribe(() => {
       this.user = this.userManagementService.getMe();
     });
-  }
-
-  public getTitle(): string {
-    let titlee = this.location.prepareExternalUrl(this.location.path());
-    if (titlee.charAt(0) === '#') {
-      titlee = titlee.slice(2);
-    }
-
-    const t = this.listTitles.find(function (e) {
-      return (e.path === titlee);
+    const routeSub = this.router.events.subscribe(e => {
+      if (e instanceof NavigationEnd) {
+        this.activeRoute = this.route.firstChild.routeConfig.path;
+      }
     });
 
-    return t ? t.title : 'Event board';
+    this.subscriptions.push(userSub, routeSub);
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.forEach(s => s.unsubscribe());
   }
 
   public toggleLanguagesSubmenu(e: Event) {
@@ -64,8 +61,11 @@ export class NavbarComponent implements OnInit {
   }
 
   public changeLanguage(code: string) {
-    this.cookieService.set(AppSettings.LANGUAGE_HEADER, code);
-    window.location.reload(true);
+    this.languageService.setLanguage(code);
+  }
+
+  public isActive(path: string): boolean {
+    return this.router.isActive(path, false);
   }
 
   public logout(): void {

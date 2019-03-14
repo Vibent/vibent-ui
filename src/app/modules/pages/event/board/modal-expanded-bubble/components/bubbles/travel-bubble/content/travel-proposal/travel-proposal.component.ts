@@ -12,10 +12,10 @@ import { UserManagementService } from '../../../../../../../../../../core/servic
 import { User } from '../../../../../../../../../../shared/models/user';
 import mapboxgl from 'mapbox-gl';
 import Swal from 'sweetalert2';
-import { Messages, SwalColors } from '../../../../../../../../../../shared/messages-codes/messages';
 import { EventUpdateService } from '../../../../../../../../../../core/services/bubbles-services/event-update.service';
 import { AppSettings } from '../../../../../../../../../../shared/global/constants';
 import { HttpService } from '../../../../../../../../../../core/http/http.service';
+import { MessageService } from '../../../../../../../../../../core/services/i18n/message.service';
 
 @Component({
   selector: 'travel-proposal',
@@ -48,7 +48,8 @@ export class TravelProposalComponent implements OnInit {
     private algoliaPlacesService: AlgoliaPlacesService,
     private eventUpdateService: EventUpdateService,
     private travelHttpService: TravelHttpService,
-    private travelDataService: TravelDataService) {
+    private travelDataService: TravelDataService,
+    private messageService: MessageService) {
     this.user = this.userManagementService.getMe();
   }
 
@@ -111,14 +112,14 @@ export class TravelProposalComponent implements OnInit {
     const userRequest = this.travelDataService.checkUserAlreadyHaveRequest(this.travelBubble);
     if (userRequest) {
       Swal({
-        title: Messages.ATTACH_REQUEST,
-        text: Messages.ATTACH_REQUEST_TEXT,
+        title: this.messageService.ATTACH_REQUEST,
+        text: this.messageService.ATTACH_REQUEST_TEXT,
         type: 'warning',
         showCancelButton: true,
-        confirmButtonColor: SwalColors.CONFIRM_BUTTON,
+        confirmButtonColor: this.messageService.CONFIRM_BUTTON_COLOR,
         reverseButtons: true,
-        cancelButtonColor: SwalColors.CANCEL_BUTTON,
-        confirmButtonText: Messages.BOOK
+        cancelButtonColor: this.messageService.CANCEL_BUTTON_COLOR,
+        confirmButtonText: this.messageService.BOOK
       }).then((result) => {
         if (result.value) {
           this.travelHttpService.createRequestAndAttach({
@@ -132,14 +133,14 @@ export class TravelProposalComponent implements OnInit {
     }
     else {
       Swal({
-        title: Messages.TAKE_A_SEAT,
-        text: Messages.TAKE_A_SEAT_TEXT,
+        title: this.messageService.TAKE_A_SEAT,
+        text: this.messageService.TAKE_A_SEAT_TEXT,
         type: 'warning',
         showCancelButton: true,
-        confirmButtonColor: SwalColors.CONFIRM_BUTTON,
+        confirmButtonColor: this.messageService.CONFIRM_BUTTON_COLOR,
         reverseButtons: true,
-        cancelButtonColor: SwalColors.CANCEL_BUTTON,
-        confirmButtonText: Messages.BOOK
+        cancelButtonColor: this.messageService.CANCEL_BUTTON_COLOR,
+        confirmButtonText: this.messageService.BOOK
       }).then((result) => {
         if (result.value) {
           this.travelHttpService.createRequestAndAttach({
@@ -160,14 +161,14 @@ export class TravelProposalComponent implements OnInit {
 
   deleteRequest(request: TravelRequest) {
     Swal({
-      title: Messages.DELETE_BOOKING,
-      text: Messages.DELETE_BOOKING_TEXT,
+      title: this.messageService.DELETE_BOOKING,
+      text: this.messageService.DELETE_BOOKING_TEXT,
       type: 'warning',
       showCancelButton: true,
-      confirmButtonColor: SwalColors.CONFIRM_BUTTON,
+      confirmButtonColor: this.messageService.CONFIRM_BUTTON_COLOR,
       reverseButtons: true,
-      cancelButtonColor: SwalColors.CANCEL_BUTTON,
-      confirmButtonText: Messages.DELETE
+      cancelButtonColor: this.messageService.CANCEL_BUTTON_COLOR,
+      confirmButtonText: this.messageService.DELETE
     }).then((result) => {
       if (result.value) {
         this.travelProposal.attachedRequests.splice(this.travelProposal.attachedRequests
@@ -182,14 +183,14 @@ export class TravelProposalComponent implements OnInit {
 
   deleteProposal() {
     Swal({
-      title: Messages.DELETE_PROPOSAL,
-      text: Messages.DELETE_PROPOSAL_TEXT,
+      title: this.messageService.DELETE_PROPOSAL,
+      text: this.messageService.DELETE_PROPOSAL_TEXT,
       type: 'warning',
       showCancelButton: true,
-      confirmButtonColor: SwalColors.CONFIRM_BUTTON,
+      confirmButtonColor: this.messageService.CONFIRM_BUTTON_COLOR,
       reverseButtons: true,
-      cancelButtonColor: SwalColors.CANCEL_BUTTON,
-      confirmButtonText: Messages.DELETE
+      cancelButtonColor: this.messageService.CANCEL_BUTTON_COLOR,
+      confirmButtonText: this.messageService.DELETE
     }).then((result) => {
       if (result.value) {
         this.travelBubble.proposals.splice(this.travelBubble.proposals

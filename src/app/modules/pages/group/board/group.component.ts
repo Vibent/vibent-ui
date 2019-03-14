@@ -4,9 +4,9 @@ import { ActivatedRoute } from '@angular/router';
 import { Group } from '../../../../shared/models/group';
 import { GroupAdminPanelService } from '../../../../core/services/group-admin-panel.service';
 import { Event } from '../../../../shared/models/event';
-import { ScreenService } from '../../../../core/services/screen.service';
-import { Messages } from '../../../../shared/messages-codes/messages';
 import { Subscription } from 'rxjs';
+import { ScreenService } from '../../../../core/services/screen.service';
+import { MessageService } from '../../../../core/services/i18n/message.service';
 
 declare const $: any;
 
@@ -18,14 +18,12 @@ export class GroupComponent implements OnInit, OnDestroy {
 
   events: Event[];
   group: Group;
-  Messages = Messages;
   subscriptions: Subscription[] = [];
 
   constructor(public dialog: MatDialog,
-              public screenSizesService: ScreenService,
               private route: ActivatedRoute,
-              private groupAdminPanelService: GroupAdminPanelService) {
-
+              private groupAdminPanelService: GroupAdminPanelService,
+              public screenSizesService: ScreenService) {
     this.group = this.route.snapshot.data['group'];
     this.events = this.route.snapshot.data['groupEvents'].sort(this.sortEventByDate);
   }

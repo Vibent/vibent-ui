@@ -20,11 +20,8 @@ import { HttpService } from '../../../../../../../../../../core/http/http.servic
 import { Observable } from 'rxjs';
 import { AppSettings } from '../../../../../../../../../../shared/global/constants';
 import Swal from 'sweetalert2';
-import {
-  Messages,
-  SwalColors
-} from '../../../../../../../../../../shared/messages-codes/messages';
 import { EventUpdateService } from '../../../../../../../../../../core/services/bubbles-services/event-update.service';
+import { MessageService } from '../../../../../../../../../../core/services/i18n/message.service';
 
 declare const $: any;
 
@@ -58,7 +55,8 @@ export class TravelRequestComponent implements OnInit {
     private eventUpdateService: EventUpdateService,
     private httpService: HttpService,
     private travelHttpService: TravelHttpService,
-    private travelDataService: TravelDataService) {
+    private travelDataService: TravelDataService,
+    private messageService: MessageService) {
 
   }
 
@@ -118,14 +116,14 @@ export class TravelRequestComponent implements OnInit {
     if (proposal) {
       if (this.travelDataService.checkSeatsAvailableUserProposal(this.travelBubble)) {
         Swal({
-          title: Messages.TAKE_HIM,
-          text: Messages.TAKE_HIM_TEXT,
+          title: this.messageService.TAKE_HIM,
+          text: this.messageService.TAKE_HIM_TEXT,
           type: 'warning',
           showCancelButton: true,
-          confirmButtonColor: SwalColors.CONFIRM_BUTTON,
+          confirmButtonColor: this.messageService.CONFIRM_BUTTON_COLOR,
           reverseButtons: true,
-          cancelButtonColor: SwalColors.CANCEL_BUTTON,
-          confirmButtonText: Messages.YES
+          cancelButtonColor: this.messageService.CANCEL_BUTTON_COLOR,
+          confirmButtonText: this.messageService.YES
         }).then((result) => {
           if (result.value) {
             this.travelHttpService.attachRequest({
@@ -141,8 +139,8 @@ export class TravelRequestComponent implements OnInit {
       else {
         Swal({
           type: 'error',
-          title: Messages.NO_SEAT_IN_CAR,
-          text: Messages.NO_SEAT_IN_CAR_TEXT,
+          title: this.messageService.NO_SEAT_IN_CAR,
+          text: this.messageService.NO_SEAT_IN_CAR_TEXT,
           showConfirmButton: true,
         });
       }
@@ -150,8 +148,8 @@ export class TravelRequestComponent implements OnInit {
     else {
       Swal({
         type: 'error',
-        title: Messages.NEED_CREATE_PROPOSAL,
-        text: Messages.NEED_CREATE_PROPOSAL_TEXT,
+        title: this.messageService.NEED_CREATE_PROPOSAL,
+        text: this.messageService.NEED_CREATE_PROPOSAL_TEXT,
         showConfirmButton: true,
       });
     }
@@ -159,14 +157,14 @@ export class TravelRequestComponent implements OnInit {
 
   deleteRequest() {
     Swal({
-      title: Messages.DELETE_REQUEST,
-      text: Messages.DELETE_REQUEST_TEXT,
+      title: this.messageService.DELETE_REQUEST,
+      text: this.messageService.DELETE_REQUEST_TEXT,
       type: 'warning',
       showCancelButton: true,
-      confirmButtonColor: SwalColors.CONFIRM_BUTTON,
+      confirmButtonColor: this.messageService.CONFIRM_BUTTON_COLOR,
       reverseButtons: true,
-      cancelButtonColor: SwalColors.CANCEL_BUTTON,
-      confirmButtonText: Messages.DELETE
+      cancelButtonColor: this.messageService.CANCEL_BUTTON_COLOR,
+      confirmButtonText: this.messageService.DELETE
     }).then((result) => {
       if (result.value) {
         this.travelBubble.requests
