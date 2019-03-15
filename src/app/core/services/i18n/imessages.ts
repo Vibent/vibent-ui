@@ -20,8 +20,8 @@ export interface IMessages {
   NEED_CREATE_PROPOSAL_TEXT: string;
   NO_SEAT_IN_CAR: string;
   NO_SEAT_IN_CAR_TEXT: string;
-  TAKE_HIM: string;
-  TAKE_HIM_TEXT: string;
+  TAKE_THEM: string;
+  TAKE_THEM_TEXT: string;
   DELETE_REQUEST: string;
   DELETE_REQUEST_TEXT: string;
   DELETE_PROPOSAL: string;

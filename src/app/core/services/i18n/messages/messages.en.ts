@@ -22,8 +22,8 @@ export class MessagesEn implements IMessages {
   public readonly NEED_CREATE_PROPOSAL_TEXT = 'You need to create a proposal to take a person in your car. Do it in "Providers" section.';
   public readonly NO_SEAT_IN_CAR = 'No more seat.';
   public readonly NO_SEAT_IN_CAR_TEXT = 'There is no more remaining seat in your car.';
-  public readonly TAKE_HIM = 'Take him in your car';
-  public readonly TAKE_HIM_TEXT = 'You agree to pick up the person by picking him up at the indicated place, are you sure?';
+  public readonly TAKE_THEM = 'Take him in your car';
+  public readonly TAKE_THEM_TEXT = 'You agree to pick up the person by picking him up at the indicated place, are you sure?';
   public readonly DELETE_REQUEST = 'Delete your request?';
   public readonly DELETE_REQUEST_TEXT = 'You\'re about to delete your request';
   public readonly DELETE_PROPOSAL = 'Delete your proposal?';

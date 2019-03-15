@@ -1,78 +1,83 @@
 <div class="main-content">
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-xl-10">
-                <h2 class="event-title">{{event.title}}</h2>
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-xl-10">
+        <h2 class="event-title">{{event.title}}</h2>
+      </div>
+      <div *ngIf="event.description" class="col-xl-10">
+        <h5 class="event-description">{{event.description}}</h5>
+      </div>
+      <div *ngIf="screenSizesService.isMobileMenu()" class="col-xl-12 text-center">
+        <div class="nav-item dropdown">
+          <div class="nav-item dropdown">
+            <button class="btn btn-secondary btn-sm dropdown-toggle"
+                    type="button"
+                    id="event_admin_mobile"
+                    data-toggle="dropdown"
+                    i18n="admin-settings">
+              Admin settings
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item cursor-pointer"
+                 (click)="openSettingsModal()"
+                 i18n="event-settings">
+                Event settings
+              </a>
             </div>
-            <div *ngIf="event.description" class="col-xl-10">
-                <h5 class="event-description">{{event.description}}</h5>
-            </div>
-            <div *ngIf="screenSizesService.isMobileMenu()" class="col-xl-12 text-center">
-                <div class="nav-item dropdown">
-                    <div class="nav-item dropdown">
-                        <button class="btn btn-secondary btn-sm dropdown-toggle"
-                                type="button"
-                                id="event_admin_mobile"
-                                data-toggle="dropdown">
-                            Admin settings
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item cursor-pointer" (click)="openSettingsModal()">Event settings</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-
-        <event-participants-choice
-                (userParticipationEmiter)="this.onParticipationUpdate($event)"
-                [eventRef]=event.ref>
-        </event-participants-choice>
-
-        <div class="row justify-content-center">
-            <div class="scrolling-wrapper-event">
-                <app-event-participants-preview
-                        *ngFor="let participant of participationRefs"
-                        [participant]=participant>
-                </app-event-participants-preview>
-            </div>
-        </div>
-
-        <div class="row justify-content-center">
-            <div class="bubble">
-                <div class="row justify-content-center">
-
-                    <app-modal-bubble-creation
-                            [eventRef]=event.ref>
-                    </app-modal-bubble-creation>
-
-                    <app-expanded-bubble-controller
-                            [bubble]=bubbleToExpand
-                            [eventRef]="event.ref">
-                    </app-expanded-bubble-controller>
-
-                    <div *ngFor="let bubble of bubbles"
-                         class="row col-xl-4 col-md-6 col-sm-6 justify-content-center">
-                        <bubble-preview-controller
-                                [bubble]=bubble
-                                (bubbleToExpand)="onBubbleSentForExpand($event)">
-                        </bubble-preview-controller>
-                    </div>
-
-                    <div class="row col-xl-4 col-md-6 col-sm-6 justify-content-center">
-                        <a class="cursor-pointer">
-                            <div class="h-250-p"
-                                 (click)="openNewBubbleModal()">
-                                <i class="fa fa-plus-circle add-bubble-icon"></i>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
+      </div>
     </div>
+
+    <event-participants-choice
+        (userParticipationEmiter)="this.onParticipationUpdate($event)"
+        [eventRef]=event.ref>
+    </event-participants-choice>
+
+    <div class="row justify-content-center">
+      <div class="scrolling-wrapper-event">
+        <app-event-participants-preview
+            *ngFor="let participant of participationRefs"
+            [participant]=participant>
+        </app-event-participants-preview>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="bubble">
+        <div class="row justify-content-center">
+
+          <app-modal-bubble-creation
+              [eventRef]=event.ref>
+          </app-modal-bubble-creation>
+
+          <app-expanded-bubble-controller
+              [bubble]=bubbleToExpand
+              [eventRef]="event.ref">
+          </app-expanded-bubble-controller>
+
+          <div *ngFor="let bubble of bubbles"
+               class="row col-xl-4 col-md-6 col-sm-6 justify-content-center">
+            <bubble-preview-controller
+                [bubble]=bubble
+                (bubbleToExpand)="onBubbleSentForExpand($event)">
+            </bubble-preview-controller>
+          </div>
+
+          <div class="row col-xl-4 col-md-6 col-sm-6 justify-content-center">
+            <a class="cursor-pointer">
+              <div class="h-250-p"
+                   (click)="openNewBubbleModal()">
+                <i class="fa fa-plus-circle add-bubble-icon"></i>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <event-settings [event]="event"></event-settings>

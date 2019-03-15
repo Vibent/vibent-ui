@@ -1,11 +1,11 @@
 <div *ngIf="toggle" class="list-group-item">
-    <div class="form-group" [formGroup]="this.form">
-        <label for="survey-option">Survey option</label>
-        <input type="text"
-               formControlName="content"
-               class="form-control"
-               id="survey-option"/>
-        <button class="ml-auto btn btn-outline-danger btn-sm" (click)="toggleCreationCard()">Delete</button>
-        <button class="ml-auto btn btn-outline-primary btn-sm" (click)="addOption()">Add</button>
-    </div>
+  <div class="form-group" [formGroup]="this.form">
+    <label for="survey-option" i18n="survey-option">Survey option</label>
+    <input type="text"
+           formControlName="content"
+           class="form-control"
+           id="survey-option"/>
+    <button class="ml-auto btn btn-outline-danger btn-sm" (click)="toggleCreationCard()" i18n="delete">Delete</button>
+    <button class="ml-auto btn btn-outline-primary btn-sm" (click)="addOption()" i18n="add">Add</button>
+  </div>
 </div>

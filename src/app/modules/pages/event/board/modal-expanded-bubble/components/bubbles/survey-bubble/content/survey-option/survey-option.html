@@ -1,26 +1,27 @@
 <li class="list-group-item d-flex flex-wrap align-items-center">
-    <div class="progress">
-        <div class="progress-bar bg-light"
-             role="progressbar"
-             [style.width]="surveyDataModel.progressWidth">
-            <span class="m-l-5">{{surveyOption.content}}</span>
-        </div>
+  <div class="progress">
+    <div class="progress-bar bg-light"
+         role="progressbar"
+         [style.width]="surveyDataModel.progressWidth">
+      <span class="m-l-5">{{surveyOption.content}}</span>
     </div>
-    <span id="popover{{this.surveyOption.id}}" class="badge badge-primary badge-pill popover-activation"
-          data-container="body"
-          data-toggle="popover"
-          data-placement="top">
+  </div>
+  <span id="popover{{this.surveyOption.id}}" class="badge badge-primary badge-pill popover-activation"
+        data-container="body"
+        data-toggle="popover"
+        data-placement="top">
         {{surveyDataModel.votersNumber}}
     </span>
-    <a *ngIf="surveyDataModel.userVoted"
-       class="ml-auto badge badge-pill badge-success cursor-pointer text-white"
-       (click)="removeVote()">
-        <i class="fa fa-check"></i>
-        Voted
-    </a>
-    <a *ngIf="!surveyDataModel.userVoted"
-       class="ml-auto badge badge-info cursor-pointer text-white"
-       (click)="onVote()">
-        Vote
-    </a>
+  <a *ngIf="surveyDataModel.userVoted"
+     class="ml-auto badge badge-pill badge-success cursor-pointer text-white"
+     (click)="removeVote()">
+    <i class="fa fa-check"></i>
+    <span i18n="voted">Voted</span>
+  </a>
+  <a *ngIf="!surveyDataModel.userVoted"
+     class="ml-auto badge badge-info cursor-pointer text-white"
+     (click)="onVote()"
+     i18n="vote">
+    Vote
+  </a>
 </li>

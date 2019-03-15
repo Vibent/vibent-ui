@@ -1,17 +1,22 @@
 <td>
-    <div class="custom-control custom-checkbox m-l-35">
-        <input (click)="onCheckBoxClick($event)" type="checkbox" [checked]="checkboxOption.answers.length>0"
-               class="custom-control-input"
-               [disabled]="checkboxDataModel.disabled"
-               id="{{checkboxOption.id}}">
-        <label class="custom-control-label" for="{{checkboxOption.id}}"></label>
-    </div>
+  <div class="custom-control custom-checkbox m-l-35">
+    <input (click)="onCheckBoxClick($event)" type="checkbox" [checked]="checkboxOption.answers.length>0"
+           class="custom-control-input"
+           [disabled]="checkboxDataModel.disabled"
+           id="{{checkboxOption.id}}">
+    <label class="custom-control-label" for="{{checkboxOption.id}}"></label>
+  </div>
 </td>
 <td>{{checkboxOption.content}}</td>
 <td>
     <span *ngIf="checkboxDataModel?.answerUsers.length>0; else unchecked" class="badge badge-default badge-success">
         {{(checkboxDataModel.answerUsers[0] | async)?.firstName}} {{(checkboxDataModel.answerUsers[0] | async)?.lastName}}
     </span>
-    <ng-template #unchecked><span class="badge badge-default badge-danger">Unchecked</span></ng-template>
-    <div *ngIf="isCurrentUserOption" class="float-right delete-button-sm m-r-5 m-t-3" (click)="deleteOption()">Delete</div>
+  <ng-template #unchecked><span class="badge badge-default badge-danger" i18n="unchecked">Unchecked</span></ng-template>
+  <div *ngIf="isCurrentUserOption"
+       class="float-right delete-button-sm m-r-5 m-t-3"
+       (click)="deleteOption()"
+       i18n="delete">
+    Delete
+  </div>
 </td>

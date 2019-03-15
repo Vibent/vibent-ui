@@ -111,13 +111,13 @@ export class TravelRequestComponent implements OnInit {
     this.isConnectedUserRequest = this.travelDataService.isCurrentUserEntity(this.travelRequest);
   }
 
-  takeHim() {
+  takeThem() {
     const proposal = this.travelDataService.checkUserAlreadyHaveProposal(this.travelBubble);
     if (proposal) {
       if (this.travelDataService.checkSeatsAvailableUserProposal(this.travelBubble)) {
         Swal({
-          title: this.messageService.TAKE_HIM,
-          text: this.messageService.TAKE_HIM_TEXT,
+          title: this.messageService.TAKE_THEM,
+          text: this.messageService.TAKE_THEM_TEXT,
           type: 'warning',
           showCancelButton: true,
           confirmButtonColor: this.messageService.CONFIRM_BUTTON_COLOR,

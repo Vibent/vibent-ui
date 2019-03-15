@@ -1,12 +1,15 @@
 <div class="expanded-bubble">
-    <div class="card-body text-center">
-        <blockquote class="blockquote">
-            <div class="mb-0">
-                <div class="free-title">{{freeBubble.title}}</div>
-                <div class="free-content">{{freeBubble.content}}</div>
-            </div>
-            <footer class="blockquote-footer">by <cite title="Source Title">{{(user | async)?.firstName}} {{(user |
-                async)?.lastName}}</cite></footer>
-        </blockquote>
-    </div>
+  <div class="card-body text-center">
+    <blockquote class="blockquote">
+      <div class="mb-0">
+        <div class="free-title">{{freeBubble.title}}</div>
+        <div class="free-content">{{freeBubble.content}}</div>
+      </div>
+      <footer class="blockquote-footer"><span i18n="by">by</span>
+        <cite title="Source Title">
+          {{(user | async)?.firstName}} {{(user | async)?.lastName}}
+        </cite>
+      </footer>
+    </blockquote>
+  </div>
 </div>

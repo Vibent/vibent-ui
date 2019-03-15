@@ -1,46 +1,47 @@
 <div class="col-xl-12" *ngIf="toggle">
-    <div class="alim-card-creation">
-        <div class="card">
-            <div class="card-content">
-                <div class="card-body">
-                    <div class="media d-flex">
-                        <div class="media-body text-left">
-                            <form novalidate [formGroup]="this.form">
-                                <div class="form-group">
-                                    <label for="foodName">Food name</label>
-                                    <input type="text"
-                                           formControlName="name"
-                                           class="form-control w-75"
-                                           id="foodName"/>
-                                </div>
-                                <div class="form-group">
-                                    <label for="quantity">Quantity</label>
-                                    <input type="number"
-                                           formControlName="quantity"
-                                           min="1"
-                                           class="form-control w-50"
-                                           id="quantity"/>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="align-self-center">
-                            <div class="float-right">
-                                <img src="./assets/img/food.png"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="float-left" (click)="this.toggleCreationCard()">
-                        <div class="delete-button">Delete</div>
-                    </div>
-                    <div class="float-right m-2">
-                        <button [disabled]="!this.quantity.value || !this.name.value"
-                                class="btn btn-primary btn-sm"
-                                (click)="this.addEntry()">
-                            Add
-                        </button>
-                    </div>
+  <div class="alim-card-creation">
+    <div class="card">
+      <div class="card-content">
+        <div class="card-body">
+          <div class="media d-flex">
+            <div class="media-body text-left">
+              <form novalidate [formGroup]="this.form">
+                <div class="form-group">
+                  <label for="foodName" i18n="food-name">Food name</label>
+                  <input type="text"
+                         formControlName="name"
+                         class="form-control w-75"
+                         id="foodName"/>
                 </div>
+                <div class="form-group">
+                  <label for="quantity" i18n="quantity">Quantity</label>
+                  <input type="number"
+                         formControlName="quantity"
+                         min="1"
+                         class="form-control w-50"
+                         id="quantity"/>
+                </div>
+              </form>
             </div>
+            <div class="align-self-center">
+              <div class="float-right">
+                <img src="./assets/img/food.png"/>
+              </div>
+            </div>
+          </div>
+          <div class="float-left" (click)="this.toggleCreationCard()">
+            <div class="delete-button" i18n="delete">Delete</div>
+          </div>
+          <div class="float-right m-2">
+            <button [disabled]="!this.quantity.value || !this.name.value"
+                    class="btn btn-primary btn-sm"
+                    (click)="this.addEntry()"
+                    i18n="add">
+              Add
+            </button>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>

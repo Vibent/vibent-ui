@@ -81,8 +81,8 @@ export class MessageService implements IMessages {
   SURVEY_BUBBLE_CREATED: string;
   TAKE_A_SEAT: string;
   TAKE_A_SEAT_TEXT: string;
-  TAKE_HIM: string;
-  TAKE_HIM_TEXT: string;
+  TAKE_THEM: string;
+  TAKE_THEM_TEXT: string;
   TRAVEL_BUBBLE_CREATED: string;
   YES: string;
 }

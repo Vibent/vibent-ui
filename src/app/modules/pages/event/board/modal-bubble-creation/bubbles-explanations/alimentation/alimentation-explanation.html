@@ -1,13 +1,15 @@
 <div class="d-flex flex-wrap justify-content-center">
-    <div class="p-2 align-self-center">
-        <img src="./assets/img/alim-illustration.png" class="alimentation-illustration">
+  <div class="p-2 align-self-center">
+    <img src="./assets/img/alim-illustration.png" class="alimentation-illustration">
+  </div>
+  <div class="explanations p-2 align-self-center">
+    <h2 i18n="@@alimentation-bubble">Alimentation bubble</h2>
+    <p i18n="@@alimentation-bubble-description">
+      Indicate what you plan to bring, ask participants to bring other food and drinks. Manage supplies for the event to
+      make sure you don't miss out on anything!
+    </p>
+    <div class="d-flex justify-content-center">
+      <button (click)="createBubble()" class="btn btn-round green-button" i18n="@@create">Create</button>
     </div>
-    <div class="explanations p-2 align-self-center">
-        <h2>Alimentation bubble</h2>
-        <p>Indicate what you plan to bring, ask participants to bring some drinks and food. Manage supplies for
-            the event to make sure you don't miss out on anything!</p>
-        <div class="d-flex justify-content-center">
-            <button (click)="createBubble()" class="btn btn-round green-button">Create</button>
-        </div>
-    </div>
+  </div>
 </div>

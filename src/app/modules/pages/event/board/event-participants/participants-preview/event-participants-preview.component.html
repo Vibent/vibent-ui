@@ -1,15 +1,15 @@
 <div *ngIf="user" class="event-participant">
-    <div class="participant-avatar">
-        <img class="rounded-circle avatar" src={{user?.profilePicLocation}}/>
-        <span class="participant-user-additional-{{this.getResponseCss(participant.answer)}}"></span>
-    </div>
-    <div class="participant-infos">
-        <p>{{user?.firstName}}</p>
-        <p>{{user?.lastName}}</p>
-    </div>
+  <div class="participant-avatar">
+    <img class="rounded-circle avatar" src={{user?.profilePicLocation}}/>
+    <span class="participant-user-additional-{{this.getResponseCss(participant.answer)}}"></span>
+  </div>
+  <div class="participant-infos">
+    <p>{{user?.firstName}}</p>
+    <p>{{user?.lastName}}</p>
+  </div>
 </div>
 
 <div *ngIf="!user" class="event-participant">
-    <div class="participant-avatar-skeleton"></div>
-    <div class="participant-infos-skeleton"></div>
+  <div class="participant-avatar-skeleton"></div>
+  <div class="participant-infos-skeleton"></div>
 </div>
