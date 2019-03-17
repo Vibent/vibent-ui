@@ -8,11 +8,25 @@ variables:
   CONTAINER_PATH: /vibent/vibent-ui
   CONTAINER_IMAGE: ${CONTAINER_URL}${CONTAINER_PATH}
 
+cache:
+  untracked: true
+  key: "$CI_BUILD_REF_NAME"
+  paths:
+  - node_modules/
+
 stages:
+- setup
+- test
 - build
 - dockerize
 - deploy-dev
 - deploy-prod
+
+setup:
+  stage: setup
+  image: node:8.11.3
+  script:
+  - npm install
 
 build:env:
   stage: build
@@ -28,12 +42,17 @@ build:env:
   stage: build
   image: node:8.11.3
   script:
-  - npm install
   - npm rebuild node-sass
   - npm run build-${BUILD_TARGET}
   artifacts:
     paths:
     - dist-*
+
+test:
+  stage: test
+  image: node:8.11.3
+  script:
+  - npm test
 
 build:npm:dev:
   extends: .build
