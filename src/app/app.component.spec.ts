@@ -1,9 +1,14 @@
 import { async, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import {
-  RouterTestingModule
-} from '@angular/router/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AuthService } from 'angularx-social-login';
+import { ScreenService } from './core/services/screen.service';
 
+class MockAuthService {
+}
+
+class MockScreenService {
+}
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -11,7 +16,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
-      imports: [RouterTestingModule ]
+      providers: [{provide: AuthService, useClass: MockAuthService}, {provide: ScreenService, useClass: MockScreenService}],
+      imports: [RouterTestingModule]
     }).compileComponents();
   }));
 
