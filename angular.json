@@ -58,7 +58,10 @@
               "vendorChunk": false,
               "buildOptimizer": true,
               "outputPath": "dist-prod",
-              "i18nMissingTranslation": "error"
+              "i18nMissingTranslation": "error",
+              "i18nFile": "src/i18n/messages.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en"
             },
             "dev": {
               "optimization": true,
@@ -71,7 +74,10 @@
               "vendorChunk": false,
               "buildOptimizer": true,
               "outputPath": "dist-dev",
-              "i18nMissingTranslation": "error"
+              "i18nMissingTranslation": "error",
+              "i18nFile": "src/i18n/messages.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en"
             }
           }
         },

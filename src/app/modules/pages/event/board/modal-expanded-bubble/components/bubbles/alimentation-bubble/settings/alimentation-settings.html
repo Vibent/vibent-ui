@@ -1,14 +1,18 @@
 <span class="fa fa-chevron-left position-absolute p-2" style="cursor: pointer" (click)="sendBackToContent()"></span>
 
 <div class="d-flex flex-row justify-content-center">
-    <div class="p-2">
-        <h3 class="text-center">Alimentation bubble settings</h3>
-        <h5>You can change the bubble settings here</h5>
-    </div>
+  <div class="p-2">
+    <h3 class="text-center" i18n="alimentation-bubble-settings">
+      Alimentation bubble settings
+    </h3>
+    <h5 i18n="bubble-settings-description">
+      You can change the bubble settings here
+    </h5>
+  </div>
 </div>
 
 <settings-delete-bubble
-        (bubbleDeleted)=onBubbleDeleted()
-        [bubble]=this.bubble
-        [eventRef]=this.eventRef>
+    (bubbleDeleted)=onBubbleDeleted()
+    [bubble]=this.bubble
+    [eventRef]=this.eventRef>
 </settings-delete-bubble>

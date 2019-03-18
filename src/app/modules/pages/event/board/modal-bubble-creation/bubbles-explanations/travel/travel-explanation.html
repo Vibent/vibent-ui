@@ -1,13 +1,15 @@
 <div class="d-flex flex-wrap justify-content-center">
-    <div class="p-2 align-self-center">
-        <img src="./assets/img/travel-illustration.png" class="travel-illustration">
+  <div class="p-2 align-self-center">
+    <img src="./assets/img/travel-illustration.png" class="travel-illustration">
+  </div>
+  <div class="explanations p-2 align-self-center">
+    <h2 i18n="@@travel-bubble">Travel bubble</h2>
+    <p i18n="@@travel-bubble-description">
+      Help participants organize their travelling plans to the event! Some people will be able to offer seats in
+      their cars, and others will be able to ask to be picked up.
+    </p>
+    <div class="d-flex justify-content-center">
+      <button (click)="createBubble()" class="btn btn-round green-button" i18n="@@create">Create</button>
     </div>
-    <div class="explanations p-2 align-self-center">
-        <h2>Travel bubble</h2>
-        <p>Help participants organize their travel to the event! Some people will be able to offer seats in their cars,
-            and others will be able to ask for them to be picked up!</p>
-        <div class="d-flex justify-content-center">
-            <button (click)="createBubble()" class="btn btn-round green-button">Create</button>
-        </div>
-    </div>
+  </div>
 </div>

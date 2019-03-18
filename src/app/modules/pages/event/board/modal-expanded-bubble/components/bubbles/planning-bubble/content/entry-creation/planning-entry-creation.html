@@ -1,55 +1,60 @@
 <div class="d-flex justify-content-center m-t-15">
-    <!-- hidden is used, allow dom elmt to be structured and time/date libs applied -->
-    <div [hidden]="!this.toggle" class="card-planning-entry card">
-        <div class="card-body">
-            <h4 class="card-title">Add a planning entry</h4>
-        </div>
-        <div class="card-body">
-            <form novalidate [formGroup]="form">
-                <div class="form-group">
-                    <label for="entry-date">Date
-                        <span *ngIf="this.dateInvalid"
-                              class="incorrect-input">Invalid or not in the future</span></label>
-                    <input type="text"
-                           autocomplete="off"
-                           id="entry-date"
-                           class="form-control"
-                           name="date">
-                </div>
-                <form class="form-group">
-                    <div>
-                        <input id="add-time-entry" (click)="addTimeEntry()"
-                               type="checkbox">
-                        <label for="add-time-entry" class="w-75">Add a time</label>
-                    </div>
-                </form>
-                <div class="form-group" [hidden]="!hasTime">
-                    <label for="entry-time">Time
-                        <span *ngIf="this.timeInvalid"
-                              class="incorrect-input">Invalid or not in the future</span>
-                    </label>
-                    <input type="text"
-                           autocomplete="off"
-                           id="entry-time"
-                           class="form-control"
-                           name="time">
-                </div>
-                <div class="form-group">
-                    <label for="content">Content
-                        <span *ngIf="this.contentInvalid"
-                              class="incorrect-input">A description of your plan is needed</span></label>
-                    <textarea id="content" rows="5" class="form-control square"
-                              name="content"
-                              formControlName="content"
-                    ></textarea>
-                </div>
-                <button (click)="toggleCreationCard()" class="btn btn-outline-danger">
-                    Delete
-                </button>
-                <button (click)="createPlanningEntry()" class="btn btn-outline-primary">
-                    Add
-                </button>
-            </form>
-        </div>
+  <!-- hidden is used, allow dom elmt to be structured and time/date libs applied -->
+  <div [hidden]="!this.toggle" class="card-planning-entry card">
+    <div class="card-body">
+      <h4 class="card-title" i18n="add-planning-entry">Add a planning entry</h4>
     </div>
+    <div class="card-body">
+      <form novalidate [formGroup]="form">
+        <div class="form-group">
+          <label for="entry-date"><span i18n="date">Date</span>
+            <span *ngIf="this.dateInvalid"
+                  class="incorrect-input" i18n="invalid-date">Incorrect or past date</span></label>
+          <input type="text"
+                 autocomplete="off"
+                 id="entry-date"
+                 class="form-control"
+                 name="date">
+        </div>
+        <form class="form-group">
+          <div>
+            <input id="add-time-entry" (click)="addTimeEntry()"
+                   type="checkbox">
+            <label for="add-time-entry" class="w-75" i18n="add-a-time">Add a time</label>
+          </div>
+        </form>
+        <div class="form-group" [hidden]="!hasTime">
+          <label for="entry-time"><span i18n="date">Time</span>
+            <span *ngIf="this.timeInvalid"
+                  class="incorrect-input" i18n="invalid-date">Incorrect or past date</span>
+          </label>
+          <input type="text"
+                 autocomplete="off"
+                 id="entry-time"
+                 class="form-control"
+                 name="time">
+        </div>
+        <div class="form-group">
+          <label for="content"><span i18n="content">Time</span>
+            <span *ngIf="this.contentInvalid"
+                  class="incorrect-input"
+                  i18n="missing-required-description">A description of your plan is needed</span></label>
+          <textarea id="content" rows="5" class="form-control square"
+                    name="content"
+                    formControlName="content"
+          ></textarea>
+        </div>
+        <button (click)="toggleCreationCard()"
+                class="btn btn-outline-danger"
+                i18n="delete">
+          Delete
+        </button>
+        <button (click)="createPlanningEntry()"
+                class="btn btn-outline-primary"
+                i18n="add">
+          Add
+        </button>
+      </form>
+    </div>
+  </div>
 </div>

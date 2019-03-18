@@ -1,41 +1,41 @@
 <div class="expanded-bubble">
-    <div class="card-body text-center">
-        <div class="card-header mb-2">
-            <span class="success">{{checkboxBubble.title}}</span>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="insights px-2">
-                        <span class="text-success h3">{{this.ratio}}</span>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <img class="w-20-p cursor-pointer" (click)="addOptionCreation()" src="./assets/img/plus.png"/>
-                </div>
-            </div>
+  <div class="card-body text-center">
+    <div class="card-header mb-2">
+      <span class="success">{{checkboxBubble.title}}</span>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="insights px-2">
+            <span class="text-success h3">{{this.ratio}}</span>
+          </div>
         </div>
-        <div class="checkbox-card">
-            <div class="card">
-                <div class="card-content">
-                    <table class="table">
-                        <tbody>
-                        <tr option-creation
-                            [bubbleId]="checkboxBubble.id"
-                            (updatedCheckboxBubble)="this.onBubbleUpdate($event)"
-                            [eventRef]="eventRef">
-                        </tr>
-                        <tr *ngFor="let option of checkboxBubble.options"
-                            checkbox-option
-                            [checkboxOption]="option"
-                            [checkboxBubble] = this.checkboxBubble
-                            [bubbleId]="checkboxBubble.id"
-                            (updatedCheckboxOptions)="this.onCheckboxOptionUpdate($event)"
-                            (updatedCheckboxBubble)="this.onBubbleUpdate($event)"
-                            [eventRef]="eventRef">
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+        <div class="col-lg-12">
+          <img class="w-20-p cursor-pointer" (click)="addOptionCreation()" src="./assets/img/plus.png"/>
         </div>
+      </div>
     </div>
+    <div class="checkbox-card">
+      <div class="card">
+        <div class="card-content">
+          <table class="table">
+            <tbody>
+            <tr option-creation
+                [bubbleId]="checkboxBubble.id"
+                (updatedCheckboxBubble)="this.onBubbleUpdate($event)"
+                [eventRef]="eventRef">
+            </tr>
+            <tr *ngFor="let option of checkboxBubble.options"
+                checkbox-option
+                [checkboxOption]="option"
+                [checkboxBubble]=this.checkboxBubble
+                [bubbleId]="checkboxBubble.id"
+                (updatedCheckboxOptions)="this.onCheckboxOptionUpdate($event)"
+                (updatedCheckboxBubble)="this.onBubbleUpdate($event)"
+                [eventRef]="eventRef">
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

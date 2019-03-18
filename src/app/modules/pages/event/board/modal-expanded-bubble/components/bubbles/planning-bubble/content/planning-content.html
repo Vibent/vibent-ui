@@ -1,32 +1,32 @@
 <div class="expanded-bubble">
-    <div class="card-body">
-        <div class="card-header mb-2 text-center">
-            <span class="success">Your bubble planning title</span>
-        </div>
-        <div class="planning-card">
-            <div class="card">
-                <div class="card-content">
-                    <div class="row justify-content-center">
-                        <img class="cursor-pointer" (click)="addEntryCreation()" src="./assets/img/plus.png"/>
-                    </div>
-                    <planning-entry-creation
-                            [eventRef]="this.eventRef"
-                            [bubbleId]="planningBubble.id"
-                            (updatedPlanningBubble)="this.onBubbleUpdate($event)">
-                    </planning-entry-creation>
-                    <ul class="planning-timeline">
-                        <li *ngFor="let entry of planningBubble.entries"
-                            planning-entry
-                            [planningBubble] = this.planningBubble
-                            [planningEntry]="entry"
-                            [bubbleId]="planningBubble.id"
-                            [eventRef]="this.eventRef"
-                            (updatedPlanningBubble)="this.onBubbleUpdate($event)">
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+  <div class="card-body">
+    <div class="card-header mb-2 text-center">
+      <span class="success" i18n="your-planning-bubble-title">Your planning bubble title</span>
     </div>
+    <div class="planning-card">
+      <div class="card">
+        <div class="card-content">
+          <div class="row justify-content-center">
+            <img class="cursor-pointer" (click)="addEntryCreation()" src="./assets/img/plus.png"/>
+          </div>
+          <planning-entry-creation
+              [eventRef]="this.eventRef"
+              [bubbleId]="planningBubble.id"
+              (updatedPlanningBubble)="this.onBubbleUpdate($event)">
+          </planning-entry-creation>
+          <ul class="planning-timeline">
+            <li *ngFor="let entry of planningBubble.entries"
+                planning-entry
+                [planningBubble]=this.planningBubble
+                [planningEntry]="entry"
+                [bubbleId]="planningBubble.id"
+                [eventRef]="this.eventRef"
+                (updatedPlanningBubble)="this.onBubbleUpdate($event)">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 

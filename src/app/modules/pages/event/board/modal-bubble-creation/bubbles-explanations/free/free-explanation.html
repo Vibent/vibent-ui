@@ -1,22 +1,23 @@
 <div class="d-flex flex-wrap justify-content-center">
-    <div class="p-2 align-self-center">
-        <img src="./assets/img/free-illustration.png" class="free-illustration">
+  <div class="p-2 align-self-center">
+    <img src="./assets/img/free-illustration.png" class="free-illustration">
+  </div>
+  <div class="explanations p-2 align-self-center">
+    <h2 i18n="@@free-bubble">Free bubble</h2>
+    <p i18n="@@free-bubble-description">For anything else you might have to say about the event, you can use
+      a free bubble where anything goes.</p>
+    <p class="m-t-20" i18n="@@type-free-title">Type the free title:</p>
+    <form novalidate [formGroup]="this.form">
+      <div class="row justify-content-center m-0">
+        <input type="text" class="form-control" id="freeTitle" formControlName="freeTitle"/>
+      </div>
+      <p class="m-t-20" i18n="@@add-additional-content">Add some additional content: (optional)</p>
+      <div class="row justify-content-center m-0">
+        <textarea type="text" class="form-control" id="freeContent" formControlName="freeContent"></textarea>
+      </div>
+    </form>
+    <div class="d-flex justify-content-center m-t-10">
+      <button (click)="createBubble()" class="btn btn-round green-button" i18n="@@create">Create</button>
     </div>
-    <div class="explanations p-2 align-self-center">
-        <h2>Free bubble</h2>
-        <p>Organize your planning for your event. Specify what you want to do and when. </p>
-        <p class="m-t-20">Type the free title:</p>
-        <form novalidate [formGroup]="this.form">
-            <div class="row justify-content-center m-0">
-                <input type="text" class="form-control" id="freeTitle" formControlName="freeTitle"/>
-            </div>
-            <p class="m-t-20">Type a content: (optional)</p>
-            <div class="row justify-content-center m-0">
-                <textarea type="text" class="form-control" id="freeContent" formControlName="freeContent"></textarea>
-            </div>
-        </form>
-        <div class="d-flex justify-content-center m-t-10">
-            <button (click)="createBubble()" class="btn btn-round green-button">Create</button>
-        </div>
-    </div>
+  </div>
 </div>

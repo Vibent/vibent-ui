@@ -1,18 +1,21 @@
 <div class="d-flex flex-wrap justify-content-center">
-    <div class="p-2 align-self-center">
-        <img src="./assets/img/survey-illustration.png" class="survey-illustration">
+  <div class="p-2 align-self-center">
+    <img src="./assets/img/survey-illustration.png" class="survey-illustration">
+  </div>
+  <div class="explanations p-2 align-self-center">
+    <h2 i18n="@@survey-bubble">Survey bubble</h2>
+    <p i18n="@@survey-bubble-description">
+      Conduct a survey to get feedback from participants on a specific
+      issue.
+    </p>
+    <p i18n="@@type-survey-title">Type the survey title:</p>
+    <form novalidate [formGroup]="this.form">
+      <div class="row justify-content-center m-0">
+        <input type="text" class="form-control" id="surveyTitle" formControlName="surveyTitle"/>
+      </div>
+    </form>
+    <div class="d-flex justify-content-center m-t-10">
+      <button (click)="createBubble()" class="btn btn-round green-button" i18n="@@create">Create</button>
     </div>
-    <div class="explanations p-2 align-self-center">
-        <h2>Survey bubble</h2>
-        <p>Conduct a survey to solicit feedback from participants.</p>
-        <p>Type the survey title:</p>
-        <form novalidate [formGroup]="this.form">
-            <div class="row justify-content-center m-0">
-                <input type="text" class="form-control" id="surveyTitle" formControlName="surveyTitle"/>
-            </div>
-        </form>
-        <div class="d-flex justify-content-center m-t-10">
-            <button (click)="createBubble()" class="btn btn-round green-button">Create</button>
-        </div>
-    </div>
+  </div>
 </div>

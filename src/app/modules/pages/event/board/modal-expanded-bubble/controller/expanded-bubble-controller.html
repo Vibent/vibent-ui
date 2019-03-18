@@ -1,54 +1,56 @@
 <div class="modal fade" id="expanded-bubble" data-backdrop="static" role="dialog">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">
-                    {{this.expandedBubbleTitleService.getTitleFromBubbleType(this.bubble?.type)}} bubble</h5>
-                <loader [mainCondition]=false
-                        [eventUpdated]=false
-                        [fade]=true
-                        [expandedBubble]="loaderService.eventUpdated"
-                        [withLogo]=false
-                        [mainSize]=null></loader>
-                <button type="button" class="close" data-dismiss="modal">
-                    <span>&times;</span>
-                </button>
-            </div>
-            <app-expanded-travel-bubble
-                    *ngIf="this.bubble?.type === BubbleType.TravelBubble"
-                    [bubble]="this.bubble"
-                    [eventRef]="this.eventRef">
-            </app-expanded-travel-bubble>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">
+          {{this.expandedBubbleTitleService.getTitleFromBubbleType(this.bubble?.type)}}
+          <span i18n="bubble">bubble</span>
+        </h5>
+        <loader [mainCondition]=false
+                [eventUpdated]=false
+                [fade]=true
+                [expandedBubble]="loaderService.eventUpdated"
+                [withLogo]=false
+                [mainSize]=null></loader>
+        <button type="button" class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+      <app-expanded-travel-bubble
+          *ngIf="this.bubble?.type === BubbleType.TravelBubble"
+          [bubble]="this.bubble"
+          [eventRef]="this.eventRef">
+      </app-expanded-travel-bubble>
 
-            <app-expanded-alimentation-bubble
-                    *ngIf="this.bubble?.type === BubbleType.AlimentationBubble"
-                    [bubble]="this.bubble"
-                    [eventRef]="this.eventRef">
-            </app-expanded-alimentation-bubble>
+      <app-expanded-alimentation-bubble
+          *ngIf="this.bubble?.type === BubbleType.AlimentationBubble"
+          [bubble]="this.bubble"
+          [eventRef]="this.eventRef">
+      </app-expanded-alimentation-bubble>
 
-            <app-expanded-planning-bubble
-                    *ngIf="this.bubble?.type === BubbleType.PlanningBubble"
-                    [bubble]="this.bubble"
-                    [eventRef]="this.eventRef">
-            </app-expanded-planning-bubble>
+      <app-expanded-planning-bubble
+          *ngIf="this.bubble?.type === BubbleType.PlanningBubble"
+          [bubble]="this.bubble"
+          [eventRef]="this.eventRef">
+      </app-expanded-planning-bubble>
 
-            <app-expanded-survey-bubble
-                    *ngIf="this.bubble?.type === BubbleType.SurveyBubble"
-                    [bubble]="this.bubble"
-                    [eventRef]="this.eventRef">
-            </app-expanded-survey-bubble>
+      <app-expanded-survey-bubble
+          *ngIf="this.bubble?.type === BubbleType.SurveyBubble"
+          [bubble]="this.bubble"
+          [eventRef]="this.eventRef">
+      </app-expanded-survey-bubble>
 
-            <app-expanded-free-bubble
-                    *ngIf="this.bubble?.type === BubbleType.FreeBubble"
-                    [bubble]="this.bubble"
-                    [eventRef]="this.eventRef">
-            </app-expanded-free-bubble>
+      <app-expanded-free-bubble
+          *ngIf="this.bubble?.type === BubbleType.FreeBubble"
+          [bubble]="this.bubble"
+          [eventRef]="this.eventRef">
+      </app-expanded-free-bubble>
 
-            <app-expanded-checkbox-bubble
-                    *ngIf="this.bubble?.type === BubbleType.CheckboxBubble"
-                    [bubble]="this.bubble"
-                    [eventRef]="this.eventRef">
-            </app-expanded-checkbox-bubble>
-        </div>
+      <app-expanded-checkbox-bubble
+          *ngIf="this.bubble?.type === BubbleType.CheckboxBubble"
+          [bubble]="this.bubble"
+          [eventRef]="this.eventRef">
+      </app-expanded-checkbox-bubble>
     </div>
+  </div>
 </div>

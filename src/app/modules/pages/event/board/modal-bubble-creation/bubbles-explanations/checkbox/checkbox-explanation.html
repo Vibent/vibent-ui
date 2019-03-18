@@ -1,19 +1,19 @@
 <div class="d-flex flex-wrap justify-content-center">
-    <div class="p-2 align-self-center">
-        <img src="./assets/img/checkbox-illustration.png" class="checkbox-illustration">
+  <div class="p-2 align-self-center">
+    <img src="./assets/img/checkbox-illustration.png" class="checkbox-illustration">
+  </div>
+  <div class="explanations p-2 align-self-center">
+    <h2 i18n="@@checkbox-bubble">Checkbox bubble</h2>
+    <p i18n="@@checkbox-bubble-description">Make a list of things to do, plan or organize for the event.
+      Participants will be able to check one or more elements of the list.</p>
+    <p i18n="@@type-checkbox-title">Type the checkbox title:</p>
+    <form novalidate [formGroup]="this.form">
+      <div class="row justify-content-center m-0">
+        <input type="text" class="form-control" id="checkboxTitle" formControlName="checkboxTitle"/>
+      </div>
+    </form>
+    <div class="d-flex justify-content-center m-t-10">
+      <button (click)="createBubble()" class="btn btn-round green-button" i18n="@@create">Create</button>
     </div>
-    <div class="explanations p-2 align-self-center">
-        <h2>Checkbox bubble</h2>
-        <p>Make a list of things to do, to plan, to organize for the event. Participants will be able to check the
-            elements of the list.</p>
-        <p>Type the checkbox title:</p>
-        <form novalidate [formGroup]="this.form">
-            <div class="row justify-content-center m-0">
-                <input type="text" class="form-control" id="checkboxTitle" formControlName="checkboxTitle"/>
-            </div>
-        </form>
-        <div class="d-flex justify-content-center m-t-10">
-            <button (click)="createBubble()" class="btn btn-round green-button">Create</button>
-        </div>
-    </div>
+  </div>
 </div>

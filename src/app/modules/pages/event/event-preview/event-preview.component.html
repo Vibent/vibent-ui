@@ -1,35 +1,44 @@
 <div class="row justify-content-center">
-	<div class="col-xl-8 col-lg-9 col-md-12">
-		<a [routerLink]="['/events/' + event.ref ]">
-			<ng-container *ngIf="ressourcesLoaded | async">
-				<div class="card card-stats" [style.opacity]=opacityStyle>
-					<div class="card-header card-header-vibent-green card-header-icon">
-						<div class="card-icon">
-							<h3>{{event.startDate | date}}</h3>
-						</div>
-						<p class="card-category">{{additionnalEventInfos.remainingDays <= 0 ? 'Today' : 'in ' + additionnalEventInfos.remainingDays + ' days'}}</p>
-						<h4 class="card-title">{{additionnalEventInfos.participants}}
-							<small>participant<span *ngIf="additionnalEventInfos.participants > 1">s</span></small>
-						</h4>
-						<div class="card-body">{{event.title}}
-							<div class="card-hour">{{event.startDate | date:'shortTime'}}</div>
-							<div class="card-location" *ngIf=additionnalEventInfos.location>
-								in {{additionnalEventInfos.location}}
-							</div>
-						</div>
-					</div>
-					<div class="card-footer">
-						<div class="stats">
-							<i class="material-icons text-info">info</i>
-							{{additionnalEventInfos.bubblesNumber}} bubble<span *ngIf="additionnalEventInfos.bubblesNumber > 1">s</span>
-						</div>
-						<div class="event-preview-group">
-							from {{additionnalEventInfos.groupName}}
-						</div>
-					</div>
-				</div>
-			</ng-container>
-		</a>
-	</div>
+  <div class="col-xl-8 col-lg-9 col-md-12">
+    <a [routerLink]="['/events/' + event.ref ]">
+      <ng-container *ngIf="ressourcesLoaded | async">
+        <div class="card card-stats" [style.opacity]=opacityStyle>
+          <div class="card-header card-header-vibent-green card-header-icon">
+            <div class="card-icon">
+              <h3>{{event.startDate | date}}</h3>
+            </div>
+            <p class="card-category" i18n>
+              {additionnalEventInfos.remainingDays, plural, =0 {Today} other {in {{additionnalEventInfos.remainingDays}}
+              days}}
+            </p>
+            <h4 class="card-title">{{additionnalEventInfos.participants}}
+              <small i18n>
+                {additionnalEventInfos.participants, plural, =1 {participant} other {participants}}
+              </small>
+            </h4>
+            <div class="card-body">{{event.title}}
+              <div class="card-hour">{{event.startDate | date:'shortTime'}}</div>
+              <div class="card-location" *ngIf=additionnalEventInfos.location>
+                <ng-container i18n="in">in</ng-container>
+                {{additionnalEventInfos.location}}
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="stats">
+              <i class="material-icons text-info">info</i>
+              <ng-container i18n>
+                {{additionnalEventInfos.bubblesNumber}}
+                {additionnalEventInfos.bubblesNumber, plural, =1 {bubble} other {bubbles}}
+              </ng-container>
+            </div>
+            <div class="event-preview-group">
+              <ng-container i18n="in-group">in group</ng-container>&nbsp;<b>{{additionnalEventInfos.groupName}}</b>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </a>
+  </div>
 </div>
 

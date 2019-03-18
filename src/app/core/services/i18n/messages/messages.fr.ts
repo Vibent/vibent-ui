@@ -22,8 +22,8 @@ export class MessagesFr implements IMessages {
   public readonly NEED_CREATE_PROPOSAL_TEXT = 'TODOFR ou need to create a proposal to take a person in your car. Do it in "Providers" section.';
   public readonly NO_SEAT_IN_CAR = 'TODOFR o more seat.';
   public readonly NO_SEAT_IN_CAR_TEXT = 'TODOFR here is no more remaining seat in your car.';
-  public readonly TAKE_HIM = 'TODOFR ake him in your car';
-  public readonly TAKE_HIM_TEXT = 'TODOFR ou agree to pick up the person by picking him up at the indicated place, are you sure?';
+  public readonly TAKE_THEM = 'TODOFR ake him in your car';
+  public readonly TAKE_THEM_TEXT = 'TODOFR ou agree to pick up the person by picking him up at the indicated place, are you sure?';
   public readonly DELETE_REQUEST = 'TODOFR elete your request?';
   public readonly DELETE_REQUEST_TEXT = 'TODOFR ou\'TODOFR e about to delete your request';
   public readonly DELETE_PROPOSAL = 'TODOFR elete your proposal?';

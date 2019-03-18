@@ -1,27 +1,27 @@
 <div class="container large-vibent-modal">
-    <span class="fa fa-chevron-left position-absolute p-3 cursor-pointer" (click)="backToList()"></span>
-    <alimentation-explanation
-            *ngIf="bubbleType === BubbleType.AlimentationBubble"
-            [eventRef]="eventRef">
-    </alimentation-explanation>
-    <checkbox-explanation
-            *ngIf="bubbleType === BubbleType.CheckboxBubble"
-            [eventRef]="eventRef">
-    </checkbox-explanation>
-    <survey-explanation
-            *ngIf="bubbleType === BubbleType.SurveyBubble"
-            [eventRef]="eventRef">
-    </survey-explanation>
-    <planning-explanation
-            *ngIf="bubbleType === BubbleType.PlanningBubble"
-            [eventRef]="eventRef">
-    </planning-explanation>
-    <travel-explanation
-            *ngIf="bubbleType === BubbleType.TravelBubble"
-            [eventRef]="eventRef">
-    </travel-explanation>
-    <free-explanation
-            *ngIf="bubbleType === BubbleType.FreeBubble"
-            [eventRef]="eventRef">
-    </free-explanation>
+  <span class="fa fa-chevron-left position-absolute p-3 cursor-pointer" (click)="backToList()"></span>
+  <alimentation-explanation
+      *ngIf="bubbleType === BubbleType.AlimentationBubble"
+      [eventRef]="eventRef">
+  </alimentation-explanation>
+  <checkbox-explanation
+      *ngIf="bubbleType === BubbleType.CheckboxBubble"
+      [eventRef]="eventRef">
+  </checkbox-explanation>
+  <survey-explanation
+      *ngIf="bubbleType === BubbleType.SurveyBubble"
+      [eventRef]="eventRef">
+  </survey-explanation>
+  <planning-explanation
+      *ngIf="bubbleType === BubbleType.PlanningBubble"
+      [eventRef]="eventRef">
+  </planning-explanation>
+  <travel-explanation
+      *ngIf="bubbleType === BubbleType.TravelBubble"
+      [eventRef]="eventRef">
+  </travel-explanation>
+  <free-explanation
+      *ngIf="bubbleType === BubbleType.FreeBubble"
+      [eventRef]="eventRef">
+  </free-explanation>
 </div>
