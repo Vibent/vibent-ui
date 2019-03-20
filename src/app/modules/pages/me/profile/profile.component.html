@@ -1,43 +1,46 @@
 <div class="main-content">
-    <div class="container-fluid">
-        <h3 class="col-xl-12 text-center">You. And nobody else.</h3>
-        <div class="row justify-content-center">
-            <div class="col-xl-4 col-sm-6">
-                <div *ngIf="user" class="profile_card hoverprofile_card">
-                    <div class="profile_cardheader">
-                    </div>
-                    <div class="avatar">
-                        <img src={{user.profilePicLocation}}>
-                    </div>
-                    <div class="info">
-                        <div class="title">
-                            <a>{{user.firstName}} {{user.lastName}}</a>
-                        </div>
-                        <div class="desc">{{user.memberships.length}} group<span
-                                *ngIf="user.memberships.length>1">s</span></div>
-                        <div class="desc">{{user.participations.length}} event<span
-                                *ngIf="user.participations.length>1">s</span> opportunities
-                        </div>
-                    </div>
-                    <div class="bottom">
-                        {{user.email}}
-                        <connected-social [user]="user"></connected-social>
-                    </div>
-                </div>
+  <div class="container-fluid">
+    <h3 class="col-xl-12 text-center" i18n="@@profile-header">You. And nobody else.</h3>
+    <div class="row justify-content-center">
+      <div class="col-xl-4 col-sm-6">
+        <div *ngIf="user" class="profile_card hoverprofile_card">
+          <div class="profile_cardheader">
+          </div>
+          <div class="avatar">
+            <img src={{user.profilePicLocation}}>
+          </div>
+          <div class="info">
+            <div class="title">
+              <a>{{user.firstName}} {{user.lastName}}</a>
             </div>
-
+            <div class="desc" i18n="@@profile-groups-membership">{{user.memberships.length}}
+              {user.memberships.length, plural, =1 {group} other {groups}}
+            </div>
+            <div class="desc" i18n="@@events-opportunities">{{user.participations.length}}
+              {user.participations.length, plural, =1 {event opportunity} other {events opportunities}}
+            </div>
+          </div>
+          <div class="bottom">
+            {{user.email}}
+            <connected-social [user]="user"></connected-social>
+          </div>
         </div>
-        <a (click)="openSettingsDialog()" class="text-black-50 cursor-pointer">
-            <h5 class="col-xl-12 text-center">
-                <i class="fa fa-cog"></i> Settings
-            </h5>
-        </a>
+      </div>
 
-        <a *ngIf="screenSizesService.isMobileMenu()" (click)="logout()" class="text-black-50 cursor-pointer">
-            <h5 class="col-xl-12 text-center">
-                <i class="fa fa-sign-out"></i> Logout
-            </h5>
-        </a>
     </div>
+    <a (click)="openSettingsDialog()" class="text-black-50 cursor-pointer">
+      <h5 class="col-xl-12 text-center">
+        <i class="fa fa-cog p-2"></i>
+        <ng-container i18n="@@settings">Settings</ng-container>
+      </h5>
+    </a>
+
+    <a *ngIf="screenSizesService.isMobileMenu()" (click)="logout()" class="text-black-50 cursor-pointer">
+      <h5 class="col-xl-12 text-center">
+        <i class="fa fa-sign-out"></i>
+        <ng-container i18n="@@logout">Logout</ng-container>
+      </h5>
+    </a>
+  </div>
 </div>
 <profile-settings [user]=user></profile-settings>

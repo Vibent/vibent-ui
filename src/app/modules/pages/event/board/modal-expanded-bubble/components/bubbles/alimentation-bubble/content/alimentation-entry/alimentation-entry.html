@@ -10,7 +10,7 @@
                 <span [@fadeInOut]
                       *ngIf="b.user | async as user"
                       class="badge badge-default badge-success m-r-2">
-                  {{b.quantity}} <span i18n="by">by</span> {{user.firstName}} {{user.lastName}}
+                  {{b.quantity}} <span i18n="@@by">by</span> {{user.firstName}} {{user.lastName}}
                 </span>
               </ng-container>
             </div>
@@ -34,7 +34,7 @@
                  role="progressbar"></div>
           </div>
           <div class="float-left">
-            <div class="delete-button" (click)="deleteEntry()" i18n="delete">Delete</div>
+            <div class="delete-button" (click)="deleteEntry()" i18n="@@delete">Delete</div>
           </div>
           <div class="float-right text-center">
             <img class="{{this.alimentationDataModel.deleteBringButtonClass}}" (click)="deleteBring()"

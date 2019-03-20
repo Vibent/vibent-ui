@@ -1,14 +1,14 @@
 <a>{{this.planningDataModel.start | date }}
-  <span i18n="at">by</span>
+  <span i18n="@@at">by</span>
   {{this.planningDataModel.start | date:'shortTime' }}
 </a>
 <a class="float-right">
     <span *ngIf="!isCurrentUserEntry; else isCurrentUser" class="badge badge-default badge-success m-r-10">
-    <span i18n="by">by</span>
+    <span i18n="@@by">by</span>
       {{(this.planningDataModel.user | async)?.firstName}} {{(this.planningDataModel.user | async)?.lastName}}
     </span>
   <ng-template #isCurrentUser>
-    <div class="delete-button-sm m-r-10" (click)="deleteEntry()" i18n="delete">Delete</div>
+    <div class="delete-button-sm m-r-10" (click)="deleteEntry()" i18n="@@delete">Delete</div>
   </ng-template>
 </a>
 <p>{{planningEntry.content}}</p>

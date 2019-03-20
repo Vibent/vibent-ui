@@ -1,59 +1,61 @@
 <div class="modal fade" id="modalProfileSettings" tabindex="-1" role="dialog">
-	<div class="modal-dialog full-bootstrap-modal" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button"
-						class="close black-close"
-						data-dismiss="modal"
-						(click)="close">
-					<span>&times;</span>
-				</button>
-			</div>
-			<div class="modal-body bg-light">
-				<div class="container vibent-modal">
-					<h2><b>Update your infos</b></h2>
-					<p class="lead">You can change some informations about you here.</p>
-					<div class="row justify-content-center m-t-25">
-						<img id="avatarProfile" class="avatar-profile-settings" (click)="fileInput.click()" src="{{croppedImage}}">
-					</div>
-					<div class="row justify-content-center">
-						<span class="cursor-pointer" (click)="fileInput.click()">Edit avatar</span>
-					</div>
+  <div class="modal-dialog full-bootstrap-modal" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button"
+                class="close black-close"
+                data-dismiss="modal"
+                (click)="close">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body bg-light">
+        <div class="container vibent-modal">
+          <h2><b i18n="@@update-your-infos">Update your infos</b></h2>
+          <p class="lead" i18n="@@can-change-infos-here">You can change some informations about you here.</p>
+          <div class="row justify-content-center m-t-25">
+            <img id="avatarProfile" class="avatar-profile-settings" (click)="fileInput.click()" src="{{croppedImage}}">
+          </div>
+          <div class="row justify-content-center">
+            <span class="cursor-pointer" (click)="fileInput.click()" i18n="@@edit-avatar">Edit avatar</span>
+          </div>
 
-					<image-cropper *ngIf="imageChangedEvent"
-								   [imageBase64]="imageChangedEvent"
-								   [aspectRatio]="1"
-								   [resizeToWidth]="128"
-								   format="jpeg"
-								   (imageCropped) = "imageCropped($event)"
-					></image-cropper>
-					<div class="row justify-content-center">
-						<button *ngIf="imageChangedEvent" (click)="imageChangedEventToNull()" class="btn btn-round btn-sm">Crop image</button>
-					</div>
-					<div class="row justify-content-center">
-						<input type="file" id="file" class="d-none" (change)="fileChangeEvent($event)" accept="image/jpg,image/jpeg"
-							   #fileInput>
-					</div>
+          <image-cropper *ngIf="imageChangedEvent"
+                         [imageBase64]="imageChangedEvent"
+                         [aspectRatio]="1"
+                         [resizeToWidth]="128"
+                         format="jpeg"
+                         (imageCropped)="imageCropped($event)"
+          ></image-cropper>
+          <div class="row justify-content-center">
+            <button *ngIf="imageChangedEvent" (click)="imageChangedEventToNull()" class="btn btn-round btn-sm"
+                    i18n="@@crop-image">Crop image
+            </button>
+          </div>
+          <div class="row justify-content-center">
+            <input type="file" id="file" class="d-none" (change)="fileChangeEvent($event)" accept="image/jpg,image/jpeg"
+                   #fileInput>
+          </div>
 
-					<div [formGroup]="form">
-						<div class="form-group">
-							<label for="profile-firstname"><b>First name</b>
-								<span *ngIf="!firstnameValidSetted"
-									  class="incorrect-input">First name is required</span></label>
-							<input type="text" class="form-control" id="profile-firstname" formControlName="firstName"/>
-						</div>
-						<div class="form-group">
-							<label for="profile-lastname"><b>Last name</b>
-								<span *ngIf="!lastnameValidSetted"
-									  class="incorrect-input">Last name is required</span></label>
-							<input type="text" class="form-control" id="profile-lastname" formControlName="lastName"/>
-						</div>
-						<div class="row justify-content-center m-t-50">
-							<button (click)="updateInfo()" class="btn btn-round green-button">Update</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+          <div [formGroup]="form">
+            <div class="form-group">
+              <label for="profile-firstname"><b i18n="@@first-name">First name</b>
+                <span *ngIf="!firstnameValidSetted"
+                      class="incorrect-input" i18n="@@required-first-name">First name is required</span></label>
+              <input type="text" class="form-control" id="profile-firstname" formControlName="firstName"/>
+            </div>
+            <div class="form-group">
+              <label for="profile-lastname"><b i18n="@@last-name">Last name</b>
+                <span *ngIf="!lastnameValidSetted"
+                      class="incorrect-input" i18n="@@required-last-name">Last name is required</span></label>
+              <input type="text" class="form-control" id="profile-lastname" formControlName="lastName"/>
+            </div>
+            <div class="row justify-content-center m-t-50">
+              <button (click)="updateInfo()" class="btn btn-round green-button" i18n="@@update">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

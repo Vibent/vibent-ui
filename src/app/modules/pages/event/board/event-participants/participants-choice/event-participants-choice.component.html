@@ -1,34 +1,32 @@
 <div class="row justify-content-center">
-  <div class="col-xl-10 text-center">
-    <div class="btn-group event-participation"
-         data-toggle="buttons">
-      <label class="btn btn-primary btn-sm"
-             [class.active]="userParticipation?.answer === participationEventAnswer.YES"
-             (click)="onParticipate()">
-        <input type="radio"
-               name="options"
-               value="red"
-               autocomplete="off"
-               class="event-participation-radios" i18n="@@attending"> I'm in
-      </label>
-      <label class="btn btn-primary btn-sm"
-             [class.active]="userParticipation?.answer === participationEventAnswer.MAYBE"
-             (click)="onMaybe()">
-        <input type="radio"
-               name="options"
-               value="orange"
-               autocomplete="off"
-               class="event-participation-radios" i18n="@@maybe"> Not sure
-      </label>
-      <label class="btn btn-primary btn-sm"
-             [class.active]="userParticipation?.answer === participationEventAnswer.NO"
-             (click)="onNot()">
-        <input type="radio"
-               name="options"
-               value="yellow"
-               autocomplete="off"
-               class="event-participation-radios" i18n="@@not-attending"> No
-      </label>
-    </div>
+  <div class="btn-group event-participation"
+       data-toggle="buttons">
+    <label class="btn btn-primary btn-sm p-l-10 p-r-10"
+           [class.active]="userParticipation?.answer === participationEventAnswer.YES"
+           (click)="onParticipate()" i18n="@@attending">
+      <input type="radio"
+             name="options"
+             value="red"
+             autocomplete="off"
+             class="event-participation-radios"> I'm in
+    </label>
+    <label class="btn btn-primary btn-sm p-l-10 p-r-10"
+           [class.active]="userParticipation?.answer === participationEventAnswer.MAYBE"
+           (click)="onMaybe()" i18n="@@maybe">
+      <input type="radio"
+             name="options"
+             value="orange"
+             autocomplete="off"
+             class="event-participation-radios"> Not sure
+    </label>
+    <label class="btn btn-primary btn-sm p-l-10 p-r-10"
+           [class.active]="userParticipation?.answer === participationEventAnswer.NO"
+           (click)="onNot()" i18n="@@not-attending">
+      <input type="radio"
+             name="options"
+             value="yellow"
+             autocomplete="off"
+             class="event-participation-radios"> No
+    </label>
   </div>
 </div>

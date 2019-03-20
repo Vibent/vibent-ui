@@ -1,16 +1,16 @@
 <div class="group-profile">
-	<ng-container *ngIf="user">
-		<div class="group-user-avatar">
-			<loader [mainCondition]=!user.profilePicLocation
-					[fade]=true
-                    [withLogo]=false
-					[mainSize]=loaderSize></loader>
-			<img class="img" src={{user.profilePicLocation}}>
-		</div>
-		<div class="group-user-body">
-			<div class="group-user-name">{{user.firstName}}</div>
-			<div class="group-user-additional">Joined on {{membership.date | date}}</div>
-		</div>
-	</ng-container>
+  <ng-container *ngIf="user">
+    <div class="group-user-avatar">
+      <loader [mainCondition]=!user.profilePicLocation
+              [fade]=true
+              [withLogo]=false
+              [mainSize]=loaderSize></loader>
+      <img class="img" src={{user.profilePicLocation}}>
+    </div>
+    <div class="group-user-body">
+      <div class="group-user-name">{{user.firstName}}</div>
+      <div class="group-user-additional" i18n="@@joined-on">Joined on {{membership.date | date}}</div>
+    </div>
+  </ng-container>
 </div>
 
