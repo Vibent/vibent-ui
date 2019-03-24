@@ -11,8 +11,8 @@
             </div>
             <div class="modal-body bg-light">
                 <div class="container vibent-modal">
-                    <h2><b>Group members</b></h2>
-                    <p class="lead">The greatest healing therapy is friendship and love.</p>
+                    <h2><b i18n="@@group-members">Group members</b></h2>
+                    <p class="lead" i18n="@@group-members-subtitle">The greatest healing therapy is friendship and love.</p>
                     <div class="row justify-content-center m-t-50">
                         <app-group-preview-member *ngFor="let membership of group.memberships" [membership]=membership>
                         </app-group-preview-member>

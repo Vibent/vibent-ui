@@ -11,30 +11,30 @@
       </div>
       <div class="modal-body bg-light">
         <div class="container vibent-modal">
-          <h2><b i18n="create-an-event">Create an event</b></h2>
-          <p class="lead" i18n="about-to-create-event">You are about to create an event.</p>
+          <h2><b i18n="@@create-an-event">Create an event</b></h2>
+          <p class="lead" i18n="@@about-to-create-event">You are about to create an event.</p>
           <div [formGroup]="form">
             <div class="form-group">
-              <label for="event-title"><b i18n="title">Title</b>
+              <label for="event-title"><b i18n="@@title">Title</b>
                 <span *ngIf="!titleValidSetted"
-                      class="incorrect-input" i18n="required-title">Title is required</span></label>
+                      class="incorrect-input" i18n="@@required-title">Title is required</span></label>
               <input type="text" class="form-control" id="event-title" formControlName="title"/>
             </div>
             <div class="form-group">
-              <label for="event-description"><b i18n="optional-description">Description (optional)</b></label>
+              <label for="event-description"><b i18n="@@optional-description">Description (optional)</b></label>
               <textarea type="text" class="form-control" id="event-description"
                         formControlName="description"></textarea>
             </div>
             <div class="form-group">
-              <label for="event-datetime"><b i18n="date">Date</b>
+              <label for="event-datetime"><b i18n="@@date">Date</b>
                 <span *ngIf="!dateValidSetted"
-                      class="incorrect-input" i18n="required-title"
+                      class="incorrect-input"
                       i18n="@@incorrect-date">Incorrect or past date</span></label>
               <input type="text" class="form-control" id="event-datetime" formControlName="date"/>
 
             </div>
             <div class="row justify-content-center m-t-50">
-              <button (click)="saveEvent()" class="btn btn-round green-button">Create</button>
+              <button (click)="saveEvent()" class="btn btn-round green-button" i18n="@@create">Create</button>
             </div>
           </div>
         </div>

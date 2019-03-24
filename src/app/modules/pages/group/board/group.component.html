@@ -9,8 +9,8 @@
         <div class="score-wrap">
           <a class="cursor-pointer">
             <h5 class="members-number"
-                (click)="openGroupMembersDialog()">
-              {{group.memberships.length}} member<span *ngIf="group.memberships.length>1">s</span>
+                (click)="openGroupMembersDialog()" i18n="@@group-members-number">
+              {{group.memberships.length }} {group.memberships.length, plural, =1 {member} other {members}}
             </h5>
           </a>
           <a class="cursor-pointer">
@@ -27,11 +27,13 @@
           <button class="btn btn-secondary btn-sm dropdown-toggle"
                   type="button"
                   id="dropdownMenuButton"
-                  data-toggle="dropdown">
-            Admin settings
+                  data-toggle="dropdown"
+                  i18n="@@group-settings">
+            Group settings
           </button>
           <div class="dropdown-menu">
-            <a class="dropdown-item cursor-pointer" (click)="openSettingsDialog()">Group settings</a>
+            <a class="dropdown-item cursor-pointer" i18n="@@group-settings" (click)="openSettingsDialog()">
+              Group settings</a>
           </div>
         </div>
 
@@ -40,7 +42,9 @@
         <h5 class="group-description">{{group.description}}</h5>
       </div>
       <div class="col-xl-12 text-center">
-        <div class="btn btn-round white-button" (click)="openEventCreationDialog()">Create an event
+        <div class="btn btn-round white-button"
+             i18n="@@create-an-event"
+             (click)="openEventCreationDialog()">Create an event
         </div>
       </div>
     </div>
