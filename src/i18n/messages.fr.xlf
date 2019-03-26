@@ -360,7 +360,7 @@
 
         </source>
         <target state="translated">Indiquez ce que vous prévoyez d'apporter, demandez aux participants des
-          contributions en aliments et boissons. Gérez les denrées pour l'événement pour ne
+          contributions en aliments et boissons. Gérez les denrées de l'événement pour ne
           manquer de rien !
         </target>
 
@@ -470,8 +470,8 @@
 
         </source>
         <target state="translated">
-          Aidez les participants à organiser leur voyage jusqu'à l'événement ! Certaines personnes pourront
-          offrir des places dans leur voiture, d'autres pourront demander à être prises à un lieu spécifique.
+          Aidez les participants à organiser leurs voyage jusqu'à l'événement ! Certaines personnes pourront
+          offrir des places dans leurs voiture, d'autres pourront demander à être prises à un lieu spécifique.
         </target>
 
 
@@ -1660,7 +1660,7 @@
           just above. Group members can then participate and help you organize
         </source>
         <target state="translated">Il n'y a aucun événement dans ce groupe. Vous pouvez en créer un en cliquant sur
-          le bouton ci-dessus. Les membres du groupe peuvent alors participer et vous aider à organiser
+          le bouton ci-dessus. Les membres du groupe pourront alors participer et vous aider à organiser
         </target>
 
 
@@ -3181,7 +3181,7 @@
       </trans-unit>
       <trans-unit id="group-members-subtitle" datatype="html">
         <source>The greatest healing therapy is friendship and love.</source>
-        <target state="final">L'amitié et l'amour sont le meilleures des thérapies.</target>
+        <target state="final">L'amitié et l'amour sont les meilleures des thérapies.</target>
 
 
         <context-group purpose="location">
@@ -3375,7 +3375,7 @@
       </trans-unit>
       <trans-unit id="event-settings.update-info" datatype="html">
         <source>Update your event's info</source>
-        <target state="final">Mettre à jour les informations de votre événement</target>
+        <target state="final">Mettez à jour les informations de l'événement</target>
 
 
         <context-group purpose="location">
