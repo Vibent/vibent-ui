@@ -1,12 +1,12 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import * as moment from 'moment';
 import { Router } from '@angular/router';
 import { HttpService } from '../../../../../core/http/http.service';
 import { Event } from '../../../../../shared/models/event';
 import { NotificationsService, NotificationType } from '../../../../../core/services/notifications.service';
 import { LoaderService } from '../../../../../core/services/loader/service/loader.service';
 import { MessageService } from '../../../../../core/services/i18n/message.service';
+import { LanguageService } from '../../../../../core/services/i18n/language.service';
 
 declare const $: any;
 
@@ -28,7 +28,8 @@ export class EventCreationComponent implements OnInit {
   titleValidSetted = true;
   dateValidSetted = true;
 
-  constructor(private fb: FormBuilder,
+  constructor(private languageService: LanguageService,
+              private fb: FormBuilder,
               private httpService: HttpService,
               private notificationService: NotificationsService,
               private loaderService: LoaderService,
@@ -39,7 +40,7 @@ export class EventCreationComponent implements OnInit {
   ngOnInit() {
     $('#event-datetime').datepicker({
       position: 'top left',
-      language: 'en',
+      language: this.languageService.getLanguage(),
       minDate: new Date(),
       timepicker: true
     });
@@ -58,7 +59,7 @@ export class EventCreationComponent implements OnInit {
     const event: Event = {
       title: this.form.value.title,
       description: this.form.value.description,
-      startDate:  moment($('#event-datetime').val()).toJSON(),
+      startDate:  this.languageService.formatDateToString($('#event-datetime').val()),
       groupRef: this.groupRef,
     };
 

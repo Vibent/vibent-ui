@@ -9,6 +9,7 @@ import * as moment from 'moment';
 import { EventUpdateService } from '../../../../services/bubbles-services/event-update.service';
 import { LoaderService } from '../../../../services/loader/service/loader.service';
 import { MessageService } from '../../../../services/i18n/message.service';
+import { LanguageService } from '../../../../services/i18n/language.service';
 
 declare const $: any;
 
@@ -33,6 +34,7 @@ export class EventSettingsComponent implements OnInit {
   constructor(private fb: FormBuilder,
               private loaderService: LoaderService,
               private eventUpdateService: EventUpdateService,
+              private languageService: LanguageService,
               private router: Router,
               private adminPanelService: EventAdminPanelService,
               private httpService: HttpService,
@@ -42,7 +44,7 @@ export class EventSettingsComponent implements OnInit {
   ngOnInit() {
     $('#event-date').datepicker({
       position: 'top left',
-      language: 'en',
+      language: this.languageService.getLanguage(),
       minDate: new Date(),
       timepicker: true
     });
@@ -92,7 +94,7 @@ export class EventSettingsComponent implements OnInit {
     const event = {
       title: this.event.title,
       ref: this.event.ref,
-      startDate: moment($('#event-date').val()).toJSON(),
+      startDate: this.languageService.formatDateToString($('#event-date').val()),
       description: this.event.description,
     };
     this.httpService.updateEvent(event).subscribe(() => {

@@ -28,7 +28,6 @@ export interface IMessages {
   DELETE_PROPOSAL_TEXT: string;
   GROUP_JOINED: string;
   GROUP_JOINED_TEXT: string;
-  NO_EVENT_GROUP: string;
   SIZE_TOO_BIG: string;
   SIZE_TOO_BIG_TEXT: string;
 

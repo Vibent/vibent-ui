@@ -61,7 +61,6 @@ export class MessageService implements IMessages {
   MUST_SELECT_REQUEST_LOCATION: string;
   NEED_CREATE_PROPOSAL: string;
   NEED_CREATE_PROPOSAL_TEXT: string;
-  NO_EVENT_GROUP: string;
   NO_REVERT: string;
   NO_SEAT_IN_CAR: string;
   NO_SEAT_IN_CAR_TEXT: string;
