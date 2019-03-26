@@ -1,18 +1,14 @@
 <div class="d-flex justify-content-center">
   <div [hidden]="!toggle" class="card-travel-provider-creation card">
     <div class="card-body">
-      <h4 class="card-title" i18n="request-ride">Request a ride</h4>
-      <div class="card-description" i18n="request-ride-description">
-        Tell participants that you need a car to be taken to the event
-      </div>
+      <h4 class="card-title" i18n="@@request-ride">TBT</h4>
+      <div class="card-description" i18n="@@request-ride-description">TBT</div>
     </div>
 
     <div class="card-body">
       <form novalidate>
         <div class="form-group">
-          <label for="address-input-request" i18n="where-pick-up">
-            Where do you need someone to pick you up?
-          </label>
+          <label for="address-input-request" i18n="@@where-pick-up">TBT</label>
           <input type="search"
                  style="padding-right: 30px"
                  autocomplete="off"
@@ -22,14 +18,10 @@
         </div>
         <button (click)="toggleCreationCard()"
                 class="btn btn-outline-danger"
-                i18n="delete">
-          Delete
-        </button>
+                i18n="@@delete">TBT</button>
         <button (click)="createRequest()"
                 class="btn btn-outline-primary"
-                i18n="add">
-          Add
-        </button>
+                i18n="@@add">TBT</button>
       </form>
     </div>
   </div>

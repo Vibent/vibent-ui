@@ -3,9 +3,7 @@
     <div class="d-flex justify-content-between">
       <div class="p-2"></div>
       <div class="p-2 align-self-center travel-entity-creation"
-           i18n="providers">
-        Providers
-      </div>
+           i18n="@@providers">TBT</div>
       <div class="p-2">
         <div class="add-provider" (click)="toggleProposalCreation()">
           <i class="fa fa-car"></i>
@@ -25,9 +23,7 @@
         <div class="accordion" id="proposal-accordion">
           <div *ngIf="!travelBubble.proposals[0] && !proposalCreationExpanded()"
                class="d-flex justify-content-center m-t-15">
-            <div class="p-2" i18n="no-providers-yet">
-              No one is offering a ride yet. Be the first!
-            </div>
+            <div class="p-2" i18n="@@no-providers-yet">TBT</div>
           </div>
           <travel-proposal
               *ngFor="let proposal of travelBubble.proposals"
@@ -44,9 +40,7 @@
     <div class="d-flex justify-content-between">
       <div class="p-2"></div>
       <div class="p-2 align-self-center travel-entity-creation"
-           i18n="requesters">
-        Requesters
-      </div>
+           i18n="@@requesters">TBT</div>
       <div class="p-2">
         <div class="add-request" (click)="toggleRequestCreation()">
           <i class="fa fa-binoculars"></i>
@@ -67,9 +61,7 @@
           <div *ngIf="!travelBubble.requests[0] && !requestCreationExpanded()"
                class="d-flex justify-content-center m-t-15">
             <div class="p-2"
-                 i18n="no-pending-requests">
-              No pending requests.
-            </div>
+                 i18n="@@no-pending-requests">TBT</div>
           </div>
           <travel-request
               *ngFor="let request of travelBubble.requests"

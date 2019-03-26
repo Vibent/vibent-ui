@@ -11,7 +11,7 @@
       </div>
       <div class="p-2 align-self-center">
         <div class="proposal-trip">
-          <span i18n="need-car-from">I need a car from</span>
+          <span i18n="@@need-car-from">TBT</span>
           {{travelDataModel.headerLocation}}
         </div>
       </div>
@@ -27,22 +27,20 @@
     <div class="card-body">
       <div class="d-flex justify-content-center">
         <div class="p-2 align-self-center">{{(requesterUser | async)?.firstName}} {{(requesterUser | async)?.lastName}}
-          <span i18n="need-car-from">needs a car to go to the event from</span> {{travelDataModel.completeAddress}}
+          <ng-container i18n="@@need-car-from">TBT</ng-container> {{travelDataModel.completeAddress}}
         </div>
       </div>
       <div *ngIf="!isConnectedUserRequest" class="d-flex justify-content-center">
         <div class="p-2 align-self-center">
           <button class="ml-auto btn btn-outline-primary btn-sm"
                   (click)="takeThem()"
-                  i18n="take-them">
-            Take them
-          </button>
+                  i18n="@@take-them">TBT</button>
         </div>
       </div>
       <div [attr.id]="'request-map-'+ travelRequest.id" class="w-100 h-150-p m-t-10"></div>
       <div *ngIf="isConnectedUserRequest" class="d-flex justify-content-start">
         <div class="p-2">
-          <div class="delete-button" (click)="deleteRequest()" i18n="delete">Delete</div>
+          <div class="delete-button" (click)="deleteRequest()" i18n="@@delete">TBT</div>
         </div>
       </div>
     </div>

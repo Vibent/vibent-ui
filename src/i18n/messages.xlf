@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en" datatype="plaintext" original="ng2.template">
+  <file source-language="xxx" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="events" datatype="html">
-        <source>Events</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/sidebar/sidebar.component.html</context>
           <context context-type="linenumber">11</context>
@@ -18,7 +18,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="groups" datatype="html">
-        <source>Groups</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/sidebar/sidebar.component.html</context>
           <context context-type="linenumber">17</context>
@@ -33,21 +33,21 @@
         </context-group>
       </trans-unit>
       <trans-unit id="event-board" datatype="html">
-        <source>Event Board</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="group-information" datatype="html">
-        <source>Group Information</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
           <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="profile" datatype="html">
-        <source>Profile</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
           <context context-type="linenumber">10</context>
@@ -62,7 +62,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="language" datatype="html">
-        <source>Language</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
           <context context-type="linenumber">31</context>
@@ -70,8 +70,8 @@
       </trans-unit>
       <trans-unit id="logout" datatype="html">
         <source>
-          Logout
-        </source>
+                Logout
+              </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
           <context context-type="linenumber">41</context>
@@ -82,26 +82,22 @@
         </context-group>
       </trans-unit>
       <trans-unit id="link-join-group" datatype="html">
-        <source>Woah... that&apos;s a secret link you found there! You want to join
-          this group?
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/group-invitation/group-invitation.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/group/group-invitation/group-invitation.component.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="join-it" datatype="html">
-        <source>Join it</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/group-invitation/group-invitation.component.html
-          </context>
-          <context context-type="linenumber">9</context>
+          <context context-type="sourcefile">app/modules/pages/group/group-invitation/group-invitation.component.html</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="login-vibent" datatype="html">
         <source>
-          Login / Sign up with a Vibent account
+          TBT
         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
@@ -109,7 +105,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="create-join-group" datatype="html">
-        <source>Create or join a group</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
           <context context-type="linenumber">23</context>
@@ -117,7 +113,7 @@
       </trans-unit>
       <trans-unit id="create-join-group-description" datatype="html">
         <source>
-          Keep connected with your friends, colleagues or family and organize together in a group.
+          TBT
         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
@@ -125,7 +121,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="create-events" datatype="html">
-        <source>Create events</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
           <context context-type="linenumber">32</context>
@@ -133,7 +129,7 @@
       </trans-unit>
       <trans-unit id="create-events-description" datatype="html">
         <source>
-          An outing, a birthday or a special event? Create events in one of your groups.
+          TBT
         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
@@ -141,7 +137,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="organize-collaboratively" datatype="html">
-        <source>Organize collaboratively</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
           <context context-type="linenumber">41</context>
@@ -149,7 +145,7 @@
       </trans-unit>
       <trans-unit id="organize-collaboratively-description" datatype="html">
         <source>
-          Allow everyone to help organize, by seeing all contributions in real time.
+          TBT
         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
@@ -157,405 +153,322 @@
         </context-group>
       </trans-unit>
       <trans-unit id="how-it-works" datatype="html">
-        <source>How it works</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
           <context context-type="linenumber">54</context>
         </context-group>
       </trans-unit>
       <trans-unit id="how-it-works-description" datatype="html">
-        <source>
-          An event is composed of multiple bubbles. Each bubble has a type and each type allows you to organize a
-          specific
-          aspect of your event. In a bubble, everyone is a participant and can contribute.
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
           <context context-type="linenumber">55</context>
         </context-group>
       </trans-unit>
       <trans-unit id="our-bubbles" datatype="html">
-        <source>Our bubbles</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">70</context>
+          <context context-type="linenumber">66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="click-each-one-details" datatype="html">
-        <source>Click on each one to see details about it</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">71</context>
+          <context context-type="linenumber">67</context>
         </context-group>
       </trans-unit>
       <trans-unit id="alimentation" datatype="html">
-        <source>Alimentation</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">77</context>
+          <context context-type="linenumber">73</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html</context>
           <context context-type="linenumber">7</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
           <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="travel" datatype="html">
-        <source>Travel</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">82</context>
+          <context context-type="linenumber">78</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/bubbles-preview/travel-bubble/travel-bubble-preview.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/travel-bubble/travel-bubble-preview.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
           <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="checkbox" datatype="html">
-        <source>Checkbox</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">87</context>
+          <context context-type="linenumber">83</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
           <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="survey" datatype="html">
-        <source>Survey</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">92</context>
+          <context context-type="linenumber">88</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
           <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="planning" datatype="html">
-        <source>Planning</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">97</context>
+          <context context-type="linenumber">93</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
           <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="free" datatype="html">
-        <source>Free</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">102</context>
+          <context context-type="linenumber">98</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
           <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="alimentation-bubble" datatype="html">
-        <source>Alimentation bubble</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">111</context>
+          <context context-type="linenumber">107</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/alimentation/alimentation-explanation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/alimentation/alimentation-explanation.html</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="alimentation-bubble-description" datatype="html">
-        <source>
-
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">112</context>
+          <context context-type="linenumber">108</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/alimentation/alimentation-explanation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/alimentation/alimentation-explanation.html</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="checkbox-bubble" datatype="html">
-        <source>Checkbox bubble</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">122</context>
+          <context context-type="linenumber">116</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/checkbox/checkbox-explanation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/checkbox/checkbox-explanation.html</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="checkbox-bubble-description" datatype="html">
-        <source>
-
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">123</context>
+          <context context-type="linenumber">117</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/checkbox/checkbox-explanation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/checkbox/checkbox-explanation.html</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="planning-bubble" datatype="html">
-        <source>Planning bubble</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">133</context>
+          <context context-type="linenumber">125</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/planning/planning-explanation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/planning/planning-explanation.html</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="planning-bubble-description" datatype="html">
-        <source>
-
-        </source>
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">126</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/planning/planning-explanation.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="travel-bubble" datatype="html">
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
           <context context-type="linenumber">134</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/planning/planning-explanation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/travel/travel-explanation.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="travel-bubble-description" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/travel/travel-explanation.html</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="travel-bubble" datatype="html">
-        <source>Travel bubble</source>
+      <trans-unit id="free-bubble" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
+          <context context-type="linenumber">143</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/free/free-explanation.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="free-bubble-description" datatype="html">
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
           <context context-type="linenumber">144</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/travel/travel-explanation.html
-          </context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="travel-bubble-description" datatype="html">
-        <source>
-
-        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">145</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/travel/travel-explanation.html
-          </context>
-          <context context-type="linenumber">7</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="free-bubble" datatype="html">
-        <source>Free bubble</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">155</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/free/free-explanation.html
-          </context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="free-bubble-description" datatype="html">
-        <source>
-
-        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">156</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/free/free-explanation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/free/free-explanation.html</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="survey-bubble" datatype="html">
-        <source>Survey bubble</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">166</context>
+          <context context-type="linenumber">152</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/survey/survey-explanation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/survey/survey-explanation.html</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="survey-bubble-description" datatype="html">
-        <source>
-
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">167</context>
+          <context context-type="linenumber">153</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/survey/survey-explanation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/survey/survey-explanation.html</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="update-your-infos" datatype="html">
-        <source>Update your infos</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html</context>
           <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="can-change-infos-here" datatype="html">
-        <source>You can change some informations about you here.</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html</context>
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="edit-avatar" datatype="html">
-        <source>Edit avatar</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html</context>
           <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="crop-image" datatype="html">
-        <source>Crop image
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html
-          </context>
-          <context context-type="linenumber">32</context>
+          <context context-type="sourcefile">app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="first-name" datatype="html">
-        <source>First name</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html
-          </context>
-          <context context-type="linenumber">42</context>
+          <context context-type="sourcefile">app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html</context>
+          <context context-type="linenumber">40</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html
-          </context>
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="required-first-name" datatype="html">
-        <source>First name is required</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html
-          </context>
-          <context context-type="linenumber">44</context>
+          <context context-type="sourcefile">app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html</context>
+          <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="last-name" datatype="html">
-        <source>Last name</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html
-          </context>
-          <context context-type="linenumber">48</context>
+          <context context-type="sourcefile">app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html</context>
+          <context context-type="linenumber">46</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html
-          </context>
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
           <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="required-last-name" datatype="html">
-        <source>Last name is required</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html
-          </context>
-          <context context-type="linenumber">50</context>
+          <context context-type="sourcefile">app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html</context>
+          <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="update" datatype="html">
-        <source>Update</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html
-          </context>
-          <context context-type="linenumber">54</context>
+          <context context-type="sourcefile">app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html</context>
+          <context context-type="linenumber">52</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html
-          </context>
-          <context context-type="linenumber">45</context>
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
+          <context context-type="linenumber">43</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html
-          </context>
-          <context context-type="linenumber">44</context>
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
+          <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="group-settings" datatype="html">
-        <source>Group settings</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html
-          </context>
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
           <context context-type="linenumber">14</context>
         </context-group>
         <context-group purpose="location">
@@ -564,122 +477,92 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/group/board/group.component.html</context>
-          <context context-type="linenumber">35</context>
+          <context context-type="linenumber">33</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/admin-panels/group/group-admin-panel.component.html</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="group-settings-description" datatype="html">
-        <source>Update your group&apos;s info</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html
-          </context>
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="name" datatype="html">
-        <source>Name</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html
-          </context>
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
       <trans-unit id="required-name" datatype="html">
-        <source>A name is required</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html
-          </context>
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
           <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="optional-description" datatype="html">
-        <source>Description
-          (optional)
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html
-          </context>
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
           <context context-type="linenumber">24</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html
-          </context>
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
           <context context-type="linenumber">21</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/group/dialogs/group-creation/group-creation.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-creation/group-creation.component.html</context>
           <context context-type="linenumber">24</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/dialogs/event-creation/event-creation.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/event-creation.component.html</context>
           <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="leave-group" datatype="html">
-        <source>Leave group</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html
-          </context>
-          <context context-type="linenumber">32</context>
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="leave" datatype="html">
-        <source>Leave</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html
-          </context>
-          <context context-type="linenumber">33</context>
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
+          <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="remove-group" datatype="html">
-        <source>Remove group</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html
-          </context>
-          <context context-type="linenumber">38</context>
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
+          <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="remove-group-description" datatype="html">
-        <source>
-          Removing group will cause all child events and resources to be removed.
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html
-          </context>
-          <context context-type="linenumber">39</context>
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
+          <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="remove" datatype="html">
-        <source>Remove</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html
-          </context>
-          <context context-type="linenumber">41</context>
+          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
+          <context context-type="linenumber">39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="event-settings" datatype="html">
-        <source>Event settings</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html
-          </context>
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
           <context context-type="linenumber">11</context>
         </context-group>
         <context-group purpose="location">
@@ -688,192 +571,170 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event.component.html</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">21</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/admin-panels/event/event-admin-panel.component.html</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="event-settings.update-info" datatype="html">
-        <source>Update your event&apos;s info</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html
-          </context>
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
           <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title" datatype="html">
-        <source>Title</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html
-          </context>
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
           <context context-type="linenumber">15</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/group/dialogs/group-creation/group-creation.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-creation/group-creation.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/dialogs/event-creation/event-creation.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/event-creation.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
       <trans-unit id="required-title" datatype="html">
-        <source>A title is required</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html
-          </context>
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
           <context context-type="linenumber">17</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/group/dialogs/group-creation/group-creation.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-creation/group-creation.component.html</context>
           <context context-type="linenumber">20</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/dialogs/event-creation/event-creation.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/event-creation.component.html</context>
           <context context-type="linenumber">20</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/group/dialogs/group-members/add-group-members/add-group-members.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-members/add-group-members/add-group-members.component.html</context>
           <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="date" datatype="html">
-        <source>Date</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html
-          </context>
-          <context context-type="linenumber">27</context>
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
+          <context context-type="linenumber">26</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/dialogs/event-creation/event-creation.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/event-creation.component.html</context>
           <context context-type="linenumber">29</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html</context>
           <context context-type="linenumber">10</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html</context>
           <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="incorrect-date" datatype="html">
-        <source>Incorrect or past date</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html
-          </context>
-          <context context-type="linenumber">30</context>
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
+          <context context-type="linenumber">29</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/dialogs/event-creation/event-creation.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/event-creation.component.html</context>
           <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="delete-event" datatype="html">
-        <source>Delete event</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html
-          </context>
-          <context context-type="linenumber">36</context>
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="delete-event-irreversible" datatype="html">
-        <source>
-          Deleting an event is irreversible
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html
-          </context>
-          <context context-type="linenumber">37</context>
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
+          <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="delete" datatype="html">
-        <source>Delete</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html
-          </context>
-          <context context-type="linenumber">40</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/content/entry-creation/food/food-entry-creation.html
-          </context>
-          <context context-type="linenumber">33</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/content/entry-creation/drink/drink-entry-creation.html
-          </context>
-          <context context-type="linenumber">33</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/content/alimentation-entry/alimentation-entry.html
-          </context>
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
           <context context-type="linenumber">37</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/planning-entry/planning-entry.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/content/entry-creation/food/food-entry-creation.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/content/entry-creation/drink/drink-entry-creation.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/content/alimentation-entry/alimentation-entry.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/checkbox-bubble/content/checkbox-option/checkbox-option.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/checkbox-bubble/content/option-creation/option-creation.html</context>
           <context context-type="linenumber">11</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html
-          </context>
-          <context context-type="linenumber">49</context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/planning-entry/planning-entry.html</context>
+          <context context-type="linenumber">11</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/settings/settings-delete-bubble.html
-          </context>
-          <context context-type="linenumber">13</context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/settings/settings-delete-bubble.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal/travel-proposal.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request/travel-request.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal-creation/travel-proposal-creation.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request-creation/travel-request-creation.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/content/survey-option-creation/survey-option-creation.html</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="updating" datatype="html">
-        <source>
-          updating
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/loader/loader.component.html</context>
           <context context-type="linenumber">13</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/loader/loader.component.html</context>
-          <context context-type="linenumber">17</context>
+          <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email" datatype="html">
-        <source>Email</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
           <context context-type="linenumber">12</context>
@@ -883,352 +744,299 @@
           <context context-type="linenumber">24</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html
-          </context>
-          <context context-type="linenumber">42</context>
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">40</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html
-          </context>
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
           <context context-type="linenumber">12</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html
-          </context>
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
           <context context-type="linenumber">24</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/group/dialogs/group-members/add-group-members/add-group-members.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-members/add-group-members/add-group-members.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
       <trans-unit id="phone" datatype="html">
-        <source>Phone</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
           <context context-type="linenumber">14</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html
-          </context>
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
           <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email-login" datatype="html">
-        <source>Email login</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
           <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="password" datatype="html">
-        <source>Password</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
           <context context-type="linenumber">29</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">64</context>
+          <context context-type="linenumber">59</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html
-          </context>
-          <context context-type="linenumber">58</context>
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">56</context>
         </context-group>
       </trans-unit>
       <trans-unit id="forgot-password-question" datatype="html">
-        <source>
-          Forgot Password?
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
           <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="login" datatype="html">
-        <source>
-          Login
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">39</context>
+          <context context-type="linenumber">37</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">74</context>
+          <context context-type="linenumber">67</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html
-          </context>
-          <context context-type="linenumber">85</context>
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">81</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dont-have-account-question" datatype="html">
-        <source>Don&apos;t have an account?</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">44</context>
+          <context context-type="linenumber">40</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">78</context>
+          <context context-type="linenumber">71</context>
         </context-group>
       </trans-unit>
       <trans-unit id="create-one" datatype="html">
-        <source>Create One
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">45</context>
+          <context context-type="linenumber">41</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">80</context>
+          <context context-type="linenumber">73</context>
         </context-group>
       </trans-unit>
       <trans-unit id="phone-login" datatype="html">
-        <source>Phone login</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">53</context>
+          <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="phone-number" datatype="html">
-        <source>Phone number</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">57</context>
+          <context context-type="linenumber">52</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html
-          </context>
-          <context context-type="linenumber">50</context>
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">48</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html
-          </context>
-          <context context-type="linenumber">51</context>
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
+          <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="forgot-password" datatype="html">
-        <source>
-          Forgot Password?
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">65</context>
+          <context context-type="linenumber">60</context>
         </context-group>
       </trans-unit>
       <trans-unit id="register" datatype="html">
-        <source>Register</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html
-          </context>
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
           <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="required" datatype="html">
-        <source>required</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html
-          </context>
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
           <context context-type="linenumber">17</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html
-          </context>
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
           <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email-phone-both-question" datatype="html">
-        <source>
-          Email? Phone? Both?
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html
-          </context>
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
           <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="register-email-phone-both" datatype="html">
-        <source>You can register with your email or your phone.
-          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
-          Or even both!
-        </source>
+        <source>TBT<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html
-          </context>
-          <context context-type="linenumber">36</context>
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email-phone-choose-one" datatype="html">
-        <source>But choose at least one!</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html
-          </context>
-          <context context-type="linenumber">38</context>
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="incorrect-email" datatype="html">
-        <source>(incorrect email format)</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html
-          </context>
-          <context context-type="linenumber">43</context>
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="incorrect-phone" datatype="html">
-        <source>(incorrect phone number format)</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html
-          </context>
-          <context context-type="linenumber">51</context>
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8-characters" datatype="html">
-        <source>(8 characters)</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html
-          </context>
-          <context context-type="linenumber">59</context>
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="password-confirmation" datatype="html">
-        <source>Password Confirmation</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html
-          </context>
-          <context context-type="linenumber">66</context>
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">64</context>
         </context-group>
       </trans-unit>
       <trans-unit id="password-not-identical" datatype="html">
-        <source>(password not identical)</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html
-          </context>
-          <context context-type="linenumber">68</context>
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="agree-terms-conditions" datatype="html">
         <source>
-          By clicking on Sign Up, you agree to our
-          <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>
-          Terms and Conditions
-          <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
-        </source>
+                  TBT
+                  <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/> TBT<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
+                </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html
-          </context>
-          <context context-type="linenumber">73</context>
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">71</context>
         </context-group>
       </trans-unit>
       <trans-unit id="sign-up" datatype="html">
-        <source>
-          Sign up
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html
-          </context>
-          <context context-type="linenumber">79</context>
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">77</context>
         </context-group>
       </trans-unit>
       <trans-unit id="already-have-account" datatype="html">
-        <source>Already have an account?</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html
-          </context>
-          <context context-type="linenumber">84</context>
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">80</context>
         </context-group>
       </trans-unit>
       <trans-unit id="reset-password-email" datatype="html">
-        <source>Reset password by email</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html
-          </context>
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
           <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="reset-password-confirm" datatype="html">
         <source>
-          By clicking on &quot;Reset Password&quot; we will send you a password reset link
-        </source>
+                        TBT
+                      </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html
-          </context>
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
           <context context-type="linenumber">26</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html
-          </context>
-          <context context-type="linenumber">54</context>
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
+          <context context-type="linenumber">52</context>
         </context-group>
       </trans-unit>
       <trans-unit id="send-email" datatype="html">
         <source>
-          Send email
-        </source>
+                        TBT
+                      </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html
-          </context>
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
           <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="back-to-login" datatype="html">
         <source>
-          Back to login
-        </source>
+                        TBT
+                      </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html
-          </context>
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
           <context context-type="linenumber">37</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html
-          </context>
-          <context context-type="linenumber">65</context>
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
+          <context context-type="linenumber">63</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/authentification/forgot/reset-password/reset-password.component.html
-          </context>
-          <context context-type="linenumber">32</context>
+          <context context-type="sourcefile">app/core/authentification/forgot/reset-password/reset-password.component.html</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="reset-password-phone" datatype="html">
-        <source>Reset password by phone
-          number
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html
-          </context>
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
           <context context-type="linenumber">46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="send-sms" datatype="html">
         <source>
-          Send SMS
-        </source>
+                        TBT
+                      </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html
-          </context>
-          <context context-type="linenumber">60</context>
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
+          <context context-type="linenumber">58</context>
         </context-group>
       </trans-unit>
       <trans-unit id="profile-header" datatype="html">
-        <source>You. And nobody else.</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/profile/profile.component.html</context>
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="profile-groups-membership" datatype="html">
-        <source>
-          <x id="INTERPOLATION" equiv-text="{{user.memberships.length}}"/>
-          <x id="ICU" equiv-text="{user.memberships.length, plural, =1 {...} other {...}}"/>
-        </source>
+        <source><x id="INTERPOLATION" equiv-text="{{user.memberships.length}}"/>
+              <x id="ICU" equiv-text="{user.memberships.length, plural, =1 {...} other {...}}"/>
+            </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/profile/profile.component.html</context>
           <context context-type="linenumber">16</context>
@@ -1242,10 +1050,9 @@
         </context-group>
       </trans-unit>
       <trans-unit id="events-opportunities" datatype="html">
-        <source>
-          <x id="INTERPOLATION" equiv-text="{{user.participations.length}}"/>
-          <x id="ICU" equiv-text="{user.participations.length, plural, =1 {...} other {...}}"/>
-        </source>
+        <source><x id="INTERPOLATION" equiv-text="{{user.participations.length}}"/>
+              <x id="ICU" equiv-text="{user.participations.length, plural, =1 {...} other {...}}"/>
+            </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/profile/profile.component.html</context>
           <context context-type="linenumber">19</context>
@@ -1259,75 +1066,81 @@
         </context-group>
       </trans-unit>
       <trans-unit id="settings" datatype="html">
-        <source>Settings</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/profile/profile.component.html</context>
           <context context-type="linenumber">34</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/expanded-alimentation-bubble.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/expanded-travel-bubble.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/expanded-planning-bubble.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/expanded-alimentation-bubble.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/free-bubble/expanded-free-bubble.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/checkbox-bubble/expanded-checkbox-bubble.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/expanded-planning-bubble.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/expanded-survey-bubble.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
       <trans-unit id="all-events-attended" datatype="html">
-        <source>All events you attend.</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/attended-events/events.component.html</context>
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="want-to-create-event" datatype="html">
-        <source>Want to create one? Create an event in a group:</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/attended-events/events.component.html</context>
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="go-to-groups" datatype="html">
-        <source>Go to groups page</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/attended-events/events.component.html</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="groups-header" datatype="html">
-        <source>
-          You don&apos;t have a lot of friends, don&apos;t you?
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/group/joined-groups/groups.component.html</context>
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="create-group" datatype="html">
-        <source>
-          Create a group
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/group/joined-groups/groups.component.html</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="group-members-number" datatype="html">
         <source>
-          <x id="INTERPOLATION" equiv-text="{{group.memberships.length }}"/>
-          <x id="ICU" equiv-text="{group.memberships.length, plural, =1 {...} other {...}}"/>
-        </source>
+              <x id="INTERPOLATION" equiv-text="{{group.memberships.length }}"/> <x id="ICU" equiv-text="{group.memberships.length, plural, =1 {...} other {...}}"/>
+            </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/group/board/group.component.html</context>
           <context context-type="linenumber">12</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/group-preview/group-preview.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/group/group-preview/group-preview.component.html</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
@@ -1338,290 +1151,228 @@
           <context context-type="linenumber">13</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/group-preview/group-preview.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/group/group-preview/group-preview.component.html</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="create-an-event" datatype="html">
-        <source>Create an event
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/group/board/group.component.html</context>
-          <context context-type="linenumber">47</context>
+          <context context-type="linenumber">44</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/dialogs/event-creation/event-creation.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/event-creation.component.html</context>
           <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="no-event-in-group" datatype="html">
-        <source>There is no event in this group. You can create one by clicking on the button
-          just above. Group members can then participate and help you organize
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/group/board/group.component.html</context>
-          <context context-type="linenumber">61</context>
+          <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="not-a-member-group" datatype="html">
-        <source>You are not a member of group
-          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
-          <x id="INTERPOLATION" equiv-text="{{group.name}}"/>
-        </source>
+        <source>TBT <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="INTERPOLATION" equiv-text="{{group.name}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/group/public-board/public-group.component.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="request-membership" datatype="html">
-        <source>Request membership</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/group/public-board/public-group.component.html</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="reset-password" datatype="html">
-        <source>Let&apos;s reset your password</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/authentification/forgot/reset-password/reset-password.component.html
-          </context>
+          <context context-type="sourcefile">app/core/authentification/forgot/reset-password/reset-password.component.html</context>
           <context context-type="linenumber">11</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/authentification/forgot/reset-password/reset-password.component.html
-          </context>
-          <context context-type="linenumber">27</context>
+          <context context-type="sourcefile">app/core/authentification/forgot/reset-password/reset-password.component.html</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="new-password" datatype="html">
-        <source>
-          New password<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>(8 characters)
-          <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
-        </source>
+        <source>TBT<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
+                  </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/authentification/forgot/reset-password/reset-password.component.html
-          </context>
+          <context context-type="sourcefile">app/core/authentification/forgot/reset-password/reset-password.component.html</context>
           <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="new-password-confirm" datatype="html">
-        <source>New password Confirmation<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>(password not
-          identical)
-          <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
-        </source>
+        <source>TBT<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>TBT<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
+                  </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/core/authentification/forgot/reset-password/reset-password.component.html
-          </context>
-          <context context-type="linenumber">20</context>
+          <context context-type="sourcefile">app/core/authentification/forgot/reset-password/reset-password.component.html</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="create-a-group" datatype="html">
-        <source>Create a group</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/group/dialogs/group-creation/group-creation.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-creation/group-creation.component.html</context>
           <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="about-to-create-group" datatype="html">
-        <source>You are about to create a group.</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/group/dialogs/group-creation/group-creation.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-creation/group-creation.component.html</context>
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="create" datatype="html">
-        <source>Create</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/group/dialogs/group-creation/group-creation.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-creation/group-creation.component.html</context>
           <context context-type="linenumber">30</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/dialogs/event-creation/event-creation.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/event-creation.component.html</context>
           <context context-type="linenumber">37</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/alimentation/alimentation-explanation.html
-          </context>
-          <context context-type="linenumber">12</context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/alimentation/alimentation-explanation.html</context>
+          <context context-type="linenumber">9</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/checkbox/checkbox-explanation.html
-          </context>
-          <context context-type="linenumber">16</context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/checkbox/checkbox-explanation.html</context>
+          <context context-type="linenumber">15</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/travel/travel-explanation.html
-          </context>
-          <context context-type="linenumber">12</context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/travel/travel-explanation.html</context>
+          <context context-type="linenumber">9</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/planning/planning-explanation.html
-          </context>
-          <context context-type="linenumber">17</context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/planning/planning-explanation.html</context>
+          <context context-type="linenumber">15</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/free/free-explanation.html
-          </context>
-          <context context-type="linenumber">20</context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/free/free-explanation.html</context>
+          <context context-type="linenumber">19</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/survey/survey-explanation.html
-          </context>
-          <context context-type="linenumber">18</context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/survey/survey-explanation.html</context>
+          <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="joined-on" datatype="html">
-        <source>Joined on
-          <x id="INTERPOLATION" equiv-text="{{membership.date | date}}"/>
-        </source>
+        <source>Joined on <x id="INTERPOLATION" equiv-text="{{membership.date | date}}"/></source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/group/group-preview/group-preview-member/group-preview-member.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/group/group-preview/group-preview-member/group-preview-member.component.html</context>
           <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="event-date" datatype="html">
         <source>
-          <x id="ICU" equiv-text="{additionnalEventInfos.remainingDays, plural, =0 {...} other {...}}"/>
-        </source>
+              <x id="ICU" equiv-text="{additionnalEventInfos.remainingDays, plural, =0 {...} other {...}}"/>
+            </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/event-preview/event-preview.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/event-preview/event-preview.component.html</context>
           <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="b3b267b9ce9f2c6e15b0d316dfa8c0a8c376a5ba" datatype="html">
-        <source>{VAR_PLURAL, plural, =0 {Today} other {in
-          <x id="INTERPOLATION" equiv-text="{{additionnalEventInfos.remainingDays}}"/>
-          days} }
-        </source>
+        <source>{VAR_PLURAL, plural, =0 {Today} other {in <x id="INTERPOLATION" equiv-text="{{additionnalEventInfos.remainingDays}}"/>
+              days} }</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/event-preview/event-preview.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/event-preview/event-preview.component.html</context>
           <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="event-past" datatype="html">
         <source>
-          Past
-        </source>
+              Past
+            </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/event-preview/event-preview.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/event-preview/event-preview.component.html</context>
           <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="205ed6b580b87b25ba6258712ea22b3c4309e70e" datatype="html">
         <source>
-          <x id="ICU" equiv-text="{additionnalEventInfos.participants, plural, =1 {...} other {...}}"/>
-        </source>
+                <x id="ICU" equiv-text="{additionnalEventInfos.participants, plural, =1 {...} other {...}}"/>
+              </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/event-preview/event-preview.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/event-preview/event-preview.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
       <trans-unit id="d909c424f758d0a3cb1648bff72b772ffefbc0e1" datatype="html">
         <source>{VAR_PLURAL, plural, =1 {participant} other {participants} }</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/event-preview/event-preview.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/event-preview/event-preview.component.html</context>
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="in" datatype="html">
-        <source>in</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/event-preview/event-preview.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/event-preview/event-preview.component.html</context>
           <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="320e3c78cc2ec800194f4209edb445eee9269940" datatype="html">
         <source>
-          <x id="INTERPOLATION" equiv-text="{{additionnalEventInfos.bubblesNumber}}"/>
-          <x id="ICU" equiv-text="{additionnalEventInfos.bubblesNumber, plural, =1 {...} other {...}}"/>
-        </source>
+                <x id="INTERPOLATION" equiv-text="{{additionnalEventInfos.bubblesNumber}}"/>
+                <x id="ICU" equiv-text="{additionnalEventInfos.bubblesNumber, plural, =1 {...} other {...}}"/>
+              </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/event-preview/event-preview.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/event-preview/event-preview.component.html</context>
           <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="fcf5e52b2931d5a77284f6b2f17cb0c78d39e16f" datatype="html">
         <source>{VAR_PLURAL, plural, =1 {bubble} other {bubbles} }</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/event-preview/event-preview.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/event-preview/event-preview.component.html</context>
           <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="in-group" datatype="html">
-        <source>in group</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/event-preview/event-preview.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/event-preview/event-preview.component.html</context>
           <context context-type="linenumber">39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="about-to-create-event" datatype="html">
-        <source>You are about to create an event.</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/dialogs/event-creation/event-creation.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/event-creation.component.html</context>
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="manage-group" datatype="html">
-        <source>Manage group</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/admin-panels/group/group-admin-panel.component.html</context>
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="manage-group-description" datatype="html">
-        <source>
-          You&apos;re an admin, you can change the group settings and manage membership requests here
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/admin-panels/group/group-admin-panel.component.html</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="manage-event" datatype="html">
-        <source>Manage event</source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/admin-panels/event/event-admin-panel.component.html</context>
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="manage-event-description" datatype="html">
-        <source>
-          You&apos;re an admin, you can change the event settings here
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/admin-panels/event/event-admin-panel.component.html</context>
           <context context-type="linenumber">6</context>
@@ -1629,946 +1380,577 @@
       </trans-unit>
       <trans-unit id="attending" datatype="html">
         <source>
-          <x id="TAG_INPUT" ctype="x-input" equiv-text="&lt;input/&gt;"/>
-          I&apos;m in
-        </source>
+      <x id="TAG_INPUT" ctype="x-input" equiv-text="&lt;input/&gt;"/> TBT
+    </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/event-participants/participants-choice/event-participants-choice.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-choice/event-participants-choice.component.html</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="maybe" datatype="html">
         <source>
-          <x id="TAG_INPUT" ctype="x-input" equiv-text="&lt;input/&gt;"/>
-          Not sure
-        </source>
+      <x id="TAG_INPUT" ctype="x-input" equiv-text="&lt;input/&gt;"/> TBT
+    </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/event-participants/participants-choice/event-participants-choice.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-choice/event-participants-choice.component.html</context>
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="not-attending" datatype="html">
         <source>
-          <x id="TAG_INPUT" ctype="x-input" equiv-text="&lt;input/&gt;"/>
-          No
-        </source>
+      <x id="TAG_INPUT" ctype="x-input" equiv-text="&lt;input/&gt;"/> TBT
+    </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/event-participants/participants-choice/event-participants-choice.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-choice/event-participants-choice.component.html</context>
           <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="bubble" datatype="html">
-        <source>bubble</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/controller/expanded-bubble-controller.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/controller/expanded-bubble-controller.html</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="requested" datatype="html">
-        <source>requested</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html</context>
           <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="provided" datatype="html">
-        <source>provided</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html</context>
           <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="checkbox-options" datatype="html">
-        <source>checkbox options</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/bubbles-preview/checkbox-bubble/checkbox-bubble-preview.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/checkbox-bubble/checkbox-bubble-preview.html</context>
           <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="answers" datatype="html">
-        <source>answers</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/bubbles-preview/checkbox-bubble/checkbox-bubble-preview.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/checkbox-bubble/checkbox-bubble-preview.html</context>
           <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="proposals" datatype="html">
-        <source>proposals</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/bubbles-preview/travel-bubble/travel-bubble-preview.html
-          </context>
-          <context context-type="linenumber">9</context>
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/travel-bubble/travel-bubble-preview.html</context>
+          <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="requests" datatype="html">
-        <source>requests</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/bubbles-preview/travel-bubble/travel-bubble-preview.html
-          </context>
-          <context context-type="linenumber">10</context>
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/travel-bubble/travel-bubble-preview.html</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="planning-entries" datatype="html">
-        <source>planning entries</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/bubbles-preview/planning-bubble/planning-bubble-preview.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/planning-bubble/planning-bubble-preview.html</context>
           <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="possible-answers" datatype="html">
-        <source>possible answers</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/bubbles-preview/survey-bubble/survey-bubble-preview.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/survey-bubble/survey-bubble-preview.html</context>
           <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="121cc5391cd2a5115bc2b3160379ee5b36cd7716" datatype="html">
-        <source>Settings</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/expanded-travel-bubble.html
-          </context>
-          <context context-type="linenumber">18</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/free-bubble/expanded-free-bubble.html
-          </context>
-          <context context-type="linenumber">17</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/checkbox-bubble/expanded-checkbox-bubble.html
-          </context>
-          <context context-type="linenumber">18</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/expanded-survey-bubble.html
-          </context>
-          <context context-type="linenumber">18</context>
-        </context-group>
-        <note priority="1" from="description">settings</note>
-      </trans-unit>
       <trans-unit id="food-name" datatype="html">
-        <source>Food name</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/content/entry-creation/food/food-entry-creation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/content/entry-creation/food/food-entry-creation.html</context>
           <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="quantity" datatype="html">
-        <source>Quantity</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/content/entry-creation/food/food-entry-creation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/content/entry-creation/food/food-entry-creation.html</context>
           <context context-type="linenumber">17</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/content/entry-creation/drink/drink-entry-creation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/content/entry-creation/drink/drink-entry-creation.html</context>
           <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="add" datatype="html">
-        <source>
-          Add
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/content/entry-creation/food/food-entry-creation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/content/entry-creation/food/food-entry-creation.html</context>
           <context context-type="linenumber">39</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/content/entry-creation/drink/drink-entry-creation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/content/entry-creation/drink/drink-entry-creation.html</context>
           <context context-type="linenumber">39</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html
-          </context>
-          <context context-type="linenumber">54</context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/checkbox-bubble/content/option-creation/option-creation.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal-creation/travel-proposal-creation.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request-creation/travel-request-creation.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/content/survey-option-creation/survey-option-creation.html</context>
+          <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="drink-name" datatype="html">
-        <source>Drink name</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/content/entry-creation/drink/drink-entry-creation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/content/entry-creation/drink/drink-entry-creation.html</context>
           <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="by" datatype="html">
         <source>by</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/content/alimentation-entry/alimentation-entry.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/content/alimentation-entry/alimentation-entry.html</context>
           <context context-type="linenumber">13</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/planning-entry/planning-entry.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/planning-entry/planning-entry.html</context>
           <context context-type="linenumber">7</context>
         </context-group>
-      </trans-unit>
-      <trans-unit id="ccd5cd040814dbd955440eee74c6039f1e570f82" datatype="html">
-        <source>Unchecked</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/checkbox-bubble/content/checkbox-option/checkbox-option.html
-          </context>
-          <context context-type="linenumber">15</context>
-        </context-group>
-        <note priority="1" from="description">unchecked</note>
-      </trans-unit>
-      <trans-unit id="b861ed5da3dd3eb5d9c310853179eafc152d7b68" datatype="html">
-        <source>
-          Delete
-        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/checkbox-bubble/content/checkbox-option/checkbox-option.html
-          </context>
-          <context context-type="linenumber">19</context>
-        </context-group>
-        <note priority="1" from="description">delete</note>
-      </trans-unit>
-      <trans-unit id="7603961d6fabd774a6c472bd45f38b80589b1e08" datatype="html">
-        <source>
-          Add an option:
-        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/checkbox-bubble/content/option-creation/option-creation.html
-          </context>
-          <context context-type="linenumber">2</context>
-        </context-group>
-        <note priority="1" from="description">add-option</note>
-      </trans-unit>
-      <trans-unit id="826b25211922a1b46436589233cb6f1a163d89b7" datatype="html">
-        <source>Delete</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/checkbox-bubble/content/option-creation/option-creation.html
-          </context>
-          <context context-type="linenumber">10</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal/travel-proposal.html
-          </context>
-          <context context-type="linenumber">57</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request/travel-request.html
-          </context>
-          <context context-type="linenumber">45</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/content/survey-option-creation/survey-option-creation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/free-bubble/content/free-content.html</context>
           <context context-type="linenumber">8</context>
         </context-group>
-        <note priority="1" from="description">delete</note>
       </trans-unit>
-      <trans-unit id="f6755cff4957d5c3c89bafce5651f1b6fa2b1fd9" datatype="html">
-        <source>Add</source>
+      <trans-unit id="unchecked" datatype="html">
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/checkbox-bubble/content/option-creation/option-creation.html
-          </context>
-          <context context-type="linenumber">11</context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/checkbox-bubble/content/checkbox-option/checkbox-option.html</context>
+          <context context-type="linenumber">15</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="add-option" datatype="html">
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/content/survey-option-creation/survey-option-creation.html
-          </context>
-          <context context-type="linenumber">9</context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/checkbox-bubble/content/option-creation/option-creation.html</context>
+          <context context-type="linenumber">2</context>
         </context-group>
-        <note priority="1" from="description">add</note>
       </trans-unit>
       <trans-unit id="at" datatype="html">
-        <source>by</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/planning-entry/planning-entry.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/planning-entry/planning-entry.html</context>
           <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="add-planning-entry" datatype="html">
-        <source>Add a planning entry</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="invalid-date" datatype="html">
-        <source>Incorrect or past date</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html</context>
           <context context-type="linenumber">12</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html</context>
           <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="add-a-time" datatype="html">
-        <source>Add a time</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html</context>
           <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="content" datatype="html">
-        <source>Time</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html</context>
           <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="missing-required-description" datatype="html">
-        <source>A description of your plan is needed</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html</context>
           <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="delete-a-bubble" datatype="html">
-        <source>
-          Delete bubble
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/settings/settings-delete-bubble.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/settings/settings-delete-bubble.html</context>
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="delete-bubble-warning" datatype="html">
-        <source>
-          Deleting bubble will delete all information and data relating to it
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/settings/settings-delete-bubble.html
-          </context>
-          <context context-type="linenumber">8</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="e1b5d456d5675368280cb562b18710c7273254ad" datatype="html">
-        <source>seats left</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal/travel-proposal.html
-          </context>
-          <context context-type="linenumber">17</context>
-        </context-group>
-        <note priority="1" from="description">seats-left</note>
-      </trans-unit>
-      <trans-unit id="e0892bd198059eb237a035fedf2133653a923160" datatype="html">
-        <source>In car</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal/travel-proposal.html
-          </context>
-          <context context-type="linenumber">32</context>
-        </context-group>
-        <note priority="1" from="description">in-car</note>
-      </trans-unit>
-      <trans-unit id="826b09911d3ae7326521ef71bea2c51e88bede03" datatype="html">
-        <source>Leave from</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal/travel-proposal.html
-          </context>
-          <context context-type="linenumber">52</context>
-        </context-group>
-        <note priority="1" from="description">leave-from</note>
-      </trans-unit>
-      <trans-unit id="de7c1b07b2d21f48ba166b65eab9b1c6d6d4936e" datatype="html">
-        <source>I need a car from</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request/travel-request.html
-          </context>
-          <context context-type="linenumber">14</context>
-        </context-group>
-        <note priority="1" from="description">need-car-from</note>
-      </trans-unit>
-      <trans-unit id="55d134c4c1118f842372604baa697aafc5711e65" datatype="html">
-        <source>needs a car to go to the event from</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request/travel-request.html
-          </context>
-          <context context-type="linenumber">30</context>
-        </context-group>
-        <note priority="1" from="description">need-car-from</note>
-      </trans-unit>
-      <trans-unit id="6573fa36b6d37ce838772702c2c2d1be2cc431cf" datatype="html">
-        <source>
-          Take them
-        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request/travel-request.html
-          </context>
-          <context context-type="linenumber">37</context>
-        </context-group>
-        <note priority="1" from="description">take-them</note>
-      </trans-unit>
-      <trans-unit id="747bd65c7241c549141943b5f94517894def3e78" datatype="html">
-        <source>Offer a ride</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal-creation/travel-proposal-creation.html
-          </context>
-          <context context-type="linenumber">4</context>
-        </context-group>
-        <note priority="1" from="description">offer-ride</note>
-      </trans-unit>
-      <trans-unit id="0df3b85bf2b962233a3a736c4b56210f4d38e982" datatype="html">
-        <source>
-          You are about to offer other participants places in your car to go to the event
-        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal-creation/travel-proposal-creation.html
-          </context>
-          <context context-type="linenumber">5</context>
-        </context-group>
-        <note priority="1" from="description">travel-proposal-description</note>
-      </trans-unit>
-      <trans-unit id="b20028ef2e08d10926b7b79fdca36111fb32f05b" datatype="html">
-        <source>Where are you going from?</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal-creation/travel-proposal-creation.html
-          </context>
-          <context context-type="linenumber">13</context>
-        </context-group>
-        <note priority="1" from="description">where-going-from</note>
-      </trans-unit>
-      <trans-unit id="cc20826a164d8b85d5e03e40438fa9a76ff7bc32" datatype="html">
-        <source>Seats available</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal-creation/travel-proposal-creation.html
-          </context>
-          <context context-type="linenumber">22</context>
-        </context-group>
-        <note priority="1" from="description">seats-available</note>
-      </trans-unit>
-      <trans-unit id="17c7bc4ead8a8d8180ca9fe6b865d5ccc1290694" datatype="html">
-        <source>
-          Delete
-        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal-creation/travel-proposal-creation.html
-          </context>
-          <context context-type="linenumber">32</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request-creation/travel-request-creation.html
-          </context>
-          <context context-type="linenumber">25</context>
-        </context-group>
-        <note priority="1" from="description">delete</note>
-      </trans-unit>
-      <trans-unit id="34167c103123c3ef8f47e5305188fa4337f92a1e" datatype="html">
-        <source>
-          Add
-        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal-creation/travel-proposal-creation.html
-          </context>
-          <context context-type="linenumber">37</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request-creation/travel-request-creation.html
-          </context>
-          <context context-type="linenumber">30</context>
-        </context-group>
-        <note priority="1" from="description">add</note>
-      </trans-unit>
-      <trans-unit id="79c4f583f7af04d79846e532e3468fa0dca59a77" datatype="html">
-        <source>Request a ride</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request-creation/travel-request-creation.html
-          </context>
-          <context context-type="linenumber">4</context>
-        </context-group>
-        <note priority="1" from="description">request-ride</note>
-      </trans-unit>
-      <trans-unit id="7854e13f48f8ba84f1c1832224f932b7f80f8d4d" datatype="html">
-        <source>
-          Tell participants that you need a car to be taken to the event
-        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request-creation/travel-request-creation.html
-          </context>
-          <context context-type="linenumber">5</context>
-        </context-group>
-        <note priority="1" from="description">request-ride-description</note>
-      </trans-unit>
-      <trans-unit id="7321f6951bed9ee6f97bc89ee8db252088697d72" datatype="html">
-        <source>
-          Where do you need someone to pick you up?
-        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request-creation/travel-request-creation.html
-          </context>
-          <context context-type="linenumber">13</context>
-        </context-group>
-        <note priority="1" from="description">where-pick-up</note>
-      </trans-unit>
-      <trans-unit id="ee3b745d9e92b4ff33427f669fe84ad01f6b3c99" datatype="html">
-        <source>
-          Travel bubble settings
-        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/settings/travel-settings.html
-          </context>
-          <context context-type="linenumber">5</context>
-        </context-group>
-        <note priority="1" from="description">travel-bubble-settings</note>
-      </trans-unit>
-      <trans-unit id="90721683c965f09ff7572f39f0c9965bf4f8f371" datatype="html">
-        <source>
-          You can change the bubble settings here
-        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/settings/travel-settings.html
-          </context>
-          <context context-type="linenumber">8</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/free-bubble/settings/free-settings.html
-          </context>
-          <context context-type="linenumber">8</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/checkbox-bubble/settings/checkbox-settings.html
-          </context>
-          <context context-type="linenumber">8</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/settings/planning-settings.html
-          </context>
-          <context context-type="linenumber">8</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/settings/survey-settings.html
-          </context>
-          <context context-type="linenumber">8</context>
-        </context-group>
-        <note priority="1" from="description">bubble-settings-description</note>
-      </trans-unit>
-      <trans-unit id="f2a678c59d338c77bf1c91c20e04154395bbc680" datatype="html">
-        <source>
-          Providers
-        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-content.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/settings/settings-delete-bubble.html</context>
           <context context-type="linenumber">6</context>
         </context-group>
-        <note priority="1" from="description">providers</note>
       </trans-unit>
-      <trans-unit id="53175e5a43c73a5ff73ec52160e9106e8c0e15b7" datatype="html">
-        <source>
-          No one is offering a ride yet. Be the first!
-        </source>
+      <trans-unit id="seats-left" datatype="html">
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-content.html
-          </context>
-          <context context-type="linenumber">28</context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal/travel-proposal.html</context>
+          <context context-type="linenumber">17</context>
         </context-group>
-        <note priority="1" from="description">no-providers-yet</note>
       </trans-unit>
-      <trans-unit id="7e5d8b5ba3a50d88190481b7e8a8ada80ad302cf" datatype="html">
-        <source>
-          Requesters
-        </source>
+      <trans-unit id="in-car" datatype="html">
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-content.html
-          </context>
-          <context context-type="linenumber">47</context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal/travel-proposal.html</context>
+          <context context-type="linenumber">32</context>
         </context-group>
-        <note priority="1" from="description">requesters</note>
       </trans-unit>
-      <trans-unit id="9bdade36796270b8185bffb4e063cbc714fca33c" datatype="html">
-        <source>
-          No pending requests.
-        </source>
+      <trans-unit id="leave-from" datatype="html">
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-content.html
-          </context>
-          <context context-type="linenumber">70</context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal/travel-proposal.html</context>
+          <context context-type="linenumber">52</context>
         </context-group>
-        <note priority="1" from="description">no-pending-requests</note>
       </trans-unit>
-      <trans-unit id="alimentation-bubble-settings" datatype="html">
-        <source>
-          Alimentation bubble settings
-        </source>
+      <trans-unit id="need-car-from" datatype="html">
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/settings/alimentation-settings.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request/travel-request.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request/travel-request.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="take-them" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request/travel-request.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="offer-ride" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal-creation/travel-proposal-creation.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="travel-proposal-description" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal-creation/travel-proposal-creation.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="where-going-from" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal-creation/travel-proposal-creation.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="seats-available" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal-creation/travel-proposal-creation.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="request-ride" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request-creation/travel-request-creation.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="request-ride-description" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request-creation/travel-request-creation.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="where-pick-up" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request-creation/travel-request-creation.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="travel-bubble-settings" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/settings/travel-settings.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="bubble-settings-description" datatype="html">
-        <source>
-          You can change the bubble settings here
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/settings/alimentation-settings.html
-          </context>
-          <context context-type="linenumber">8</context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/settings/travel-settings.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/settings/alimentation-settings.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/free-bubble/settings/free-settings.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/checkbox-bubble/settings/checkbox-settings.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/settings/planning-settings.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/settings/survey-settings.html</context>
+          <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="322ca8186a0155959ea2f66bbc3f46338b4ee1e0" datatype="html">
-        <source>
-          Free bubble settings
-        </source>
+      <trans-unit id="providers" datatype="html">
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/free-bubble/settings/free-settings.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-content.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="no-providers-yet" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-content.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="requesters" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-content.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="no-pending-requests" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-content.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="alimentation-bubble-settings" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/settings/alimentation-settings.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
-        <note priority="1" from="description">free-bubble-settings</note>
-      </trans-unit>
-      <trans-unit id="7026bd1cbbf23864700f501e89df017d0b8d755d" datatype="html">
-        <source>by</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/free-bubble/content/free-content.html
-          </context>
-          <context context-type="linenumber">8</context>
-        </context-group>
-        <note priority="1" from="description">by</note>
-      </trans-unit>
-      <trans-unit id="0b4a4768e6a7261a93cdcc7bff0cb5e7fbd8ee14" datatype="html">
-        <source>
-          Checkbox bubble settings
-        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/checkbox-bubble/settings/checkbox-settings.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/settings/survey-settings.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
-        <note priority="1" from="description">checkbox-bubble-settings</note>
+      </trans-unit>
+      <trans-unit id="free-bubble-settings" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/free-bubble/settings/free-settings.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="checkbox-bubble-settings" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/checkbox-bubble/settings/checkbox-settings.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="your-planning-bubble-title" datatype="html">
-        <source>Your planning bubble title</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/planning-content.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/planning-content.html</context>
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="planning-bubble-settings" datatype="html">
-        <source>
-          Planning bubble settings
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/settings/planning-settings.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/settings/planning-settings.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="fa348d28cc205f129fa571fb322af58c9278c53b" datatype="html">
-        <source>Survey option</source>
+      <trans-unit id="survey-option" datatype="html">
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/content/survey-option-creation/survey-option-creation.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/content/survey-option-creation/survey-option-creation.html</context>
           <context context-type="linenumber">3</context>
         </context-group>
-        <note priority="1" from="description">survey-option</note>
       </trans-unit>
-      <trans-unit id="3224bf8a16c5c1d1622ebed12eb2e8512dcd79b1" datatype="html">
-        <source>
-          Add an option
-        </source>
+      <trans-unit id="add-an-option" datatype="html">
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/content/survey-content.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/content/survey-content.html</context>
           <context context-type="linenumber">21</context>
         </context-group>
-        <note priority="1" from="description">add-an-option</note>
       </trans-unit>
-      <trans-unit id="a9939869bddd5ec2f841657767fee34371aa600e" datatype="html">
-        <source>
-          Survey bubble settings
-        </source>
+      <trans-unit id="voted" datatype="html">
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/settings/survey-settings.html
-          </context>
-          <context context-type="linenumber">5</context>
-        </context-group>
-        <note priority="1" from="description">alimentation-bubble-settings</note>
-      </trans-unit>
-      <trans-unit id="a4b1f2465b41e566fb4fd778d6961d6f5c33b6c5" datatype="html">
-        <source>Voted</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/content/survey-option/survey-option.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/content/survey-option/survey-option.html</context>
           <context context-type="linenumber">19</context>
         </context-group>
-        <note priority="1" from="description">voted</note>
       </trans-unit>
-      <trans-unit id="a77c3289097849c6e78d5e05e1428c0dc3fc7718" datatype="html">
-        <source>
-          Vote
-        </source>
+      <trans-unit id="vote" datatype="html">
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/content/survey-option/survey-option.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/content/survey-option/survey-option.html</context>
           <context context-type="linenumber">24</context>
         </context-group>
-        <note priority="1" from="description">vote</note>
       </trans-unit>
       <trans-unit id="type-checkbox-title" datatype="html">
-        <source>Type the checkbox title:</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/checkbox/checkbox-explanation.html
-          </context>
-          <context context-type="linenumber">9</context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/checkbox/checkbox-explanation.html</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="type-planning-title" datatype="html">
-        <source>Type the planning title:</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/planning/planning-explanation.html
-          </context>
-          <context context-type="linenumber">10</context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/planning/planning-explanation.html</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="type-free-title" datatype="html">
-        <source>Type the free title:</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/free/free-explanation.html
-          </context>
-          <context context-type="linenumber">9</context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/free/free-explanation.html</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="add-additional-content" datatype="html">
-        <source>Add some additional content: (optional)</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/free/free-explanation.html
-          </context>
-          <context context-type="linenumber">14</context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/free/free-explanation.html</context>
+          <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
       <trans-unit id="type-survey-title" datatype="html">
-        <source>Type the survey title:</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/survey/survey-explanation.html
-          </context>
-          <context context-type="linenumber">11</context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/survey/survey-explanation.html</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="choose-bubble" datatype="html">
-        <source>Choose a bubble</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
           <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="group-members" datatype="html">
-        <source>Group members</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/group/dialogs/group-members/group-members.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-members/group-members.component.html</context>
           <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="group-members-subtitle" datatype="html">
-        <source>The greatest healing therapy is friendship and love.</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/group/dialogs/group-members/group-members.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-members/group-members.component.html</context>
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="add-people-by-email" datatype="html">
-        <source>Add people by email</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/group/dialogs/group-members/add-group-members/add-group-members.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-members/add-group-members/add-group-members.component.html</context>
           <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="can-invite-people-by-email" datatype="html">
-        <source>You can invite people by email</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/group/dialogs/group-members/add-group-members/add-group-members.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-members/add-group-members/add-group-members.component.html</context>
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="send-invitation" datatype="html">
-        <source>Send invitation
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/group/dialogs/group-members/add-group-members/add-group-members.component.html
-          </context>
+          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-members/add-group-members/add-group-members.component.html</context>
           <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="add-people-by-link" datatype="html">
-        <source>Add people with a magic link</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/group/dialogs/group-members/add-group-members/add-group-members.component.html
-          </context>
-          <context context-type="linenumber">30</context>
+          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-members/add-group-members/add-group-members.component.html</context>
+          <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="can-invite-people-by-link" datatype="html">
-        <source>You can invite people by sending them a magic link</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/group/dialogs/group-members/add-group-members/add-group-members.component.html
-          </context>
-          <context context-type="linenumber">31</context>
+          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-members/add-group-members/add-group-members.component.html</context>
+          <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="magic-link" datatype="html">
-        <source>Magic link</source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/group/dialogs/group-members/add-group-members/add-group-members.component.html
-          </context>
-          <context context-type="linenumber">33</context>
+          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-members/add-group-members/add-group-members.component.html</context>
+          <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="send-url-join-group" datatype="html">
-        <source>Send this URL to your friends to allow them to
-          join
-          your group.
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/group/dialogs/group-members/add-group-members/add-group-members.component.html
-          </context>
-          <context context-type="linenumber">36</context>
+          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-members/add-group-members/add-group-members.component.html</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="generate-link" datatype="html">
-        <source>Generate a link
-        </source>
+        <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">
-            app/modules/pages/group/dialogs/group-members/add-group-members/add-group-members.component.html
-          </context>
-          <context context-type="linenumber">42</context>
+          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-members/add-group-members/add-group-members.component.html</context>
+          <context context-type="linenumber">39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="social-login" datatype="html">
-        <source>Login with a
-          <x id="INTERPOLATION" equiv-text="{{provider.label | lowercase}}"/>
-          account
-        </source>
+        <source>TBT <x id="INTERPOLATION" equiv-text="{{provider.label | lowercase}}"/> TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/social/social-auth.component.html</context>
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer-text" datatype="html">
-        <source>Copyright ©
-          <x id="INTERPOLATION" equiv-text="{{date | date:&apos;yyyy&apos;}}"/>
-          Vibent. All rights reserved
-        </source>
+        <source>Copyright © <x id="INTERPOLATION" equiv-text="{{date | date:&apos;yyyy&apos;}}"/> Vibent. All rights reserved</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/footer/footer.component.html</context>
           <context context-type="linenumber">3</context>

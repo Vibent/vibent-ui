@@ -3,11 +3,11 @@
     <div class="navbar-wrapper">
       <img class="vibent-logo" src="./assets/img/vibent.svg" style="width: 90px">
       <span class="navbar-brand" [ngSwitch]="this.activeRoute">
-        <span *ngSwitchCase="'events'" i18n="@@events">Events</span>
-        <span *ngSwitchCase="'events/:ref'" i18n="@@event-board">Event Board</span>
-        <span *ngSwitchCase="'groups'" i18n="@@groups">Groups</span>
-        <span *ngSwitchCase="'groups/:ref'" i18n="@@group-information">Group Information</span>
-        <span *ngSwitchCase="'me'" i18n="@@profile">Profile</span>
+        <span *ngSwitchCase="'events'" i18n="@@events">TBT</span>
+        <span *ngSwitchCase="'events/:ref'" i18n="@@event-board">TBT</span>
+        <span *ngSwitchCase="'groups'" i18n="@@groups">TBT</span>
+        <span *ngSwitchCase="'groups/:ref'" i18n="@@group-information">TBT</span>
+        <span *ngSwitchCase="'me'" i18n="@@profile">TBT</span>
       </span>
     </div>
     <loader [mainCondition]=loaderService.displayLoader() [eventUpdated]=loaderService.eventUpdated [withLogo]=false
@@ -28,7 +28,7 @@
             </li>
 
             <li>
-              <a id="languageToggle" (click)="toggleLanguagesSubmenu($event)" class="dropdown-item" i18n="@@language">Language</a>
+              <a id="languageToggle" (click)="toggleLanguagesSubmenu($event)" class="dropdown-item" i18n="@@language">TBT</a>
               <ul id="languageMenu" class="collapse">
                 <li>
                   <a (click)="changeLanguage('en')"><span class="flag-icon flag-icon-gb"></span>English</a>
@@ -53,15 +53,15 @@
   <div class="d-flex justify-content-around">
     <div class="text-center cursor-pointer" [routerLink]="['/events']">
       <i class="material-icons">bubble_chart</i>
-      <div class="menu-title" i18n="@@events">Events</div>
+      <div class="menu-title" i18n="@@events">TBT</div>
     </div>
     <div class="text-center cursor-pointer" [routerLink]="['/groups']">
       <i class="material-icons">group</i>
-      <div class="menu-title" i18n="@@groups">Groups</div>
+      <div class="menu-title" i18n="@@groups">TBT</div>
     </div>
     <div class="text-center cursor-pointer" [routerLink]="['/me']">
       <i class="material-icons">person</i>
-      <div class="menu-title" i18n="@@profile">Profile</div>
+      <div class="menu-title" i18n="@@profile">TBT</div>
     </div>
   </div>
 </nav>

@@ -14,7 +14,7 @@
       </div>
       <div class="p-2 align-self-center">
         <div class="proposal-seats"><b>{{travelDataModel.seatsLeft}}</b>
-          <span i18n="seats-left">seats left</span>
+          <span i18n="@@seats-left">TBT</span>
         </div>
       </div>
       <div class="ml-auto p-2 m-r-10 align-self-center">
@@ -29,7 +29,7 @@
        class="collapse">
     <div class="card-body">
       <div class="d-flex justify-content-center">
-        <div class="p-2 align-self-center" i18n="in-car">In car</div>
+        <div class="p-2 align-self-center" i18n="@@in-car">TBT</div>
       </div>
       <div class="d-flex flex-wrap justify-content-center">
         <div *ngFor="let request of travelProposal.attachedRequests" class="p-2 align-self-center">
@@ -49,12 +49,12 @@
         </div>
       </div>
       <div class="d-flex justify-content-center">
-        <div class="p-2 align-self-center"><span i18n="leave-from">Leave from</span>  {{travelDataModel.completeAddress}}</div>
+        <div class="p-2 align-self-center"><ng-container i18n="@@leave-from">TBT</ng-container>  {{travelDataModel.completeAddress}}</div>
       </div>
       <div [attr.id]="'proposal-map-'+ this.travelProposal.id" class="w-100 h-150-p m-t-10"></div>
       <div *ngIf="isConnectedUserRequest" class="d-flex justify-content-start">
         <div class="p-2">
-          <div class="delete-button" (click)="deleteProposal()" i18n="delete">Delete</div>
+          <div class="delete-button" (click)="deleteProposal()" i18n="@@delete">TBT</div>
         </div>
       </div>
     </div>

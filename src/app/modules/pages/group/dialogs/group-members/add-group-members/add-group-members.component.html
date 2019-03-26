@@ -11,36 +11,32 @@
       </div>
       <div class="modal-body bg-light">
         <div class="container vibent-modal">
-          <h2><b i18n="@@add-people-by-email">Add people by email</b></h2>
-          <p class="lead" i18n="@@can-invite-people-by-email">You can invite people by email</p>
+          <h2><b i18n="@@add-people-by-email">TBT</b></h2>
+          <p class="lead" i18n="@@can-invite-people-by-email">TBT</p>
           <div [formGroup]="form">
             <div class="form-group">
-              <label for="email-invite"><b i18n="@@email">Email</b>
+              <label for="email-invite"><b i18n="@@email">TBT</b>
                 <span *ngIf="!emailValidSetted"
-                      class="incorrect-input" i18n="@@required-title">Email is required</span></label>
+                      class="incorrect-input" i18n="@@required-title">TBT</span></label>
               <input type="text" class="form-control" id="email-invite" formControlName="email"/>
             </div>
             <div class="row justify-content-center">
               <button (click)="sendInvitation()"
                       class="btn btn-round white-button m-t-15"
-                      i18n="@@send-invitation">Send invitation
-              </button>
+                      i18n="@@send-invitation">TBT</button>
             </div>
           </div>
-          <h2 class="m-t-50"><b i18n="@@add-people-by-link">Add people with a magic link</b></h2>
-          <p class="lead" i18n="@@can-invite-people-by-link">You can invite people by sending them a magic link</p>
+          <h2 class="m-t-50"><b i18n="@@add-people-by-link">TBT</b></h2>
+          <p class="lead" i18n="@@can-invite-people-by-link">TBT</p>
           <div class="form-group">
-            <label for="invite-token"><b i18n="@@magic-link">Magic link</b></label>
+            <label for="invite-token"><b i18n="@@magic-link">TBT</b></label>
             <input readonly type="text" class="form-control" id="invite-token" value="{{generatedLink}}"/>
           </div>
-          <h5 class="text-center m-t-20" i18n="@@send-url-join-group">Send this URL to your friends to allow them to
-            join
-            your group.</h5>
+          <h5 class="text-center m-t-20" i18n="@@send-url-join-group">TBT</h5>
           <div class="row justify-content-center">
             <button (click)="generateLink()"
                     class="btn btn-round green-button"
-                    i18n="@@generate-link">Generate a link
-            </button>
+                    i18n="@@generate-link">TBT</button>
           </div>
         </div>
 
