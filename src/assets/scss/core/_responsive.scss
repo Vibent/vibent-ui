@@ -84,9 +84,13 @@
       margin-left: 0.1875px;
     }
   }
+
+  .vibent-logo {
+    display: none;
+  }
 }
 
-/*Changes for small display*/
+/* Changes for small display */
 @media (max-width: 991px) {
 
   .form-group {
@@ -255,7 +259,7 @@
     padding: 0;
   }
 
-  .modal-dialog{
+  .modal-dialog {
     margin: 0 !important;
   }
 }

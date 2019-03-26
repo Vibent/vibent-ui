@@ -30,7 +30,6 @@ export class MessagesEn implements IMessages {
   public readonly DELETE_PROPOSAL_TEXT = 'You\'re about to delete your proposal';
   public readonly GROUP_JOINED = 'Group joined.';
   public readonly GROUP_JOINED_TEXT = 'Go to groups page.';
-  public readonly NO_EVENT_GROUP = 'There is no event in this group. You can create one by clicking on the button just above. Group members can then participate and help you organize';
   public readonly SIZE_TOO_BIG = 'Image too big';
   public readonly SIZE_TOO_BIG_TEXT = 'Your image is too big, please select another one.';
 
@@ -51,8 +50,8 @@ export class MessagesEn implements IMessages {
   public readonly ARE_YOU_SURE = 'Are you sure?';
   public readonly DELETE = 'Delete';
   public readonly NO_REVERT = 'You won\'t be able to revert this!';
-  public readonly GROUP_DELETED = 'Group deleted';
-  public readonly DELETED = 'Deleted';
+  public readonly GROUP_DELETED = 'Group deleted.';
+  public readonly DELETED = 'Deleted.';
   public readonly BOOK = 'Book';
   public readonly YES = 'Yes';
   public readonly OOPS = 'Oops...';

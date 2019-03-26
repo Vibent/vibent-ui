@@ -15,7 +15,7 @@
 
       a {
         color: inherit;
-        padding: $padding-general-x;
+        margin: $padding-general-x;
         font-weight: $font-weight-bold;
         font-size: $mdb-btn-font-size-base;
         text-transform: uppercase;
@@ -25,7 +25,7 @@
         display: block;
 
         &:hover {
-          text-decoration: none;
+          color: #2574ea !important;
         }
       }
 
