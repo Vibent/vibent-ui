@@ -11,38 +11,36 @@
       </div>
       <div class="modal-body bg-light">
         <div class="container vibent-modal">
-          <h2><b i18n="@@group-settings">Group settings</b></h2>
-          <p class="lead" i18n="@@group-settings-description">Update your group's info</p>
+          <h2><b i18n="@@group-settings">TBT</b></h2>
+          <p class="lead" i18n="@@group-settings-description">TBT</p>
           <div [formGroup]="form">
             <div class="form-group">
-              <label for="group-name"><b i18n="@@name">Name</b>
+              <label for="group-name"><b i18n="@@name">TBT</b>
                 <span *ngIf="!nameValidSetted"
-                      class="incorrect-input" i18n="@@required-name">A name is required</span></label>
+                      class="incorrect-input" i18n="@@required-name">TBT</span></label>
               <input type="text" class="form-control" id="group-name" formControlName="name"/>
             </div>
             <div class="form-group">
-              <label for="group-description"><b i18n="@@optional-description">Description
-                (optional)</b></label>
+              <label for="group-description"><b i18n="@@optional-description">TBT</b></label>
               <textarea type="text" class="form-control" id="group-description"
                         formControlName="description"></textarea>
             </div>
           </div>
           <div *ngIf="group.memberships.length > 1" class="card card-group-remove">
             <div class="card-body">
-              <h5 class="card-title text-dark" i18n="@@leave-group">Leave group</h5>
-              <button class="btn btn-social" (click)="leaveGroup()" i18n="@@leave">Leave</button>
+              <h5 class="card-title text-dark" i18n="@@leave-group">TBT</h5>
+              <button class="btn btn-social" (click)="leaveGroup()" i18n="@@leave">TBT</button>
             </div>
           </div>
           <div class="card card-group-remove">
             <div class="card-body">
-              <h5 class="card-title text-dark" i18n="@@remove-group">Remove group</h5>
-              <h6 class="card-subtitle mb-2 text-dark" i18n="@@remove-group-description">
-                Removing group will cause all child events and resources to be removed.</h6>
-              <button class="btn btn-danger" (click)="removeGroup()" i18n="@@remove">Remove</button>
+              <h5 class="card-title text-dark" i18n="@@remove-group">TBT</h5>
+              <h6 class="card-subtitle mb-2 text-dark" i18n="@@remove-group-description">TBT</h6>
+              <button class="btn btn-danger" (click)="removeGroup()" i18n="@@remove">TBT</button>
             </div>
           </div>
           <div class="row justify-content-center m-t-50">
-            <button (click)="updateInfo()" class="btn btn-round green-button" i18n="@@update">Update</button>
+            <button (click)="updateInfo()" class="btn btn-round green-button" i18n="@@update">TBT</button>
           </div>
         </div>
       </div>

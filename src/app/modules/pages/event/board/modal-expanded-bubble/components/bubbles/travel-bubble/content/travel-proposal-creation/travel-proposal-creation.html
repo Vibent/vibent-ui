@@ -1,16 +1,14 @@
 <div class="d-flex justify-content-center">
   <div [hidden]="!toggle" class="card-travel-provider-creation card">
     <div class="card-body">
-      <h4 class="card-title" i18n="offer-ride">Offer a ride</h4>
-      <div class="card-description" i18n="travel-proposal-description">
-        You are about to offer other participants places in your car to go to the event
-      </div>
+      <h4 class="card-title" i18n="@@offer-ride">TBT</h4>
+      <div class="card-description" i18n="@@travel-proposal-description">TBT</div>
     </div>
 
     <div class="card-body">
       <form novalidate [formGroup]="this.form">
         <div class="form-group">
-          <label for="address-input" i18n="where-going-from">Where are you going from?</label>
+          <label for="address-input" i18n="@@where-going-from">TBT</label>
           <input type="search"
                  style="padding-right: 30px"
                  autocomplete="off"
@@ -19,7 +17,7 @@
                  name="date">
         </div>
         <div class="form-group">
-          <label for="entry-time" i18n="seats-available">Seats available</label>
+          <label for="entry-time" i18n="@@seats-available">TBT</label>
           <input type="number"
                  min="1"
                  id="entry-time"
@@ -29,14 +27,10 @@
         </div>
         <button (click)="toggleCreationCard()"
                 class="btn btn-outline-danger"
-                i18n="delete">
-          Delete
-        </button>
+                i18n="@@delete">TBT</button>
         <button (click)="createProposal()"
                 class="btn btn-outline-primary"
-                i18n="add">
-          Add
-        </button>
+                i18n="@@add">TBT</button>
       </form>
     </div>
   </div>

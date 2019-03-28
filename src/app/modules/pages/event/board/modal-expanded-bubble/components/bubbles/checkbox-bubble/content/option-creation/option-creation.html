@@ -1,13 +1,17 @@
 <ng-container *ngIf="toggle">
-  <td i18n="add-option">
-    Add an option:
-  </td>
+  <td i18n="@@add-option">TBT</td>
   <td>
     <form novalidate [formGroup]="this.form">
       <input id="checkboxTitle" formControlName="optionContent" type="text" class="form-control"/>
     </form>
   <td>
-    <button type="submit" class="btn btn-outline-danger btn-sm" (click)="toggleCreationCard()" i18n="delete">Delete</button>
-    <button type="submit" class="btn btn-outline-primary btn-sm" (click)="createOption()" i18n="add">Add</button>
+    <button type="submit"
+            class="btn btn-outline-danger btn-sm"
+            (click)="toggleCreationCard()"
+            i18n="@@delete">TBT</button>
+    <button type="submit"
+            class="btn btn-outline-primary btn-sm"
+            (click)="createOption()"
+            i18n="@@add">TBT</button>
   </td>
 </ng-container>

@@ -8,41 +8,37 @@
       </div>
       <div class="modal-body bg-light">
         <div class="container vibent-modal">
-          <h2><b i18n="@@event-settings">Event settings</b></h2>
-          <p class="lead" i18n="@@event-settings.update-info">Update your event's info</p>
+          <h2><b i18n="@@event-settings">TBT</b></h2>
+          <p class="lead" i18n="@@event-settings.update-info">TBT</p>
           <div [formGroup]="form">
             <div class="form-group">
-              <label for="event-title"><b i18n="@@title">Title</b>
+              <label for="event-title"><b i18n="@@title">TBT</b>
                 <span *ngIf="!titleValidSetted"
-                      class="incorrect-input" i18n="@@required-title">A title is required</span></label>
+                      class="incorrect-input" i18n="@@required-title">TBT</span></label>
               <input type="text" class="form-control" id="event-title" formControlName="title"/>
             </div>
             <div class="form-group">
-              <label for="event-description"><b i18n="@@optional-description">Description
-                (optional)</b></label>
+              <label for="event-description"><b i18n="@@optional-description">TBT</b></label>
               <textarea type="text" class="form-control" id="event-description"
                         formControlName="description"></textarea>
             </div>
             <div class="form-group">
-              <label for="event-date"><b i18n="@@date">Date</b>
+              <label for="event-date"><b i18n="@@date">TBT</b>
                 <span *ngIf="!dateValidSetted"
                       class="incorrect-input"
-                      i18n="@@incorrect-date">Incorrect or past date</span></label>
+                      i18n="@@incorrect-date">TBT</span></label>
               <input type="text" class="form-control" formControlName="date" id="event-date">
             </div>
           </div>
           <div class="card card-group-remove">
             <div class="card-body">
-              <h5 class="card-title text-dark" i18n="@@delete-event">Delete event</h5>
-              <h6 class="card-subtitle mb-2 text-dark" i18n="@@delete-event-irreversible">
-                Deleting an event is irreversible
-              </h6>
-              <button class="btn btn-danger" (click)="deleteEvent()" i18n="@@delete">Delete</button>
+              <h5 class="card-title text-dark" i18n="@@delete-event">TBT</h5>
+              <h6 class="card-subtitle mb-2 text-dark" i18n="@@delete-event-irreversible">TBT</h6>
+              <button class="btn btn-danger" (click)="deleteEvent()" i18n="@@delete">TBT</button>
             </div>
           </div>
           <div class="row justify-content-center m-t-50">
-            <button (click)="updateInfo()" class="btn btn-round green-button" i18n="@@update">Update
-            </button>
+            <button (click)="updateInfo()" class="btn btn-round green-button" i18n="@@update">TBT</button>
           </div>
         </div>
       </div>
