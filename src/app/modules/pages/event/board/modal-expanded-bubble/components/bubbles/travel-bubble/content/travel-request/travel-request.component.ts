@@ -6,6 +6,7 @@ import {
   Output
 } from '@angular/core';
 import {
+  AlgoliaPlace,
   TravelBubble,
   TravelDataModel,
   TravelRequest
@@ -43,7 +44,7 @@ export class TravelRequestComponent implements OnInit {
   updatedTravelBubble = new EventEmitter<TravelBubble>();
   requesterUser: Observable<User>;
   firstClick = true;
-  place: { locale_names: any, _geoloc: any, city: any, is_city: boolean };
+  place: AlgoliaPlace;
   travelDataModel: TravelDataModel = new TravelDataModel();
   isConnectedUserRequest = false;
 
@@ -106,8 +107,8 @@ export class TravelRequestComponent implements OnInit {
     });
   }
 
-  populateTravelDataModel(place) {
-    this.travelDataService.constructTravelDataModel(this.travelDataModel, place);
+  populateTravelDataModel(place: AlgoliaPlace) {
+    this.travelDataService.populateTravelDataModel(this.travelDataModel, place);
     this.isConnectedUserRequest = this.travelDataService.isCurrentUserEntity(this.travelRequest);
   }
 

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { UserManagementService } from '../../../user-management.service';
 import { User } from '../../../../../shared/models/user';
 import {
+  AlgoliaPlace,
   TravelBubble,
   TravelDataModel,
   TravelEntity,
@@ -17,9 +18,9 @@ export class TravelDataService {
     this.user = this.userManagementService.getMe();
   }
 
-  constructTravelDataModel(travelDataModel: TravelDataModel,
-                           place: { locale_names: any, _geoloc: any, city: any, is_city: boolean },
-                           travelProposal?: TravelProposal) {
+  populateTravelDataModel(travelDataModel: TravelDataModel,
+                          place: AlgoliaPlace,
+                          travelProposal?: TravelProposal) {
     if (travelProposal) {
       travelDataModel.seatsLeft = this.getSeatsLeft(travelProposal);
       travelDataModel.availableSeatsList = this.getAvailableSeatsList(travelProposal);
@@ -62,9 +63,15 @@ export class TravelDataService {
   }
 
   getCompleteAddress(place): string {
+
+    if (place.is_city) {
+     return place.city.default[0];
+    }
+
     let c = place.locale_names.default[0];
-    c = c.replace('<streetnum>', '');
-    c = c.replace('<streetmod>', '');
+    c = c.replace('<streetnum> ', '');
+    c = c.replace('<streetmod> ', '');
+
     if (place.city) {
       c = c + ', ' + place.city.default[0];
     }

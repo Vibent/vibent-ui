@@ -98,7 +98,7 @@ export class SurveyOptionComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   constructAlimentationDataModel() {
-    this.surveyDataService.constructSurveyDataModel(this.surveyDataModel, this.surveyOption, this.answerCount);
+    this.surveyDataService.populateSurveyDataModel(this.surveyDataModel, this.surveyOption, this.answerCount);
     this.surveyDataModel.votersNames.then((value) => {
       $(() => {
         $('#popover' + this.surveyOption.id).popover({

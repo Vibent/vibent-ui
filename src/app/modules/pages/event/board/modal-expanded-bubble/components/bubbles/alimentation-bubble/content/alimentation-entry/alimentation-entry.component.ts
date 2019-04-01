@@ -69,7 +69,7 @@ export class AlimentationEntryComponent implements OnInit {
   }
 
   constructAlimentationDataModel() {
-    this.alimentationDataService.constructAlimentationDataModel(this.alimentationDataModel, this.alimentationEntry);
+    this.alimentationDataService.populateAlimentationDataModel(this.alimentationDataModel, this.alimentationEntry);
   }
 
   deleteEntry(): void {
