@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class AlgoliaPlacesService {
 
+  ALGOLIA_PLACES_URL = 'https://places-dsn.algolia.net/1/places/';
   constructor(private http: HttpClient) {
   }
 
@@ -17,6 +18,6 @@ export class AlgoliaPlacesService {
   }
 
   public getPlace(objectId: string): Observable<any> {
-    return this.http.get('https://places-dsn.algolia.net/1/places/' + objectId, this.getOptions());
+    return this.http.get(this.ALGOLIA_PLACES_URL + objectId, this.getOptions());
   }
 }

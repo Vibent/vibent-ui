@@ -12,7 +12,6 @@ import { HttpService } from '../../../../http/http.service';
 export class AlimentationDataService {
 
   user: User;
-  alimentationEntry: AlimentationEntry;
 
   readonly DISABLED_BUTTON: string = 'addAndDeleteUnavailable';
   readonly ENABLED_BUTTON: string = 'addAndDelete';
@@ -22,29 +21,28 @@ export class AlimentationDataService {
     this.user = this.userManagementService.getMe();
   }
 
-  constructAlimentationDataModel(alimentationDataModel: AlimentationDataModel, alimentationEntry: AlimentationEntry) {
-    this.alimentationEntry = alimentationEntry;
-    alimentationDataModel.progressWidth = this.getBarWidth();
-    alimentationDataModel.deleteBringButtonClass = this.getClassForDeleteBring();
-    alimentationDataModel.ratio = this.getRatio();
+  populateAlimentationDataModel(alimentationDataModel: AlimentationDataModel, alimentationEntry: AlimentationEntry) {
+    alimentationDataModel.progressWidth = this.getBarWidth(alimentationEntry);
+    alimentationDataModel.deleteBringButtonClass = this.getClassForDeleteBring(alimentationEntry);
+    alimentationDataModel.ratio = this.getRatio(alimentationEntry);
     this.updateBringsByUser(alimentationDataModel, alimentationEntry);
   }
 
-  private getRatio(): string {
-    return this.alimentationEntry.currentBringing +
-      '/' + this.alimentationEntry.totalRequested;
+  getRatio(alimentationEntry: AlimentationEntry): string {
+    return alimentationEntry.currentBringing +
+      '/' + alimentationEntry.totalRequested;
   }
 
-  private getBarWidth(): string {
-    return Math.floor(this.alimentationEntry.currentBringing / this.alimentationEntry.totalRequested * 100) + '%';
+  getBarWidth(alimentationEntry: AlimentationEntry): string {
+    return Math.floor(alimentationEntry.currentBringing / alimentationEntry.totalRequested * 100) + '%';
   }
 
   updateBringsByUser(alimentationDataModel: AlimentationDataModel, alimentationEntry: AlimentationEntry) {
     if (!alimentationDataModel.bringingsByUsers) {
-      alimentationDataModel.bringingsByUsers = this.getBringsByUser();
+      alimentationDataModel.bringingsByUsers = this.getBringsByUser(alimentationEntry);
     }
     else {
-      this.mergeArrays(alimentationDataModel.bringingsByUsers, this.getBringsByUser());
+      this.mergeArrays(alimentationDataModel.bringingsByUsers, this.getBringsByUser(alimentationEntry));
     }
   }
 
@@ -73,9 +71,9 @@ export class AlimentationDataService {
     }
   }
 
-  private getBringsByUser(): BringsByUser[] {
+  getBringsByUser(alimentationEntry: AlimentationEntry): BringsByUser[] {
     const bringsByUsers: BringsByUser[] = [];
-    this.alimentationEntry.brings.map(bring => bringsByUsers.push({
+    alimentationEntry.brings.map(bring => bringsByUsers.push({
       id: bring.id,
       user: this.httpService.getUser(bring.userRef),
       quantity: bring.quantity
@@ -83,8 +81,8 @@ export class AlimentationDataService {
     return bringsByUsers;
   }
 
-  private getClassForDeleteBring(): string {
-    if (this.alimentationEntry.brings.find(bring => bring.userRef === this.user.ref)) {
+  getClassForDeleteBring(alimentationEntry: AlimentationEntry): string {
+    if (alimentationEntry.brings.find(bring => bring.userRef === this.user.ref)) {
       return this.ENABLED_BUTTON;
     }
     return this.DISABLED_BUTTON;

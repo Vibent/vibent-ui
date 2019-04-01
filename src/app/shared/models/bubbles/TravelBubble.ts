@@ -29,3 +29,11 @@ export class TravelDataModel {
   headerLocation?: string;
   completeAddress?: string;
 }
+
+/* tslint:disable:variable-name */
+export class AlgoliaPlace {
+  locale_names: any;
+  _geoloc: any;
+  city: any;
+  is_city: boolean;
+}

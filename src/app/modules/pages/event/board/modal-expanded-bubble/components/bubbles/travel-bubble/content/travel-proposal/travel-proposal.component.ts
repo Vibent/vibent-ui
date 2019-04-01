@@ -104,7 +104,7 @@ export class TravelProposalComponent implements OnInit {
   }
 
   populateTravelDataModel(place) {
-    this.travelDataService.constructTravelDataModel(this.travelDataModel, place, this.travelProposal);
+    this.travelDataService.populateTravelDataModel(this.travelDataModel, place, this.travelProposal);
     this.isConnectedUserRequest = this.travelDataService.isCurrentUserEntity(this.travelProposal);
   }
 

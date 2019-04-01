@@ -8,7 +8,6 @@ import { CheckboxDataModel, CheckboxOption } from '../../../../../shared/models/
 export class CheckboxDataService {
 
   user: User;
-  checkboxOption: CheckboxOption;
 
   constructor(private userManagementService: UserManagementService,
               private httpService: HttpService) {
@@ -16,21 +15,20 @@ export class CheckboxDataService {
   }
 
   constructCheckboxDataModel(checkboxOption: CheckboxOption): CheckboxDataModel {
-    this.checkboxOption = checkboxOption;
     return {
-      answerUsers: this.getAnswerUsers(),
-      disabled: this.getCheckIsDisabled()
+      answerUsers: this.getAnswerUsers(checkboxOption),
+      disabled: this.getCheckIsDisabled(checkboxOption)
     };
   }
 
-  getAnswerUsers() {
+  getAnswerUsers(checkboxOption: CheckboxOption) {
     const users = [];
-    this.checkboxOption.answers.map(answer => users.push(this.httpService.getUser(answer.userRef)));
+    checkboxOption.answers.map(answer => users.push(this.httpService.getUser(answer.userRef)));
     return users;
   }
 
-  getCheckIsDisabled() {
-    return !!this.checkboxOption.answers.find(answer => answer.userRef !== this.user.ref);
+  getCheckIsDisabled(checkboxOption: CheckboxOption) {
+    return !!checkboxOption.answers.find(answer => answer.userRef !== this.user.ref);
   }
 
   isCurrentUserOption(checkboxOption: CheckboxOption) {
