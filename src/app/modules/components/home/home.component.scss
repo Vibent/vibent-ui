@@ -4,6 +4,10 @@
   margin-bottom: -1px;
 }
 
+.home {
+  background: #88d4ed;
+}
+
 .vibent-header {
   margin-top: 50px;
   font-size: 20px;
@@ -18,10 +22,11 @@
 }
 
 .home-background {
-  background: url('../../../../assets/img/accueil.svg') no-repeat center center;
+  background: url('../../../../assets/img/home.svg') no-repeat center center;
   background-size: cover;
   height: 560px;
 }
+
 @media (min-width: 1300px) {
   .home-background {
     height: 45vw;
@@ -36,7 +41,7 @@
   padding-bottom: 35px;
 }
 
-.explanation-line{
+.explanation-line {
   display: inline-flex;
   align-items: center;
 }
@@ -46,7 +51,7 @@
   padding-top: 30px;
 }
 
-.explanation-block-counter{
+.explanation-block-counter {
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
@@ -60,6 +65,7 @@
   font-weight: bold;
   margin: 0 auto 1.389rem;
 }
+
 .explanation-block-title {
   display: inline-block;
   padding-left: 15px;
