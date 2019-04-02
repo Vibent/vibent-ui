@@ -41,6 +41,30 @@
             ]
           },
           "configurations": {
+            "local": {
+              "aot": true,
+              "sourceMap": true,
+              "i18nMissingTranslation": "error",
+              "i18nFile": "src/i18n/messages.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en"
+            },
+            "dev": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": true,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "outputPath": "dist-dev",
+              "i18nMissingTranslation": "error",
+              "i18nFile": "src/i18n/messages.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en"
+            },
             "prod": {
               "fileReplacements": [
                 {
@@ -62,29 +86,13 @@
               "i18nFile": "src/i18n/messages.en.xlf",
               "i18nFormat": "xlf",
               "i18nLocale": "en"
-            },
-            "dev": {
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": true,
-              "extractCss": true,
-              "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "outputPath": "dist-dev",
-              "i18nMissingTranslation": "error",
-              "i18nFile": "src/i18n/messages.en.xlf",
-              "i18nFormat": "xlf",
-              "i18nLocale": "en"
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "vibent-ui:build:dev"
+            "browserTarget": "vibent-ui:build:local"
           },
           "configurations": {
             "prod": {
