@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ScreenService } from './core/services/screen.service';
+import { RoutingStateService } from './core/services/routing-state.service';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,9 @@ import { ScreenService } from './core/services/screen.service';
 })
 export class AppComponent {
 
-  constructor(public screenService: ScreenService) {
+  constructor(public screenService: ScreenService,
+              private routingState: RoutingStateService) {
+    this.routingState.loadRouting();
   }
 
 }

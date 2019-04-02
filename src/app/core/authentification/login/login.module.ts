@@ -6,11 +6,13 @@ import { LoginComponent } from './login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Ng2TelInputModule } from 'ng2-tel-input';
+import { HeaderModule } from '../header/header.module';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
+    HeaderModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,

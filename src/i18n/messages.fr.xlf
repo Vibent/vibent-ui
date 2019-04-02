@@ -2,6 +2,466 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template" target-language="fr">
     <body>
+      <trans-unit id="terms_and_conditions_complete" datatype="html">
+        <source>
+      <x id="START_HEADING_LEVEL2" ctype="x-h2" equiv-text="&lt;h2>"/>Terms &amp; Conditions<x id="CLOSE_HEADING_LEVEL2" ctype="x-h2" equiv-text="&lt;/h2>"/>
+      <x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div>"/>
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Welcome to Vibent.<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>These terms and conditions outline the rules and regulations for the use of Vibent's
+          Website.<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>By accessing this website we assume you accept these terms and conditions in full. Do not continue to use
+          Vibent's website if you do not accept all of the terms and conditions stated on this page. The following
+          terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and any or all
+          Agreements: “Client”, “You” and “Your” refers to you, the person accessing this website and accepting the
+          Company’s terms and conditions. “The Company”, “Ourselves”, “We”, “Our” and “Us”, refers to our Company.
+          “Party”, “Parties”, or “Us”, refers to both the Client and ourselves, or either the Client or ourselves. All
+          terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our
+          assistance to the Client in the most appropriate manner, whether by formal meetings of a fixed duration, or
+          any other means, for the express purpose of meeting the Client’s needs in respect of provision of the
+          Company’s stated services/products, in accordance with and subject to, prevailing law of . Any use of the
+          above terminology or other words in the singular, plural, capitalisation and/or he/she or they, are taken as
+          interchangeable and therefore as referring to same.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Cookies<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          We employ the use of cookies. By using Vibent's
+          website you consent to the use of cookies in accordance with Vibent’s privacy policy. Most of the modern day
+          interactive web sites use cookies to enable us to retrieve user details for each visit. Cookies are used in
+          some areas of our site to enable the functionality of this area and ease of use for those people visiting.
+          Some of our affiliate / advertising partners may also use cookies. <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>License<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          Unless otherwise stated, Vibent
+          and/or it’s licensors own the intellectual property rights for all material on Vibent. All intellectual
+          property rights are reserved. You may view and/or print pages from https://www.vibent.com for your own
+          personal use subject to restrictions set in these terms and conditions.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+        <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>You must not:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>
+        <x id="START_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;ol>"/>
+          <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Republish material from https://www.vibent.com<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+          <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Sell, rent or sub-license material from https://www.vibent.com<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+          <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Reproduce, duplicate or copy material from https://www.vibent.com.<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+          <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Redistribute content from Vibent (unless content is specifically made for redistribution)<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+        <x id="CLOSE_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;/ol>"/>
+
+
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>User Comments<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          This Agreement shall begin on the date hereof. Certain parts of this website offer the opportunity for users
+          to post and exchange opinions, information, material and data in areas of the website. Vibent does not
+          screen,
+          edit, publish or review Comments prior to their appearance on the website and Comments do not reflect the
+          views or opinions of Vibent, its agents or affiliates. Comments reflect the view and opinion of the person
+          who
+          posts such view or opinion. To the extent permitted by applicable laws Vibent shall not be responsible or
+          liable for the Comments or for any loss cost, liability, damages or expenses caused and or suffered as a
+          result of any use of and/or posting of and/or appearance of the Comments on this website. Vibent reserves
+          the
+          right to monitor all Comments and to remove any Comments which it considers in its absolute discretion to be
+          inappropriate, offensive or otherwise in breach of these Terms and Conditions. You warrant and represent
+          that:<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+        <x id="START_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;ol>"/>
+          <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>You are entitled to post the Comments on our website and have all necessary licenses and consents to do
+            so
+          <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+          <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>The Comments do not infringe any intellectual property right, including without limitation copyright,
+            patent
+            or trademark, or other proprietary right of any third party
+          <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+          <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>
+            The Comments do not contain any defamatory,
+            libelous, offensive, indecent or otherwise unlawful material or material which is an invasion of privacy
+          <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+        <x id="CLOSE_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;/ol>"/>
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          The Comments will not be used to solicit or promote business or custom or present commercial activities or
+          unlawful activity.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          You hereby grant to Vibent a non-exclusive royalty-free license to use, reproduce, edit and authorize others
+          to use, reproduce and edit any of your Comments in any and all forms, formats or media.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Hyperlinking to our Content<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          The following organizations may link to our Web site without prior written approval: Government agencies;
+          Search engines; News organizations; Online directory distributors when they list us in the directory may
+          link
+          to our Web site in the same manner as they hyperlink to the Web sites of other listed businesses; and
+          Systemwide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and
+          charity fundraising groups which may not hyperlink to our Web site.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          These organizations may link to our home page, to publications or to other Web site information so long
+          as the link: (a) is not in any way misleading; (b) does not falsely imply sponsorship, endorsement or
+          approval of the linking party and its products or services; and (c) fits within the context of the linking
+          party's site.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          We may consider and approve in our sole discretion other link requests from the following types of
+          organizations:commonly-known consumer and/or business information sources such as Chambers of Commerce,
+          American Automobile Association, AARP and Consumers Union; dot.com community sites; associations or other
+          groups representing charities, including charity giving sites, online directory distributors; internet
+          portals; accounting, law and consulting firms whose primary clients are businesses; and educational
+          institutions and trade associations.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          We will approve link requests from these organizations if we determine that: (a) the link would not reflect
+          unfavorably on us or our accredited businesses (for example, trade associations or other organizations
+          representing inherently suspect types of business, such as work-at-home opportunities, shall not be allowed
+          to link); (b)the organization does not have an unsatisfactory record with us; (c) the benefit to us from the
+          visibility associated with the hyperlink outweighs the absence of ; and (d) where the link is in the context
+          of general resource information or is otherwise consistent with editorial content in a newsletter or similar
+          product furthering the mission of the organization.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          These organizations may link to our home page, to publications or to other Web site information so long as
+          the
+          link: (a) is not in any way misleading; (b) does not falsely imply sponsorship, endorsement or approval of
+          the
+          linking party and it products or services; and (c) fits within the context of the linking party's site. If
+          you
+          are among the organizations listed in paragraph 2 above and are interested in linking to our website, you
+          must
+          notify us by sending an e-mail to postmaster@vibent.com. Please include your name, your organization
+          name, contact information (such as a phone number and/or e-mail address) as well as the URL of your site, a
+          list of any URLs from which you intend to link to our Web site, and a list of the URL(s) on our site to
+          which
+          you would like to link. Allow 2-3 weeks for a response.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Approved organizations may hyperlink to our Web site as follows:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          By use of our corporate name; or By use of the uniform resource locator (Web address) being linked to; or By
+          use of any other description of our Web site or material being linked to that makes sense within the context
+          and format of content on the linking party's site.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          No use of Vibent’s logo or other artwork will be allowed for linking absent a trademark license agreement.
+          Without prior approval and express written permission, you may not create frames around our Web pages or use
+          other techniques that alter in any way the visual presentation or appearance of our Web site.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Reservation of Rights<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          We reserve the right at any time and in its sole discretion to request that you remove all links or
+          any
+          particular link to our Web site. You agree to immediately remove all links to our Web site upon such
+          request.
+          We also reserve the right to amend these terms and conditions and its linking policy at any time. By
+          continuing to link to our Web site, you agree to be bound to and abide by these linking terms and
+          conditions.
+          Removal of links from our website If you find any link on our Web site or any linked web site objectionable
+          for any reason, you may contact us about this. We will consider requests to remove links but will have no
+          obligation to do so or to respond directly to you. Whilst we endeavour to ensure that the information on
+          this
+          website is correct, we do not warrant its completeness or accuracy; nor do we commit to ensuring that the
+          website remains available or that the material on the website is kept up to date.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Content Liability <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          We shall
+          have no responsibility or liability for any content appearing on your Web site. You agree to indemnify and
+          defend us against all claims arising out of or based upon your Website. No link(s) may appear on any page on
+          your Web site or within any context containing content or materials that may be interpreted as libelous,
+          obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other
+          violation
+          of, any third party rights.
+
+        <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Disclaimer<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>To the maximum extent permitted by applicable law, we exclude all
+          representations, warranties and conditions relating to our website and the use of this website (including,
+          without limitation, any warranties implied by law in respect of satisfactory quality, fitness for purpose
+          and/or the use of reasonable care and skill). Nothing in this disclaimer will:<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+        <x id="START_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;ol>"/>
+          <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>
+            limit or exclude our or your liability for death or personal injury resulting from negligence;
+          <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+          <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>limit or exclude our or your liability for fraud or fraudulent misrepresentation;<x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+          <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>limit any of our or your liabilities in any way that is not permitted under applicable law; or
+            exclude any of our or your liabilities that may not be excluded under applicable law.
+          <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+        <x id="CLOSE_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;/ol>"/>
+
+        <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          The limitations and exclusions of liability set out in this Section and elsewhere in this disclaimer: (a)are
+          subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer or in
+          relation
+          to the subject matter of this disclaimer, including liabilities arising in contract, in tort (including
+          negligence) and for breach of statutory duty. To the extent that the website and the information and
+          services
+          on the website are provided free of charge, we will not be liable for any loss or damage of any nature.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+      <x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div>"/>
+    </source>
+        <target state="translated">
+          <x id="START_HEADING_LEVEL2" ctype="x-h2" equiv-text="&lt;h2>"/>Conditions d'utilisation
+          <x id="CLOSE_HEADING_LEVEL2" ctype="x-h2" equiv-text="&lt;/h2>"/>
+          <x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div>"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Bienvenue sur Vibent.
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Les présentes conditions générales
+          décrivent les règles et conditions d'utilisation du site Web de Vibent.
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>En accédant à ce site Web, nous supposons que vous
+          acceptez ces conditions générales dans leur intégralité. Ne continuez pas à utiliser le site Web de Vibent si
+          vous n'acceptez pas tous les termes et conditions indiqués sur cette page. La terminologie suivante s'applique
+          aux présentes conditions générales, à la déclaration de confidentialité et à l'avis de non-responsabilité,
+          ainsi qu'à l'une ou l'autre des ententes : "Client ", " Vous " et " Votre " font référence à vous, la personne
+          qui accède à ce site Web et qui accepte les termes et conditions de la Société. "La Société", "Nous-mêmes",
+          "Nous", "Notre", "Notre" et "Nous", font référence à Vibent.
+          "Partie ", " Parties " ou " Nous " désigne à la fois le Client et nous-mêmes, ou soit le Client, soit
+          nous-mêmes. Toutes les conditions se réfèrent à l'offre, l'acceptation et la prise en considération du
+          paiement nécessaire pour entreprendre le processus de notre assistance au Client de la manière la plus
+          appropriée, que ce soit par des réunions formelles d'une durée déterminée, ou tout autre moyen, dans le but
+          exprès de répondre aux besoins du Client en matière de fourniture des services/produits déclarés de la
+          Société, conformément et dans le respect du droit applicable de . Toute utilisation des termes ci-dessus ou
+          autres au singulier, pluriel, majuscules et/ou il ou ils sont considérés comme interchangeable et donc comme
+          se référant à la même.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Cookies
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          Nous utilisons des cookies. En utilisant le site Web de Vibent, vous consentez à l'utilisation de cookies
+          conformément à la politique de confidentialité de Vibent. La plupart des sites Web interactifs modernes
+          utilisent des cookies pour nous permettre de récupérer les détails de l'utilisateur à chaque visite. Des
+          cookies sont utilisés dans certaines zones de notre site pour assurer la fonctionnalité de cette zone et la
+          facilité d'utilisation pour les personnes qui la visitent. Certains de nos partenaires affiliés /
+          publicitaires peuvent également utiliser des cookies.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Licence d'utilisation
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          Sauf indication contraire, Vibent et/ou ses concédants de licence détiennent les droits de propriété
+          intellectuelle du contenu Vibent. Tous les droits de propriété intellectuelle sont réservés.
+          Vous pouvez consulter et/ou imprimer les pages du site https://www.vibent.com pour votre usage personnel, sous
+          réserve des restrictions établies dans les présentes conditions générales.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+          <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Vous ne devez pas:
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>
+          <x id="START_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;ol>"/>
+          <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Republier du contenu https://www.vibent.com
+          <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+          <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Vendre, louer ou sous-licencier du contenu de
+          https://www.vibent.com
+          <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+          <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Reproduire, dupliquer ou copier du contenu de
+          https://www.vibent.com.
+          <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+          <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Redistribuer le contenu de Vibent (sauf si le
+          contenu est spécifiquement conçu pour la redistribution)
+          <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+          <x id="CLOSE_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;/ol>"/>
+
+
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Commentaires des utilisateurs
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          La présente entente entre en vigueur à la date des présentes. Certaines parties de ce site Web offrent aux
+          utilisateurs la possibilité d'afficher et d'échanger des opinions, des informations, du matériel et des
+          données dans des sections du site Web. Vibent ne filtre pas, n'édite pas, ne publie pas et ne révise pas les
+          Commentaires avant leur apparition sur le site Web et les Commentaires ne reflètent pas les vues ou opinions
+          de Vibent, ses agents ou affiliés. Les commentaires reflètent le point de vue et l'opinion de la personne qui
+          affiche un tel point de vue ou une telle opinion. Dans la mesure permise par les lois applicables, Vibent
+          n'est pas responsable ou responsable des Commentaires ou de toute perte, coût, responsabilité, dommages ou
+          dépenses causés et ou subis en tant que résultant de l'utilisation et/ou de l'affichage et/ou de l'apparence
+          des Commentaires sur ce site Web. Vibent réserve le droit de surveiller tous les Commentaires et de supprimer
+          tout Commentaire qu'il considère, à son entière discrétion, comme étant inapproprié, offensant ou autrement en
+          violation de ces Conditions générales. Vous garantissez et représentez que:
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+          <x id="START_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;ol>"/>
+          <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Vous avez le droit d'afficher les commentaires sur
+          notre site Web et vous disposez de toutes les licences et de tous les consentements nécessaires pour le faire.
+          <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+          <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>Les Commentaires ne violent aucun droit de
+          propriété intellectuelle, y compris, mais sans s'y limiter, les droits d'auteur, brevets ou marques de
+          commerce, ou tout autre droit de propriété d'un tiers.
+          <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+          <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>
+          Les Commentaires ne contiennent aucun contenu diffamatoire, calomnieux, offensant, indécent ou autrement
+          illégal ou qui constitue une invasion de la vie privée.
+          <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+          <x id="CLOSE_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;/ol>"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          Les Commentaires ne seront pas utilisés pour solliciter ou promouvoir des affaires ou des activités
+          commerciales ou illégales.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          Par les présentes, vous accordez à Vibent une licence non exclusive et libre de redevance pour utiliser,
+          reproduire, modifier et autoriser d'autres personnes à utiliser, reproduire et modifier vos commentaires sous
+          quelque forme, format ou média que ce soit.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Hyperliens vers notre contenu
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          Les organisations suivantes peuvent créer des liens vers notre site Web sans autorisation écrite préalable :
+          Les agences gouvernementales, les moteurs de recherche, les organismes de presse, les distributeurs
+          d'annuaires en ligne lorsqu'ils nous inscrivent dans l'annuaire peuvent créer des liens vers notre site Web de
+          la même manière qu'ils créent des hyperliens vers les sites Web d'autres entreprises inscrites et des
+          entreprises accréditées à l'échelle du système, sauf lorsqu'ils sollicitent des organismes sans but lucratif,
+          des centres commerciaux et des organismes de bienfaisance qui ne peuvent établir d'hyperlien vers notre site
+          Web.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          Ces organismes peuvent créer des liens vers notre page d'accueil, vers des publications ou vers d'autres
+          renseignements sur notre site Web, à condition que le lien soit maintenu : (a) n'est en aucune façon trompeuse
+          ; (b) n'implique pas faussement le parrainage, l'approbation ou l'endossement de la partie liée et de ses
+          produits ou services ; et (c) s'inscrit dans le contexte du site de la partie liée.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          Nous pouvons examiner et approuver, à notre seule discrétion, d'autres demandes de liens provenant des types
+          de sites suivants
+          organisations : sources d'information de notoriété publique sur les consommateurs et/ou les entreprises,
+          telles que les chambres de commerce, American Automobile Association, AARP et Consumers Union ; sites
+          communautaires dot.com ; associations ou
+          autres. les groupes représentant les organismes de bienfaisance, y compris les sites de dons de bienfaisance,
+          les distributeurs d'annuaires en ligne ; Internet les cabinets d'experts-comptables, d'avocats et de
+          consultants dont les principaux clients sont des entreprises ; et les cabinets d'experts-comptables. les
+          institutions et les associations professionnelles.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          Nous approuverons les demandes de liens de ces organisations si nous le déterminons que : a) le lien ne
+          refléterait pas une image défavorable pour nous ou pour nos entreprises accréditées (par exemple, les
+          associations professionnelles ou d'autres organisations). la représentation de types d'entreprises
+          intrinsèquement
+          suspects, telles que les possibilités de travail à domicile, n'est pas autorisée
+          à lier) ; b) l'organisation n'a pas un historique insatisfaisant avec nous ; c) l'avantage que nous retire le
+          la visibilité associée à l'hyperlien l'emporte sur l'absence de ; et (d) l'endroit où se trouve le lien dans
+          le contexte de l'information générale sur les ressources ou qui est conforme au contenu rédactionnel d'un
+          bulletin ou d'un document semblable. produit qui contribue à la réalisation de la mission de l'organisation.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          Ces organismes peuvent créer des liens vers notre page d'accueil, vers des publications ou vers d'autres
+          renseignements sur notre site Web, dans la mesure où
+          le
+          lien : (a) n'est en aucune façon trompeuse ; (b) n'implique pas faussement le parrainage, l'endossement ou
+          l'approbation de ce qui suit
+          le
+          et ses produits ou services ; et (c) s'inscrit dans le contexte du site de la partie qui fait le lien. Si
+          toi
+          font partie des organisations énumérées au paragraphe 2 ci-dessus et sont intéressées à établir un lien vers
+          notre site Web, vous devez
+          falloir
+          nous en informer en envoyant un e-mail à postmaster@vibent.com. Veuillez inclure votre nom, votre organisation
+          le nom, les coordonnées (comme un numéro de téléphone et/ou une adresse électronique) ainsi que l'adresse URL
+          de votre site, un numéro de téléphone ou une adresse électronique.
+          la liste de toutes les URL à partir desquelles vous avez l'intention d'établir un lien vers notre site Web,
+          ainsi qu'une liste des URL de notre site pour
+          ce qui
+          que vous aimeriez lier. Prévoyez 2 à 3 semaines pour une réponse.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Les organismes agréés peuvent établir des
+          hyperliens vers les sites suivants
+          sur notre site Web comme suit :
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          Par l'utilisation de notre raison sociale ; ou Par l'utilisation du localisateur de ressources uniformes
+          (adresse Web) auquel il est relié ; ou Par
+          l'utilisation de toute autre description de notre site Web ou du matériel auquel il est relié et qui a un sens
+          dans le contexte
+          et le format du contenu sur le site de la partie de liaison.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          Aucune utilisation du logo de Vibent ou d'autres illustrations ne sera autorisée sans accord de licence de
+          marque.
+          Sans autorisation préalable et autorisation écrite explicite, vous ne pouvez pas créer de cadres autour de nos
+          pages Web ou utiliser
+          d'autres techniques qui modifient de quelque façon que ce soit la présentation visuelle ou l'apparence de
+          notre site Web.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Réserve de droits
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          Nous nous réservons le droit, à tout moment et à sa seule discrétion, de vous demander de supprimer tous les
+          liens ou d'annuler votre inscription. N'importe quel lien particulier vers notre site Web. Vous vous engagez à
+          supprimer immédiatement tous les liens vers notre site Web suivant notre demande. Nous nous réservons
+          également le droit de modifier à tout moment les présentes conditions générales et sa politique de liaison.
+          Par ailleurs, en continuant d'établir un lien vers notre site Web, vous acceptez d'être lié par les présentes
+          conditions d'établissement de liens et de vous y conformer. Pour quelque raison que ce soit, vous pouvez nous
+          contacter à ce sujet. Nous examinerons les demandes de suppression de liens, mais nous n'aurons pas le droit
+          d'y accéder de le faire ou de vous répondre directement. Bien que nous nous efforcions de veiller à ce que les
+          informations soient correct, nous ne garantissons pas son exhaustivité ou son exactitude ; nous ne nous
+          engageons pas non plus à faire en sorte que le site Web soit disponible ou que le contenu du site Web soit
+          tenu à jour.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Responsabilité du contenu
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          Nous n'assumons aucune responsabilité pour tout contenu apparaissant sur votre site Web. Vous acceptez de nous
+          indemniser et de nous défendre contre toute réclamation découlant de ou basée sur votre site Web. Aucun lien
+          ne peut apparaître sur une page de votre site Web ou dans un contexte quelconque contenant du contenu ou du
+          matériel qui peut être interprété comme diffamatoire, obscène ou criminel, ou qui enfreint, viole ou préconise
+          l'infraction ou toute autre violation des droits d'un tiers.
+
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Clause de non-responsabilité
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>Dans toute la mesure permise par la loi applicable,
+          nous excluons toutes les représentations, garanties et conditions relatives à notre site Web et à
+          l'utilisation de ce site Web (y compris, sans s'y limiter, toutes garanties implicites par la loi quant à la
+          qualité satisfaisante, à l'adaptation à un usage particulier et/ou à l'utilisation de soins et compétences
+          raisonnables). Rien dans cette clause de non-responsabilité ne le fera :
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+
+          <x id="START_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;ol>"/>
+          <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>
+          limiter ou exclure notre ou votre responsabilité en cas de décès ou de dommages corporels résultant d'une
+          négligence ;
+          <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+          <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>limiter ou exclure notre responsabilité ou la vôtre
+          en cas de fraude ou de fausse déclaration frauduleuse ;
+          <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+          <x id="START_LIST_ITEM" ctype="x-li" equiv-text="&lt;li>"/>limiter notre responsabilité ou la vôtre d'une
+          manière qui n'est pas permise par la loi applicable ; ou exclure notre responsabilité ou la vôtre qui ne peut
+          être exclue par la loi applicable.
+          <x id="CLOSE_LIST_ITEM" ctype="x-li" equiv-text="&lt;/li>"/>
+          <x id="CLOSE_ORDERED_LIST" ctype="x-ol" equiv-text="&lt;/ol>"/>
+
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+          Les limitations et exclusions de responsabilité énoncées dans le présent article et ailleurs dans le présent
+          avis de non-responsabilité : a) sont les suivantes b) régissent toutes les responsabilités découlant de la
+          clause de non-responsabilité ou de la clause de non-responsabilité ; et parenté à l'objet de la présente
+          clause de non-responsabilité, y compris les responsabilités découlant d'un contrat, d'un délit civil (y
+          compris négligence) et pour manquement à une obligation légale. Dans la mesure où le site Web et l'information
+          et les services d'information et d'information de l services sur le site Web sont fournis gratuitement, nous
+          ne serons pas responsables de toute perte ou dommage de quelque nature que ce soit.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+          <x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div>"/>
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/terms/terms.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="events" datatype="html">
         <source>TBT</source>
         <target state="translated">Événements</target>
@@ -109,14 +569,14 @@
       </trans-unit>
       <trans-unit id="login-vibent" datatype="html">
         <source>
-          TBT
-        </source>
+            TBT
+          </source>
         <target state="translated">
           Se connecter / S'inscrire avec un compte Vibent
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">8</context>
+          <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="create-join-group" datatype="html">
@@ -124,19 +584,19 @@
         <target state="translated">Créez ou rejoignez un groupe</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="create-join-group-description" datatype="html">
         <source>
-          TBT
-        </source>
+            TBT
+          </source>
         <target state="translated">
           Restez en contact avec vos amis, vos collègues ou votre famille et organisez-vous en groupe.
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">25</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="create-events" datatype="html">
@@ -144,19 +604,19 @@
         <target state="translated">Créez des événements</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="create-events-description" datatype="html">
         <source>
-          TBT
-        </source>
+            TBT
+          </source>
         <target state="translated">
           Une sortie, un anniversaire ou un événement spécial ? Créez des événements dans vos groupes.
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="organize-collaboratively" datatype="html">
@@ -164,19 +624,19 @@
         <target state="translated">Organisez-vous collaborativement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="organize-collaboratively-description" datatype="html">
         <source>
-          TBT
-        </source>
+            TBT
+          </source>
         <target state="translated">
           Permettez à tout le monde de participer et voyez les contributions en temps réel.
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">43</context>
+          <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="how-it-works" datatype="html">
@@ -184,7 +644,7 @@
         <target state="translated">Comment ça marche ?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">54</context>
+          <context context-type="linenumber">56</context>
         </context-group>
       </trans-unit>
       <trans-unit id="how-it-works-description" datatype="html">
@@ -196,7 +656,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">55</context>
+          <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="our-bubbles" datatype="html">
@@ -204,7 +664,7 @@
         <target state="translated">Nos bulles</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">66</context>
+          <context context-type="linenumber">68</context>
         </context-group>
       </trans-unit>
       <trans-unit id="click-each-one-details" datatype="html">
@@ -212,7 +672,7 @@
         <target state="translated">Cliquez sur les boutons ci-dessous pour découvrir chaque bulle.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">67</context>
+          <context context-type="linenumber">69</context>
         </context-group>
       </trans-unit>
       <trans-unit id="alimentation" datatype="html">
@@ -220,7 +680,7 @@
         <target state="translated">Alimentation</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">73</context>
+          <context context-type="linenumber">75</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html</context>
@@ -236,7 +696,7 @@
         <target state="translated">Transport</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">78</context>
+          <context context-type="linenumber">80</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/travel-bubble/travel-bubble-preview.html</context>
@@ -252,7 +712,7 @@
         <target state="translated">Checkbox</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">83</context>
+          <context context-type="linenumber">85</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
@@ -264,7 +724,7 @@
         <target state="translated">Sondage</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">88</context>
+          <context context-type="linenumber">90</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
@@ -276,7 +736,7 @@
         <target state="translated">Planning</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">93</context>
+          <context context-type="linenumber">95</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
@@ -288,7 +748,7 @@
         <target state="translated">Libre</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">98</context>
+          <context context-type="linenumber">100</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
@@ -300,7 +760,7 @@
         <target state="translated">Bulle Alimentation</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">107</context>
+          <context context-type="linenumber">109</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/alimentation/alimentation-explanation.html</context>
@@ -315,7 +775,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">108</context>
+          <context context-type="linenumber">110</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/alimentation/alimentation-explanation.html</context>
@@ -327,7 +787,7 @@
         <target state="translated">Bulle Checkbox</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">116</context>
+          <context context-type="linenumber">118</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/checkbox/checkbox-explanation.html</context>
@@ -341,7 +801,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">117</context>
+          <context context-type="linenumber">119</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/checkbox/checkbox-explanation.html</context>
@@ -353,7 +813,7 @@
         <target state="translated">Bulle Planning</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">125</context>
+          <context context-type="linenumber">127</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/planning/planning-explanation.html</context>
@@ -368,7 +828,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">126</context>
+          <context context-type="linenumber">128</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/planning/planning-explanation.html</context>
@@ -380,7 +840,7 @@
         <target state="translated">Bulle Transport</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">134</context>
+          <context context-type="linenumber">136</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/travel/travel-explanation.html</context>
@@ -395,7 +855,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">135</context>
+          <context context-type="linenumber">137</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/travel/travel-explanation.html</context>
@@ -407,7 +867,7 @@
         <target state="translated">Bulle Libre</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">143</context>
+          <context context-type="linenumber">145</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/free/free-explanation.html</context>
@@ -421,7 +881,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">144</context>
+          <context context-type="linenumber">146</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/free/free-explanation.html</context>
@@ -433,7 +893,7 @@
         <target state="translated">Bulle sondage</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">152</context>
+          <context context-type="linenumber">154</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/survey/survey-explanation.html</context>
@@ -447,7 +907,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">153</context>
+          <context context-type="linenumber">155</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/survey/survey-explanation.html</context>
@@ -760,15 +1220,15 @@
         <target state="translated">Mail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">12</context>
+          <context context-type="linenumber">8</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">20</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="linenumber">33</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
@@ -788,7 +1248,7 @@
         <target state="translated">Téléphone</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">10</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
@@ -800,7 +1260,7 @@
         <target state="translated">Connexion par mail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="password" datatype="html">
@@ -808,15 +1268,15 @@
         <target state="translated">Mot de passe</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">29</context>
+          <context context-type="linenumber">25</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">59</context>
+          <context context-type="linenumber">56</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">56</context>
+          <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
       <trans-unit id="forgot-password-question" datatype="html">
@@ -826,25 +1286,26 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="login" datatype="html">
-        <source>TBT</source>
+        <source>TBT
+                  </source>
         <target state="translated">
           Connexion
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">37</context>
+          <context context-type="linenumber">33</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">67</context>
+          <context context-type="linenumber">64</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">81</context>
+          <context context-type="linenumber">78</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dont-have-account-question" datatype="html">
@@ -852,11 +1313,11 @@
         <target state="translated">Pas de compte ?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="linenumber">37</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">71</context>
+          <context context-type="linenumber">68</context>
         </context-group>
       </trans-unit>
       <trans-unit id="create-one" datatype="html">
@@ -865,11 +1326,11 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">38</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">73</context>
+          <context context-type="linenumber">70</context>
         </context-group>
       </trans-unit>
       <trans-unit id="phone-login" datatype="html">
@@ -877,7 +1338,7 @@
         <target state="translated">Connexion par téléphone</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">48</context>
+          <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="reset-password-email" datatype="html">
@@ -950,11 +1411,11 @@
         <target state="translated">Numéro de téléphone</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">52</context>
+          <context context-type="linenumber">49</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">48</context>
+          <context context-type="linenumber">42</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
@@ -968,7 +1429,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">60</context>
+          <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="register" datatype="html">
@@ -976,7 +1437,7 @@
         <target state="translated">S'inscrire</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="first-name" datatype="html">
@@ -988,7 +1449,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="required-first-name" datatype="html">
@@ -1004,11 +1465,11 @@
         <target state="translated">exigé</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">17</context>
+          <context context-type="linenumber">10</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="last-name" datatype="html">
@@ -1020,7 +1481,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="required-last-name" datatype="html">
@@ -1038,7 +1499,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="register-email-phone-both" datatype="html">
@@ -1049,7 +1510,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email-phone-choose-one" datatype="html">
@@ -1057,7 +1518,7 @@
         <target state="translated">Mais choisissez-en au moins un !</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">36</context>
+          <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="incorrect-email" datatype="html">
@@ -1065,7 +1526,7 @@
         <target state="translated">(format de mail incorrect)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="incorrect-phone" datatype="html">
@@ -1073,7 +1534,7 @@
         <target state="translated">format de téléphone incorrect)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">49</context>
+          <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8-characters" datatype="html">
@@ -1081,7 +1542,7 @@
         <target state="translated">(8 caractères)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">57</context>
+          <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="password-confirmation" datatype="html">
@@ -1089,7 +1550,7 @@
         <target state="translated">Confimez mot de passe</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">64</context>
+          <context context-type="linenumber">60</context>
         </context-group>
       </trans-unit>
       <trans-unit id="password-not-identical" datatype="html">
@@ -1097,14 +1558,14 @@
         <target state="translated">(mots de passe différents)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">66</context>
+          <context context-type="linenumber">62</context>
         </context-group>
       </trans-unit>
       <trans-unit id="agree-terms-conditions" datatype="html">
         <source>
-                  TBT
-                  <x id="START_LINK" ctype="x-a" equiv-text="&lt;a>"/> TBT<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/>
-                </source>
+        TBT
+        <x id="START_LINK" ctype="x-a" equiv-text="&lt;a>"/> TBT<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/>
+      </source>
         <target state="translated">
           En cliquant sur S'inscrire, vous acceptez nos
           <x id="START_LINK" ctype="x-a" equiv-text="&lt;a>"/>
@@ -1113,17 +1574,18 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">71</context>
+          <context context-type="linenumber">67</context>
         </context-group>
       </trans-unit>
       <trans-unit id="sign-up" datatype="html">
-        <source>TBT</source>
+        <source>TBT
+      </source>
         <target state="translated">
           S'inscrire
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">77</context>
+          <context context-type="linenumber">73</context>
         </context-group>
       </trans-unit>
       <trans-unit id="already-have-account" datatype="html">
@@ -1131,7 +1593,7 @@
         <target state="translated">Vous avez déjà un compte ?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">80</context>
+          <context context-type="linenumber">77</context>
         </context-group>
       </trans-unit>
       <trans-unit id="send-sms" datatype="html">
@@ -1802,7 +2264,7 @@
       </trans-unit>
       <trans-unit id="need-car-from" datatype="html">
         <source>TBT</source>
-        <target state="translated">J'ai qu'on m'emmnène de</target>
+        <target state="translated">J'ai besoin qu'on m'emmnène de</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request/travel-request.html</context>
           <context context-type="linenumber">14</context>
@@ -1815,8 +2277,8 @@
       <trans-unit id="take-them" datatype="html">
         <source>TBT</source>
         <target state="translated">
-            Emmener
-          </target>
+          Emmener
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request/travel-request.html</context>
           <context context-type="linenumber">37</context>
@@ -1833,8 +2295,9 @@
       <trans-unit id="travel-proposal-description" datatype="html">
         <source>TBT</source>
         <target state="translated">
-          Vous êtes sur le point de proposer aux autres participants des places dans votre voiture pour vous rendre à l'événement.
-      </target>
+          Vous êtes sur le point de proposer aux autres participants des places dans votre voiture pour vous rendre à
+          l'événement.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal-creation/travel-proposal-creation.html</context>
           <context context-type="linenumber">5</context>
@@ -1868,7 +2331,7 @@
         <source>TBT</source>
         <target state="translated">
           Indiquez aux participants que vous avez besoin d'une voiture pour vous rendre à l'événement.
-      </target>
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request-creation/travel-request-creation.html</context>
           <context context-type="linenumber">5</context>
@@ -1878,7 +2341,7 @@
         <source>TBT</source>
         <target state="translated">
           Où avez-vous besoin qu'on vienne vous chercher ?
-          </target>
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request-creation/travel-request-creation.html</context>
           <context context-type="linenumber">11</context>
@@ -1888,7 +2351,7 @@
         <source>TBT</source>
         <target state="translated">
           Paramètres de le bulle Transport
-    </target>
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/settings/travel-settings.html</context>
           <context context-type="linenumber">5</context>
@@ -1912,7 +2375,7 @@
         <source>TBT</source>
         <target state="translated">
           Paramètres de le bulle Libre
-    </target>
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/free-bubble/settings/free-settings.html</context>
           <context context-type="linenumber">5</context>
@@ -1959,8 +2422,8 @@
       <trans-unit id="providers" datatype="html">
         <source>TBT</source>
         <target state="translated">
-        Fournisseurs
-      </target>
+          Fournisseurs
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-content.html</context>
           <context context-type="linenumber">6</context>
@@ -1970,7 +2433,7 @@
         <source>TBT</source>
         <target state="translated">
           Personne n'a encore proposé de moyen de transport. Soyez le premier !
-            </target>
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-content.html</context>
           <context context-type="linenumber">26</context>
@@ -1979,8 +2442,8 @@
       <trans-unit id="requesters" datatype="html">
         <source>TBT</source>
         <target state="translated">
-        Demandeurs
-      </target>
+          Demandeurs
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-content.html</context>
           <context context-type="linenumber">43</context>
@@ -1990,7 +2453,7 @@
         <source>TBT</source>
         <target state="translated">
           Aucune demande en attente.
-            </target>
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-content.html</context>
           <context context-type="linenumber">64</context>
@@ -2025,8 +2488,8 @@
       <trans-unit id="add-an-option" datatype="html">
         <source>TBT</source>
         <target state="translated">
-                Ajouter une option
-              </target>
+          Ajouter une option
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/content/survey-content.html</context>
           <context context-type="linenumber">21</context>
@@ -2043,8 +2506,8 @@
       <trans-unit id="vote" datatype="html">
         <source>TBT</source>
         <target state="translated">
-    Voter
-  </target>
+          Voter
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/content/survey-option/survey-option.html</context>
           <context context-type="linenumber">24</context>
@@ -2281,7 +2744,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/footer/footer.component.html</context>
-          <context context-type="linenumber">3</context>
+          <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="update" datatype="html">

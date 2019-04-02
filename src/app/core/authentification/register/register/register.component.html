@@ -1,90 +1,82 @@
-<div class="login-page">
-  <section class="h-100">
-    <div class="container h-100">
-      <div class="row justify-content-center">
-        <div class="card-wrapper">
-          <div class="brand">
-            <img src="./assets/img/vibent.svg">
-          </div>
-          <div class="card fat">
-            <div class="card-body">
-              <h3 class="card-title" i18n="@@register">TBT</h3>
-              <form novalidate [formGroup]="registerForm">
-                <div class="form-group">
-                  <label for="firstName">
-                    <span i18n="@@first-name">TBT</span>
-                    <span *ngIf="!formsValidAfterRegister.firstName" class="incorrect-input"
-                          i18n="@@required">TBT</span>
-                  </label>
-                  <input type="text" class="form-control" id="firstName" formControlName="firstName"/>
-                </div>
+<div class="container">
+  <vibent-header></vibent-header>
+  <div class="card col-xl-4 col-md-5 mx-auto p-4 m-0">
+    <h3 class="card-title" i18n="@@register">TBT</h3>
+    <form novalidate [formGroup]="registerForm">
+      <div class="form-group">
+        <label for="firstName">
+          <span i18n="@@first-name">TBT</span>
+          <span *ngIf="!formsValidAfterRegister.firstName" class="incorrect-input"
+                i18n="@@required">TBT</span>
+        </label>
+        <input type="text" class="form-control" id="firstName" formControlName="firstName"/>
+      </div>
 
-                <div class="form-group">
-                  <label for="lastName">
-                    <span i18n="@@last-name">TBT</span>
-                    <span *ngIf="!formsValidAfterRegister.lastName" class="incorrect-input"
-                          i18n="@@required">TBT</span>
-                  </label>
-                  <input type="text" class="form-control" id="lastName" formControlName="lastName"/>
-                </div>
+      <div class="form-group">
+        <label for="lastName">
+          <span i18n="@@last-name">TBT</span>
+          <span *ngIf="!formsValidAfterRegister.lastName" class="incorrect-input"
+                i18n="@@required">TBT</span>
+        </label>
+        <input type="text" class="form-control" id="lastName" formControlName="lastName"/>
+      </div>
 
-                <div class="register-phone-mail">
-                  <h4 class="card-title text-center m-t-10 m-b-0 text-gray" i18n="@@email-phone-both-question">TBT</h4>
-                  <p class="text-center text-gray">
-                    <span i18n="@@register-email-phone-both">TBT<br/> TBT</span>
-                    <span *ngIf="!formsValidAfterRegister.emailOrPhone" class="text-red"
-                          i18n="@@email-phone-choose-one">TBT</span>
-                  </p>
-                  <div class="form-group">
-                    <label for="email">
-                      <span i18n="@@email">TBT</span>
-                      <span *ngIf="!formsValidAfterRegister.email" class="incorrect-input" i18n="@@incorrect-email">TBT</span>
-                    </label>
-                    <input type="email" class="form-control" id="email" formControlName="email">
-                  </div>
+      <div class="register-phone-mail">
+        <h4 class="card-title text-center m-t-10 m-b-0 text-gray" i18n="@@email-phone-both-question">TBT</h4>
+        <p class="text-center text-gray">
+          <span i18n="@@register-email-phone-both">TBT<br/> TBT</span>
+          <span *ngIf="!formsValidAfterRegister.emailOrPhone" class="text-red"
+                i18n="@@email-phone-choose-one">TBT</span>
+        </p>
+        <div class="form-group">
+          <label for="email">
+            <span i18n="@@email">TBT</span>
+            <span *ngIf="!formsValidAfterRegister.email" class="incorrect-input"
+                  i18n="@@incorrect-email">TBT</span>
+          </label>
+          <input type="email" class="form-control" id="email" formControlName="email">
+        </div>
 
-                  <div class="form-group">
-                    <label for="phone">
-                      <span i18n="@@phone-number">TBT</span>
-                      <span *ngIf="!formsValidAfterRegister.phone" class="incorrect-input" i18n="@@incorrect-phone">TBT</span></label>
-                    <input id="phone" class="form-control" ng2TelInput [ng2TelInputOptions]="{initialCountry: 'fr'}"
-                           (ng2TelOutput)="getNumber($event)">
-                  </div>
-                </div>
-                <div class="form-group"> 
-                  <label for="password">
-                    <span i18n="@@password">TBT</span>
-                    <span *ngIf="!formsValidAfterRegister.password" class="incorrect-input" i18n="@@8-characters">TBT</span></label>
-                  <input type="password" class="form-control" id="password"
-                         formControlName="password"/>
-                </div>
-
-                <div class="form-group"> 
-                  <label for="passwordConfirmation">
-                    <span i18n="@@password-confirmation">TBT</span>
-                    <span *ngIf="!formsValidAfterRegister.passwordConfirmation" class="incorrect-input"
-                          i18n="@@password-not-identical">TBT</span></label>
-                  <input type="password" class="form-control" id="passwordConfirmation"
-                         formControlName="passwordConfirmation"/>   
-                </div>
-
-                <div class="form-group" i18n="@@agree-terms-conditions">
-                  TBT
-                  <a target="_blank" class="cursor-pointer text-primary" (click)="aboutPage()"> TBT</a>
-                </div>
-                        
-                <button type="submit" class="btn btn-primary btn-block" (click)="checkLoginAndRegister()"
-                        i18n="@@sign-up">TBT</button>
-                   
-                <div class="text-center m-t-20">
-                  <span i18n="@@already-have-account">TBT</span>
-                  <a (click)="loginPage()" class="cursor-pointer text-primary" i18n="@@login">TBT</a>
-                </div>
-              </form>
-            </div>
-          </div>
+        <div class="form-group">
+          <label for="phone">
+            <span i18n="@@phone-number">TBT</span>
+            <span *ngIf="!formsValidAfterRegister.phone" class="incorrect-input"
+                  i18n="@@incorrect-phone">TBT</span></label>
+          <input id="phone" class="form-control" ng2TelInput [ng2TelInputOptions]="{initialCountry: 'fr'}"
+                 (ng2TelOutput)="getNumber($event)">
         </div>
       </div>
-    </div>
-  </section>
+      <div class="form-group"> 
+        <label for="password">
+          <span i18n="@@password">TBT</span>
+          <span *ngIf="!formsValidAfterRegister.password" class="incorrect-input"
+                i18n="@@8-characters">TBT</span></label>
+        <input type="password" class="form-control" id="password"
+               formControlName="password"/>
+      </div>
+
+      <div class="form-group"> 
+        <label for="passwordConfirmation">
+          <span i18n="@@password-confirmation">TBT</span>
+          <span *ngIf="!formsValidAfterRegister.passwordConfirmation" class="incorrect-input"
+                i18n="@@password-not-identical">TBT</span></label>
+        <input type="password" class="form-control" id="passwordConfirmation"
+               formControlName="passwordConfirmation"/>   
+      </div>
+
+      <div class="form-group" i18n="@@agree-terms-conditions">
+        TBT
+        <a target="_blank" class="cursor-pointer text-primary" (click)="aboutPage()"> TBT</a>
+      </div>
+              
+      <button type="submit" class="btn btn-primary btn-block" (click)="checkLoginAndRegister()"
+              i18n="@@sign-up">TBT
+      </button>
+         
+      <div class="text-center m-t-20">
+        <span i18n="@@already-have-account">TBT</span>
+        <a (click)="loginPage()" class="cursor-pointer text-primary" i18n="@@login">TBT</a>
+      </div>
+    </form>
+  </div>
 </div>

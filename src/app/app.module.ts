@@ -40,6 +40,8 @@ import { LoadingPageComponent } from './core/services/loader/loading-page/loadin
 import { LoadingPageModule } from './core/services/loader/loading-page/loading-page.module';
 import { HomeModule } from './modules/components/home/home.module';
 import { I18nModule } from './core/services/i18n/i18n.module';
+import { TermsModule } from './modules/pages/terms/terms.module';
+import { RoutingStateService } from './core/services/routing-state.service';
 
 @NgModule({
   imports: [
@@ -54,6 +56,7 @@ import { I18nModule } from './core/services/i18n/i18n.module';
     RouterModule,
     GroupsModule,
     EventsModule,
+    TermsModule,
     SidebarModule,
     NavbarModule,
     EventModule,
@@ -84,6 +87,7 @@ import { I18nModule } from './core/services/i18n/i18n.module';
   providers: [
     CookieService,
     ScreenService,
+    RoutingStateService,
     LoaderService,
     GroupAdminPanelService,
     EventAdminPanelService,
