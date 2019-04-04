@@ -1,5 +1,5 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
@@ -93,7 +93,12 @@ import { I18nModule } from './core/services/i18n/i18n.module';
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
       multi: true
-    }],
+    },
+    {
+      provide: LOCALE_ID,
+      useValue: 'en'
+    },
+  ],
   bootstrap: [AppComponent],
   entryComponents: [
     LoadingPageComponent
