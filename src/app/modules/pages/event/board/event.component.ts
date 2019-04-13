@@ -13,7 +13,8 @@ declare const $: any;
 
 @Component({
   selector: 'event',
-  templateUrl: './event.component.html'
+  templateUrl: './event.component.html',
+  styleUrls: ['./event.component.scss']
 })
 export class EventComponent implements OnInit, OnDestroy {
 

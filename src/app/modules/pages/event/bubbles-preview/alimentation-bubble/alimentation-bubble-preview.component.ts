@@ -3,7 +3,8 @@ import { AlimentationBubble } from '../../../../../shared/models/bubbles/Aliment
 
 @Component({
   selector: 'app-alimentation-bubble-preview',
-  templateUrl: './alimentation-bubble-preview.html'
+  templateUrl: './alimentation-bubble-preview.html',
+  styleUrls: ['../bubble-preview.scss']
 })
 export class AlimentationBubblePreviewComponent {
   

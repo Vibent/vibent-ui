@@ -3,7 +3,8 @@ import { CheckboxBubble } from '../../../../../shared/models/bubbles/CheckboxBub
 
 @Component({
   selector: 'app-checkbox-bubble-preview',
-  templateUrl: './checkbox-bubble-preview.html'
+  templateUrl: './checkbox-bubble-preview.html',
+  styleUrls: ['../bubble-preview.scss']
 })
 export class CheckboxBubblePreviewComponent implements OnInit {
 

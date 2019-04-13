@@ -5,7 +5,8 @@ declare const $: any;
 
 @Component({
   selector: 'app-free-bubble-preview',
-  templateUrl: './free-bubble-preview.html'
+  templateUrl: './free-bubble-preview.html',
+  styleUrls: ['../bubble-preview.scss']
 })
 export class FreeBubblePreviewComponent {
 
