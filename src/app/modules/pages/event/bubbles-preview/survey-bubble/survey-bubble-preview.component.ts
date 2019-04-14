@@ -3,7 +3,8 @@ import { SurveyBubble } from '../../../../../shared/models/bubbles/SurveyBubble'
 
 @Component({
   selector: 'app-survey-bubble-preview',
-  templateUrl: './survey-bubble-preview.html'
+  templateUrl: './survey-bubble-preview.html',
+  styleUrls: ['../bubble-preview.scss']
 })
 export class SurveyBubblePreviewComponent {
 

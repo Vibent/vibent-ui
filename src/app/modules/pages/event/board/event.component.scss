@@ -1,0 +1,30 @@
+@import "../../../../../assets/scss/core/variables/_shadow.scss";
+@import "../../../../../assets/scss/core/mixins/_vendor-prefixes.scss";
+
+.main-content {
+  background-color: white;
+}
+
+.bubble-board {
+  margin-top: 30px;
+  width: 95%;
+  display: table;
+}
+
+[class*="col-"] {
+  float: none;
+  display: table-cell;
+  vertical-align: top;
+}
+
+.add-bubble {
+  cursor: pointer;
+  text-align: center;
+
+  .fa {
+    margin-top: 126px;
+    font-size: 48px;
+    color: #333;
+    border-radius: 50%;
+  }
+}

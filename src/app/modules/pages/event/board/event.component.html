@@ -40,33 +40,29 @@
     </div>
 
     <div class="row justify-content-center">
-      <div class="bubble">
-        <div class="row justify-content-center">
+      <div class="bubble-board">
+        <app-modal-bubble-creation
+            [eventRef]=event.ref>
+        </app-modal-bubble-creation>
 
-          <app-modal-bubble-creation
-              [eventRef]=event.ref>
-          </app-modal-bubble-creation>
+        <app-expanded-bubble-controller
+            [bubble]=bubbleToExpand
+            [eventRef]="event.ref">
+        </app-expanded-bubble-controller>
 
-          <app-expanded-bubble-controller
-              [bubble]=bubbleToExpand
-              [eventRef]="event.ref">
-          </app-expanded-bubble-controller>
+        <div class="row">
 
           <div *ngFor="let bubble of bubbles"
-               class="row col-xl-4 col-md-6 col-sm-6 justify-content-center">
+                class="col-xl-3 col-md-4 col-sm-6">
             <bubble-preview-controller
                 [bubble]=bubble
                 (bubbleToExpand)="onBubbleSentForExpand($event)">
             </bubble-preview-controller>
           </div>
 
-          <div class="row col-xl-4 col-md-6 col-sm-6 justify-content-center">
-            <a class="cursor-pointer">
-              <div class="h-250-p"
-                   (click)="openNewBubbleModal()">
-                <i class="fa fa-plus-circle add-bubble-icon"></i>
-              </div>
-            </a>
+          <div class="add-bubble col-xl-3 col-md-4 col-sm-6"
+               (click)="openNewBubbleModal()">
+            <i class="fa fa-plus-circle"></i>
           </div>
 
         </div>

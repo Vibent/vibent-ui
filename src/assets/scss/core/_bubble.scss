@@ -13,17 +13,6 @@
   padding: 0;
 }
 
-.bubble {
-  width: 95%;
-  min-height: 275px;
-  height: 100%;
-  border-radius: 30px;
-  background: linear-gradient(60deg, $vibent-purple, $vibent-red);
-  display: inline-block;
-  padding: 10px 10px;
-  margin: 10px;
-}
-
 .proposal-avatar {
   img {
     width: 70px;
@@ -70,86 +59,6 @@
   width: 100%;
   min-height: 300px;
   padding: 10px 10px;
-}
-
-.box-part {
-  max-height: 250px;
-  max-width: 250px;
-  height: 250px;
-  width: 250px;
-  background: #FFF;
-  padding: 60px 10px;
-  margin: 10px 0;
-  border-radius: 50%;
-  transition-duration: 0.5s;
-  position: relative;
-  cursor: pointer;
-
-  .bubble-type {
-    margin-top: -53px;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    position: absolute;
-    background-color: white;
-    margin-left: 172px;
-
-    @mixin bubble-icon() {
-      margin-top: 5px;
-      margin-left: 4px;
-      font-size: 18px;
-    }
-    .alim-bubble-icon {
-      color: #f27c8b;
-      @include bubble-icon();
-    }
-
-    .checkbox-bubble-icon {
-      color: #6ebf74;
-      @include bubble-icon();
-    }
-
-    .travel-bubble-icon {
-      color: #7687c0;
-      @include bubble-icon();
-    }
-
-    .free-bubble-icon {
-      color: #b33a69;
-      @include bubble-icon();
-    }
-
-    .planning-bubble-icon {
-      color: #08b6b3;
-      @include bubble-icon();
-    }
-
-    .survey-bubble-icon {
-      color: #ff9236;
-      @include bubble-icon();
-    }
-
-  }
-  .title {
-    color: black;
-    font-size: 24px;
-  }
-
-  .preview {
-    margin-top: 30px;
-  }
-
-}
-
-.box-part:hover {
-  @include box-shadow($bmd-shadow-16dp);
-  transition-duration: 0.5s;
-}
-
-.add-bubble-icon {
-  font-size: 48px;
-  color: white;
-  margin-top: 100px
 }
 
 .alimentation {

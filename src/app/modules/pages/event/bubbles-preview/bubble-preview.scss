@@ -1,0 +1,86 @@
+@import "../../../../../assets/scss/core/variables/_shadow.scss";
+@import "../../../../../assets/scss/core/mixins/_vendor-prefixes.scss";
+
+.bubble-preview {
+  background: #fff;
+  @include box-shadow($bmd-shadow-4dp);
+  transition-duration: 0.5s;
+  margin-bottom: 30px;
+  height: 300px;
+  border-radius: 20px;
+  cursor: pointer;
+
+  @mixin bubble-icon() {
+    margin-top: 5px;
+    margin-left: 4px;
+    font-size: 18px;
+  }
+
+  &.alimentation-bubble-preview {
+    border-top: 5px solid #f27c8b;
+    .bubble-icon {
+      color: #f27c8b;
+      @include bubble-icon();
+    }
+  }
+
+  &.checkbox-bubble-preview {
+    border-top: 5px solid #6ebf74;
+    .bubble-icon {
+      color: #6ebf74;
+      @include bubble-icon();
+    }
+  }
+
+  &.travel-bubble-preview {
+    border-top: 5px solid #7687c0;
+    .bubble-icon {
+      color: #7687c0;
+      @include bubble-icon();
+    }
+  }
+
+  &.free-bubble-preview {
+    border-top: 5px solid #b33a69;
+    .bubble-icon {
+      color: #b33a69;
+      @include bubble-icon();
+    }
+  }
+
+  &.planning-bubble-preview {
+    border-top: 5px solid #08b6b3;
+    .bubble-icon {
+      color: #08b6b3;
+      @include bubble-icon();
+    }
+  }
+
+  &.survey-bubble-preview {
+    border-top: 5px solid #ff9236;
+    .bubble-icon {
+      color: #ff9236;
+      @include bubble-icon();
+    }
+  }
+
+  .bubble-type {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #ddd;
+  }
+
+  .title {
+    color: black;
+    font-size: 24px;
+  }
+
+  .preview {
+
+  }
+
+  &:hover {
+    @include box-shadow($bmd-shadow-16dp);
+  }
+}
