@@ -1,0 +1,18 @@
+<div class="bubble-contributors">
+  <ng-container *ngFor="let user$ of mostActiveUsers.users">
+    <img *ngIf="user$ | async as user"
+         class="avatar rounded-circle"
+         src={{user?.profilePicLocation}}/>
+
+    <div *ngIf="!(user$ | async)"
+         class="avatar participant-avatar-skeleton"></div>
+  </ng-container>
+
+  <div *ngIf="mostActiveUsers.amountRemaining > 0"
+       class="avatar rounded-circle remaining-amount">
+    +{{mostActiveUsers.amountRemaining}}
+  </div>
+
+  <span class="text-muted"
+        i18n>{mostActiveUsers.amount, plural, =0 {no contributors } =1 {contributing singular} other {contributing plural}}</span>
+</div>

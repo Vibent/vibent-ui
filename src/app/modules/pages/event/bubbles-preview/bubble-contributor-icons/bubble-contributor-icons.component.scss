@@ -1,0 +1,17 @@
+.bubble-contributors {
+  line-height: 33px;
+  color: #222;
+  font-size: .8em;
+
+  .avatar {
+    height: 33px;
+    width: 33px;
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  .remaining-amount {
+    background-color: #ddd;
+  }
+}

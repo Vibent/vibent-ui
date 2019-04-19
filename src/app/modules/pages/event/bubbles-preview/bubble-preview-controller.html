@@ -1,8 +1,8 @@
-<app-alimentation-bubble-preview
+<alimentation-bubble-preview
     *ngIf="this.bubble.type === BubbleType.AlimentationBubble"
     [alimentationBubble]="this.bubble"
     (click)="this.expandBubble()">
-</app-alimentation-bubble-preview>
+</alimentation-bubble-preview>
 
 <app-checkbox-bubble-preview
     *ngIf="this.bubble.type === BubbleType.CheckboxBubble"

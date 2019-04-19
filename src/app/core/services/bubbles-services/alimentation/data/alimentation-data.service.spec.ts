@@ -2,6 +2,7 @@ import { AlimentationDataService } from './alimentation-data.service';
 import { UserManagementService } from '../../../user-management.service';
 import { HttpService } from '../../../../http/http.service';
 import {
+  AlimentationBubble,
   AlimentationEntry,
   AlimType
 } from '../../../../../shared/models/bubbles/AlimentationBubble';
@@ -12,6 +13,8 @@ let alimentationDataService: AlimentationDataService;
 let userManagementService: UserManagementService;
 let httpService: HttpService;
 
+let alimentationBubble: AlimentationBubble;
+let otherAlimentationBubble: AlimentationBubble;
 let userAlimentationEntry: AlimentationEntry;
 let otherAlimentationEntry: AlimentationEntry;
 
@@ -26,7 +29,7 @@ describe('Alimentation data Service', () => {
         return user;
       }
     };
-    httpService = <HttpService> {
+    httpService = <HttpService>{
       getUser(userRef: string): Observable<User> {
         return of(user);
       }
@@ -41,7 +44,7 @@ describe('Alimentation data Service', () => {
       currentBringing: 5,
       name: 'name',
       totalRequested: 10,
-      type: AlimType.DRINK,
+      type: AlimType.FOOD,
     };
 
     otherAlimentationEntry = {
@@ -55,6 +58,15 @@ describe('Alimentation data Service', () => {
       totalRequested: 10,
       type: AlimType.DRINK,
     };
+
+    alimentationBubble = new AlimentationBubble();
+    alimentationBubble.entries = [
+      userAlimentationEntry,
+      otherAlimentationEntry
+    ];
+
+    otherAlimentationBubble = new AlimentationBubble();
+    otherAlimentationBubble.entries = [];
 
     alimentationDataService = new AlimentationDataService(userManagementService, httpService);
   });
@@ -89,5 +101,11 @@ describe('Alimentation data Service', () => {
     expect(alimentationDataService.getClassForDeleteBring(otherAlimentationEntry)).toEqual('addAndDeleteUnavailable');
   });
 
+  it('User activity should contain all user refs in brings', () => {
+    expect(alimentationDataService.getUserActivity(alimentationBubble)).toEqual(['ref', 'dummy']);
+  });
 
+  it('User activity of bubble with no entries should return an empty array', () => {
+    expect(alimentationDataService.getUserActivity(otherAlimentationBubble)).toEqual([]);
+  });
 });
