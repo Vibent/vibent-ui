@@ -14,14 +14,16 @@ export class HomeComponent implements OnInit {
   bubbleDisplayed: BubbleType = BubbleType.AlimentationBubble;
   BubbleType = BubbleType;
 
-  constructor(private router: Router, private route: ActivatedRoute, private cookieService: CookieService) {
+  constructor(private router: Router,
+              private route: ActivatedRoute,
+              private cookieService: CookieService) {
     if (this.cookieService.check('token')) {
       this.router.navigate(['/events']);
     }
   }
 
   loginPage() {
-    this.router.navigate(['/login'], { queryParams: { returnUrl: this.returnUrl }});
+    this.router.navigate(['/login'], {queryParams: {returnUrl: this.returnUrl}});
   }
 
   ngOnInit(): void {

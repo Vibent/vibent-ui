@@ -24,12 +24,17 @@ import { ResetPasswordComponent } from './core/authentification/forgot/reset-pas
 import { MailConfirmationComponent } from './core/authentification/register/mail-confirmation/mail-confirmation.component';
 import { HomeComponent } from './modules/components/home/home.component';
 import { LoginResolver } from './shared/resolvers/login.resolver';
+import { TermsComponent } from './modules/pages/terms/terms.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
     resolve: {LoginResolver}
+  },
+  {
+    path: 'terms',
+    component: TermsComponent
   },
   {
     path: 'register',

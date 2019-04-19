@@ -8,12 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatDatepickerModule, MatFormFieldModule, MatInputModule, MatNativeDateModule } from '@angular/material';
 import { Ng2TelInputModule } from 'ng2-tel-input';
 import { MailConfirmationComponent } from '../mail-confirmation/mail-confirmation.component';
+import { HeaderModule } from '../../header/header.module';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     FormsModule,
+    HeaderModule,
     ReactiveFormsModule,
     HttpClientModule,
     MatInputModule,

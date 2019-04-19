@@ -129,7 +129,7 @@ export class RegisterComponent implements OnInit {
   }
 
   aboutPage() {
-    this.router.navigate(['/login']);
+    this.router.navigate(['/terms']);
   }
 
   public onFail(e): void {
