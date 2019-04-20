@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
 import {
+  AlimentationBubble,
   AlimentationDataModel,
-  AlimentationEntry, BringsByUser
+  AlimentationEntry,
+  AlimType,
+  BringsByUser
 } from '../../../../../shared/models/bubbles/AlimentationBubble';
 import { UserManagementService } from '../../../user-management.service';
 import { User } from '../../../../../shared/models/user';
@@ -40,8 +43,7 @@ export class AlimentationDataService {
   updateBringsByUser(alimentationDataModel: AlimentationDataModel, alimentationEntry: AlimentationEntry) {
     if (!alimentationDataModel.bringingsByUsers) {
       alimentationDataModel.bringingsByUsers = this.getBringsByUser(alimentationEntry);
-    }
-    else {
+    } else {
       this.mergeArrays(alimentationDataModel.bringingsByUsers, this.getBringsByUser(alimentationEntry));
     }
   }
@@ -86,5 +88,33 @@ export class AlimentationDataService {
       return this.ENABLED_BUTTON;
     }
     return this.DISABLED_BUTTON;
+  }
+
+  public getUserActivity(alimentationBubble: AlimentationBubble): string[] {
+    const users: string[][] = alimentationBubble.entries.map(e => e.brings.map(b => b.userRef));
+    if (users.length === 0) {
+      return [];
+    }
+    return users.reduce((current, next) => current.concat(next));
+  }
+
+  public getTypeCompletion(alimentationBubble: AlimentationBubble, type: AlimType): number {
+    const typeEntries = alimentationBubble.entries.filter(e => e.type === type);
+    let totalRequested = 0;
+    let totalBrought = 0;
+    typeEntries.forEach(entry => {
+      totalRequested += entry.totalRequested;
+      totalBrought += entry.currentBringing;
+    });
+
+    if (totalRequested === 0) {
+      return 0;
+    }
+    return (totalBrought / totalRequested) * 100;
+  }
+
+  public getTypeRemaining(alimentationBubble: AlimentationBubble, type: AlimType): number {
+    const typeEntries = alimentationBubble.entries.filter(e => e.type === type);
+    return typeEntries.filter(e => e.currentBringing !== e.totalRequested).length;
   }
 }

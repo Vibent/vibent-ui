@@ -606,7 +606,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html</context>
-          <context context-type="linenumber">7</context>
+          <context context-type="linenumber">44</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
@@ -1909,20 +1909,60 @@
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="requested" datatype="html">
-        <source>TBT</source>
-        <target state="translated">requested</target>
+      <trans-unit id="fe9c3036dddbb22630a4546f64191606ac73ed12" datatype="html">
+        <source>
+          <x id="INTERPOLATION" equiv-text="{{remainingDrinks}}"/> <x id="ICU" equiv-text="{remainingDrinks, plural, =1 {...} other {...}}"/> <x id="ICU_1" equiv-text="{remainingDrinks, plural, =1 {...} other {...}}"/>
+        </source>
+        <target state="translated">
+          <x id="INTERPOLATION" equiv-text="{{remainingDrinks}}"/> <x id="ICU" equiv-text="{remainingDrinks, plural, =1 {...} other {...}}"/> <x id="ICU_1" equiv-text="{remainingDrinks, plural, =1 {...} other {...}}"/>
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="provided" datatype="html">
-        <source>TBT</source>
-        <target state="translated">provided</target>
+      <trans-unit id="1f5bf8cbc84a7ef3e4b33931566d793c02fdd333" datatype="html">
+        <source>{VAR_PLURAL, plural, =1 {drink} other {drinks} }</source>
+        <target state="translated">{VAR_PLURAL, plural, =1 {drink} other {drinks} }</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html</context>
-          <context context-type="linenumber">12</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9e59badcff06cd5c594c7fae69aa618db9d21dcd" datatype="html">
+        <source>{VAR_PLURAL, plural, =1 {still requested} other {still requested} }</source>
+        <target state="translated">{VAR_PLURAL, plural, =1 {still requested} other {still requested} }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ec8aaaf9f0b2472be6a6ff39fc4d3fc954b7af74" datatype="html">
+        <source>
+          <x id="INTERPOLATION" equiv-text="{{remainingFoods}}"/> <x id="ICU" equiv-text="{remainingFoods, plural, =1 {...} other {...}}"/> <x id="ICU_1" equiv-text="{remainingFoods, plural, =1 {...} other {...}}"/>
+        </source>
+        <target state="translated">
+          <x id="INTERPOLATION" equiv-text="{{remainingFoods}}"/> <x id="ICU" equiv-text="{remainingFoods, plural, =1 {...} other {...}}"/> <x id="ICU_1" equiv-text="{remainingFoods, plural, =1 {...} other {...}}"/>
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e5d2af81851f1c568f0c4ac93ec0c64204668f8b" datatype="html">
+        <source>{VAR_PLURAL, plural, =1 {food} other {foods} }</source>
+        <target state="translated">{VAR_PLURAL, plural, =1 {food} other {foods} }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4fcf7cf17671d5b06c2e5d83fa165fbf202366fc" datatype="html">
+        <source>{VAR_PLURAL, plural, =1 {still requested} other {still requested} }</source>
+        <target state="translated">{VAR_PLURAL, plural, =1 {still requested} other {still requested} }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html</context>
+          <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="checkbox-options" datatype="html">
@@ -1971,6 +2011,14 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/survey-bubble/survey-bubble-preview.html</context>
           <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="45fa03130f20c4f10991ea7c27b114e1e115e253" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {no contributors } =1 {contributing singular} other {contributing plural} }</source>
+        <target state="translated">{VAR_PLURAL, plural, =0 {No contributors} =1 {contributing} other {contributing} }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/bubble-contributor-icons/bubble-contributor-icons.component.html</context>
+          <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="food-name" datatype="html">

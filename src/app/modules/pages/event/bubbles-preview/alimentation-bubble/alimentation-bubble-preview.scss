@@ -1,0 +1,47 @@
+.graphics {
+  height: 70%;
+  overflow: hidden;
+
+  .graphic-part {
+    margin-top: 40px;
+    padding: 0 5% 0 5%;
+
+    .icon {
+      display: inline-block;
+      vertical-align: middle;
+      width: 30%;
+
+      img {
+        width: 50px;
+      }
+    }
+
+    .info {
+      display: inline-block;
+      vertical-align: middle;
+      width: 70%;
+
+      .progress {
+        margin-top: 15px;
+        box-shadow: none;
+      }
+
+      .remaining-text {
+        text-align: right;
+        white-space: nowrap;
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+.title {
+  height: 12%;
+}
+
+.contributors {
+  border-top: #e3e3e3 solid 2px;
+  height: 18%;
+  padding-top: 7px;
+  overflow: hidden;
+}
