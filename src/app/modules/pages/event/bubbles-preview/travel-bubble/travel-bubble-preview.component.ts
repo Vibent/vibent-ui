@@ -1,16 +1,19 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { TravelBubble } from '../../../../../shared/models/bubbles/TravelBubble';
-
-declare const $: any;
+import { TravelDataService } from '../../../../../core/services/bubbles-services/travel/data/travel-data.service';
 
 @Component({
-  selector: 'app-travel-bubble-preview',
+  selector: 'travel-bubble-preview',
   templateUrl: './travel-bubble-preview.html',
-  styleUrls: ['../bubble-preview.scss']
+  styleUrls: ['../bubble-preview.scss', './travel-bubble-preview.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TravelBubblePreviewComponent {
 
   @Input()
-  public travelBubble: TravelBubble;
+  public bubble: TravelBubble;
+
+  constructor(public travelDataService: TravelDataService) {
+  }
 
 }

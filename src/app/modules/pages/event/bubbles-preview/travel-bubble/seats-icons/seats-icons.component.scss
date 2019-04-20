@@ -1,0 +1,27 @@
+@import "../../../../../../../assets/scss/core/variables/colors";
+
+.seat-circle {
+  width: 12px;
+  height: 12px;
+  margin-right: 2px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.available {
+  background-color: $green-700;
+}
+
+.taken {
+  background-color: $green-300;
+}
+
+.requested {
+  background-color: $gray-light;
+}
+
+.remaining {
+  font-size: 0.8em;
+  top: -3px;
+  position: relative;
+}

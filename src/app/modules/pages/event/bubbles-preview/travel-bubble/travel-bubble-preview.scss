@@ -1,0 +1,50 @@
+.graphics {
+  height: 70%;
+  overflow: hidden;
+
+  .seat-circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .seats-available {
+    height: 30%;
+    margin-top: 40px;
+  }
+
+  .other-seats {
+    height: 30%;
+
+    .seats-taken {
+      display: inline-block;
+      width: 50%;
+    }
+
+    .seats-requested {
+      display: inline-block;
+      width: 50%;
+    }
+  }
+
+  .travel-bar {
+    height: 30%;
+
+    .progress {
+      width: 80%;
+      margin: 10px auto auto;
+    }
+  }
+}
+
+.title {
+  height: 12%;
+}
+
+.contributors {
+  border-top: #e3e3e3 solid 2px;
+  height: 18%;
+  padding-top: 7px;
+  overflow: hidden;
+}

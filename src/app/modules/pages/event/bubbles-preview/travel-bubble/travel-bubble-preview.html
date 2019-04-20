@@ -1,10 +1,56 @@
 <div class="bubble-preview travel-bubble-preview  text-center">
-    <!--<div class="creator-bubble"></div>-->
-    <div class="bubble-type"><i class="fa fa-taxi bubble-icon"></i>
+    <div class="bubble-type">
+        <i class="fa fa-taxi bubble-icon"></i>
     </div>
-    <div class="title" i18n="@@travel">TBT</div>
-    <div class="preview">
-        {{travelBubble.proposals.length}} <span i18n="@@proposals">TBT</span><br>
-        {{travelBubble.requests.length}} <span i18n="@@requests">TBT</span>
+    <div class="graphics">
+
+        <div class="seats-available">
+            <ng-container i18n>
+                {travelDataService.getAvailableSeats(bubble), plural,
+                    =0 {No seats available}
+                    =1 {1 seat available}
+                    other {{{travelDataService.getAvailableSeats(bubble)}} seats available}}
+            </ng-container><br>
+            <seats-icons [amount]="travelDataService.getAvailableSeats(bubble)" [maxAmount]="10" [type]="'available'"></seats-icons>
+        </div>
+
+        <div class="other-seats">
+            <div class="seats-taken">
+                <ng-container i18n>
+                    {travelDataService.getTakenSeats(bubble), plural,
+                        =0 {No seats taken}
+                        =1 {1 seat taken}
+                        other {{{travelDataService.getTakenSeats(bubble)}} seats taken}}
+                </ng-container><br>
+                <seats-icons [amount]="travelDataService.getTakenSeats(bubble)" [maxAmount]="5" [type]="'taken'"></seats-icons>
+            </div>
+            <div class="seats-requested">
+                <ng-container i18n>
+                    {travelDataService.getDetachedRequestedSeats(bubble), plural,
+                        =0 {No seats requested}
+                        =1 {1 seat requested}
+                        other {{{travelDataService.getDetachedRequestedSeats(bubble)}} seats requested}}
+                </ng-container><br>
+                <seats-icons [amount]="travelDataService.getDetachedRequestedSeats(bubble)" [maxAmount]="5" [type]="'requested'"></seats-icons>
+            </div>
+        </div>
+
+        <div class="travel-bar">
+            <div class="progress">
+                <div class="progress-bar bg-success"
+                     [style.width]="travelDataService.getBubbleCompletion(bubble) + '%'"
+                     role="progressbar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="title">
+        <p i18n="@@travel">TBT</p>
+    </div>
+    <div class="contributors">
+        <bubble-contributors
+            [userRefs]="travelDataService.getUserActivity(bubble)"
+            maxItems="3">
+        </bubble-contributors>
     </div>
 </div>
+

@@ -684,7 +684,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html</context>
-          <context context-type="linenumber">44</context>
+          <context context-type="linenumber">42</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
@@ -700,7 +700,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/travel-bubble/travel-bubble-preview.html</context>
-          <context context-type="linenumber">5</context>
+          <context context-type="linenumber">47</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
@@ -2017,7 +2017,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1f5bf8cbc84a7ef3e4b33931566d793c02fdd333" datatype="html">
@@ -2025,7 +2025,7 @@
         <target state="translated">{VAR_PLURAL, plural, =1 {boisson} other {boissons} }</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9e59badcff06cd5c594c7fae69aa618db9d21dcd" datatype="html">
@@ -2033,7 +2033,7 @@
         <target state="translated">{VAR_PLURAL, plural, =1 {restante} other {restantes} }</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ec8aaaf9f0b2472be6a6ff39fc4d3fc954b7af74" datatype="html">
@@ -2045,7 +2045,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html</context>
-          <context context-type="linenumber">35</context>
+          <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="e5d2af81851f1c568f0c4ac93ec0c64204668f8b" datatype="html">
@@ -2053,7 +2053,7 @@
         <target state="translated">{VAR_PLURAL, plural, =1 {nourriture} other {nourritures} }</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html</context>
-          <context context-type="linenumber">36</context>
+          <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4fcf7cf17671d5b06c2e5d83fa165fbf202366fc" datatype="html">
@@ -2061,7 +2061,7 @@
         <target state="translated">{VAR_PLURAL, plural, =1 {restante} other {restantes} }</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html</context>
-          <context context-type="linenumber">36</context>
+          <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="checkbox-options" datatype="html">
@@ -2080,20 +2080,64 @@
           <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="proposals" datatype="html">
-        <source>TBT</source>
-        <target state="translated">propositions</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/travel-bubble/travel-bubble-preview.html</context>
-          <context context-type="linenumber">7</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="requests" datatype="html">
-        <source>TBT</source>
-        <target state="translated">demandes</target>
+      <trans-unit id="7d663b6287e646fafd49d2c36414997c1a87548f" datatype="html">
+        <source>
+                <x id="ICU" equiv-text="{travelDataService.getAvailableSeats(bubble), plural, =0 {...} =1 {...} other {...}}"/>
+            </source>
+        <target state="translated">
+                <x id="ICU" equiv-text="{travelDataService.getAvailableSeats(bubble), plural, =0 {...} =1 {...} other {...}}"/>
+            </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/travel-bubble/travel-bubble-preview.html</context>
           <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e3fda26f75f3c5d6643e567186227f35cbb8c29d" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {No seats available} =1 {1 seat available} other {<x id="INTERPOLATION" equiv-text="{{travelDataService.getAvailableSeats(bubble)}}"/> seats available} }</source>
+        <target state="translated">{VAR_PLURAL, plural, =0 {Aucune place disponible} =1 {1 place disponible} other {<x id="INTERPOLATION" equiv-text="{{travelDataService.getAvailableSeats(bubble)}}"/> places disponibles} }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/travel-bubble/travel-bubble-preview.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0cb23adc0a1d656bbc4706b439ee3d368c13de3a" datatype="html">
+        <source>
+                    <x id="ICU" equiv-text="{travelDataService.getTakenSeats(bubble), plural, =0 {...} =1 {...} other {...}}"/>
+                </source>
+        <target state="translated">
+                    <x id="ICU" equiv-text="{travelDataService.getTakenSeats(bubble), plural, =0 {...} =1 {...} other {...}}"/>
+                </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/travel-bubble/travel-bubble-preview.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0833fb452d80646cc85fa148cd970a74ebdbe162" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {No seats taken} =1 {1 seat taken} other {<x id="INTERPOLATION" equiv-text="{{travelDataService.getTakenSeats(bubble)}}"/> seats taken} }</source>
+        <target state="translated">{VAR_PLURAL, plural, =0 {Aucune place prise} =1 {1 place prise} other {<x id="INTERPOLATION" equiv-text="{{travelDataService.getTakenSeats(bubble)}}"/> places prises} }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/travel-bubble/travel-bubble-preview.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="363772bd1c652cfb45e6b802208783e689171b36" datatype="html">
+        <source>
+                    <x id="ICU" equiv-text="{travelDataService.getDetachedRequestedSeats(bubble), plural, =0 {...} =1 {...} other {...}}"/>
+                </source>
+        <target state="translated">
+                    <x id="ICU" equiv-text="{travelDataService.getDetachedRequestedSeats(bubble), plural, =0 {...} =1 {...} other {...}}"/>
+                </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/travel-bubble/travel-bubble-preview.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2f2e5845bd2da078e2163735a1dd5680154f8183" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {No seats requested} =1 {1 seat requested} other {<x id="INTERPOLATION" equiv-text="{{travelDataService.getDetachedRequestedSeats(bubble)}}"/> seats requested} }</source>
+        <target state="translated">{VAR_PLURAL, plural, =0 {Aucune place demandée} =1 {1 place demandée} other {<x id="INTERPOLATION" equiv-text="{{travelDataService.getDetachedRequestedSeats(bubble)}}"/> places demandées} }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/travel-bubble/travel-bubble-preview.html</context>
+          <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="planning-entries" datatype="html">
