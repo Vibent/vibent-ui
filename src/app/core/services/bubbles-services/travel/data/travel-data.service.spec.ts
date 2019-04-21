@@ -4,7 +4,7 @@ import { User } from '../../../../../shared/models/user';
 import { Observable, of } from 'rxjs';
 import {
   AlgoliaPlace,
-  TravelDataModel,
+  TravelBubble,
   TravelProposal,
   TravelRequest
 } from '../../../../../shared/models/bubbles/TravelBubble';
@@ -14,11 +14,11 @@ let travelDataService: TravelDataService;
 let userManagementService: UserManagementService;
 let httpService: HttpService;
 
-const travelDataModel = new TravelDataModel();
 let travelProposal: TravelProposal;
 let travelRequest: TravelRequest;
 let place: AlgoliaPlace;
 let secondPlace: AlgoliaPlace;
+let travelBubble: TravelBubble;
 
 const user: User = {ref: 'ref'};
 
@@ -31,7 +31,7 @@ describe('Travel data Service', () => {
         return user;
       }
     };
-    httpService = <HttpService> {
+    httpService = <HttpService>{
       getUser(userRef: string): Observable<User> {
         return of(user);
       }
@@ -82,6 +82,10 @@ describe('Travel data Service', () => {
       userRef: 'ref'
     };
 
+    travelBubble = new TravelBubble();
+    travelBubble.proposals = [travelProposal];
+    travelBubble.requests = [travelRequest];
+
     travelDataService = new TravelDataService(userManagementService);
   });
 
@@ -128,5 +132,98 @@ describe('Travel data Service', () => {
 
   it('Check getHeaderLocation from a place which isn\'t a city', () => {
     expect(travelDataService.getCompleteAddress(secondPlace)).toBe('Avenue Albert Einstein, Villeurbanne');
+  });
+
+  it('Check getUserActivity general', () => {
+    expect(travelDataService.getUserActivity(travelBubble).length).toBe(2);
+  });
+
+  it('Check getUserActivity no requests', () => {
+    travelBubble.requests = [];
+    expect(travelDataService.getUserActivity(travelBubble)[0]).toBe('ref');
+  });
+
+  it('Check getUserActivity no proposals or requests', () => {
+    travelBubble.requests = [];
+    travelBubble.proposals = [];
+    expect(travelDataService.getUserActivity(travelBubble).length).toBe(0);
+  });
+
+  // getBubbleCompletion
+  it('Check getBubbleCompletion general', () => {
+    expect(travelDataService.getBubbleCompletion(travelBubble)).toBe(50);
+  });
+
+  it('Check getBubbleCompletion no attached requests', () => {
+    travelBubble.proposals[0].attachedRequests = [];
+    expect(travelDataService.getBubbleCompletion(travelBubble)).toBe(0);
+  });
+
+  it('Check getBubbleCompletion no detached requests', () => {
+    travelBubble.requests = [];
+    expect(travelDataService.getBubbleCompletion(travelBubble)).toBe(100);
+  });
+
+  it('Check getBubbleCompletion no requests at all', () => {
+    travelBubble.requests = [];
+    travelBubble.proposals[0].attachedRequests = [];
+    expect(travelDataService.getBubbleCompletion(travelBubble)).toBe(100);
+  });
+
+  // getAvailableSeats
+  it('Check getAvailableSeats general', () => {
+    travelBubble.proposals[0].capacity = 6;
+    expect(travelDataService.getAvailableSeats(travelBubble)).toBe(1);
+  });
+
+  it('Check getAvailableSeats no attached requests', () => {
+    travelBubble.proposals[0].attachedRequests = [];
+    expect(travelDataService.getAvailableSeats(travelBubble)).toBe(5);
+  });
+
+  // getProposedSeats
+  it('Check getProposedSeats general', () => {
+    expect(travelDataService.getProposedSeats(travelBubble)).toBe(5);
+  });
+
+  it('Check getProposedSeats no attached requests', () => {
+    travelBubble.proposals[0].attachedRequests = [];
+    expect(travelDataService.getProposedSeats(travelBubble)).toBe(5);
+  });
+
+  it('Check getProposedSeats no detached requests', () => {
+    travelBubble.requests = [];
+    expect(travelDataService.getProposedSeats(travelBubble)).toBe(5);
+  });
+
+  // getTakenSeats
+  it('Check getTakenSeats general', () => {
+    expect(travelDataService.getTakenSeats(travelBubble)).toBe(5);
+  });
+
+  it('Check getTakenSeats no attached requests', () => {
+    travelBubble.proposals[0].attachedRequests = [];
+    expect(travelDataService.getTakenSeats(travelBubble)).toBe(0);
+  });
+
+  // getDetachedRequestedSeats
+  it('Check getDetachedRequestedSeats general', () => {
+    expect(travelDataService.getDetachedRequestedSeats(travelBubble)).toBe(5);
+  });
+
+  it('Check getDetachedRequestedSeats no attached requests', () => {
+    travelBubble.proposals[0].attachedRequests = [];
+    expect(travelDataService.getDetachedRequestedSeats(travelBubble)).toBe(5);
+  });
+
+  it('Check getDetachedRequestedSeats no detached requests', () => {
+    travelBubble.requests = [];
+    expect(travelDataService.getDetachedRequestedSeats(travelBubble)).toBe(0);
+  });
+
+  it('Check getDetachedRequestedSeats no requests at all', () => {
+    travelBubble.requests = [];
+    travelBubble.proposals[0].attachedRequests = [];
+    expect(travelDataService.getDetachedRequestedSeats(travelBubble)).toBe(0);
   });
 });

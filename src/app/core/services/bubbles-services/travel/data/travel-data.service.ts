@@ -65,7 +65,7 @@ export class TravelDataService {
   getCompleteAddress(place): string {
 
     if (place.is_city) {
-     return place.city.default[0];
+      return place.city.default[0];
     }
 
     let c = place.locale_names.default[0];
@@ -77,5 +77,67 @@ export class TravelDataService {
     }
 
     return c;
+  }
+
+  public getUserActivity(bubble: TravelBubble): string[] {
+    let userRefs = [];
+    userRefs = userRefs.concat(bubble.proposals.map(p => p.userRef));
+    userRefs = userRefs.concat(bubble.requests.map(p => p.userRef));
+    return userRefs;
+  }
+
+  /**
+   * Equivalent to numberOfRequestsFilled / numberOfRequestsTotal as a percentage
+   */
+  public getBubbleCompletion(bubble: TravelBubble): number {
+    const totalTaken = this.getTakenSeats(bubble);
+    const totalDetachedRequested = this.getDetachedRequestedSeats(bubble);
+
+    const totalWantedSeats = totalDetachedRequested + totalTaken;
+
+    if (totalWantedSeats === 0) {
+      return 100;
+    }
+    return (totalTaken / totalWantedSeats) * 100;
+  }
+
+  public getAvailableSeats(bubble: TravelBubble): number {
+    const totalProposed = this.getProposedSeats(bubble);
+    const totalTaken = this.getTakenSeats(bubble);
+    return totalProposed - totalTaken;
+  }
+
+  public getProposedSeats(bubble: TravelBubble): number {
+    if (bubble.proposals.length === 0) {
+      return 0;
+    }
+    return bubble.proposals.map(p => p.capacity).reduce((c, n) => c + n);
+  }
+
+  public getTakenSeats(bubble: TravelBubble): number {
+    let amountTaken = 0;
+    const proposalsAttachedRequests = bubble.proposals.map(p => p.attachedRequests);
+    if (proposalsAttachedRequests.length !== 0) {
+      const attachedRequests = proposalsAttachedRequests
+        .reduce((c, n) => c.concat(n));
+      if (attachedRequests.length !== 0) {
+        amountTaken = attachedRequests
+          .map(r => r.capacity)
+          .reduce((c, n) => c + n);
+      }
+    }
+
+    return amountTaken;
+  }
+
+  public getDetachedRequestedSeats(bubble: TravelBubble): number {
+    let totalRequested = 0;
+    const detachedRequests = bubble.requests;
+    if (detachedRequests.length !== 0) {
+      totalRequested = detachedRequests
+        .map(r => r.capacity)
+        .reduce((c, n) => c + n);
+    }
+    return totalRequested;
   }
 }
