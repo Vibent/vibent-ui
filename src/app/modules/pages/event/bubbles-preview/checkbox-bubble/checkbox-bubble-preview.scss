@@ -1,0 +1,66 @@
+.checkbox-bubble-preview {
+  border-color: #6ebf74;
+
+  .bubble-icon {
+    color: #6ebf74;
+  }
+}
+
+.graphics {
+  height: 70%;
+  overflow: hidden;
+
+  .graphics-title-only {
+    margin-top: 100px;
+    font-size: 1.6em;
+    text-align: center;
+  }
+
+  .quantity-unchecked {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .answers {
+    margin: 0 5% 5%;
+    padding-bottom: 20px;
+    overflow: hidden;
+    line-height: 18px;
+    font-size: 16px;
+
+    & > * {
+      margin-bottom: 10px;
+      overflow: hidden;
+      max-height: 36px;
+
+      &.custom-control-label::before {
+        top: 0;
+      }
+    }
+
+    &.fade-vertical > div:nth-child(3) {
+      opacity: 50%;
+      mask-image: linear-gradient(black, transparent);
+    }
+  }
+}
+
+.title {
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 12%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.contributors {
+  text-align: center;
+  border-top: #e3e3e3 solid 2px;
+  height: 18%;
+  padding-top: 7px;
+  overflow: hidden;
+}

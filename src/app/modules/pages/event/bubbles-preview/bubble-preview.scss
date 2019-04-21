@@ -9,6 +9,7 @@
   height: 300px;
   border-radius: 20px;
   cursor: pointer;
+  border-top: 5px solid white;
 
   .bubble-type {
     position: absolute;
@@ -21,31 +22,6 @@
       font-size: 18px;
       right: 10px;
       top: 10px;
-    }
-  }
-
-
-  &.alimentation-bubble-preview {
-    border-top: 5px solid #f27c8b;
-
-    .bubble-icon {
-      color: #f27c8b;
-    }
-  }
-
-  &.checkbox-bubble-preview {
-    border-top: 5px solid #6ebf74;
-
-    .bubble-icon {
-      color: #6ebf74;
-    }
-  }
-
-  &.travel-bubble-preview {
-    border-top: 5px solid #7687c0;
-
-    .bubble-icon {
-      color: #7687c0;
     }
   }
 
@@ -76,10 +52,6 @@
   .title {
     color: black;
     font-size: 24px;
-  }
-
-  .preview {
-
   }
 
   &:hover {

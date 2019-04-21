@@ -1,13 +1,47 @@
-<div class="bubble-preview checkbox-bubble-preview text-center">
-  <!--<div class="creator-bubble"></div>-->
+<div class="bubble-preview checkbox-bubble-preview">
   <div class="bubble-type">
     <i class="fa fa-check-square bubble-icon"></i>
   </div>
-  <div class="title">
-    {{checkboxBubble.title}}
+
+  <div class="graphics">
+    <div *ngIf="amountOptions === 0"
+         class="graphics-title-only"
+         i18n="@@no-items-yet">
+      TBT
+    </div>
+    <div *ngIf="amountOptions !== 0 && amountUnchecked === 0"
+         class="graphics-title-only"
+         i18n="@@all-items-checked">
+      TBT
+    </div>
+    <div *ngIf="amountOptions !== 0 && amountUnchecked !== 0"
+         class="quantity-unchecked">
+      {{amountUnchecked}}/{{amountOptions}}
+      <ng-container i18n>
+        {amountUnchecked, plural, =1 {unchecked item} other {unchecked items}}
+      </ng-container>
+    </div>
+    <div class="answers" [class.fade-vertical]="amountUnchecked > 3">
+      <div *ngFor="let option of checkboxDataService.getUncheckedOptions(bubble, 3)"
+           class="custom-control custom-checkbox">
+        <input type="checkbox"
+               class="custom-control-input"
+               disabled
+               id="checkbox-bubble-preview-{{bubble.id}}-option-{{option.id}}">
+        <label class="custom-control-label"
+               for="checkbox-bubble-preview-{{bubble.id}}-option-{{option.id}}">
+          {{option.content}}
+        </label>
+      </div>
+    </div>
   </div>
-  <div class="preview">
-    {{checkboxBubble?.options.length}} <span i18n="@@checkbox-options">TBT</span><br>
-    {{answersCount}} <span i18n="@@answers">TBT</span>
+  <div class="title">
+    {{bubble.title}}
+  </div>
+  <div class="contributors">
+    <bubble-contributors
+        [userRefs]="checkboxDataService.getUserActivity(bubble)"
+        maxItems="3">
+    </bubble-contributors>
   </div>
 </div>
