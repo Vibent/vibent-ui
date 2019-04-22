@@ -1,0 +1,90 @@
+$survey-color: #ff9236;
+
+.survey-bubble-preview {
+  border-color: $survey-color;
+
+  .bubble-icon {
+    color: $survey-color;
+  }
+}
+
+.graphics {
+  height: 70%;
+  overflow: hidden;
+
+  .graphics-title-only {
+    margin-top: 100px;
+    font-size: 1.6em;
+    text-align: center;
+  }
+
+  .graphics-title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .options {
+    margin-left: 5%;
+
+    .option {
+
+      .option-title{
+        overflow: hidden;
+        width: 80%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .option-info {
+        height: 20px;
+
+
+        .progress {
+          float: left;
+          height: 12px;
+          margin-top: 4px;
+          width: 80%;
+
+          .progress-bar {
+            background-color: $survey-color;
+          }
+        }
+
+
+        .badge-container {
+          width: 20%;
+          float: right;
+          text-align: center;
+          position: relative;
+          top: -4px;
+
+          .badge {
+            margin: auto;
+            color: #666;
+            background-color: lightgrey;
+          }
+        }
+      }
+    }
+  }
+}
+
+.title {
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 12%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.contributors {
+  text-align: center;
+  border-top: #e3e3e3 solid 2px;
+  height: 18%;
+  padding-top: 7px;
+  overflow: hidden;
+}

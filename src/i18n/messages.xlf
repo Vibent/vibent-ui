@@ -1750,18 +1750,70 @@
           <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="possible-answers" datatype="html">
-        <source>TBT</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/survey-bubble/survey-bubble-preview.html</context>
-          <context context-type="linenumber">9</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="45fa03130f20c4f10991ea7c27b114e1e115e253" datatype="html">
-        <source>{VAR_PLURAL, plural, =0 {no contributors } =1 {contributing singular} other {contributing plural} }</source>
+      <trans-unit id="00f60987a7fbce29409f5cca272fb6fb54a1c5ba" datatype="html">
+        <source>
+    <x id="ICU" equiv-text="{mostActiveUsers.amount, plural, =0 {...} =1 {...} other {...}}"/>
+  </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/bubble-contributor-icons/bubble-contributor-icons.component.html</context>
-          <context context-type="linenumber">17</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="228da5655510a200707b1043be1dfbc3374314b7" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {No contributors} =1 {contributing singular} other {contributing plural} }</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/bubble-contributor-icons/bubble-contributor-icons.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="60193a8bd00b63dd051fdc40542f402ecee5711c" datatype="html">
+        <source>
+    <x id="ICU" equiv-text="{mostActiveUsers.amount, plural, =0 {...} =1 {...} other {...}}"/>
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/bubble-contributor-icons/bubble-contributor-icons.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="10c9aa3e7291a5a62b1f2f76315f930ab9b1aacf" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {No one answered} =1 {answered singular} other {answered plural} }</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/bubble-contributor-icons/bubble-contributor-icons.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fe5bdbb66af0d50773920efd94249e5e2c0cfaf2" datatype="html">
+        <source>
+    by <x id="INTERPOLATION" equiv-text="{{user.firstName}}"/> <x id="INTERPOLATION_1" equiv-text="{{user.lastName}}"/>
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/bubble-contributor-icons/bubble-contributor-icons.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="no-answers-yet" datatype="html">
+        <source>
+      No answers yet
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/survey-bubble/survey-bubble-preview.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d7c56b4f83913feab9fe76acfd6cd4be7aab3612" datatype="html">
+        <source>
+      <x id="ICU" equiv-text="{bubble.options.length, plural, =1 {...} =2 {...} other {...}}"/>
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/survey-bubble/survey-bubble-preview.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cf37590409e2cb9bbbb1682fa6ed717bb009747b" datatype="html">
+        <source>{VAR_PLURAL, plural, =1 {Top answer} =2 {Top 2 answers} other {Top 3 answers} }</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/survey-bubble/survey-bubble-preview.html</context>
+          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="food-name" datatype="html">

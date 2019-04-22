@@ -2,6 +2,10 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
 import { BubbleContributorsService } from '../../../../../core/services/bubbles-services/bubble-contributors.service.';
 import { MostActiveUsers } from '../../../../../shared/models/most-active-users';
 
+export enum ContributorTextType {
+  CONTRIBUTING, ANSWERED, AUTHOR
+}
+
 /**
  * Given a list of userRefs that have a certain activity and a max number
  * of items, displays a list of profile pictures in circular form and a
@@ -19,7 +23,10 @@ export class BubbleContributorIconsComponent implements OnInit {
   userRefs: string[];
   @Input()
   maxItems: number;
+  @Input()
+  type: ContributorTextType;
 
+  ContributorTextType = ContributorTextType;
   mostActiveUsers: MostActiveUsers;
 
   constructor(public bubbleContributorsService: BubbleContributorsService) {
