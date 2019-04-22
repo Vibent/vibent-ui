@@ -1965,20 +1965,48 @@
           <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="checkbox-options" datatype="html">
-        <source>TBT</source>
-        <target state="translated">checkbox options</target>
+      <trans-unit id="no-items-yet" datatype="html">
+        <source>
+      TBT
+    </source>
+        <target state="translated">
+      No items yet
+    </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/checkbox-bubble/checkbox-bubble-preview.html</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="answers" datatype="html">
-        <source>TBT</source>
-        <target state="translated">answers</target>
+      <trans-unit id="all-items-checked" datatype="html">
+        <source>
+      TBT
+    </source>
+        <target state="translated">
+      All items checked !
+    </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/checkbox-bubble/checkbox-bubble-preview.html</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7ef04b7c7a550f1e4b6712048704bfbded813ecd" datatype="html">
+        <source>
+        <x id="ICU" equiv-text="{amountUnchecked, plural, =1 {...} other {...}}"/>
+      </source>
+        <target state="translated">
+        <x id="ICU" equiv-text="{amountUnchecked, plural, =1 {...} other {...}}"/>
+      </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/checkbox-bubble/checkbox-bubble-preview.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ca09eeb9ac3c1ea9424a0a8e127a7f1a07a607ce" datatype="html">
+        <source>{VAR_PLURAL, plural, =1 {unchecked item} other {unchecked items} }</source>
+        <target state="translated">{VAR_PLURAL, plural, =1 {unchecked item} other {unchecked items} }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/checkbox-bubble/checkbox-bubble-preview.html</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7d663b6287e646fafd49d2c36414997c1a87548f" datatype="html">

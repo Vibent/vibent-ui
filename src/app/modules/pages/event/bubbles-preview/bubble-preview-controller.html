@@ -4,11 +4,11 @@
     (click)="this.expandBubble()">
 </alimentation-bubble-preview>
 
-<app-checkbox-bubble-preview
+<checkbox-bubble-preview
     *ngIf="this.bubble.type === BubbleType.CheckboxBubble"
-    [checkboxBubble]="this.bubble"
+    [bubble]="this.bubble"
     (click)="this.expandBubble()">
-</app-checkbox-bubble-preview>
+</checkbox-bubble-preview>
 
 <travel-bubble-preview
     *ngIf="this.bubble.type === BubbleType.TravelBubble"
