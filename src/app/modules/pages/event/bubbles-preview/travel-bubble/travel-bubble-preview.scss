@@ -1,9 +1,11 @@
+$travel-color: #7687c0;
+
 .travel-bubble-preview {
   text-align: center;
-  border-color: #7687c0;
+  border-color: $travel-color;
 
   .bubble-icon {
-    color: #7687c0;
+    color: $travel-color;
   }
 }
 
