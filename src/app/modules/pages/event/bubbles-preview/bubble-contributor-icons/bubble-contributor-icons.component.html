@@ -13,6 +13,18 @@
     +{{mostActiveUsers.amountRemaining}}
   </div>
 
-  <span class="text-muted"
-        i18n>{mostActiveUsers.amount, plural, =0 {no contributors } =1 {contributing singular} other {contributing plural}}</span>
+
+  <span *ngIf="type === ContributorTextType.CONTRIBUTING || !type"
+        class="text-muted" i18n>
+    {mostActiveUsers.amount, plural, =0 {No contributors} =1 {contributing singular} other {contributing plural}}
+  </span>
+  <span *ngIf="type === ContributorTextType.ANSWERED"
+        class="text-muted" i18n>
+    {mostActiveUsers.amount, plural, =0 {No one answered} =1 {answered singular} other {answered plural}}
+  </span>
+  <span *ngIf="type === ContributorTextType.AUTHOR && (mostActiveUsers.users[0] | async) as user"
+        class="text-muted" i18n>
+    by {{user.firstName}} {{user.lastName}}
+  </span>
 </div>
+

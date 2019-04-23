@@ -1,11 +1,49 @@
-<div class="bubble-preview survey-bubble-preview  text-center">
-	<!--<div class="creator-bubble"></div>-->
-	<div class="bubble-type"><i class="fa fa-question-circle bubble-icon"></i>
-	</div>
-	<div class="title">
-		{{surveyBubble.title}}
-	</div>
-	<div class="preview">
-		{{surveyBubble?.options.length}} <span i18n="@@possible-answers">TBT</span><br>
-	</div>
+<div class="bubble-preview survey-bubble-preview">
+  <div class="bubble-type">
+    <i class="fa fa-question-circle bubble-icon"></i>
+  </div>
+  <div class="graphics">
+    <div *ngIf="bubble.options.length === 0"
+         class="graphics-title-only"
+         i18n="@@no-answers-yet">
+      No answers yet
+    </div>
+    <div *ngIf="bubble.options.length !== 0"
+         class="graphics-title"
+         i18n>
+      {bubble.options.length,
+          plural,
+          =1 {Top answer}
+          =2 {Top 2 answers}
+          other {Top 3 answers}}
+    </div>
+    <div class="options">
+      <div *ngFor="let option of surveyDataService.getTopAnswers(bubble, 3)"
+           class="option">
+        <div class="option-title">{{option.content}}</div>
+        <div class="option-info">
+          <div class="progress">
+            <div class="progress-bar"
+                 [style.width]="surveyDataService.getOptionPercentByMostAnswered(option, bubble) + '%'"
+                 role="progressbar"></div>
+          </div>
+          <div class="badge-container">
+            <span class="badge badge-pill">
+              + {{option.answers.length}}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="title">
+    {{bubble.title}}
+  </div>
+  <div class="contributors">
+    <bubble-contributors
+        [userRefs]="surveyDataService.getUserActivity(bubble)"
+        [type]="ContributorTextType.ANSWERED"
+        maxItems="3">
+    </bubble-contributors>
+  </div>
 </div>

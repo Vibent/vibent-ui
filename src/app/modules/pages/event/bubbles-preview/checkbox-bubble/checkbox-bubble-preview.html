@@ -21,7 +21,7 @@
         {amountUnchecked, plural, =1 {unchecked item} other {unchecked items}}
       </ng-container>
     </div>
-    <div class="answers" [class.fade-vertical]="amountUnchecked > 3">
+    <div class="options" [class.fade-vertical]="amountUnchecked > 3">
       <div *ngFor="let option of checkboxDataService.getUncheckedOptions(bubble, 3)"
            class="custom-control custom-checkbox">
         <input type="checkbox"

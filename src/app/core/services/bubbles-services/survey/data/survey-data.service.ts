@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { UserManagementService } from '../../../user-management.service';
 import { User } from '../../../../../shared/models/user';
 import { HttpService } from '../../../../http/http.service';
-import { SurveyDataModel, SurveyOption } from '../../../../../shared/models/bubbles/SurveyBubble';
+import { SurveyBubble, SurveyDataModel, SurveyOption } from '../../../../../shared/models/bubbles/SurveyBubble';
 import { forkJoin, Observable } from 'rxjs';
 
 @Injectable()
@@ -37,7 +37,7 @@ export class SurveyDataService {
     }
     let usersString = '';
     if (observables.length === 0) {
-      return new Promise(function(resolve) {
+      return new Promise(function (resolve) {
         resolve('No voters');
       });
     }
@@ -52,6 +52,42 @@ export class SurveyDataService {
     if (!answerCount) {
       return '0%';
     }
-    return  Math.floor(surveyOption.answers.length / answerCount * 100) + '%';
+    return Math.floor(surveyOption.answers.length / answerCount * 100) + '%';
+  }
+
+  getMostAnswerCount(bubble: SurveyBubble): number {
+    if (bubble.options.length === 0) {
+      return 0;
+    }
+    const mostAnswerOption = bubble.options.sort((a, b) => b.answers.length - a.answers.length);
+    return mostAnswerOption[0].answers.length;
+  }
+
+  getOptionPercentByMostAnswered(option: SurveyOption, bubble: SurveyBubble): number {
+    const mostAnswered = this.getMostAnswerCount(bubble);
+    if (mostAnswered === 0) {
+      return 0;
+    }
+    return (option.answers.length / mostAnswered) * 100;
+  }
+
+  getUserActivity(bubble: SurveyBubble): string[] {
+    const options = bubble.options;
+    let userRefs = [];
+    if (options.length !== 0) {
+      userRefs = userRefs.concat(options.map(o => o.userRef));
+
+      const optionAnswers = options.map(o => o.answers);
+      if (optionAnswers.length !== 0) {
+        const answers = optionAnswers.reduce((c, n) => c.concat(n));
+        userRefs = userRefs.concat(answers.map(a => a.userRef));
+      }
+    }
+    return userRefs;
+  }
+
+  getTopAnswers(bubble: SurveyBubble, maxAmount: number): SurveyOption[] {
+    const sortedOptions = bubble.options.sort((a, b) => b.answers.length - a.answers.length);
+    return sortedOptions.slice(0, maxAmount);
   }
 }
