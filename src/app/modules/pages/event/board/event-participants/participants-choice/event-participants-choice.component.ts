@@ -1,14 +1,16 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { NotificationsService, NotificationType } from '../../../../../../core/services/notifications.service';
 import { HttpService } from '../../../../../../core/http/http.service';
 import { EventParticipant, EventParticipantAnswer } from '../../../../../../shared/models/event-participant';
 import { UserManagementService } from '../../../../../../core/services/user-management.service';
 import { User } from '../../../../../../shared/models/user';
 import { EventUpdateService } from '../../../../../../core/services/bubbles-services/event-update.service';
+import { EventParticipantsService } from '../../../../../../core/services/event-participants.service';
 
 @Component({
   selector: 'event-participants-choice',
-  templateUrl: './event-participants-choice.component.html'
+  templateUrl: './event-participants-choice.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class EventParticipantsChoiceComponent implements OnInit {
@@ -17,12 +19,11 @@ export class EventParticipantsChoiceComponent implements OnInit {
   eventRef: string;
   userParticipation: EventParticipant;
   user: User;
-  @Output()
-  userParticipationEmiter = new EventEmitter<EventParticipant>();
   participationEventAnswer = EventParticipantAnswer;
 
   constructor(private notificationService: NotificationsService,
               private userManagementService: UserManagementService,
+              private eventParticipantsService: EventParticipantsService,
               private eventUpdateService: EventUpdateService,
               private httpService: HttpService) {
     this.user = this.userManagementService.getMe();
@@ -60,7 +61,7 @@ export class EventParticipantsChoiceComponent implements OnInit {
   updateParticipation(answer: EventParticipantAnswer) {
     this.userParticipation.answer = answer;
     this.httpService.patchEventParticipations(this.userParticipation).subscribe(() => this.eventUpdateService.updateEventExclusive(this.eventRef));
-    this.userParticipationEmiter.emit(this.userParticipation);
+    this.eventParticipantsService.onParticipationUpdate(this.userParticipation);
   }
 
 }

@@ -14,7 +14,6 @@ export interface Event {
   endDate?: Date;
   startDate?: string;
   groupRef?: string;
-  // TODO type
   participationRefs?: EventParticipant[];
 
   /*** bubbles ***/

@@ -1,6 +1,3 @@
-import { Observable, ObservableInput } from 'rxjs';
-import { User } from './user';
-
 export class EventParticipant {
   id?: number;
   userRef?: string;

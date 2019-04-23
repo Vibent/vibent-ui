@@ -1,10 +1,17 @@
 import { Injectable } from '@angular/core';
 import { EventParticipant, EventParticipantAnswer, ParticipantsSplitted } from '../../shared/models/event-participant';
+import { Subject } from 'rxjs';
 
 @Injectable()
 export class EventParticipantsService {
 
+  participationUpdated$ = new Subject<EventParticipant>();
+
   constructor() {
+  }
+
+  onParticipationUpdate(eventParticipation: EventParticipant) {
+    this.participationUpdated$.next(eventParticipation);
   }
 
   splitParticipantsByResponse(participants: EventParticipant[]): ParticipantsSplitted {
@@ -34,8 +41,7 @@ export class EventParticipantsService {
 
   getParticipants(participants: EventParticipant[]): number {
     return participants.filter((participant) => {
-      return  participant.answer === EventParticipantAnswer.YES;
+      return participant.answer === EventParticipantAnswer.YES;
     }).length;
-
   }
 }

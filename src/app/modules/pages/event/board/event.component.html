@@ -26,10 +26,11 @@
       </div>
     </div>
     <div class="row justify-content-center">
-      <event-additional-infos [event]="event"></event-additional-infos>
+      <event-additional-infos
+          [event]="event">
+      </event-additional-infos>
     </div>
     <event-participants-choice
-        (userParticipationEmiter)="null"
         [eventRef]=event.ref>
     </event-participants-choice>
 
@@ -63,4 +64,6 @@
   </div>
 </div>
 
-<event-settings [event]="event"></event-settings>
+<event-settings
+    [event]="event">
+</event-settings>
