@@ -1,0 +1,47 @@
+@import "../../../../../../assets/scss/core/variables/_shadow.scss";
+@import "../../../../../../assets/scss/core/mixins/_vendor-prefixes.scss";
+
+.event-additional-infos {
+  height: 80px;
+
+  .participants-info {
+    background: #fafafa;
+    width: 138px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition-duration: 0.5s;
+
+    .going {
+      font-size: larger;
+      span {
+        font-size: 24px;
+        font-weight: 600;
+      }
+    }
+
+    &:hover {
+      @include box-shadow($bmd-shadow-4dp);
+      transition-duration: 0.5s;
+    }
+  }
+
+  .date-info {
+    background: #fafafa;
+    width: 138px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    .day-month {
+      span {
+        font-size: 25px;
+        font-weight: 600;
+      }
+    }
+
+    .time {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<div class="d-flex flex-row justify-content-center event-additional-infos">
+  <div class="participants-info p-3 cursor-pointer" (click)="openEventParticipantsModal()">
+    <div class="going text-center" i18n="@@going"><span>{{participantsNumber}}</span> TBT</div>
+    <div class="invited text-center" i18n="@@for-nb-invited">TBT <span>{{invitedNumber}}</span> TBT</div>
+  </div>
+  <div class="date-info p-3">
+    <div class="day-month text-center"><span>{{event.startDate | date:'d'}}</span>
+      {{event.startDate | date:'LLLL'}}
+    </div>
+    <div class="time text-center" i18n="@@around-time">around {{event.startDate | date:'shortTime'}}</div>
+  </div>
+</div>
+
+<event-participants-preview
+    [participationRefs]=event.participationRefs>
+</event-participants-preview>

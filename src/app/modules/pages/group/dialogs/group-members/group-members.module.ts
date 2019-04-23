@@ -5,7 +5,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { GroupMembersComponent } from './group-members.component';
-import { GroupPreviewMemberModule } from '../../group-preview/group-preview-member/group-preview-member.module';
+import { UserProfilePreviewModule } from '../../group-preview/group-preview-member/user-profile-preview.module';
 
 @NgModule({
   imports: [
@@ -15,7 +15,7 @@ import { GroupPreviewMemberModule } from '../../group-preview/group-preview-memb
     MatFormFieldModule,
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
-    GroupPreviewMemberModule
+    UserProfilePreviewModule
   ],
   declarations: [
     GroupMembersComponent

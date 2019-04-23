@@ -1,42 +1,35 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { EventParticipant, EventParticipantAnswer } from '../../../../../../shared/models/event-participant';
-import { User } from '../../../../../../shared/models/user';
-import { LoaderSize } from '../../../../../../shared/global/constants';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import {
+  EventParticipant,
+  ParticipantsSplitted
+} from '../../../../../../shared/models/event-participant';
 import { HttpService } from '../../../../../../core/http/http.service';
+import { EventParticipantsService } from '../../../../../../core/services/event-participants.service';
+
+declare const $: any;
 
 @Component({
-  selector: 'app-event-participants-preview',
-  templateUrl: './event-participants-preview.component.html'
+  selector: 'event-participants-preview',
+  templateUrl: './event-participants-preview.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class EventParticipantsPreviewComponent implements OnInit {
 
   @Input()
-  participant: EventParticipant;
-  user: User = null;
-  loaderSize = LoaderSize.small;
+  participationRefs: EventParticipant[];
+  participantsSplitted: ParticipantsSplitted;
 
-  constructor(private httpService: HttpService) {
+  constructor(private httpService: HttpService,
+              private eventParticipantsService: EventParticipantsService) {
   }
 
   ngOnInit() {
-    this.httpService.getUser(this.participant.userRef).subscribe((user) => {
-      this.user = user;
-    });
+    this.participantsSplitted = this.eventParticipantsService.splitParticipantsByResponse(this.participationRefs);
   }
 
-  public getResponseCss(response: string): string {
-
-    if (response === EventParticipantAnswer.YES) {
-      return 'yes';
-    }
-    if (response === EventParticipantAnswer.UNANSWERED) {
-      return 'unanswered';
-    }
-    if (response === EventParticipantAnswer.MAYBE) {
-      return 'maybe';
-    } else {
-      return 'no';
-    }
+  close(): void {
+    $('#modalEventParticipants').modal('hide');
   }
+
 }

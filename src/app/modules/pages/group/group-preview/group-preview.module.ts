@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { GroupPreviewComponent } from './group-preview.component';
 import { CommonModule } from '@angular/common';
-import { GroupPreviewMemberModule } from './group-preview-member/group-preview-member.module';
+import { UserProfilePreviewModule } from './group-preview-member/user-profile-preview.module';
 import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    GroupPreviewMemberModule,
+    UserProfilePreviewModule,
     RouterModule
   ],
   declarations: [
