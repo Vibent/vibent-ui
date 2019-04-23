@@ -1,4 +1,4 @@
-@import "../../../../../../../assets/scss/core/variables/colors";
+@import "../travel-bubble-preview";
 
 .seat-circle {
   width: 12px;
@@ -9,15 +9,16 @@
 }
 
 .available {
-  background-color: $green-700;
+  background-color: $travel-color;
 }
 
 .taken {
-  background-color: $green-300;
+  background-color: $travel-color;
+  opacity: 0.5;
 }
 
 .requested {
-  background-color: $gray-light;
+  background-color: lightgrey;
 }
 
 .remaining {

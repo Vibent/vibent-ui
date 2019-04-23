@@ -1,9 +1,11 @@
+$alimentation-color: #f27c8b;
+
 .alimentation-bubble-preview {
   text-align: center;
-  border-color: #f27c8b;
+  border-color: $alimentation-color;
 
   .bubble-icon {
-    color: #f27c8b;
+    color: $alimentation-color;
   }
 }
 
@@ -33,6 +35,10 @@
       .progress {
         margin-top: 15px;
         box-shadow: none;
+
+        .bg-success {
+          background-color: $alimentation-color !important;
+        }
       }
 
       .remaining-text {

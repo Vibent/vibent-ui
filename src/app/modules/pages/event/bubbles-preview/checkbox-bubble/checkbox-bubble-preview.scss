@@ -1,8 +1,10 @@
+$checkbox-color: #6ebf74;
+
 .checkbox-bubble-preview {
-  border-color: #6ebf74;
+  border-color: $checkbox-color;
 
   .bubble-icon {
-    color: #6ebf74;
+    color: $checkbox-color;
   }
 }
 
