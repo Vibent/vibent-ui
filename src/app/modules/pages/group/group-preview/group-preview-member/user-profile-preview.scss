@@ -1,8 +1,8 @@
-.group-profile {
+.user-profile {
   margin-top: 55px;
   text-align: center;
 
-  .group-user-body {
+  .user-body {
     margin-top: 10px;
   }
 
@@ -12,20 +12,18 @@
     font-size: 11px;
   }
 
-  .group-user-name {
+  .user-name {
     margin-top: -3px;
   }
-  .group-user-avatar {
+  .user-avatar {
     margin: -50px auto 0;
     border-radius: 50%;
     overflow: hidden;
     padding: 0;
-    max-width: 100px;
-    max-height: 100px;
-    width: 100px;
-    height: 100px;
-
-    // @include shadow-4dp();
+    max-width: 90px;
+    max-height: 90px;
+    width: 90px;
+    height: 90px;
 
     img {
       width: 100%;
@@ -39,7 +37,7 @@
   overflow-y: hidden;
   white-space: nowrap;
 
-  .group-profile {
+  .user-profile {
     display: inline-block;
     margin-left: 15px;
     margin-bottom: 10px;
@@ -47,7 +45,7 @@
   }
 }
 
-.group-profile {
+.user-profile {
   display: inline-block;
   margin-left: 15px;
   margin-bottom: 10px;

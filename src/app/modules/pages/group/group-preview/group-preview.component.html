@@ -10,10 +10,11 @@
       <div class="card-body">
         <div class="row justify-content-center">
           <div class="scrolling-wrapper">
-            <app-group-preview-member
+            <user-profile-preview
                 *ngFor="let membership of group.memberships"
+                [userRef]="membership.userRef"
                 [membership]=membership>
-            </app-group-preview-member>
+            </user-profile-preview>
           </div>
         </div>
       </div>

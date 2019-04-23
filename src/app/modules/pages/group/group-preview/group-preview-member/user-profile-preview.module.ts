@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { GroupPreviewMemberComponent } from './group-preview-member.component';
+import { UserProfilePreviewComponent } from './user-profile-preview.component';
 import { CommonModule } from '@angular/common';
 import { LoaderModule } from '../../../../../core/loader/loader.module';
 
@@ -10,10 +10,10 @@ import { LoaderModule } from '../../../../../core/loader/loader.module';
     LoaderModule
   ],
   declarations: [
-    GroupPreviewMemberComponent
+    UserProfilePreviewComponent
   ],
   providers: [],
-  exports: [GroupPreviewMemberComponent]
+  exports: [UserProfilePreviewComponent]
 })
-export class GroupPreviewMemberModule {
+export class UserProfilePreviewModule {
 }

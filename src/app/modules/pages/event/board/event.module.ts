@@ -16,6 +16,8 @@ import { EventUpdateService } from '../../../../core/services/bubbles-services/e
 import { BlacknoteService } from '../../../../core/services/blacknote/blacknote.service';
 import { EventParticipantsChoiceModule } from './event-participants/participants-choice/event-participants-choice.module';
 import { EventSettingsModule } from '../../../../core/admin-panels/event/dialogs/event-settings/event-settings.module';
+import { EventParticipantsService } from '../../../../core/services/event-participants.service';
+import { EventAdditionalInfosComponent } from './event-additional-infos/event-additional-infos.component';
 
 @NgModule({
   imports: [
@@ -34,8 +36,9 @@ import { EventSettingsModule } from '../../../../core/admin-panels/event/dialogs
   ],
   declarations: [
     EventComponent,
+    EventAdditionalInfosComponent
   ],
-  providers: [EventUpdateService, BlacknoteService],
+  providers: [EventUpdateService, BlacknoteService, EventParticipantsService],
 })
 export class EventModule {
 }

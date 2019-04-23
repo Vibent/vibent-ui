@@ -14,7 +14,8 @@
                     type="button"
                     id="event_admin_mobile"
                     data-toggle="dropdown"
-                    i18n="@@event-settings">TBT</button>
+                    i18n="@@event-settings">TBT
+            </button>
             <div class="dropdown-menu">
               <a class="dropdown-item cursor-pointer"
                  (click)="openSettingsModal()"
@@ -24,20 +25,13 @@
         </div>
       </div>
     </div>
-
+    <div class="row justify-content-center">
+      <event-additional-infos [event]="event"></event-additional-infos>
+    </div>
     <event-participants-choice
-        (userParticipationEmiter)="this.onParticipationUpdate($event)"
+        (userParticipationEmiter)="null"
         [eventRef]=event.ref>
     </event-participants-choice>
-
-    <div class="row justify-content-center">
-      <div class="scrolling-wrapper-event">
-        <app-event-participants-preview
-            *ngFor="let participant of participationRefs"
-            [participant]=participant>
-        </app-event-participants-preview>
-      </div>
-    </div>
 
     <div class="row justify-content-center">
       <div class="bubble-board">
@@ -51,9 +45,8 @@
         </app-expanded-bubble-controller>
 
         <div class="row">
-
           <div *ngFor="let bubble of bubbles"
-                class="col-xl-3 col-lg-4 col-sm-6">
+               class="col-xl-3 col-lg-4 col-sm-6">
             <bubble-preview-controller
                 [bubble]=bubble
                 (bubbleToExpand)="onBubbleSentForExpand($event)">
@@ -64,11 +57,9 @@
                (click)="openNewBubbleModal()">
             <i class="fa fa-plus-circle"></i>
           </div>
-
         </div>
       </div>
     </div>
-
   </div>
 </div>
 

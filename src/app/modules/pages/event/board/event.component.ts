@@ -5,7 +5,6 @@ import { BubbleType, IBubble } from '../../../../shared/models/bubbles/IBubble';
 import { EventAdminPanelService } from '../../../../core/services/event-admin-panel.service';
 import { EventUpdateService } from '../../../../core/services/bubbles-services/event-update.service';
 import { BlacknoteService } from '../../../../core/services/blacknote/blacknote.service';
-import { EventParticipant, EventParticipantAnswer } from '../../../../shared/models/event-participant';
 import { ScreenService } from '../../../../core/services/screen.service';
 import { Subscription } from 'rxjs';
 
@@ -21,7 +20,6 @@ export class EventComponent implements OnInit, OnDestroy {
   event: Event;
   bubbles: IBubble[];
   bubbleToExpand: IBubble;
-  participationRefs: EventParticipant[] = [];
   subscriptions: Subscription[] = [];
 
   constructor(private route: ActivatedRoute,
@@ -44,26 +42,21 @@ export class EventComponent implements OnInit, OnDestroy {
     $('#modalSelectBubbleType').modal('show');
   }
 
-  onParticipationUpdate(eventParticipation: EventParticipant) {
-    this.event.participationRefs[this.event.participationRefs.findIndex(p => p.userRef === eventParticipation.userRef)] = eventParticipation;
-    this.participationRefs = this.sortParticipations(this.event.participationRefs);
-  }
-
   ngOnInit() {
     this.eventAdminPanelService.toggleEventPanel(this.event.ref);
 
     this.subscriptions.push(this.eventUpdateService.eventUpdated$.subscribe(event => {
       this.event = event;
-      this.refreshBubblesAndParticipations();
+      this.refreshBubbles();
     }));
 
     this.subscriptions.push(this.blacknoteService.eventUpdated$.subscribe(event => {
       this.event = event;
-      this.refreshBubblesAndParticipations();
+      this.refreshBubbles();
       this.updateExpandedBubble();
     }));
 
-    this.refreshBubblesAndParticipations();
+    this.refreshBubbles();
   }
 
   ngOnDestroy() {
@@ -78,7 +71,7 @@ export class EventComponent implements OnInit, OnDestroy {
    * Concat bubbles to pass them in bubbles-preview controller
    * Refresh participations
    */
-  refreshBubblesAndParticipations() {
+  refreshBubbles() {
     let bubbles: IBubble[] = [];
     this.event.alimentationBubbles.forEach(bubble => bubble.type = BubbleType.AlimentationBubble);
     this.event.travelBubbles.forEach(bubble => bubble.type = BubbleType.TravelBubble);
@@ -95,7 +88,6 @@ export class EventComponent implements OnInit, OnDestroy {
       this.event.surveyBubbles,
       this.event.freeBubbles);
     this.bubbles = bubbles;
-    this.compareParticipations();
   }
 
   /**
@@ -108,33 +100,6 @@ export class EventComponent implements OnInit, OnDestroy {
         this.bubbleToExpand = b;
       }
     }
-  }
-
-  /**
-   * Duplicate participations and check for changes on each event update
-   * Allow to not push new input in participations component, to not reload participants avatars
-   */
-  compareParticipations() {
-    if (JSON.stringify(this.event.participationRefs) !== JSON.stringify(this.participationRefs)) {
-      this.participationRefs = this.sortParticipations(this.event.participationRefs);
-    }
-  }
-
-  /**
-   * Sort participations according to local variable sortedAnswers order.
-   * @param participationRefs
-   */
-  sortParticipations(participationRefs: EventParticipant[]): EventParticipant[] {
-    const participations = [];
-    const sortedAnswers = [EventParticipantAnswer.YES, EventParticipantAnswer.MAYBE, EventParticipantAnswer.NO, EventParticipantAnswer.UNANSWERED];
-    for (const answer of sortedAnswers) {
-      participationRefs.forEach(participation => {
-        if (participation.answer === answer) {
-          participations.push(participation);
-        }
-      });
-    }
-    return participations;
   }
 
   openSettingsModal() {

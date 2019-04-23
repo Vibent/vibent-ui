@@ -3,25 +3,27 @@ import { User } from '../../../../../shared/models/user';
 import { HttpService } from '../../../../../core/http/http.service';
 import { Membership } from '../../../../../shared/models/membership';
 import { LoaderSize } from '../../../../../shared/global/constants';
+import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-group-preview-member',
-  templateUrl: './group-preview-member.component.html',
+  selector: 'user-profile-preview',
+  templateUrl: './user-profile-preview.component.html',
+  styleUrls: ['./user-profile-preview.scss']
 })
 
-export class GroupPreviewMemberComponent implements OnInit {
+export class UserProfilePreviewComponent implements OnInit {
 
   @Input()
+  userRef: string;
+  @Input()
   membership: Membership;
-  user: User = null;
+  user$: Observable<User>;
   loaderSize = LoaderSize.small;
 
   constructor(private httpService: HttpService) {
   }
 
   ngOnInit() {
-    this.httpService.getUser(this.membership.userRef).subscribe((user) => {
-      this.user = user;
-    });
+    this.user$ = this.httpService.getUser(this.userRef);
   }
 }
