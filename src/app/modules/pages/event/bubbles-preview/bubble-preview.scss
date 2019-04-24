@@ -36,6 +36,21 @@
   .title {
     color: black;
     font-size: 24px;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 12%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .contributors {
+    text-align: center;
+    border-top: #e3e3e3 solid 2px;
+    height: 18%;
+    padding-top: 7px;
+    overflow: hidden;
   }
 
   &:hover {
