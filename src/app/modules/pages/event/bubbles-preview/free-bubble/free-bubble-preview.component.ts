@@ -5,7 +5,7 @@ import { ContributorTextType } from '../bubble-contributor-icons/bubble-contribu
 declare const $: any;
 
 @Component({
-  selector: 'app-free-bubble-preview',
+  selector: 'free-bubble-preview',
   templateUrl: './free-bubble-preview.html',
   styleUrls: ['../bubble-preview.scss', './free-bubble-preview.scss']
 })

@@ -1,11 +1,41 @@
-<div class="bubble-preview planning-bubble-preview text-center">
-  <!--<div class="creator-bubble"></div>-->
-  <div class="bubble-type"><i class="fa fa-tasks bubble-icon"></i>
+<div class="bubble-preview planning-bubble-preview">
+  <div class="bubble-type">
+    <i class="fa fa-tasks bubble-icon"></i>
+  </div>
+
+  <div class="graphics">
+    <div *ngIf="bubble.entries.length === 0"
+         class="graphics-title-only"
+         i18n="@@no-entries-yet">
+      No entries yet
+    </div>
+    <div *ngIf="bubble.entries.length !== 0"
+         class="graphics-title"
+         i18n="@@upcoming-entries">
+      Upcoming entries
+    </div>
+    <ul class="planning-timeline" [class.fade-vertical]="bubble.entries.length > 3">
+      <li *ngFor="let entry of planningDataService.getUpcomingEntries(bubble, 3)"
+          class="entry">
+        <div>
+          <div class="date">
+            {{entry.start | date}}
+            <ng-container i18n="@@at">at</ng-container>
+            {{entry.start | date:'shortTime' }}
+          </div>
+          <div class="content">{{entry.content}}</div>
+        </div>
+      </li>
+    </ul>
   </div>
   <div class="title">
-    {{planningBubble.title}}
+    {{bubble.title}}
   </div>
-  <div class="preview">
-    {{planningBubble.entries.length}} <span i18n="@@planning-entries">TBT</span>
+  <div class="contributors">
+    <bubble-contributors
+        [userRefs]="[bubble.creatorRef]"
+        [type]="ContributorTextType.AUTHOR"
+        maxItems="1">
+    </bubble-contributors>
   </div>
 </div>

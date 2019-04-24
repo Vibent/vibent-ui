@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { UserManagementService } from '../../../user-management.service';
 import { User } from '../../../../../shared/models/user';
 import { HttpService } from '../../../../http/http.service';
-import { PlanningDataModel, PlanningEntry } from '../../../../../shared/models/bubbles/PlanningBubble';
+import { PlanningBubble, PlanningDataModel, PlanningEntry } from '../../../../../shared/models/bubbles/PlanningBubble';
 import * as moment from 'moment';
 
 @Injectable()
@@ -27,4 +27,8 @@ export class PlanningDataService {
     return planningEntry.userRef === this.user.ref;
   }
 
+  getUpcomingEntries(bubble: PlanningBubble, maxEntries: number) {
+    const entries = bubble.entries.sort((a, b) => Date.parse(a.start).valueOf() - Date.parse(b.start).valueOf());
+    return entries.slice(0, maxEntries);
+  }
 }

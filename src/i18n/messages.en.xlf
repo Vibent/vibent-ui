@@ -2173,14 +2173,6 @@
           <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="planning-entries" datatype="html">
-        <source>TBT</source>
-        <target state="translated">planning entries</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/planning-bubble/planning-bubble-preview.html</context>
-          <context context-type="linenumber">9</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="00f60987a7fbce29409f5cca272fb6fb54a1c5ba" datatype="html">
         <source>
     <x id="ICU" equiv-text="{mostActiveUsers.amount, plural, =0 {...} =1 {...} other {...}}"/>
@@ -2231,6 +2223,30 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/bubble-contributor-icons/bubble-contributor-icons.component.html</context>
           <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="no-entries-yet" datatype="html">
+        <source>
+      No entries yet
+    </source>
+        <target state="translated">
+      Rien de prévu pour le moment
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/planning-bubble/planning-bubble-preview.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="upcoming-entries" datatype="html">
+        <source>
+      Upcoming entries
+    </source>
+        <target state="translated">
+      Upcoming entries
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/planning-bubble/planning-bubble-preview.html</context>
+          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="no-answers-yet" datatype="html">
@@ -2360,8 +2376,12 @@
         </context-group>
       </trans-unit>
       <trans-unit id="at" datatype="html">
-        <source>TBT</source>
+        <source>at</source>
         <target state="translated">by</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/planning-bubble/planning-bubble-preview.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/planning-entry/planning-entry.html</context>
           <context context-type="linenumber">2</context>

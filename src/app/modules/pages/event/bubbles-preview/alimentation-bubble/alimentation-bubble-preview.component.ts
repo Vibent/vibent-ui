@@ -10,7 +10,7 @@ import { AlimentationDataService } from '../../../../../core/services/bubbles-se
 })
 export class AlimentationBubblePreviewComponent implements OnInit {
   @Input()
-  public alimentationBubble: AlimentationBubble;
+  public bubble: AlimentationBubble;
   public readonly AlimType = AlimType;
 
   public remainingDrinks;
@@ -20,7 +20,7 @@ export class AlimentationBubblePreviewComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.remainingFoods = this.alimentationDataService.getTypeRemaining(this.alimentationBubble, AlimType.FOOD);
-    this.remainingDrinks = this.alimentationDataService.getTypeRemaining(this.alimentationBubble, AlimType.DRINK);
+    this.remainingFoods = this.alimentationDataService.getTypeRemaining(this.bubble, AlimType.FOOD);
+    this.remainingDrinks = this.alimentationDataService.getTypeRemaining(this.bubble, AlimType.DRINK);
   }
 }
