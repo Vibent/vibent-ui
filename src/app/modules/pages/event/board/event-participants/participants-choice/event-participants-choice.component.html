@@ -2,7 +2,7 @@
   <div class="btn-group event-participation"
        data-toggle="buttons">
     <label class="btn btn-primary btn-sm p-l-10 p-r-10"
-           [class.active]="userParticipation?.answer === participationEventAnswer.YES"
+           [class.active]="fullUserParticipation?.answer === participationEventAnswer.YES"
            (click)="onParticipate()" i18n="@@attending">
       <input type="radio"
              name="options"
@@ -11,7 +11,7 @@
              class="event-participation-radios"> TBT
     </label>
     <label class="btn btn-primary btn-sm p-l-10 p-r-10"
-           [class.active]="userParticipation?.answer === participationEventAnswer.MAYBE"
+           [class.active]="fullUserParticipation?.answer === participationEventAnswer.MAYBE"
            (click)="onMaybe()" i18n="@@maybe">
       <input type="radio"
              name="options"
@@ -20,7 +20,7 @@
              class="event-participation-radios"> TBT
     </label>
     <label class="btn btn-primary btn-sm p-l-10 p-r-10"
-           [class.active]="userParticipation?.answer === participationEventAnswer.NO"
+           [class.active]="fullUserParticipation?.answer === participationEventAnswer.NO"
            (click)="onNot()" i18n="@@not-attending">
       <input type="radio"
              name="options"
