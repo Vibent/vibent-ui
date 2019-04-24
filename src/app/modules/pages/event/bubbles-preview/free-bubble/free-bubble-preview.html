@@ -1,8 +1,20 @@
-<div class="bubble-preview free-bubble-preview text-center">
-  <!--<div class="creator-bubble"></div>-->
-  <div class="bubble-type"><i class="fa fa-commenting bubble-icon"></i>
+<div class="bubble-preview free-bubble-preview">
+  <div class="bubble-type">
+    <i class="fa fa-commenting bubble-icon"></i>
   </div>
-  <div class="title m-t-40">
-    {{freeBubble.title}}
+  <div class="graphics">
+    <div class="graphics-text-only">
+      {{(hasContent(bubble) ? bubble.content : bubble.title) | truncate:200}}
+    </div>
+  </div>
+  <div class="title">
+    {{hasContent(bubble) ? bubble.title : ''}}
+  </div>
+  <div class="contributors">
+    <bubble-contributors
+        [userRefs]="[bubble.creatorRef]"
+        [type]="ContributorTextType.AUTHOR"
+        maxItems="1">
+    </bubble-contributors>
   </div>
 </div>
