@@ -490,7 +490,7 @@
   margin-top: 15px;
 }
 
-.planning-card {
+.planning-card, .planning-bubble-preview {
 
   .card {
     margin-top: 0;
@@ -505,9 +505,9 @@
   }
 
   ul.planning-timeline {
-    list-style-type: none;
-    position: relative;
-  }
+     list-style-type: none;
+     position: relative;
+   }
   ul.planning-timeline:before {
     content: ' ';
     background: #d4d9df;

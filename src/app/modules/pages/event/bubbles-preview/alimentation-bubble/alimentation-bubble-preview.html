@@ -10,7 +10,7 @@
       <div class="info">
         <div class="progress">
           <div class="progress-bar bg-success"
-               [style.width]="alimentationDataService.getTypeCompletion(alimentationBubble, AlimType.DRINK)+'%'"
+               [style.width]="alimentationDataService.getTypeCompletion(bubble, AlimType.DRINK)+'%'"
                role="progressbar"></div>
         </div>
         <div class="remaining-text text-muted" i18n>
@@ -27,7 +27,7 @@
       <div class="info">
         <div class="progress">
           <div class="progress-bar bg-success"
-               [style.width]="alimentationDataService.getTypeCompletion(alimentationBubble, AlimType.FOOD)+'%'"
+               [style.width]="alimentationDataService.getTypeCompletion(bubble, AlimType.FOOD)+'%'"
                role="progressbar"></div>
         </div>
         <div class="remaining-text text-muted" i18n>
@@ -43,7 +43,7 @@
   </div>
   <div class="contributors">
     <bubble-contributors
-        [userRefs]="alimentationDataService.getUserActivity(alimentationBubble)"
+        [userRefs]="alimentationDataService.getUserActivity(bubble)"
         maxItems="3">
     </bubble-contributors>
   </div>

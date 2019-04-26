@@ -1,6 +1,6 @@
 <alimentation-bubble-preview
     *ngIf="this.bubble.type === BubbleType.AlimentationBubble"
-    [alimentationBubble]="this.bubble"
+    [bubble]="this.bubble"
     (click)="this.expandBubble()">
 </alimentation-bubble-preview>
 
@@ -16,17 +16,17 @@
     (click)="this.expandBubble()">
 </travel-bubble-preview>
 
-<app-free-bubble-preview
+<free-bubble-preview
     *ngIf="this.bubble.type === BubbleType.FreeBubble"
-    [freeBubble]="this.bubble"
+    [bubble]="this.bubble"
     (click)="this.expandBubble()">
-</app-free-bubble-preview>
+</free-bubble-preview>
 
-<app-planning-bubble-preview
+<planning-bubble-preview
     *ngIf="this.bubble.type === BubbleType.PlanningBubble"
-    [planningBubble]="this.bubble"
+    [bubble]="this.bubble"
     (click)="this.expandBubble()">
-</app-planning-bubble-preview>
+</planning-bubble-preview>
 
 <survey-bubble-preview
     *ngIf="this.bubble.type === BubbleType.SurveyBubble"

@@ -1,0 +1,26 @@
+$free-color: #b33a69;
+
+.free-bubble-preview {
+  border-color: $free-color;
+
+  .bubble-icon {
+    color: $free-color;
+  }
+}
+
+.graphics {
+  height: 70%;
+  width: 100%;
+  display: table;
+  padding: 10% 7% 5% 7%;
+
+
+  .graphics-text-only {
+    font-size: 1.2em;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+}
+

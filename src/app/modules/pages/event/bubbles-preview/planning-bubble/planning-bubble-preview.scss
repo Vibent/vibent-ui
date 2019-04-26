@@ -1,0 +1,75 @@
+$planning-color: #08b6b3;
+
+.planning-bubble-preview {
+  border-color: $planning-color;
+
+  .bubble-icon {
+    color: $planning-color;
+  }
+}
+
+.graphics {
+  height: 70%;
+  overflow: hidden;
+
+  .graphics-title-only {
+    font-size: 1.6em;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .graphics-title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .entry {
+    font-size: 1em;
+    line-height: 1.1em;
+
+    .date, .content {
+      width: 90%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .date {
+      color: $planning-color
+    }
+
+    .content {
+      margin-top: 3px;
+      padding-left: 10px;
+    }
+  }
+
+  ul.planning-timeline {
+    &:before {
+      height: 90%;
+    }
+
+    &.fade-vertical {
+      &:before {
+        height: 100%;
+      }
+
+      & > li:nth-child(3) > div {
+        opacity: 50%;
+        mask-image: linear-gradient(black, transparent);
+      }
+    }
+
+    & > li {
+      margin-top: 0;
+      margin-bottom: 11px;
+    }
+
+    & > li:before {
+      border-color: $planning-color;
+    }
+  }
+}
+

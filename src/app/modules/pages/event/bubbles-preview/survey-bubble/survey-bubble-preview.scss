@@ -19,11 +19,11 @@ $survey-color: #ff9236;
   }
 
   .graphics-title {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    text-align: center;
-    font-weight: 500;
-  }
+     margin-top: 30px;
+     margin-bottom: 10px;
+     text-align: center;
+     font-weight: 500;
+   }
 
   .options {
     margin-left: 5%;
@@ -69,22 +69,4 @@ $survey-color: #ff9236;
       }
     }
   }
-}
-
-.title {
-  text-align: center;
-  margin-left: 5%;
-  margin-right: 5%;
-  height: 12%;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.contributors {
-  text-align: center;
-  border-top: #e3e3e3 solid 2px;
-  height: 18%;
-  padding-top: 7px;
-  overflow: hidden;
 }
