@@ -36,5 +36,4 @@ export class BubbleContributorIconsComponent implements OnInit {
     this.mostActiveUsers = this.bubbleContributorsService.getMostActiveUsers(this.userRefs, this.maxItems);
   }
 
-
 }
