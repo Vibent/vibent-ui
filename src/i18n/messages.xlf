@@ -1682,8 +1682,15 @@
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="going" datatype="html">
-        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="INTERPOLATION" equiv-text="{{participantsNumber}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> TBT</source>
+      <trans-unit id="6344e1a7c16e21eade25c836498920909621b7ee" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="INTERPOLATION" equiv-text="{{participantsNumber}}"/> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="ICU" equiv-text="{participantsNumber, plural, =1 {...} other {...}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/event-additional-infos/event-additional-infos.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e6f452314649d45ec0053eedddc6ba9391e8822f" datatype="html">
+        <source>{VAR_PLURAL, plural, =1 {going} other {going} }</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-additional-infos/event-additional-infos.component.html</context>
           <context context-type="linenumber">3</context>
