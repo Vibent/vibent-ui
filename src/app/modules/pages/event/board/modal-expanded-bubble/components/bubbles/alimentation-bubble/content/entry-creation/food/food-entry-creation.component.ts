@@ -4,6 +4,7 @@ import { AlimentationBubble, AlimType } from '../../../../../../../../../../../s
 import { EventUpdateService } from '../../../../../../../../../../../core/services/bubbles-services/event-update.service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AbstractBubbleEntityCreationComponent } from '../../../../../abstract/abstract-bubble-entity-creation.component';
+import { BubbleType } from '../../../../../../../../../../../shared/models/bubbles/IBubble';
 
 @Component({
   selector: 'food-entry-creation',
@@ -42,7 +43,7 @@ export class FoodEntryCreationComponent extends AbstractBubbleEntityCreationComp
     }).subscribe((updatedBubble) => {
       this.updatedAlimentationBubble.emit(<AlimentationBubble>updatedBubble);
       this.toggleCreationCard();
-      this.eventUpdateService.updateEvent(this.eventRef);
+      this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.AlimentationBubble});
     });
   }
 

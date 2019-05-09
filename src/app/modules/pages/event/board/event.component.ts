@@ -45,18 +45,20 @@ export class EventComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.eventAdminPanelService.toggleEventPanel(this.event.ref);
 
-    this.subscriptions.push(this.eventUpdateService.eventUpdated$.subscribe(event => {
-      this.event = event;
-      this.refreshBubbles();
+    this.subscriptions.push(this.eventUpdateService.eventUpdated$.subscribe(eventUpdate => {
+      this.event = eventUpdate.event;
+      if (eventUpdate.bubble) {
+        this.updateBubbleOnEventUpdate(eventUpdate.bubble);
+      }
     }));
 
     this.subscriptions.push(this.blacknoteService.eventUpdated$.subscribe(event => {
       this.event = event;
-      this.refreshBubbles();
+      this.bubbles = this.concatEventBubbles();
       this.updateExpandedBubble();
     }));
 
-    this.refreshBubbles();
+    this.bubbles = this.concatEventBubbles();
   }
 
   ngOnDestroy() {
@@ -67,11 +69,7 @@ export class EventComponent implements OnInit, OnDestroy {
     });
   }
 
-  /**
-   * Concat bubbles to pass them in bubbles-preview controller
-   * Refresh participations
-   */
-  refreshBubbles() {
+  concatEventBubbles() {
     let bubbles: IBubble[] = [];
     this.event.alimentationBubbles.forEach(bubble => bubble.type = BubbleType.AlimentationBubble);
     this.event.travelBubbles.forEach(bubble => bubble.type = BubbleType.TravelBubble);
@@ -87,7 +85,24 @@ export class EventComponent implements OnInit, OnDestroy {
       this.event.planningBubbles,
       this.event.surveyBubbles,
       this.event.freeBubbles);
-    this.bubbles = bubbles;
+    return bubbles;
+  }
+
+  updateBubbleOnEventUpdate(bubbleToUpdate: IBubble) {
+    const bubbles = this.concatEventBubbles();
+
+    const updatedBubble = bubbles.find((bubble) => {
+      return bubble.id === bubbleToUpdate.id && bubble.type === bubbleToUpdate.type;
+    });
+
+    this.bubbles.forEach((bubble, index) => {
+      if (bubble.id === bubbleToUpdate.id && bubble.type === bubbleToUpdate.type) {
+        // necessary for some obscure reason, forcing change detection does not work either
+        setTimeout(() => {
+          this.bubbles[index] = updatedBubble;
+        }, 0);
+      }
+    });
   }
 
   /**

@@ -1,5 +1,4 @@
 import {
-  ChangeDetectionStrategy,
   Component, EventEmitter, Input,
   OnInit, Output
 } from '@angular/core';
@@ -10,6 +9,7 @@ import { CheckboxHttpService } from '../../../../../../../../../../core/services
 import { CheckboxBubble } from '../../../../../../../../../../shared/models/bubbles/CheckboxBubble';
 import { EventUpdateService } from '../../../../../../../../../../core/services/bubbles-services/event-update.service';
 import { AbstractBubbleEntityCreationComponent } from '../../../../abstract/abstract-bubble-entity-creation.component';
+import { BubbleType } from '../../../../../../../../../../shared/models/bubbles/IBubble';
 
 @Component({
   selector: '[option-creation]',
@@ -45,7 +45,7 @@ export class OptionCreationComponent extends AbstractBubbleEntityCreationCompone
       content: this.optionContent.value
     }).subscribe((updatedBubble) => {
       this.updatedCheckboxBubble.emit(<CheckboxBubble>updatedBubble);
-      this.eventUpdateService.updateEvent(this.eventRef);
+      this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.CheckboxBubble});
       this.toggleCreationCard();
     });
   }

@@ -9,6 +9,7 @@ import Swal from 'sweetalert2';
 import { AbstractBubbleEntityCreationComponent } from '../../../../abstract/abstract-bubble-entity-creation.component';
 import { AppSettings } from '../../../../../../../../../../shared/global/constants';
 import { MessageService } from '../../../../../../../../../../core/services/i18n/message.service';
+import { BubbleType } from '../../../../../../../../../../shared/models/bubbles/IBubble';
 
 declare const $: any;
 
@@ -68,7 +69,7 @@ export class TravelProposalCreationComponent extends AbstractBubbleEntityCreatio
       passByCities: this.inputPlace.suggestion.hit.objectID
     }).subscribe((updatedBubble) => {
         this.updatedTravelBubble.emit(<TravelBubble> updatedBubble);
-        this.eventUpdateService.updateEvent(this.eventRef);
+        this.eventUpdateService.updateEvent(this.eventRef, {id: this.travelBubble.id, type: BubbleType.TravelBubble});
         this.toggleCreationCard();
       },
       (e) => {

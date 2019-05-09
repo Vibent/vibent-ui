@@ -16,6 +16,7 @@ import { EventUpdateService } from '../../../../../../../../../../core/services/
 import { AppSettings } from '../../../../../../../../../../shared/global/constants';
 import { HttpService } from '../../../../../../../../../../core/http/http.service';
 import { MessageService } from '../../../../../../../../../../core/services/i18n/message.service';
+import { BubbleType } from '../../../../../../../../../../shared/models/bubbles/IBubble';
 
 @Component({
   selector: 'travel-proposal',
@@ -126,7 +127,7 @@ export class TravelProposalComponent implements OnInit {
             capacity: 1,
             proposalId: this.travelProposal.id
           }).subscribe((c) => {
-            this.eventUpdateService.updateEvent(this.eventRef);
+            this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.TravelBubble});
           });
         }
       });
@@ -152,7 +153,7 @@ export class TravelProposalComponent implements OnInit {
                 .find(p => p.id === this.travelProposal.id).attachedRequests
                 .find(r => r.userRef === this.user.ref));
             this.populateTravelDataModel(this.place);
-            this.eventUpdateService.updateEvent(this.eventRef);
+            this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.TravelBubble});
           });
         }
       });
@@ -174,8 +175,8 @@ export class TravelProposalComponent implements OnInit {
         this.travelProposal.attachedRequests.splice(this.travelProposal.attachedRequests
           .findIndex(request => request.userRef === this.user.ref), 1);
         this.populateTravelDataModel(this.place);
-        this.travelHttpService.deleteRequest(request.id).subscribe((c) => {
-          this.eventUpdateService.updateEvent(this.eventRef);
+        this.travelHttpService.deleteRequest(request.id).subscribe(() => {
+          this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.TravelBubble});
         });
       }
     });
@@ -197,7 +198,7 @@ export class TravelProposalComponent implements OnInit {
           .findIndex(proposal => proposal.id === this.travelProposal.id), 1);
         this.updatedTravelBubble.emit(this.travelBubble);
         this.travelHttpService.deleteProposal(this.travelProposal.id).subscribe(() => {
-          this.eventUpdateService.updateEvent(this.eventRef);
+          this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.TravelBubble});
         });
       }
     });

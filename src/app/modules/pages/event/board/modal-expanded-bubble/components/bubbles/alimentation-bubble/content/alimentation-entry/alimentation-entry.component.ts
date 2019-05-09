@@ -13,6 +13,7 @@ import Swal from 'sweetalert2';
 import { UserManagementService } from '../../../../../../../../../../core/services/user-management.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { MessageService } from '../../../../../../../../../../core/services/i18n/message.service';
+import { BubbleType } from '../../../../../../../../../../shared/models/bubbles/IBubble';
 
 declare const $: any;
 
@@ -40,8 +41,6 @@ declare const $: any;
 })
 export class AlimentationEntryComponent implements OnInit {
 
-  AlimType = AlimType;
-
   @Input()
   alimentationEntry: AlimentationEntry;
   @Input()
@@ -52,6 +51,8 @@ export class AlimentationEntryComponent implements OnInit {
   updatedAlimentationBubble = new EventEmitter<AlimentationBubble>();
   user: User;
   alimentationDataModel: AlimentationDataModel = new AlimentationDataModel();
+
+  AlimType = AlimType;
 
   constructor(private alimentationHttpService: AlimentationHttpService,
               private alimentationDataService: AlimentationDataService,
@@ -86,7 +87,7 @@ export class AlimentationEntryComponent implements OnInit {
       if (result.value) {
         this.alimentationHttpService.deleteEntry(this.alimentationEntry).subscribe(() => {
           this.getAndEmitBubble();
-          this.eventUpdateService.updateEvent(this.eventRef);
+          this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.AlimentationBubble});
         });
       }
     });
@@ -110,7 +111,7 @@ export class AlimentationEntryComponent implements OnInit {
       entryId: this.alimentationEntry.id,
       quantity: 1
     }).subscribe(() => {
-      this.eventUpdateService.updateEvent(this.eventRef);
+      this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.AlimentationBubble});
     });
   }
 
@@ -131,7 +132,7 @@ export class AlimentationEntryComponent implements OnInit {
         entryId: this.alimentationEntry.id,
         quantity: -1
       }).subscribe(() => {
-        this.eventUpdateService.updateEvent(this.eventRef);
+        this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.AlimentationBubble});
       });
     }
   }
