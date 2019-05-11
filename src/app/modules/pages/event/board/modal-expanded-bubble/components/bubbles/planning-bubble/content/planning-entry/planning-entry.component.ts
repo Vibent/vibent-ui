@@ -16,6 +16,7 @@ import { PlanningDataService } from '../../../../../../../../../../core/services
 import { EventUpdateService } from '../../../../../../../../../../core/services/bubbles-services/event-update.service';
 import Swal from 'sweetalert2';
 import { MessageService } from '../../../../../../../../../../core/services/i18n/message.service';
+import { BubbleType } from '../../../../../../../../../../shared/models/bubbles/IBubble';
 
 @Component({
   selector: '[planning-entry]',
@@ -66,7 +67,7 @@ export class PlanningEntryComponent implements OnInit {
     }).then((result) => {
       if (result.value) {
         this.planningHttpService.deleteEntry(this.planningEntry).subscribe(() => {
-          this.eventUpdateService.updateEvent(this.eventRef);
+          this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.PlanningBubble});
           this.planningBubble.entries
             .splice(this.planningBubble.entries
               .findIndex(entry => entry.id === this.planningEntry.id), 1);

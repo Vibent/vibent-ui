@@ -2246,13 +2246,6 @@
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="your-planning-bubble-title" datatype="html">
-        <source>TBT</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/planning-content.html</context>
-          <context context-type="linenumber">4</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="planning-bubble-settings" datatype="html">
         <source>TBT</source>
         <context-group purpose="location">

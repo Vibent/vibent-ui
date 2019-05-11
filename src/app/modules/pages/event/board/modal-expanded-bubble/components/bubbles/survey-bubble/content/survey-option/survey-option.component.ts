@@ -15,6 +15,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { SurveyDataModel, SurveyOption } from '../../../../../../../../../../shared/models/bubbles/SurveyBubble';
 import { SurveyDataService } from '../../../../../../../../../../core/services/bubbles-services/survey/data/survey-data.service';
 import { SurveyHttpService } from '../../../../../../../../../../core/services/bubbles-services/survey/http/survey-http.service';
+import { BubbleType } from '../../../../../../../../../../shared/models/bubbles/IBubble';
 
 declare const $: any;
 
@@ -81,7 +82,7 @@ export class SurveyOptionComponent implements OnInit, OnChanges, OnDestroy {
     this.updatedAnswerCount.emit(this.answerCount);
     this.surveyOption.answers.push({userRef: this.user.ref});
     this.surveyHttpService.createAnswer({optionId: this.surveyOption.id}).subscribe((updated) => {
-      this.eventUpdateService.updateEvent(this.eventRef);
+      this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.SurveyBubble});
     });
   }
 
@@ -93,7 +94,7 @@ export class SurveyOptionComponent implements OnInit, OnChanges, OnDestroy {
       .splice(this.surveyOption.answers
         .findIndex(answer => answer.userRef === this.user.ref), 1);
     this.surveyHttpService.deleteAnswerOfOption(this.surveyOption).subscribe(() => {
-      this.eventUpdateService.updateEvent(this.eventRef);
+      this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.SurveyBubble});
     });
   }
 

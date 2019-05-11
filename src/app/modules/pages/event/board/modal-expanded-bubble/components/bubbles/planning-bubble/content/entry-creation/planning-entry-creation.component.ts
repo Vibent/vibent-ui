@@ -7,6 +7,7 @@ import { PlanningHttpService } from '../../../../../../../../../../core/services
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import * as moment from 'moment';
 import { AbstractBubbleEntityCreationComponent } from '../../../../abstract/abstract-bubble-entity-creation.component';
+import { BubbleType } from '../../../../../../../../../../shared/models/bubbles/IBubble';
 
 declare const $: any;
 
@@ -68,7 +69,7 @@ export class PlanningEntryCreationComponent extends AbstractBubbleEntityCreation
       hasTime: this.hasTime
     }).subscribe((updatedBubble) => {
       this.updatedPlanningBubble.emit(<PlanningBubble>updatedBubble);
-      this.eventUpdateService.updateEvent(this.eventRef);
+      this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.PlanningBubble});
       this.toggleCreationCard();
     }, () => {
       this.timeInvalid = true;

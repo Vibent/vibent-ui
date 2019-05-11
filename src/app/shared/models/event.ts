@@ -5,6 +5,7 @@ import { FreeBubble } from './bubbles/FreeBubble';
 import { PlanningBubble } from './bubbles/PlanningBubble';
 import { SurveyBubble } from './bubbles/SurveyBubble';
 import { TravelBubble } from './bubbles/TravelBubble';
+import { IBubble } from './bubbles/IBubble';
 
 export interface Event {
 
@@ -25,4 +26,10 @@ export interface Event {
   surveyBubbles?: SurveyBubble[];
   travelBubbles?: TravelBubble[];
 
+}
+
+
+export interface EventUpdate {
+  event: Event;
+  bubble: IBubble;
 }

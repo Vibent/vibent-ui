@@ -1,8 +1,8 @@
 export class IBubble {
   id: number;
-  creatorRef: string;
-  eventRef: string;
-  type: BubbleType;
+  creatorRef?: string;
+  eventRef?: string;
+  type?: BubbleType;
 }
 
 

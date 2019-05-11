@@ -2524,7 +2524,7 @@
       </trans-unit>
       <trans-unit id="content" datatype="html">
         <source>TBT</source>
-        <target state="translated">Heure</target>
+        <target state="translated">Description</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html</context>
           <context context-type="linenumber">38</context>
@@ -2777,14 +2777,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-content.html</context>
           <context context-type="linenumber">64</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="your-planning-bubble-title" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Le titre de votre bulle planning</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/planning-content.html</context>
-          <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="planning-bubble-settings" datatype="html">

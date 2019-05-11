@@ -23,6 +23,7 @@ import { AppSettings } from '../../../../../../../../../../shared/global/constan
 import Swal from 'sweetalert2';
 import { EventUpdateService } from '../../../../../../../../../../core/services/bubbles-services/event-update.service';
 import { MessageService } from '../../../../../../../../../../core/services/i18n/message.service';
+import { BubbleType } from '../../../../../../../../../../shared/models/bubbles/IBubble';
 
 declare const $: any;
 
@@ -131,7 +132,7 @@ export class TravelRequestComponent implements OnInit {
               proposalId: proposal.id,
               requestId: this.travelRequest.id
             }).subscribe((updatedBubble) => {
-              this.eventUpdateService.updateEvent(this.eventRef);
+              this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.TravelBubble});
               this.updatedTravelBubble.emit(<TravelBubble> updatedBubble);
             });
           }
@@ -173,7 +174,7 @@ export class TravelRequestComponent implements OnInit {
             .findIndex(request => request.id === this.travelRequest.id), 1);
         this.updatedTravelBubble.emit(this.travelBubble);
         this.travelHttpService.deleteRequest(this.travelRequest.id).subscribe(() => {
-          this.eventUpdateService.updateEvent(this.eventRef);
+          this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.TravelBubble});
         });
       }
     });
