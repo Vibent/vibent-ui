@@ -57,6 +57,7 @@ build:npm:dev:
   extends: .build
   except:
   - develop
+  - /^support\/.+$/
   variables:
     BUILD_TARGET: dev
 build:npm:dev-i18n:
@@ -69,6 +70,7 @@ build:npm:prod-i18n:
   extends: .build
   only:
   - develop
+  - /^support\/.+$/
   variables:
     BUILD_TARGET: prod-i18n
 
@@ -76,6 +78,7 @@ dockerize:
   stage: dockerize
   only:
   - develop
+  - /^support\/.+$/
   when: manual
   allow_failure: false
   script:
@@ -90,6 +93,7 @@ deploy-dev:
   stage: deploy-dev
   only:
   - develop
+  - /^support\/.+$/
   script:
   - apk add --update curl && rm -rf /var/cache/apk/*
   - curl -X POST -d "{\"token\":\"$AWS_UTIL_TOKEN\",\"restart\":\"vibent-ui-dev\"}" https://admin.vibent.com
@@ -98,6 +102,7 @@ deploy-prod:
   stage: deploy-prod
   only:
   - develop
+  - /^support\/.+$/
   when: manual
   script:
   - apk add --update curl && rm -rf /var/cache/apk/*
