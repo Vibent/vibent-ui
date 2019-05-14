@@ -55,30 +55,3 @@
     @include popover-color($success-color, $white-color);
   }
 }
-
-.tooltip {
-  &.bs-tooltip-right .arrow:before {
-    border-right-color: $white-color;
-  }
-
-  &.bs-tooltip-top .arrow:before {
-    border-top-color: $white-color;
-  }
-
-  &.bs-tooltip-bottom .arrow:before {
-    border-bottom-color: $white-color;
-  }
-
-  &.bs-tooltip-left .arrow:before {
-    border-left-color: $white-color;
-  }
-}
-
-.tooltip-inner {
-  padding: $padding-base-vertical $padding-base-horizontal;
-  min-width: 130px;
-  background-color: $white-color;
-  font-size: $font-size-base;
-  color: inherit;
-  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.2);
-}

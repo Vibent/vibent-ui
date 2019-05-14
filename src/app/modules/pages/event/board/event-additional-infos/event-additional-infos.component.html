@@ -1,5 +1,5 @@
 <div class="d-flex flex-row justify-content-center event-additional-infos">
-  <div class="participants-info p-3 cursor-pointer" (click)="openEventParticipantsModal()">
+  <div class="participants-info p-3 cursor-pointer tooltip-activation" (click)="openEventParticipantsModal()" title="See all participations and invite people">
     <div class="going text-center" i18n><span>{{participantsNumber}}&nbsp;</span>{participantsNumber, plural, =1 {going} other {going}}</div>
     <div class="invited text-center" i18n="@@for-nb-invited">TBT <span>{{invitedNumber}}</span> TBT</div>
   </div>

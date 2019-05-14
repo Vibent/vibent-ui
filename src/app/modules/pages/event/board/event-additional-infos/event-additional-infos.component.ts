@@ -24,6 +24,9 @@ export class EventAdditionalInfosComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    $(() => {
+      $('.tooltip-activation').tooltip();
+    });
     this.initValues();
     this.subscriptions.push(this.eventParticipantsService.participationUpdated$.subscribe((eventParticipation) => {
       this.event.participationRefs[this.event.participationRefs
