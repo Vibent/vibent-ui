@@ -1700,7 +1700,7 @@
       </trans-unit>
       <trans-unit id="want-to-create-event" datatype="html">
         <source>TBT</source>
-        <target state="translated">Vous voulez en créer un ? Créez un événement dans un groupe :</target>
+        <target state="translated">Vous voulez en créer un ?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/attended-events/events.component.html</context>
           <context context-type="linenumber">4</context>

@@ -40,7 +40,6 @@
       </div>
       <div class="col-xl-12 text-center">
         <div class="btn btn-round white-button"
-             (click)="openEventCreationDialog()"
              i18n="@@create-an-event">TBT</div>
       </div>
     </div>
@@ -60,6 +59,5 @@
   </ng-template>
 </div>
 <group-settings [group]=group></group-settings>
-<event-creation [groupRef]=group.ref></event-creation>
 <group-members [group]=group></group-members>
 <add-group-members [group]=group></add-group-members>

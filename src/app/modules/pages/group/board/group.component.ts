@@ -47,10 +47,6 @@ export class GroupComponent implements OnInit, OnDestroy {
     $('#modalAddGroupMembers').modal('show');
   }
 
-  openEventCreationDialog(): void {
-    $('#modalEventCreation').modal('show');
-  }
-
   openSettingsDialog(): void {
     $('#modalGroupSettings').modal('show');
   }

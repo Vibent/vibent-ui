@@ -1614,7 +1614,7 @@
       </trans-unit>
       <trans-unit id="want-to-create-event" datatype="html">
         <source>TBT</source>
-        <target state="translated">Want to create one? Create an event in a group:</target>
+        <target state="translated">Want to create one?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/attended-events/events.component.html</context>
           <context context-type="linenumber">4</context>
