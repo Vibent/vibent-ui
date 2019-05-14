@@ -3,7 +3,7 @@
     <h3 class="col-xl-12 text-center" i18n="@@all-events-attended">TBT</h3>
     <h4 class="col-xl-12 text-center" i18n="@@want-to-create-event">TBT</h4>
     <div class="row justify-content-center">
-      <div class="btn btn-round green-button" (click)="goToGroupPage()" i18n="@@go-to-groups">TBT</div>
+      <div class="btn btn-round green-button" (click)="openEventCreationDialog()" i18n="@@create-an-event">TBT</div>
     </div>
     <app-event-preview
         *ngFor="let event of events"
@@ -11,3 +11,5 @@
     </app-event-preview>
   </div>
 </div>
+
+<event-creation></event-creation>

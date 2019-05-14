@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material';
-import { ActivatedRoute, Router } from '@angular/router';
-import { HttpService } from '../../../../core/http/http.service';
+import { ActivatedRoute } from '@angular/router';
 import { Event } from '../../../../shared/models/event';
+declare const $: any;
 
 @Component({
   selector: 'app-events',
@@ -10,24 +9,17 @@ import { Event } from '../../../../shared/models/event';
 })
 export class EventsComponent implements OnInit {
 
-  public groups: any = [];
   public events: Event[];
 
-  constructor(public dialog: MatDialog, private route: ActivatedRoute, private router: Router, private httpService: HttpService) {
+  constructor(private route: ActivatedRoute) {
     this.events = this.route.snapshot.data['events'].sort(this.sortEventByDate);
-    this.httpService.getGroups().subscribe((groups) => {
-      for (const group of groups) {
-        const g = {ref: group.ref, name: group.name, fromGroup: false};
-        this.groups.push(g);
-      }
-    });
   }
 
   ngOnInit() {
   }
 
-  goToGroupPage() {
-    this.router.navigate(['/groups']);
+  openEventCreationDialog(): void {
+    $('#modalEventCreation').modal('show');
   }
 
   sortEventByDate(a, b) {

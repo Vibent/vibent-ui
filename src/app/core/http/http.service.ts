@@ -84,6 +84,11 @@ export class HttpService {
     return this.http.post(this.API_URL + '/event', body, this.getOptions());
   }
 
+  public createStandaloneEvent(event: Event) {
+    const body = JSON.stringify(event);
+    return this.http.post(this.API_URL + '/event/standalone', body, this.getOptions());
+  }
+
   public deleteEvent(eventRef: string): any {
     return this.http.delete(this.API_URL + '/event/' + eventRef, this.getOptions());
   }

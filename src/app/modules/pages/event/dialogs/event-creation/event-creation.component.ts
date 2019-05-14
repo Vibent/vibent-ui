@@ -17,9 +17,6 @@ declare const $: any;
 })
 export class EventCreationComponent implements OnInit {
 
-  @Input()
-  groupRef: string;
-
   form: FormGroup;
   title: FormControl;
   description: FormControl;
@@ -60,12 +57,12 @@ export class EventCreationComponent implements OnInit {
       title: this.form.value.title,
       description: this.form.value.description,
       startDate:  this.languageService.formatDateToString($('#event-datetime').val()),
-      groupRef: this.groupRef,
+      groupRef: null,
     };
 
     if (this.titleValidSetted) {
       this.loaderService.displayLoadingPageModal();
-      this.httpService.createEvent(event).subscribe(res => {
+      this.httpService.createStandaloneEvent(event).subscribe(res => {
         this.loaderService.closeLoadingPageModal();
         this.router.navigate(['/events/' + res['ref']]);
         this.close();
