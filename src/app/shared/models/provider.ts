@@ -4,6 +4,7 @@ import { LoginProvider } from 'angularx-social-login/src/entities/login-provider
 export interface Provider extends AuthServiceConfigItem {
   id: string,
   label: string,
+  icon: string,
   provider: LoginProvider,
   color: string,
 }

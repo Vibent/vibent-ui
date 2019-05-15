@@ -6,12 +6,14 @@ const DEV_SOCIAL_PROVIDERS: Provider[] = [
   {
     id: GoogleLoginProvider.PROVIDER_ID,
     label: 'Google',
+    icon: 'google',
     provider: new GoogleLoginProvider('821632933125-0re06sp9j4l9nurpql79glsfm4k64sai.apps.googleusercontent.com'),
     color: '#DC483C',
   },
   {
     id: FacebookLoginProvider.PROVIDER_ID,
     label: 'Facebook',
+    icon: 'facebook-f',
     provider: new FacebookLoginProvider('550656608676022'),
     color: '#3B5998',
   }
@@ -21,12 +23,14 @@ const PROD_SOCIAL_PROVIDERS: Provider[] = [
   {
     id: GoogleLoginProvider.PROVIDER_ID,
     label: 'Google',
+    icon: 'google',
     provider: new GoogleLoginProvider('634029875861-09kdkppk1khbs7krahm18tcqmggts3ee.apps.googleusercontent.com'),
     color: '#DC483C',
   },
   {
     id: FacebookLoginProvider.PROVIDER_ID,
     label: 'Facebook',
+    icon: 'facebook-f',
     provider: new FacebookLoginProvider('203432600535344'),
     color: '#3B5998',
   }
