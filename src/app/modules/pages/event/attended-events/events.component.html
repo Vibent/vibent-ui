@@ -5,10 +5,10 @@
     <div class="row justify-content-center">
       <div class="btn btn-round green-button" (click)="openEventCreationDialog()" i18n="@@create-an-event">TBT</div>
     </div>
-    <app-event-preview
+    <event-preview
         *ngFor="let event of events"
         [event]=event>
-    </app-event-preview>
+    </event-preview>
   </div>
 </div>
 

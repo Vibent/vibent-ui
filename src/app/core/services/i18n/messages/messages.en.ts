@@ -30,6 +30,8 @@ export class MessagesEn implements IMessages {
   public readonly DELETE_PROPOSAL_TEXT = 'You\'re about to delete your proposal';
   public readonly GROUP_JOINED = 'Group joined.';
   public readonly GROUP_JOINED_TEXT = 'Go to groups page.';
+  public readonly EVENT_JOINED = 'Event joined.';
+  public readonly EVENT_JOINED_TEXT = 'Go to events page.';
   public readonly SIZE_TOO_BIG = 'Image too big';
   public readonly SIZE_TOO_BIG_TEXT = 'Your image is too big, please select another one.';
 

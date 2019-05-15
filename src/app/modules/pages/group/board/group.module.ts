@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { GroupComponent } from './group.component';
 import { EventPreviewModule } from '../../event/event-preview/event-preview.module';
 import { GroupMembersModule } from '../dialogs/group-members/group-members.module';
-import { AddGroupMembersModule } from '../dialogs/group-members/add-group-members/add-group-members.module';
+import { AddEventParticipantsModule } from '../../event/board/event-participants/participants-preview/add-event-participants/add-event-participants.module';
 import { GroupSettingsModule } from '../../../../core/admin-panels/group/dialogs/group-settings/group-settings.module';
 import { EventCreationModule } from '../../event/dialogs/event-creation/event-creation.module';
 
@@ -15,10 +15,10 @@ import { EventCreationModule } from '../../event/dialogs/event-creation/event-cr
     GroupSettingsModule,
     EventCreationModule,
     GroupMembersModule,
-    AddGroupMembersModule,
+    AddEventParticipantsModule,
     EventPreviewModule,
     GroupMembersModule,
-    AddGroupMembersModule
+    AddEventParticipantsModule
   ],
   declarations: [
     GroupComponent

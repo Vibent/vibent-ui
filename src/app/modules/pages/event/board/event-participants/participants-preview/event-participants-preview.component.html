@@ -1,56 +1,64 @@
-<div class="modal fade" id="modalEventParticipants" tabindex="-1" role="dialog">
+<div class="modal" id="modalEventParticipants" tabindex="-1" role="dialog">
   <div class="modal-dialog full-bootstrap-modal" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button"
                 class="close black-close"
-                data-dismiss="modal">
+                data-dismiss="modal"
+                (click)="close()">
           <span>&times;</span>
         </button>
+        <span *ngIf="invitationOpen"
+              class="fas fa-chevron-left position-absolute p-3 cursor-pointer"
+              (click)="offInvitation()"></span>
       </div>
       <div class="modal-body bg-light">
         <div class="container vibent-modal">
-          <h2 i18n="@@do-the-math">Let's do the math</h2>
-          <h3><b i18n>
-            {participantsSplitted.yes.length, plural,
-            =0 {No one is coming}
-            =1 {1 is coming}
-            other {{{participantsSplitted.yes.length}} are coming}}</b></h3>
-          <user-profile-preview
-              *ngFor="let userRef of participantsSplitted.yes"
-              [userRef]="userRef">
-          </user-profile-preview>
+          <ng-container *ngIf="!invitationOpen">
+            <h2 i18n="@@do-the-math">Let's do the math</h2>
+            <div class="invite-other-people" (click)="onInvitation()"><i class="fas fa-user-plus"></i><span>Invite other people</span>
+            </div>
+            <h3><b i18n>
+              {participantsSplitted.yes.length, plural,
+                  =0 {No one is coming}
+                  =1 {1 is coming}
+                  other {{{participantsSplitted.yes.length}} are coming}}</b></h3>
+            <user-profile-preview
+                *ngFor="let userRef of participantsSplitted.yes"
+                [userRef]="userRef">
+            </user-profile-preview>
 
-          <h4><b i18n>
-            {participantsSplitted.maybe.length, plural,
-            =0 {No one don't know}
-            =1 {1 don't know}
-            other {{{participantsSplitted.maybe.length}} don't know}}</b></h4>
-          <user-profile-preview
-              *ngFor="let userRef of participantsSplitted.maybe"
-              [userRef]="userRef">
-          </user-profile-preview>
+            <h4 *ngIf="participantsSplitted.maybe.length > 0"><b i18n>
+              {participantsSplitted.maybe.length, plural,
+                  =0 {No one don't know}
+                  =1 {1 don't know}
+                  other {{{participantsSplitted.maybe.length}} don't know}}</b></h4>
+            <user-profile-preview
+                *ngFor="let userRef of participantsSplitted.maybe"
+                [userRef]="userRef">
+            </user-profile-preview>
 
-          <h4><b i18n>
-            {participantsSplitted.no.length, plural,
-            =0 {Nobody isn't coming}
-            =1 {1 isn't coming}
-            other {{{participantsSplitted.no.length}} aren't coming}}</b></h4>
-          <user-profile-preview
-              *ngFor="let userRef of participantsSplitted.no"
-              [userRef]="userRef">
-          </user-profile-preview>
+            <h4 *ngIf="participantsSplitted.no.length > 0"><b i18n>
+              {participantsSplitted.no.length, plural,
+                  =0 {Nobody isn't coming}
+                  =1 {1 isn't coming}
+                  other {{{participantsSplitted.no.length}} aren't coming}}</b></h4>
+            <user-profile-preview
+                *ngFor="let userRef of participantsSplitted.no"
+                [userRef]="userRef">
+            </user-profile-preview>
 
-          <h4><b i18n>
-            {participantsSplitted.unanswered.length, plural,
-            =0 {No one did not respond}
-            =1 {1 did not respond}
-            other {{{participantsSplitted.unanswered.length}} did not respond}}</b></h4>
-          <user-profile-preview
-              *ngFor="let userRef of participantsSplitted.unanswered"
-              [userRef]="userRef">
-          </user-profile-preview>
-
+            <h4 *ngIf="participantsSplitted.unanswered.length > 0"><b i18n>
+              {participantsSplitted.unanswered.length, plural,
+                  =0 {No one did not respond}
+                  =1 {1 did not respond}
+                  other {{{participantsSplitted.unanswered.length}} did not respond}}</b></h4>
+            <user-profile-preview
+                *ngFor="let userRef of participantsSplitted.unanswered"
+                [userRef]="userRef">
+            </user-profile-preview>
+          </ng-container>
+          <add-event-participations *ngIf="invitationOpen" [eventRef]="eventRef"></add-event-participations>
         </div>
       </div>
     </div>

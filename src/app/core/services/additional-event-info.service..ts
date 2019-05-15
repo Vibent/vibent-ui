@@ -11,7 +11,7 @@ export class AdditionalEventInfoService {
   constructor(private httpService: HttpService) {
   }
 
-  getbubblesSum(event: Event) {
+  getBubblesSum(event: Event) {
     let sum = 0;
     sum += event.alimentationBubbles.length;
     sum += event.checkboxBubbles.length;
@@ -37,6 +37,7 @@ export class AdditionalEventInfoService {
     const b = moment(new Date());
     return a.diff(b, 'days');
   }
+
   getAdditionnalInfos(event: Event): Promise<AdditionnalEventInfos> {
     let additionnalInfos: AdditionnalEventInfos;
 
@@ -47,9 +48,19 @@ export class AdditionalEventInfoService {
         remainingDays: this.getRemainingDays(event),
         participants: this.getParticipants(event),
         location: '',
-        bubblesNumber: this.getbubblesSum(event)
+        bubblesNumber: this.getBubblesSum(event)
       };
     }).then(() => additionnalInfos);
+
+  }
+
+  getStandaloneAdditionnalInfos(event: Event): AdditionnalEventInfos {
+
+      return {
+        remainingDays: this.getRemainingDays(event),
+        participants: this.getParticipants(event),
+        bubblesNumber: this.getBubblesSum(event)
+      };
 
   }
 

@@ -45,10 +45,10 @@
     </div>
   </div>
   <ng-container *ngIf="events && events.length>0;else no_events">
-    <app-event-preview
+    <event-preview
         *ngFor="let event of events"
         [event]=event>
-    </app-event-preview>
+    </event-preview>
   </ng-container>
   <ng-template #no_events>
     <div class="row justify-content-center" #no_events>
@@ -60,4 +60,3 @@
 </div>
 <group-settings [group]=group></group-settings>
 <group-members [group]=group></group-members>
-<add-group-members [group]=group></add-group-members>

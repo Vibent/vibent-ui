@@ -44,7 +44,7 @@ export class GroupComponent implements OnInit, OnDestroy {
   }
 
   openAddGroupMemberDialog(): void {
-    $('#modalAddGroupMembers').modal('show');
+    $('#modalAddParticipants').modal('show');
   }
 
   openSettingsDialog(): void {

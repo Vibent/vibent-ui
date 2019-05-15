@@ -1,13 +1,13 @@
-import { Component, Input, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChange, SimpleChanges } from '@angular/core';
 import { AdditionnalEventInfos } from '../../../../shared/models/additionnal-event-infos';
 import { AdditionalEventInfoService } from '../../../../core/services/additional-event-info.service.';
 import { Event } from '../../../../shared/models/event';
 
 @Component({
-  selector: 'app-event-preview',
+  selector: 'event-preview',
   templateUrl: './event-preview.component.html'
 })
-export class EventPreviewComponent implements OnChanges {
+export class EventPreviewComponent implements OnInit {
 
   @Input()
   public event: Event;
@@ -18,19 +18,23 @@ export class EventPreviewComponent implements OnChanges {
   constructor(private additonalEventInfoService: AdditionalEventInfoService) {
   }
 
-  ngOnChanges(changes: SimpleChanges) {
-    const event: SimpleChange = changes.event;
-    let promise: Promise<AdditionnalEventInfos>;
-    if (new Date() < new Date(this.event.startDate)) {
-      this.opacityStyle = 1;
-    } else {
-      this.opacityStyle = 0.5;
-    }
-    promise = this.additonalEventInfoService.getAdditionnalInfos(this.event);
-    promise.then((val) => {
-      this.additionnalEventInfos = val;
-      this.ressourcesLoaded = Promise.resolve(true);
-    });
+  ngOnInit(): void {
+    this.additionnalEventInfos = this.additonalEventInfoService.getStandaloneAdditionnalInfos(this.event);
   }
+
+  // ngOnChanges(changes: SimpleChanges) {
+  //   const event: SimpleChange = changes.event;
+  //   let promise: Promise<AdditionnalEventInfos>;
+  //   if (new Date() < new Date(this.event.startDate)) {
+  //     this.opacityStyle = 1;
+  //   } else {
+  //     this.opacityStyle = 0.5;
+  //   }
+  //   promise = this.additonalEventInfoService.getAdditionnalInfos(this.event);
+  //   promise.then((val) => {
+  //     this.additionnalEventInfos = val;
+  //     this.ressourcesLoaded = Promise.resolve(true);
+  //   });
+  // }
 
 }

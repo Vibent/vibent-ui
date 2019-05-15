@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AddGroupMembersComponent } from './add-group-members.component';
+import { AddEventParticipantsComponent } from './add-event-participants.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -10,10 +10,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
   ],
   declarations: [
-    AddGroupMembersComponent
+    AddEventParticipantsComponent
   ],
   providers: [],
-  exports: [AddGroupMembersComponent]
+  exports: [AddEventParticipantsComponent]
 })
-export class AddGroupMembersModule {
+export class AddEventParticipantsModule {
 }

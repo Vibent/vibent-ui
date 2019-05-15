@@ -30,6 +30,8 @@ export class MessagesFr implements IMessages {
   public readonly DELETE_PROPOSAL_TEXT = 'Vous êtes sur le point de supprimer votre proposition.';
   public readonly GROUP_JOINED = 'Groupe rejoint.';
   public readonly GROUP_JOINED_TEXT = 'Page des groupes';
+  public readonly EVENT_JOINED = 'Vous avez rejoint l\'événement.';
+  public readonly EVENT_JOINED_TEXT = 'Page des événements.';
   public readonly SIZE_TOO_BIG = 'Taille de l\'image trop importante.';
   public readonly SIZE_TOO_BIG_TEXT = 'Veuillez en selectionner une autre.';
 

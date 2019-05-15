@@ -51,7 +51,6 @@ export class PlanningEntryComponent implements OnInit {
   constructPlanningDataModel() {
     this.planningDataModel = this.planningDataService.constructPlanningDataModel(this.planningEntry);
     this.isCurrentUserEntry = this.planningDataService.isCurrentUserEntry(this.planningEntry);
-    console.log(this.isCurrentUserEntry);
   }
 
   deleteEntry() {

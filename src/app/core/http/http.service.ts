@@ -89,6 +89,15 @@ export class HttpService {
     return this.http.post(this.API_URL + '/event/standalone', body, this.getOptions());
   }
 
+  public getStandaloneInviteToken(eventRef: string): any {
+    return this.http.get(this.API_URL + '/event/standalone/' + eventRef + '/inviteToken', this.getOptions());
+  }
+
+  public validateStandaloneInviteToken(content: any, token: string) {
+    const body = JSON.stringify(content);
+    return this.http.post(this.API_URL + '/event/standalone/validateInviteToken/' + token, body, this.getOptions());
+  }
+
   public deleteEvent(eventRef: string): any {
     return this.http.delete(this.API_URL + '/event/' + eventRef, this.getOptions());
   }

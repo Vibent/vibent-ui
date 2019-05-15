@@ -1,0 +1,18 @@
+.invite-other-people {
+
+  span {
+    margin-left: 5px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  cursor: pointer;
+  color: #138ccd;
+}
+
+.test {
+  color: #138ccd;
+  font-size: 30px
+}

@@ -1,7 +1,6 @@
 <div class="row justify-content-center">
   <div class="col-xl-8 col-lg-9 col-md-12">
     <a [routerLink]="['/events/' + event.ref ]">
-      <ng-container *ngIf="ressourcesLoaded | async">
         <div class="card card-stats" [style.opacity]=opacityStyle>
           <div class="card-header card-header-vibent-green card-header-icon">
             <div class="card-icon">
@@ -35,12 +34,8 @@
                 {additionnalEventInfos.bubblesNumber, plural, =1 {bubble} other {bubbles}}
               </ng-container>
             </div>
-            <div class="event-preview-group">
-              <ng-container i18n="@@in-group">TBT</ng-container>&nbsp;<b>{{additionnalEventInfos.groupName}}</b>
-            </div>
           </div>
         </div>
-      </ng-container>
     </a>
   </div>
 </div>
