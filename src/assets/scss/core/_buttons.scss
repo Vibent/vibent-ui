@@ -130,7 +130,7 @@
       width: $mdb-btn-fab-size-mini + 1;
 
       .material-icons,
-      .fa {
+      .fas {
         font-size: $mdb-btn-icon-size-mini;
         line-height: $mdb-btn-fab-size-mini;
       }
@@ -144,14 +144,14 @@
       line-height: $mdb-btn-fab-size-lg;
 
       .material-icons,
-      .fa {
+      .fas {
         font-size: $mdb-btn-icon-size;
         line-height: $mdb-btn-fab-size-lg;
       }
     }
 
     .material-icons,
-    .fa {
+    .fas {
       margin-top: 0;
       position: absolute;
       width: 100%;
@@ -181,7 +181,7 @@
 
 // Align icons inside buttons with text
 .btn .material-icons,
-.btn:not(.btn-just-icon):not(.btn-fab) .fa {
+.btn:not(.btn-just-icon):not(.btn-fab) .fas, .fab {
   position: relative;
   display: inline-block;
   top: 0;

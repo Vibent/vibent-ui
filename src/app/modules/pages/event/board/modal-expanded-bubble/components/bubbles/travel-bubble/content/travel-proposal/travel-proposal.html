@@ -19,7 +19,7 @@
       </div>
       <div class="ml-auto p-2 m-r-10 align-self-center">
         <div class="cursor-pointer float-right collapsed">
-          <i class="fa fa-caret-down"></i>
+          <i class="fas fa-caret-down"></i>
         </div>
       </div>
     </div>
@@ -35,7 +35,7 @@
         <div *ngFor="let request of travelProposal.attachedRequests" class="p-2 align-self-center">
           <div class="proposal-seat-taker">
             <i *ngIf="request.userRef === user.ref"
-               class="fa fa-minus-circle user-seat-taker cursor-pointer"
+               class="fas fa-minus-circle user-seat-taker cursor-pointer"
                (click)="deleteRequest(request)"></i>
             <img *ngIf="requesterUsers[request.userRef]" src="{{requesterUsers[request.userRef].profilePicLocation}}">
           </div>
@@ -44,7 +44,7 @@
           <div [ngClass]="{'proposal-seat-taker-plus-disabled': !travelDataModel.canTakeSeat,
                                      'proposal-seat-taker-plus cursor-pointer': travelDataModel.canTakeSeat}"
                (click)="travelDataModel.canTakeSeat && takeASeat()">
-            <i class="fa fa-plus"></i>
+            <i class="fas fa-plus"></i>
           </div>
         </div>
       </div>
