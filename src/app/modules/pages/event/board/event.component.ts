@@ -50,6 +50,9 @@ export class EventComponent implements OnInit, OnDestroy {
       if (eventUpdate.bubble) {
         this.updateBubbleOnEventUpdate(eventUpdate.bubble);
       }
+      else {
+        this.bubbles = this.concatEventBubbles();
+      }
     }));
 
     this.subscriptions.push(this.blacknoteService.eventUpdated$.subscribe(event => {
