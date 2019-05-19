@@ -7,6 +7,7 @@ import { EventUpdateService } from '../../../../core/services/bubbles-services/e
 import { BlacknoteService } from '../../../../core/services/blacknote/blacknote.service';
 import { ScreenService } from '../../../../core/services/screen.service';
 import { Subscription } from 'rxjs';
+import { ModalManagerService, VibentModals } from '../../../../core/services/modal-manager.service';
 
 declare const $: any;
 
@@ -24,6 +25,7 @@ export class EventComponent implements OnInit, OnDestroy {
 
   constructor(private route: ActivatedRoute,
               private eventAdminPanelService: EventAdminPanelService,
+              private modalManagerService: ModalManagerService,
               private eventUpdateService: EventUpdateService,
               private blacknoteService: BlacknoteService,
               public screenSizesService: ScreenService) {
@@ -39,12 +41,12 @@ export class EventComponent implements OnInit, OnDestroy {
   }
 
   openNewBubbleModal() {
-    $('#modalSelectBubbleType').modal('show');
+    this.modalManagerService.showModal(VibentModals.SELECT_BUBBLE_TYPE);
   }
 
   ngOnInit() {
     this.eventAdminPanelService.toggleEventPanel(this.event.ref);
-
+    this.modalManagerService.initHandleBackBrowser(VibentModals.EVENT_SETTINGS, VibentModals.SELECT_BUBBLE_TYPE);
     this.subscriptions.push(this.eventUpdateService.eventUpdated$.subscribe(eventUpdate => {
       this.event = eventUpdate.event;
       if (eventUpdate.bubble) {
@@ -121,7 +123,7 @@ export class EventComponent implements OnInit, OnDestroy {
   }
 
   openSettingsModal() {
-    $('#modalEventSettings').modal('show');
+    this.modalManagerService.showModal(VibentModals.EVENT_SETTINGS);
   }
 
 }

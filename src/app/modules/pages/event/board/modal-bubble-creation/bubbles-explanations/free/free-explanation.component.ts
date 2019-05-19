@@ -4,8 +4,7 @@ import { EventUpdateService } from '../../../../../../../core/services/bubbles-s
 import { BubblesCreationsNotification } from '../../../../../../../core/services/bubbles-services/alerts/bubbles-creations-notification.service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AbstractExplanation } from '../abstract-bubble-explanation/abstract-explanation';
-
-declare const $: any;
+import { ModalManagerService } from '../../../../../../../core/services/modal-manager.service';
 
 @Component({
   selector: 'free-explanation',
@@ -20,8 +19,9 @@ export class FreeExplanationComponent extends AbstractExplanation implements OnI
 
   constructor(private bubbleCreationService: BubbleCreationService,
               protected eventUpdateService: EventUpdateService,
+              protected modalManagerService: ModalManagerService,
               private bubblesCreationsSwalAlerts: BubblesCreationsNotification) {
-    super(eventUpdateService);
+    super(eventUpdateService, modalManagerService);
   }
 
   ngOnInit(): void {
@@ -32,7 +32,7 @@ export class FreeExplanationComponent extends AbstractExplanation implements OnI
   }
 
   createBubble() {
-    $('#modalSelectBubbleType').modal('hide');
+    this.closeModal();
     this.bubbleCreationService.createFreeBubble(this.eventRef, this.freeTitle.value, this.freeContent.value).subscribe(() => {
       this.onBubbleCreated();
       this.bubblesCreationsSwalAlerts.alertFreeBubbleCreated();

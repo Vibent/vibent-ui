@@ -4,8 +4,7 @@ import { EventUpdateService } from '../../../../../../../core/services/bubbles-s
 import { BubblesCreationsNotification } from '../../../../../../../core/services/bubbles-services/alerts/bubbles-creations-notification.service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AbstractExplanation } from '../abstract-bubble-explanation/abstract-explanation';
-
-declare const $: any;
+import { ModalManagerService, VibentModals } from '../../../../../../../core/services/modal-manager.service';
 
 @Component({
   selector: 'planning-explanation',
@@ -18,9 +17,10 @@ export class PlanningExplanationComponent extends AbstractExplanation implements
   planningTitle: FormControl;
 
   constructor(private bubbleCreationService: BubbleCreationService,
+              protected modalManagerService: ModalManagerService,
               protected eventUpdateService: EventUpdateService,
               private bubblesCreationsSwalAlerts: BubblesCreationsNotification) {
-    super(eventUpdateService);
+    super(eventUpdateService, modalManagerService);
   }
 
   ngOnInit(): void {
@@ -30,7 +30,8 @@ export class PlanningExplanationComponent extends AbstractExplanation implements
   }
 
   createBubble() {
-    $('#modalSelectBubbleType').modal('hide');
+    this.closeModal();
+    this.modalManagerService.hideModal(VibentModals.SELECT_BUBBLE_TYPE)
     this.bubbleCreationService.createPlanningBubble(this.eventRef, this.planningTitle.value).subscribe(() => {
       this.onBubbleCreated();
       this.bubblesCreationsSwalAlerts.alertPlanningBubbleCreated();

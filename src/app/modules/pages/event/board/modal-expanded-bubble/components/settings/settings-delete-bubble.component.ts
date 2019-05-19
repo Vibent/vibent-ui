@@ -11,6 +11,7 @@ import Swal from 'sweetalert2';
 import { TravelHttpService } from '../../../../../../../core/services/bubbles-services/travel/http/travel-http.service';
 import { FreeHttpService } from '../../../../../../../core/services/bubbles-services/free/http/free-http.service';
 import { MessageService } from '../../../../../../../core/services/i18n/message.service';
+import { ModalManagerService, VibentModals } from '../../../../../../../core/services/modal-manager.service';
 
 declare const $: any;
 
@@ -36,7 +37,8 @@ export class SettingsDeleteBubbleComponent {
               private freeHttpService: FreeHttpService,
               private notificationService: NotificationsService,
               private eventUpdateService: EventUpdateService,
-              private messageService: MessageService) {
+              private messageService: MessageService,
+              private modalManagerService: ModalManagerService) {
   }
 
   deleteBubble() {
@@ -81,7 +83,7 @@ export class SettingsDeleteBubbleComponent {
         break;
     }
     this.notificationService.notify('Bubble deleted', NotificationType.SUCCESS);
-    $('#expanded-bubble').modal('hide');
+    this.modalManagerService.hideModal(VibentModals.EXPANDED_BUBBLE);
     this.bubbleDeleted.emit();
   }
 

@@ -42,6 +42,7 @@ import { HomeModule } from './modules/components/home/home.module';
 import { I18nModule } from './core/services/i18n/i18n.module';
 import { TermsModule } from './modules/pages/terms/terms.module';
 import { RoutingStateService } from './core/services/routing-state.service';
+import { ModalManagerService } from './core/services/modal-manager.service';
 
 @NgModule({
   imports: [
@@ -86,6 +87,7 @@ import { RoutingStateService } from './core/services/routing-state.service';
   ],
   providers: [
     CookieService,
+    ModalManagerService,
     ScreenService,
     RoutingStateService,
     LoaderService,
