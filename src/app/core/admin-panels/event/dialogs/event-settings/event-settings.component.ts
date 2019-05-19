@@ -10,6 +10,7 @@ import { EventUpdateService } from '../../../../services/bubbles-services/event-
 import { LoaderService } from '../../../../services/loader/service/loader.service';
 import { MessageService } from '../../../../services/i18n/message.service';
 import { LanguageService } from '../../../../services/i18n/language.service';
+import { ModalManagerService, VibentModals } from '../../../../services/modal-manager.service';
 
 declare const $: any;
 
@@ -37,6 +38,7 @@ export class EventSettingsComponent implements OnInit {
               private languageService: LanguageService,
               private router: Router,
               private adminPanelService: EventAdminPanelService,
+              private modalManagerService: ModalManagerService,
               private httpService: HttpService,
               private messageService: MessageService) {
   }
@@ -73,7 +75,7 @@ export class EventSettingsComponent implements OnInit {
           this.messageService.DELETED,
           this.messageService.EVENT_DELETED,
           'success'
-        ).then((result) => {
+        ).then(() => {
           this.router.navigate(['/events']);
         });
       }
@@ -81,7 +83,7 @@ export class EventSettingsComponent implements OnInit {
   }
 
   close(): void {
-    $('#modalEventSettings').modal('hide');
+    this.modalManagerService.hideModal(VibentModals.EVENT_SETTINGS);
   }
 
   public updateInfo(): void {

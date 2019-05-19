@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-declare const $: any;
+import { ModalManagerService, VibentModals } from '../../services/modal-manager.service';
 
 @Component({
   selector: 'event-admin-panel',
@@ -8,14 +7,15 @@ declare const $: any;
 })
 export class EventAdminPanelComponent implements OnInit {
 
-  constructor() {
+  constructor(private modalManagerService: ModalManagerService) {
   }
 
   ngOnInit() {
+    this.modalManagerService.initHandleBackBrowser(VibentModals.EVENT_SETTINGS);
   }
 
   openSettingsModal() {
-    $('#modalEventSettings').modal('show');
+    this.modalManagerService.showModal(VibentModals.EVENT_SETTINGS);
   }
 
 }

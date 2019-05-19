@@ -6,7 +6,7 @@
        Click to {{isLinked(provider) ? 'unlink' : 'link'}}"
        (click)="toggleLink(provider)"
        [style.background-color]="provider.color">
-        <i class="fas fa-{{provider.id | lowercase}}"></i>&nbsp;
+        <i class="fab fa-{{provider.icon}}"></i>&nbsp;
         <i class="fa {{isLinked(provider) ? 'fa-check-circle' : 'fa-times-circle'}}"></i>
     </a>
 </div>

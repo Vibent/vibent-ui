@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpService } from '../../../../../core/http/http.service';
@@ -7,6 +7,7 @@ import { NotificationsService, NotificationType } from '../../../../../core/serv
 import { LoaderService } from '../../../../../core/services/loader/service/loader.service';
 import { MessageService } from '../../../../../core/services/i18n/message.service';
 import { LanguageService } from '../../../../../core/services/i18n/language.service';
+import { ModalManagerService, VibentModals } from '../../../../../core/services/modal-manager.service';
 
 declare const $: any;
 
@@ -29,6 +30,7 @@ export class EventCreationComponent implements OnInit {
               private fb: FormBuilder,
               private httpService: HttpService,
               private notificationService: NotificationsService,
+              private modalManagerService: ModalManagerService,
               private loaderService: LoaderService,
               private router: Router,
               private messageService: MessageService) {
@@ -75,7 +77,7 @@ export class EventCreationComponent implements OnInit {
   }
 
   close(): void {
-    $('#modalEventCreation').modal('hide');
+    this.modalManagerService.hideModal(VibentModals.EVENT_CREATION);
   }
 
 }

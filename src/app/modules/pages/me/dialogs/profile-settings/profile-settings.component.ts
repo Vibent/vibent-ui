@@ -6,6 +6,7 @@ import { HttpService } from '../../../../../core/http/http.service';
 import { ProfileImageService } from '../../../../../core/http/profile-image.service';
 import { UserManagementService } from '../../../../../core/services/user-management.service';
 import { LoaderService } from '../../../../../core/services/loader/service/loader.service';
+import { ModalManagerService, VibentModals } from '../../../../../core/services/modal-manager.service';
 
 declare const $: any;
 
@@ -29,6 +30,7 @@ export class ProfileSettingsComponent implements OnInit {
   constructor(private fb: FormBuilder,
               private httpService: HttpService,
               private profileImageService: ProfileImageService,
+              private modalManagerService: ModalManagerService,
               private loaderService: LoaderService,
               private router: Router,
               private userManagementService: UserManagementService) {
@@ -70,7 +72,7 @@ export class ProfileSettingsComponent implements OnInit {
   }
 
   public close() {
-    $('#modalProfileSettings').modal('hide');
+    this.modalManagerService.hideModal(VibentModals.PROFILE_SETTINGS);
     this.fileToUpload = null;
   }
 

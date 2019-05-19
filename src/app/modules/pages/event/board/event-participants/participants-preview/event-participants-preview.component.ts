@@ -4,8 +4,6 @@ import { HttpService } from '../../../../../../core/http/http.service';
 import { EventParticipantsService } from '../../../../../../core/services/event-participants.service';
 import { Subscription } from 'rxjs';
 
-declare const $: any;
-
 @Component({
   selector: 'event-participants-preview',
   templateUrl: './event-participants-preview.component.html',
@@ -36,10 +34,6 @@ export class EventParticipantsPreviewComponent implements OnInit, OnDestroy {
 
   initValues() {
     this.participantsSplitted = this.eventParticipantsService.splitParticipantsByResponse(this.participationRefs);
-  }
-
-  close(): void {
-    $('#modalEventParticipants').modal('hide');
   }
 
   ngOnDestroy(): void {

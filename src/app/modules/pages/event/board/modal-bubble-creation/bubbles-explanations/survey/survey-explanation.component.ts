@@ -4,8 +4,7 @@ import { EventUpdateService } from '../../../../../../../core/services/bubbles-s
 import { BubblesCreationsNotification } from '../../../../../../../core/services/bubbles-services/alerts/bubbles-creations-notification.service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AbstractExplanation } from '../abstract-bubble-explanation/abstract-explanation';
-
-declare const $: any;
+import { ModalManagerService } from '../../../../../../../core/services/modal-manager.service';
 
 @Component({
   selector: 'survey-explanation',
@@ -19,8 +18,9 @@ export class SurveyExplanationComponent extends AbstractExplanation implements O
 
   constructor(private bubbleCreationService: BubbleCreationService,
               protected eventUpdateService: EventUpdateService,
+              protected modalManagerService: ModalManagerService,
               private bubblesCreationsSwalAlerts: BubblesCreationsNotification) {
-    super(eventUpdateService);
+    super(eventUpdateService, modalManagerService);
   }
 
   ngOnInit(): void {
@@ -30,7 +30,7 @@ export class SurveyExplanationComponent extends AbstractExplanation implements O
   }
 
   createBubble() {
-    $('#modalSelectBubbleType').modal('hide');
+    this.closeModal();
     this.bubbleCreationService.createSurveyBubble(this.eventRef, this.surveyTitle.value).subscribe(() => {
       this.onBubbleCreated();
       this.bubblesCreationsSwalAlerts.alertSurveyBubbleCreated();

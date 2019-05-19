@@ -2,8 +2,7 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnDestroy
 import { Event } from '../../../../../shared/models/event';
 import { EventParticipantsService } from '../../../../../core/services/event-participants.service';
 import { Subscription } from 'rxjs';
-
-declare const $: any;
+import { ModalManagerService, VibentModals } from '../../../../../core/services/modal-manager.service';
 
 @Component({
   selector: 'event-additional-infos',
@@ -20,10 +19,12 @@ export class EventAdditionalInfosComponent implements OnInit, OnDestroy {
   subscriptions: Subscription[] = [];
 
   constructor(private eventParticipantsService: EventParticipantsService,
+              private modalManagerService: ModalManagerService,
               private cd: ChangeDetectorRef) {
   }
 
   ngOnInit(): void {
+    this.modalManagerService.initHandleBackBrowser(VibentModals.EVENT_PARTICIPANTS);
     this.initValues();
     this.subscriptions.push(this.eventParticipantsService.participationUpdated$.subscribe((eventParticipation) => {
       this.event.participationRefs[this.event.participationRefs
@@ -34,7 +35,7 @@ export class EventAdditionalInfosComponent implements OnInit, OnDestroy {
   }
 
   openEventParticipantsModal() {
-    $('#modalEventParticipants').modal('show');
+    this.modalManagerService.showModal(VibentModals.EVENT_PARTICIPANTS);
   }
 
   initValues() {

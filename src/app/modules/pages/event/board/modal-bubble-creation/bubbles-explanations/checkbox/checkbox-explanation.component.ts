@@ -4,8 +4,7 @@ import { EventUpdateService } from '../../../../../../../core/services/bubbles-s
 import { BubblesCreationsNotification } from '../../../../../../../core/services/bubbles-services/alerts/bubbles-creations-notification.service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AbstractExplanation } from '../abstract-bubble-explanation/abstract-explanation';
-
-declare const $: any;
+import { ModalManagerService } from '../../../../../../../core/services/modal-manager.service';
 
 @Component({
   selector: 'checkbox-explanation',
@@ -19,8 +18,9 @@ export class CheckboxExplanationComponent extends AbstractExplanation implements
 
   constructor(private bubbleCreationService: BubbleCreationService,
               protected eventUpdateService: EventUpdateService,
+              protected modalManagerService: ModalManagerService,
               private bubblesCreationsSwalAlerts: BubblesCreationsNotification) {
-    super(eventUpdateService);
+    super(eventUpdateService, modalManagerService);
   }
 
 
@@ -31,7 +31,7 @@ export class CheckboxExplanationComponent extends AbstractExplanation implements
   }
 
   createBubble() {
-    $('#modalSelectBubbleType').modal('hide');
+    this.closeModal();
     this.bubbleCreationService.createCheckboxBubble(this.eventRef, this.checkboxTitle.value).subscribe(() => {
       this.onBubbleCreated();
       this.bubblesCreationsSwalAlerts.alertCheckboxBubbleCreated();
