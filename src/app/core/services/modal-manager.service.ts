@@ -40,7 +40,6 @@ export class ModalManagerService {
   }
 
   hideModal(modalId: VibentModals) {
-    console.log(window.location.hash);
     $(modalId).modal('hide');
   }
 }

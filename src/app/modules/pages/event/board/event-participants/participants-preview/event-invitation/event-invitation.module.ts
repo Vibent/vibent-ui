@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { GroupInvitationComponent } from './group-invitation.component';
+import { EventInvitationComponent } from './event-invitation.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -10,9 +10,9 @@ import { RouterModule } from '@angular/router';
     RouterModule
   ],
   declarations: [
-    GroupInvitationComponent
+    EventInvitationComponent
   ],
-  exports: [GroupInvitationComponent]
+  exports: [EventInvitationComponent]
 })
-export class GroupInvitationModule {
+export class EventInvitationModule {
 }

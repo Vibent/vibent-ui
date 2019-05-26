@@ -19,7 +19,7 @@ import { EventComponent } from './modules/pages/event/board/event.component';
 import { GroupsComponent } from './modules/pages/group/joined-groups/groups.component';
 import { GroupComponent } from './modules/pages/group/board/group.component';
 import { PublicGroupComponent } from './modules/pages/group/public-board/public-group.component';
-import { GroupInvitationComponent } from './modules/pages/group/group-invitation/group-invitation.component';
+import { EventInvitationComponent } from './modules/pages/event/board/event-participants/participants-preview/event-invitation/event-invitation.component';
 import { ResetPasswordComponent } from './core/authentification/forgot/reset-password/reset-password.component';
 import { MailConfirmationComponent } from './core/authentification/register/mail-confirmation/mail-confirmation.component';
 import { HomeComponent } from './modules/components/home/home.component';
@@ -96,7 +96,7 @@ const routes: Routes = [
       },
       {
         path: 'invite/:token',
-        component: GroupInvitationComponent
+        component: EventInvitationComponent
       },
       {path: '**', redirectTo: '/events', pathMatch: 'full'}
     ]

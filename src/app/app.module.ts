@@ -26,7 +26,7 @@ import { GroupSettingsModule } from './core/admin-panels/group/dialogs/group-set
 import { PublicGroupModule } from './modules/pages/group/public-board/public-group.module';
 import { GroupRequestsModule } from './core/admin-panels/group/dialogs/group-requests/group-requests.module';
 import { GroupRightsModule } from './core/admin-panels/group/dialogs/group-rights/group-rights.module';
-import { GroupInvitationModule } from './modules/pages/group/group-invitation/group-invitation.module';
+import { EventInvitationModule } from './modules/pages/event/board/event-participants/participants-preview/event-invitation/event-invitation.module';
 import { TokenInterceptor } from './shared/interceptors/token.interceptor';
 import { EventAdminPanelService } from './core/services/event-admin-panel.service';
 import { NotificationsService } from './core/services/notifications.service';
@@ -63,7 +63,7 @@ import { ModalManagerService } from './core/services/modal-manager.service';
     EventModule,
     LoadingPageModule,
     HttpClientModule,
-    GroupInvitationModule,
+    EventInvitationModule,
     GroupModule,
     ForgotModule,
     ResetPasswordModule,

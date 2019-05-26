@@ -53,6 +53,8 @@ export class MessageService implements IMessages {
   GROUP_DELETED: string;
   GROUP_JOINED: string;
   GROUP_JOINED_TEXT: string;
+  EVENT_JOINED: string;
+  EVENT_JOINED_TEXT: string;
   GROUP_UPDATED: string;
   INVITATION_SENT: string;
   LEAVE_GROUP: string;

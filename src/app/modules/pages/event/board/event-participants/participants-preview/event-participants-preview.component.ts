@@ -3,10 +3,12 @@ import { EventParticipant, ParticipantsSplitted } from '../../../../../../shared
 import { HttpService } from '../../../../../../core/http/http.service';
 import { EventParticipantsService } from '../../../../../../core/services/event-participants.service';
 import { Subscription } from 'rxjs';
+import { ModalManagerService } from '../../../../../../core/services/modal-manager.service';
 
 @Component({
   selector: 'event-participants-preview',
   templateUrl: './event-participants-preview.component.html',
+  styleUrls: ['./event-participants-preview.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 
@@ -14,10 +16,14 @@ export class EventParticipantsPreviewComponent implements OnInit, OnDestroy {
 
   @Input()
   participationRefs: EventParticipant[];
+  @Input()
+  eventRef: string;
   participantsSplitted: ParticipantsSplitted;
   subscriptions: Subscription[] = [];
+  invitationOpen = false;
 
   constructor(private httpService: HttpService,
+              private modalManagerService: ModalManagerService,
               private eventParticipantsService: EventParticipantsService,
               private cd: ChangeDetectorRef) {
   }
@@ -32,8 +38,20 @@ export class EventParticipantsPreviewComponent implements OnInit, OnDestroy {
     this.initValues();
   }
 
+  onInvitation() {
+    this.invitationOpen = true;
+  }
+
+  offInvitation() {
+    this.invitationOpen = false;
+  }
+
   initValues() {
     this.participantsSplitted = this.eventParticipantsService.splitParticipantsByResponse(this.participationRefs);
+  }
+
+  close(): void {
+    this.offInvitation();
   }
 
   ngOnDestroy(): void {
