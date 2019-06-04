@@ -3,7 +3,9 @@ import { EventParticipant, ParticipantsSplitted } from '../../../../../../shared
 import { HttpService } from '../../../../../../core/http/http.service';
 import { EventParticipantsService } from '../../../../../../core/services/event-participants.service';
 import { Subscription } from 'rxjs';
-import { ModalManagerService } from '../../../../../../core/services/modal-manager.service';
+import { ModalManagerService, VibentModals } from '../../../../../../core/services/modal-manager.service';
+
+declare const $: any;
 
 @Component({
   selector: 'event-participants-preview',
@@ -33,21 +35,27 @@ export class EventParticipantsPreviewComponent implements OnInit, OnDestroy {
       this.participationRefs[this.participationRefs
         .findIndex(p => p.userRef === eventParticipation.userRef)] = eventParticipation;
       this.initValues();
-      this.cd.detectChanges();
     }));
     this.initValues();
+    // Case modal is closed by back browser
+    $(VibentModals.EVENT_PARTICIPANTS).on('hidden.bs.modal', () => {
+      this.offInvitation();
+    });
   }
 
   onInvitation() {
     this.invitationOpen = true;
+    this.cd.detectChanges();
   }
 
   offInvitation() {
     this.invitationOpen = false;
+    this.cd.detectChanges();
   }
 
   initValues() {
     this.participantsSplitted = this.eventParticipantsService.splitParticipantsByResponse(this.participationRefs);
+    this.cd.detectChanges();
   }
 
   close(): void {

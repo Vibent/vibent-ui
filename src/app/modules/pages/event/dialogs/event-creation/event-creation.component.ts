@@ -1,13 +1,11 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { HttpService } from '../../../../../core/http/http.service';
-import { Event } from '../../../../../shared/models/event';
-import { NotificationsService, NotificationType } from '../../../../../core/services/notifications.service';
-import { LoaderService } from '../../../../../core/services/loader/service/loader.service';
-import { MessageService } from '../../../../../core/services/i18n/message.service';
-import { LanguageService } from '../../../../../core/services/i18n/language.service';
 import { ModalManagerService, VibentModals } from '../../../../../core/services/modal-manager.service';
+import {
+  EventCreationNavigationService,
+  EventCreationState
+} from '../../../../../core/services/event-creation-navigation.service';
+import { Event } from '../../../../../shared/models/event';
 
 declare const $: any;
 
@@ -18,66 +16,35 @@ declare const $: any;
 })
 export class EventCreationComponent implements OnInit {
 
-  form: FormGroup;
-  title: FormControl;
-  description: FormControl;
-  date: FormControl;
-
-  titleValidSetted = true;
-  dateValidSetted = true;
-
-  constructor(private languageService: LanguageService,
-              private fb: FormBuilder,
-              private httpService: HttpService,
-              private notificationService: NotificationsService,
-              private modalManagerService: ModalManagerService,
-              private loaderService: LoaderService,
+  createdEvent: Event;
+  EventCreationState = EventCreationState;
+  constructor(private modalManagerService: ModalManagerService,
+              private cd: ChangeDetectorRef,
               private router: Router,
-              private messageService: MessageService) {
+              public navigation: EventCreationNavigationService) {
   }
 
-  ngOnInit() {
-    $('#event-datetime').datepicker({
-      position: 'top left',
-      language: this.languageService.getLanguage(),
-      minDate: new Date(),
-      timepicker: true
-    });
-
-    this.form = this.fb.group({
-      title: this.title = new FormControl('', Validators.required),
-      description: this.description = new FormControl(),
-      date: this.date = new FormControl('', Validators.required)
-    });
+  onNext() {
+    this.cd.detectChanges();
   }
 
-  public saveEvent(): void {
-    this.titleValidSetted = this.title.valid;
-    this.dateValidSetted = this.date.valid;
+  onEventCreated(event: Event) {
+    this.createdEvent = event;
+  }
 
-    const event: Event = {
-      title: this.form.value.title,
-      description: this.form.value.description,
-      startDate:  this.languageService.formatDateToString($('#event-datetime').val()),
-      groupRef: null,
-    };
-
-    if (this.titleValidSetted) {
-      this.loaderService.displayLoadingPageModal();
-      this.httpService.createStandaloneEvent(event).subscribe(res => {
-        this.loaderService.closeLoadingPageModal();
-        this.router.navigate(['/events/' + res['ref']]);
-        this.close();
-        this.notificationService.notify(this.messageService.EVENT_CREATED, NotificationType.SUCCESS);
-      }, () => {
-        this.dateValidSetted = false;
-        this.loaderService.closeLoadingPageModal();
-      });
+  onClose() {
+    if (this.navigation.checkState(EventCreationState.PARTICIPANTS)) {
+      this.router.navigate(['/events/' + this.createdEvent.ref]);
     }
+    this.navigation.purge();
+    this.cd.detectChanges();
   }
 
-  close(): void {
-    this.modalManagerService.hideModal(VibentModals.EVENT_CREATION);
+  ngOnInit(): void {
+    // Case modal is closed by back browser
+    $(VibentModals.EVENT_CREATION).on('hidden.bs.modal', () => {
+      this.onClose();
+    });
   }
 
 }
