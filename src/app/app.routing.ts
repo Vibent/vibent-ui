@@ -95,7 +95,7 @@ const routes: Routes = [
         resolve: {group: GroupResolver}
       },
       {
-        path: 'invite/:token',
+        path: 'invite/e/:token',
         component: EventInvitationComponent
       },
       {path: '**', redirectTo: '/events', pathMatch: 'full'}

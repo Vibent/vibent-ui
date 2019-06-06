@@ -1229,6 +1229,10 @@
           <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
           <context context-type="linenumber">24</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-event-participants/add-event-participants.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="phone" datatype="html">
         <source>TBT</source>
@@ -2003,7 +2007,7 @@
       <trans-unit id="58fe9a4dc5b8830abfdd56b9275c3ea2d5434ae3" datatype="html">
         <source>
               <x id="ICU" equiv-text="{participantsSplitted.yes.length, plural, =0 {...} =1 {...} other {...}}"/></source>
-        <target state="new">
+        <target state="translated">
               <x id="ICU" equiv-text="{participantsSplitted.yes.length, plural, =0 {...} =1 {...} other {...}}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/event-participants-preview.component.html</context>
@@ -2021,7 +2025,7 @@
       <trans-unit id="11a2cf33701ad74b772f228aaed9cdb2e4ef703d" datatype="html">
         <source>
               <x id="ICU" equiv-text="{participantsSplitted.maybe.length, plural, =0 {...} =1 {...} other {...}}"/></source>
-        <target state="new">
+        <target state="translated">
               <x id="ICU" equiv-text="{participantsSplitted.maybe.length, plural, =0 {...} =1 {...} other {...}}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/event-participants-preview.component.html</context>
@@ -2039,7 +2043,7 @@
       <trans-unit id="3648337f72e50d7b75705428fcd56e9c2e98878f" datatype="html">
         <source>
               <x id="ICU" equiv-text="{participantsSplitted.no.length, plural, =0 {...} =1 {...} other {...}}"/></source>
-        <target state="new">
+        <target state="translated">
               <x id="ICU" equiv-text="{participantsSplitted.no.length, plural, =0 {...} =1 {...} other {...}}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/event-participants-preview.component.html</context>
@@ -2057,7 +2061,7 @@
       <trans-unit id="2bb452b364b0ef5d8ce94367aef8e09d28f3e13d" datatype="html">
         <source>
               <x id="ICU" equiv-text="{participantsSplitted.unanswered.length, plural, =0 {...} =1 {...} other {...}}"/></source>
-        <target state="new">
+        <target state="translated">
               <x id="ICU" equiv-text="{participantsSplitted.unanswered.length, plural, =0 {...} =1 {...} other {...}}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/event-participants-preview.component.html</context>
@@ -3007,7 +3011,7 @@
         <target state="translated">Ajouter des personnes avec un lien</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-event-participants/add-event-participants.html</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="magic-link" datatype="html">
@@ -3015,7 +3019,41 @@
         <target state="translated">Lien magique</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-event-participants/add-event-participants.html</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add-people-by-email" datatype="html">
+        <source>TBT</source>
+        <target state="translated">Inviter par mail</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-event-participants/add-event-participants.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="can-invite-people-by-email" datatype="html">
+        <source>TBT</source>
+        <target state="translated">Vous pouvez aussi ajouter des gens à l'évènement en les invitant par mail</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-event-participants/add-event-participants.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="required-mail" datatype="html">
+        <source>TBT</source>
+        <target state="translated">Email requis</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-event-participants/add-event-participants.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="send-invitation" datatype="html">
+        <source>TBT
+    </source>
+        <target state="translated">Envoyer
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-event-participants/add-event-participants.html</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="send-url-join-group" datatype="html">
@@ -3024,7 +3062,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-event-participants/add-event-participants.html</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="social-login" datatype="html">

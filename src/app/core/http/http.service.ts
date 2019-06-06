@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Group, MailInvite } from '../../shared/models/group';
+import { Group } from '../../shared/models/group';
 import { Event } from '../../shared/models/event';
 import { Observable } from 'rxjs';
 import { Email, PasswordReset, User } from '../../shared/models/user';
 import { EventParticipant } from '../../shared/models/event-participant';
 import { environment } from '../../../environments/environment';
+import { MailInvite } from '../../shared/models/mailInvite';
 
 @Injectable()
 export class HttpService {
@@ -60,7 +61,7 @@ export class HttpService {
     return this.http.post(this.API_URL + '/group/validateInviteToken/' + token, body, this.getOptions());
   }
 
-  public mailInvite(mailInvite: MailInvite) {
+  public groupMailInvite(mailInvite: MailInvite) {
     const body = JSON.stringify(mailInvite);
     return this.http.post(this.API_URL + '/group/mailInvite', body, this.getOptions());
   }
@@ -105,6 +106,11 @@ export class HttpService {
   public updateEvent(event: Event): Observable<Event> {
     const body = JSON.stringify(event);
     return this.http.patch<Event>(this.API_URL + '/event/' + event.ref, body, this.getOptions());
+  }
+
+  public standaloneEventMailInvite(mailInvite: MailInvite) {
+    const body = JSON.stringify(mailInvite);
+    return this.http.post(this.API_URL + '/event/standalone/mailInvite', body, this.getOptions());
   }
 
   /*** User ***/
