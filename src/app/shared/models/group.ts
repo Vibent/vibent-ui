@@ -13,8 +13,3 @@ export interface Group {
   allAdmins ?: boolean;
 
 }
-
-export interface MailInvite {
-  groupRef: string;
-  recipients: string[];
-}
