@@ -13,6 +13,10 @@
   background: #4343434f;
 }
 
+.cdk-overlay-container{
+  z-index: 9999;
+}
+
 :root {
   --gutterMd: 0.8rem;
   --gutterLg: 1.4rem;
