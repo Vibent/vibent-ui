@@ -10,6 +10,7 @@ export class MessageService implements IMessages {
   public readonly CONFIRM_BUTTON_COLOR = '#3085d6';
   public readonly CANCEL_BUTTON_COLOR = '#d33';
 
+
   constructor(private languageService: LanguageService) {
     let selectedMessages;
     switch (languageService.getLanguage()) {
@@ -35,30 +36,31 @@ export class MessageService implements IMessages {
   BUBBLE_CREATED: string;
   CHECKBOX_BUBBLE_CREATED: string;
   DELETE: string;
-  DELETED: string;
   DELETE_BOOKING: string;
   DELETE_BOOKING_TEXT: string;
   DELETE_PROPOSAL: string;
   DELETE_PROPOSAL_TEXT: string;
   DELETE_REQUEST: string;
   DELETE_REQUEST_TEXT: string;
+  DELETED: string;
   EMAIL_ALREADY_TAKEN: string;
   EMAIL_CONFIRMED: string;
   EMAIL_UNCONFIRMED: string;
   EVENT_CREATED: string;
   EVENT_DELETED: string;
+  EVENT_JOINED: string;
+  EVENT_JOINED_TEXT: string;
   EVENT_UPDATED: string;
   FREE_BUBBLE_CREATED: string;
   GROUP_CREATED: string;
   GROUP_DELETED: string;
   GROUP_JOINED: string;
   GROUP_JOINED_TEXT: string;
-  EVENT_JOINED: string;
-  EVENT_JOINED_TEXT: string;
   GROUP_UPDATED: string;
   INVITATION_SENT: string;
   LEAVE_GROUP: string;
   LEAVE_GROUP_TEXT: string;
+  MIN_ONE_EMAIL_REQUIRED: string;
   MUST_SELECT_PROPOSAL_LOCATION: string;
   MUST_SELECT_REQUEST_LOCATION: string;
   NEED_CREATE_PROPOSAL: string;
