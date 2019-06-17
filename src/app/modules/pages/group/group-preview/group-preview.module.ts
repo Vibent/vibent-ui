@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { GroupPreviewComponent } from './group-preview.component';
 import { CommonModule } from '@angular/common';
-import { UserProfilePreviewModule } from './group-preview-member/user-profile-preview.module';
+import { UserProfilePreviewModule } from '../../../../shared/components/user-profile-preview/user-profile-preview.module';
 import { RouterModule } from '@angular/router';
 
 

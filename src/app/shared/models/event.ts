@@ -11,6 +11,7 @@ export interface Event {
 
   title?: string;
   ref?: string;
+  creatorRef?: string;
   description?: string;
   endDate?: Date;
   startDate?: string;

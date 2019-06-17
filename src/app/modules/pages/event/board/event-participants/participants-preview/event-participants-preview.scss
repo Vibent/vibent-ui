@@ -2,13 +2,16 @@
 
   span {
     margin-left: 5px;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
-  &:hover {
-    text-decoration: underline;
+  i {
+    cursor: pointer;
   }
 
-  cursor: pointer;
   color: #138ccd;
 }
 
