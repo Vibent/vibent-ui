@@ -20,6 +20,8 @@ export class EventParticipantsPreviewComponent implements OnInit, OnDestroy {
   participationRefs: EventParticipant[];
   @Input()
   eventRef: string;
+  @Input()
+  eventCreatorRef: string;
   participantsSplitted: ParticipantsSplitted;
   subscriptions: Subscription[] = [];
   invitationOpen = false;

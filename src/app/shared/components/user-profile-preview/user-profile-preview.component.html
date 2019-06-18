@@ -1,0 +1,21 @@
+<div [ngClass]="{'event-creator': isEventCreator}"
+     class="d-inline-block"
+     data-placement="top"
+     i18n-title title="Organizer">
+  <div class="user-profile">
+    <ng-container *ngIf="user$ | async as user">
+      <div class="user-avatar">
+        <loader [mainCondition]=!user.profilePicLocation
+                [fade]=true
+                [withLogo]=false
+                [mainSize]=loaderSize></loader>
+        <img src={{user.profilePicLocation}}>
+      </div>
+      <div class="user-body">
+        <div class="user-name">{{user.firstName}} {{isEventCreator ? '👑' : ''}}</div>
+        <div *ngIf="membership" class="group-user-additional" i18n="@@joined-on">Joined
+          on {{membership.date | date}}</div>
+      </div>
+    </ng-container>
+  </div>
+</div>

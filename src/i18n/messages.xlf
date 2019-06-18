@@ -1441,10 +1441,18 @@
         </context-group>
       </trans-unit>
       <trans-unit id="joined-on" datatype="html">
-        <source>Joined on <x id="INTERPOLATION" equiv-text="{{membership.date | date}}"/></source>
+        <source>Joined
+          on <x id="INTERPOLATION" equiv-text="{{membership.date | date}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/group/group-preview/group-preview-member/user-profile-preview.component.html</context>
-          <context context-type="linenumber">12</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="97f8d4904a720fb3f51aee0f25a40b902bd8770a" datatype="html">
+        <source>Organizer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/group/group-preview/group-preview-member/user-profile-preview.component.html</context>
+          <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="event-date" datatype="html">
@@ -1687,14 +1695,14 @@
               <x id="ICU" equiv-text="{participantsSplitted.maybe.length, plural, =0 {...} =1 {...} other {...}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/event-participants-preview.component.html</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="33a29ed383a123fe93167b35f3b7900779632f92" datatype="html">
         <source>{VAR_PLURAL, plural, =0 {No one don&apos;t know} =1 {1 don&apos;t know} other {<x id="INTERPOLATION" equiv-text="{{participantsSplitted.maybe.length}}"/> don&apos;t know} }</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/event-participants-preview.component.html</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3648337f72e50d7b75705428fcd56e9c2e98878f" datatype="html">
@@ -1702,14 +1710,14 @@
               <x id="ICU" equiv-text="{participantsSplitted.no.length, plural, =0 {...} =1 {...} other {...}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/event-participants-preview.component.html</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="edfa5a074d1dd7ec02b080d93c0b592b91402c6c" datatype="html">
         <source>{VAR_PLURAL, plural, =0 {Nobody isn&apos;t coming} =1 {1 isn&apos;t coming} other {<x id="INTERPOLATION" equiv-text="{{participantsSplitted.no.length}}"/> aren&apos;t coming} }</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/event-participants-preview.component.html</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2bb452b364b0ef5d8ce94367aef8e09d28f3e13d" datatype="html">
@@ -1717,14 +1725,14 @@
               <x id="ICU" equiv-text="{participantsSplitted.unanswered.length, plural, =0 {...} =1 {...} other {...}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/event-participants-preview.component.html</context>
-          <context context-type="linenumber">51</context>
+          <context context-type="linenumber">54</context>
         </context-group>
       </trans-unit>
       <trans-unit id="efaca06eca51e0e05b8908ef6bccfa5a17818e5f" datatype="html">
         <source>{VAR_PLURAL, plural, =0 {No one did not respond} =1 {1 did not respond} other {<x id="INTERPOLATION" equiv-text="{{participantsSplitted.unanswered.length}}"/> did not respond} }</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/event-participants-preview.component.html</context>
-          <context context-type="linenumber">52</context>
+          <context context-type="linenumber">55</context>
         </context-group>
       </trans-unit>
       <trans-unit id="attending" datatype="html">

@@ -25,7 +25,8 @@
                   other {{{participantsSplitted.yes.length}} are coming}}</b></h3>
             <user-profile-preview
                 *ngFor="let userRef of participantsSplitted.yes"
-                [userRef]="userRef">
+                [userRef]="userRef"
+                [isEventCreator]="userRef===eventCreatorRef">
             </user-profile-preview>
 
             <h4 *ngIf="participantsSplitted.maybe.length > 0"><b i18n>
@@ -35,7 +36,8 @@
                   other {{{participantsSplitted.maybe.length}} don't know}}</b></h4>
             <user-profile-preview
                 *ngFor="let userRef of participantsSplitted.maybe"
-                [userRef]="userRef">
+                [userRef]="userRef"
+                [isEventCreator]="userRef===eventCreatorRef">
             </user-profile-preview>
 
             <h4 *ngIf="participantsSplitted.no.length > 0"><b i18n>
@@ -45,7 +47,8 @@
                   other {{{participantsSplitted.no.length}} aren't coming}}</b></h4>
             <user-profile-preview
                 *ngFor="let userRef of participantsSplitted.no"
-                [userRef]="userRef">
+                [userRef]="userRef"
+                [isEventCreator]="userRef===eventCreatorRef">
             </user-profile-preview>
 
             <h4 *ngIf="participantsSplitted.unanswered.length > 0"><b i18n>
@@ -55,7 +58,8 @@
                   other {{{participantsSplitted.unanswered.length}} did not respond}}</b></h4>
             <user-profile-preview
                 *ngFor="let userRef of participantsSplitted.unanswered"
-                [userRef]="userRef">
+                [userRef]="userRef"
+                [isEventCreator]="userRef===eventCreatorRef">
             </user-profile-preview>
           </ng-container>
           <add-event-participations *ngIf="invitationOpen" [eventRef]="eventRef"></add-event-participations>
