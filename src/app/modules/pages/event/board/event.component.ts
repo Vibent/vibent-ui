@@ -51,8 +51,7 @@ export class EventComponent implements OnInit, OnDestroy {
       this.event = eventUpdate.event;
       if (eventUpdate.bubble) {
         this.updateBubbleOnEventUpdate(eventUpdate.bubble);
-      }
-      else {
+      } else {
         this.bubbles = this.concatEventBubbles();
       }
     }));

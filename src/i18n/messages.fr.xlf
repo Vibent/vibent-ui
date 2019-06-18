@@ -2155,6 +2155,14 @@
           <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="create-first-bubble" datatype="html">
+        <source>TBT</source>
+        <target state="translated">Il est peut-être temps de créer votre première bulle ? 👏</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/add-bubble-icon/add-bubble-icon.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="fe9c3036dddbb22630a4546f64191606ac73ed12" datatype="html">
         <source>
           <x id="INTERPOLATION" equiv-text="{{remainingDrinks}}"/> <x id="ICU" equiv-text="{remainingDrinks, plural, =1 {...} other {...}}"/> <x id="ICU_1" equiv-text="{remainingDrinks, plural, =1 {...} other {...}}"/>
@@ -2903,7 +2911,7 @@
           <x id="INTERPOLATION" equiv-text="{{membership.date | date}}"/>
         </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/group-preview/group-preview-member/user-profile-preview.component.html</context>
+          <context context-type="sourcefile">app/shared/components/user-profile-preview/user-profile-preview.component.html</context>
           <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
@@ -2911,7 +2919,7 @@
         <source>Organizer</source>
         <target state="translated">Organisateur</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/group-preview/group-preview-member/user-profile-preview.component.html</context>
+          <context context-type="sourcefile">app/shared/components/user-profile-preview/user-profile-preview.component.html</context>
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>

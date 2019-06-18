@@ -1444,14 +1444,14 @@
         <source>Joined
           on <x id="INTERPOLATION" equiv-text="{{membership.date | date}}"/></source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/group-preview/group-preview-member/user-profile-preview.component.html</context>
+          <context context-type="sourcefile">app/shared/components/user-profile-preview/user-profile-preview.component.html</context>
           <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="97f8d4904a720fb3f51aee0f25a40b902bd8770a" datatype="html">
         <source>Organizer</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/group-preview/group-preview-member/user-profile-preview.component.html</context>
+          <context context-type="sourcefile">app/shared/components/user-profile-preview/user-profile-preview.component.html</context>
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
@@ -1795,6 +1795,13 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-additional-infos/event-additional-infos.component.html</context>
           <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="create-first-bubble" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/add-bubble-icon/add-bubble-icon.component.html</context>
+          <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="fe9c3036dddbb22630a4546f64191606ac73ed12" datatype="html">

@@ -1,0 +1,31 @@
+@mixin bubble-icon-fa() {
+  font-size: 48px;
+  color: #138ccd;
+  border-radius: 50%;
+}
+
+@mixin add-bubble-default() {
+  cursor: pointer;
+  text-align: center;
+}
+
+.add-bubble-n-empty {
+  @include add-bubble-default();
+
+  .fas {
+    margin-top: 126px;
+    @include bubble-icon-fa();
+  }
+}
+
+.add-bubble-empty {
+  @include add-bubble-default();
+
+  h4{
+    margin-top: 65px;
+  }
+  .fas {
+    margin-top: 20px;
+    @include bubble-icon-fa();
+  }
+}
