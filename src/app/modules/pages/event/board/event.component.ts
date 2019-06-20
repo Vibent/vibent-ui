@@ -9,8 +9,6 @@ import { ScreenService } from '../../../../core/services/screen.service';
 import { Subscription } from 'rxjs';
 import { ModalManagerService, VibentModals } from '../../../../core/services/modal-manager.service';
 
-declare const $: any;
-
 @Component({
   selector: 'event',
   templateUrl: './event.component.html',

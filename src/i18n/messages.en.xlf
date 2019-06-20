@@ -609,7 +609,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
-          <context context-type="linenumber">9</context>
+          <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="travel" datatype="html">
@@ -625,7 +625,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
-          <context context-type="linenumber">16</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="checkbox" datatype="html">
@@ -637,7 +637,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="survey" datatype="html">
@@ -649,7 +649,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="planning" datatype="html">
@@ -661,7 +661,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
-          <context context-type="linenumber">37</context>
+          <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="free" datatype="html">
@@ -673,7 +673,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
-          <context context-type="linenumber">44</context>
+          <context context-type="linenumber">50</context>
         </context-group>
       </trans-unit>
       <trans-unit id="alimentation-bubble" datatype="html">
@@ -2813,9 +2813,9 @@
           <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="97f8d4904a720fb3f51aee0f25a40b902bd8770a" datatype="html">
-        <source>Organizer</source>
-        <target state="translated">Organizer</target>
+      <trans-unit id="5c76b1409ceedc9512657c93384e6ee171b5893d" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ isEventCreator ? 'Organizer' : ''}}"/></source>
+        <target state="translated"><x id="INTERPOLATION" equiv-text="{{ isEventCreator ? 'Organizer' : ''}}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/components/user-profile-preview/user-profile-preview.component.html</context>
           <context context-type="linenumber">4</context>
@@ -2901,6 +2901,30 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
           <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="58ed7b1d1672307d217e31dbca4cfe57df5b2056" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ !alimentationAvailable ? 'An Alimentation bubble is already created' : ''}}"/></source>
+        <target state="translated"><x id="INTERPOLATION" equiv-text="{{ !alimentationAvailable ? 'An Alimentation bubble is already created' : ''}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bd477327ae478c2625d199c74bb6ad496b78b2e5" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ !travelAvailable ? 'A Travel bubble is already created' : ''}}"/></source>
+        <target state="translated"><x id="INTERPOLATION" equiv-text="{{ !travelAvailable ? 'A Travel bubble is already created' : ''}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4b0b9313dc71919ceda112d21f95482c0b01748e" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ !planningAvailable ? 'A Planning bubble is already created' : ''}}"/></source>
+        <target state="translated"><x id="INTERPOLATION" equiv-text="{{ !planningAvailable ? 'A Planning bubble is already created' : ''}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
+          <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="group-members" datatype="html">

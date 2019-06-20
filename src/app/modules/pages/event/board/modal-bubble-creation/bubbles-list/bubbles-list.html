@@ -1,42 +1,48 @@
 <div class="container vibent-modal">
   <h2 class="text-center" i18n="@@choose-bubble">TBT</h2>
   <div class="row justify-content-center">
-    <div class="card-bubble alimentation" (click)="this.createAlimentationBubble()">
+    <div id="alimentation-availability" i18n-title
+         title="{{ !alimentationAvailable ? 'An Alimentation bubble is already created' : ''}}"
+         (click)="alimentationAvailable ? this.createBubble(BubbleType.AlimentationBubble) : ''">
       <div class="overlay"></div>
       <div class="circle">
         <i class="fas fa-utensils"></i>
       </div>
       <p i18n="@@alimentation">TBT</p>
     </div>
-    <div class="card-bubble travel" (click)="this.createTravelBubble()">
+    <div id="travel-availability" i18n-title
+    title="{{ !travelAvailable ? 'A Travel bubble is already created' : ''}}"
+    (click)="travelAvailable ? this.createBubble(BubbleType.TravelBubble) : ''">
       <div class="overlay"></div>
       <div class="circle">
         <i class="fas fa-taxi"></i>
       </div>
       <p i18n="@@travel">TBT</p>
     </div>
-    <div class="card-bubble checkbox" (click)="this.createCheckboxBubble()">
+    <div class="card-bubble checkbox" (click)="this.createBubble(BubbleType.CheckboxBubble)">
       <div class="overlay"></div>
       <div class="circle">
         <i class="fas fa-check-square"></i>
       </div>
       <p i18n="@@checkbox">TBT</p>
     </div>
-    <div class="card-bubble survey" (click)="this.createSurveyBubble()">
+    <div class="card-bubble survey" (click)="this.createBubble(BubbleType.SurveyBubble)">
       <div class="overlay"></div>
       <div class="circle">
         <i class="fas fa-question-circle"></i>
       </div>
       <p i18n="@@survey">TBT</p>
     </div>
-    <div class="card-bubble planning" (click)="this.createPlanningBubble()">
+    <div id="planning-availability" i18n-title
+         title="{{ !planningAvailable ? 'A Planning bubble is already created' : ''}}"
+         (click)="planningAvailable ? this.createBubble(BubbleType.PlanningBubble) : ''">
       <div class="overlay"></div>
       <div class="circle">
         <i class="fas fa-tasks"></i>
       </div>
       <p i18n="@@planning">TBT</p>
     </div>
-    <div class="card-bubble free" (click)="this.createFreeBubble()">
+    <div class="card-bubble free" (click)="this.createBubble(BubbleType.FreeBubble)">
       <div class="overlay"></div>
       <div class="circle">
         <i class="fas fa-comment-dots"></i>

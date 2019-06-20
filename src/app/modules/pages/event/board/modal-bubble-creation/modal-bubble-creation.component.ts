@@ -1,22 +1,19 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { BubbleType } from '../../../../../shared/models/bubbles/IBubble';
+import { Event } from '../../../../../shared/models/event';
 
 @Component({
-  selector: 'app-modal-bubble-creation',
+  selector: 'modal-bubble-creation',
   templateUrl: './modal-bubble-creation.html'
 })
-export class ModalBubbleCreationComponent implements OnInit {
+export class ModalBubbleCreationComponent {
 
   BubbleType = BubbleType;
   bubbleType: BubbleType = null;
   @Input()
-  eventRef: string;
+  event: Event;
 
   constructor() {
-  }
-
-  ngOnInit(): void {
-
   }
 
   onBubbleTypeSent(bubbleType: BubbleType) {
