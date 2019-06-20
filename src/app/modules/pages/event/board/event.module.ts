@@ -12,6 +12,7 @@ import { EventParticipantsChoiceModule } from './event-participants/participants
 import { EventSettingsModule } from '../../../../core/admin-panels/event/dialogs/event-settings/event-settings.module';
 import { EventParticipantsService } from '../../../../core/services/event-participants.service';
 import { EventAdditionalInfosComponent } from './event-additional-infos/event-additional-infos.component';
+import { AddBubbleIconComponent } from './add-bubble-icon/add-bubble-icon.component';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { EventAdditionalInfosComponent } from './event-additional-infos/event-ad
   ],
   declarations: [
     EventComponent,
-    EventAdditionalInfosComponent
+    EventAdditionalInfosComponent,
+    AddBubbleIconComponent
   ],
   providers: [EventUpdateService, BlacknoteService, EventParticipantsService],
 })
