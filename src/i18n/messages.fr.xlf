@@ -482,16 +482,8 @@
         <source>TBT</source>
         <target state="translated">Groupes</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/components/sidebar/sidebar.component.html</context>
-          <context context-type="linenumber">17</context>
-        </context-group>
-        <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
           <context context-type="linenumber">8</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">60</context>
         </context-group>
       </trans-unit>
       <trans-unit id="event-board" datatype="html">
@@ -1231,7 +1223,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-event-participants/add-event-participants.html</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="phone" datatype="html">
@@ -1927,10 +1919,6 @@
           <context context-type="linenumber">11</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/participants/event-creation-participants.component.html</context>
-          <context context-type="linenumber">4</context>
-        </context-group>
-        <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/date/event-creation-date.component.html</context>
           <context context-type="linenumber">13</context>
         </context-group>
@@ -2605,9 +2593,9 @@
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="seats-left" datatype="html">
-        <source>TBT</source>
-        <target state="translated">places restantes</target>
+      <trans-unit id="seat-left" datatype="html">
+        <source>{VAR_PLURAL, plural, =1 {seat left} other {seats left} }</source>
+        <target state="translated">{VAR_PLURAL, plural, =1 {place restante} other {places restantes} }</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal/travel-proposal.html</context>
           <context context-type="linenumber">17</context>
@@ -3068,7 +3056,7 @@
         <target state="translated">Inviter par mail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-event-participants/add-event-participants.html</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
       <trans-unit id="can-invite-people-by-email" datatype="html">
@@ -3076,7 +3064,7 @@
         <target state="translated">Vous pouvez aussi ajouter des gens à l'évènement en les invitant par mail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-event-participants/add-event-participants.html</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="invalid-mail" datatype="html">
@@ -3084,7 +3072,7 @@
         <target state="translated">Cet email est invalid - veuillez le corriger</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-event-participants/add-event-participants.html</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="add-another-email" datatype="html">
@@ -3092,7 +3080,7 @@
         <target state="translated">Ajouter un email</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-event-participants/add-event-participants.html</context>
-          <context context-type="linenumber">27</context>
+          <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="send-invitation" datatype="html">
@@ -3102,7 +3090,7 @@
     </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-event-participants/add-event-participants.html</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="send-url-join-group" datatype="html">

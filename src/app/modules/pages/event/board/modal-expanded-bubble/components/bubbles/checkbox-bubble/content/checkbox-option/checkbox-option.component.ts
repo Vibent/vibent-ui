@@ -12,6 +12,7 @@ import { UserManagementService } from '../../../../../../../../../../core/servic
 import { CheckboxHttpService } from '../../../../../../../../../../core/services/bubbles-services/checkbox/http/checkbox-http.service';
 import Swal from 'sweetalert2';
 import { MessageService } from '../../../../../../../../../../core/services/i18n/message.service';
+import { BubbleType } from '../../../../../../../../../../shared/models/bubbles/IBubble';
 
 @Component({
   selector: '[checkbox-option]',
@@ -70,7 +71,7 @@ export class CheckboxOptionComponent implements OnInit {
       this.checkboxOption.answers.push({userRef: this.user.ref, optionId: this.checkboxOption.id});
       this.constructAlimentationDataModel();
       this.checkboxHttpService.createAnswer({optionId: this.checkboxOption.id}).subscribe(() => {
-        this.eventUpdateService.updateEvent(this.eventRef);
+        this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.CheckboxBubble});
       });
     }
     else {
@@ -79,7 +80,7 @@ export class CheckboxOptionComponent implements OnInit {
           .findIndex(answer => answer.userRef === this.user.ref), 1);
       this.constructAlimentationDataModel();
       this.checkboxHttpService.deleteAnswerOfOption(this.checkboxOption).subscribe(() => {
-        this.eventUpdateService.updateEvent(this.eventRef);
+        this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.CheckboxBubble});
       });
     }
     this.updatedCheckboxOptions.emit(this.checkboxOption);
@@ -102,7 +103,7 @@ export class CheckboxOptionComponent implements OnInit {
           this.checkboxBubble.options
             .splice(this.checkboxBubble.options
               .findIndex(option => option.id === this.checkboxOption.id), 1);
-          this.updatedCheckboxBubble.emit(<CheckboxBubble>this.checkboxBubble);
+          this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.CheckboxBubble});
         });
       }
     });
