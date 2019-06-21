@@ -4,7 +4,8 @@
 }
 
 .mail-container {
-  display: flex;
+  display: inline-flex;
+  width: 100%;
 }
 
 input.email {
@@ -17,7 +18,7 @@ input.email {
 
 .close-button {
   width: 17px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .add-another-email {

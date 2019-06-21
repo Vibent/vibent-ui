@@ -16,15 +16,7 @@ export class EventCreationParticipantsComponent {
   @Input()
   event: Event;
 
-  constructor(public navigation: EventCreationNavigationService,
-              private router: Router,
-              private modalManagerService: ModalManagerService) {
-  }
-
-  onNext() {
-    this.modalManagerService.hideModal(VibentModals.EVENT_CREATION);
-    this.navigation.purge();
-    this.router.navigate(['/events/' +  this.event.ref]);
+  constructor(public navigation: EventCreationNavigationService) {
   }
 
 }
