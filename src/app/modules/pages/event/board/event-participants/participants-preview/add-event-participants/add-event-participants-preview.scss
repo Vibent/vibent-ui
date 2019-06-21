@@ -2,3 +2,38 @@
   color: #138ccd;
   font-size: 30px
 }
+
+.mail-container {
+  display: flex;
+}
+
+input.email {
+  width: 90%;
+}
+
+.action-email {
+  margin-top: 8px;
+}
+
+.close-button {
+  width: 17px;
+  margin-left: 10px;
+}
+
+.add-another-email {
+
+  span {
+    margin-left: 5px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  i {
+    cursor: pointer;
+  }
+
+  color: #138ccd;
+}
