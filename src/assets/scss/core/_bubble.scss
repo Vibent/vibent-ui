@@ -70,6 +70,10 @@
   cursor: pointer;
 }
 
+.disabled-alimentation {
+  --bg-color: #f27c8b80;
+}
+
 .travel {
   --bg-color: #7687c0;
   --bg-shadow-color: #d0ddfb;
@@ -77,6 +81,10 @@
   --text-color-hover: white;
   --box-shadow-color: rgba(51, 107, 249, 0.48);
   cursor: pointer;
+}
+
+.disabled-travel {
+  --bg-color: #7687c066;
 }
 
 .checkbox {
@@ -106,6 +114,10 @@
   cursor: pointer;
 }
 
+.disabled-planning {
+  --bg-color: #08b6b354;
+}
+
 .free {
   --bg-color: #b33a69;
   --bg-shadow-color:#b33a6961;
@@ -115,7 +127,8 @@
   cursor: pointer;
 }
 
-.card-bubble {
+
+.card-bubble, .disabled-card-bubble {
   background: #fff;
   border-radius: 10px;
   margin: 5px;

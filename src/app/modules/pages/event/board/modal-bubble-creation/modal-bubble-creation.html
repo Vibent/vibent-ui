@@ -12,12 +12,13 @@
       <div class="modal-body bg-light">
         <bubbles-list
             *ngIf=!bubbleType
+            [event]=event
             (bubbleType)=onBubbleTypeSent($event)>
         </bubbles-list>
         <bubbles-explanations
             *ngIf=bubbleType
             [bubbleType]=bubbleType
-            [eventRef]=eventRef
+            [eventRef]=event.ref
             (sendNullToList)=onBubbleTypeSent($event)>
         </bubbles-explanations>
       </div>
