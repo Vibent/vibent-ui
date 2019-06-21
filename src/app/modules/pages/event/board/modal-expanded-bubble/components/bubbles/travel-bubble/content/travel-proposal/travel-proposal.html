@@ -13,8 +13,8 @@
         <div class="proposal-trip">{{travelDataModel.headerLocation}} - Event place</div>
       </div>
       <div class="p-2 align-self-center">
-        <div class="proposal-seats"><b>{{travelDataModel.seatsLeft}}</b>
-          <span i18n="@@seats-left">TBT</span>
+        <div class="proposal-seats"><b>{{travelDataModel.seatsLeft}}&nbsp;</b>
+          <span i18n="@@seat-left">{travelDataModel.seatsLeft, plural, =1 {seat left} other {seats left}}</span>
         </div>
       </div>
       <div class="ml-auto p-2 m-r-10 align-self-center">
