@@ -51,7 +51,6 @@ export class AddEventParticipantsComponent implements OnInit {
     this.emails.removeAt(i);
   }
 
-
   public sendInvitation(): void {
     // Check for any invalid emails
     this.displayErrors = {};

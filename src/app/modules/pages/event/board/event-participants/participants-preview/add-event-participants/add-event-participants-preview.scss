@@ -3,27 +3,37 @@
   font-size: 30px
 }
 
+.mail-container {
+  display: flex;
+}
+
 input.email {
   width: 90%;
-  display: inline-block;
 }
 
 .action-email {
-  width: 10%;
   margin-top: 8px;
-  text-align: center;
+}
 
-  &.remove {
-    display: inline-block;
+.close-button {
+  width: 17px;
+  margin-left: 10px;
+}
+
+.add-another-email {
+
+  span {
+    margin-left: 5px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
-  &.add {
-    margin-left: 90%;
-  }
-
-  & .fas {
-    font-size: 24px;
-    color: #555555;
+  i {
     cursor: pointer;
   }
+
+  color: #138ccd;
 }

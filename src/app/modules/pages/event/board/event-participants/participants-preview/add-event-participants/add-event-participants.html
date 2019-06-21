@@ -2,27 +2,30 @@
   <i class="fas fa-paper-plane m-t-50 paper-plane"></i>
 </div>
 <h2 class="text-center m-t-20"><b i18n="@@add-people-by-link">TBT</b></h2>
-<!--<p class="lead" i18n="@@can-invite-people-by-link">TBT</p>-->
 <h5 class="text-center m-t-5" i18n="@@send-url-join-group">TBT</h5>
 <div class="form-group">
   <label for="invite-token"><b i18n="@@magic-link">TBT</b></label>
   <input type="text" class="form-control" id="invite-token" value="{{generatedLink}}"/>
 </div>
-<h2 class="text-center m-t-20"><b i18n="@@add-people-by-email">TBT</b></h2>
+<h2 class="text-center m-t-50"><b i18n="@@add-people-by-email">TBT</b></h2>
 <p class="text-center m-t-5" i18n="@@can-invite-people-by-email">TBT</p>
 <div [formGroup]="form" class="emails">
   <label><b i18n="@@email">TBT</b></label>
   <div formArrayName="emails"
        *ngFor="let item of emails.controls; let i = index;" id="email-address">
     <div [formGroupName]="i">
-      <div class="form-group">
+      <div class="mail-container form-group">
         <span *ngIf="displayErrors[i]" class="incorrect-input" i18n="@@invalid-mail">TBT</span>
         <input type="text" class="form-control email" formControlName="email"/>
-        <div class="action-email remove"><i (click)="removeItem(i)" class="fas fa-times"></i></div>
+        <div *ngIf="emails.length > 1" class="action-email remove">
+          <img (click)="removeItem(i)" src="./assets/img/close.png" class="close-button cursor-pointer">
+        </div>
       </div>
     </div>
   </div>
-  <div class="action-email add"><i (click)="addItem()" class="fas fa-plus-circle"></i></div>
+  <div class="add-another-email" (click)="addItem()">
+    <i (click)="addItem()" class="fas fa-plus-circle"></i><span i18n="@@add-another-email">TBT</span>
+  </div>
 
   <div class="row justify-content-center">
     <button (click)="sendInvitation()"
