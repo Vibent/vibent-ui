@@ -603,7 +603,8 @@
             TBT
           </source>
         <target state="translated">
-          Une sortie, un anniversaire ou un événement spécial ? Créez des événements dans vos groupes.
+          Une sortie, un anniversaire ou un événement spécial ? Créez des événements et invitez vos amis,
+            vos collègues ou votre famille.
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>

@@ -525,7 +525,7 @@
             TBT
           </source>
         <target state="translated">
-          An outing, a birthday or a special event? Create events in one of your groups.
+          An outing, a birthday or a special event? Create events and invite your friends, colleagues or family.
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
