@@ -18,7 +18,7 @@
           <event-creation-title *ngIf="navigation.checkState(EventCreationState.TITLE)" (change)="onNext()"></event-creation-title>
           <event-creation-description *ngIf="navigation.checkState(EventCreationState.DESCRIPTION)" (change)="onNext()"></event-creation-description>
           <event-creation-date *ngIf="navigation.checkState(EventCreationState.DATE)" (change)="onNext()" (createdEvent)="onEventCreated($event)"></event-creation-date>
-          <event-creation-participants *ngIf="navigation.checkState(EventCreationState.PARTICIPANTS)" (change)="onNext()" [event]="createdEvent"></event-creation-participants>
+          <event-creation-participants *ngIf="navigation.checkState(EventCreationState.PARTICIPANTS)" [event]="createdEvent"></event-creation-participants>
         </div>
       </div>
     </div>

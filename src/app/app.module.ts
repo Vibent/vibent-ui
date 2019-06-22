@@ -43,6 +43,7 @@ import { I18nModule } from './core/services/i18n/i18n.module';
 import { TermsModule } from './modules/pages/terms/terms.module';
 import { RoutingStateService } from './core/services/routing-state.service';
 import { ModalManagerService } from './core/services/modal-manager.service';
+import { TutorialModule } from './modules/pages/event/dialogs/tutorial/tutorial.module';
 
 @NgModule({
   imports: [
@@ -80,6 +81,7 @@ import { ModalManagerService } from './core/services/modal-manager.service';
     LoaderModule,
     LoggerModule.forRoot({level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR}),
     I18nModule,
+    TutorialModule,
   ],
   declarations: [
     AppComponent,

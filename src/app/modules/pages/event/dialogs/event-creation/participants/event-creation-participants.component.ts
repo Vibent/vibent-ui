@@ -11,8 +11,6 @@ import { Router } from '@angular/router';
 })
 export class EventCreationParticipantsComponent {
 
-  @Output()
-  change = new EventEmitter();
   @Input()
   event: Event;
 

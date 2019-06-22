@@ -1827,6 +1827,26 @@
           <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/date/event-creation-date.component.html</context>
           <context context-type="linenumber">13</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/welcome/tutorial-welcome.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/create-event/tutorial-create-event.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/join-event/tutorial-join-event.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/profile/tutorial-profile.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/enjoy/tutorial-enjoy.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="choose-a-description" datatype="html">
         <source>TBT</source>
@@ -3005,6 +3025,86 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/social/social-auth.component.html</context>
           <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tutorial-welcome-title" datatype="html">
+        <source>TBT</source>
+        <target state="translated">Welcome!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/welcome/tutorial-welcome.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tutorial-welcome-body" datatype="html">
+        <source>TBT</source>
+        <target state="translated">Welcome to the Vibent platform! Here you will be able to plan all your events with ease and see what your friends are up to. This quick tutorial will show the ropes about Vibent's use.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/welcome/tutorial-welcome.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tutorial-create-event-title" datatype="html">
+        <source>TBT</source>
+        <target state="translated">Create an event</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/create-event/tutorial-create-event.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tutorial-create-event-body" datatype="html">
+        <source>TBT</source>
+        <target state="translated">To create an event, simply go to the Events screen in the left var and click on "Create an event". Fill out the details and invite your friends over! Create a card to sort out the corresponding organizational need - a survey for the guests for example!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/create-event/tutorial-create-event.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tutorial-join-event-title" datatype="html">
+        <source>TBT</source>
+        <target state="new">Join an event</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/join-event/tutorial-join-event.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tutorial-join-event-body" datatype="html">
+        <source>TBT</source>
+        <target state="new">Joining an event is even easier! The event organizer can either sent you a magic link or invite you by email. By simple putting the magic link in a browser, you will automatically be added to the event.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/join-event/tutorial-join-event.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tutorial-profile-title" datatype="html">
+        <source>TBT</source>
+        <target state="new">Your profile</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/profile/tutorial-profile.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tutorial-profile-body" datatype="html">
+        <source>TBT</source>
+        <target state="new">Your profile is where you can edit your personal information, set your profile picture, link your social networks and more. Vibent is not a social network and anybody who is not in an event with you will not be able to see anything about you. Your privacy is our priority.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/profile/tutorial-profile.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tutorial-enjoy-title" datatype="html">
+        <source>TBT</source>
+        <target state="new">Enjoy!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/enjoy/tutorial-enjoy.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tutorial-enjoy-body" datatype="html">
+        <source>TBT</source>
+        <target state="new">If you have any other questions, feel free to contact the Vibent team.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/enjoy/tutorial-enjoy.component.html</context>
+          <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer-text" datatype="html">

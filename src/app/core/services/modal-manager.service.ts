@@ -8,7 +8,8 @@ export enum VibentModals {
   EXPANDED_BUBBLE = '#expandedBubble',
   PROFILE_SETTINGS = '#modalProfileSettings',
   EVENT_PARTICIPANTS = '#modalEventParticipants',
-  EVENT_SETTINGS = '#modalEventSettings'
+  EVENT_SETTINGS = '#modalEventSettings',
+  TUTORIAL = '#modalTutorial',
 }
 
 @Injectable()
