@@ -2,10 +2,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Event } from '../../../../shared/models/event';
 import { BubbleType, IBubble } from '../../../../shared/models/bubbles/IBubble';
-import { EventAdminPanelService } from '../../../../core/services/event-admin-panel.service';
 import { EventUpdateService } from '../../../../core/services/bubbles-services/event-update.service';
 import { BlacknoteService } from '../../../../core/services/blacknote/blacknote.service';
-import { ScreenService } from '../../../../core/services/screen.service';
+import { ScreenService, BootstrapWidth } from '../../../../core/services/screen.service';
 import { Subscription } from 'rxjs';
 import { ModalManagerService, VibentModals } from '../../../../core/services/modal-manager.service';
 
@@ -19,10 +18,10 @@ export class EventComponent implements OnInit, OnDestroy {
   event: Event;
   bubbles: IBubble[];
   bubbleToExpand: IBubble;
+  BootstrapWidth = BootstrapWidth;
   subscriptions: Subscription[] = [];
 
   constructor(private route: ActivatedRoute,
-              private eventAdminPanelService: EventAdminPanelService,
               private modalManagerService: ModalManagerService,
               private eventUpdateService: EventUpdateService,
               private blacknoteService: BlacknoteService,
@@ -43,7 +42,6 @@ export class EventComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.eventAdminPanelService.toggleEventPanel(this.event.ref);
     this.modalManagerService.initHandleBackBrowser(VibentModals.EVENT_SETTINGS, VibentModals.SELECT_BUBBLE_TYPE);
     this.subscriptions.push(this.eventUpdateService.eventUpdated$.subscribe(eventUpdate => {
       this.event = eventUpdate.event;
@@ -64,7 +62,6 @@ export class EventComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.eventAdminPanelService.closeEventPanel();
     this.blacknoteService.disconnect();
     this.subscriptions.forEach((subscription: Subscription) => {
       subscription.unsubscribe();

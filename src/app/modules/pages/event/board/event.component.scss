@@ -1,5 +1,6 @@
 @import "../../../../../assets/scss/core/variables/_shadow.scss";
 @import "../../../../../assets/scss/core/mixins/_vendor-prefixes.scss";
+@import "../../../../../assets/scss/core/mixins/_buttons.scss";
 
 .main-content {
   background-color: white;
@@ -11,3 +12,27 @@
   padding-left: 3%;
 }
 
+.top-right-edit {
+  position: absolute;
+  right: 30px;
+  top: 95px;
+}
+
+.edit-event {
+  @include board-button();
+  @include board-button-hover();
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-bottom: 10px;
+  display: inline-block;
+
+  i {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  span {
+    margin-left: 7px;
+    margin-right: 14px;
+  }
+}

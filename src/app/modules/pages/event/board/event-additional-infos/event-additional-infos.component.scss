@@ -1,17 +1,16 @@
 @import "../../../../../../assets/scss/core/variables/_shadow.scss";
 @import "../../../../../../assets/scss/core/mixins/_vendor-prefixes.scss";
+@import "../../../../../../assets/scss/core/mixins/_buttons.scss";
 
 .event-additional-infos {
   height: 80px;
 
   .participants-info {
-    background: #fafafa;
+    @include board-button();
+    @include board-button-hover();
     width: 138px;
-    border-radius: 5px;
     margin-left: 5px;
     margin-right: 5px;
-    transition-duration: 0.5s;
-
     .going {
       font-size: larger;
       span {
@@ -19,17 +18,11 @@
         font-weight: 600;
       }
     }
-
-    &:hover {
-      @include box-shadow($bmd-shadow-4dp);
-      transition-duration: 0.5s;
-    }
   }
 
   .date-info {
-    background: #fafafa;
+    @include board-button();
     width: 138px;
-    border-radius: 5px;
     margin-left: 5px;
     margin-right: 5px;
 
