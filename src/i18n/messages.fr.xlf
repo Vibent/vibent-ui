@@ -2132,9 +2132,13 @@
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6344e1a7c16e21eade25c836498920909621b7ee" datatype="html">
-        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION" equiv-text="{{participantsNumber}}"/> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="ICU" equiv-text="{participantsNumber, plural, =1 {...} other {...}}"/></source>
-        <target state="translated"><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION" equiv-text="{{participantsNumber}}"/> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="ICU" equiv-text="{participantsNumber, plural, =1 {...} other {...}}"/></target>
+      <trans-unit id="97abd08beca26c1c0765c748aeab2cedfe3d9bfb" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>
+      <x id="INTERPOLATION" equiv-text="{{participantsNumber}}"/> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="ICU" equiv-text="{participantsNumber, plural, =1 {...} other {...}}"/>
+    </source>
+        <target state="translated"><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>
+      <x id="INTERPOLATION" equiv-text="{{participantsNumber}}"/> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="ICU" equiv-text="{participantsNumber, plural, =1 {...} other {...}}"/>
+    </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-additional-infos/event-additional-infos.component.html</context>
           <context context-type="linenumber">3</context>
@@ -2142,10 +2146,10 @@
       </trans-unit>
       <trans-unit id="e6f452314649d45ec0053eedddc6ba9391e8822f" datatype="html">
         <source>{VAR_PLURAL, plural, =1 {going} other {going} }</source>
-        <target state="translated">{VAR_PLURAL, plural, =1 {y va} other {y vont} }</target>
+        <target state="translated">{VAR_PLURAL, plural, =1 {participant} other {participants} }</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-additional-infos/event-additional-infos.component.html</context>
-          <context context-type="linenumber">3</context>
+          <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="for-nb-invited" datatype="html">
@@ -2153,7 +2157,7 @@
         <target state="translated">pour <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION" equiv-text="{{invitedNumber}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> invités</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-additional-infos/event-additional-infos.component.html</context>
-          <context context-type="linenumber">4</context>
+          <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="around-time" datatype="html">
@@ -2161,7 +2165,7 @@
         <target state="translated">vers <x id="INTERPOLATION" equiv-text="{{event.startDate | date:'shortTime'}}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-additional-infos/event-additional-infos.component.html</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="create-first-bubble" datatype="html">
@@ -3058,7 +3062,7 @@
       </trans-unit>
       <trans-unit id="add-people-by-link" datatype="html">
         <source>TBT</source>
-        <target state="translated">Ajouter des personnes avec un lien</target>
+        <target state="translated">Inviter des personnes avec un lien</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-event-participants/add-event-participants.html</context>
           <context context-type="linenumber">4</context>
@@ -3074,7 +3078,7 @@
       </trans-unit>
       <trans-unit id="add-people-by-email" datatype="html">
         <source>TBT</source>
-        <target state="translated">Inviter par mail</target>
+        <target state="translated">Inviter des personnes par mail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-event-participants/add-event-participants.html</context>
           <context context-type="linenumber">13</context>
@@ -3082,7 +3086,7 @@
       </trans-unit>
       <trans-unit id="can-invite-people-by-email" datatype="html">
         <source>TBT</source>
-        <target state="translated">Vous pouvez aussi ajouter des gens à l'évènement en les invitant par mail</target>
+        <target state="translated">Nous leur enverrons un mail pour leur permettre de rejoindre l'événement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-event-participants/add-event-participants.html</context>
           <context context-type="linenumber">14</context>
@@ -3098,7 +3102,7 @@
       </trans-unit>
       <trans-unit id="add-another-email" datatype="html">
         <source>TBT</source>
-        <target state="translated">Ajouter un email</target>
+        <target state="translated">Ajouter un mail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-event-participants/add-event-participants.html</context>
           <context context-type="linenumber">32</context>
@@ -3116,7 +3120,7 @@
       </trans-unit>
       <trans-unit id="send-url-join-group" datatype="html">
         <source>TBT</source>
-        <target state="translated">Envoyez cette URL à vos amis pour leur permettre de rejoindre votre groupe.
+        <target state="translated">Envoyez-leur cette URL pour leur permettre de rejoindre l'événement.
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-event-participants/add-event-participants.html</context>

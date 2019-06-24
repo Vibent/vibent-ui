@@ -2032,9 +2032,13 @@
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6344e1a7c16e21eade25c836498920909621b7ee" datatype="html">
-        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION" equiv-text="{{participantsNumber}}"/> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="ICU" equiv-text="{participantsNumber, plural, =1 {...} other {...}}"/></source>
-        <target state="translated"><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION" equiv-text="{{participantsNumber}}"/> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="ICU" equiv-text="{participantsNumber, plural, =1 {...} other {...}}"/></target>
+      <trans-unit id="97abd08beca26c1c0765c748aeab2cedfe3d9bfb" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>
+      <x id="INTERPOLATION" equiv-text="{{participantsNumber}}"/> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="ICU" equiv-text="{participantsNumber, plural, =1 {...} other {...}}"/>
+    </source>
+        <target state="translated"><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>
+      <x id="INTERPOLATION" equiv-text="{{participantsNumber}}"/> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="ICU" equiv-text="{participantsNumber, plural, =1 {...} other {...}}"/>
+    </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-additional-infos/event-additional-infos.component.html</context>
           <context context-type="linenumber">3</context>
@@ -2045,7 +2049,7 @@
         <target state="translated">{VAR_PLURAL, plural, =1 {going} other {going} }</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-additional-infos/event-additional-infos.component.html</context>
-          <context context-type="linenumber">3</context>
+          <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="for-nb-invited" datatype="html">
@@ -2053,7 +2057,7 @@
         <target state="translated">of <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/><x id="INTERPOLATION" equiv-text="{{invitedNumber}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> invited</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-additional-infos/event-additional-infos.component.html</context>
-          <context context-type="linenumber">4</context>
+          <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="around-time" datatype="html">
@@ -2061,7 +2065,7 @@
         <target state="translated">around <x id="INTERPOLATION" equiv-text="{{event.startDate | date:'shortTime'}}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-additional-infos/event-additional-infos.component.html</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="create-first-bubble" datatype="html">
