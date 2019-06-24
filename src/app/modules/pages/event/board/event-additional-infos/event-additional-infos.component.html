@@ -1,6 +1,8 @@
 <div class="d-flex flex-row justify-content-center event-additional-infos">
   <div class="participants-info p-3 cursor-pointer" (click)="openEventParticipantsModal()">
-    <div class="going text-center" i18n><span>{{participantsNumber}}&nbsp;</span>{participantsNumber, plural, =1 {going} other {going}}</div>
+    <div class="going text-center" i18n><span [ngClass]="{'smaller-participants': participantsNumber>100}">
+      {{participantsNumber}}&nbsp;</span>{participantsNumber, plural, =1 {going} other {going}}
+    </div>
     <div class="invited text-center" i18n="@@for-nb-invited">TBT <span>{{invitedNumber}}</span> TBT</div>
   </div>
   <div class="date-info p-3">

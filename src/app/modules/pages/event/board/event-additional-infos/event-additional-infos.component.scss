@@ -13,10 +13,13 @@
     transition-duration: 0.5s;
 
     .going {
-      font-size: larger;
+      .smaller-participants{
+        font-size: 18px;
+      }
       span {
         font-size: 24px;
         font-weight: 600;
+        margin-left: -5px;
       }
     }
 
