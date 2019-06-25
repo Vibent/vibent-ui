@@ -43,6 +43,21 @@
   }
 }
 
+@mixin board-button() {
+  background: #fafafa;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+@mixin board-button-hover() {
+  transition-duration: 0.5s;
+  &:hover {
+    @include box-shadow($bmd-shadow-4dp);
+    transition-duration: 0.5s;
+  }
+}
+
 @mixin bmd-flat-button-variant(
   $color,
   $border: $bmd-btn-border,

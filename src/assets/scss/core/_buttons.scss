@@ -23,6 +23,7 @@
   //--
   // Colors
   @include bmd-raised-button-color();
+
   &.btn-white {
     &,
     &:focus,
@@ -30,12 +31,14 @@
       background-color: $white-color;
       color: $gray-color;
     }
+
     &.btn-link {
       color: $white-color;
       background: transparent;
       box-shadow: none;
     }
   }
+
   &.btn-link:hover,
   &.btn-link:focus,
   &.btn-link:active {
@@ -73,6 +76,7 @@
   .btn-group-lg & {
     @include button-size($input-btn-padding-y-lg, $input-btn-padding-x-lg, $bmd-btn-font-size, $btn-lg-line-height, $border-radius-sm);
   }
+
   &.btn-sm,
   .btn-group-sm & {
     @include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $bmd-btn-font-size-sm, $line-height-sm, $border-radius-sm);
@@ -84,9 +88,11 @@
     > .mat-button-focus-overlay, .mat-button-ripple {
       border-radius: $border-radius-extreme;
     }
+
     &.green-button {
       background: $vibent-green;
     }
+
     &.purple-button {
       background: #a73974;
     }

@@ -752,14 +752,6 @@
           <context context-type="linenumber">11</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/board/event.component.html</context>
-          <context context-type="linenumber">17</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/board/event.component.html</context>
-          <context context-type="linenumber">22</context>
-        </context-group>
-        <context-group purpose="location">
           <context context-type="sourcefile">app/core/admin-panels/event/event-admin-panel.component.html</context>
           <context context-type="linenumber">9</context>
         </context-group>
@@ -1299,6 +1291,13 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/group/board/group.component.html</context>
           <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/event.component.html</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="groups-header" datatype="html">
