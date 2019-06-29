@@ -16,12 +16,14 @@
                  class="form-control"
                  name="date">
         </div>
-        <button (click)="toggleCreationCard()"
+        <button (click)="toggleCreationCard(); resetAlgoliaInput()"
                 class="btn btn-outline-danger"
-                i18n="@@delete">TBT</button>
+                i18n="@@delete">TBT
+        </button>
         <button (click)="createRequest()"
                 class="btn btn-outline-primary"
-                i18n="@@add">TBT</button>
+                i18n="@@add">TBT
+        </button>
       </form>
     </div>
   </div>

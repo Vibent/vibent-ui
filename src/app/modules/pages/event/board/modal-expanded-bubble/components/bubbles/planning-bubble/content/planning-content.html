@@ -12,7 +12,7 @@
           <planning-entry-creation
               [eventRef]="this.eventRef"
               [bubbleId]="planningBubble.id"
-              (updatedPlanningBubble)="this.onBubbleUpdate($event)">
+              (updatedBubble)="this.onBubbleUpdate($event)">
           </planning-entry-creation>
           <ul class="planning-timeline">
             <li *ngFor="let entry of planningBubble.entries"

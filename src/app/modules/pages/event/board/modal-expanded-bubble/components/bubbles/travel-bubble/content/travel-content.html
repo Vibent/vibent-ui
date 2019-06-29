@@ -18,7 +18,7 @@
         <travel-proposal-creation
             [travelBubble]="travelBubble"
             [eventRef]="eventRef"
-            (updatedTravelBubble)="this.onBubbleUpdate($event)">
+            (updatedBubble)="this.onBubbleUpdate($event)">
         </travel-proposal-creation>
         <div class="accordion" id="proposal-accordion">
           <div *ngIf="!travelBubble.proposals[0] && !proposalCreationExpanded()"
@@ -55,7 +55,7 @@
         <travel-request-creation
             [travelBubble]="travelBubble"
             [eventRef]="eventRef"
-            (updatedTravelBubble)="this.onBubbleUpdate($event)">
+            (updatedBubble)="this.onBubbleUpdate($event)">
         </travel-request-creation>
         <div class="accordion" id="request-accordion">
           <div *ngIf="!travelBubble.requests[0] && !requestCreationExpanded()"

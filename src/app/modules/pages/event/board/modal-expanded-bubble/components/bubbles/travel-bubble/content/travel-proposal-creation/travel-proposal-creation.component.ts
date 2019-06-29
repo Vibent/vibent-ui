@@ -1,5 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
 import { TravelHttpService } from '../../../../../../../../../../core/services/bubbles-services/travel/http/travel-http.service';
 import { TravelBubble } from '../../../../../../../../../../shared/models/bubbles/TravelBubble';
 import { AlgoliaPlacesService } from '../../../../../../../../../../core/services/algolia-places/algolia-places.service';
@@ -11,8 +10,6 @@ import { AppSettings } from '../../../../../../../../../../shared/global/constan
 import { MessageService } from '../../../../../../../../../../core/services/i18n/message.service';
 import { BubbleType } from '../../../../../../../../../../shared/models/bubbles/IBubble';
 
-declare const $: any;
-
 @Component({
   selector: 'travel-proposal-creation',
   templateUrl: './travel-proposal-creation.html'
@@ -21,12 +18,6 @@ export class TravelProposalCreationComponent extends AbstractBubbleEntityCreatio
 
   @Input()
   travelBubble: TravelBubble;
-  @Input()
-  eventRef: string;
-  @Output()
-  updatedTravelBubble = new EventEmitter<TravelBubble>();
-  form: FormGroup;
-  capacity: FormControl;
   placesAutocomplete: any;
   inputPlace: any;
 
@@ -38,21 +29,14 @@ export class TravelProposalCreationComponent extends AbstractBubbleEntityCreatio
   }
 
   ngOnInit() {
-    this.form = new FormGroup({
-      capacity: this.capacity = new FormControl('', Validators.required),
-    });
-
+    super.ngOnInit();
     this.placesAutocomplete = places({
       appId: AppSettings.ALGOLIA_APP_ID,
       apiKey: AppSettings.ALGOLIA_API_KEY,
       container: document.querySelector('#address-input')
-    }).configure({useDeviceLocation: true});
-
+    }).configure({useDeviceLocation: true, type: 'city'});
 
     this.placesAutocomplete.on('change', e => this.inputPlace = e);
-    this.form = new FormGroup({
-      capacity: this.capacity = new FormControl('', Validators.required),
-    });
   }
 
   createProposal() {
@@ -68,9 +52,10 @@ export class TravelProposalCreationComponent extends AbstractBubbleEntityCreatio
       capacity: this.capacity.value,
       passByCities: this.inputPlace.suggestion.hit.objectID
     }).subscribe((updatedBubble) => {
-        this.updatedTravelBubble.emit(<TravelBubble> updatedBubble);
+        this.updatedBubble.emit(<TravelBubble>updatedBubble);
         this.eventUpdateService.updateEvent(this.eventRef, {id: this.travelBubble.id, type: BubbleType.TravelBubble});
         this.toggleCreationCard();
+        this.resetAlgoliaInput();
       },
       (e) => {
         Swal({
@@ -79,6 +64,11 @@ export class TravelProposalCreationComponent extends AbstractBubbleEntityCreatio
           text: e.error.error.message,
         });
       });
+  }
+
+  resetAlgoliaInput() {
+    this.purge();
+    this.placesAutocomplete.setVal('');
   }
 
 }

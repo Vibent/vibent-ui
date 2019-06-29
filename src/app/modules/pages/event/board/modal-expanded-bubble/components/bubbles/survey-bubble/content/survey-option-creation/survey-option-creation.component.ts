@@ -10,27 +10,11 @@ import { BubbleType } from '../../../../../../../../../../shared/models/bubbles/
   selector: 'survey-option-creation',
   templateUrl: './survey-option-creation.html'
 })
-export class SurveyOptionCreationComponent extends AbstractBubbleEntityCreationComponent implements OnInit {
-
-  @Input()
-  bubbleId: number;
-  @Input()
-  eventRef: string;
-  @Output()
-  updatedSurveyBubble = new EventEmitter<SurveyBubble>();
-
-  form: FormGroup;
-  content: FormControl;
+export class SurveyOptionCreationComponent extends AbstractBubbleEntityCreationComponent {
 
   constructor(private surveyHttpService: SurveyHttpService,
               private eventUpdateService: EventUpdateService) {
     super();
-  }
-
-  ngOnInit() {
-    this.form = new FormGroup({
-      content: this.content = new FormControl()
-    });
   }
 
   addOption() {
@@ -38,7 +22,7 @@ export class SurveyOptionCreationComponent extends AbstractBubbleEntityCreationC
       bubbleId: this.bubbleId,
       content: this.content.value,
     }).subscribe((updatedBubble) => {
-      this.updatedSurveyBubble.emit(<SurveyBubble>updatedBubble);
+      this.updatedBubble.emit(<SurveyBubble>updatedBubble);
       this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.SurveyBubble});
       this.toggleCreationCard();
     });

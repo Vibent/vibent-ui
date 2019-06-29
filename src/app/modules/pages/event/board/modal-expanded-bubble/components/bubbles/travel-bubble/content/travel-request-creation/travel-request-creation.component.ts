@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { TravelHttpService } from '../../../../../../../../../../core/services/bubbles-services/travel/http/travel-http.service';
 import { TravelBubble } from '../../../../../../../../../../shared/models/bubbles/TravelBubble';
 import { AlgoliaPlacesService } from '../../../../../../../../../../core/services/algolia-places/algolia-places.service';
@@ -18,10 +18,7 @@ export class TravelRequestCreationComponent extends AbstractBubbleEntityCreation
 
   @Input()
   travelBubble: TravelBubble;
-  @Input()
-  eventRef: string;
-  @Output()
-  updatedTravelBubble = new EventEmitter<TravelBubble>();
+
   placesAutocomplete: any;
   inputPlace: any;
 
@@ -33,11 +30,12 @@ export class TravelRequestCreationComponent extends AbstractBubbleEntityCreation
   }
 
   ngOnInit() {
+    super.ngOnInit();
     this.placesAutocomplete = places({
       appId: AppSettings.ALGOLIA_APP_ID,
       apiKey: AppSettings.ALGOLIA_API_KEY,
       container: document.querySelector('#address-input-request')
-    });
+    }).configure({useDeviceLocation: true, type: 'city'});
 
     this.placesAutocomplete.on('change', e => this.inputPlace = e);
   }
@@ -46,7 +44,7 @@ export class TravelRequestCreationComponent extends AbstractBubbleEntityCreation
     if (!this.inputPlace) {
       Swal({
         type: 'error',
-        title:  this.messageService.OOPS,
+        title: this.messageService.OOPS,
         text: this.messageService.MUST_SELECT_REQUEST_LOCATION,
       });
     }
@@ -55,17 +53,23 @@ export class TravelRequestCreationComponent extends AbstractBubbleEntityCreation
       passByCities: this.inputPlace.suggestion.hit.objectID,
       capacity: 1
     }).subscribe((updatedBubble) => {
-        this.updatedTravelBubble.emit(<TravelBubble> updatedBubble);
+        this.updatedBubble.emit(<TravelBubble>updatedBubble);
         this.eventUpdateService.updateEvent(this.eventRef, {id: this.travelBubble.id, type: BubbleType.TravelBubble});
         this.toggleCreationCard();
+        this.resetAlgoliaInput();
       },
       (e) => {
         Swal({
           type: 'error',
-          title:  this.messageService.OOPS,
+          title: this.messageService.OOPS,
           text: e.error.error.message,
         });
       });
+  }
+
+  resetAlgoliaInput() {
+    this.purge();
+    this.placesAutocomplete.setVal('');
   }
 
 }

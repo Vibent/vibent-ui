@@ -25,7 +25,7 @@
                  formControlName="capacity"
                  name="time">
         </div>
-        <button (click)="toggleCreationCard()"
+        <button (click)="toggleCreationCard(); resetAlgoliaInput()"
                 class="btn btn-outline-danger"
                 i18n="@@delete">TBT</button>
         <button (click)="createProposal()"

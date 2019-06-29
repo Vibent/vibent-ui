@@ -127,11 +127,11 @@ describe('Travel data Service', () => {
   });
 
   it('Check getHeaderLocation from a place which isn\'t a city', () => {
-    expect(travelDataService.getHeaderLocation(secondPlace)).toBe('Villeurbanne');
+    expect(travelDataService.getHeaderLocation(secondPlace)).toBe('<streetnum> <streetmod> Avenue Albert Einstein');
   });
 
   it('Check getHeaderLocation from a place which isn\'t a city', () => {
-    expect(travelDataService.getCompleteAddress(secondPlace)).toBe('Avenue Albert Einstein, Villeurbanne');
+    expect(travelDataService.getCompleteAddress(secondPlace)).toBe('Avenue Albert Einstein');
   });
 
   it('Check getUserActivity general', () => {

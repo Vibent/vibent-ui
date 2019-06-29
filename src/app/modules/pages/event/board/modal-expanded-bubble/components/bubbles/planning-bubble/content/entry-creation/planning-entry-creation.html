@@ -43,7 +43,7 @@
                     name="content"
                     formControlName="content"></textarea>
         </div>
-        <button (click)="toggleCreationCard()"
+        <button (click)="toggleCreationCard(); this.resetDatesInput()"
                 class="btn btn-outline-danger"
                 i18n="@@delete">TBT</button>
         <button (click)="createPlanningEntry()"
