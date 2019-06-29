@@ -25,12 +25,17 @@ import { MailConfirmationComponent } from './core/authentification/register/mail
 import { HomeComponent } from './modules/components/home/home.component';
 import { LoginResolver } from './shared/resolvers/login.resolver';
 import { TermsComponent } from './modules/pages/terms/terms.component';
+import { AboutComponent } from './modules/components/about/about.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
     resolve: {LoginResolver}
+  },
+  {
+    path: 'about',
+    component: AboutComponent
   },
   {
     path: 'terms',

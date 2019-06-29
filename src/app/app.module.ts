@@ -44,6 +44,7 @@ import { TermsModule } from './modules/pages/terms/terms.module';
 import { RoutingStateService } from './core/services/routing-state.service';
 import { ModalManagerService } from './core/services/modal-manager.service';
 import { TutorialModule } from './modules/pages/event/dialogs/tutorial/tutorial.module';
+import { AboutModule } from './modules/components/about/about.module';
 
 @NgModule({
   imports: [
@@ -71,6 +72,7 @@ import { TutorialModule } from './modules/pages/event/dialogs/tutorial/tutorial.
     LoginModule,
     RegisterModule,
     HomeModule,
+    AboutModule,
     ProfileModule,
     ProfileSettingsModule,
     GroupSettingsModule,

@@ -475,7 +475,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">56</context>
+          <context context-type="linenumber">60</context>
         </context-group>
       </trans-unit>
       <trans-unit id="groups" datatype="html">
@@ -515,7 +515,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">64</context>
+          <context context-type="linenumber">68</context>
         </context-group>
       </trans-unit>
       <trans-unit id="language" datatype="html">
@@ -523,7 +523,27 @@
         <target state="translated">Langues</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-us" datatype="html">
+        <source>
+                About us
+              </source>
+        <target state="translated">
+                A propos de nous
+              </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/about/about.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/footer/footer.component.html</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="logout" datatype="html">
@@ -535,7 +555,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">45</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/profile/profile.component.html</context>
@@ -908,6 +928,35 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/survey/survey-explanation.html</context>
           <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-us-text" datatype="html">
+        <source>
+       TBT</source>
+        <target state="translated">
+          Nous sommes deux amis passionnés par ce que nous faisons. Nous voulons fournir une solution simple pour aider
+          chaque groupe d'amis, famille, collègues et plus encore, à organiser facilement leurs événements.
+          Nous croyons aux relations humaines, et nous voulons apporter la meilleure expérience pour connecter les gens
+          entre eux.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/about/about.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-us-subtext" datatype="html">
+        <source>TBT</source>
+        <target state="translated">En parlant de connexions humaines, pourquoi ne pas nous contacter ?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/about/about.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-us-contact" datatype="html">
+        <source>TBT</source>
+        <target state="translated">postmaster@vibent.com</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/about/about.component.html</context>
+          <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="update-your-infos" datatype="html">
@@ -3229,7 +3278,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/footer/footer.component.html</context>
-          <context context-type="linenumber">9</context>
+          <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="update" datatype="html">

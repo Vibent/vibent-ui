@@ -26,7 +26,6 @@
                 Profile
               </a>
             </li>
-
             <li>
               <a id="languageToggle" (click)="toggleLanguagesSubmenu($event)" class="dropdown-item" i18n="@@language">TBT</a>
               <ul id="languageMenu" class="collapse">
@@ -35,6 +34,11 @@
                   <a (click)="changeLanguage('fr')"><span class="flag-icon flag-icon-fr"></span>Français</a>
                 </li>
               </ul>
+            </li>
+            <li>
+              <a class="dropdown-item" i18n="@@about-us" [routerLink]="['/about']">
+                About us
+              </a>
             </li>
 
             <li>
