@@ -1,14 +1,10 @@
 import {
   Component,
-  EventEmitter,
   Input,
   OnInit,
-  Output
 } from '@angular/core';
 import {
-  AlgoliaPlace,
   TravelBubble,
-  TravelDataModel,
   TravelRequest
 } from '../../../../../../../../../../shared/models/bubbles/TravelBubble';
 import { AlgoliaPlacesService } from '../../../../../../../../../../core/services/algolia-places/algolia-places.service';
@@ -24,6 +20,7 @@ import Swal from 'sweetalert2';
 import { EventUpdateService } from '../../../../../../../../../../core/services/bubbles-services/event-update.service';
 import { MessageService } from '../../../../../../../../../../core/services/i18n/message.service';
 import { BubbleType } from '../../../../../../../../../../shared/models/bubbles/IBubble';
+import { AbstractTravelEntity } from '../abstract/abstract-travel-entity.component';
 
 declare const $: any;
 
@@ -31,25 +28,11 @@ declare const $: any;
   selector: 'travel-request',
   templateUrl: './travel-request.html'
 })
-export class TravelRequestComponent implements OnInit {
+export class TravelRequestComponent extends AbstractTravelEntity implements OnInit {
 
   @Input()
   travelRequest: TravelRequest;
-  @Input()
-  travelBubble: TravelBubble;
-  @Input()
-  eventRef: string;
-  @Input()
-  bubbleId: number;
-  @Output()
-  updatedTravelBubble = new EventEmitter<TravelBubble>();
   requesterUser: Observable<User>;
-  firstClick = true;
-  place: AlgoliaPlace;
-  travelDataModel: TravelDataModel = new TravelDataModel();
-  isConnectedUserRequest = false;
-
-  map: any;
 
   constructor(
     private userManagementService: UserManagementService,
@@ -57,60 +40,17 @@ export class TravelRequestComponent implements OnInit {
     private eventUpdateService: EventUpdateService,
     private httpService: HttpService,
     private travelHttpService: TravelHttpService,
-    private travelDataService: TravelDataService,
+    protected travelDataService: TravelDataService,
     private messageService: MessageService) {
-
-  }
-
-  resizeMapbox() {
-    if (this.firstClick && !$('#request-collapse-' + this.travelRequest.id).hasClass('in')) {
-      this.firstClick = this.place ?
-        !!this.constructMap(this.place) :
-        !!this.algoliaPlacesService.getPlace(this.travelRequest.passByCities).subscribe((place) => {
-          this.constructMap(place);
-        });
-    }
-    // resize is needed in case proposal was collapsed when another opened
-    else {
-      setTimeout(() => {
-        this.map.resize();
-      });
-    }
-  }
-
-  constructMap(place) {
-    const latLng = Array.isArray(place._geoloc) ? {
-      lng: place._geoloc[0].lng,
-      lat: place._geoloc[0].lat
-    } : {lng: place._geoloc.lng, lat: place._geoloc.lat};
-    mapboxgl.accessToken = AppSettings.MAPBOX_API_KEY;
-    this.map = new mapboxgl.Map({
-      container: 'request-map-' + this.travelRequest.id,
-      style: AppSettings.MAPBOX_STYLE,
-      center: [latLng.lng, latLng.lat],
-      zoom: 14
-    });
-
-    new mapboxgl.Marker().setLngLat([latLng.lng, latLng.lat]).addTo(this.map);
-
-    setTimeout(() => {
-      this.map.resize();
-    });
-
-    return true;
+    super(travelDataService);
   }
 
   ngOnInit() {
     this.requesterUser = this.httpService.getUser(this.travelRequest.userRef);
     this.algoliaPlacesService.getPlace(this.travelRequest.passByCities).subscribe((place) => {
       this.place = place;
-      this.populateTravelDataModel(place);
+      this.populateRequestTravelDataModel(place, this.travelRequest);
     });
-  }
-
-  populateTravelDataModel(place: AlgoliaPlace) {
-    this.travelDataService.populateTravelDataModel(this.travelDataModel, place);
-    this.isConnectedUserRequest = this.travelDataService.isCurrentUserEntity(this.travelRequest);
   }
 
   takeThem() {
@@ -133,12 +73,11 @@ export class TravelRequestComponent implements OnInit {
               requestId: this.travelRequest.id
             }).subscribe((updatedBubble) => {
               this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.TravelBubble});
-              this.updatedTravelBubble.emit(<TravelBubble> updatedBubble);
+              this.updatedTravelBubble.emit(<TravelBubble>updatedBubble);
             });
           }
         });
-      }
-      else {
+      } else {
         Swal({
           type: 'error',
           title: this.messageService.NO_SEAT_IN_CAR,
@@ -146,8 +85,7 @@ export class TravelRequestComponent implements OnInit {
           showConfirmButton: true,
         });
       }
-    }
-    else {
+    } else {
       Swal({
         type: 'error',
         title: this.messageService.NEED_CREATE_PROPOSAL,

@@ -13,9 +13,6 @@ import { ModalManagerService, VibentModals } from '../../../../../../../core/ser
 })
 export class PlanningExplanationComponent extends AbstractExplanation implements OnInit {
 
-  form: FormGroup;
-  planningTitle: FormControl;
-
   constructor(private bubbleCreationService: BubbleCreationService,
               protected modalManagerService: ModalManagerService,
               protected eventUpdateService: EventUpdateService,
@@ -24,15 +21,12 @@ export class PlanningExplanationComponent extends AbstractExplanation implements
   }
 
   ngOnInit(): void {
-    this.form = new FormGroup({
-      planningTitle: this.planningTitle = new FormControl(),
-    });
   }
 
   createBubble() {
     this.closeModal();
     this.modalManagerService.hideModal(VibentModals.SELECT_BUBBLE_TYPE)
-    this.bubbleCreationService.createPlanningBubble(this.eventRef, this.planningTitle.value).subscribe(() => {
+    this.bubbleCreationService.createPlanningBubble(this.eventRef, '').subscribe(() => {
       this.onBubbleCreated();
       this.bubblesCreationsSwalAlerts.alertPlanningBubbleCreated();
     });

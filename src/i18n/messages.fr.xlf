@@ -731,6 +731,10 @@
           <context context-type="linenumber">95</context>
         </context-group>
         <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/planning-bubble/planning-bubble-preview.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
           <context context-type="linenumber">43</context>
         </context-group>
@@ -1170,7 +1174,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request/travel-request.html</context>
-          <context context-type="linenumber">43</context>
+          <context context-type="linenumber">44</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal-creation/travel-proposal-creation.html</context>
@@ -2499,7 +2503,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request-creation/travel-request-creation.html</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">25</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/content/survey-option-creation/survey-option-creation.html</context>
@@ -2652,14 +2656,14 @@
       </trans-unit>
       <trans-unit id="need-car-from" datatype="html">
         <source>TBT</source>
-        <target state="translated">J'ai besoin qu'on m'emmnène de</target>
+        <target state="translated">a besoin qu'on l'emmnène de</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request/travel-request.html</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">15</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request/travel-request.html</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="take-them" datatype="html">
@@ -2669,7 +2673,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-request/travel-request.html</context>
-          <context context-type="linenumber">37</context>
+          <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="offer-ride" datatype="html">
@@ -2914,7 +2918,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/planning/planning-explanation.html</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="linenumber">9</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/free/free-explanation.html</context>
@@ -2988,14 +2992,6 @@
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="type-planning-title" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Le titre de votre Planning:</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/planning/planning-explanation.html</context>
-          <context context-type="linenumber">8</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="type-free-title" datatype="html">
         <source>TBT</source>
         <target state="translated">Le titre de votre bulle Libre:</target>
@@ -3014,7 +3010,7 @@
       </trans-unit>
       <trans-unit id="type-survey-title" datatype="html">
         <source>TBT</source>
-        <target state="translated">Le titre de votre Sondage:</target>
+        <target state="translated">Entrez votre question:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/survey/survey-explanation.html</context>
           <context context-type="linenumber">8</context>

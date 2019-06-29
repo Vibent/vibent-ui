@@ -1,7 +1,7 @@
-<div class="card travel-proposal">
+<div *ngIf="dataModelLoaded" class="card travel-proposal">
   <div class="card-header proposal-header cursor-pointer" id="headingTwo"
        data-toggle="collapse"
-       (click)="resizeMapbox()"
+       (click)="resizeRequestMapbox(travelRequest)"
        [attr.data-target]="'#request-collapse-'+ travelRequest.id">
     <div class="d-flex flex-row">
       <div class="p-2 align-self-center">
@@ -11,6 +11,7 @@
       </div>
       <div class="p-2 align-self-center">
         <div class="proposal-trip">
+          {{(requesterUser | async)?.firstName}}
           <span i18n="@@need-car-from">TBT</span>
           {{travelDataModel.headerLocation}}
         </div>

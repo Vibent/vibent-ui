@@ -20,7 +20,7 @@
             <tbody>
             <tr option-creation
                 [bubbleId]="checkboxBubble.id"
-                (updatedCheckboxBubble)="this.onBubbleUpdate($event)"
+                (updatedBubble)="this.onBubbleUpdate($event)"
                 [eventRef]="eventRef">
             </tr>
             <tr *ngFor="let option of checkboxBubble.options"

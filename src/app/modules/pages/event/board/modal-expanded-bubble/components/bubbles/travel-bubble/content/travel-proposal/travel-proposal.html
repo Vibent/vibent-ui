@@ -1,12 +1,12 @@
-<div class="card travel-proposal">
+<div *ngIf="dataModelLoaded" class="card travel-proposal">
   <div class="card-header proposal-header cursor-pointer" id="headingTwo"
        data-toggle="collapse"
-       (click)="resizeMapbox()"
+       (click)="resizeProposalMapbox(travelProposal)"
        [attr.data-target]="'#proposal-collapse-'+ this.travelProposal.id">
     <div class="d-flex flex-row">
       <div class="p-2 align-self-center">
         <div class="avatar">
-          <img *ngIf="proposerUser" src="{{proposerUser.profilePicLocation}}">
+          <img src="{{(proposerUser | async)?.profilePicLocation}}">
         </div>
       </div>
       <div class="p-2 align-self-center">
@@ -37,7 +37,7 @@
             <i *ngIf="request.userRef === user.ref"
                class="fas fa-minus-circle user-seat-taker cursor-pointer"
                (click)="deleteRequest(request)"></i>
-            <img *ngIf="requesterUsers[request.userRef]" src="{{requesterUsers[request.userRef].profilePicLocation}}">
+            <img src="{{(requesterUsers[request.userRef] | async)?.profilePicLocation}}">
           </div>
         </div>
         <div *ngFor="let dummy of travelDataModel.availableSeatsList" class="p-2 align-self-center">

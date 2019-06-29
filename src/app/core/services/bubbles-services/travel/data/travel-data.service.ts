@@ -18,14 +18,18 @@ export class TravelDataService {
     this.user = this.userManagementService.getMe();
   }
 
-  populateTravelDataModel(travelDataModel: TravelDataModel,
-                          place: AlgoliaPlace,
-                          travelProposal?: TravelProposal) {
-    if (travelProposal) {
-      travelDataModel.seatsLeft = this.getSeatsLeft(travelProposal);
-      travelDataModel.availableSeatsList = this.getAvailableSeatsList(travelProposal);
-      travelDataModel.canTakeSeat = this.getCanTakeSeat(travelProposal);
-    }
+  populateProposalTravelDataModel(travelDataModel: TravelDataModel, place: AlgoliaPlace, travelProposal?: TravelProposal) {
+    travelDataModel.seatsLeft = this.getSeatsLeft(travelProposal);
+    travelDataModel.availableSeatsList = this.getAvailableSeatsList(travelProposal);
+    travelDataModel.canTakeSeat = this.getCanTakeSeat(travelProposal);
+    this.populateCommonTravelDataModel(travelDataModel, place);
+  }
+
+  populateRequestTravelDataModel(travelDataModel: TravelDataModel, place: AlgoliaPlace){
+    this.populateCommonTravelDataModel(travelDataModel, place);
+  }
+
+  populateCommonTravelDataModel(travelDataModel: TravelDataModel, place: AlgoliaPlace) {
     travelDataModel.headerLocation = this.getHeaderLocation(place);
     travelDataModel.completeAddress = this.getCompleteAddress(place);
   }
@@ -55,7 +59,7 @@ export class TravelDataService {
   }
 
   getHeaderLocation(place) {
-    return place.is_city ? place.locale_names.default[0] : place.city.default[0];
+    return place.locale_names.default[0];
   }
 
   getCanTakeSeat(travelProposal: TravelProposal) {
@@ -64,17 +68,9 @@ export class TravelDataService {
 
   getCompleteAddress(place): string {
 
-    if (place.is_city) {
-      return place.city.default[0];
-    }
-
     let c = place.locale_names.default[0];
     c = c.replace('<streetnum> ', '');
     c = c.replace('<streetmod> ', '');
-
-    if (place.city) {
-      c = c + ', ' + place.city.default[0];
-    }
 
     return c;
   }

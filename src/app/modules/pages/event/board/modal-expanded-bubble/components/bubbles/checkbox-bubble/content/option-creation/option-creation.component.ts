@@ -16,15 +16,8 @@ import { BubbleType } from '../../../../../../../../../../shared/models/bubbles/
   templateUrl: './option-creation.html'
 })
 export class OptionCreationComponent extends AbstractBubbleEntityCreationComponent implements OnInit {
-  @Input()
-  eventRef: string;
-  @Input()
-  bubbleId: number;
-  @Output()
-  updatedCheckboxBubble = new EventEmitter<CheckboxBubble>();
+
   user: User;
-  form: FormGroup;
-  optionContent: FormControl;
 
   constructor(private userManagementService: UserManagementService,
               private checkboxHttpService: CheckboxHttpService,
@@ -34,17 +27,15 @@ export class OptionCreationComponent extends AbstractBubbleEntityCreationCompone
   }
 
   ngOnInit(): void {
-    this.form = new FormGroup({
-      optionContent: this.optionContent = new FormControl(),
-    });
+    super.ngOnInit();
   }
 
   createOption() {
     this.checkboxHttpService.createOption({
       bubbleId: this.bubbleId,
-      content: this.optionContent.value
+      content: this.content.value
     }).subscribe((updatedBubble) => {
-      this.updatedCheckboxBubble.emit(<CheckboxBubble>updatedBubble);
+      this.updatedBubble.emit(<CheckboxBubble>updatedBubble);
       this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.CheckboxBubble});
       this.toggleCreationCard();
     });
