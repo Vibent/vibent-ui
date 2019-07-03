@@ -866,7 +866,7 @@
       </trans-unit>
       <trans-unit id="about-us-subtext" datatype="html">
         <source>TBT</source>
-        <target state="translated">As we talk about human connections, why not contact us?</target>
+        <target state="translated">Talking about human connections, why  not contact us ?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/about/about.component.html</context>
           <context context-type="linenumber">8</context>
