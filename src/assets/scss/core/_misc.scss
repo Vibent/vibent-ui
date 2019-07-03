@@ -4,6 +4,12 @@ body {
   font-weight: 300;
 }
 
+// https://stackoverflow.com/questions/37313872/vertical-scrolling-in-ios-not-smooth
+// non-standard feature: Smooth vertical scroll for ios
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
 legend {
   border-bottom: 0;
 }

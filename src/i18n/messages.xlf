@@ -208,7 +208,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">56</context>
+          <context context-type="linenumber">60</context>
         </context-group>
       </trans-unit>
       <trans-unit id="event-board" datatype="html">
@@ -244,14 +244,31 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">64</context>
+          <context context-type="linenumber">68</context>
         </context-group>
       </trans-unit>
       <trans-unit id="language" datatype="html">
         <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-us" datatype="html">
+        <source>
+                About us
+              </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/about/about.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/footer/footer.component.html</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="logout" datatype="html">
@@ -260,7 +277,7 @@
               </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">45</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/profile/profile.component.html</context>
@@ -574,6 +591,28 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/survey/survey-explanation.html</context>
           <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-us-text" datatype="html">
+        <source>
+       TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/about/about.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-us-subtext" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/about/about.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-us-contact" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/about/about.component.html</context>
+          <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="update-your-infos" datatype="html">
@@ -1655,7 +1694,7 @@
         <source>Copyright © <x id="INTERPOLATION" equiv-text="{{date | date:&apos;yyyy&apos;}}"/> Vibent. All rights reserved</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/footer/footer.component.html</context>
-          <context context-type="linenumber">9</context>
+          <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="manage-group" datatype="html">
