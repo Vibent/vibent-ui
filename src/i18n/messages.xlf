@@ -281,7 +281,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/profile/profile.component.html</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="found-secret-link" datatype="html">
@@ -1248,43 +1248,27 @@
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="profile-groups-membership" datatype="html">
-        <source><x id="INTERPOLATION" equiv-text="{{user.memberships.length}}"/>
-              <x id="ICU" equiv-text="{user.memberships.length, plural, =1 {...} other {...}}"/>
-            </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/profile/profile.component.html</context>
-          <context context-type="linenumber">16</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="cb6f5ad6a6add86372f3dbf0dd936d84d5ea993f" datatype="html">
-        <source>{VAR_PLURAL, plural, =1 {group} other {groups} }</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/profile/profile.component.html</context>
-          <context context-type="linenumber">17</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="events-opportunities" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{user.participations.length}}"/>
               <x id="ICU" equiv-text="{user.participations.length, plural, =1 {...} other {...}}"/>
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/profile/profile.component.html</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="349771e61ebf13424cf70ad9006734e037fb627d" datatype="html">
         <source>{VAR_PLURAL, plural, =1 {event opportunity} other {events opportunities} }</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/profile/profile.component.html</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="settings" datatype="html">
         <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/profile/profile.component.html</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">31</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/expanded-travel-bubble.html</context>

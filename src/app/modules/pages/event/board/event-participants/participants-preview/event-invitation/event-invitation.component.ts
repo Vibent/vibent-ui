@@ -23,7 +23,7 @@ export class EventInvitationComponent {
 
   joinEvent(): void {
     this.user = this.userManagementService.getMe();
-    this.httpService.validateStandaloneInviteToken(
+    this.httpService.validateEventInviteToken(
       {membershipRequests: {userRef: this.user.ref}}, this.route.snapshot.paramMap.get('token')).toPromise()
       .then(() => {
         Swal({

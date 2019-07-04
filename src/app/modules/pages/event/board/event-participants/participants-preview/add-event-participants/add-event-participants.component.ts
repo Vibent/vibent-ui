@@ -31,7 +31,7 @@ export class AddEventParticipantsComponent implements OnInit {
       emails: this.emails = this.fb.array([this.createItem(), this.createItem(), this.createItem()]),
     });
 
-    this.httpService.getStandaloneInviteToken(this.eventRef).subscribe((link) => {
+    this.httpService.getEventInviteToken(this.eventRef).subscribe((link) => {
       this.generatedLink = environment.appUrl + '/invite/e/' + link.token;
       this.cd.detectChanges();
     });
@@ -78,7 +78,7 @@ export class AddEventParticipantsComponent implements OnInit {
 
     // Proceed with call to back
     const recipients = this.emails.getRawValue().map(v => v.email).filter(e => e.length !== 0);
-    this.httpService.standaloneEventMailInvite({
+    this.httpService.eventMailInvite({
       ref: this.eventRef,
       recipients: recipients
     }).subscribe(() => {
