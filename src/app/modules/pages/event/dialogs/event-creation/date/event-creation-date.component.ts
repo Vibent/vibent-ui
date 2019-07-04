@@ -58,7 +58,7 @@ export class EventCreationDateComponent implements OnInit {
     };
 
     this.loaderService.displayLoadingPageModal();
-    this.httpService.createStandaloneEvent(event).subscribe((event) => {
+    this.httpService.createEvent(event).subscribe((event) => {
       this.createdEvent.emit(event);
       this.dateValidSetted = true;
       this.loaderService.closeLoadingPageModal();

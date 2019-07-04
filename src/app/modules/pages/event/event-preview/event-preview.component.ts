@@ -18,7 +18,7 @@ export class EventPreviewComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.additionnalEventInfos = this.additonalEventInfoService.getStandaloneAdditionnalInfos(this.event);
+    this.additionnalEventInfos = this.additonalEventInfoService.getEventAdditionnalInfos(this.event);
   }
 
 }

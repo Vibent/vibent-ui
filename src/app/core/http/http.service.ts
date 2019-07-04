@@ -85,18 +85,13 @@ export class HttpService {
     return this.http.post(this.API_URL + '/event', body, this.getOptions());
   }
 
-  public createStandaloneEvent(event: Event) {
-    const body = JSON.stringify(event);
-    return this.http.post(this.API_URL + '/event/standalone', body, this.getOptions());
+  public getEventInviteToken(eventRef: string): any {
+    return this.http.get(this.API_URL + '/event/' + eventRef + '/inviteToken', this.getOptions());
   }
 
-  public getStandaloneInviteToken(eventRef: string): any {
-    return this.http.get(this.API_URL + '/event/standalone/' + eventRef + '/inviteToken', this.getOptions());
-  }
-
-  public validateStandaloneInviteToken(content: any, token: string) {
+  public validateEventInviteToken(content: any, token: string) {
     const body = JSON.stringify(content);
-    return this.http.post(this.API_URL + '/event/standalone/validateInviteToken/' + token, body, this.getOptions());
+    return this.http.post(this.API_URL + '/event/validateInviteToken/' + token, body, this.getOptions());
   }
 
   public deleteEvent(eventRef: string): any {
@@ -108,9 +103,9 @@ export class HttpService {
     return this.http.patch<Event>(this.API_URL + '/event/' + event.ref, body, this.getOptions());
   }
 
-  public standaloneEventMailInvite(mailInvite: MailInvite) {
+  public eventMailInvite(mailInvite: MailInvite) {
     const body = JSON.stringify(mailInvite);
-    return this.http.post(this.API_URL + '/event/standalone/mailInvite', body, this.getOptions());
+    return this.http.post(this.API_URL + '/event/mailInvite', body, this.getOptions());
   }
 
   /*** User ***/

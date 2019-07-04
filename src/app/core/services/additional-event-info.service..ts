@@ -38,30 +38,12 @@ export class AdditionalEventInfoService {
     return a.diff(b, 'days');
   }
 
-  getAdditionnalInfos(event: Event): Promise<AdditionnalEventInfos> {
-    let additionnalInfos: AdditionnalEventInfos;
-
-    return this.httpService.getGroup(event.groupRef).toPromise().then(group => {
-      additionnalInfos = {
-        groupName: group.name,
-        groupSize: group.memberships.length,
-        remainingDays: this.getRemainingDays(event),
-        participants: this.getParticipants(event),
-        location: '',
-        bubblesNumber: this.getBubblesSum(event)
-      };
-    }).then(() => additionnalInfos);
-
-  }
-
-  getStandaloneAdditionnalInfos(event: Event): AdditionnalEventInfos {
-
-      return {
-        remainingDays: this.getRemainingDays(event),
-        participants: this.getParticipants(event),
-        bubblesNumber: this.getBubblesSum(event)
-      };
-
+  getEventAdditionnalInfos(event: Event): AdditionnalEventInfos {
+    return {
+      remainingDays: this.getRemainingDays(event),
+      participants: this.getParticipants(event),
+      bubblesNumber: this.getBubblesSum(event)
+    };
   }
 
 }
