@@ -1,27 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../../../services/authentication.service';
 import { CookieService } from 'ngx-cookie-service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { MessageService } from '../../../services/i18n/message.service';
+import { VibentBaseComponent, VibentRoutes } from '../../../../shared/components/base-component/base-component';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html'
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent extends VibentBaseComponent implements OnInit {
 
-  public registerForm: FormGroup;
+  registerForm: FormGroup;
 
-  public firstName: FormControl;
-  public lastName: FormControl;
-  public email: FormControl;
-  public phone: FormControl;
-  public password: FormControl;
-  public passwordConfirmation: FormControl;
+  firstName: FormControl;
+  lastName: FormControl;
+  email: FormControl;
+  phone: FormControl;
+  password: FormControl;
+  passwordConfirmation: FormControl;
 
-  public formsValidAfterRegister: any = {
+  formsValidAfterRegister: any = {
     firstName: true,
     lastName: true,
     email: true,
@@ -29,19 +30,19 @@ export class RegisterComponent implements OnInit {
     password: true,
     passwordConfirmation: true,
     emailOrPhone: true,
-};
+  };
   currentPhone: string;
 
-  constructor(private cookieService: CookieService,
+  constructor(protected cookieService: CookieService,
+              protected route: ActivatedRoute,
+              protected router: Router,
               private authenticationService: AuthenticationService,
-              private router: Router,
               private messageService: MessageService) {
-    if (this.cookieService.check('token')) {
-      this.router.navigate(['/events']);
-    }
+    super(route, router, cookieService);
   }
 
   ngOnInit() {
+    super.ngOnInit();
     this.createFormControls();
     this.createForm();
   }
@@ -71,7 +72,7 @@ export class RegisterComponent implements OnInit {
     ]);
   }
 
-  public getNumber(event): void  {
+  getNumber(event): void  {
     this.currentPhone = event;
   }
 
@@ -86,7 +87,7 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  public checkLoginAndRegister(): void {
+  checkLoginAndRegister(): void {
     this.formsValidAfterRegister = {
       firstName: this.firstName.valid,
       lastName: this.lastName.valid,
@@ -112,11 +113,11 @@ export class RegisterComponent implements OnInit {
         title: this.messageService.REGISTER_CONFIRMATION,
         showConfirmButton: true,
       });
-      this.router.navigate(['/login']);
+      this.loginPage();
     }
   }
 
-  public formsAllCorrects(): boolean {
+  formsAllCorrects(): boolean {
     let value = true;
     for (const key in this.formsValidAfterRegister) {
         value = value && this.formsValidAfterRegister[key];
@@ -124,15 +125,15 @@ export class RegisterComponent implements OnInit {
     return value;
   }
 
-  public loginPage() {
-    this.router.navigate(['/login']);
+  loginPage() {
+    this.navigateToUrl(VibentRoutes.LOGIN_URL);
   }
 
   aboutPage() {
-    this.router.navigate(['/terms']);
+    this.navigateToUrl(VibentRoutes.TERMS_URL);
   }
 
-  public onFail(e): void {
+  onFail(e): void {
     Swal({
       type: 'error',
       title:  this.messageService.OOPS,

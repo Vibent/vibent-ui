@@ -5,12 +5,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { MessageService } from '../../services/i18n/message.service';
+import { VibentBaseComponent, VibentRoutes } from '../../../shared/components/base-component/base-component';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html'
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent extends VibentBaseComponent implements OnInit {
 
   loginForm: FormGroup;
 
@@ -22,22 +23,18 @@ export class LoginComponent implements OnInit {
   currentPhone: string;
   currentpasswordPhoneValidator: boolean;
 
-  returnUrl: string;
-
-  constructor(private cookieService: CookieService,
-              private route: ActivatedRoute,
+  constructor(protected route: ActivatedRoute,
+              protected router: Router,
+              protected cookieService: CookieService,
               private authenticationService: AuthenticationService,
-              private router: Router,
               private messageService: MessageService) {
-    if (this.cookieService.check('token')) {
-      this.router.navigate(['/events']);
-    }
+    super(route, router, cookieService);
   }
 
   ngOnInit() {
+    super.ngOnInit();
     this.createFormControls();
     this.createForm();
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/events';
   }
 
   createFormControls() {
@@ -99,10 +96,10 @@ export class LoginComponent implements OnInit {
   }
 
   public forgotPassword(): void {
-    this.router.navigate(['/forgot']);
+    this.navigateToUrl(VibentRoutes.FORGOT_URL);
   }
 
   public register(): void {
-    this.router.navigate(['/register']);
+    this.navigateToUrl(VibentRoutes.REGISTER_URL);
   }
 }

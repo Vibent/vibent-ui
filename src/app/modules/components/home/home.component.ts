@@ -2,33 +2,26 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { BubbleType } from '../../../shared/models/bubbles/IBubble';
+import { VibentBaseComponent, VibentRoutes } from '../../../shared/components/base-component/base-component';
 
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent extends VibentBaseComponent {
 
-  returnUrl: string;
   bubbleDisplayed: BubbleType = BubbleType.AlimentationBubble;
   BubbleType = BubbleType;
 
-  constructor(private router: Router,
-              private route: ActivatedRoute,
-              private cookieService: CookieService) {
-    if (this.cookieService.check('token')) {
-      this.router.navigate(['/events']);
-    }
+  constructor(protected router: Router,
+              protected route: ActivatedRoute,
+              protected cookieService: CookieService) {
+    super(route, router, cookieService);
   }
 
   loginPage() {
-    this.router.navigate(['/login'], {queryParams: {returnUrl: this.returnUrl}});
+    this.navigateToUrl(VibentRoutes.LOGIN_URL);
   }
-
-  ngOnInit(): void {
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/events';
-  }
-
 
 }
