@@ -4,6 +4,7 @@ import { HttpService } from '../../../http/http.service';
 import Swal from 'sweetalert2';
 import { CookieService } from 'ngx-cookie-service';
 import { MessageService } from '../../../services/i18n/message.service';
+import { VibentRoutes } from '../../../../shared/components/base-component/base-component';
 
 @Component({
   template: ''
@@ -38,6 +39,6 @@ export class MailConfirmationComponent implements OnInit {
   }
 
   loginPage() {
-    this.router.navigate(['/login']);
+    this.router.navigate([VibentRoutes.DEFAULT_URL]);
   }
 }
