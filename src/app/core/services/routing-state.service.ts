@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { VibentRoutes } from '../../shared/components/base-component/base-component';
 
 /**
  * Saves the history of routes taken during navigation
@@ -27,13 +28,14 @@ export class RoutingStateService {
   /**
    * Return the previous url sanitized
    */
-  public getPreviousRoute(): string {
+  public getPreviousRoute(): VibentRoutes {
     const previous = this.history[this.history.length - 2];
     this.unstackHistory();
     if (previous) {
       return this.sanitizeRoute(previous);
+    } else {
+      return VibentRoutes.DEFAULT_URL;
     }
-    else return '/';
   }
 
   /**
@@ -46,10 +48,34 @@ export class RoutingStateService {
   /**
    *  Routes may contain returnUrl and we have to consider a route by prefix
    */
-  sanitizeRoute(route: string) {
+  sanitizeRoute(route: string): VibentRoutes {
     if (route.indexOf('?') > -1) {
-      return route.substring(0, route.indexOf('?'));
+      return this.reverseMapping(route.substring(0, route.indexOf('?')));
+    } else {
+      return  this.reverseMapping(route);
     }
-    else return route;
+  }
+
+  reverseMapping(route: string): VibentRoutes {
+    switch (route) {
+      case '/events':
+        return VibentRoutes.EVENTS_URL;
+      case '/login':
+        return VibentRoutes.LOGIN_URL;
+      case '/register':
+        return VibentRoutes.REGISTER_URL;
+      case '/forgot':
+        return VibentRoutes.FORGOT_URL;
+      case '/':
+        return VibentRoutes.DEFAULT_URL;
+      case '/about':
+        return VibentRoutes.ABOUT_URL;
+      case '/terms':
+        return VibentRoutes.TERMS_URL;
+      case '/me':
+        return VibentRoutes.ME_URL;
+      default:
+        return VibentRoutes.DEFAULT_URL;
+    }
   }
 }
