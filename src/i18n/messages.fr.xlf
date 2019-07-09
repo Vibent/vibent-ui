@@ -721,7 +721,7 @@
       </trans-unit>
       <trans-unit id="checkbox" datatype="html">
         <source>TBT</source>
-        <target state="translated">Checkbox</target>
+        <target state="translated">Check-list</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
           <context context-type="linenumber">85</context>
@@ -800,7 +800,7 @@
       </trans-unit>
       <trans-unit id="checkbox-bubble" datatype="html">
         <source>TBT</source>
-        <target state="translated">Bulle Checkbox</target>
+        <target state="translated">Bulle Check-list</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
           <context context-type="linenumber">118</context>
@@ -2770,7 +2770,7 @@
       <trans-unit id="travel-bubble-settings" datatype="html">
         <source>TBT</source>
         <target state="translated">
-          Paramètres de le bulle Transport
+          Paramètres de la bulle Transport
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/settings/travel-settings.html</context>
@@ -2794,7 +2794,7 @@
       <trans-unit id="free-bubble-settings" datatype="html">
         <source>TBT</source>
         <target state="translated">
-          Paramètres de le bulle Libre
+          Paramètres de la bulle Libre
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/free-bubble/settings/free-settings.html</context>
@@ -2803,7 +2803,7 @@
       </trans-unit>
       <trans-unit id="checkbox-bubble-settings" datatype="html">
         <source>TBT</source>
-        <target state="translated">Paramètres de le bulle Checkbox</target>
+        <target state="translated">Paramètres de la bulle Check-list</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/checkbox-bubble/settings/checkbox-settings.html</context>
           <context context-type="linenumber">5</context>
@@ -2882,7 +2882,7 @@
       <trans-unit id="planning-bubble-settings" datatype="html">
         <source>TBT</source>
         <target state="translated">
-          Paramètres de le bulle Planning
+          Paramètres de la bulle Planning
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/settings/planning-settings.html</context>
@@ -3014,7 +3014,7 @@
       </trans-unit>
       <trans-unit id="type-checkbox-title" datatype="html">
         <source>TBT</source>
-        <target state="translated">Le titre de votre Checkbox:</target>
+        <target state="translated">Le titre de votre check-list:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/checkbox/checkbox-explanation.html</context>
           <context context-type="linenumber">8</context>
