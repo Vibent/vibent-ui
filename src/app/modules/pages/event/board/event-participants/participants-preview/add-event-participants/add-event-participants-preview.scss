@@ -1,5 +1,7 @@
+@import "../../../../../../../../assets/scss/core/variables/_brand.scss";
+
 .paper-plane {
-  color: #138ccd;
+  color: $vibent-blue;
   font-size: 30px
 }
 
@@ -36,5 +38,5 @@ input.email {
     cursor: pointer;
   }
 
-  color: #138ccd;
+  color: $vibent-blue;
 }

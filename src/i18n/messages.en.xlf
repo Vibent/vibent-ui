@@ -1868,6 +1868,10 @@
           <context context-type="linenumber">13</context>
         </context-group>
         <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/create-distribution-list.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/welcome/tutorial-welcome.component.html</context>
           <context context-type="linenumber">4</context>
         </context-group>
@@ -3061,6 +3065,71 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/social/social-auth.component.html</context>
           <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="your-distribution-lists" datatype="html">
+        <source>TBT</source>
+        <target state="translated">Your distribution lists</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/profile-distribution-lists-section.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="545bef32a657222813e458d260eef95c6cfae8f1" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ user.participations.length === 0 ?
+           'A distribution list must be created from an event, so create an event before please.' : ''}}"/></source>
+        <target state="translated"><x id="INTERPOLATION" equiv-text="{{ user.participations.length === 0 ?
+           'A distribution list must be created from an event, so create an event before please.' : ''}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/profile-distribution-lists-section.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="create-distribution-list" datatype="html">
+        <source>TBT</source>
+        <target state="translated">Create a distribution list</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/create-distribution-list.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="distribution-list-description" datatype="html">
+        <source>TBT</source>
+        <target state="translated">A distribution list allows you to quickly invite a group of people to events.
+          Select one of your events to create a list from. Participants from the event will be added to the list
+          automatically. You will be able to add or remove people once the list is created.
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/create-distribution-list.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="select-an-event" datatype="html">
+        <source>TBT</source>
+        <target state="translated">Select an event</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/create-distribution-list.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7539ddd360dd947cd6849f8ec4faa4a8ebd9834a" datatype="html">
+        <source>
+                  <x id="INTERPOLATION" equiv-text="{{dlei.title}}"/> (<x id="INTERPOLATION_1" equiv-text="{{dlei.peopleIn}}"/>  <x id="ICU" equiv-text="{dlei.peopleIn, plural, =1 {...} other {...}}"/>)
+                </source>
+        <target state="new">
+                  <x id="INTERPOLATION" equiv-text="{{dlei.title}}"/> (<x id="INTERPOLATION_1" equiv-text="{{dlei.peopleIn}}"/>  <x id="ICU" equiv-text="{dlei.peopleIn, plural, =1 {...} other {...}}"/>)
+                </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/create-distribution-list.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5554f9014ed46a5eb2969f5c68010b84b388f51a" datatype="html">
+        <source>{VAR_PLURAL, plural, =1 {person} other {people} }</source>
+        <target state="translated">{VAR_PLURAL, plural, =1 {person} other {people} }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/create-distribution-list.component.html</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="tutorial-welcome-title" datatype="html">

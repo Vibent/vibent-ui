@@ -1,0 +1,13 @@
+<div class="distribution-lists-section">
+  <div class="section-title" i18n="@@your-distribution-lists">TBT</div>
+  <div class="d-flex flex-wrap justify-content-center">
+    <div class="p-2 align-self-center">
+      <div (click)="user.participations.length > 0 && createDistributionList()"
+           [ngClass]="user.participations.length === 0 ? 'add-distribution-list-disabled' : 'add-distribution-list'"
+           i18n-title title="{{ user.participations.length === 0 ?
+           'A distribution list must be created from an event, so create an event before please.' : ''}}">
+        <i class="fas fa-plus"></i>
+      </div>
+    </div>
+  </div>
+</div>

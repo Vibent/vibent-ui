@@ -1,3 +1,5 @@
+@import "../../../../../../../assets/scss/core/variables/_brand.scss";
+
 .invite-other-people {
 
   span {
@@ -12,10 +14,10 @@
     cursor: pointer;
   }
 
-  color: #138ccd;
+  color: $vibent-blue;
 }
 
 .test {
-  color: #138ccd;
+  color: $vibent-blue;
   font-size: 30px
 }
