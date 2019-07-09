@@ -4,7 +4,6 @@
 
 export class PlanningBubble extends IBubble {
   entries ?: PlanningEntry[];
-  title ?: string;
 }
 
 export class PlanningEntry {
