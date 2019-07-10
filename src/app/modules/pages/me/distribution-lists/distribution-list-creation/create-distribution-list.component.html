@@ -1,0 +1,31 @@
+<div class="modal fade" id="modalDistributionListCreation" tabindex="-1" role="dialog">
+  <div class="modal-dialog full-bootstrap-modal" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close black-close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body bg-light">
+        <div class="container vibent-modal">
+          <h2><b i18n="@@create-distribution-list">TBT</b></h2>
+          <p class="lead" i18n="@@distribution-list-description">TBT</p>
+          <form>
+            <div class="form-group">
+              <label for="select-event" i18n="@@select-an-event">TBT</label>
+              <select class="form-control" id="select-event">
+                <option *ngFor="let dlei of distributionListEventsInfos"
+                        [value]="dlei.title" i18n>
+                  {{dlei.title}} ({{dlei.peopleIn}}  {dlei.peopleIn, plural, =1 {person} other {people}})
+                </option>
+              </select>
+            </div>
+          </form>
+          <div class="row justify-content-center m-t-50">
+            <button class="btn btn-round green-button" i18n="@@next">TBT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

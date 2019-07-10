@@ -11,6 +11,7 @@ import { LoaderService } from '../../../../services/loader/service/loader.servic
 import { MessageService } from '../../../../services/i18n/message.service';
 import { LanguageService } from '../../../../services/i18n/language.service';
 import { ModalManagerService, VibentModals } from '../../../../services/modal-manager.service';
+import { UserManagementService } from '../../../../services/user-management.service';
 
 declare const $: any;
 
@@ -36,6 +37,7 @@ export class EventSettingsComponent implements OnInit {
               private loaderService: LoaderService,
               private eventUpdateService: EventUpdateService,
               private languageService: LanguageService,
+              private userManagementService: UserManagementService,
               private router: Router,
               private adminPanelService: EventAdminPanelService,
               private modalManagerService: ModalManagerService,
@@ -70,7 +72,9 @@ export class EventSettingsComponent implements OnInit {
     }).then((result) => {
       if (result.value) {
         this.close();
-        this.httpService.deleteEvent(this.event.ref).subscribe();
+        this.httpService.deleteEvent(this.event.ref).subscribe(() => {
+          this.userManagementService.setMe();
+        });
         Swal(
           this.messageService.DELETED,
           this.messageService.EVENT_DELETED,

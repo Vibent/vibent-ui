@@ -1,6 +1,9 @@
+@import "../../../../../../assets/scss/core/variables/_brand.scss";
+@import "../../../../../../assets/scss/core/variables/_colors.scss";
+
 @mixin bubble-icon-fa() {
   font-size: 48px;
-  color: #138ccd;
+  color: $vibent-blue;
   border-radius: 50%;
 }
 

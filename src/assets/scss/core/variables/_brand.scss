@@ -1,7 +1,8 @@
+@import "colors.scss";
+
 // Bootstrap brand color customization
 
 /*     brand Colors              */
-
 $brand-primary: $deep-purple-500 !default;
 $brand-info: $cyan-500 !default;
 $brand-success: $green-500 !default;
@@ -11,4 +12,5 @@ $brand-rose: $pink-500 !default;
 $brand-inverse: $black-color !default;
 $vibent-purple: $deep-purple-500 !default;
 $vibent-green: $green-700 !default;
+$vibent-blue: #138ccd !default;
 $vibent-red: $red-600 !default;

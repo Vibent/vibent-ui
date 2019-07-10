@@ -8,6 +8,7 @@ import {
 import { HttpService } from '../../../../../../core/http/http.service';
 import { Event } from '../../../../../../shared/models/event';
 import { LoaderService } from '../../../../../../core/services/loader/service/loader.service';
+import { UserManagementService } from '../../../../../../core/services/user-management.service';
 
 declare const $: any;
 
@@ -31,6 +32,7 @@ export class EventCreationDateComponent implements OnInit {
   constructor(public navigation: EventCreationNavigationService,
               private httpService: HttpService,
               private fb: FormBuilder,
+              private userManagementService: UserManagementService,
               private cd: ChangeDetectorRef,
               private loaderService: LoaderService,
               private languageService: LanguageService) {
@@ -63,6 +65,8 @@ export class EventCreationDateComponent implements OnInit {
       this.dateValidSetted = true;
       this.loaderService.closeLoadingPageModal();
       this.navigation.setState(EventCreationState.PARTICIPANTS);
+      // update user participations
+      this.userManagementService.setMe();
       this.change.emit();
     }, () => {
       this.dateValidSetted = false;

@@ -1,0 +1,32 @@
+@mixin add-distribution-list() {
+  background: #e8e8e8;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding-top: 8px;
+  .fas{
+    font-size: 13px;
+  }
+}
+
+.distribution-lists-section {
+  margin: 11px;
+
+  .section-title {
+    color: #767676;
+    font-size: 15px;
+  }
+
+  .add-distribution-list {
+    @include add-distribution-list();
+    cursor: pointer;
+    &:hover {
+      background: #d3d3d3;
+    }
+  }
+
+  .add-distribution-list-disabled{
+    @include add-distribution-list();
+    opacity: 0.5;
+  }
+}

@@ -21,9 +21,9 @@
             {{user.email}}
             <connected-social [user]="user"></connected-social>
           </div>
+          <distribution-list-section [user]="user"></distribution-list-section>
         </div>
       </div>
-
     </div>
     <a (click)="openSettingsDialog()" class="text-black-50 cursor-pointer">
       <h5 class="col-xl-12 text-center">
@@ -41,3 +41,4 @@
   </div>
 </div>
 <profile-settings [user]=user></profile-settings>
+<create-distribution-list [user]="user"></create-distribution-list>
