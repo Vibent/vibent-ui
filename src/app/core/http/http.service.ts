@@ -7,6 +7,7 @@ import { Email, PasswordReset, User } from '../../shared/models/user';
 import { EventParticipant } from '../../shared/models/event-participant';
 import { environment } from '../../../environments/environment';
 import { MailInvite } from '../../shared/models/mailInvite';
+import { DistributionList, DistributionListRequest } from '../../shared/models/distribution-list';
 
 @Injectable()
 export class HttpService {
@@ -131,6 +132,16 @@ export class HttpService {
   public patchEventParticipations(participation: EventParticipant) {
     const body = JSON.stringify(participation);
     return this.http.patch(this.API_URL + '/participation/' + participation.id, body, this.getOptions());
+  }
+
+  /*** Distribution list ***/
+  public createDistributionList(list: DistributionListRequest) {
+    const body = JSON.stringify(list);
+    return this.http.post(this.API_URL + '/distribution-list', body, this.getOptions());
+  }
+
+  public getConnectedDistributionLists() {
+    return this.http.get<DistributionList[]>(this.API_URL + '/distribution-list/me', this.getOptions());
   }
 
   /*** Auth ***/

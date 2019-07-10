@@ -6,6 +6,7 @@ import { Subscription } from 'rxjs';
 import { AuthenticationService } from '../../../../core/services/authentication.service';
 import { ScreenService } from '../../../../core/services/screen.service';
 import { ModalManagerService, VibentModals } from '../../../../core/services/modal-manager.service';
+import { DistributionList } from '../../../../shared/models/distribution-list';
 
 @Component({
   selector: 'app-profile',
@@ -14,6 +15,7 @@ import { ModalManagerService, VibentModals } from '../../../../core/services/mod
 export class ProfileComponent implements OnInit, OnDestroy {
 
   user: User;
+  expandedList: DistributionList;
   subscriptions: Subscription[] = [];
 
   constructor(private route: ActivatedRoute,
@@ -32,7 +34,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
     }));
   }
 
-  public openSettingsDialog(): void {
+  openSettingsDialog(): void {
     this.modalManagerService.showModal(VibentModals.PROFILE_SETTINGS);
   }
 
@@ -42,9 +44,14 @@ export class ProfileComponent implements OnInit, OnDestroy {
     });
   }
 
-  public logout(): void {
+  logout(): void {
     this.authenticationService.logout();
     this.router.navigate(['']);
+  }
+
+  onListExpand(list: DistributionList) {
+    this.expandedList = list;
+    this.modalManagerService.showModal(VibentModals.EXPANDED_DISTRIBUTION_LIST);
   }
 
 }

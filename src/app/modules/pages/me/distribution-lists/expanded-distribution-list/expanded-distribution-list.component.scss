@@ -1,0 +1,20 @@
+@import "../../../../../../assets/scss/core/mixins/_buttons.scss";
+@import "../../../../../../assets/scss/core/variables/_shadow.scss";
+@import "../../../../../../assets/scss/core/mixins/_vendor-prefixes.scss";
+
+.list-margin{
+  margin-bottom: 0.5em
+}
+
+.edit-list {
+  @include board-button();
+  @include board-button-hover();
+  @include edit-button();
+  //override board-button background
+  background: #e4e4e4;
+  //position edit at top left of modal close
+  position: absolute;
+  right: 65px;
+  top: 25px;
+
+}

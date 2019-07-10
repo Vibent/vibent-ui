@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpService } from '../../http/http.service';
 import { take } from 'rxjs/operators';
 import { Event } from '../../../shared/models/event';
+import { BehaviorSubject } from 'rxjs';
 
 export interface IEventSimpleInformation {
   title: string;
@@ -11,6 +12,8 @@ export interface IEventSimpleInformation {
 
 @Injectable()
 export class DistributionListsService {
+
+  updated$ = new BehaviorSubject(false);
 
   constructor(private httpService: HttpService) {
   }
@@ -30,6 +33,10 @@ export class DistributionListsService {
           resolve(dlei);
         });
     });
+  }
+
+  updateUserLists() {
+    this.updated$.next(true);
   }
 
 }

@@ -1,30 +1,39 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
-import { User } from '../../../../../shared/models/user';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import {
-  DistributionListsService, IEventSimpleInformation
-} from '../../../../../core/services/distribution-lists/distribution-lists.service';
+  DistributionListsNavigationService,
+  DistributionListState
+} from '../../../../../core/services/distribution-lists/distribution-lists-navigation.service';
+import { DistributionList } from '../../../../../shared/models/distribution-list';
+import { DistributionListsService } from '../../../../../core/services/distribution-lists/distribution-lists.service';
 
 @Component({
   selector: 'create-distribution-list',
   templateUrl: './create-distribution-list.component.html',
-  styleUrls: ['./create-distribution-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CreateDistributionListComponent implements OnInit {
+export class CreateDistributionListComponent {
 
-  @Input()
-  user: User;
-  distributionListEventsInfos: IEventSimpleInformation[];
+  DistributionListState = DistributionListState;
+  private createdList: DistributionList;
 
-  constructor(private distributionListsService: DistributionListsService,
+  constructor(public navigation: DistributionListsNavigationService,
+              private distributionListsService: DistributionListsService,
               private cd: ChangeDetectorRef) {
   }
 
-  ngOnInit() {
-    this.distributionListsService.getUserEvents().then((data: IEventSimpleInformation[]) => {
-      this.distributionListEventsInfos = data;
-      this.cd.detectChanges();
-    });
+  onNext() {
+    this.cd.detectChanges();
   }
 
+  onListCreated(list: DistributionList) {
+    this.createdList = list;
+    this.navigation.setState(DistributionListState.SUMMARY);
+    this.distributionListsService.updateUserLists();
+    this.cd.detectChanges();
+  }
+
+  onClose() {
+    this.navigation.purge();
+    this.cd.detectChanges();
+  }
 }

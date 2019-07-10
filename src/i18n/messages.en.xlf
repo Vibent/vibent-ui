@@ -977,6 +977,10 @@
           <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/description/event-creation-description.component.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/description/distribution-list-creation-description.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="leave-group" datatype="html">
         <source>TBT</source>
@@ -1034,6 +1038,10 @@
           <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/title/event-creation-title.component.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/title/distribution-list-creation-title.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="required-title" datatype="html">
         <source>TBT</source>
@@ -1048,6 +1056,10 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/title/event-creation-title.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/title/distribution-list-creation-title.component.html</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
@@ -1703,6 +1715,10 @@
           <context context-type="sourcefile">app/modules/pages/event/board/event.component.html</context>
           <context context-type="linenumber">16</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/expanded-distribution-list/expanded-distribution-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="no-event-in-group" datatype="html">
         <source>TBT</source>
@@ -1851,6 +1867,10 @@
           <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/title/event-creation-title.component.html</context>
           <context context-type="linenumber">2</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/title/distribution-list-creation-title.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="next" datatype="html">
         <source>TBT</source>
@@ -1868,8 +1888,16 @@
           <context context-type="linenumber">13</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/create-distribution-list.component.html</context>
-          <context context-type="linenumber">25</context>
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/event-choice/distribution-list-creation-event.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/title/distribution-list-creation-title.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/description/distribution-list-creation-description.component.html</context>
+          <context context-type="linenumber">11</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/welcome/tutorial-welcome.component.html</context>
@@ -1897,6 +1925,10 @@
         <target state="translated">Choose a description</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/description/event-creation-description.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/description/distribution-list-creation-description.component.html</context>
           <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
@@ -3071,7 +3103,7 @@
         <source>TBT</source>
         <target state="translated">Your distribution lists</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/profile-distribution-lists-section.component.html</context>
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/profile-section/profile-distribution-lists-section.component.html</context>
           <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
@@ -3081,16 +3113,16 @@
         <target state="translated"><x id="INTERPOLATION" equiv-text="{{ user.participations.length === 0 ?
            'A distribution list must be created from an event, so create an event before please.' : ''}}"/></target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/profile-distribution-lists-section.component.html</context>
-          <context context-type="linenumber">7</context>
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/profile-section/profile-distribution-lists-section.component.html</context>
+          <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="create-distribution-list" datatype="html">
         <source>TBT</source>
         <target state="translated">Create a distribution list</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/create-distribution-list.component.html</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/event-choice/distribution-list-creation-event.component.html</context>
+          <context context-type="linenumber">1</context>
         </context-group>
       </trans-unit>
       <trans-unit id="distribution-list-description" datatype="html">
@@ -3100,36 +3132,81 @@
           automatically. You will be able to add or remove people once the list is created.
         </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/create-distribution-list.component.html</context>
-          <context context-type="linenumber">12</context>
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/event-choice/distribution-list-creation-event.component.html</context>
+          <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="select-an-event" datatype="html">
         <source>TBT</source>
         <target state="translated">Select an event</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/create-distribution-list.component.html</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/event-choice/distribution-list-creation-event.component.html</context>
+          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7539ddd360dd947cd6849f8ec4faa4a8ebd9834a" datatype="html">
+      <trans-unit id="5d46ec19a2ea240c0c8f49ef9602d6b11d8abca1" datatype="html">
         <source>
-                  <x id="INTERPOLATION" equiv-text="{{dlei.title}}"/> (<x id="INTERPOLATION_1" equiv-text="{{dlei.peopleIn}}"/>  <x id="ICU" equiv-text="{dlei.peopleIn, plural, =1 {...} other {...}}"/>)
-                </source>
-        <target state="new">
-                  <x id="INTERPOLATION" equiv-text="{{dlei.title}}"/> (<x id="INTERPOLATION_1" equiv-text="{{dlei.peopleIn}}"/>  <x id="ICU" equiv-text="{dlei.peopleIn, plural, =1 {...} other {...}}"/>)
-                </target>
+        <x id="INTERPOLATION" equiv-text="{{dlei.title}}"/> (<x id="INTERPOLATION_1" equiv-text="{{dlei.peopleIn}}"/>  <x id="ICU" equiv-text="{dlei.peopleIn, plural, =1 {...} other {...}}"/>)
+      </source>
+        <target state="translated">
+        <x id="INTERPOLATION" equiv-text="{{dlei.title}}"/> (<x id="INTERPOLATION_1" equiv-text="{{dlei.peopleIn}}"/>  <x id="ICU" equiv-text="{dlei.peopleIn, plural, =1 {...} other {...}}"/>)
+      </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/create-distribution-list.component.html</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/event-choice/distribution-list-creation-event.component.html</context>
+          <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5554f9014ed46a5eb2969f5c68010b84b388f51a" datatype="html">
         <source>{VAR_PLURAL, plural, =1 {person} other {people} }</source>
         <target state="translated">{VAR_PLURAL, plural, =1 {person} other {people} }</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/create-distribution-list.component.html</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/event-choice/distribution-list-creation-event.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-to-create-list" datatype="html">
+        <source>Your about to create a distribution list</source>
+        <target state="translated">Your about to create a distribution list</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/title/distribution-list-creation-title.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/description/distribution-list-creation-description.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="list-created" datatype="html">
+        <source>Your list "<x id="INTERPOLATION" equiv-text="{{list.title}}"/>" is created</source>
+        <target state="translated">Your list "<x id="INTERPOLATION" equiv-text="{{list.title}}"/>" is created</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/summary/distribution-list-creation-summary.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="people-added-list" datatype="html">
+        <source><x id="ICU" equiv-text="{list.memberRefs.length, plural, =1 {...} other {...}}"/> have been added to the list</source>
+        <target state="translated"><x id="ICU" equiv-text="{list.memberRefs.length, plural, =1 {...} other {...}}"/> have been added to the list</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/summary/distribution-list-creation-summary.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b1582b1bc6cafa2a08b45bbbba0e08716f5c214b" datatype="html">
+        <source>{VAR_PLURAL, plural, =1 {Person} other {People} }</source>
+        <target state="translated">{VAR_PLURAL, plural, =1 {Person} other {People} }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/summary/distribution-list-creation-summary.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="list-created-still-can-add" datatype="html">
+        <source>TBT</source>
+        <target state="translated">Your list is created, but you can always add people to
+  it.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/summary/distribution-list-creation-summary.component.html</context>
+          <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="tutorial-welcome-title" datatype="html">
@@ -3166,7 +3243,7 @@
       </trans-unit>
       <trans-unit id="tutorial-join-event-title" datatype="html">
         <source>TBT</source>
-        <target state="new">Join an event</target>
+        <target state="translated">Join an event</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/join-event/tutorial-join-event.component.html</context>
           <context context-type="linenumber">1</context>
@@ -3174,7 +3251,7 @@
       </trans-unit>
       <trans-unit id="tutorial-join-event-body" datatype="html">
         <source>TBT</source>
-        <target state="new">Joining an event is even easier! The event organizer can either sent you a magic link or invite you by email. By simple putting the magic link in a browser, you will automatically be added to the event.</target>
+        <target state="translated">Joining an event is even easier! The event organizer can either sent you a magic link or invite you by email. By simple putting the magic link in a browser, you will automatically be added to the event.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/join-event/tutorial-join-event.component.html</context>
           <context context-type="linenumber">2</context>
@@ -3182,7 +3259,7 @@
       </trans-unit>
       <trans-unit id="tutorial-profile-title" datatype="html">
         <source>TBT</source>
-        <target state="new">Your profile</target>
+        <target state="translated">Your profile</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/profile/tutorial-profile.component.html</context>
           <context context-type="linenumber">1</context>
@@ -3190,7 +3267,7 @@
       </trans-unit>
       <trans-unit id="tutorial-profile-body" datatype="html">
         <source>TBT</source>
-        <target state="new">Your profile is where you can edit your personal information, set your profile picture, link your social networks and more. Vibent is not a social network and anybody who is not in an event with you will not be able to see anything about you. Your privacy is our priority.</target>
+        <target state="translated">Your profile is where you can edit your personal information, set your profile picture, link your social networks and more. Vibent is not a social network and anybody who is not in an event with you will not be able to see anything about you. Your privacy is our priority.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/profile/tutorial-profile.component.html</context>
           <context context-type="linenumber">2</context>
@@ -3198,7 +3275,7 @@
       </trans-unit>
       <trans-unit id="tutorial-enjoy-title" datatype="html">
         <source>TBT</source>
-        <target state="new">Enjoy!</target>
+        <target state="translated">Enjoy!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/enjoy/tutorial-enjoy.component.html</context>
           <context context-type="linenumber">1</context>
@@ -3206,7 +3283,7 @@
       </trans-unit>
       <trans-unit id="tutorial-enjoy-body" datatype="html">
         <source>TBT</source>
-        <target state="new">If you have any other questions, feel free to contact the Vibent team.</target>
+        <target state="translated">If you have any other questions, feel free to contact the Vibent team.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/enjoy/tutorial-enjoy.component.html</context>
           <context context-type="linenumber">2</context>

@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProfileDistributionListsSectionComponent } from './profile-distribution-lists-section.component';
-import { CreateDistributionListModule } from './distribution-list-creation/create-distribution-list.module';
+import { CreateDistributionListModule } from '../distribution-list-creation/create-distribution-list.module';
+import { ExpandedDistributionListModule } from '../expanded-distribution-list/expanded-distribution-list.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    CreateDistributionListModule
+    CreateDistributionListModule,
+    ExpandedDistributionListModule
   ],
   declarations: [
     ProfileDistributionListsSectionComponent,

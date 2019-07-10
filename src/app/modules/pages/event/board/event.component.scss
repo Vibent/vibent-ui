@@ -21,18 +21,5 @@
 .edit-event {
   @include board-button();
   @include board-button-hover();
-  padding-top: 2px;
-  padding-bottom: 2px;
-  margin-bottom: 10px;
-  display: inline-block;
-
-  i {
-    font-size: 12px;
-    margin-left: 10px;
-  }
-
-  span {
-    margin-left: 7px;
-    margin-right: 14px;
-  }
+  @include edit-button();
 }

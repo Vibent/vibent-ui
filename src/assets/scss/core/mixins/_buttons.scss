@@ -58,6 +58,23 @@
   }
 }
 
+@mixin edit-button() {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-bottom: 10px;
+  display: inline-block;
+
+  i {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  span {
+    margin-left: 7px;
+    margin-right: 14px;
+  }
+}
+
 @mixin bmd-flat-button-variant(
   $color,
   $border: $bmd-btn-border,

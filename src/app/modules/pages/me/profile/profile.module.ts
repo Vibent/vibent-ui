@@ -5,9 +5,10 @@ import { RouterModule } from '@angular/router';
 import { ProfileImageService } from '../../../../core/http/profile-image.service';
 import { ConnectedSocialModule } from '../connected-social/connected-social.module';
 import { ProfileSettingsModule } from '../dialogs/profile-settings/profile-settings.module';
-import { ProfileDistributionListsSectionModule } from '../distribution-lists/profile-distribution-lists-section.module';
+import { ProfileDistributionListsSectionModule } from '../distribution-lists/profile-section/profile-distribution-lists-section.module';
 import { CreateDistributionListModule } from '../distribution-lists/distribution-list-creation/create-distribution-list.module';
 import { DistributionListsService } from '../../../../core/services/distribution-lists/distribution-lists.service';
+import { ExpandedDistributionListModule } from '../distribution-lists/expanded-distribution-list/expanded-distribution-list.module';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { DistributionListsService } from '../../../../core/services/distribution
     ProfileSettingsModule,
     ConnectedSocialModule,
     ProfileDistributionListsSectionModule,
-    CreateDistributionListModule
+    CreateDistributionListModule,
+    ExpandedDistributionListModule
   ],
   declarations: [
     ProfileComponent
