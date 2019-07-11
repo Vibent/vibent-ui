@@ -752,6 +752,10 @@
           <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/description/event-creation-description.component.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/description/distribution-list-creation-description.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="leave-group" datatype="html">
         <source>TBT</source>
@@ -820,6 +824,10 @@
           <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/title/event-creation-title.component.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/title/distribution-list-creation-title.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="required-title" datatype="html">
         <source>TBT</source>
@@ -833,6 +841,10 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/title/event-creation-title.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/title/distribution-list-creation-title.component.html</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
@@ -1326,6 +1338,10 @@
           <context context-type="sourcefile">app/modules/pages/event/board/event.component.html</context>
           <context context-type="linenumber">16</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/expanded-distribution-list/expanded-distribution-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="groups-header" datatype="html">
         <source>TBT</source>
@@ -1617,6 +1633,10 @@
           <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/title/event-creation-title.component.html</context>
           <context context-type="linenumber">2</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/title/distribution-list-creation-title.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="next" datatype="html">
         <source>TBT</source>
@@ -1633,8 +1653,16 @@
           <context context-type="linenumber">13</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/create-distribution-list.component.html</context>
-          <context context-type="linenumber">25</context>
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/event-choice/distribution-list-creation-event.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/title/distribution-list-creation-title.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/description/distribution-list-creation-description.component.html</context>
+          <context context-type="linenumber">11</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/welcome/tutorial-welcome.component.html</context>
@@ -1661,6 +1689,10 @@
         <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/description/event-creation-description.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/description/distribution-list-creation-description.component.html</context>
           <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
@@ -2506,7 +2538,7 @@
       <trans-unit id="your-distribution-lists" datatype="html">
         <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/profile-distribution-lists-section.component.html</context>
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/profile-section/profile-distribution-lists-section.component.html</context>
           <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
@@ -2514,45 +2546,84 @@
         <source><x id="INTERPOLATION" equiv-text="{{ user.participations.length === 0 ?
            &apos;A distribution list must be created from an event, so create an event before please.&apos; : &apos;&apos;}}"/></source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/profile-distribution-lists-section.component.html</context>
-          <context context-type="linenumber">7</context>
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/profile-section/profile-distribution-lists-section.component.html</context>
+          <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="create-distribution-list" datatype="html">
         <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/create-distribution-list.component.html</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/event-choice/distribution-list-creation-event.component.html</context>
+          <context context-type="linenumber">1</context>
         </context-group>
       </trans-unit>
       <trans-unit id="distribution-list-description" datatype="html">
         <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/create-distribution-list.component.html</context>
-          <context context-type="linenumber">12</context>
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/event-choice/distribution-list-creation-event.component.html</context>
+          <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="select-an-event" datatype="html">
         <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/create-distribution-list.component.html</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/event-choice/distribution-list-creation-event.component.html</context>
+          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7539ddd360dd947cd6849f8ec4faa4a8ebd9834a" datatype="html">
+      <trans-unit id="5d46ec19a2ea240c0c8f49ef9602d6b11d8abca1" datatype="html">
         <source>
-                  <x id="INTERPOLATION" equiv-text="{{dlei.title}}"/> (<x id="INTERPOLATION_1" equiv-text="{{dlei.peopleIn}}"/>  <x id="ICU" equiv-text="{dlei.peopleIn, plural, =1 {...} other {...}}"/>)
-                </source>
+        <x id="INTERPOLATION" equiv-text="{{dlei.title}}"/> (<x id="INTERPOLATION_1" equiv-text="{{dlei.peopleIn}}"/>  <x id="ICU" equiv-text="{dlei.peopleIn, plural, =1 {...} other {...}}"/>)
+      </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/create-distribution-list.component.html</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/event-choice/distribution-list-creation-event.component.html</context>
+          <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5554f9014ed46a5eb2969f5c68010b84b388f51a" datatype="html">
         <source>{VAR_PLURAL, plural, =1 {person} other {people} }</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/create-distribution-list.component.html</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/event-choice/distribution-list-creation-event.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-to-create-list" datatype="html">
+        <source>Your about to create a distribution list</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/title/distribution-list-creation-title.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/description/distribution-list-creation-description.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="list-created" datatype="html">
+        <source>Your list &quot;<x id="INTERPOLATION" equiv-text="{{list.title}}"/>&quot; is created</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/summary/distribution-list-creation-summary.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="people-added-list" datatype="html">
+        <source><x id="ICU" equiv-text="{list.memberRefs.length, plural, =1 {...} other {...}}"/> have been added to the list</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/summary/distribution-list-creation-summary.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b1582b1bc6cafa2a08b45bbbba0e08716f5c214b" datatype="html">
+        <source>{VAR_PLURAL, plural, =1 {Person} other {People} }</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/summary/distribution-list-creation-summary.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="list-created-still-can-add" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/summary/distribution-list-creation-summary.component.html</context>
+          <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="tutorial-welcome-title" datatype="html">

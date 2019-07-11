@@ -26,7 +26,6 @@ export class EventCreationTitleComponent implements OnInit {
   titleValidSetted = true;
 
   constructor(public navigation: EventCreationNavigationService,
-              private cd: ChangeDetectorRef,
               private fb: FormBuilder) {
   }
 

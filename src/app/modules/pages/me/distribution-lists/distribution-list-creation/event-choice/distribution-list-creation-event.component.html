@@ -1,0 +1,18 @@
+<h2><b i18n="@@create-distribution-list">TBT</b></h2>
+<p class="lead" i18n="@@distribution-list-description">TBT</p>
+<div [formGroup]>
+  <div class="form-group">
+    <label for="select-event" i18n="@@select-an-event">TBT</label>
+    <select #t (change)="eventPick(t)" class="form-control" id="select-event">
+      <option *ngFor="let dlei of distributionListEventsInfos"
+              [attr.selected]="dlei.ref === this.selectEventRef ? true : null"
+              [id]="dlei.ref"
+              [value]="dlei.title" i18n>
+        {{dlei.title}} ({{dlei.peopleIn}}  {dlei.peopleIn, plural, =1 {person} other {people}})
+      </option>
+    </select>
+  </div>
+</div>
+<div class="row justify-content-center m-t-50">
+  <button (click)="onNext()" class="btn btn-round green-button" i18n="@@next">TBT</button>
+</div>

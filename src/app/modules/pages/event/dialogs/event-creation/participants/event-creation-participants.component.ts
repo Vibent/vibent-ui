@@ -1,8 +1,6 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { EventCreationNavigationService } from '../../../../../../core/services/event-creation-navigation.service';
 import { Event } from '../../../../../../shared/models/event';
-import { ModalManagerService, VibentModals } from '../../../../../../core/services/modal-manager.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'event-creation-participants',

@@ -21,7 +21,7 @@
             {{user.email}}
             <connected-social [user]="user"></connected-social>
           </div>
-          <distribution-list-section [user]="user"></distribution-list-section>
+          <distribution-list-section [user]="user" (listExpanded)="onListExpand($event)"></distribution-list-section>
         </div>
       </div>
     </div>
@@ -41,4 +41,5 @@
   </div>
 </div>
 <profile-settings [user]=user></profile-settings>
-<create-distribution-list [user]="user"></create-distribution-list>
+<create-distribution-list></create-distribution-list>
+<expanded-distribution-list [distributionList]="expandedList"></expanded-distribution-list>

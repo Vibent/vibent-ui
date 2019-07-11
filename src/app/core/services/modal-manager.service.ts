@@ -11,6 +11,7 @@ export enum VibentModals {
   EVENT_SETTINGS = '#modalEventSettings',
   TUTORIAL = '#modalTutorial',
   DISTRIBUTION_LIST_CREATION = '#modalDistributionListCreation',
+  EXPANDED_DISTRIBUTION_LIST = '#modalExpandedDistributionList',
 }
 
 @Injectable()
