@@ -7,8 +7,8 @@ import { ProfileImageService } from '../../../../../core/http/profile-image.serv
 import { UserManagementService } from '../../../../../core/services/user-management.service';
 import { LoaderService } from '../../../../../core/services/loader/service/loader.service';
 import { ModalManagerService, VibentModals } from '../../../../../core/services/modal-manager.service';
-
-declare const $: any;
+import { NotificationsService, NotificationType } from '../../../../../core/services/notifications.service';
+import { MessageService } from '../../../../../core/services/i18n/message.service';
 
 @Component({
   selector: 'profile-settings',
@@ -31,6 +31,8 @@ export class ProfileSettingsComponent implements OnInit {
               private httpService: HttpService,
               private profileImageService: ProfileImageService,
               private modalManagerService: ModalManagerService,
+              private notificationService: NotificationsService,
+              private messageService: MessageService,
               private loaderService: LoaderService,
               private router: Router,
               private userManagementService: UserManagementService) {
@@ -77,7 +79,6 @@ export class ProfileSettingsComponent implements OnInit {
   }
 
   public updateInfo(): void {
-    this.loaderService.displayLoadingPageModal();
     this.firstnameValidSetted = this.firstName.valid;
     this.lastnameValidSetted = this.lastName.valid;
 
@@ -89,16 +90,33 @@ export class ProfileSettingsComponent implements OnInit {
       lastName: this.form.value.lastName
     };
 
-    this.httpService.updateUser(user).subscribe(() => {
-      this.userManagementService.setMe();
-    });
+    if (this.firstnameValidSetted && this.lastnameValidSetted) {
+      this.loaderService.displayLoadingPageModal();
+      this.httpService.updateUser(user).subscribe(() => {
+        this.updateUserAndCloseModal();
+      }, () => {
+        this.notifyErrorAndCloseLoading();
+      });
+    }
     if (this.fileToUpload) {
       this.loaderService.displayLoadingPageModal();
       this.profileImageService.uploadProfilePic(this.fileToUpload).subscribe(() => {
-        this.userManagementService.setMe();
+        this.updateUserAndCloseModal();
+      }, () => {
+        this.notifyErrorAndCloseLoading();
       });
     }
+  }
+
+  updateUserAndCloseModal() {
+    this.userManagementService.setMe();
+    this.loaderService.closeLoadingPageModal();
     this.close();
+  }
+
+  notifyErrorAndCloseLoading() {
+    this.notificationService.notify(this.messageService.AN_ERROR_OCCURED, NotificationType.DANGER);
+    this.loaderService.closeLoadingPageModal();
   }
 
 }

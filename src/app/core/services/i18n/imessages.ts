@@ -1,4 +1,5 @@
 export interface IMessages {
+  AN_ERROR_OCCURED: string;
   ALIMENTATION_BUBBLE_CREATED: string;
   ARE_YOU_SURE: string;
   ATTACH_REQUEST: string;
@@ -29,6 +30,7 @@ export interface IMessages {
   GROUP_JOINED_TEXT: string;
   GROUP_UPDATED: string;
   INVITATION_SENT: string;
+  LIST_DELETED: string;
   LEAVE_GROUP: string;
   LEAVE_GROUP_TEXT: string;
   MIN_ONE_EMAIL_REQUIRED: string;

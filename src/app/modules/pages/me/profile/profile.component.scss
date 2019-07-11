@@ -1,0 +1,17 @@
+@import "../../../../../assets/scss/core/mixins/_buttons.scss";
+@import "../../../../../assets/scss/core/variables/_shadow.scss";
+@import "../../../../../assets/scss/core/mixins/_vendor-prefixes.scss";
+
+.edit-button {
+  @include board-button();
+  @include board-button-hover();
+  @include edit-button();
+  float: right;
+  margin: 5px;
+}
+
+.logout-button{
+  @include board-button();
+  @include board-button-hover();
+  @include edit-button();
+}

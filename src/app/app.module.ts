@@ -21,7 +21,7 @@ import { EventsModule } from './modules/pages/event/attended-events/events.modul
 import { EventModule } from './modules/pages/event/board/event.module';
 import { GroupModule } from './modules/pages/group/board/group.module';
 import { ProfileModule } from './modules/pages/me/profile/profile.module';
-import { ProfileSettingsModule } from './modules/pages/me/dialogs/profile-settings/profile-settings.module';
+import { ProfileSettingsModule } from './modules/pages/me/profile/settings/profile-settings.module';
 import { GroupSettingsModule } from './core/admin-panels/group/dialogs/group-settings/group-settings.module';
 import { PublicGroupModule } from './modules/pages/group/public-board/public-group.module';
 import { GroupRequestsModule } from './core/admin-panels/group/dialogs/group-requests/group-requests.module';

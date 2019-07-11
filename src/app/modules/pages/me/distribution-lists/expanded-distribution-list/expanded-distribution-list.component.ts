@@ -1,5 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { DistributionListsNavigationService } from '../../../../../core/services/distribution-lists/distribution-lists-navigation.service';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { DistributionList } from '../../../../../shared/models/distribution-list';
 
 @Component({
@@ -8,15 +7,21 @@ import { DistributionList } from '../../../../../shared/models/distribution-list
   styleUrls: ['./expanded-distribution-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ExpandedDistributionListComponent implements OnInit {
+export class ExpandedDistributionListComponent {
 
   @Input()
   distributionList: DistributionList;
+  settingsOpen = false;
 
-  constructor(private navigation: DistributionListsNavigationService) {
+  constructor() {
   }
 
-  ngOnInit() {
+  offSettings() {
+    this.settingsOpen = false;
+  }
+
+  onSettings() {
+    this.settingsOpen = true;
   }
 
 }

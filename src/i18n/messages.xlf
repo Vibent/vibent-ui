@@ -281,7 +281,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/profile/profile.component.html</context>
-          <context context-type="linenumber">38</context>
+          <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="found-secret-link" datatype="html">
@@ -618,35 +618,35 @@
       <trans-unit id="update-your-infos" datatype="html">
         <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html</context>
+          <context context-type="sourcefile">app/modules/pages/me/profile/settings/profile-settings.component.html</context>
           <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
       <trans-unit id="can-change-infos-here" datatype="html">
         <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html</context>
+          <context context-type="sourcefile">app/modules/pages/me/profile/settings/profile-settings.component.html</context>
           <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="edit-avatar" datatype="html">
         <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html</context>
+          <context context-type="sourcefile">app/modules/pages/me/profile/settings/profile-settings.component.html</context>
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="crop-image" datatype="html">
         <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html</context>
+          <context context-type="sourcefile">app/modules/pages/me/profile/settings/profile-settings.component.html</context>
           <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="first-name" datatype="html">
         <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html</context>
+          <context context-type="sourcefile">app/modules/pages/me/profile/settings/profile-settings.component.html</context>
           <context context-type="linenumber">39</context>
         </context-group>
         <context-group purpose="location">
@@ -657,14 +657,14 @@
       <trans-unit id="required-first-name" datatype="html">
         <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html</context>
+          <context context-type="sourcefile">app/modules/pages/me/profile/settings/profile-settings.component.html</context>
           <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="last-name" datatype="html">
         <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html</context>
+          <context context-type="sourcefile">app/modules/pages/me/profile/settings/profile-settings.component.html</context>
           <context context-type="linenumber">45</context>
         </context-group>
         <context-group purpose="location">
@@ -675,14 +675,14 @@
       <trans-unit id="required-last-name" datatype="html">
         <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html</context>
+          <context context-type="sourcefile">app/modules/pages/me/profile/settings/profile-settings.component.html</context>
           <context context-type="linenumber">47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="update" datatype="html">
         <source>TBT</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/dialogs/profile-settings/profile-settings.component.html</context>
+          <context context-type="sourcefile">app/modules/pages/me/profile/settings/profile-settings.component.html</context>
           <context context-type="linenumber">51</context>
         </context-group>
         <context-group purpose="location">
@@ -692,6 +692,10 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
           <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/expanded-distribution-list/settings/expanded-distribution-list-settings.component.html</context>
+          <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="group-settings" datatype="html">
@@ -755,6 +759,10 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/description/distribution-list-creation-description.component.html</context>
           <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/expanded-distribution-list/settings/expanded-distribution-list-settings.component.html</context>
+          <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="leave-group" datatype="html">
@@ -828,6 +836,10 @@
           <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/title/distribution-list-creation-title.component.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/expanded-distribution-list/settings/expanded-distribution-list-settings.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="required-title" datatype="html">
         <source>TBT</source>
@@ -846,6 +858,10 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/title/distribution-list-creation-title.component.html</context>
           <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/expanded-distribution-list/settings/expanded-distribution-list-settings.component.html</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="date" datatype="html">
@@ -945,6 +961,10 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/content/survey-option-creation/survey-option-creation.html</context>
           <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/expanded-distribution-list/settings/expanded-distribution-list-settings.component.html</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="updating" datatype="html">
@@ -1260,51 +1280,35 @@
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="edit" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/profile/profile.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/event.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/expanded-distribution-list/expanded-distribution-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="events-opportunities" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{user.participations.length}}"/>
               <x id="ICU" equiv-text="{user.participations.length, plural, =1 {...} other {...}}"/>
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/profile/profile.component.html</context>
-          <context context-type="linenumber">16</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="349771e61ebf13424cf70ad9006734e037fb627d" datatype="html">
         <source>{VAR_PLURAL, plural, =1 {event opportunity} other {events opportunities} }</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/profile/profile.component.html</context>
-          <context context-type="linenumber">17</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="settings" datatype="html">
-        <source>TBT</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/profile/profile.component.html</context>
-          <context context-type="linenumber">31</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/expanded-travel-bubble.html</context>
-          <context context-type="linenumber">18</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/expanded-alimentation-bubble.html</context>
-          <context context-type="linenumber">18</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/free-bubble/expanded-free-bubble.html</context>
-          <context context-type="linenumber">17</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/checkbox-bubble/expanded-checkbox-bubble.html</context>
-          <context context-type="linenumber">18</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/expanded-planning-bubble.html</context>
-          <context context-type="linenumber">18</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/expanded-survey-bubble.html</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="all-events-attended" datatype="html">
@@ -1330,17 +1334,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/group/board/group.component.html</context>
           <context context-type="linenumber">43</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="edit" datatype="html">
-        <source>TBT</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/board/event.component.html</context>
-          <context context-type="linenumber">16</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/expanded-distribution-list/expanded-distribution-list.component.html</context>
-          <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="groups-header" datatype="html">
@@ -2106,6 +2099,33 @@
           <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="settings" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/expanded-travel-bubble.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/expanded-alimentation-bubble.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/free-bubble/expanded-free-bubble.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/checkbox-bubble/expanded-checkbox-bubble.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/expanded-planning-bubble.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/expanded-survey-bubble.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="food-name" datatype="html">
         <source>TBT</source>
         <context-group purpose="location">
@@ -2624,6 +2644,34 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/summary/distribution-list-creation-summary.component.html</context>
           <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="list-settings" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/expanded-distribution-list/settings/expanded-distribution-list-settings.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="list-settings.update-info" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/expanded-distribution-list/settings/expanded-distribution-list-settings.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="delete-list" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/expanded-distribution-list/settings/expanded-distribution-list-settings.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="delete-list-irreversible" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/expanded-distribution-list/settings/expanded-distribution-list-settings.component.html</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="tutorial-welcome-title" datatype="html">

@@ -144,6 +144,15 @@ export class HttpService {
     return this.http.get<DistributionList[]>(this.API_URL + '/distribution-list/me', this.getOptions());
   }
 
+  public updateList(list: DistributionList) {
+    const body = JSON.stringify(list);
+    return this.http.patch(this.API_URL + '/distribution-list/' + list.id, body, this.getOptions());
+  }
+
+  public deleteList(list: DistributionList) {
+    return this.http.delete(this.API_URL + '/distribution-list/' + list.id, this.getOptions());
+  }
+
   /*** Auth ***/
 
   public loginEmail(loginRequest): Observable<any> {

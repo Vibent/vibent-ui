@@ -5,6 +5,9 @@
       <div class="col-xl-4 col-sm-6">
         <div *ngIf="user" class="profile_card hoverprofile_card">
           <div class="profile_cardheader">
+            <div (click)="openSettingsDialog()" class="edit-button">
+              <i class="fas fa-pen"></i><span i18n="@@edit">TBT</span>
+            </div>
           </div>
           <div class="avatar">
             <img src={{user.profilePicLocation}}>
@@ -25,19 +28,11 @@
         </div>
       </div>
     </div>
-    <a (click)="openSettingsDialog()" class="text-black-50 cursor-pointer">
-      <h5 class="col-xl-12 text-center">
-        <i class="fas fa-cog p-2"></i>
-        <ng-container i18n="@@settings">TBT</ng-container>
-      </h5>
-    </a>
-
-    <a *ngIf="screenSizesService.isMobileMenu()" (click)="logout()" class="text-black-50 cursor-pointer">
-      <h5 class="col-xl-12 text-center">
-        <i class="fas fa-sign-out"></i>
-        <ng-container i18n="@@logout">TBT</ng-container>
-      </h5>
-    </a>
+    <div *ngIf="screenSizesService.isMobileMenu()" class="row justify-content-center">
+      <div (click)="logout()" class="logout-button">
+        <i class="fas fa-sign-out-alt"></i><span i18n="@@logout">TBT</span>
+      </div>
+    </div>
   </div>
 </div>
 <profile-settings [user]=user></profile-settings>

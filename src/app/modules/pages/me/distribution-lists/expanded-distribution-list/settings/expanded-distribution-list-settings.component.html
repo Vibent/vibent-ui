@@ -1,0 +1,27 @@
+<div class="container vibent-modal">
+  <h2><b i18n="@@list-settings">TBT</b></h2>
+  <p class="lead" i18n="@@list-settings.update-info">TBT</p>
+  <div [formGroup]="form">
+    <div class="form-group">
+      <label for="list-title"><b i18n="@@title">TBT</b>
+        <span *ngIf="!titleValidSetted"
+              class="incorrect-input" i18n="@@required-title">TBT</span></label>
+      <input type="text" class="form-control" id="list-title" formControlName="title"/>
+    </div>
+    <div class="form-group">
+      <label for="list-description"><b i18n="@@optional-description">TBT</b></label>
+      <textarea type="text" class="form-control" id="list-description"
+                formControlName="description"></textarea>
+    </div>
+  </div>
+  <div class="card card-group-remove">
+    <div class="card-body">
+      <h5 class="card-title text-dark mb-2" i18n="@@delete-list">TBT</h5>
+      <p class="card-subtitle mb-2 text-dark" i18n="@@delete-list-irreversible">TBT</p>
+      <button class="btn btn-danger" (click)="deleteList()" i18n="@@delete">TBT</button>
+    </div>
+  </div>
+  <div class="row justify-content-center m-t-50">
+    <button (click)="updateInfos()" class="btn btn-round green-button" i18n="@@update">TBT</button>
+  </div>
+</div>

@@ -2,28 +2,38 @@
   <div class="modal-dialog full-bootstrap-modal" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="edit-list">
+        <div class="edit-list" *ngIf="!settingsOpen" (click)="onSettings()">
           <i class="fas fa-pen"></i><span i18n="@@edit">TBT</span>
         </div>
-        <button type="button" class="close black-close" data-dismiss="modal">
+        <button type="button" (click)="offSettings()" class="close black-close" data-dismiss="modal">
           <span>&times;</span>
         </button>
+        <span *ngIf="settingsOpen"
+              class="fas fa-chevron-left position-absolute p-3 cursor-pointer"
+              (click)="offSettings()"></span>
       </div>
-      <div *ngIf="distributionList" class="modal-body bg-light">
+      <div class="modal-body bg-light">
         <div class="container vibent-modal">
-          <div class="d-flex flex-row">
-            <div class="p-2 align-self-center">
-              <div class="list-preview-small list-margin">
-                <div class="first-letter">{{distributionList.title | slice:0:1 | titlecase}}</div>
+          <ng-container *ngIf="distributionList && !settingsOpen">
+            <div class="d-flex flex-row">
+              <div class="p-2 align-self-center">
+                <div class="list-preview-small list-margin">
+                  <div class="first-letter">{{distributionList.title | slice:0:1 | titlecase}}</div>
+                </div>
               </div>
+              <div class="p-2 align-self-center"><h2>{{distributionList.title}}</h2></div>
             </div>
-            <div class="p-2 align-self-center"><h2>{{distributionList.title}}</h2></div>
-          </div>
-          <p class="lead">{{distributionList.description}}</p>
-          <user-profile-preview
-              *ngFor="let userRef of distributionList.memberRefs"
-              [userRef]="userRef">
-          </user-profile-preview>
+            <p class="lead">{{distributionList.description}}</p>
+            <user-profile-preview
+                *ngFor="let userRef of distributionList.memberRefs"
+                [userRef]="userRef">
+            </user-profile-preview>
+          </ng-container>
+          <expanded-distribution-list-settings
+              *ngIf="settingsOpen"
+              [list]="distributionList"
+              (closeSettings)="offSettings()">
+          </expanded-distribution-list-settings>
         </div>
       </div>
     </div>
