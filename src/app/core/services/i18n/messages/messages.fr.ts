@@ -35,6 +35,8 @@ export class MessagesFr implements IMessages {
   public readonly GROUP_UPDATED = 'Groupe mis à jour.';
   public readonly INVITATION_SENT = 'Invitation envoyée';
   public readonly LIST_DELETED = 'Liste supprimée.';
+  public readonly LIST_JOINED = 'Vous avez rejoint la liste.';
+  public readonly LIST_JOINED_TEXT = 'Vous avez été ajouté aux événements de la liste de distribution que vous venez de rejoindre.';
   public readonly LEAVE_GROUP = 'Quitter le groupe ?';
   public readonly LEAVE_GROUP_TEXT = 'Êtes-vous sûr de vouloir quitter le groupe ?';
   public readonly MIN_ONE_EMAIL_REQUIRED = 'Il faut saisir au moins un email valide';

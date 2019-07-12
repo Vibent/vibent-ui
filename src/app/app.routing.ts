@@ -19,13 +19,14 @@ import { EventComponent } from './modules/pages/event/board/event.component';
 import { GroupsComponent } from './modules/pages/group/joined-groups/groups.component';
 import { GroupComponent } from './modules/pages/group/board/group.component';
 import { PublicGroupComponent } from './modules/pages/group/public-board/public-group.component';
-import { EventInvitationComponent } from './modules/pages/event/board/event-participants/participants-preview/event-invitation/event-invitation.component';
+import { EventInvitationComponent } from './modules/pages/event/board/event-participants/participants-preview/invitation-link-page/event-invitation.component';
 import { ResetPasswordComponent } from './core/authentification/forgot/reset-password/reset-password.component';
 import { MailConfirmationComponent } from './core/authentification/register/mail-confirmation/mail-confirmation.component';
 import { HomeComponent } from './modules/components/home/home.component';
 import { LoginResolver } from './shared/resolvers/login.resolver';
 import { TermsComponent } from './modules/pages/terms/terms.component';
 import { AboutComponent } from './modules/components/about/about.component';
+import { ListInvitationComponent } from './modules/pages/me/distribution-lists/expanded-distribution-list/invitation-link-page/list-invitation.component';
 
 const routes: Routes = [
   {
@@ -102,6 +103,10 @@ const routes: Routes = [
       {
         path: 'invite/e/:token',
         component: EventInvitationComponent
+      },
+      {
+        path: 'invite/l/:token',
+        component: ListInvitationComponent
       },
       {path: '**', redirectTo: '/events', pathMatch: 'full'}
     ]

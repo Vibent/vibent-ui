@@ -1,5 +1,7 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { DistributionList } from '../../../../../shared/models/distribution-list';
+import { VibentModals } from '../../../../../core/services/modal-manager.service';
+declare const $: any;
 
 @Component({
   selector: 'expanded-distribution-list',
@@ -7,21 +9,50 @@ import { DistributionList } from '../../../../../shared/models/distribution-list
   styleUrls: ['./expanded-distribution-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ExpandedDistributionListComponent {
+export class ExpandedDistributionListComponent implements OnInit {
 
   @Input()
   distributionList: DistributionList;
   settingsOpen = false;
+  inviteOpen = false;
 
-  constructor() {
+  constructor(private cd: ChangeDetectorRef) {
+  }
+
+  ngOnInit() {
+    // Case modal is closed by back browser
+    $(VibentModals.EXPANDED_DISTRIBUTION_LIST).on('hidden.bs.modal', () => {
+      this.setPrimaryPage();
+    });
   }
 
   offSettings() {
     this.settingsOpen = false;
+    this.cd.detectChanges();
   }
 
   onSettings() {
     this.settingsOpen = true;
+    this.cd.detectChanges();
+  }
+
+  onInvite() {
+    this.inviteOpen = true;
+    this.cd.detectChanges();
+  }
+
+  offInvite() {
+    this.inviteOpen = false;
+    this.cd.detectChanges();
+  }
+
+  isPrimaryPage() {
+    return !this.inviteOpen && !this.settingsOpen;
+  }
+
+  setPrimaryPage() {
+    this.offSettings();
+    this.offInvite();
   }
 
 }

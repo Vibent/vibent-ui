@@ -2,6 +2,12 @@
 @import "../../../../../../assets/scss/core/variables/_shadow.scss";
 @import "../../../../../../assets/scss/core/mixins/_vendor-prefixes.scss";
 
+//position edit at top left of modal close
+//override background color
+$top-buttons: 25px;
+$right-edit-button: 65px;
+$override-background: #e4e4e4;
+
 .list-margin{
   margin-bottom: 0.5em
 }
@@ -10,11 +16,20 @@
   @include board-button();
   @include board-button-hover();
   @include edit-button();
-  //override board-button background
-  background: #e4e4e4;
-  //position edit at top left of modal close
+  background: $override-background;
   position: absolute;
-  right: 65px;
-  top: 25px;
+  right: $right-edit-button;
+  top: $top-buttons;
 
+}
+
+
+.invite-list{
+  @include board-button();
+  @include board-button-hover();
+  @include edit-button();
+  background: $override-background;
+  position: absolute;
+  right: $right-edit-button + 80px;
+  top: $top-buttons;
 }

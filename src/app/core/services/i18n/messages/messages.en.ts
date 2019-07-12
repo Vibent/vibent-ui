@@ -35,6 +35,8 @@ export class MessagesEn implements IMessages {
   public readonly GROUP_UPDATED = 'Group updated.';
   public readonly INVITATION_SENT = 'Invitation sent.';
   public readonly LIST_DELETED = 'List deleted.';
+  public readonly LIST_JOINED = 'List joined.';
+  public readonly LIST_JOINED_TEXT = 'You have been added to the events of the distribution list you just joined.';
   public readonly LEAVE_GROUP = 'Leave the group?';
   public readonly LEAVE_GROUP_TEXT = 'You\'re about to leave the group. Are you sure?';
   public readonly MIN_ONE_EMAIL_REQUIRED = 'You must input at least one valid email';

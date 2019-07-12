@@ -31,6 +31,8 @@ export interface IMessages {
   GROUP_UPDATED: string;
   INVITATION_SENT: string;
   LIST_DELETED: string;
+  LIST_JOINED: string;
+  LIST_JOINED_TEXT: string;
   LEAVE_GROUP: string;
   LEAVE_GROUP_TEXT: string;
   MIN_ONE_EMAIL_REQUIRED: string;

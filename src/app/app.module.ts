@@ -26,7 +26,6 @@ import { GroupSettingsModule } from './core/admin-panels/group/dialogs/group-set
 import { PublicGroupModule } from './modules/pages/group/public-board/public-group.module';
 import { GroupRequestsModule } from './core/admin-panels/group/dialogs/group-requests/group-requests.module';
 import { GroupRightsModule } from './core/admin-panels/group/dialogs/group-rights/group-rights.module';
-import { EventInvitationModule } from './modules/pages/event/board/event-participants/participants-preview/event-invitation/event-invitation.module';
 import { TokenInterceptor } from './shared/interceptors/token.interceptor';
 import { EventAdminPanelService } from './core/services/event-admin-panel.service';
 import { NotificationsService } from './core/services/notifications.service';
@@ -45,6 +44,8 @@ import { RoutingStateService } from './core/services/routing-state.service';
 import { ModalManagerService } from './core/services/modal-manager.service';
 import { TutorialModule } from './modules/pages/event/dialogs/tutorial/tutorial.module';
 import { AboutModule } from './modules/components/about/about.module';
+import { EventInvitationModule } from './modules/pages/event/board/event-participants/participants-preview/invitation-link-page/event-invitation.module';
+import { ListInvitationModule } from './modules/pages/me/distribution-lists/expanded-distribution-list/invitation-link-page/list-invitation.module';
 
 @NgModule({
   imports: [
@@ -66,6 +67,7 @@ import { AboutModule } from './modules/components/about/about.module';
     LoadingPageModule,
     HttpClientModule,
     EventInvitationModule,
+    ListInvitationModule,
     GroupModule,
     ForgotModule,
     ResetPasswordModule,

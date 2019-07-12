@@ -1,8 +1,9 @@
 <div class="d-flex justify-content-center">
-  <i class="fas fa-paper-plane m-t-50 paper-plane"></i>
+  <i class="fas fa-paper-plane paper-plane"></i>
 </div>
-<h2 class="text-center m-t-20"><b i18n="@@add-people-by-link">TBT</b></h2>
-<h5 class="text-center m-t-5" i18n="@@send-url-join-group">TBT</h5>
+<h2 class="text-center m-t-10"><b i18n="@@add-people-by-link">TBT</b></h2>
+<h5 *ngIf="eventRef" class="text-center m-t-5" i18n="@@send-url-join-event">TBT</h5>
+<h5 *ngIf="distributionList" class="text-center m-t-5" i18n="@@send-url-join-list">TBT</h5>
 <div class="form-group">
   <label for="invite-token"><b i18n="@@magic-link">TBT</b></label>
   <input type="text" class="form-control" id="invite-token" value="{{generatedLink}}"/>
@@ -10,7 +11,7 @@
 <div class="d-flex justify-content-center m-t-50">
   <i class="fas fa-envelope m-t-20 paper-plane"></i>
 </div>
-<h2 class="text-center m-t-20"><b i18n="@@add-people-by-email">TBT</b></h2>
+<h2 class="text-center m-t-10"><b i18n="@@add-people-by-email">TBT</b></h2>
 <p class="text-center m-t-5" i18n="@@can-invite-people-by-email">TBT</p>
 <div [formGroup]="form" class="emails">
   <label><b i18n="@@email">TBT</b></label>
