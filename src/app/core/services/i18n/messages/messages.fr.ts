@@ -34,6 +34,7 @@ export class MessagesFr implements IMessages {
   public readonly GROUP_JOINED_TEXT = 'Page des groupes';
   public readonly GROUP_UPDATED = 'Groupe mis à jour.';
   public readonly INVITATION_SENT = 'Invitation envoyée';
+  public readonly INVITATIONS_SENT = 'Invitations envoyées';
   public readonly LIST_DELETED = 'Liste supprimée.';
   public readonly LIST_JOINED = 'Vous avez rejoint la liste.';
   public readonly LIST_JOINED_TEXT = 'Vous avez été ajouté aux événements de la liste de distribution que vous venez de rejoindre.';

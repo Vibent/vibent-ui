@@ -2,8 +2,8 @@
   <i class="fas fa-paper-plane paper-plane"></i>
 </div>
 <h2 class="text-center m-t-10"><b i18n="@@add-people-by-link">TBT</b></h2>
-<h5 *ngIf="eventRef" class="text-center m-t-5" i18n="@@send-url-join-event">TBT</h5>
-<h5 *ngIf="distributionList" class="text-center m-t-5" i18n="@@send-url-join-list">TBT</h5>
+<p *ngIf="eventRef" class="text-center m-t-5" i18n="@@send-url-join-event">TBT</p>
+<p *ngIf="distributionList" class="text-center m-t-5" i18n="@@send-url-join-list">TBT</p>
 <div class="form-group">
   <label for="invite-token"><b i18n="@@magic-link">TBT</b></label>
   <input type="text" class="form-control" id="invite-token" value="{{generatedLink}}"/>
@@ -34,9 +34,31 @@
   </div>
 
   <div class="row justify-content-center">
-    <button (click)="sendInvitation()"
+    <button (click)="sendMailInvitation()"
             class="btn btn-round white-button m-t-15"
             i18n="@@send-invitation">TBT
     </button>
+  </div>
+</div>
+<div *ngIf="eventRef && userLists.length>0" class="select-list">
+  <div class="d-flex justify-content-center m-t-50">
+    <i class="fas fa-users paper-plane"></i>
+  </div>
+  <h2 class="text-center m-t-10"><b i18n="@@add-people-by-list">TBT</b></h2>
+  <p class="text-center m-t-5" i18n="@@can-invite-people-by-list">TBT</p>
+  <div [formGroup]>
+    <div class="form-group">
+      <label for="select-list" i18n="@@select-an-event">TBT</label>
+      <select #t (change)="listPick(t)" class="form-control" id="select-list">
+        <option *ngFor="let list of userLists"
+                [id]="list.id"
+                [value]="list.title" i18n>
+          {{list.title}} ({{list.memberRefs.length}}  {list.memberRefs.length, plural, =1 {person} other {people}})
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <button (click)="sendListInvitation()" class="btn btn-round white-button m-t-15" i18n="@@send-invitation">TBT</button>
   </div>
 </div>

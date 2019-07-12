@@ -5,6 +5,8 @@ import Swal from 'sweetalert2';
 import { environment } from '../../../../../../../../environments/environment';
 import { MessageService } from '../../../../../../../core/services/i18n/message.service';
 import { DistributionList } from '../../../../../../../shared/models/distribution-list';
+import { DistributionListsService } from '../../../../../../../core/services/distribution-lists/distribution-lists.service';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'add-people',
@@ -37,10 +39,14 @@ export class AddPeopleComponent implements OnInit {
   emails: FormArray;
   displayErrors = {};
   generatedLink: string;
+  selectedListId: number;
+  userLists: DistributionList[];
+  SELECT_ID = 'select-list';
 
   constructor(private fb: FormBuilder,
               private cd: ChangeDetectorRef,
               private httpService: HttpService,
+              private distributionListService: DistributionListsService,
               private messageService: MessageService) {
   }
 
@@ -51,6 +57,13 @@ export class AddPeopleComponent implements OnInit {
 
     if (this.eventRef) {
       this.initEventInviteToken();
+      this.distributionListService.getUserDistributionLists().pipe(take(1)).subscribe((data: DistributionList[]) => {
+        this.userLists = data;
+        this.cd.detectChanges();
+        // First event is selected by default
+        const select = document.getElementById(this.SELECT_ID) as HTMLSelectElement;
+        this.selectedListId = +select.options[0].id;
+      });
     } else if (this.distributionList) {
       this.initListInviteToken();
     }
@@ -73,7 +86,7 @@ export class AddPeopleComponent implements OnInit {
   /**
    * Send Invitations
    */
-  public sendInvitation(): void {
+  public sendMailInvitation(): void {
     // Check for any invalid emails
     this.displayErrors = {};
     let foundError = false;
@@ -125,6 +138,21 @@ export class AddPeopleComponent implements OnInit {
     }, () => {
       this.errorSwal(this.messageService.BAD_EMAIL);
     });
+  }
+
+  sendListInvitation() {
+    this.httpService.inviteDistributionList({
+      distributionListId: this.selectedListId,
+      eventRef: this.eventRef
+    }).pipe(take(1)).subscribe(() => {
+      this.successSwal(this.messageService.INVITATIONS_SENT);
+    }, () => {
+      this.errorSwal(this.messageService.AN_ERROR_OCCURED);
+    });
+  }
+
+  listPick(select) {
+    this.selectedListId = select.options[select.selectedIndex].id;
   }
 
   /**

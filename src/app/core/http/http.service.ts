@@ -109,6 +109,11 @@ export class HttpService {
     return this.http.post(this.API_URL + '/event/mailInvite', body, this.getOptions());
   }
 
+  public inviteDistributionList(content: any) {
+    const body = JSON.stringify(content);
+    return this.http.post(this.API_URL + '/event/inviteDistributionList', body, this.getOptions());
+  }
+
   /*** User ***/
 
   public getMe(): Observable<User> {

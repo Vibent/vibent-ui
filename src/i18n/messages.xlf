@@ -288,25 +288,25 @@
         <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/invitation-link-page/event-invitation.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="join-it" datatype="html">
         <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/invitation-link-page/event-invitation.component.html</context>
-          <context context-type="linenumber">8</context>
+          <context context-type="linenumber">7</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/distribution-lists/expanded-distribution-list/invitation-link-page/list-invitation.component.html</context>
-          <context context-type="linenumber">8</context>
+          <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="found-secret-link-list" datatype="html">
         <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/distribution-lists/expanded-distribution-list/invitation-link-page/list-invitation.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="login-vibent" datatype="html">
@@ -1622,6 +1622,51 @@
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-people/add-people.component.html</context>
           <context context-type="linenumber">39</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-people/add-people.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add-people-by-list" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-people/add-people.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="can-invite-people-by-list" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-people/add-people.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="select-an-event" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-people/add-people.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/event-choice/distribution-list-creation-event.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b10b0f0bb74bd58d27eed81f102fd41e57c77ce8" datatype="html">
+        <source>
+          <x id="INTERPOLATION" equiv-text="{{list.title}}"/> (<x id="INTERPOLATION_1" equiv-text="{{list.memberRefs.length}}"/>  <x id="ICU" equiv-text="{list.memberRefs.length, plural, =1 {...} other {...}}"/>)
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-people/add-people.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cfd8378264fe15eb67cd7218cc23195327a1dbef" datatype="html">
+        <source>{VAR_PLURAL, plural, =1 {person} other {people} }</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-people/add-people.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="about-to-create-event" datatype="html">
         <source>TBT</source>
@@ -1756,11 +1801,22 @@
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="do-the-math" datatype="html">
-        <source>Let&apos;s do the math</source>
+      <trans-unit id="invite" datatype="html">
+        <source>TBT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/event-participants-preview.component.html</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/expanded-distribution-list/expanded-distribution-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="do-the-math" datatype="html">
+        <source>TBT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/event-participants-preview.component.html</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="58fe9a4dc5b8830abfdd56b9275c3ea2d5434ae3" datatype="html">
@@ -1768,14 +1824,14 @@
               <x id="ICU" equiv-text="{participantsSplitted.yes.length, plural, =0 {...} =1 {...} other {...}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/event-participants-preview.component.html</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="308856d685d62a8188c8537f5385babb78ac1dc8" datatype="html">
         <source>{VAR_PLURAL, plural, =0 {No one is coming} =1 {1 is coming} other {<x id="INTERPOLATION" equiv-text="{{participantsSplitted.yes.length}}"/> are coming} }</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/event-participants-preview.component.html</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="11a2cf33701ad74b772f228aaed9cdb2e4ef703d" datatype="html">
@@ -1783,14 +1839,14 @@
               <x id="ICU" equiv-text="{participantsSplitted.maybe.length, plural, =0 {...} =1 {...} other {...}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/event-participants-preview.component.html</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="33a29ed383a123fe93167b35f3b7900779632f92" datatype="html">
         <source>{VAR_PLURAL, plural, =0 {No one don&apos;t know} =1 {1 don&apos;t know} other {<x id="INTERPOLATION" equiv-text="{{participantsSplitted.maybe.length}}"/> don&apos;t know} }</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/event-participants-preview.component.html</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3648337f72e50d7b75705428fcd56e9c2e98878f" datatype="html">
@@ -1798,14 +1854,14 @@
               <x id="ICU" equiv-text="{participantsSplitted.no.length, plural, =0 {...} =1 {...} other {...}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/event-participants-preview.component.html</context>
-          <context context-type="linenumber">43</context>
+          <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="edfa5a074d1dd7ec02b080d93c0b592b91402c6c" datatype="html">
         <source>{VAR_PLURAL, plural, =0 {Nobody isn&apos;t coming} =1 {1 isn&apos;t coming} other {<x id="INTERPOLATION" equiv-text="{{participantsSplitted.no.length}}"/> aren&apos;t coming} }</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/event-participants-preview.component.html</context>
-          <context context-type="linenumber">44</context>
+          <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2bb452b364b0ef5d8ce94367aef8e09d28f3e13d" datatype="html">
@@ -1813,14 +1869,14 @@
               <x id="ICU" equiv-text="{participantsSplitted.unanswered.length, plural, =0 {...} =1 {...} other {...}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/event-participants-preview.component.html</context>
-          <context context-type="linenumber">54</context>
+          <context context-type="linenumber">55</context>
         </context-group>
       </trans-unit>
       <trans-unit id="efaca06eca51e0e05b8908ef6bccfa5a17818e5f" datatype="html">
         <source>{VAR_PLURAL, plural, =0 {No one did not respond} =1 {1 did not respond} other {<x id="INTERPOLATION" equiv-text="{{participantsSplitted.unanswered.length}}"/> did not respond} }</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/event-participants-preview.component.html</context>
-          <context context-type="linenumber">55</context>
+          <context context-type="linenumber">56</context>
         </context-group>
       </trans-unit>
       <trans-unit id="attending" datatype="html">
@@ -2588,13 +2644,6 @@
           <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="invite" datatype="html">
-        <source>Invite</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/expanded-distribution-list/expanded-distribution-list.component.html</context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="create-distribution-list" datatype="html">
         <source>TBT</source>
         <context-group purpose="location">
@@ -2607,13 +2656,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/event-choice/distribution-list-creation-event.component.html</context>
           <context context-type="linenumber">2</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="select-an-event" datatype="html">
-        <source>TBT</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/event-choice/distribution-list-creation-event.component.html</context>
-          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5d46ec19a2ea240c0c8f49ef9602d6b11d8abca1" datatype="html">
