@@ -2,6 +2,7 @@ import { IMessages } from '../imessages';
 
 export class MessagesFr implements IMessages {
   public readonly ALIMENTATION_BUBBLE_CREATED = 'Votre bulle Alimentation est prête ! Vous pouvez maintenant dresser la liste des aliments et boissons dont vous aurez besoin.';
+  public readonly AN_ERROR_OCCURED = 'Une erreur est survenue.';
   public readonly ARE_YOU_SURE = 'Êtes-vous sûr ?';
   public readonly ATTACH_REQUEST = 'Attacher votre demande à cette proposition ?';
   public readonly ATTACH_REQUEST_TEXT = 'Vous avez une demande existante, vous souhaitez la joindre à cette proposition ? Votre demande n\'apparaîtra plus car vous aurez réservé une place dans cette voiture.';
@@ -33,6 +34,7 @@ export class MessagesFr implements IMessages {
   public readonly GROUP_JOINED_TEXT = 'Page des groupes';
   public readonly GROUP_UPDATED = 'Groupe mis à jour.';
   public readonly INVITATION_SENT = 'Invitation envoyée';
+  public readonly LIST_DELETED = 'Liste supprimée.';
   public readonly LEAVE_GROUP = 'Quitter le groupe ?';
   public readonly LEAVE_GROUP_TEXT = 'Êtes-vous sûr de vouloir quitter le groupe ?';
   public readonly MIN_ONE_EMAIL_REQUIRED = 'Il faut saisir au moins un email valide';

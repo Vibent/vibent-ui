@@ -7,7 +7,6 @@ import { HttpService } from '../../../core/http/http.service';
 import { EventAdminPanelService } from '../../../core/services/event-admin-panel.service';
 import { UserManagementService } from '../../../core/services/user-management.service';
 import { Subscription } from 'rxjs';
-import { ScreenService } from '../../../core/services/screen.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -26,8 +25,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
               private userManagementService: UserManagementService,
               private httpService: HttpService,
               private groupAdminPanelService: GroupAdminPanelService,
-              private eventAdminPanelService: EventAdminPanelService,
-              public screenSizesService: ScreenService) {
+              private eventAdminPanelService: EventAdminPanelService) {
     this.user = this.userManagementService.getMe();
   }
 

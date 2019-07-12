@@ -1,4 +1,13 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  EventEmitter,
+  Input,
+  OnDestroy,
+  OnInit,
+  Output
+} from '@angular/core';
 import { User } from '../../../../../shared/models/user';
 import { ModalManagerService, VibentModals } from '../../../../../core/services/modal-manager.service';
 import { HttpService } from '../../../../../core/http/http.service';
@@ -23,6 +32,7 @@ export class ProfileDistributionListsSectionComponent implements OnInit, OnDestr
   subscriptions: Subscription[] = [];
 
   constructor(private modalManagerService: ModalManagerService,
+              private cd: ChangeDetectorRef,
               private distributionListService: DistributionListsService,
               private httpService: HttpService) {
   }
@@ -41,6 +51,7 @@ export class ProfileDistributionListsSectionComponent implements OnInit, OnDestr
 
   updateLists() {
     this.distributionLists = this.httpService.getConnectedDistributionLists();
+    this.cd.detectChanges();
   }
 
   createDistributionList() {

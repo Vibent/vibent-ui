@@ -5,7 +5,7 @@
 </div>
 <div class="sidebar-wrapper">
   <ul class="nav">
-    <li routerLinkActive="active" class="nav-item">
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="nav-item">
       <a class="nav-link" [routerLink]="['/events']">
         <i class="material-icons">bubble_chart</i>
         <p i18n="@@events">TBT</p>

@@ -22,6 +22,7 @@ export class NotificationsService {
       message: message
     }, {
       type: type,
+      z_index: 9999,
       delay: 1000,
       timer: 1000,
       placement: {

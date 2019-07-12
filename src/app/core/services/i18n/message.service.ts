@@ -27,6 +27,7 @@ export class MessageService implements IMessages {
   }
 
   ALIMENTATION_BUBBLE_CREATED: string;
+  AN_ERROR_OCCURED: string;
   ARE_YOU_SURE: string;
   ATTACH_REQUEST: string;
   ATTACH_REQUEST_TEXT: string;
@@ -60,6 +61,7 @@ export class MessageService implements IMessages {
   INVITATION_SENT: string;
   LEAVE_GROUP: string;
   LEAVE_GROUP_TEXT: string;
+  LIST_DELETED: string;
   MIN_ONE_EMAIL_REQUIRED: string;
   MUST_SELECT_PROPOSAL_LOCATION: string;
   MUST_SELECT_REQUEST_LOCATION: string;

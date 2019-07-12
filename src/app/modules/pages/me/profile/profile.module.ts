@@ -4,7 +4,7 @@ import { ProfileComponent } from './profile.component';
 import { RouterModule } from '@angular/router';
 import { ProfileImageService } from '../../../../core/http/profile-image.service';
 import { ConnectedSocialModule } from '../connected-social/connected-social.module';
-import { ProfileSettingsModule } from '../dialogs/profile-settings/profile-settings.module';
+import { ProfileSettingsModule } from './settings/profile-settings.module';
 import { ProfileDistributionListsSectionModule } from '../distribution-lists/profile-section/profile-distribution-lists-section.module';
 import { CreateDistributionListModule } from '../distribution-lists/distribution-list-creation/create-distribution-list.module';
 import { DistributionListsService } from '../../../../core/services/distribution-lists/distribution-lists.service';
