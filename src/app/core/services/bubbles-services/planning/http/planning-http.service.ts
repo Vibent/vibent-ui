@@ -19,11 +19,6 @@ export class PlanningHttpService {
     return this.http.get(this.API_URL + '/bubble/planning/' + bubbleId, httpOptions);
   }
 
-  updateBubble(bubble: PlanningBubble) {
-    const body = JSON.stringify(bubble);
-    return this.http.patch(this.API_URL + '/bubble/planning', body, httpOptions);
-  }
-
   deleteBubble(bubble: PlanningBubble) {
     return this.http.delete(this.API_URL + '/bubble/planning/' + bubble.id, httpOptions);
   }
