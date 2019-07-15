@@ -2,11 +2,13 @@
   <div class="modal-dialog full-bootstrap-modal" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="invite-list" *ngIf="isPrimaryPage()" (click)="onInvite()">
-          <i class="fas fa-user-plus"></i><span i18n="@@invite">TBT</span>
-        </div>
-        <div class="edit-list" *ngIf="isPrimaryPage()" (click)="onSettings()">
-          <i class="fas fa-pen"></i><span i18n="@@edit">TBT</span>
+        <div class="list-options">
+          <div class="invite-list" *ngIf="isPrimaryPage()" (click)="onInvite()">
+            <i class="fas fa-user-plus"></i><span i18n="@@invite">TBT</span>
+          </div>
+          <div class="edit-list" *ngIf="isPrimaryPage()" (click)="onSettings()">
+            <i class="fas fa-pen"></i><span i18n="@@edit">TBT</span>
+          </div>
         </div>
         <button type="button" (click)="setPrimaryPage()" class="close black-close" data-dismiss="modal">
           <span>&times;</span>

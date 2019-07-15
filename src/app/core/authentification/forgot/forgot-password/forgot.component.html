@@ -1,74 +1,62 @@
-<div class="login-page">
-  <section class="h-100">
-    <div class="container h-100">
-      <div class="row justify-content-center">
-        <div class="card-wrapper">
-          <div class="brand" (click)="loginPage()">
-            <img src="./assets/img/vibent.svg">
-          </div>
-          <nav>
-            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-              <a class="nav-item nav-link active" id="nav-home-tabs" data-toggle="tab" href="#nav-home"
-                 role="tab" i18n="@@email">TBT</a>
-              <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
-                 role="tab" i18n="@@phone">TBT</a>
-            </div>
-          </nav>
-          <div class="card fat m-t-25">
-            <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-              <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
-                <div id="emailLogin" class="card-body">
-                  <h3 class="card-title" i18n="@@reset-password-email">TBT</h3>
-                  <form novalidate [formGroup]="loginForm">
-                    <div class="form-group">
-                      <label for="email" i18n="@@email">TBT</label>
-                      <input id="email" class="form-control" type="email" formControlName="email" required>
-                      <div class="form-text text-muted" i18n="@@reset-password-confirm">
-                        TBT
-                      </div>
-                    </div>
-                    <div class="form-group no-margin">
-                      <button type="submit" (click)="forgotByEmail()" class="btn btn-primary btn-block"
-                              i18n="@@send-email">
-                        TBT
-                      </button>
-                    </div>
-                    <div class="text-center m-t-20">
-                      <a (click)="loginPage()" class="cursor-pointer text-primary" i18n="@@back-to-login">
-                        TBT
-                      </a>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="nav-profile" role="tabpanel">
-                <div id="phoneLogin" class="card-body">
-                  <h3 class="card-title" i18n="@@reset-password-phone">TBT</h3>
-                  <form novalidate [formGroup]="loginForm">
-                    <div class="form-group">
-                      <label for="phone" i18n="@@phone-number">TBT</label>
-                      <input id="phone" class="form-control" formControlName="phone" type="text" ng2TelInput
-                             [ng2TelInputOptions]="{initialCountry: 'fr'}" (ng2TelOutput)="getNumber($event)">
-                      <div class="form-text text-muted" i18n="@@reset-password-confirm">
-                        TBT
-                      </div>
-                    </div>
-                    <div class="form-group no-margin">
-                      <button type="submit" (click)="forgotByPhone()" class="btn btn-primary btn-block"
-                              i18n="@@send-sms">
-                        TBT
-                      </button>
-                    </div>
-                    <div class="text-center m-t-20">
-                      <a (click)="loginPage()" class="cursor-pointer text-primary" i18n="@@back-to-login">TBT</a>
-                    </div>
-                  </form>
-                </div>
+<div class="container">
+  <vibent-header></vibent-header>
+  <div class="card col-xl-5 col-md-6 mx-auto p-4 m-0">
+    <div class="card-wrapper">
+      <nav>
+        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-home-tabs" data-toggle="tab" href="#nav-home"
+             role="tab" i18n="@@email">TBT</a>
+          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
+             role="tab" i18n="@@phone">TBT</a>
+        </div>
+      </nav>
+      <div class="tab-content m-t-25" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
+          <h3 class="card-title" i18n="@@reset-password-email">TBT</h3>
+          <form novalidate [formGroup]="loginForm">
+            <div class="form-group">
+              <label for="email" i18n="@@email">TBT</label>
+              <input id="email" class="form-control" type="email" formControlName="email" required>
+              <div class="form-text text-muted" i18n="@@reset-password-confirm">
+                TBT
               </div>
             </div>
-          </div>
+            <div class="form-group no-margin">
+              <button type="submit" (click)="forgotByEmail()" class="btn btn-primary btn-block"
+                      i18n="@@send-email">
+                TBT
+              </button>
+            </div>
+            <div class="text-center m-t-20">
+              <a (click)="loginPage()" class="cursor-pointer text-primary" i18n="@@back-to-login">
+                TBT
+              </a>
+            </div>
+          </form>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel">
+          <h3 class="card-title" i18n="@@reset-password-phone">TBT</h3>
+          <form novalidate [formGroup]="loginForm">
+            <div class="form-group">
+              <label for="phone" i18n="@@phone-number">TBT</label>
+              <input id="phone" class="form-control" formControlName="phone" type="text" ng2TelInput
+                     [ng2TelInputOptions]="{initialCountry: 'fr'}" (ng2TelOutput)="getNumber($event)">
+              <div class="form-text text-muted" i18n="@@reset-password-confirm">
+                TBT
+              </div>
+            </div>
+            <div class="form-group no-margin">
+              <button type="submit" (click)="forgotByPhone()" class="btn btn-primary btn-block"
+                      i18n="@@send-sms">
+                TBT
+              </button>
+            </div>
+            <div class="text-center m-t-20">
+              <a (click)="loginPage()" class="cursor-pointer text-primary" i18n="@@back-to-login">TBT</a>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </div>

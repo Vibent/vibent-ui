@@ -6,6 +6,7 @@ import { ForgotComponent } from './forgot.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Ng2TelInputModule } from 'ng2-tel-input';
+import { HeaderModule } from '../../header/header.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { Ng2TelInputModule } from 'ng2-tel-input';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    Ng2TelInputModule
+    Ng2TelInputModule,
+    HeaderModule,
   ],
   declarations: [
     ForgotComponent

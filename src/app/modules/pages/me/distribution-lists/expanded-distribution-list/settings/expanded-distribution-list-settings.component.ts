@@ -84,12 +84,14 @@ export class ExpandedDistributionListSettingsComponent implements OnInit {
         this.closeSettings.emit(true);
         this.httpService.deleteList(this.list).subscribe(() => {
           this.distributionListsService.updated$.next(true);
+          Swal(
+            this.messageService.DELETED,
+            this.messageService.LIST_DELETED,
+            'success'
+          );
+        }, () => {
+          this.notificationService.notify(this.messageService.AN_ERROR_OCCURED, NotificationType.DANGER);
         });
-        Swal(
-          this.messageService.DELETED,
-          this.messageService.LIST_DELETED,
-          'success'
-        );
       }
     });
   }
