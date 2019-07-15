@@ -23,9 +23,6 @@ export abstract class VibentBaseComponent implements OnInit {
   protected constructor(protected route: ActivatedRoute,
                         protected router: Router,
                         protected cookieService: CookieService) {
-    if (this.cookieService.check('token')) {
-      this.router.navigate([VibentRoutes.EVENTS_URL]);
-    }
   }
 
   ngOnInit(): void {
