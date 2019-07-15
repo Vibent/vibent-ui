@@ -109,6 +109,11 @@ export class HttpService {
     return this.http.post(this.API_URL + '/event/mailInvite', body, this.getOptions());
   }
 
+  public inviteDistributionList(content: any) {
+    const body = JSON.stringify(content);
+    return this.http.post(this.API_URL + '/event/inviteDistributionList', body, this.getOptions());
+  }
+
   /*** User ***/
 
   public getMe(): Observable<User> {
@@ -151,6 +156,20 @@ export class HttpService {
 
   public deleteList(list: DistributionList) {
     return this.http.delete(this.API_URL + '/distribution-list/' + list.id, this.getOptions());
+  }
+
+  public listMailInvite(mailInvite: MailInvite) {
+    const body = JSON.stringify(mailInvite);
+    return this.http.post(this.API_URL + '/distribution-list/mailInvite', body, this.getOptions());
+  }
+
+  public getListInviteToken(listId: number): any {
+    return this.http.get(this.API_URL + '/distribution-list/' + listId + '/inviteToken', this.getOptions());
+  }
+
+  public validateListInviteToken(content: any, token: string) {
+    const body = JSON.stringify(content);
+    return this.http.post(this.API_URL + '/distribution-list/validateInviteToken/' + token, body, this.getOptions());
   }
 
   /*** Auth ***/

@@ -2,19 +2,22 @@
   <div class="modal-dialog full-bootstrap-modal" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="edit-list" *ngIf="!settingsOpen" (click)="onSettings()">
+        <div class="invite-list" *ngIf="isPrimaryPage()" (click)="onInvite()">
+          <i class="fas fa-user-plus"></i><span i18n="@@invite">TBT</span>
+        </div>
+        <div class="edit-list" *ngIf="isPrimaryPage()" (click)="onSettings()">
           <i class="fas fa-pen"></i><span i18n="@@edit">TBT</span>
         </div>
-        <button type="button" (click)="offSettings()" class="close black-close" data-dismiss="modal">
+        <button type="button" (click)="setPrimaryPage()" class="close black-close" data-dismiss="modal">
           <span>&times;</span>
         </button>
-        <span *ngIf="settingsOpen"
+        <span *ngIf="!isPrimaryPage()"
               class="fas fa-chevron-left position-absolute p-3 cursor-pointer"
-              (click)="offSettings()"></span>
+              (click)="setPrimaryPage()"></span>
       </div>
       <div class="modal-body bg-light">
         <div class="container vibent-modal">
-          <ng-container *ngIf="distributionList && !settingsOpen">
+          <ng-container *ngIf="distributionList && isPrimaryPage()">
             <div class="d-flex flex-row">
               <div class="p-2 align-self-center">
                 <div class="list-preview-small list-margin">
@@ -32,8 +35,13 @@
           <expanded-distribution-list-settings
               *ngIf="settingsOpen"
               [list]="distributionList"
-              (closeSettings)="offSettings()">
+              (closeSettings)="setPrimaryPage()">
           </expanded-distribution-list-settings>
+          <distribution-list-invitation
+              *ngIf="inviteOpen"
+              [list]="distributionList"
+              (closeInvitation)="setPrimaryPage()">
+          </distribution-list-invitation>
         </div>
       </div>
     </div>

@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpService } from '../../http/http.service';
 import { take } from 'rxjs/operators';
 import { Event } from '../../../shared/models/event';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { DistributionList } from '../../../shared/models/distribution-list';
 
 export interface IEventSimpleInformation {
   title: string;
@@ -37,6 +38,10 @@ export class DistributionListsService {
 
   updateUserLists() {
     this.updated$.next(true);
+  }
+
+  getUserDistributionLists(): Observable<DistributionList[]> {
+    return this.httpService.getConnectedDistributionLists();
   }
 
 }

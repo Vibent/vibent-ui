@@ -3,7 +3,7 @@ import { EventParticipantsPreviewComponent } from './event-participants-preview.
 import { CommonModule } from '@angular/common';
 import { LoaderModule } from '../../../../../../core/loader/loader.module';
 import { UserProfilePreviewModule } from '../../../../../../shared/components/user-profile-preview/user-profile-preview.module';
-import { AddEventParticipantsModule } from './add-event-participants/add-event-participants.module';
+import { AddPeopleModule } from './add-people/add-people.module';
 
 
 @NgModule({
@@ -11,7 +11,7 @@ import { AddEventParticipantsModule } from './add-event-participants/add-event-p
     CommonModule,
     LoaderModule,
     UserProfilePreviewModule,
-    AddEventParticipantsModule
+    AddPeopleModule
   ],
   declarations: [
     EventParticipantsPreviewComponent

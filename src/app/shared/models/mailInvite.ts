@@ -1,4 +1,5 @@
 export interface MailInvite {
-  ref: string;
+  id ?: number;
+  ref ?: string;
   recipients: string[];
 }

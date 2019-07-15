@@ -8,7 +8,7 @@ import { EventCreationTitleComponent } from './title/event-creation-title.compon
 import { EventCreationDescriptionComponent } from './description/event-creation-description.component';
 import { EventCreationDateComponent } from './date/event-creation-date.component';
 import { EventCreationParticipantsComponent } from './participants/event-creation-participants.component';
-import { AddEventParticipantsModule } from '../../board/event-participants/participants-preview/add-event-participants/add-event-participants.module';
+import { AddPeopleModule } from '../../board/event-participants/participants-preview/add-people/add-people.module';
 
 
 @NgModule({
@@ -16,7 +16,7 @@ import { AddEventParticipantsModule } from '../../board/event-participants/parti
     CommonModule,
     ReactiveFormsModule,
     OwlDateTimeModule,
-    AddEventParticipantsModule
+    AddPeopleModule
   ],
   declarations: [
     EventCreationComponent,
