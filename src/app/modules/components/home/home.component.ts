@@ -18,6 +18,9 @@ export class HomeComponent extends VibentBaseComponent {
               protected route: ActivatedRoute,
               protected cookieService: CookieService) {
     super(route, router, cookieService);
+    if (this.cookieService.check('token')) {
+      this.router.navigate([VibentRoutes.EVENTS_URL]);
+    }
   }
 
   loginPage() {

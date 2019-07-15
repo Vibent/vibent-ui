@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { LanguageService } from '../../../core/services/i18n/language.service';
 import { Router } from '@angular/router';
+import { VibentRoutes } from '../../../shared/components/base-component/base-component';
 
 @Component({
   selector: 'app-footer',
@@ -19,7 +20,7 @@ export class FooterComponent {
   }
 
   aboutUs() {
-    this.router.navigate(['/about']);
+    this.router.navigate([VibentRoutes.ABOUT_URL]);
   }
 
 }

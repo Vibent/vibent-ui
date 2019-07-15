@@ -27,7 +27,8 @@
                 <span *ngIf="!dateValidSetted"
                       class="incorrect-input"
                       i18n="@@incorrect-date">TBT</span></label>
-              <input type="text" class="form-control" formControlName="date" id="event-date">
+              <input type="text" autocomplete="off" class="form-control bg-transparent" readonly formControlName="date"
+                     id="event-date">
             </div>
           </div>
           <div class="card card-group-remove">
