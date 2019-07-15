@@ -6,6 +6,7 @@ import { ResetPasswordComponent } from './reset-password.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Ng2TelInputModule } from 'ng2-tel-input';
+import { HeaderModule } from '../../header/header.module';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { Ng2TelInputModule } from 'ng2-tel-input';
     CommonModule,
     RouterModule,
     FormsModule,
+    HeaderModule,
     HttpClientModule,
     ReactiveFormsModule,
     Ng2TelInputModule

@@ -5,10 +5,10 @@
 //position edit at top left of modal close
 //override background color
 $top-buttons: 25px;
-$right-edit-button: 65px;
+$right-buttons: 65px;
 $override-background: #e4e4e4;
 
-.list-margin{
+.list-margin {
   margin-bottom: 0.5em
 }
 
@@ -17,19 +17,20 @@ $override-background: #e4e4e4;
   @include board-button-hover();
   @include edit-button();
   background: $override-background;
-  position: absolute;
-  right: $right-edit-button;
-  top: $top-buttons;
 
 }
 
 
-.invite-list{
+.invite-list {
   @include board-button();
   @include board-button-hover();
   @include edit-button();
   background: $override-background;
+  margin-right: 10px;
+}
+
+.list-options {
   position: absolute;
-  right: $right-edit-button + 80px;
+  right: $right-buttons;
   top: $top-buttons;
 }
