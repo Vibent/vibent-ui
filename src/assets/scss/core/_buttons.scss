@@ -18,6 +18,9 @@
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   @include undo-bs-tab-focus();
 
+  // Outline buttons colors
+  @include bmd-outline-button-color();
+
   // Colors
   @include bmd-raised-button-color();
   @include hover-focus();

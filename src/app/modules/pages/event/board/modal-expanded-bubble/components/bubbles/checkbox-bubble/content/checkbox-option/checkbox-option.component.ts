@@ -63,13 +63,13 @@ export class CheckboxOptionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.constructAlimentationDataModel();
+    this.constructCheckboxDataModel();
   }
 
   onCheckBoxClick(event) {
     if (event.srcElement.checked) {
       this.checkboxOption.answers.push({userRef: this.user.ref, optionId: this.checkboxOption.id});
-      this.constructAlimentationDataModel();
+      this.constructCheckboxDataModel();
       this.checkboxHttpService.createAnswer({optionId: this.checkboxOption.id}).subscribe(() => {
         this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.CheckboxBubble});
       });
@@ -78,7 +78,7 @@ export class CheckboxOptionComponent implements OnInit {
       this.checkboxOption.answers
         .splice(this.checkboxOption.answers
           .findIndex(answer => answer.userRef === this.user.ref), 1);
-      this.constructAlimentationDataModel();
+      this.constructCheckboxDataModel();
       this.checkboxHttpService.deleteAnswerOfOption(this.checkboxOption).subscribe(() => {
         this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.CheckboxBubble});
       });
@@ -103,13 +103,14 @@ export class CheckboxOptionComponent implements OnInit {
           this.checkboxBubble.options
             .splice(this.checkboxBubble.options
               .findIndex(option => option.id === this.checkboxOption.id), 1);
+          this.updatedCheckboxBubble.emit(this.checkboxBubble);
           this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.CheckboxBubble});
         });
       }
     });
   }
 
-  constructAlimentationDataModel() {
+  constructCheckboxDataModel() {
     this.checkboxDataModel = this.checkboxDataService.constructCheckboxDataModel(this.checkboxOption);
     this.isCurrentUserOption = this.checkboxDataService.isCurrentUserOption(this.checkboxOption);
   }
