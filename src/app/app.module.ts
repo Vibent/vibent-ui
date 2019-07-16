@@ -46,6 +46,8 @@ import { TutorialModule } from './modules/pages/event/dialogs/tutorial/tutorial.
 import { AboutModule } from './modules/components/about/about.module';
 import { EventInvitationModule } from './modules/pages/event/board/event-participants/participants-preview/invitation-link-page/event-invitation.module';
 import { ListInvitationModule } from './modules/pages/me/distribution-lists/expanded-distribution-list/invitation-link-page/list-invitation.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   imports: [
@@ -86,6 +88,7 @@ import { ListInvitationModule } from './modules/pages/me/distribution-lists/expa
     LoggerModule.forRoot({level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR}),
     I18nModule,
     TutorialModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.prod }),
   ],
   declarations: [
     AppComponent,
