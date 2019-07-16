@@ -135,7 +135,7 @@
   border-radius: 6px;
   color: white;
   background: var(--bg-color);
-  width: 150px;
+  min-width: 150px;
   margin-right: 3px;
   margin-left: 3px;
   &:not(:disabled):not(.disabled):active,
