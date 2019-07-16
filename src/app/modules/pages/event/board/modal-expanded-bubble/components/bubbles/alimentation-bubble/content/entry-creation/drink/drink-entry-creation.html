@@ -30,11 +30,11 @@
             </div>
           </div>
           <div class="float-left" (click)="this.toggleCreationCard()">
-            <div class="delete-button" i18n="@@delete">TBT</div>
+            <div  class="btn btn-outline-danger btn-sm" i18n="@@delete">TBT</div>
           </div>
           <div class="float-right m-2">
             <button [disabled]="!this.quantity.value || !this.name.value"
-                    class="btn btn-primary btn-sm"
+                    class="btn btn-outline-primary btn-sm"
                     (click)="this.addEntry()"
                     i18n="@@add">TBT</button>
           </div>

@@ -29,6 +29,7 @@ export class CheckboxContentComponent implements OnInit {
   onBubbleUpdate(updatedBubble: CheckboxBubble) {
     this.checkboxBubble = updatedBubble;
     this.updatedCheckboxBubble.emit(updatedBubble);
+    this.getRatioFromOptions();
   }
 
   onCheckboxOptionUpdate(updatedOptions: CheckboxOption) {
