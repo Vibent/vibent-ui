@@ -33,21 +33,6 @@
     transform: scale(0);
   }
 
-  &[x-placement="bottom-start"] {
-    transform-origin: 0 0;
-  }
-
-  &[x-placement="bottom-end"] {
-    transform-origin: 100% 0;
-  }
-
-  &[x-placement="top-start"] {
-    transform-origin: 0 100%;
-  }
-
-  &[x-placement="top-end"] {
-    transform-origin: 100% 100%;
-  }
 
   .disabled > a {
     color: $bmd-dropdown-header-color;
@@ -91,7 +76,6 @@
     font-size: .8125rem;
     border-radius: $border-radius / 2;
     margin: 0 $bmd-dropdown-margin-y;
-    @include transitions($fast-transition-time, $transition-linear);
 
     min-width: $bmd-menu-item-min-width;
 
@@ -117,88 +101,4 @@
     background-color: $brand-primary;
     color: #FFFFFF !important;
   }
-}
-
-// this could be in a .btn-group or .dropdown
-.dropdown-toggle {
-  &.bmd-btn-icon,
-  &.bmd-btn-fab {
-    // remove the dropdown icon
-    &::after {
-      display: none;
-    }
-
-    ~ .dropdown-menu {
-      &.dropdown-menu-top-left,
-      &.dropdown-menu-top-right {
-        bottom: $bmd-btn-icon-size; // push up the bottom of the menu the height of the button
-      }
-    }
-  }
-
-  &:after {
-    will-change: transform;
-    transition: transform $bmd-animation-dropdown-caret linear;
-  }
-
-  .show &:after {
-    @include rotate-180();
-  }
-
-  &.bmd-btn-fab-sm {
-    ~ .dropdown-menu {
-      &.dropdown-menu-top-left,
-      &.dropdown-menu-top-right {
-        bottom: $bmd-btn-fab-size-sm; // push up the bottom of the menu the height of the button
-      }
-    }
-  }
-
-  &.bmd-btn-icon {
-    ~ .dropdown-menu {
-      // collapse some spacing
-      margin: 0;
-    }
-  }
-}
-
-.dropdown-header {
-  font-size: 0.75rem;
-  padding-top: $dropdown-header-padding-y;
-  padding-bottom: $dropdown-header-padding-y;
-  text-transform: none;
-  color: $bmd-dropdown-header-color;
-  line-height: $bmd-line-height;
-  font-weight: inherit;
-}
-
-@keyframes bmd-dropdown-animation {
-  from {
-    opacity: 0;
-    transform: scale(0);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.dropdown-menu.bootstrap-datetimepicker-widget {
-  opacity: 0;
-  transform: scale(0);
-  transition-duration: $bmd-menu-expand-duration;
-  transition-timing-function: $bmd-animation-curve-default;
-  transform-origin: 0 0;
-  will-change: transform, opacity;
-  top: 0;
-}
-
-.dropdown-menu.bootstrap-datetimepicker-widget.top {
-  transform-origin: 0 100%;
-}
-
-.dropdown-menu.bootstrap-datetimepicker-widget.open {
-  opacity: 1;
-  transform: scale(1);
-  top: 0;
 }

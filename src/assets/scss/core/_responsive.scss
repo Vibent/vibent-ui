@@ -112,53 +112,6 @@
     overflow-x: hidden;
   }
 
-  .menu-on-left {
-    .nav-open & {
-      .main-panel,
-      .wrapper-full-page,
-      .navbar-fixed > div {
-        @include transform-translate-x(260px);
-      }
-    }
-
-    .sidebar,
-    .off-canvas-sidebar {
-      left: 0;
-      right: auto;
-      @include transform-translate-x(-260px);
-    }
-
-    .close-layer {
-      left: auto;
-      right: 0;
-    }
-  }
-
-  .card .form-horizontal {
-    .label-on-left,
-    .label-on-right {
-      padding-left: 15px;
-      padding-top: 8px;
-    }
-
-    .form-group {
-      margin-top: 0;
-    }
-
-    .checkbox-radios {
-      padding-bottom: 15px;
-
-      .checkbox:first-child,
-      .radio:first-child {
-        margin-top: 0;
-      }
-    }
-
-    .checkbox-inline {
-      margin-top: 0;
-    }
-  }
-
   .main-panel {
     width: 100%;
   }
@@ -195,7 +148,7 @@
     padding-left: 0;
 
     @include transform-translate-x(260px);
-    @include transitions (0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1));
+    //@include transitions (0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1));
     > ul {
       position: relative;
       z-index: 4;

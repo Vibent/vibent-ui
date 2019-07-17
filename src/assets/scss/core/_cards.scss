@@ -36,7 +36,7 @@
 
   // Cards have a default elevation of 2dp.
   @include box-shadow($bmd-shadow-2dp);
-  @extend %std-font;
+  //@extend %std-font;
 
   &.no-shadow {
     .card-header-image,
@@ -132,66 +132,9 @@
         font-size: $font-size-h4;
         text-shadow: 0 2px 5px rgba(33, 33, 33, 0.5);
       }
-
-      .colored-shadow {
-        transform: scale(0.94);
-        top: 12px;
-        filter: blur(12px);
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        z-index: -1;
-        transition: opacity .45s;
-        opacity: 0;
-      }
-
-      &.no-shadow {
-        box-shadow: none;
-
-        &.shadow-normal {
-          @include shadow-big();
-        }
-
-        .colored-shadow {
-          display: none !important;
-        }
-      }
     }
   }
 
-  .card-header-primary .card-icon,
-  .card-header-primary .card-text,
-  .card-header-primary:not(.card-header-icon):not(.card-header-text),
-  &.bg-primary,
-  &.card-rotate.bg-primary .front,
-  &.card-rotate.bg-primary .back {
-    background: linear-gradient(60deg, $purple-400, $purple-600);
-  }
-  .card-header-info .card-icon,
-  .card-header-info .card-text,
-  .card-header-info:not(.card-header-icon):not(.card-header-text),
-  &.bg-info,
-  &.card-rotate.bg-info .front,
-  &.card-rotate.bg-info .back {
-    background: linear-gradient(60deg, $cyan-400, $cyan-600);
-  }
-  .card-header-success .card-icon,
-  .card-header-success .card-text,
-  .card-header-success:not(.card-header-icon):not(.card-header-text),
-  &.bg-success,
-  &.card-rotate.bg-success .front,
-  &.card-rotate.bg-success .back {
-    background: linear-gradient(60deg, $green-400, $green-600);
-  }
-  .card-header-warning .card-icon,
-  .card-header-warning .card-text,
-  .card-header-warning:not(.card-header-icon):not(.card-header-text),
-  &.bg-warning,
-  &.card-rotate.bg-warning .front,
-  &.card-rotate.bg-warning .back {
-    background: linear-gradient(60deg, $orange-400, $orange-600);
-  }
   .card-header-vibent-green .card-icon,
   .card-header-vibent-green .card-text,
   .card-header-vibent-green:not(.card-header-icon):not(.card-header-text),
@@ -202,82 +145,11 @@
     background: linear-gradient(60deg, $green-700, $green-400);
   }
 
-  .card-header-danger .card-icon,
-  .card-header-danger .card-text,
-  .card-header-danger:not(.card-header-icon):not(.card-header-text),
-  &.bg-danger,
-  &.card-rotate.bg-danger .front,
-  &.card-rotate.bg-danger .back {
-    background: linear-gradient(60deg, $red-400, $red-600);
-  }
-
-  .card-header-vibent-purple .card-icon,
-  .card-header-vibent-purple .card-text,
-  .card-header-vibent-purple:not(.card-header-icon):not(.card-header-text),
-  &.bg-danger,
-  &.card-rotate.bg-danger .front,
-  &.card-rotate.bg-danger .back {
-    background: linear-gradient(60deg, $vibent-purple, $vibent-red);
-  }
-
-  .card-header-rose .card-icon,
-  .card-header-rose .card-text,
-  .card-header-rose:not(.card-header-icon):not(.card-header-text),
-  &.bg-rose,
-  &.card-rotate.bg-rose .front,
-  &.card-rotate.bg-rose .back {
-    background: linear-gradient(60deg, $pink-400, $pink-600);
-  }
-
-  .card-header-primary .card-icon,
-  .card-header-primary:not(.card-header-icon):not(.card-header-text),
-  .card-header-primary .card-text {
-    @include shadow-big-color($brand-primary);
-
-    //@include shadow-8dp-color($brand-primary);
-    //@include shadow-16dp-color($brand-primary);
-  }
-  .card-header-danger .card-icon,
-  .card-header-danger:not(.card-header-icon):not(.card-header-text),
-  .card-header-danger .card-text {
-    @include shadow-big-color($brand-danger);
-  }
-
-  .card-header-vibent-purple .card-icon,
-  .card-header-vibent-purple:not(.card-header-icon):not(.card-header-text),
-  .card-header-vibent-purple .card-text {
-    @include shadow-big-color($vibent-purple);
-  }
-
-  .card-header-rose .card-icon,
-  .card-header-rose:not(.card-header-icon):not(.card-header-text),
-  .card-header-rose .card-text {
-    @include shadow-big-color($brand-rose);
-  }
-
-  .card-header-warning .card-icon,
-  .card-header-warning:not(.card-header-icon):not(.card-header-text),
-  .card-header-warning .card-text {
-    @include shadow-big-color($brand-warning);
-  }
-
   .card-header-vibent-green .card-icon,
   .card-header-vibent-green:not(.card-header-icon):not(.card-header-text),
   .card-header-vibent-green .card-text,
   .event-preview-group {
     @include shadow-big-color($vibent-green);
-  }
-
-  .card-header-info .card-icon,
-  .card-header-info:not(.card-header-icon):not(.card-header-text),
-  .card-header-info .card-text {
-    @include shadow-big-color($brand-info);
-  }
-
-  .card-header-success .card-icon,
-  .card-header-success:not(.card-header-icon):not(.card-header-text),
-  .card-header-success .card-text {
-    @include shadow-big-color($brand-success);
   }
 
   [class*="card-header-"],
@@ -352,6 +224,9 @@
   }
 }
 
+.card-header {
+  background-color: white;
+}
 .card {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
 
@@ -440,50 +315,6 @@
         padding: 10px 10px 10px 0;
         line-height: 24px;
       }
-    }
-  }
-
-  &.card-plain {
-    .card-header {
-      &.card-header-icon + .card-body .card-title,
-      &.card-header-icon + .card-body .card-category {
-        margin-top: -20px;
-      }
-    }
-  }
-
-  .card-actions {
-    position: absolute;
-    z-index: 1;
-    top: -50px;
-    width: calc(100% - 30px);
-    left: 17px;
-    right: 17px;
-    text-align: center;
-
-    .card-header {
-      padding: 0;
-      min-height: 160px;
-    }
-
-    .btn {
-      padding-left: 12px;
-      padding-right: 12px;
-    }
-    .fix-broken-card {
-      position: absolute;
-      top: -65px;
-    }
-  }
-
-  &.card-chart {
-    .card-footer i:nth-child(1n+2) {
-      width: 18px;
-      text-align: center;
-    }
-
-    .card-category {
-      margin: 0;
     }
   }
 
@@ -581,58 +412,6 @@
 
     position: relative;
 
-    .ct-chart {
-      .card-title {
-        color: $white-color;
-      }
-      .card-category {
-        margin-bottom: 0;
-        color: rgba($white-color, .62);
-      }
-
-      .ct-label {
-        color: rgba($white-color, .7);
-      }
-      .ct-grid {
-        stroke: rgba(255, 255, 255, 0.2);
-      }
-      .ct-series-a .ct-point,
-      .ct-series-a .ct-line,
-      .ct-series-a .ct-bar,
-      .ct-series-a .ct-slice-donut {
-        stroke: rgba(255, 255, 255, .8);
-      }
-      .ct-series-a .ct-slice-pie,
-      .ct-series-a .ct-area {
-        fill: rgba(255, 255, 255, .4);
-      }
-      .ct-series-a .ct-bar {
-        stroke-width: 10px;
-      }
-      .ct-point {
-        stroke-width: 10px;
-        stroke-linecap: round;
-      }
-      .ct-line {
-        fill: none;
-        stroke-width: 4px;
-      }
-    }
-  }
-
-  [data-header-animation="true"] {
-    @include transform-translate-y(0);
-    -webkit-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
-    -moz-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
-    -o-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
-    -ms-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
-    transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
-  }
-
-  &:hover {
-    [data-header-animation="true"] {
-      @include transform-translate-y(-50px);
-    }
   }
 
   .map {
@@ -651,84 +430,5 @@
 
   .card-plain .card-header-icon {
     margin-right: 15px !important;
-  }
-}
-
-.table-sales {
-  margin-top: 40px;
-}
-
-.iframe-container {
-  width: 100%;
-
-  iframe {
-    width: 100%;
-    height: 500px;
-    border: 0;
-    @include shadow-big();
-  }
-}
-
-.card-wizard {
-  .nav.nav-pills {
-    .nav-item {
-      margin: 0;
-
-      .nav-link {
-        padding: 6px 15px !important;
-      }
-    }
-  }
-  .nav-pills:not(.flex-column) .nav-item + .nav-item:not(:first-child) {
-    margin-left: 0;
-  }
-
-  .nav-item .nav-link.active,
-  .nav-item .nav-link:hover,
-  .nav-item .nav-link:focus {
-    background-color: inherit !important;
-    box-shadow: none !important;
-  }
-
-  .input-group-text {
-    padding: 6px 15px 0 !important;
-  }
-  .card-footer {
-    border-top: none !important;
-  }
-}
-
-.card-chart,
-.card-product {
-  .card-body + .card-footer {
-    border-top: 1px solid #eee;
-  }
-}
-
-.card-product {
-  .price {
-    color: inherit;
-  }
-}
-
-.card-collapse {
-  margin-bottom: 15px;
-
-  .card .card-header a[aria-expanded="true"] {
-    color: #e91e63;
-  }
-}
-
-.card-group-remove {
-  width: 100%;
-  background-color: #ffffff47;
-  margin-top: 35px;
-
-  .card-title {
-    color: white;
-  }
-
-  .card-subtitle {
-    color: #acacac;
   }
 }
