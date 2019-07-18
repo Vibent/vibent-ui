@@ -88,7 +88,7 @@ import { environment } from '../environments/environment';
     LoggerModule.forRoot({level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR}),
     I18nModule,
     TutorialModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.prod }),
+    ServiceWorkerModule.register('ngsw-worker.js'),
   ],
   declarations: [
     AppComponent,
