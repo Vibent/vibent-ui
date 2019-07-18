@@ -14,7 +14,9 @@
 
 .add-bubble-n-empty {
   @include add-bubble-default();
-
+  height: 300px;
+  display: flex;
+  flex-direction: column;
   .fas {
     margin-top: 126px;
     @include bubble-icon-fa();
