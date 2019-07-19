@@ -53,18 +53,11 @@ export class MessageService implements IMessages {
   EVENT_JOINED_TEXT: string;
   EVENT_UPDATED: string;
   FREE_BUBBLE_CREATED: string;
-  GROUP_CREATED: string;
-  GROUP_DELETED: string;
-  GROUP_JOINED: string;
-  GROUP_JOINED_TEXT: string;
-  GROUP_UPDATED: string;
   INVITATION_SENT: string;
   INVITATIONS_SENT: string;
   LIST_DELETED: string;
   LIST_JOINED: string;
   LIST_JOINED_TEXT: string;
-  LEAVE_GROUP: string;
-  LEAVE_GROUP_TEXT: string;
   MIN_ONE_EMAIL_REQUIRED: string;
   MUST_SELECT_PROPOSAL_LOCATION: string;
   MUST_SELECT_REQUEST_LOCATION: string;

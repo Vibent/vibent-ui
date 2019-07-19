@@ -1,7 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AuthenticationService } from '../../../core/services/authentication.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { GroupAdminPanelService } from '../../../core/services/group-admin-panel.service';
 import { User } from '../../../shared/models/user';
 import { HttpService } from '../../../core/http/http.service';
 import { EventAdminPanelService } from '../../../core/services/event-admin-panel.service';
@@ -14,7 +13,6 @@ import { Subscription } from 'rxjs';
 })
 export class SidebarComponent implements OnInit, OnDestroy {
 
-  groupAdminPanelInput = null;
   eventAdminPanelInput = null;
   user: User;
   subscriptions: Subscription[] = [];
@@ -24,16 +22,12 @@ export class SidebarComponent implements OnInit, OnDestroy {
               private authenticationService: AuthenticationService,
               private userManagementService: UserManagementService,
               private httpService: HttpService,
-              private groupAdminPanelService: GroupAdminPanelService,
               private eventAdminPanelService: EventAdminPanelService) {
     this.user = this.userManagementService.getMe();
   }
 
   ngOnInit() {
     this.subscriptions.push(
-      this.groupAdminPanelService.change$.subscribe(result => {
-        this.groupAdminPanelInput = result;
-      }),
       this.eventAdminPanelService.change$.subscribe(result => {
         this.eventAdminPanelInput = result;
       }),

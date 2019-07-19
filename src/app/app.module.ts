@@ -4,36 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
-import { AgmCoreModule } from '@agm/core';
-import { SidebarModule } from './modules/components/sidebar/sidebar.module';
-import { NavbarModule } from './modules/components/navbar/navbar.module';
 import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { LoginModule } from './core/authentification/login/login.module';
 import { CookieService } from 'ngx-cookie-service';
-import { MainComponent } from './modules/components/main/main.component';
 import { RegisterModule } from './core/authentification/register/register/register.module';
-import { GroupAdminPanelService } from './core/services/group-admin-panel.service';
-import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 import { ForgotModule } from './core/authentification/forgot/forgot-password/forgot.module';
-import { GroupsModule } from './modules/pages/group/joined-groups/groups.module';
-import { EventsModule } from './modules/pages/event/attended-events/events.module';
-import { EventModule } from './modules/pages/event/board/event.module';
-import { GroupModule } from './modules/pages/group/board/group.module';
-import { ProfileModule } from './modules/pages/me/profile/profile.module';
-import { ProfileSettingsModule } from './modules/pages/me/profile/settings/profile-settings.module';
-import { GroupSettingsModule } from './core/admin-panels/group/dialogs/group-settings/group-settings.module';
-import { PublicGroupModule } from './modules/pages/group/public-board/public-group.module';
-import { GroupRequestsModule } from './core/admin-panels/group/dialogs/group-requests/group-requests.module';
-import { GroupRightsModule } from './core/admin-panels/group/dialogs/group-rights/group-rights.module';
 import { TokenInterceptor } from './shared/interceptors/token.interceptor';
-import { EventAdminPanelService } from './core/services/event-admin-panel.service';
-import { NotificationsService } from './core/services/notifications.service';
 import { UserManagementService } from './core/services/user-management.service';
 import { LoaderModule } from './core/loader/loader.module';
 import { LoaderService } from './core/services/loader/service/loader.service';
 import { ResetPasswordModule } from './core/authentification/forgot/reset-password/reset-password.module';
-import { EventSettingsModule } from './core/admin-panels/event/dialogs/event-settings/event-settings.module';
 import { ScreenService } from './core/services/screen.service';
 import { LoadingPageComponent } from './core/services/loader/loading-page/loading-page.component';
 import { LoadingPageModule } from './core/services/loader/loading-page/loading-page.module';
@@ -41,13 +21,10 @@ import { HomeModule } from './modules/components/home/home.module';
 import { I18nModule } from './core/services/i18n/i18n.module';
 import { TermsModule } from './modules/pages/terms/terms.module';
 import { RoutingStateService } from './core/services/routing-state.service';
-import { ModalManagerService } from './core/services/modal-manager.service';
-import { TutorialModule } from './modules/pages/event/dialogs/tutorial/tutorial.module';
 import { AboutModule } from './modules/components/about/about.module';
-import { EventInvitationModule } from './modules/pages/event/board/event-participants/participants-preview/invitation-link-page/event-invitation.module';
-import { ListInvitationModule } from './modules/pages/me/distribution-lists/expanded-distribution-list/invitation-link-page/list-invitation.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
+import { HttpService } from './core/http/http.service';
+import { LoginModule } from './core/authentification/login/login.module';
 
 @NgModule({
   imports: [
@@ -55,54 +32,30 @@ import { environment } from '../environments/environment';
     FormsModule,
     RouterModule,
     AppRoutingModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
-    }),
     CommonModule,
     RouterModule,
-    GroupsModule,
-    EventsModule,
     TermsModule,
-    SidebarModule,
-    NavbarModule,
-    EventModule,
     LoadingPageModule,
     HttpClientModule,
-    EventInvitationModule,
-    ListInvitationModule,
-    GroupModule,
     ForgotModule,
     ResetPasswordModule,
     LoginModule,
     RegisterModule,
     HomeModule,
     AboutModule,
-    ProfileModule,
-    ProfileSettingsModule,
-    GroupSettingsModule,
-    EventSettingsModule,
-    GroupRightsModule,
-    GroupRequestsModule,
-    PublicGroupModule,
     LoaderModule,
-    LoggerModule.forRoot({level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR}),
     I18nModule,
-    TutorialModule,
     ServiceWorkerModule.register('ngsw-worker.js'),
   ],
   declarations: [
-    AppComponent,
-    MainComponent
+    AppComponent
   ],
   providers: [
     CookieService,
-    ModalManagerService,
+    HttpService,
     ScreenService,
     RoutingStateService,
     LoaderService,
-    GroupAdminPanelService,
-    EventAdminPanelService,
-    NotificationsService,
     UserManagementService,
     {
       provide: HTTP_INTERCEPTORS,

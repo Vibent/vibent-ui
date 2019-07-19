@@ -4,7 +4,6 @@ import { HttpService } from '../http/http.service';
 import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
 import { LoaderService } from './loader/service/loader.service';
-import { ModalManagerService } from './modal-manager.service';
 import { Observable } from 'rxjs';
 
 @Injectable()
@@ -13,7 +12,6 @@ export class AuthenticationService {
   constructor(private httpService: HttpService,
               private cookieService: CookieService,
               private loaderService: LoaderService,
-              private modalManagerService: ModalManagerService,
               private router: Router) {
   }
 

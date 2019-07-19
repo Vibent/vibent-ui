@@ -1,0 +1,92 @@
+import { MainComponent } from './main.component';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { SidebarModule } from '../sidebar/sidebar.module';
+import { NavbarModule } from '../navbar/navbar.module';
+import {
+  RouterModule,
+  Routes
+} from '@angular/router';
+import { TutorialModule } from '../../pages/event/dialogs/tutorial/tutorial.module';
+import { ProfileComponent } from '../../pages/me/profile/profile.component';
+import { ProfileResolver } from '../../../shared/resolvers/profile.resolver';
+import { EventsComponent } from '../../pages/event/attended-events/events.component';
+import { EventsResolver } from '../../../shared/resolvers/events.resolver';
+import { EventComponent } from '../../pages/event/board/event.component';
+import { EventResolver } from '../../../shared/resolvers/event.resolver';
+import { EventInvitationComponent } from '../../pages/event/board/event-participants/participants-preview/invitation-link-page/event-invitation.component';
+import { ListInvitationComponent } from '../../pages/me/distribution-lists/expanded-distribution-list/invitation-link-page/list-invitation.component';
+import { EventsModule } from '../../pages/event/attended-events/events.module';
+import { EventModule } from '../../pages/event/board/event.module';
+import { ProfileModule } from '../../pages/me/profile/profile.module';
+import { ProfileSettingsModule } from '../../pages/me/profile/settings/profile-settings.module';
+import { EventSettingsModule } from '../../../core/admin-panels/event/dialogs/event-settings/event-settings.module';
+import { HttpClientModule } from '@angular/common/http';
+import { ModalManagerService } from '../../../core/services/modal-manager.service';
+import { EventAdminPanelService } from '../../../core/services/event-admin-panel.service';
+import { NotificationsService } from '../../../core/services/notifications.service';
+import { EventInvitationModule } from '../../pages/event/board/event-participants/participants-preview/invitation-link-page/event-invitation.module';
+import { ListInvitationModule } from '../../pages/me/distribution-lists/expanded-distribution-list/invitation-link-page/list-invitation.module';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: MainComponent,
+    children: [
+      {
+        path: 'me',
+        component: ProfileComponent,
+        resolve: {user: ProfileResolver}
+      },
+      {
+        path: 'events',
+        component: EventsComponent,
+        resolve: {events: EventsResolver}
+      },
+      {
+        path: 'events/:ref',
+        component: EventComponent,
+        resolve: {event: EventResolver}
+      },
+      {
+        path: 'invite/e/:token',
+        component: EventInvitationComponent
+      },
+      {
+        path: 'invite/l/:token',
+        component: ListInvitationComponent
+      },
+      {path: '**', redirectTo: '/events', pathMatch: 'full'}
+    ]
+  }
+];
+
+@NgModule({
+  imports: [
+    RouterModule.forChild(routes),
+    CommonModule,
+    SidebarModule,
+    NavbarModule,
+    HttpClientModule,
+    TutorialModule,
+    EventsModule,
+    EventModule,
+    ProfileModule,
+    ProfileSettingsModule,
+    EventInvitationModule,
+    ListInvitationModule,
+    EventSettingsModule
+  ],
+  declarations: [
+    MainComponent
+  ],
+  providers: [
+    ModalManagerService,
+    EventAdminPanelService,
+    NotificationsService
+  ],
+  exports: [RouterModule]
+})
+
+export class MainModule {
+}

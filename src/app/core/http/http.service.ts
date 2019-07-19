@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Group } from '../../shared/models/group';
 import { Event } from '../../shared/models/event';
 import { Observable } from 'rxjs';
 import { Email, PasswordReset, User } from '../../shared/models/user';
@@ -25,48 +24,6 @@ export class HttpService {
     };
   }
 
-  /*** Groups ***/
-
-  public getGroup(groupRef: string): Observable<Group> {
-    return this.http.get<Group>(this.API_URL + '/group/' + groupRef, this.getOptions());
-  }
-
-  public getGroups(): Observable<Group[]> {
-    return this.http.get<Group[]>(this.API_URL + '/group/me', this.getOptions());
-  }
-
-  public createGroup(group: Group) {
-    const body = JSON.stringify(group);
-    return this.http.post(this.API_URL + '/group', body, this.getOptions());
-  }
-
-  public updateGroup(group: Group): Observable<Group> {
-    const body = JSON.stringify(group);
-    return this.http.patch(this.API_URL + '/group/' + group.ref, body, this.getOptions());
-  }
-
-  public deleteGroup(groupRef: string): any {
-    return this.http.delete(this.API_URL + '/group/' + groupRef, this.getOptions());
-  }
-
-  public leaveGroup(groupRef: string) {
-    return this.http.post(this.API_URL + '/group/' + groupRef + '/leave', this.getOptions());
-  }
-
-  public getInviteToken(groupRef: string): any {
-    return this.http.get(this.API_URL + '/group/' + groupRef + '/inviteToken', this.getOptions());
-  }
-
-  public validateInviteToken(content: any, token: string) {
-    const body = JSON.stringify(content);
-    return this.http.post(this.API_URL + '/group/validateInviteToken/' + token, body, this.getOptions());
-  }
-
-  public groupMailInvite(mailInvite: MailInvite) {
-    const body = JSON.stringify(mailInvite);
-    return this.http.post(this.API_URL + '/group/mailInvite', body, this.getOptions());
-  }
-
   /*** Events ***/
 
   public getEvents(): Observable<Event[]> {
@@ -75,10 +32,6 @@ export class HttpService {
 
   public getEvent(eventRef: string): Observable<Event> {
     return this.http.get<Event>(this.API_URL + '/event/' + eventRef, this.getOptions());
-  }
-
-  public getGroupEvents(groupRef: string): Observable<Event[]> {
-    return this.http.get<Event[]>(this.API_URL + '/group/' + groupRef + '/event', this.getOptions());
   }
 
   public createEvent(event: Event) {
