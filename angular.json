@@ -18,7 +18,8 @@
             "polyfills": "src/polyfills.ts",
             "assets": [
               "src/assets",
-              "src/favicon.ico"
+              "src/favicon.ico",
+              "src/manifest.json"
             ],
             "styles": [
               "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
@@ -38,7 +39,8 @@
               "src/assets/datepicker/i18n/datepicker.en.js",
               "src/assets/datepicker/i18n/datepicker.fr.js",
               "src/assets/timepicker/jquery.timepicker.min.js"
-            ]
+            ],
+            "serviceWorker": true
           },
           "configurations": {
             "dev": {
@@ -136,9 +138,11 @@
               "src/assets/datepicker/datepicker.min.js",
               "src/assets/datepicker/i18n/datepicker.en.js",
               "src/assets/datepicker/i18n/datepicker.fr.js",
-              "src/assets/timepicker/jquery.timepicker.min.js"],
+              "src/assets/timepicker/jquery.timepicker.min.js"
+            ],
             "assets": [
-              "src/assets"
+              "src/assets",
+              "src/manifest.json"
             ]
           }
         },

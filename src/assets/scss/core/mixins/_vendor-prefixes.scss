@@ -1,12 +1,12 @@
 // User select
 // For selecting text on the page
 
-@mixin user-select($select) {
-  -webkit-user-select: $select;
-  -moz-user-select: $select;
-  -ms-user-select: $select; // IE10+
-  user-select: $select;
-}
+//@mixin user-select($select) {
+//  -webkit-user-select: $select;
+//  -moz-user-select: $select;
+//  -ms-user-select: $select; // IE10+
+//  user-select: $select;
+//}
 
 @mixin box-shadow($shadow...) {
   -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
@@ -14,27 +14,27 @@
 }
 
 // Box sizing
-@mixin box-sizing($boxmodel) {
-  -webkit-box-sizing: $boxmodel;
-  -moz-box-sizing: $boxmodel;
-  box-sizing: $boxmodel;
-}
+//@mixin box-sizing($boxmodel) {
+//  -webkit-box-sizing: $boxmodel;
+//  -moz-box-sizing: $boxmodel;
+//  box-sizing: $boxmodel;
+//}
 
-@mixin transition-all($time, $type) {
-  -webkit-transition: all $time $type;
-  -moz-transition: all $time $type;
-  -o-transition: all $time $type;
-  -ms-transition: all $time $type;
-  transition: all $time $type;
-}
+//@mixin transition-all($time, $type) {
+//  -webkit-transition: all $time $type;
+//  -moz-transition: all $time $type;
+//  -o-transition: all $time $type;
+//  -ms-transition: all $time $type;
+//  transition: all $time $type;
+//}
 
-@mixin transform-scale($value) {
-  -webkit-transform: scale($value);
-  -moz-transform: scale($value);
-  -o-transform: scale($value);
-  -ms-transform: scale($value);
-  transform: scale($value);
-}
+//@mixin transform-scale($value) {
+//  -webkit-transform: scale($value);
+//  -moz-transform: scale($value);
+//  -o-transform: scale($value);
+//  -ms-transform: scale($value);
+//  transform: scale($value);
+//}
 
 @mixin transform-translate-x($value) {
   -webkit-transform: translate3d($value, 0, 0);
