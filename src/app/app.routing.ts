@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { EventsResolver } from './shared/resolvers/events.resolver';
 import { EventResolver } from './shared/resolvers/event.resolver';
 import { AuthGuardService } from './core/guards/auth-guard.service';
@@ -54,7 +54,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    loadChildren:'./modules/components/main/main.module#MainModule',
+    loadChildren: './modules/components/main/main.module#MainModule',
     pathMatch: 'prefix',
     canActivate: [AuthGuardService],
   },
@@ -64,7 +64,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})
   ],
   exports: [],
   providers: [ProfileResolver, EventsResolver, LoginResolver, EventResolver, AuthGuardService]
