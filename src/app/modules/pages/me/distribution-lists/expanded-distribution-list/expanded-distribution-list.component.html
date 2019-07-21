@@ -2,7 +2,7 @@
   <div class="modal-dialog full-bootstrap-modal" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="list-options">
+        <div *ngIf="distributionList.creatorRef == user.ref" class="list-options">
           <div class="invite-list" *ngIf="isPrimaryPage()" (click)="onInvite()">
             <i class="fas fa-user-plus"></i><span i18n="@@invite">TBT</span>
           </div>

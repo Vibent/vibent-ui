@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { DistributionList } from '../../../../../shared/models/distribution-list';
 import { VibentModals } from '../../../../../core/services/modal-manager.service';
+import { User } from '../../../../../shared/models/user';
 declare const $: any;
 
 @Component({
@@ -11,6 +12,8 @@ declare const $: any;
 })
 export class ExpandedDistributionListComponent implements OnInit {
 
+  @Input()
+  user: User;
   @Input()
   distributionList: DistributionList;
   settingsOpen = false;
