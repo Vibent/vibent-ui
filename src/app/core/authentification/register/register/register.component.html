@@ -21,7 +21,18 @@
         <input type="text" class="form-control" id="lastName" formControlName="lastName"/>
       </div>
 
-      <div class="register-phone-mail">
+      <!-- Temporary fix to be changed -->
+      <div class="form-group">
+        <label for="emailFix">
+          <span i18n="@@email">TBT</span>
+          <span *ngIf="!formsValidAfterRegister.emailOrPhone" class="incorrect-input"
+                i18n="@@incorrect-email">TBT</span>
+        </label>
+        <input type="email" class="form-control" id="emailFix" formControlName="email">
+      </div>
+
+      <!-- Not displayed at the moment -->
+      <div style="display: none" class="register-phone-mail">
         <h4 class="card-title text-center m-t-10 m-b-0 text-gray" i18n="@@email-phone-both-question">TBT</h4>
         <p class="text-center text-gray">
           <span i18n="@@register-email-phone-both">TBT<br/> TBT</span>
