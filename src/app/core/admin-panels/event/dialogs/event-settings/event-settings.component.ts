@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { HttpService } from '../../../../http/http.service';
 import { Event } from '../../../../../shared/models/event';
-import { EventAdminPanelService } from '../../../../services/event-admin-panel.service';
 import * as moment from 'moment';
 import { EventUpdateService } from '../../../../services/bubbles-services/event-update.service';
 import { LoaderService } from '../../../../services/loader/service/loader.service';
@@ -39,7 +38,6 @@ export class EventSettingsComponent implements OnInit {
               private languageService: LanguageService,
               private userManagementService: UserManagementService,
               private router: Router,
-              private adminPanelService: EventAdminPanelService,
               private modalManagerService: ModalManagerService,
               private httpService: HttpService,
               private messageService: MessageService) {
@@ -103,9 +101,7 @@ export class EventSettingsComponent implements OnInit {
       startDate: this.languageService.formatDateToString($('#event-date').val()),
       description: this.event.description,
     };
-    this.httpService.updateEvent(event).subscribe(() => {
-      this.adminPanelService.updateEvent(event);
-    }, () => {
+    this.httpService.updateEvent(event).subscribe(() => {}, () => {
       this.dateValidSetted = false;
     });
 

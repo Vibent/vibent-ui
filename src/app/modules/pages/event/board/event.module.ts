@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EventComponent } from './event.component';
-import { RouterModule } from '@angular/router';
+import {
+  RouterModule,
+  Routes
+} from '@angular/router';
 import { EventParticipantsPreviewModule } from './event-participants/participants-preview/event-participants-preview.module';
 import { BubblePreviewControllerModule } from '../bubbles-preview/bubble-preview-controller.module';
 import { ExpandedBubbleControllerModule } from './modal-expanded-bubble/controller/expanded-bubble-controller.module';
@@ -14,10 +17,18 @@ import { EventParticipantsService } from '../../../../core/services/event-partic
 import { EventAdditionalInfosComponent } from './event-additional-infos/event-additional-infos.component';
 import { AddBubbleIconComponent } from './add-bubble-icon/add-bubble-icon.component';
 
+
+const routes: Routes = [
+  {
+    path: '',
+    component: EventComponent,
+  }
+];
+
 @NgModule({
   imports: [
+    RouterModule.forChild(routes),
     CommonModule,
-    RouterModule,
     EventParticipantsPreviewModule,
     EventParticipantsChoiceModule,
     EventSettingsModule,
@@ -31,6 +42,7 @@ import { AddBubbleIconComponent } from './add-bubble-icon/add-bubble-icon.compon
     AddBubbleIconComponent
   ],
   providers: [EventUpdateService, BlacknoteService, EventParticipantsService],
+  exports: [RouterModule]
 })
 export class EventModule {
 }
