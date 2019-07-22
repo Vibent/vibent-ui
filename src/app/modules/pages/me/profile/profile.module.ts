@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProfileComponent } from './profile.component';
-import { RouterModule } from '@angular/router';
+import {
+  RouterModule,
+  Routes
+} from '@angular/router';
 import { ProfileImageService } from '../../../../core/http/profile-image.service';
 import { ConnectedSocialModule } from '../connected-social/connected-social.module';
 import { ProfileSettingsModule } from './settings/profile-settings.module';
@@ -10,10 +13,17 @@ import { CreateDistributionListModule } from '../distribution-lists/distribution
 import { DistributionListsService } from '../../../../core/services/distribution-lists/distribution-lists.service';
 import { ExpandedDistributionListModule } from '../distribution-lists/expanded-distribution-list/expanded-distribution-list.module';
 
+const routes: Routes = [
+  {
+    path: '',
+    component: ProfileComponent,
+  }
+];
+
 @NgModule({
   imports: [
+    RouterModule.forChild(routes),
     CommonModule,
-    RouterModule,
     ProfileSettingsModule,
     ConnectedSocialModule,
     ProfileDistributionListsSectionModule,
@@ -24,6 +34,7 @@ import { ExpandedDistributionListModule } from '../distribution-lists/expanded-d
     ProfileComponent
   ],
   providers: [ProfileImageService, DistributionListsService],
+  exports: [RouterModule]
 })
 export class ProfileModule {
 }

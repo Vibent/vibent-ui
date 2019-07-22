@@ -8,25 +8,22 @@ import {
   Routes
 } from '@angular/router';
 import { TutorialModule } from '../../pages/event/dialogs/tutorial/tutorial.module';
-import { ProfileComponent } from '../../pages/me/profile/profile.component';
 import { ProfileResolver } from '../../../shared/resolvers/profile.resolver';
 import { EventsComponent } from '../../pages/event/attended-events/events.component';
 import { EventsResolver } from '../../../shared/resolvers/events.resolver';
-import { EventComponent } from '../../pages/event/board/event.component';
 import { EventResolver } from '../../../shared/resolvers/event.resolver';
 import { EventInvitationComponent } from '../../pages/event/board/event-participants/participants-preview/invitation-link-page/event-invitation.component';
 import { ListInvitationComponent } from '../../pages/me/distribution-lists/expanded-distribution-list/invitation-link-page/list-invitation.component';
 import { EventsModule } from '../../pages/event/attended-events/events.module';
-import { EventModule } from '../../pages/event/board/event.module';
-import { ProfileModule } from '../../pages/me/profile/profile.module';
 import { ProfileSettingsModule } from '../../pages/me/profile/settings/profile-settings.module';
 import { EventSettingsModule } from '../../../core/admin-panels/event/dialogs/event-settings/event-settings.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalManagerService } from '../../../core/services/modal-manager.service';
-import { EventAdminPanelService } from '../../../core/services/event-admin-panel.service';
 import { NotificationsService } from '../../../core/services/notifications.service';
 import { EventInvitationModule } from '../../pages/event/board/event-participants/participants-preview/invitation-link-page/event-invitation.module';
 import { ListInvitationModule } from '../../pages/me/distribution-lists/expanded-distribution-list/invitation-link-page/list-invitation.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { ProfileImageService } from '../../../core/http/profile-image.service';
 
 const routes: Routes = [
   {
@@ -35,7 +32,7 @@ const routes: Routes = [
     children: [
       {
         path: 'me',
-        component: ProfileComponent,
+        loadChildren: '../../pages/me/profile/profile.module#ProfileModule',
         resolve: {user: ProfileResolver}
       },
       {
@@ -45,8 +42,8 @@ const routes: Routes = [
       },
       {
         path: 'events/:ref',
-        component: EventComponent,
-        resolve: {event: EventResolver}
+        loadChildren: '../../pages/event/board/event.module#EventModule',
+        resolve: {event: EventResolver},
       },
       {
         path: 'invite/e/:token',
@@ -70,20 +67,19 @@ const routes: Routes = [
     HttpClientModule,
     TutorialModule,
     EventsModule,
-    EventModule,
-    ProfileModule,
     ProfileSettingsModule,
     EventInvitationModule,
     ListInvitationModule,
-    EventSettingsModule
+    EventSettingsModule,
+    ServiceWorkerModule.register('ngsw-worker.js')
   ],
   declarations: [
     MainComponent
   ],
   providers: [
     ModalManagerService,
-    EventAdminPanelService,
-    NotificationsService
+    NotificationsService,
+    ProfileImageService
   ],
   exports: [RouterModule]
 })

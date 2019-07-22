@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { EventsResolver } from './shared/resolvers/events.resolver';
 import { EventResolver } from './shared/resolvers/event.resolver';
 import { AuthGuardService } from './core/guards/auth-guard.service';
@@ -64,7 +64,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})
+    RouterModule.forRoot(routes)
   ],
   exports: [],
   providers: [ProfileResolver, EventsResolver, LoginResolver, EventResolver, AuthGuardService]
