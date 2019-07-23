@@ -6,6 +6,7 @@ import { UserManagementService } from '../../../../../../core/services/user-mana
 import { User } from '../../../../../../shared/models/user';
 import { EventUpdateService } from '../../../../../../core/services/bubbles-services/event-update.service';
 import { EventParticipantsService } from '../../../../../../core/services/event-participants.service';
+import { MessageService } from '../../../../../../core/services/i18n/message.service';
 
 @Component({
   selector: 'event-participants-choice',
@@ -23,6 +24,7 @@ export class EventParticipantsChoiceComponent implements OnInit {
 
   constructor(private notificationService: NotificationsService,
               private userManagementService: UserManagementService,
+              private messageService: MessageService,
               private cd: ChangeDetectorRef,
               private eventParticipantsService: EventParticipantsService,
               private eventUpdateService: EventUpdateService,
@@ -42,14 +44,14 @@ export class EventParticipantsChoiceComponent implements OnInit {
   onParticipate() {
     if (!(this.fullUserParticipation.answer === EventParticipantAnswer.YES)) {
       this.updateParticipation(EventParticipantAnswer.YES);
-      this.notificationService.notify('You are participating in this event', NotificationType.SUCCESS);
+      this.notificationService.notify(this.messageService.PARTICIPATING_EVENT, NotificationType.SUCCESS);
     }
   }
 
   onMaybe() {
     if (!(this.fullUserParticipation.answer === EventParticipantAnswer.MAYBE)) {
       this.updateParticipation(EventParticipantAnswer.MAYBE);
-      this.notificationService.notify('You don\'t know yet', NotificationType.INFO);
+      this.notificationService.notify(this.messageService.YOU_DONT_KNOW_YET, NotificationType.INFO);
     }
   }
 
@@ -57,7 +59,7 @@ export class EventParticipantsChoiceComponent implements OnInit {
     if (!(this.fullUserParticipation.answer === EventParticipantAnswer.NO)) {
       this.updateParticipation(EventParticipantAnswer.NO);
       this.httpService.patchEventParticipations(this.fullUserParticipation).subscribe();
-      this.notificationService.notify('You are not participating in this event', NotificationType.DANGER);
+      this.notificationService.notify(this.messageService.NOT_PARTICIPATING_EVENT, NotificationType.DANGER);
     }
   }
 

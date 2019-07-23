@@ -16,8 +16,6 @@ import { EventInvitationComponent } from '../../pages/event/board/event-particip
 import { ListInvitationComponent } from '../../pages/me/distribution-lists/expanded-distribution-list/invitation-link-page/list-invitation.component';
 import { EventsModule } from '../../pages/event/attended-events/events.module';
 import { ProfileSettingsModule } from '../../pages/me/profile/settings/profile-settings.module';
-import { EventSettingsModule } from '../../../core/admin-panels/event/dialogs/event-settings/event-settings.module';
-import { HttpClientModule } from '@angular/common/http';
 import { ModalManagerService } from '../../../core/services/modal-manager.service';
 import { NotificationsService } from '../../../core/services/notifications.service';
 import { EventInvitationModule } from '../../pages/event/board/event-participants/participants-preview/invitation-link-page/event-invitation.module';
@@ -64,13 +62,11 @@ const routes: Routes = [
     CommonModule,
     SidebarModule,
     NavbarModule,
-    HttpClientModule,
     TutorialModule,
     EventsModule,
     ProfileSettingsModule,
     EventInvitationModule,
     ListInvitationModule,
-    EventSettingsModule,
     ServiceWorkerModule.register('ngsw-worker.js')
   ],
   declarations: [

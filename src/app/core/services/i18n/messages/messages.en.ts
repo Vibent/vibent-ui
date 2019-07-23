@@ -41,7 +41,9 @@ export class MessagesEn implements IMessages {
   public readonly NO_REVERT = 'You won\'t be able to revert this!';
   public readonly NO_SEAT_IN_CAR = 'No more seat.';
   public readonly NO_SEAT_IN_CAR_TEXT = 'There is no more remaining seat in your car.';
+  public readonly NOT_PARTICIPATING_EVENT = 'You are not participating in this event';
   public readonly OOPS = 'Oops...';
+  public readonly PARTICIPATING_EVENT = 'You are participating in this event';
   public readonly PASSWORD_RESET = 'Your password has been updated';
   public readonly PASSWORD_RESET_SENT = 'You will receive an email to update your password.';
   public readonly PHONE_ALREADY_TAKEN = 'This phone number is already registred.';
@@ -61,4 +63,5 @@ export class MessagesEn implements IMessages {
   public readonly TAKE_THEM_TEXT = 'You agree to pick up the person by picking him up at the indicated place, are you sure?';
   public readonly TRAVEL_BUBBLE_CREATED = 'Your travel bubble is ready! Let\'s for a transport organization.';
   public readonly YES = 'Yes';
+  public readonly YOU_DONT_KNOW_YET = 'You don\'t know yet';
 }
