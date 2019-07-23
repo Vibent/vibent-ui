@@ -37,7 +37,9 @@ export interface IMessages {
   NO_REVERT: string;
   NO_SEAT_IN_CAR: string;
   NO_SEAT_IN_CAR_TEXT: string;
+  NOT_PARTICIPATING_EVENT: string;
   OOPS: string;
+  PARTICIPATING_EVENT: string;
   PASSWORD_RESET: string;
   PASSWORD_RESET_SENT: string;
   PHONE_ALREADY_TAKEN: string;
@@ -57,4 +59,5 @@ export interface IMessages {
   TAKE_THEM_TEXT: string;
   TRAVEL_BUBBLE_CREATED: string;
   YES: string;
+  YOU_DONT_KNOW_YET: string;
 }

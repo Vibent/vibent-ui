@@ -41,7 +41,9 @@ export class MessagesFr implements IMessages {
   public readonly NO_REVERT = 'Vous ne pourrez pas revenir en arrière !';
   public readonly NO_SEAT_IN_CAR = 'Il n\'y a plus de place.' ;
   public readonly NO_SEAT_IN_CAR_TEXT = 'Il n\'y a plus de place dans votre voiture.';
+  public readonly NOT_PARTICIPATING_EVENT = 'Vous ne participez pas à l\'événement.';
   public readonly OOPS = 'Oops';
+  public readonly PARTICIPATING_EVENT = 'Vous participez à l\'événement.';
   public readonly PASSWORD_RESET = 'Votre mot de passe a été mis à jour.';
   public readonly PASSWORD_RESET_SENT = 'Vous allez recevoir un mail pour réinitialiser votre mot de passe.';
   public readonly PHONE_ALREADY_TAKEN = 'Numéro de téléphone déjà enregistré.';
@@ -61,4 +63,5 @@ export class MessagesFr implements IMessages {
   public readonly TAKE_THEM_TEXT = 'Vous acceptez de venir chercher la personne en la prenant à l\'endroit indiqué.';
   public readonly TRAVEL_BUBBLE_CREATED = 'Votre bulle Transport est prête ! Organiez vos transports vers l\'événement';
   public readonly YES = 'Oui';
+  public readonly YOU_DONT_KNOW_YET = 'Vous ne savez pas encore.';
 }
