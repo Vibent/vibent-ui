@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { AuthenticationService } from '../../../services/authentication.service';
 import { ResetPasswordComponent } from './reset-password.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { Ng2TelInputModule } from 'ng2-tel-input';
 import { HeaderModule } from '../../header/header.module';
 
@@ -15,7 +14,6 @@ import { HeaderModule } from '../../header/header.module';
     RouterModule,
     FormsModule,
     HeaderModule,
-    HttpClientModule,
     ReactiveFormsModule,
     Ng2TelInputModule
   ],
