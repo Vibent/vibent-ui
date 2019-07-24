@@ -471,7 +471,7 @@
   background: #e65b5b;
   padding-left: 6px;
   padding-right: 6px;
-  font-size: 13px;
+  font-size: 70%;
   color: white;
   border-radius: 20px;
   cursor: pointer;
@@ -570,8 +570,7 @@
 
     .progress {
       height: 1.5rem;
-      width: 85%;
-      margin-right: 5px;
+      width: 100%;
 
       .bg-light {
         color: black;
@@ -718,5 +717,5 @@
 }
 
 .badge {
-  font-size: 65%;
+  font-size: 70%;
 }

@@ -1,12 +1,13 @@
-<li class="list-group-item border-0 d-flex flex-wrap align-items-center">
-  <div class="progress">
+<li class="list-group-item border-0 d-flex flex-nowrap align-items-center">
+  <div *ngIf="surveyDataModel.isCurrentUserOption" class="delete-button-sm m-r-5" (click)="deleteOption()" i18n="@@delete">TBT</div>
+  <div class="mr-auto progress">
     <div class="progress-bar bg-light"
          role="progressbar"
          [style.width]="surveyDataModel.progressWidth">
       <span class="m-l-5">{{surveyOption.content}}</span>
     </div>
   </div>
-  <span id="popover{{this.surveyOption.id}}" class="badge badge-primary badge-pill popover-activation"
+  <span id="popover{{this.surveyOption.id}}" class="badge badge-primary badge-pill popover-activation m-l-5 m-r-5"
         data-container="body"
         data-toggle="popover"
         data-placement="top">
@@ -19,7 +20,7 @@
     <span i18n="@@voted">TBT</span>
   </a>
   <a *ngIf="!surveyDataModel.userVoted"
-     class="ml-auto badge badge-info cursor-pointer text-white"
+     class="badge badge-info cursor-pointer text-white"
      (click)="onVote()"
      i18n="@@vote">TBT</a>
 </li>

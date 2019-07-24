@@ -21,6 +21,7 @@ export class SurveyAnswer {
 }
 
 export class SurveyDataModel {
+  isCurrentUserOption: boolean;
   votersNumber: string;
   userVoted: boolean;
   votersNames: any;

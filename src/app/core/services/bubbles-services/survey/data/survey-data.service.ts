@@ -2,8 +2,15 @@ import { Injectable } from '@angular/core';
 import { UserManagementService } from '../../../user-management.service';
 import { User } from '../../../../../shared/models/user';
 import { HttpService } from '../../../../http/http.service';
-import { SurveyBubble, SurveyDataModel, SurveyOption } from '../../../../../shared/models/bubbles/SurveyBubble';
-import { forkJoin, Observable } from 'rxjs';
+import {
+  SurveyBubble,
+  SurveyDataModel,
+  SurveyOption
+} from '../../../../../shared/models/bubbles/SurveyBubble';
+import {
+  forkJoin,
+  Observable
+} from 'rxjs';
 
 @Injectable()
 export class SurveyDataService {
@@ -16,10 +23,15 @@ export class SurveyDataService {
   }
 
   populateSurveyDataModel(surveyDataModel: SurveyDataModel, surveyOption: SurveyOption, answerCount: number) {
-    surveyDataModel.userVoted = this.getUserVoted(surveyOption);
+    surveyDataModel.isCurrentUserOption = this.isCurrentUserOption(surveyOption),
+      surveyDataModel.userVoted = this.getUserVoted(surveyOption);
     surveyDataModel.votersNumber = this.getVotersNumber(surveyOption);
     surveyDataModel.votersNames = this.getVotersNames(surveyOption);
     surveyDataModel.progressWidth = this.getProgressWidth(answerCount, surveyOption);
+  }
+
+  isCurrentUserOption(surveyOption: SurveyOption) {
+    return this.user.ref === surveyOption.userRef;
   }
 
   getUserVoted(surveyOption: SurveyOption) {
