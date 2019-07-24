@@ -60,7 +60,7 @@ describe('Survey data Service', () => {
       }],
       content: 'content',
       id: 1,
-      userRef: 'ref'
+      userRef: 'ref2'
     };
 
     bubble = new SurveyBubble();
@@ -181,5 +181,15 @@ describe('Survey data Service', () => {
     bubble.options = [option2, option];
     expect(surveyDataService.getTopAnswers(bubble, 3)[0].id).toBe(0);
     expect(surveyDataService.getTopAnswers(bubble, 3)[1].id).toBe(1);
+  });
+
+  it('Check isCurrentUserOption is correctly set to false', () => {
+    answerCount = 200;
+    expect(surveyDataService.isCurrentUserOption(option2)).toBe(false);
+  });
+
+  it('Check isCurrentUserOption is correctly set to true', () => {
+    answerCount = 200;
+    expect(surveyDataService.isCurrentUserOption(option)).toBe(true);
   });
 });

@@ -9,6 +9,7 @@
           <ul class="list-group">
             <survey-option
                 *ngFor="let option of this.surveyBubble.options"
+                [surveyBubble]="surveyBubble"
                 [surveyOption]="option"
                 [answerCount]="surveyBubble.answerCount"
                 [bubbleId]="surveyBubble.id"

@@ -3,7 +3,7 @@ import {
   Component,
   EventEmitter,
   Input,
-  OnChanges, OnDestroy,
+  OnChanges,
   OnInit,
   Output,
   SimpleChanges
@@ -11,38 +11,29 @@ import {
 import { EventUpdateService } from '../../../../../../../../../../core/services/bubbles-services/event-update.service';
 import { User } from '../../../../../../../../../../shared/models/user';
 import { UserManagementService } from '../../../../../../../../../../core/services/user-management.service';
-import { animate, state, style, transition, trigger } from '@angular/animations';
-import { SurveyDataModel, SurveyOption } from '../../../../../../../../../../shared/models/bubbles/SurveyBubble';
+import {
+  SurveyBubble,
+  SurveyDataModel,
+  SurveyOption
+} from '../../../../../../../../../../shared/models/bubbles/SurveyBubble';
 import { SurveyDataService } from '../../../../../../../../../../core/services/bubbles-services/survey/data/survey-data.service';
 import { SurveyHttpService } from '../../../../../../../../../../core/services/bubbles-services/survey/http/survey-http.service';
 import { BubbleType } from '../../../../../../../../../../shared/models/bubbles/IBubble';
+import Swal from 'sweetalert2';
+import { MessageService } from '../../../../../../../../../../core/services/i18n/message.service';
 
 declare const $: any;
 
 @Component({
   selector: 'survey-option',
   templateUrl: './survey-option.html',
-  animations: [
-    trigger('fadeInOut', [
-
-      // the "in" style determines the "resting" state of the element when it is visible.
-      state('in', style({opacity: 1})),
-
-      // fade in when created. this could also be written as transition('void => *')
-      transition(':enter', [
-        style({opacity: 0}),
-        animate(600)
-      ]),
-
-      // fade out when destroyed. this could also be written as transition('void => *')
-      transition(':leave',
-        animate(600, style({opacity: 0})))
-    ])
-  ],
+  styleUrls: ['./survey-option.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SurveyOptionComponent implements OnInit, OnChanges, OnDestroy {
+export class SurveyOptionComponent implements OnInit, OnChanges {
 
+  @Input()
+  surveyBubble: SurveyBubble;
   @Input()
   surveyOption: SurveyOption;
   @Input()
@@ -57,6 +48,7 @@ export class SurveyOptionComponent implements OnInit, OnChanges, OnDestroy {
   surveyDataModel: SurveyDataModel = new SurveyDataModel();
 
   constructor(private surveyHttpService: SurveyHttpService,
+              private messageService: MessageService,
               private surveyDataService: SurveyDataService,
               private eventUpdateService: EventUpdateService,
               private userManagementService: UserManagementService) {
@@ -98,6 +90,29 @@ export class SurveyOptionComponent implements OnInit, OnChanges, OnDestroy {
     });
   }
 
+  deleteOption() {
+    Swal({
+      title: this.messageService.ARE_YOU_SURE,
+      text: this.messageService.NO_REVERT,
+      type: 'warning',
+      showCancelButton: true,
+      reverseButtons: true,
+      confirmButtonColor: this.messageService.CONFIRM_BUTTON_COLOR,
+      cancelButtonColor: this.messageService.CANCEL_BUTTON_COLOR,
+      confirmButtonText: this.messageService.DELETE
+    }).then((result) => {
+      if (result.value) {
+        this.surveyBubble.options
+          .splice(this.surveyBubble.options
+            .findIndex(option => option.id === this.surveyOption.id), 1);
+        this.surveyHttpService.deleteOption(this.surveyOption).subscribe(() => {
+          this.eventUpdateService.updateEvent(this.eventRef);
+          this.eventUpdateService.updateEvent(this.eventRef, {id: this.bubbleId, type: BubbleType.CheckboxBubble});
+        });
+      }
+    });
+  }
+
   constructAlimentationDataModel() {
     this.surveyDataService.populateSurveyDataModel(this.surveyDataModel, this.surveyOption, this.answerCount);
     this.surveyDataModel.votersNames.then((value) => {
@@ -108,9 +123,6 @@ export class SurveyOptionComponent implements OnInit, OnChanges, OnDestroy {
         });
       });
     });
-  }
-
-  ngOnDestroy(): void {
   }
 
 }
