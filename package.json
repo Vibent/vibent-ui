@@ -7,8 +7,8 @@
     "start": "ng serve",
     "test": "ng test --watch=false",
     "build": "cross-env NODE_OPTIONS=--max_old_space_size=8192 webpack",
-    "build-dev": "node --max_old_space_size=5048 ./node_modules/@angular/cli/bin/ng build --configuration=dev  && workbox injectManifest" ,
-    "build-prod": "ng build --configuration=prod" ,
+    "build-dev": "node --max_old_space_size=5048 ./node_modules/@angular/cli/bin/ng build --configuration=dev",
+    "build-prod": "ng build --configuration=prod",
     "extract-i18n": "ng xi18n vibent-ui --i18n-format xlf --output-path i18n --i18n-locale xxx && ng run vibent-ui:xliffmerge",
     "build-dev-i18n": "for lang in en fr; do node --max_old_space_size=5048 ./node_modules/@angular/cli/bin/ng build --configuration=dev --output-path=dist-dev/$lang --i18n-file=src/i18n/messages.$lang.xlf --i18n-locale=$lang; done",
     "build-prod-i18n": "for lang in en fr; do ng build --configuration=prod --output-path=dist-prod/$lang --i18n-file=src/i18n/messages.$lang.xlf --i18n-locale=$lang; done"
@@ -67,7 +67,6 @@
     "tslib": "^1.9.3",
     "util": "^0.11.1",
     "web-animations-js": "2.3.1",
-    "workbox-sw": "^4.3.1",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
@@ -97,7 +96,6 @@
     "protractor": "5.4.1",
     "ts-node": "7.0.1",
     "tslint": "5.12.0",
-    "typescript": "^3.1.6",
-    "workbox-cli": "^4.3.1"
+    "typescript": "^3.1.6"
   }
 }

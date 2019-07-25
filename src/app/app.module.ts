@@ -11,6 +11,7 @@ import { LoadingPageComponent } from './core/services/loader/loading-page/loadin
 import { HomeModule } from './modules/components/home/home.module';
 import { TermsModule } from './modules/pages/terms/terms.module';
 import { AboutModule } from './modules/components/about/about.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
 import { LoginModule } from './core/authentification/login/login.module';
 import { CoreModule } from './core/core.module';
 
@@ -35,6 +36,7 @@ import { CoreModule } from './core/core.module';
     RegisterModule,
     HomeModule,
     AboutModule,
+    ServiceWorkerModule.register('ngsw-worker.js'),
   ],
   declarations: [
     AppComponent
