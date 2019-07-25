@@ -19,28 +19,7 @@
             "assets": [
               "src/assets",
               "src/favicon.ico",
-              "src/manifest.json",
-              "src/service-worker.js",
-              {
-                "glob": "workbox-sw.js",
-                "input": "node_modules/workbox-sw/build/",
-                "output": "./workbox-output"
-              },
-              {
-                "glob": "workbox-core.prod.js",
-                "input": "node_modules/workbox-core/build/",
-                "output": "./workbox-output"
-              },
-              {
-                "glob": "workbox-precaching.prod.js",
-                "input": "node_modules/workbox-precaching/build/",
-                "output": "./workbox-output"
-              },
-              {
-                "glob": "workbox-window.prod.mjs",
-                "input": "node_modules/workbox-window/build/",
-                "output": "./workbox-output"
-              }
+              "src/manifest.json"
             ],
             "styles": [
               "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
@@ -163,8 +142,7 @@
             ],
             "assets": [
               "src/assets",
-              "src/manifest.json",
-              "src/service-worker.js"
+              "src/manifest.json"
             ]
           }
         },

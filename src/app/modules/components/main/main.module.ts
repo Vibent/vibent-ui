@@ -20,6 +20,7 @@ import { ModalManagerService } from '../../../core/services/modal-manager.servic
 import { NotificationsService } from '../../../core/services/notifications.service';
 import { EventInvitationModule } from '../../pages/event/board/event-participants/participants-preview/invitation-link-page/event-invitation.module';
 import { ListInvitationModule } from '../../pages/me/distribution-lists/expanded-distribution-list/invitation-link-page/list-invitation.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
 import { ProfileImageService } from '../../../core/http/profile-image.service';
 
 const routes: Routes = [
@@ -66,6 +67,7 @@ const routes: Routes = [
     ProfileSettingsModule,
     EventInvitationModule,
     ListInvitationModule,
+    ServiceWorkerModule.register('ngsw-worker.js')
   ],
   declarations: [
     MainComponent
