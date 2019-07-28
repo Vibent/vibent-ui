@@ -48,3 +48,11 @@ $checkbox-color: #6ebf74;
     }
   }
 }
+
+// ISSUE: On ios browser in mobile mode, if a modal is opened and a checkbox is
+// in a checkbox bubble preview routerLink change will display a blank page
+// This fix has been found but without any concrete explanation
+// previous value in bootstrap:  z-index: -1;
+.custom-control-input {
+  z-index: 0;
+}
