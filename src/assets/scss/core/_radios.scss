@@ -4,18 +4,19 @@
   -ms-appearance: none;
   -o-appearance: none;
   appearance: none;
-
+  border-radius: 0;
+  display: none;
 }
 
 .event-participation {
 
-  .btn{
+  .btn {
     color: #000000;
     background-color: white;
     min-width: 95px;
   }
 
-  .btn:hover{
+  .btn:hover {
     color: #000000;
     background-color: white;
   }
