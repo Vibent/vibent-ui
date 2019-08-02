@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AboutComponent } from './about.component';
 import { FooterModule } from '../footer/footer.module';
-import { HeaderModule } from '../../../core/authentification/header/header.module';
+import { VibentHeaderModule } from '../../../core/authentification/header/vibent-header.module';
 
 
 @NgModule({
   imports: [
     CommonModule,
     FooterModule,
-    HeaderModule
+    VibentHeaderModule
   ],
   declarations: [
     AboutComponent

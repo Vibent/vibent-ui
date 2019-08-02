@@ -18,7 +18,6 @@ export class RegisterComponent extends VibentBaseComponent implements OnInit {
   firstName: FormControl;
   lastName: FormControl;
   email: FormControl;
-  phone: FormControl;
   password: FormControl;
   passwordConfirmation: FormControl;
 
@@ -26,7 +25,6 @@ export class RegisterComponent extends VibentBaseComponent implements OnInit {
     firstName: true,
     lastName: true,
     email: true,
-    phone: true,
     password: true,
     passwordConfirmation: true,
     emailOrPhone: true,
@@ -59,9 +57,6 @@ export class RegisterComponent extends VibentBaseComponent implements OnInit {
     this.email = new FormControl('', [
       Validators.pattern('^[\\w\\-\\+]+(\\.[\\w\\-]+)*@[\\w\\-]+(\\.[\\w\\-]+)*\\.[\\w\\-]{2,4}$')
     ]);
-    this.phone = new FormControl('', [
-      Validators.required,
-    ]);
     this.password = new FormControl('', [
       Validators.required,
       Validators.minLength(8)
@@ -81,7 +76,6 @@ export class RegisterComponent extends VibentBaseComponent implements OnInit {
       firstName: this.firstName,
       lastName: this.lastName,
       email: this.email,
-      phone: this.phone,
       password: this.password,
       passwordConfirmation: this.passwordConfirmation,
     });

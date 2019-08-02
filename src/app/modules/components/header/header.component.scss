@@ -1,0 +1,28 @@
+$header-height: 50px;
+
+.home-header {
+  background: #88d4ed;
+}
+
+.header-logo-min {
+  width: $header-height;
+}
+
+.header-board {
+  align-items: center;
+  justify-content: center;
+  background: #ffffff6e;
+  min-height: $header-height;
+  border-radius: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 14px;
+}
+
+.header-board-item {
+  border-radius: 7px;
+
+  &:hover {
+    background-color: white;
+  }
+}

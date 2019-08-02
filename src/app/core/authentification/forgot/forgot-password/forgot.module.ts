@@ -4,8 +4,7 @@ import { RouterModule } from '@angular/router';
 import { AuthenticationService } from '../../../services/authentication.service';
 import { ForgotComponent } from './forgot.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Ng2TelInputModule } from 'ng2-tel-input';
-import { HeaderModule } from '../../header/header.module';
+import { VibentHeaderModule } from '../../header/vibent-header.module';
 
 
 @NgModule({
@@ -14,8 +13,7 @@ import { HeaderModule } from '../../header/header.module';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    Ng2TelInputModule,
-    HeaderModule,
+    VibentHeaderModule,
   ],
   declarations: [
     ForgotComponent

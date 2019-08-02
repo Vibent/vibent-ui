@@ -5,22 +5,20 @@ import { AuthenticationService } from '../../../services/authentication.service'
 import { RegisterComponent } from './register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule, MatFormFieldModule, MatInputModule, MatNativeDateModule } from '@angular/material';
-import { Ng2TelInputModule } from 'ng2-tel-input';
 import { MailConfirmationComponent } from '../mail-confirmation/mail-confirmation.component';
-import { HeaderModule } from '../../header/header.module';
+import { VibentHeaderModule } from '../../header/vibent-header.module';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     FormsModule,
-    HeaderModule,
+    VibentHeaderModule,
     ReactiveFormsModule,
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatFormFieldModule,
-    Ng2TelInputModule
+    MatFormFieldModule
   ],
   declarations: [
     RegisterComponent,

@@ -14,6 +14,7 @@ import { AboutModule } from './modules/components/about/about.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { LoginModule } from './core/authentification/login/login.module';
 import { CoreModule } from './core/core.module';
+import { GetAppModule } from './modules/components/get-app/get-app.module';
 
 /**
  * This module is the primary module of Vibent
@@ -29,6 +30,7 @@ import { CoreModule } from './core/core.module';
     RouterModule,
     AppRoutingModule,
     RouterModule,
+    GetAppModule,
     TermsModule,
     ForgotModule,
     ResetPasswordModule,
