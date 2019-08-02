@@ -14,6 +14,7 @@ import { LoginResolver } from './shared/resolvers/login.resolver';
 import { TermsComponent } from './modules/pages/terms/terms.component';
 import { AboutComponent } from './modules/components/about/about.component';
 import { LoginComponent } from './core/authentification/login/login.component';
+import { GetAppComponent } from './modules/components/get-app/get-app.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'getApp',
+    component: GetAppComponent
   },
   {
     path: 'terms',

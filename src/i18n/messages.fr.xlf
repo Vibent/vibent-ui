@@ -2,6 +2,35 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template" target-language="fr">
     <body>
+      <trans-unit id="download-app-store" datatype="html">
+        <source>Download an app in a store? So 2018...</source>
+        <target state="translated">Télécharger une app dans un store ? So 2018...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/get-app/get-app.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="how-to-get-vibent-app" datatype="html">
+        <source>How to get Vibent app</source>
+        <target state="translated">Comment installer Vibent sur son mobile</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/get-app/get-app.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="how-to-get-vibent-app-text" datatype="html">
+        <source>Whether you are on an Android or Apple device, open your favorite browser. In
+      the settings select the option "Add
+      to home screen".... It's done, you just installed Vibent on your phone. And it's a real application, we
+      promise.</source>
+        <target state="translated">Que vous soyez sur un appareil Android ou Apple, ouvrez votre navigateur préféré.
+            Dans les paramètres, sélectionnez l'option "Ajouter à l'écran d'accueil"... C'est fait, vous venez d'installer
+            Vibent sur votre téléphone. Et c'est une vraie application, promis.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/get-app/get-app.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="terms_and_conditions_complete" datatype="html">
         <source>
       <x id="START_HEADING_LEVEL2" ctype="x-h2" equiv-text="&lt;h2>"/>Terms &amp; Conditions<x id="CLOSE_HEADING_LEVEL2" ctype="x-h2" equiv-text="&lt;/h2>"/>
@@ -475,15 +504,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">60</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="groups" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Groupes</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">8</context>
+          <context context-type="linenumber">71</context>
         </context-group>
       </trans-unit>
       <trans-unit id="event-board" datatype="html">
@@ -494,28 +515,20 @@
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="group-information" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Informations du groupe</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">9</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="profile" datatype="html">
         <source>TBT</source>
         <target state="translated">Profile</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">8</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">25</context>
+          <context context-type="linenumber">27</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">68</context>
+          <context context-type="linenumber">75</context>
         </context-group>
       </trans-unit>
       <trans-unit id="language" datatype="html">
@@ -523,27 +536,41 @@
         <target state="translated">Langues</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-&amp;-conditions" datatype="html">
+        <source>
+                Terms &amp; conditions
+              </source>
+        <target state="translated">
+            Conditions d'utilisation
+              </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
       <trans-unit id="about-us" datatype="html">
-        <source>
-                About us
-              </source>
+        <source>TBT</source>
         <target state="translated">
                 A propos de nous
               </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">39</context>
-        </context-group>
-        <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/about/about.component.html</context>
-          <context context-type="linenumber">5</context>
+          <context context-type="linenumber">4</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/footer/footer.component.html</context>
           <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/header/header.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="logout" datatype="html">
@@ -555,7 +582,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">45</context>
+          <context context-type="linenumber">56</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/profile/profile.component.html</context>
@@ -599,7 +626,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="create-join-group" datatype="html">
@@ -607,7 +634,7 @@
         <target state="translated">Créez ou rejoignez un groupe</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">25</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="create-join-group-description" datatype="html">
@@ -619,7 +646,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">27</context>
+          <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="create-events" datatype="html">
@@ -627,7 +654,7 @@
         <target state="translated">Créez des événements</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="create-events-description" datatype="html">
@@ -640,7 +667,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">36</context>
+          <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="organize-collaboratively" datatype="html">
@@ -648,7 +675,7 @@
         <target state="translated">Organisez-vous collaborativement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">43</context>
+          <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="organize-collaboratively-description" datatype="html">
@@ -660,7 +687,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">45</context>
+          <context context-type="linenumber">46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="how-it-works" datatype="html">
@@ -668,7 +695,11 @@
         <target state="translated">Comment ça marche ?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">56</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/header/header.component.html</context>
+          <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="how-it-works-description" datatype="html">
@@ -680,7 +711,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">57</context>
+          <context context-type="linenumber">58</context>
         </context-group>
       </trans-unit>
       <trans-unit id="our-bubbles" datatype="html">
@@ -688,7 +719,7 @@
         <target state="translated">Nos bulles</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">68</context>
+          <context context-type="linenumber">69</context>
         </context-group>
       </trans-unit>
       <trans-unit id="click-each-one-details" datatype="html">
@@ -696,7 +727,7 @@
         <target state="translated">Cliquez sur les boutons ci-dessous pour découvrir chaque bulle.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">69</context>
+          <context context-type="linenumber">70</context>
         </context-group>
       </trans-unit>
       <trans-unit id="alimentation" datatype="html">
@@ -704,7 +735,7 @@
         <target state="translated">Alimentation</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">75</context>
+          <context context-type="linenumber">76</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/alimentation-bubble/alimentation-bubble-preview.html</context>
@@ -720,7 +751,7 @@
         <target state="translated">Transport</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">80</context>
+          <context context-type="linenumber">81</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/travel-bubble/travel-bubble-preview.html</context>
@@ -736,7 +767,7 @@
         <target state="translated">Check-list</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">85</context>
+          <context context-type="linenumber">86</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
@@ -748,7 +779,7 @@
         <target state="translated">Sondage</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">90</context>
+          <context context-type="linenumber">91</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
@@ -760,7 +791,7 @@
         <target state="translated">Planning</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">95</context>
+          <context context-type="linenumber">96</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/bubbles-preview/planning-bubble/planning-bubble-preview.html</context>
@@ -776,7 +807,7 @@
         <target state="translated">Libre</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">100</context>
+          <context context-type="linenumber">101</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-list/bubbles-list.html</context>
@@ -788,7 +819,7 @@
         <target state="translated">Bulle Alimentation</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">109</context>
+          <context context-type="linenumber">110</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/alimentation/alimentation-explanation.html</context>
@@ -803,7 +834,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">110</context>
+          <context context-type="linenumber">111</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/alimentation/alimentation-explanation.html</context>
@@ -815,7 +846,7 @@
         <target state="translated">Bulle Check-list</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">118</context>
+          <context context-type="linenumber">119</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/checkbox/checkbox-explanation.html</context>
@@ -829,7 +860,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">119</context>
+          <context context-type="linenumber">120</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/checkbox/checkbox-explanation.html</context>
@@ -841,7 +872,7 @@
         <target state="translated">Bulle Planning</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">127</context>
+          <context context-type="linenumber">128</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/planning/planning-explanation.html</context>
@@ -856,7 +887,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">128</context>
+          <context context-type="linenumber">129</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/planning/planning-explanation.html</context>
@@ -868,7 +899,7 @@
         <target state="translated">Bulle Transport</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">136</context>
+          <context context-type="linenumber">137</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/travel/travel-explanation.html</context>
@@ -883,7 +914,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">137</context>
+          <context context-type="linenumber">138</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/travel/travel-explanation.html</context>
@@ -895,7 +926,7 @@
         <target state="translated">Bulle Libre</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">145</context>
+          <context context-type="linenumber">146</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/free/free-explanation.html</context>
@@ -909,7 +940,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">146</context>
+          <context context-type="linenumber">147</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/free/free-explanation.html</context>
@@ -921,7 +952,7 @@
         <target state="translated">Bulle sondage</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">154</context>
+          <context context-type="linenumber">155</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/survey/survey-explanation.html</context>
@@ -935,7 +966,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
-          <context context-type="linenumber">155</context>
+          <context context-type="linenumber">156</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/survey/survey-explanation.html</context>
@@ -944,7 +975,7 @@
       </trans-unit>
       <trans-unit id="about-us-text" datatype="html">
         <source>
-       TBT</source>
+      TBT</source>
         <target state="translated">
           Nous sommes deux amis passionnés par ce que nous faisons. Nous voulons fournir une solution simple pour aider
           chaque groupe d'amis, famille, collègues et plus encore, à organiser facilement leurs événements.
@@ -952,7 +983,7 @@
           entre eux.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/about/about.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="about-us-subtext" datatype="html">
@@ -960,7 +991,7 @@
         <target state="translated">En parlant de connexions humaines, pourquoi ne pas nous contacter ?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/about/about.component.html</context>
-          <context context-type="linenumber">8</context>
+          <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="about-us-contact" datatype="html">
@@ -968,7 +999,7 @@
         <target state="translated">postmaster@vibent.com</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/about/about.component.html</context>
-          <context context-type="linenumber">9</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="update-your-infos" datatype="html">
@@ -1004,65 +1035,13 @@
           <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="group-settings" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Paramètres de groupe</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
-          <context context-type="linenumber">13</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/board/group.component.html</context>
-          <context context-type="linenumber">31</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/board/group.component.html</context>
-          <context context-type="linenumber">33</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/admin-panels/group/group-admin-panel.component.html</context>
-          <context context-type="linenumber">14</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="group-settings-description" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Mettre à jour les informations de votre groupe</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
-          <context context-type="linenumber">14</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="name" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Nom</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
-          <context context-type="linenumber">17</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="required-name" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Un nom est requis</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
-          <context context-type="linenumber">19</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="optional-description" datatype="html">
         <source>TBT</source>
         <target state="translated">Description (optionnelle)
         </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
-          <context context-type="linenumber">23</context>
-        </context-group>
-        <context-group purpose="location">
           <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
           <context context-type="linenumber">21</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-creation/group-creation.component.html</context>
-          <context context-type="linenumber">23</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/description/event-creation-description.component.html</context>
@@ -1077,59 +1056,12 @@
           <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="leave-group" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Quitter le groupe</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
-          <context context-type="linenumber">30</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="leave" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Quitter</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
-          <context context-type="linenumber">31</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="remove-group" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Supprimer le groupe</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
-          <context context-type="linenumber">36</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="remove-group-description" datatype="html">
-        <source>TBT</source>
-        <target state="translated">
-          La suppression d'un groupe entraînera la suppression de tous les événements et ressources de ces
-          derniers.
-        </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
-          <context context-type="linenumber">37</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="remove" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Supprimer</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
-          <context context-type="linenumber">38</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="title" datatype="html">
         <source>TBT</source>
         <target state="translated">Titre</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
           <context context-type="linenumber">15</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-creation/group-creation.component.html</context>
-          <context context-type="linenumber">17</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/title/event-creation-title.component.html</context>
@@ -1150,10 +1082,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
           <context context-type="linenumber">17</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-creation/group-creation.component.html</context>
-          <context context-type="linenumber">19</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/title/event-creation-title.component.html</context>
@@ -1201,7 +1129,7 @@
         <target state="translated">Effacer l'événement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
-          <context context-type="linenumber">35</context>
+          <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="delete-event-irreversible" datatype="html">
@@ -1211,7 +1139,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
-          <context context-type="linenumber">36</context>
+          <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="delete" datatype="html">
@@ -1219,7 +1147,7 @@
         <target state="translated">Supprimer</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
-          <context context-type="linenumber">37</context>
+          <context context-type="linenumber">38</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/content/entry-creation/food/food-entry-creation.html</context>
@@ -1247,7 +1175,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html</context>
-          <context context-type="linenumber">48</context>
+          <context context-type="linenumber">49</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/settings/settings-delete-bubble.html</context>
@@ -1274,6 +1202,10 @@
           <context context-type="linenumber">8</context>
         </context-group>
         <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/content/survey-option/survey-option.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/distribution-lists/expanded-distribution-list/settings/expanded-distribution-list-settings.component.html</context>
           <context context-type="linenumber">21</context>
         </context-group>
@@ -1296,24 +1228,24 @@
         <source>TBT</source>
         <target state="translated">Mail</target>
         <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
           <context context-type="linenumber">8</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">20</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">33</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
-          <context context-type="linenumber">12</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">19</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-people/add-people.component.html</context>
@@ -1324,12 +1256,12 @@
         <source>TBT</source>
         <target state="translated">Téléphone</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
+          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
           <context context-type="linenumber">10</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
+          <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email-login" datatype="html">
@@ -1337,23 +1269,19 @@
         <target state="translated">Connexion par mail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">17</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="password" datatype="html">
         <source>TBT</source>
         <target state="translated">Mot de passe</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">25</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">56</context>
-        </context-group>
-        <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">51</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="forgot-password-question" datatype="html">
@@ -1363,26 +1291,21 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">27</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="login" datatype="html">
-        <source>TBT
-                  </source>
+        <source>TBT</source>
         <target state="translated">
           Connexion
         </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">33</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">64</context>
-        </context-group>
-        <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">78</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
+          <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dont-have-account-question" datatype="html">
@@ -1390,11 +1313,7 @@
         <target state="translated">Pas de compte ?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">37</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">68</context>
+          <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="create-one" datatype="html">
@@ -1403,19 +1322,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">38</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">70</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="phone-login" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Connexion par téléphone</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">45</context>
+          <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="reset-password-email" datatype="html">
@@ -1423,90 +1330,47 @@
         <target state="translated">Réinitialiser le mot de passe par mail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="reset-password-confirm" datatype="html">
         <source>
-                        TBT
-                      </source>
+                TBT
+              </source>
         <target state="translated">
           En cliquant sur "Réinitialiser le mot de passe" nous vous enverrons un lien de réinitialisation.
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
-          <context context-type="linenumber">26</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
-          <context context-type="linenumber">52</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="send-email" datatype="html">
         <source>
-                        TBT
-                      </source>
+                TBT
+              </source>
         <target state="translated">
           Envoyer le mail
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="back-to-login" datatype="html">
         <source>
-                        TBT
-                      </source>
+                TBT
+              </source>
         <target state="translated">
           Retour connexion
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
-          <context context-type="linenumber">37</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
-          <context context-type="linenumber">63</context>
+          <context context-type="linenumber">31</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/forgot/reset-password/reset-password.component.html</context>
-          <context context-type="linenumber">31</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="reset-password-phone" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Réinitialiser le mot de passe par numéro de téléphone
-        </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
-          <context context-type="linenumber">46</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="phone-number" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Numéro de téléphone</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">49</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">42</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
-          <context context-type="linenumber">49</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="forgot-password" datatype="html">
-        <source>TBT</source>
-        <target state="translated">
-          Mot de passe oublié ?
-        </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/login/login.component.html</context>
-          <context context-type="linenumber">57</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="register" datatype="html">
@@ -1569,49 +1433,12 @@
           <context context-type="linenumber">47</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="email-phone-both-question" datatype="html">
-        <source>TBT</source>
-        <target state="translated">
-          Mail ? Téléphone ? Les deux ?
-        </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">25</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="register-email-phone-both" datatype="html">
-        <source>TBT<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/> TBT</source>
-        <target state="translated">Vous pouvez vous inscrire avec votre email ou votre téléphone.
-          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-          Ou même les deux !
-        </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">27</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="email-phone-choose-one" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Mais choisissez-en au moins un !</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">29</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="incorrect-email" datatype="html">
         <source>TBT</source>
         <target state="translated">(format de mail incorrect)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">35</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="incorrect-phone" datatype="html">
-        <source>TBT</source>
-        <target state="translated">format de téléphone incorrect)</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">44</context>
+          <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8-characters" datatype="html">
@@ -1619,7 +1446,7 @@
         <target state="translated">(8 caractères)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">53</context>
+          <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="password-confirmation" datatype="html">
@@ -1627,7 +1454,7 @@
         <target state="translated">Confimez mot de passe</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">60</context>
+          <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="password-not-identical" datatype="html">
@@ -1635,7 +1462,7 @@
         <target state="translated">(mots de passe différents)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">62</context>
+          <context context-type="linenumber">46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="agree-terms-conditions" datatype="html">
@@ -1651,7 +1478,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">67</context>
+          <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
       <trans-unit id="sign-up" datatype="html">
@@ -1662,7 +1489,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">73</context>
+          <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="already-have-account" datatype="html">
@@ -1670,19 +1497,7 @@
         <target state="translated">Vous avez déjà un compte ?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/register/register/register.component.html</context>
-          <context context-type="linenumber">77</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="send-sms" datatype="html">
-        <source>
-                        TBT
-                      </source>
-        <target state="translated">
-          Envoyez un SMS
-        </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/authentification/forgot/forgot-password/forgot.component.html</context>
-          <context context-type="linenumber">58</context>
+          <context context-type="linenumber">61</context>
         </context-group>
       </trans-unit>
       <trans-unit id="profile-header" datatype="html">
@@ -1719,7 +1534,7 @@
         <target state="translated">Paramètres</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/expanded-travel-bubble.html</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">20</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/alimentation-bubble/expanded-alimentation-bubble.html</context>
@@ -1758,55 +1573,6 @@
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="groups-header" datatype="html">
-        <source>TBT</source>
-        <target state="translated">
-          Il n'y a pas foule, non ?
-        </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/joined-groups/groups.component.html</context>
-          <context context-type="linenumber">3</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="create-group" datatype="html">
-        <source>TBT</source>
-        <target state="translated">
-          Créer un groupe
-        </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/joined-groups/groups.component.html</context>
-          <context context-type="linenumber">9</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="group-members-number" datatype="html">
-        <source>
-              <x id="INTERPOLATION" equiv-text="{{group.memberships.length }}"/> <x id="ICU" equiv-text="{group.memberships.length, plural, =1 {...} other {...}}"/>
-            </source>
-        <target state="translated">
-          <x id="INTERPOLATION" equiv-text="{{group.memberships.length }}"/>
-          <x id="ICU" equiv-text="{group.memberships.length, plural, =1 {...} other {...}}"/>
-        </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/board/group.component.html</context>
-          <context context-type="linenumber">12</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/group-preview/group-preview.component.html</context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="be4a5f46fd14bab6ac347d0856b16a03bca5dcbf" datatype="html">
-        <source>{VAR_PLURAL, plural, =1 {member} other {members} }</source>
-        <target state="translated">{VAR_PLURAL, plural, =1 {membre} other {membres} }</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/board/group.component.html</context>
-          <context context-type="linenumber">13</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/group-preview/group-preview.component.html</context>
-          <context context-type="linenumber">7</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="create-an-event" datatype="html">
         <source>TBT</source>
         <target state="translated">Créer un événement
@@ -1815,54 +1581,21 @@
           <context context-type="sourcefile">app/modules/pages/event/attended-events/events.component.html</context>
           <context context-type="linenumber">6</context>
         </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/board/group.component.html</context>
-          <context context-type="linenumber">43</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="edit" datatype="html">
         <source>TBT</source>
         <target state="translated">Editer</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/profile/profile.component.html</context>
-          <context context-type="linenumber">9</context>
-        </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event.component.html</context>
           <context context-type="linenumber">16</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/distribution-lists/expanded-distribution-list/expanded-distribution-list.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/profile/profile.component.html</context>
           <context context-type="linenumber">9</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="no-event-in-group" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Il n'y a aucun événement dans ce groupe. Vous pouvez en créer un en cliquant sur
-          le bouton ci-dessus. Les membres du groupe pourront alors participer et vous aider à organiser
-        </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/board/group.component.html</context>
-          <context context-type="linenumber">56</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="not-a-member-group" datatype="html">
-        <source>TBT <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/><x id="INTERPOLATION" equiv-text="{{group.name}}"/></source>
-        <target state="translated">VOus n'êtes pas membre du groupe
-          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-          <x id="INTERPOLATION" equiv-text="{{group.name}}"/>
-        </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/public-board/public-group.component.html</context>
-          <context context-type="linenumber">5</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="request-membership" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Demander à le rejoindre</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/public-board/public-group.component.html</context>
-          <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="reset-password" datatype="html">
@@ -1870,28 +1603,28 @@
         <target state="translated">Réinitialisons votre mot de passe</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/forgot/reset-password/reset-password.component.html</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="linenumber">4</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/forgot/reset-password/reset-password.component.html</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="new-password" datatype="html">
         <source>TBT<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
-                  </source>
+        </source>
         <target state="translated">
           Nouveau mot de passe<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(8 caractères)
           <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/forgot/reset-password/reset-password.component.html</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="new-password-confirm" datatype="html">
         <source>TBT<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>TBT<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
-                  </source>
+        </source>
         <target state="translated">Confirmez votre nouveau mot de passe
           <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>
           (mots de passe différents)
@@ -1899,23 +1632,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/core/authentification/forgot/reset-password/reset-password.component.html</context>
-          <context context-type="linenumber">19</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="create-a-group" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Créer un groupe</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-creation/group-creation.component.html</context>
-          <context context-type="linenumber">13</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="about-to-create-group" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Vous êtes sur le point de créer un groupe.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-creation/group-creation.component.html</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="205ed6b580b87b25ba6258712ea22b3c4309e70e" datatype="html">
@@ -2000,30 +1717,6 @@
         <source>TBT</source>
         <target state="translated">Suivant</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/title/event-creation-title.component.html</context>
-          <context context-type="linenumber">12</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/description/event-creation-description.component.html</context>
-          <context context-type="linenumber">11</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/date/event-creation-date.component.html</context>
-          <context context-type="linenumber">13</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/event-choice/distribution-list-creation-event.component.html</context>
-          <context context-type="linenumber">17</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/title/distribution-list-creation-title.component.html</context>
-          <context context-type="linenumber">12</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/description/distribution-list-creation-description.component.html</context>
-          <context context-type="linenumber">11</context>
-        </context-group>
-        <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/welcome/tutorial-welcome.component.html</context>
           <context context-type="linenumber">4</context>
         </context-group>
@@ -2042,6 +1735,30 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/dialogs/tutorial/enjoy/tutorial-enjoy.component.html</context>
           <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/title/event-creation-title.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/description/event-creation-description.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/date/event-creation-date.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/event-choice/distribution-list-creation-event.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/title/distribution-list-creation-title.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/description/distribution-list-creation-description.component.html</context>
+          <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="choose-a-description" datatype="html">
@@ -2070,25 +1787,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/dialogs/event-creation/date/event-creation-date.component.html</context>
           <context context-type="linenumber">2</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="manage-group" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Gérer le groupe</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/admin-panels/group/group-admin-panel.component.html</context>
-          <context context-type="linenumber">4</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="manage-group-description" datatype="html">
-        <source>TBT</source>
-        <target state="translated">
-          Vous êtes administrateur, vous pouvez modifier les paramètres du groupe et gérer les demandes
-          d'adhésion ici
-        </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/admin-panels/group/group-admin-panel.component.html</context>
-          <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="manage-event" datatype="html">
@@ -2587,7 +2285,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html</context>
-          <context context-type="linenumber">51</context>
+          <context context-type="linenumber">52</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/travel-bubble/content/travel-proposal-creation/travel-proposal-creation.html</context>
@@ -2671,7 +2369,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html</context>
-          <context context-type="linenumber">29</context>
+          <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="add-a-time" datatype="html">
@@ -2679,11 +2377,11 @@
         <target state="translated">Ajouter une heure</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">24</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html</context>
-          <context context-type="linenumber">27</context>
+          <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="content" datatype="html">
@@ -2691,7 +2389,7 @@
         <target state="translated">Description</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html</context>
-          <context context-type="linenumber">38</context>
+          <context context-type="linenumber">39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="missing-required-description" datatype="html">
@@ -2699,7 +2397,7 @@
         <target state="translated">Une description de votre plan est nécessaire</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/planning-bubble/content/entry-creation/planning-entry-creation.html</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="delete-a-bubble" datatype="html">
@@ -2968,7 +2666,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/content/survey-content.html</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="voted" datatype="html">
@@ -2976,7 +2674,7 @@
         <target state="translated">Voté</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/content/survey-option/survey-option.html</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="vote" datatype="html">
@@ -2986,16 +2684,12 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-expanded-bubble/components/bubbles/survey-bubble/content/survey-option/survey-option.html</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="create" datatype="html">
         <source>TBT</source>
         <target state="translated">Créer</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-creation/group-creation.component.html</context>
-          <context context-type="linenumber">29</context>
-        </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/modal-bubble-creation/bubbles-explanations/alimentation/alimentation-explanation.html</context>
           <context context-type="linenumber">9</context>
@@ -3140,22 +2834,6 @@
           <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="group-members" datatype="html">
-        <source>TBT</source>
-        <target state="translated">Membres du groupe</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-members/group-members.component.html</context>
-          <context context-type="linenumber">13</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="group-members-subtitle" datatype="html">
-        <source>TBT</source>
-        <target state="translated">L'amitié et l'amour sont les meilleures des thérapies.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/group/dialogs/group-members/group-members.component.html</context>
-          <context context-type="linenumber">14</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="add-people-by-link" datatype="html">
         <source>TBT</source>
         <target state="translated">Inviter des personnes avec un lien</target>
@@ -3260,6 +2938,26 @@
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="terms-&amp;-conditons" datatype="html">
+        <source>Terms &amp; conditions</source>
+        <target state="translated">Conditions d'utilisation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/header/header.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="get-the-app" datatype="html">
+        <source>Get the app</source>
+        <target state="translated">Télécharger l'application</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/header/header.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="your-distribution-lists" datatype="html">
         <source>TBT</source>
         <target state="translated">Vos listes de ditribution</target>
@@ -3287,7 +2985,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/distribution-lists/expanded-distribution-list/expanded-distribution-list.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="create-distribution-list" datatype="html">
@@ -3531,16 +3229,12 @@
         <target state="translated">Mise à jour
         </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/me/profile/settings/profile-settings.component.html</context>
-          <context context-type="linenumber">51</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/core/admin-panels/group/dialogs/group-settings/group-settings.component.html</context>
+          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
           <context context-type="linenumber">42</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/core/admin-panels/event/dialogs/event-settings/event-settings.component.html</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="sourcefile">app/modules/pages/me/profile/settings/profile-settings.component.html</context>
+          <context context-type="linenumber">51</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/distribution-lists/expanded-distribution-list/settings/expanded-distribution-list-settings.component.html</context>

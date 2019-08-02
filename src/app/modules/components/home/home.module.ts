@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { LoaderModule } from '../../../core/loader/loader.module';
 import { SocialAuthModule } from '../../../core/authentification/social/social-auth.module';
 import { FooterModule } from '../footer/footer.module';
+import { HeaderModule } from '../header/header.module';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { FooterModule } from '../footer/footer.module';
     CommonModule,
     SocialAuthModule,
     RouterModule,
+    HeaderModule,
     FooterModule
   ],
   declarations: [

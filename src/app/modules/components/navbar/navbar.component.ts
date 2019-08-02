@@ -10,6 +10,7 @@ import { LoaderService } from '../../../core/services/loader/service/loader.serv
 import { CookieService } from 'ngx-cookie-service';
 import { Subscription } from 'rxjs';
 import { LanguageService } from '../../../core/services/i18n/language.service';
+import { VibentRoutes } from '../../../shared/components/base-component/base-component';
 
 declare const $: any;
 
@@ -19,10 +20,12 @@ declare const $: any;
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit, OnDestroy {
+
+  VibentRoutes = VibentRoutes;
   loaderSize = LoaderSize.ultraSmall;
   user: User;
   subscriptions: Subscription[] = [];
-  public activeRoute: string;
+  activeRoute: string;
 
   constructor(public loaderService: LoaderService,
               private element: ElementRef,

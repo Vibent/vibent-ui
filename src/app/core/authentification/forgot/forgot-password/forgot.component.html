@@ -34,28 +34,6 @@
             </div>
           </form>
         </div>
-        <div style="display: none" class="tab-pane fade" id="nav-profile" role="tabpanel">
-          <h3 class="card-title" i18n="@@reset-password-phone">TBT</h3>
-          <form novalidate [formGroup]="loginForm">
-            <div class="form-group">
-              <label for="phone" i18n="@@phone-number">TBT</label>
-              <input id="phone" class="form-control" formControlName="phone" type="text" ng2TelInput
-                     [ng2TelInputOptions]="{initialCountry: 'fr'}" (ng2TelOutput)="getNumber($event)">
-              <div class="form-text text-muted" i18n="@@reset-password-confirm">
-                TBT
-              </div>
-            </div>
-            <div class="form-group no-margin">
-              <button type="submit" (click)="forgotByPhone()" class="btn btn-primary btn-block"
-                      i18n="@@send-sms">
-                TBT
-              </button>
-            </div>
-            <div class="text-center m-t-20">
-              <a (click)="loginPage()" class="cursor-pointer text-primary" i18n="@@back-to-login">TBT</a>
-            </div>
-          </form>
-        </div>
       </div>
     </div>
   </div>

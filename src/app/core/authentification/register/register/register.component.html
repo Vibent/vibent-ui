@@ -30,33 +30,6 @@
         </label>
         <input type="email" class="form-control" id="emailFix" formControlName="email">
       </div>
-
-      <!-- Not displayed at the moment -->
-      <div style="display: none" class="register-phone-mail">
-        <h4 class="card-title text-center m-t-10 m-b-0 text-gray" i18n="@@email-phone-both-question">TBT</h4>
-        <p class="text-center text-gray">
-          <span i18n="@@register-email-phone-both">TBT<br/> TBT</span>
-          <span *ngIf="!formsValidAfterRegister.emailOrPhone" class="text-red"
-                i18n="@@email-phone-choose-one">TBT</span>
-        </p>
-        <div class="form-group">
-          <label for="email">
-            <span i18n="@@email">TBT</span>
-            <span *ngIf="!formsValidAfterRegister.email" class="incorrect-input"
-                  i18n="@@incorrect-email">TBT</span>
-          </label>
-          <input type="email" class="form-control" id="email" formControlName="email">
-        </div>
-
-        <div class="form-group">
-          <label for="phone">
-            <span i18n="@@phone-number">TBT</span>
-            <span *ngIf="!formsValidAfterRegister.phone" class="incorrect-input"
-                  i18n="@@incorrect-phone">TBT</span></label>
-          <input id="phone" class="form-control" ng2TelInput [ng2TelInputOptions]="{initialCountry: 'fr'}"
-                 (ng2TelOutput)="getNumber($event)">
-        </div>
-      </div>
       <div class="form-group"> 
         <label for="password">
           <span i18n="@@password">TBT</span>

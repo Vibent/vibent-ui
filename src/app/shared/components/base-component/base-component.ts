@@ -12,6 +12,7 @@ export enum VibentRoutes {
   FORGOT_URL = '/forgot',
   TERMS_URL = '/terms',
   ME_URL = '/me',
+  GET_APP = '/getApp',
   ABOUT_URL = '/about',
   DEFAULT_URL = '/'
 }

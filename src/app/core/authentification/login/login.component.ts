@@ -18,9 +18,7 @@ export class LoginComponent extends VibentBaseComponent implements OnInit {
   email: FormControl;
   passwordEmail: FormControl;
 
-  phone: FormControl;
   passwordPhone: FormControl;
-  currentPhone: string;
   currentpasswordPhoneValidator: boolean;
 
   constructor(protected route: ActivatedRoute,
@@ -46,10 +44,6 @@ export class LoginComponent extends VibentBaseComponent implements OnInit {
       Validators.required,
       Validators.minLength(8)
     ]);
-
-    this.phone = new FormControl('', [
-      Validators.required
-    ]);
     this.passwordPhone = new FormControl('', [
       Validators.required,
       Validators.minLength(8)
@@ -60,7 +54,6 @@ export class LoginComponent extends VibentBaseComponent implements OnInit {
     this.loginForm = new FormGroup({
       email: this.email,
       password: this.passwordEmail,
-      phone: this.phone,
       passwordPhone: this.passwordPhone,
     });
   }
@@ -69,21 +62,10 @@ export class LoginComponent extends VibentBaseComponent implements OnInit {
     this.currentpasswordPhoneValidator = event;
   }
 
-  public getNumber(event): void {
-    this.currentPhone = event;
-  }
-
   public loginEmail(): void {
     this.authenticationService.emailLogin({
       email: this.email.value,
       password: this.passwordEmail.value
-    }, this.returnUrl, this.onFail.bind(this));
-  }
-
-  public loginPhone(): void {
-    this.authenticationService.phoneLogin({
-      phone: this.currentPhone,
-      password: this.passwordPhone.value
     }, this.returnUrl, this.onFail.bind(this));
   }
 

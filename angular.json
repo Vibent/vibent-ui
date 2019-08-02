@@ -23,7 +23,6 @@
             ],
             "styles": [
               "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
-              "node_modules/flag-icon-css/css/flag-icon.min.css",
               "src/assets/scss/vibent-material.scss"
             ],
             "scripts": [

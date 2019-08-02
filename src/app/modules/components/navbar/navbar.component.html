@@ -1,23 +1,25 @@
 <nav class="navbar navbar-expand-lg navbar-absolute">
   <div class="container-fluid">
     <div class="navbar-wrapper">
-      <img class="vibent-logo" src="./assets/img/vibent.svg" style="width: 90px">
+      <img class="vibent-logo" src="./assets/img/vibent.svg"/>
       <span class="navbar-brand" [ngSwitch]="this.activeRoute">
         <span *ngSwitchCase="'events'" i18n="@@events">TBT</span>
         <span *ngSwitchCase="'events/:ref'" i18n="@@event-board">TBT</span>
-        <span *ngSwitchCase="'groups'" i18n="@@groups">TBT</span>
-        <span *ngSwitchCase="'groups/:ref'" i18n="@@group-information">TBT</span>
         <span *ngSwitchCase="'me'" i18n="@@profile">TBT</span>
       </span>
     </div>
-    <loader [mainCondition]=loaderService.displayLoader() [eventUpdated]=loaderService.eventUpdated [withLogo]=false
-            [fade]=true [mainSize]=loaderSize></loader>
+    <loader [mainCondition]=loaderService.displayLoader()
+            [eventUpdated]=loaderService.eventUpdated
+            [withLogo]=false
+            [fade]=true
+            [mainSize]=loaderSize>
+    </loader>
     <div class="collapse navbar-collapse justify-content-end" id="navigation">
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
           <a class="nav-link" id="navUserProfile" data-toggle="dropdown">
             <div class="navbar-user-profile">
-              <img *ngIf="user" src="{{user.profilePicLocation}}">
+              <img *ngIf="user" src="{{user.profilePicLocation}}"/>
             </div>
           </a>
           <ul class="dropdown-menu dropdown-menu-right">
@@ -30,17 +32,26 @@
               <a id="languageToggle" (click)="toggleLanguagesSubmenu($event)" class="dropdown-item" i18n="@@language">TBT</a>
               <ul id="languageMenu" class="collapse">
                 <li>
-                  <a (click)="changeLanguage('en')"><span class="flag-icon flag-icon-gb"></span>English</a>
-                  <a (click)="changeLanguage('fr')"><span class="flag-icon flag-icon-fr"></span>Français</a>
+                  <a (click)="changeLanguage('en')"><img src="./assets/img/flags/gb.svg" class="flag-icon">English</a>
+                  <a (click)="changeLanguage('fr')"><img src="./assets/img/flags/fr.svg" class="flag-icon">Français</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a class="dropdown-item" i18n="@@about-us" [routerLink]="['/about']">
+              <a class="dropdown-item" i18n="@@about-us" [routerLink]="[VibentRoutes.ABOUT_URL]">
                 About us
               </a>
             </li>
-
+            <li>
+              <a class="dropdown-item" i18n="@@get-the-app" [routerLink]="[VibentRoutes.GET_APP]">
+                Get the app
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" i18n="@@terms-&-conditions" [routerLink]="[VibentRoutes.TERMS_URL]">
+                Terms & conditions
+              </a>
+            </li>
             <li>
               <a class="dropdown-item cursor-pointer" (click)="logout()" i18n="@@logout">
                 Logout
@@ -55,15 +66,11 @@
 
 <nav class="navbar navbar-expand-lg navbar-absolute bottom-navbar">
   <div class="d-flex justify-content-around">
-    <div class="text-center cursor-pointer" [routerLink]="['/events']">
+    <div class="text-center cursor-pointer" [routerLink]="[VibentRoutes.EVENTS_URL]">
       <i class="material-icons">bubble_chart</i>
       <div class="menu-title" i18n="@@events">TBT</div>
     </div>
-<!--    <div class="text-center cursor-pointer" [routerLink]="['/groups']">-->
-<!--      <i class="material-icons">group</i>-->
-<!--      <div class="menu-title" i18n="@@groups">TBT</div>-->
-<!--    </div>-->
-    <div class="text-center cursor-pointer" [routerLink]="['/me']">
+    <div class="text-center cursor-pointer" [routerLink]="[VibentRoutes.ME_URL]">
       <i class="material-icons">person</i>
       <div class="menu-title" i18n="@@profile">TBT</div>
     </div>

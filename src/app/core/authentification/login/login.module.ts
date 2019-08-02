@@ -4,17 +4,15 @@ import { RouterModule } from '@angular/router';
 import { AuthenticationService } from '../../services/authentication.service';
 import { LoginComponent } from './login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Ng2TelInputModule } from 'ng2-tel-input';
-import { HeaderModule } from '../header/header.module';
+import { VibentHeaderModule } from '../header/vibent-header.module';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    HeaderModule,
+    VibentHeaderModule,
     FormsModule,
     ReactiveFormsModule,
-    Ng2TelInputModule,
   ],
   declarations: [
     LoginComponent
