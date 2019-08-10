@@ -11,7 +11,7 @@ import { ResetPasswordComponent } from './core/authentification/forgot/reset-pas
 import { MailConfirmationComponent } from './core/authentification/register/mail-confirmation/mail-confirmation.component';
 import { HomeComponent } from './modules/components/home/home.component';
 import { LoginResolver } from './shared/resolvers/login.resolver';
-import { TermsComponent } from './modules/pages/terms/terms.component';
+import { TermsComponent } from './modules/components/terms/terms.component';
 import { AboutComponent } from './modules/components/about/about.component';
 import { LoginComponent } from './core/authentification/login/login.component';
 import { GetAppComponent } from './modules/components/get-app/get-app.component';

@@ -4,7 +4,6 @@
       <div class="modal-header">
         <button type="button"
                 class="close black-close"
-                (click)="onClose()"
                 data-dismiss="modal">
           <span>&times;</span>
         </button>
@@ -14,15 +13,25 @@
       </div>
       <div class="modal-body bg-light">
         <div class="container vibent-modal">
-          <tutorial-welcome *ngIf="navigation.checkState(TutorialState.WELCOME)"
-                            (change)="onNext()"></tutorial-welcome>
-          <tutorial-create-event *ngIf="navigation.checkState(TutorialState.CREATE_EVENT)"
-                                 (change)="onNext()"></tutorial-create-event>
-          <tutorial-join-event *ngIf="navigation.checkState(TutorialState.JOIN_EVENT)"
-                               (change)="onNext()"></tutorial-join-event>
-          <tutorial-profile *ngIf="navigation.checkState(TutorialState.PROFILE)"
-                            (change)="onNext()"></tutorial-profile>
-          <tutorial-enjoy *ngIf="navigation.checkState(TutorialState.ENJOY)"></tutorial-enjoy>
+          <tutorial-welcome
+              *ngIf="navigation.checkState(TutorialState.WELCOME)"
+              (change)="onNext()">
+          </tutorial-welcome>
+          <tutorial-create-event
+              *ngIf="navigation.checkState(TutorialState.CREATE_EVENT)"
+              (change)="onNext()">
+          </tutorial-create-event>
+          <tutorial-join-event
+              *ngIf="navigation.checkState(TutorialState.JOIN_EVENT)"
+              (change)="onNext()">
+          </tutorial-join-event>
+          <tutorial-profile
+              *ngIf="navigation.checkState(TutorialState.PROFILE)"
+              (change)="onNext()">
+          </tutorial-profile>
+          <tutorial-enjoy
+              *ngIf="navigation.checkState(TutorialState.ENJOY)">
+          </tutorial-enjoy>
         </div>
       </div>
     </div>

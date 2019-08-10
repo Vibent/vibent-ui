@@ -25,7 +25,6 @@ export class CreateDistributionListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Case modal is closed by back browser
     $(VibentModals.DISTRIBUTION_LIST_CREATION).on('hidden.bs.modal', () => {
       this.onClose();
     });
@@ -33,6 +32,10 @@ export class CreateDistributionListComponent implements OnInit {
 
   onNext() {
     this.cd.detectChanges();
+  }
+
+  simulateBack() {
+    window.history.back();
   }
 
   onListCreated(list: DistributionList) {

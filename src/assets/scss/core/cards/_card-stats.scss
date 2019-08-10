@@ -1,4 +1,7 @@
-.card-stats {
+.event-preview-card {
+
+  border-radius: $border-radius-huge;
+
   .card-header {
     &.card-header-icon,
     &.card-header-text {
@@ -48,7 +51,7 @@
   transition-duration: 0.5s;
 }
 
-.card-stats:hover {
+.event-preview-card:hover {
   @include box-shadow($bmd-shadow-6dp);
   transition-duration: 0.5s;
 }

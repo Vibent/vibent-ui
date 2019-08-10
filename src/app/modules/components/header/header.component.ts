@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { VibentBaseComponent, VibentRoutes } from '../../../shared/components/base-component/base-component';
+import { VibentRoutes } from '../../../shared/components/base-component/base-component';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
+import { MenuComponent } from '../../../shared/components/menu-component/menu-component';
 
-declare const $: any;
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent  extends VibentBaseComponent {
+export class HeaderComponent extends MenuComponent {
 
   constructor(protected route: ActivatedRoute,
               protected router: Router,
@@ -18,7 +18,7 @@ export class HeaderComponent  extends VibentBaseComponent {
   }
 
   onHowItWorks() {
-    $('html, body').animate({ scrollTop: $('#home-explanations').offset().top }, 'slow');
+    document.getElementById('home-explanations').scrollIntoView({ behavior: 'smooth' });
   }
 
   onAboutUs() {

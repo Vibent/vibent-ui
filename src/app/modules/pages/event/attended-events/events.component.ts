@@ -1,17 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Event } from '../../../../shared/models/event';
 import { ModalManagerService, VibentModals } from '../../../../core/services/modal-manager.service';
 
 @Component({
   selector: 'app-events',
-  templateUrl: './events.component.html'
+  templateUrl: './events.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EventsComponent implements OnInit {
 
   public events: Event[];
 
-  constructor(private route: ActivatedRoute, private modalManagerService: ModalManagerService) {
+  constructor(private route: ActivatedRoute,
+              private cd: ChangeDetectorRef,
+              private modalManagerService: ModalManagerService) {
     this.events = this.route.snapshot.data['events'].sort(this.sortEventByDate);
   }
 
@@ -21,6 +24,12 @@ export class EventsComponent implements OnInit {
 
   openEventCreationDialog(): void {
     this.modalManagerService.showModal(VibentModals.EVENT_CREATION);
+  }
+
+  onNewEventCreated(event: Event) {
+    this.events.push(event);
+    this.events.sort(this.sortEventByDate);
+    this.cd.detectChanges();
   }
 
   sortEventByDate(a, b) {

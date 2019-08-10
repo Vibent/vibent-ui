@@ -30,7 +30,6 @@ export class TutorialComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Case modal is closed by back browser
     $(VibentModals.TUTORIAL).on('hidden.bs.modal', () => {
       this.onClose();
     });
