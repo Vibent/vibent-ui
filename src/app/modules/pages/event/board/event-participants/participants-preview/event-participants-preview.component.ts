@@ -39,7 +39,7 @@ export class EventParticipantsPreviewComponent implements OnInit, OnDestroy {
       this.initValues();
     }));
     this.initValues();
-    // Case modal is closed by back browser
+
     $(VibentModals.EVENT_PARTICIPANTS).on('hidden.bs.modal', () => {
       this.offInvitation();
     });
@@ -60,8 +60,8 @@ export class EventParticipantsPreviewComponent implements OnInit, OnDestroy {
     this.cd.detectChanges();
   }
 
-  close(): void {
-    this.offInvitation();
+  simulateBack() {
+    window.history.back();
   }
 
   ngOnDestroy(): void {

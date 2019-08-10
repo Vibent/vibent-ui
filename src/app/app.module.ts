@@ -9,7 +9,7 @@ import { ForgotModule } from './core/authentification/forgot/forgot-password/for
 import { ResetPasswordModule } from './core/authentification/forgot/reset-password/reset-password.module';
 import { LoadingPageComponent } from './core/services/loader/loading-page/loading-page.component';
 import { HomeModule } from './modules/components/home/home.module';
-import { TermsModule } from './modules/pages/terms/terms.module';
+import { TermsModule } from './modules/components/terms/terms.module';
 import { AboutModule } from './modules/components/about/about.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { LoginModule } from './core/authentification/login/login.module';

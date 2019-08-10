@@ -212,16 +212,6 @@
       }
     }
   }
-
-  .card-stats {
-    background: blue;
-    display: flex;
-
-    .author,
-    .stats {
-      display: inline-flex;
-    }
-  }
 }
 
 .card-header {
@@ -289,6 +279,7 @@
 
     &.card-header-icon,
     &.card-header-text {
+
       i {
         width: 33px;
         height: 33px;
@@ -373,7 +364,7 @@
 
     .card-icon,
     .card-text {
-      border-radius: $border-radius-base;
+      border-radius: $border-radius-huge;
       background-color: $gray-color;
       padding: 10px;
       margin-top: -20px;

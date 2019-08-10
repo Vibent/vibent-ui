@@ -23,7 +23,6 @@ export class ExpandedDistributionListComponent implements OnInit {
   }
 
   ngOnInit() {
-    // Case modal is closed by back browser
     $(VibentModals.EXPANDED_DISTRIBUTION_LIST).on('hidden.bs.modal', () => {
       this.setPrimaryPage();
     });

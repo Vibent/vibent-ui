@@ -21,6 +21,7 @@ export interface IMessages {
   EMAIL_CONFIRMED: string;
   EMAIL_UNCONFIRMED: string;
   EVENT_CREATED: string;
+  EVENT_CREATED_ADD_BUBBLES: string;
   EVENT_DELETED: string;
   EVENT_UPDATED: string;
   FREE_BUBBLE_CREATED: string;

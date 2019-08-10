@@ -9,11 +9,13 @@ import { EventCreationDescriptionComponent } from './description/event-creation-
 import { EventCreationDateComponent } from './date/event-creation-date.component';
 import { EventCreationParticipantsComponent } from './participants/event-creation-participants.component';
 import { AddPeopleModule } from '../../board/event-participants/participants-preview/add-people/add-people.module';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   imports: [
     CommonModule,
+    RouterModule,
     ReactiveFormsModule,
     OwlDateTimeModule,
     AddPeopleModule

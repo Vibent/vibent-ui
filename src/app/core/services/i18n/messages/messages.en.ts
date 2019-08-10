@@ -22,7 +22,8 @@ export class MessagesEn implements IMessages {
   public readonly EMAIL_ALREADY_TAKEN = 'This email is already registred.';
   public readonly EMAIL_CONFIRMED = 'Your email is verified.';
   public readonly EMAIL_UNCONFIRMED = 'An error occured during your email verification.';
-  public readonly EVENT_CREATED = 'Your event is created, you can now add some bubbles to it.';
+  public readonly EVENT_CREATED = 'Your event is created.';
+  public readonly EVENT_CREATED_ADD_BUBBLES = 'Your event is created, you can now add some bubbles to it.';
   public readonly EVENT_DELETED = 'Event deleted.';
   public readonly EVENT_JOINED = 'Event joined.';
   public readonly EVENT_JOINED_TEXT = 'Go to events page.';

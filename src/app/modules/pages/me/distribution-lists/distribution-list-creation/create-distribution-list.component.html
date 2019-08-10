@@ -2,19 +2,32 @@
   <div class="modal-dialog full-bootstrap-modal" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close black-close" data-dismiss="modal" (click)="onClose()">
+        <button type="button" class="close black-close" data-dismiss="modal" (click)="simulateBack()">
           <span>&times;</span>
         </button>
       </div>
-      <span *ngIf="!navigation.checkState(DistributionListState.EVENT_CHOICE) && !navigation.checkState(DistributionListState.SUMMARY)"
-            class="fas fa-chevron-left position-absolute p-3 cursor-pointer"
-            (click)="navigation.onBack()"></span>
+      <span *ngIf="!navigation.checkState(DistributionListState.EVENT_CHOICE)
+          && !navigation.checkState(DistributionListState.SUMMARY)"
+          class="fas fa-chevron-left position-absolute p-3 cursor-pointer"
+          (click)="navigation.onBack()"></span>
       <div class="modal-body bg-light">
         <div class="container vibent-modal">
-          <distribution-list-creation-event *ngIf="navigation.checkState(DistributionListState.EVENT_CHOICE)" (change)="onNext()"></distribution-list-creation-event>
-          <distribution-list-creation-title *ngIf="navigation.checkState(DistributionListState.TITLE)" (change)="onNext()"></distribution-list-creation-title>
-          <distribution-list-creation-description *ngIf="navigation.checkState(DistributionListState.DESCRIPTION)" (createdDitributionList)="onListCreated($event)"></distribution-list-creation-description>
-          <distribution-list-creation-summary *ngIf="navigation.checkState(DistributionListState.SUMMARY)" [list]="createdList"></distribution-list-creation-summary>
+          <distribution-list-creation-event
+              *ngIf="navigation.checkState(DistributionListState.EVENT_CHOICE)"
+              (change)="onNext()">
+          </distribution-list-creation-event>
+          <distribution-list-creation-title
+              *ngIf="navigation.checkState(DistributionListState.TITLE)"
+              (change)="onNext()">
+          </distribution-list-creation-title>
+          <distribution-list-creation-description
+              *ngIf="navigation.checkState(DistributionListState.DESCRIPTION)"
+              (createdDitributionList)="onListCreated($event)">
+          </distribution-list-creation-description>
+          <distribution-list-creation-summary
+              *ngIf="navigation.checkState(DistributionListState.SUMMARY)"
+              [list]="createdList">
+          </distribution-list-creation-summary>
         </div>
       </div>
     </div>

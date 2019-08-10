@@ -3,9 +3,8 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button"
-                class="close black-close"
-                (click)="onClose()"
-                data-dismiss="modal">
+                (click)="simulateBack()"
+                class="close black-close">
           <span>&times;</span>
         </button>
         <span *ngIf="!navigation.checkState(EventCreationState.TITLE)

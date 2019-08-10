@@ -22,7 +22,8 @@ export class MessagesFr implements IMessages {
   public readonly EMAIL_ALREADY_TAKEN = 'Mail déjà enregistré.';
   public readonly EMAIL_CONFIRMED = 'Votre mail est vérifié.';
   public readonly EMAIL_UNCONFIRMED = 'Une erreur est survenue lors de la vérification mail.';
-  public readonly EVENT_CREATED = 'Votre événement est créé, vous pouvez maintenant y ajouter des bulles.';
+  public readonly EVENT_CREATED = 'Votre événement est créé.';
+  public readonly EVENT_CREATED_ADD_BUBBLES = 'Votre événement est créé, vous pouvez maintenant y ajouter des bulles.';
   public readonly EVENT_DELETED = 'Événement supprimé.';
   public readonly EVENT_JOINED = 'Vous avez rejoint l\'événement.';
   public readonly EVENT_JOINED_TEXT = 'Page des événements.';
