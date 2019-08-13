@@ -15,6 +15,12 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { LoginModule } from './core/authentification/login/login.module';
 import { CoreModule } from './core/core.module';
 import { GetAppModule } from './modules/components/get-app/get-app.module';
+import { FirebaseMessagingService } from './core/services/firebase/firebase-messaging.service';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireMessagingModule } from '@angular/fire/messaging';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
 
 /**
  * This module is the primary module of Vibent
@@ -39,11 +45,16 @@ import { GetAppModule } from './modules/components/get-app/get-app.module';
     HomeModule,
     AboutModule,
     ServiceWorkerModule.register('ngsw-worker.js'),
+
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFireMessagingModule,
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   declarations: [
     AppComponent
   ],
-  providers: [],
+  providers: [FirebaseMessagingService],
   bootstrap: [AppComponent],
   entryComponents: [
     LoadingPageComponent
