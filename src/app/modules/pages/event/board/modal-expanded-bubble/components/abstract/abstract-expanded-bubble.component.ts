@@ -1,5 +1,7 @@
 import { Input } from '@angular/core';
 import { IBubble } from '../../../../../../../shared/models/bubbles/IBubble';
+import { UserManagementService } from '../../../../../../../core/services/user-management.service';
+import { User } from '../../../../../../../shared/models/user';
 
 /**
  * Abstract component for expanded bubbles
@@ -10,10 +12,11 @@ export abstract class AbstractExpandedBubbleComponent {
   bubble: IBubble;
   @Input()
   eventRef: string;
-
+  user: User;
   contentDisplayed = true;
 
-  constructor() {
+  constructor(protected userManagementService: UserManagementService) {
+    this.user = this.userManagementService.getMe();
   }
 
   openBubbleSettings() {
