@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { AbstractExpandedBubbleComponent } from '../../abstract/abstract-expanded-bubble.component';
-
-declare const $: any;
+import { UserManagementService } from '../../../../../../../../core/services/user-management.service';
 
 @Component({
   selector: 'app-expanded-survey-bubble',
@@ -9,8 +8,8 @@ declare const $: any;
 })
 export class ExpandedSurveyBubbleComponent extends AbstractExpandedBubbleComponent {
 
-  constructor() {
-    super();
+  constructor(protected userManagementService: UserManagementService) {
+    super(userManagementService);
   }
 
 }

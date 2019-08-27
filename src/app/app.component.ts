@@ -19,8 +19,11 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    const userId = 'userDev';
-    this.firebaseMessagingService.requestPermission(userId);
-    this.firebaseMessagingService.receiveMessage();
+    /**
+     * Commented waiting fr backend delivery
+     */
+    // const userId = 'userDev';
+    // this.firebaseMessagingService.requestPermission(userId);
+    // this.firebaseMessagingService.receiveMessage();
   }
 }
