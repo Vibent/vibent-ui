@@ -48,7 +48,7 @@
   <p class="text-center m-t-5" i18n="@@can-invite-people-by-list">TBT</p>
   <div [formGroup]>
     <div class="form-group">
-      <label for="select-list" i18n="@@select-an-event">TBT</label>
+      <label for="select-list" i18n="@@select-a-list">TBT</label>
       <select #t (change)="listPick(t)" class="form-control" id="select-list">
         <option *ngFor="let list of userLists"
                 [id]="list.id"

@@ -408,7 +408,7 @@
       <x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div>"/>
     </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/terms/terms.component.html</context>
+          <context context-type="sourcefile">app/modules/components/terms/terms.component.html</context>
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
@@ -483,7 +483,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/footer/footer.component.html</context>
-          <context context-type="linenumber">8</context>
+          <context context-type="linenumber">9</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/header/header.component.html</context>
@@ -616,6 +616,10 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/home/home.component.html</context>
           <context context-type="linenumber">57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/footer/footer.component.html</context>
+          <context context-type="linenumber">8</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/header/header.component.html</context>
@@ -1821,7 +1825,7 @@
     </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-choice/event-participants-choice.component.html</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
       <trans-unit id="not-attending" datatype="html">
@@ -1833,7 +1837,7 @@
     </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-choice/event-participants-choice.component.html</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="bubble" datatype="html">
@@ -2833,6 +2837,14 @@
           <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="select-a-list" datatype="html">
+        <source>TBT</source>
+        <target state="translated">Select a distribution list</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-people/add-people.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="social-login" datatype="html">
         <source>TBT <x id="INTERPOLATION" equiv-text="{{provider.label | lowercase}}"/> TBT</source>
         <target state="translated">Login with a <x id="INTERPOLATION" equiv-text="{{provider.label | lowercase}}"/> account</target>
@@ -2842,16 +2854,24 @@
         </context-group>
       </trans-unit>
       <trans-unit id="terms-&amp;-conditons" datatype="html">
-        <source>Terms &amp; conditions</source>
+        <source>TBT</source>
         <target state="translated">Terms &amp; conditions</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/footer/footer.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/header/header.component.html</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="get-the-app" datatype="html">
-        <source>Get the app</source>
+        <source>TBT</source>
         <target state="translated">Get the app</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/components/footer/footer.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/header/header.component.html</context>
           <context context-type="linenumber">7</context>
@@ -2913,10 +2933,6 @@
       <trans-unit id="select-an-event" datatype="html">
         <source>TBT</source>
         <target state="translated">Select an event</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/modules/pages/event/board/event-participants/participants-preview/add-people/add-people.component.html</context>
-          <context context-type="linenumber">51</context>
-        </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/pages/me/distribution-lists/distribution-list-creation/event-choice/distribution-list-creation-event.component.html</context>
           <context context-type="linenumber">5</context>
@@ -3124,7 +3140,7 @@
         <target state="translated">Copyright © <x id="INTERPOLATION" equiv-text="{{date | date:'yyyy'}}"/> Vibent. All rights reserved</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/modules/components/footer/footer.component.html</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
       <trans-unit id="update" datatype="html">
