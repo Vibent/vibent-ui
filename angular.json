@@ -43,6 +43,23 @@
             "serviceWorker": true
           },
           "configurations": {
+            "gh-pages": {
+              "baseHref": "https://vibent.github.io/vibent-ui/",
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": true,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "outputPath": "docs",
+              "i18nMissingTranslation": "error",
+              "i18nFile": "src/i18n/messages.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en"
+            },
             "dev": {
               "optimization": true,
               "outputHashing": "all",
