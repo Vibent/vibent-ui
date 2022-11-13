@@ -43,8 +43,13 @@
             "serviceWorker": true
           },
           "configurations": {
-            "gh-pages": {
-              "baseHref": "https://vibent.github.io/vibent-ui/",
+            "mock": {
+              "fileReplacements": [
+                {
+                  "replace": "src/app/core/http/http.service.ts",
+                  "with": "src/app/core/http/http.service.mock.ts"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": true,
@@ -106,6 +111,12 @@
             "browserTarget": "vibent-ui:build"
           },
           "configurations": {
+            "mock": {
+              "browserTarget": "vibent-ui:build:mock"
+            },
+            "dev": {
+              "browserTarget": "vibent-ui:build:dev"
+            },
             "prod": {
               "browserTarget": "vibent-ui:build:prod"
             }
