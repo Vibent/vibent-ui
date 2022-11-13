@@ -5,7 +5,7 @@ import { LoadingPageModule } from './services/loader/loading-page/loading-page.m
 import { LoaderModule } from './loader/loader.module';
 import { I18nModule } from './services/i18n/i18n.module';
 import { CookieService } from 'ngx-cookie-service';
-import { HttpService } from './http/http.service';
+import { ApiHttpService } from './http/http.service';
 import { ScreenService } from './services/screen.service';
 import { RoutingStateService } from './services/routing-state.service';
 import { LoaderService } from './services/loader/service/loader.service';
@@ -21,7 +21,10 @@ import { UserManagementService } from './services/user-management.service';
   declarations: [],
   providers: [
     CookieService,
-    HttpService,
+    {
+      provide: 'HttpService',
+      useClass: ApiHttpService
+    },
     ScreenService,
     RoutingStateService,
     LoaderService,

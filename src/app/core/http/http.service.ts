@@ -8,8 +8,54 @@ import { environment } from '../../../environments/environment';
 import { MailInvite } from '../../shared/models/mailInvite';
 import { DistributionList, DistributionListRequest } from '../../shared/models/distribution-list';
 
+export interface HttpService {
+
+  /*** Events ***/
+
+  getEvents(): Observable<Event[]>;
+  getEvent(eventRef: string): Observable<Event>;
+  createEvent(event: Event);
+  getEventInviteToken(eventRef: string): any;
+  validateEventInviteToken(content: any, token: string);
+  deleteEvent(eventRef: string): any;
+  updateEvent(event: Event): Observable<Event>;
+  eventMailInvite(mailInvite: MailInvite);
+  inviteDistributionList(content: any);
+
+  /*** User ***/
+
+  getMe(): Observable<User>;
+  getUser(userRef: string): Observable<User>;
+  updateUser(user: User): Observable<User>;
+
+  /*** Participation ***/
+  getEventParticipations(eventRef: string);
+  patchEventParticipations(participation: EventParticipant);
+
+  /*** Distribution list ***/
+  createDistributionList(list: DistributionListRequest);
+  getConnectedDistributionLists();
+  updateList(list: DistributionList);
+  deleteList(list: DistributionList);
+  listMailInvite(mailInvite: MailInvite);
+  getListInviteToken(listId: number): any;
+  validateListInviteToken(content: any, token: string);
+
+  /*** Auth ***/
+
+  loginEmail(loginRequest): Observable<any>;
+  loginPhone(loginRequest): Observable<any>;
+  socialLogin(loginRequest): Observable<any>;
+  socialLink(linkRequest): Observable<any>;
+  socialUnlink(unlinkRequest): Observable<any>;
+  register(registrationRequest): Observable<any>;
+  requestPasswordResetEmail(email: Email);
+  validatePasswordReset(passwordReset: PasswordReset);
+  confirmEmail(token: string);
+}
+
 @Injectable()
-export class HttpService {
+export class ApiHttpService implements HttpService {
 
   private API_URL = environment.apiEndpoint;
 

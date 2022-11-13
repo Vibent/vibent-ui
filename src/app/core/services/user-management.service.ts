@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { HttpService } from '../http/http.service';
 import { User } from '../../shared/models/user';
 import { LoaderService } from './loader/service/loader.service';
@@ -9,7 +9,7 @@ export class UserManagementService {
 
   change$ = new BehaviorSubject<boolean>(false);
 
-  constructor(private httpService: HttpService,
+  constructor(@Inject('HttpService') private httpService: HttpService,
               private loaderService: LoaderService) {
   }
 
