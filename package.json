@@ -5,6 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start-mock": "ng serve -c mock",
     "test": "ng test --watch=false",
     "build": "cross-env NODE_OPTIONS=--max_old_space_size=8192 webpack",
     "build-mock": "node --max_old_space_size=5048 ./node_modules/@angular/cli/bin/ng build --configuration=mock",
