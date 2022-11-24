@@ -34,7 +34,7 @@ export class HttpService {
     return this.http.get<Event>(this.API_URL + '/event/' + eventRef, this.getOptions());
   }
 
-  public createEvent(event: Event) {
+  public createEvent(event: Event): Observable<Event> {
     const body = JSON.stringify(event);
     return this.http.post(this.API_URL + '/event', body, this.getOptions());
   }
@@ -83,7 +83,7 @@ export class HttpService {
   }
 
   /*** Participation ***/
-  public getEventParticipations(eventRef: string) {
+  public getEventParticipations(eventRef: string): Observable<EventParticipant[]> {
     return this.http.get<EventParticipant[]>(this.API_URL + '/participation/event/' + eventRef, this.getOptions());
   }
 
@@ -98,7 +98,7 @@ export class HttpService {
     return this.http.post(this.API_URL + '/distribution-list', body, this.getOptions());
   }
 
-  public getConnectedDistributionLists() {
+  public getConnectedDistributionLists(): Observable<DistributionList[]> {
     return this.http.get<DistributionList[]>(this.API_URL + '/distribution-list/me', this.getOptions());
   }
 
