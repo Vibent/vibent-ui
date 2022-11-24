@@ -13,9 +13,9 @@ export class HttpService {
     {
       ref: "user1",
       email: "email@no.domain.com",
-      firstName: "First",
-      lastName: "Last",
-      phoneNumber: 707070707,
+      firstName: "John",
+      lastName: "Smith",
+      phoneNumber: 12085434383,
       memberships: [],
       participations: [],
       membershipRequests: [],
