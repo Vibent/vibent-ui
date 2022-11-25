@@ -1,71 +1,25 @@
-import { Injectable } from '@angular/core';
-import { Event } from '../../shared/models/event';
-import { Observable, of } from 'rxjs';
-import { Email, PasswordReset, User } from '../../shared/models/user';
-import { EventParticipant, EventParticipantAnswer } from '../../shared/models/event-participant';
-import { MailInvite } from '../../shared/models/mailInvite';
 import { DistributionList, DistributionListRequest } from '../../shared/models/distribution-list';
+import { Email, PasswordReset, User } from '../../shared/models/user';
+import { Event } from '../../shared/models/event';
+import { EventParticipant } from '../../shared/models/event-participant';
+import { Injectable } from '@angular/core';
+import { MailInvite } from '../../shared/models/mailInvite';
+import { MockData } from '../../shared/global/mock-data';
+import { Observable, of } from 'rxjs';
 
 @Injectable()
 export class HttpService {
 
-  private users: User[] = [
-    {
-      ref: "user1",
-      email: "email@no.domain.com",
-      firstName: "John",
-      lastName: "Smith",
-      phoneNumber: 12085434383,
-      memberships: [],
-      participations: [],
-      membershipRequests: [],
-      socialCredentials: {},
-      profilePicLocation: "assets/img/vibent-icon-72.png"
-    }
-  ]
-
-  private events: Event[] = [{
-    title: "Cool party at the beach",
-    ref: "event1",
-    creatorRef: this.users[0].ref,
-    description: "This is an event for the beach",
-    endDate: new Date(),
-    startDate: new Date().toISOString(),
-    groupRef: "group1",
-    participationRefs: [
-      {
-        id: 4,
-        userRef: "user1",
-        eventRef: "event1",
-        isVisible: true,
-        answer: EventParticipantAnswer.YES
-      }
-    ],
-
-    alimentationBubbles: [],
-    checkboxBubbles: [],
-    freeBubbles: [],
-    locationBubbles: [],
-    planningBubbles: [],
-    surveyBubbles: [],
-    travelBubbles: []
-  }];
-
-
-
-
-  constructor() { }
-
-
+  constructor(private mockData: MockData) { }
 
   /*** Events ***/
 
   public getEvents(): Observable<Event[]> {
-    return of(this.events);
+    return of(this.mockData.events);
   }
 
   public getEvent(eventRef: string): Observable<Event> {
-    const event = this.events.find(e => e.ref == eventRef);
+    const event = this.mockData.events.find(e => e.ref == eventRef);
     return of(event);
   }
 
@@ -102,12 +56,12 @@ export class HttpService {
   /*** User ***/
 
   public getMe(): Observable<User> {
-    const user = this.users[0];
+    const user = this.mockData.users[0];
     return of(user);
   }
 
   public getUser(userRef: string): Observable<User> {
-    const user = this.users.find(e => e.ref == userRef);
+    const user = this.mockData.users.find(e => e.ref == userRef);
     return of(user);
   }
 
@@ -117,7 +71,7 @@ export class HttpService {
 
   /*** Participation ***/
   public getEventParticipations(eventRef: string): Observable<EventParticipant[]> {
-    const event = this.events.find(e => e.ref == eventRef);
+    const event = this.mockData.events.find(e => e.ref == eventRef);
     return of(event.participationRefs);
   }
 
@@ -166,7 +120,7 @@ export class HttpService {
   }
 
   public loginPhone(loginRequest): Observable<any> {
-    return of("hello");
+    return of({});
   }
 
   public socialLogin(loginRequest): Observable<any> {
