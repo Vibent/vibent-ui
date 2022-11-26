@@ -1,0 +1,37 @@
+.footer {
+  padding: $padding-general-x 0;
+  text-align: center;
+  display: -webkit-flex; /* Safari */
+  /* Safari 6.1+ */
+  display: flex;
+
+  ul {
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+
+      a {
+        color: inherit;
+        margin: $padding-general-x;
+        font-weight: $font-weight-bold;
+        font-size: $mdb-btn-font-size-base;
+        text-transform: uppercase;
+        border-radius: $border-radius-base;
+        text-decoration: none;
+        position: relative;
+        display: block;
+
+        &:hover {
+          color: #2574ea !important;
+        }
+      }
+
+      .btn {
+        margin: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+.full-screen-dialog-loader .mat-dialog-container {
+  max-width: 100vw !important;
+  width: 100vw;
+  height: 100vh;
+  background: #4343434f;
+}
+
+.cdk-overlay-container{
+  z-index: 9999;
+}

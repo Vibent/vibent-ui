@@ -1,0 +1,82 @@
+$list-preview-grey: #e8e8e8;
+$list-preview-grey-hover: #d3d3d3;
+
+@mixin distribution-list-small-preview() {
+  background: $list-preview-grey;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding-top: 8px;
+  .fas{
+    font-size: 13px;
+  }
+}
+
+@mixin distribution-list-large-preview() {
+  background-color: $list-preview-grey;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+
+.distribution-lists-section {
+  margin: 11px;
+
+  .section-title {
+    color: #767676;
+    font-size: 15px;
+  }
+
+  .add-distribution-list {
+    @include distribution-list-small-preview();
+    cursor: pointer;
+    &:hover {
+      background: $list-preview-grey-hover;
+    }
+  }
+
+  .add-distribution-list-disabled{
+    @include distribution-list-small-preview();
+    opacity: 0.5;
+  }
+}
+
+.list-preview-small {
+  cursor: pointer;
+  @include distribution-list-small-preview();
+
+  .first-letter {
+    text-align: center;
+    font-weight: 500;
+    font-size: 17px;
+  }
+}
+
+.list-preview-large {
+  @include distribution-list-large-preview();
+
+  .first-letter {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 25px;
+    font-weight: 500;
+  }
+}
+
+.summary-list-infos {
+  background: $list-preview-grey;
+  padding-top: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+
+  .person-count {
+    font-size: 35px;
+    font-weight: 500;
+  }
+
+  .person-added {
+    padding-bottom: 20px;
+    padding-top: 4px;
+  }
+}
+

@@ -1,0 +1,6 @@
+@mixin set-background-color-button($color) {
+
+  li.active > a {
+    background-color: $color;
+  }
+}
