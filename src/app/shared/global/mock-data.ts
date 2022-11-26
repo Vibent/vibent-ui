@@ -21,10 +21,18 @@ export class MockData {
             lastName: "Smith",
             phoneNumber: 12085434383,
             memberships: [],
-            participations: [],
+            participations: [
+                {
+                    id: 1,
+                    userRef: this.userRef,
+                    eventRef: this.eventRef,
+                    isVisible: true,
+                    answer: EventParticipantAnswer.YES,
+                }
+            ],
             membershipRequests: [],
             socialCredentials: {},
-            profilePicLocation: "assets/img/vibent-icon-72.png"
+            profilePicLocation: "assets/img/vibent-icon-72.png",
         }
     ]
 
