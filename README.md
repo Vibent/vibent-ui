@@ -11,11 +11,10 @@ To update gh-pages, do:
 ```bash
 git checkout main
 git pull
+git branch -f gh-pages
 git checkout gh-pages
-git merge main
-rm -r docs
 npm run build-gh-pages
 git add docs
 git commit -m "Publish new version of docs"
-git push
+git push -f
 ```

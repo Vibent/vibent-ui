@@ -48,6 +48,10 @@
                 {
                   "replace": "src/app/core/http/http.service.ts",
                   "with": "src/app/core/http/http.service.mock.ts"
+                },
+                {
+                  "replace": "src/app/core/services/bubbles-services/survey/http/survey-http.service.ts",
+                  "with": "src/app/core/services/bubbles-services/survey/http/survey-http.service.mock.ts"
                 }
               ],
               "optimization": true,

@@ -21,6 +21,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireMessagingModule } from '@angular/fire/messaging';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+import { MockData } from './shared/global/mock-data';
 
 /**
  * This module is the primary module of Vibent
@@ -54,7 +55,7 @@ import { environment } from '../environments/environment';
   declarations: [
     AppComponent
   ],
-  providers: [FirebaseMessagingService],
+  providers: [FirebaseMessagingService, MockData],
   bootstrap: [AppComponent],
   entryComponents: [
     LoadingPageComponent
