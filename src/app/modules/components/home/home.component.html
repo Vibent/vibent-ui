@@ -7,12 +7,15 @@
           <img src="./assets/img/vibent_accueil.png"/>
         </div>
         <div class="row justify-content-center m-0">
-          <button class="btn btn-round white-button w-365-p home-login-button" (click)="loginPage()"
+          <button *ngIf="demoMode" class="btn btn-round white-button w-365-p home-login-button" (click)="launchDemo()">
+            Launch demo
+          </button>
+          <button *ngIf="!demoMode" class="btn btn-round white-button w-365-p home-login-button" (click)="loginPage()"
                   i18n="@@login-vibent">
             TBT
           </button>
         </div>
-        <social-auth></social-auth>
+        <social-auth *ngIf="!demoMode"></social-auth>
       </div>
     </div>
   </div>

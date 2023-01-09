@@ -21,11 +21,23 @@ export class SurveyHttpService {
   }
 
   createOption(option: SurveyOption) {
-    return of(option);
+    const bubble = this.mockData.surveysBubbles.find(b => b.id == option.bubbleId);
+    bubble.options.push({
+      answers: [],
+      userRef: this.mockData.userRef,
+      id: Math.floor(Math.random() * 10000),
+      ...option
+    });
+    const surveys = this.mockData.events[0].surveyBubbles.filter(b => b.id == option.bubbleId);
+    surveys.push(bubble)
+    this.mockData.surveysBubbles = surveys;
+    return of(bubble);
   }
 
   deleteOption(option: SurveyOption) {
-    return of({});
+    const bubble = this.mockData.surveysBubbles.find(b => b.id == option.bubbleId);
+    bubble.options.filter(s => s.id !== option.id);
+    return of(bubble);
   }
 
   createAnswer(answer: SurveyAnswer) {

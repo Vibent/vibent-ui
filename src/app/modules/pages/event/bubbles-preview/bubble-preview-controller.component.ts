@@ -5,7 +5,7 @@ import { ModalManagerService, VibentModals } from '../../../../core/services/mod
 @Component({
   selector: 'bubble-preview-controller',
   templateUrl: './bubble-preview-controller.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BubblePreviewController implements OnInit {
 
