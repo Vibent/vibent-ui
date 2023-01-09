@@ -1,3 +1,4 @@
+// well tried but this information is no longer of any value
 export const environment = {
   prod: false,
   apiEndpoint: 'https://dev.api.vibent.com',
