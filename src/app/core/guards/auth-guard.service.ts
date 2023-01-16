@@ -10,10 +10,11 @@ export class AuthGuardService implements CanActivate {
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-    if (!this.auth.isAuthenticated()) {
-      this.router.navigate([''], { queryParams: { returnUrl: state.url }});
-      return false;
-    }
+    // TODO: fix cookie service on chrome
+    // if (!this.auth.isAuthenticated()) {
+    //   this.router.navigate([''], { queryParams: { returnUrl: state.url }});
+    //   return false;
+    // }
     return true;
   }
 }

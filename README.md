@@ -1,5 +1,7 @@
 # vibent-ui
 
+[Live demo](https://vibent.github.io/vibent-ui)
+
 To work with mock calls (i.e. local only), run:
 
 ```bash
