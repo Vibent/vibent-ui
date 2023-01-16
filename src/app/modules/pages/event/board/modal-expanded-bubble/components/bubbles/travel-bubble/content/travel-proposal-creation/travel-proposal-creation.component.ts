@@ -33,7 +33,7 @@ export class TravelProposalCreationComponent extends AbstractBubbleEntityCreatio
     this.placesAutocomplete = places({
       appId: AppSettings.ALGOLIA_APP_ID,
       apiKey: AppSettings.ALGOLIA_API_KEY,
-      container: document.querySelector('#address-input')
+      container: document.querySelector('#address-input') as any
     }).configure({useDeviceLocation: true, type: 'city'});
 
     this.placesAutocomplete.on('change', e => this.inputPlace = e);
