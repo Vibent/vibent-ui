@@ -1,0 +1,49 @@
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+
+$spacer: 1rem !default; // $form-group-margin-bottom uses $spacer-y.  Decided to try this globally and see how it works out.
+//$spacer-x:                   $spacer !default;
+//$spacer-y:                   $spacer !default;
+//$spacers: (
+//  0: (
+//    x:   0,
+//    y:   0
+//  ),
+//  1: (
+//    x:   $spacer-x,
+//    y:   $spacer-y
+//  ),
+//  2: (
+//    x:   ($spacer-x * 1.5),
+//    y:   ($spacer-y * 1.5)
+//  ),
+//  3: (
+//    x:   ($spacer-x * 3),
+//    y:   ($spacer-y * 3)
+//  )
+//) !default;
+
+$spaceamounts: (1, 2, 3, 4, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100, 125, 150, 175, 200, 250, 300, 350, 365);
+$sides: (top, bottom, left, right);
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+
+  .h-#{$space}-p {
+    height: #{$space}px !important;
+  }
+
+  .w-#{$space}-p {
+    width: #{$space}px !important;
+  }
+
+}

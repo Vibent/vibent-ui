@@ -1,0 +1,33 @@
+/*** Vibent Material ***/
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~ng-pick-datetime/assets/style/picker.min.css";
+@import "core/variables";
+@import "core/mixins";
+@import "~bootstrap/scss/bootstrap";
+@import "../timepicker/jquery.timepicker.min.css";
+@import "../datepicker/datepicker.min.css";
+
+
+// Core Components
+@import "core/buttons";
+@import "core/radios";
+@import "core/forms";
+@import "core/navbar";
+@import "core/modals";
+@import "core/diffusion-lists";
+@import "core/alerts";
+@import "core/type";
+@import "core/popover";
+@import "core/dropdown";
+@import "core/footers";
+@import "core/sidebar-and-main-panel";
+@import "core/misc";
+@import "core/event";
+@import "core/bubble";
+@import "core/loader";
+@import "core/profile";
+@import "core/cards";
+@import "core/cards/card-stats";
+@import "core/auth";
+@import "core/vibent-loading";
+@import "core/responsive";

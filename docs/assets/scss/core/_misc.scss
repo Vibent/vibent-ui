@@ -1,0 +1,55 @@
+body {
+  background-color: #eee;
+  color: $black-color;
+  font-weight: 300;
+}
+
+// https://stackoverflow.com/questions/37313872/vertical-scrolling-in-ios-not-smooth
+// non-standard feature: Smooth vertical scroll for ios
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+legend {
+  border-bottom: 0;
+}
+
+.serif-font {
+  font-family: $font-family-serif;
+}
+
+// Prevent highlight on mobile
+* {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+  &:focus {
+    outline: 0;
+  }
+}
+
+a {
+  color: $link-color;
+  &:hover,
+  &:focus {
+    color: darken($link-color, 5%);
+    text-decoration: none;
+  }
+
+  &.text-info {
+    &:hover, &:focus {
+      color: darken($brand-info, 5%);
+    }
+  }
+
+  & .material-icons {
+    vertical-align: middle;
+  }
+}
+
+#map {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: calc(100vh - 70px);
+  margin-top: 70px;
+}

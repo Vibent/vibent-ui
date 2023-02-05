@@ -1,0 +1,41 @@
+@mixin shadow-big() {
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, $bmd-shadow-penumbra-opacity * 4),
+  0 4px 25px 0px rgba(0, 0, 0, $bmd-shadow-ambient-opacity),
+  0 8px 10px -5px rgba(0, 0, 0, $bmd-shadow-umbra-opacity);
+}
+
+@mixin shadow-big-image() {
+  // new box shadow optimized for Tables and Phones
+  box-shadow: 0 5px 15px -8px rgba(0, 0, 0, $bmd-shadow-ambient-opacity * 2),
+  0 8px 10px -5px rgba(0, 0, 0, $bmd-shadow-umbra-opacity);
+}
+
+@mixin shadow-small-color($color) {
+  // new box shadow optimized for Tablets and Phones
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14),
+  0 7px 10px -5px rgba($color, 0.4)
+}
+
+@mixin shadow-navbar-color($color) {
+  // new box shadow optimized for Tablets and Phones
+
+  @if ($color == $white-color) {
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, .12),
+    0 7px 10px -5px rgba(0, 0, 0, 0.15);
+  } @else {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14),
+    0 7px 12px -5px rgba($color, 0.46);
+  }
+}
+
+@mixin shadow-2dp-color($color) {
+  box-shadow: 0 2px 2px 0 rgba($color, $bmd-shadow-penumbra-opacity),
+  0 3px 1px -2px rgba($color, $bmd-shadow-umbra-opacity),
+  0 1px 5px 0 rgba($color, $bmd-shadow-ambient-opacity);
+}
+
+@mixin button-shadow-color($color) {
+  box-shadow: 0 14px 26px -12px rgba($color, $bmd-shadow-penumbra-opacity * 3),
+  0 4px 23px 0px rgba(0, 0, 0, $bmd-shadow-ambient-opacity),
+  0 8px 10px -5px rgba($color, $bmd-shadow-umbra-opacity);
+}

@@ -1,0 +1,97 @@
+.btn {
+  position: relative;
+  padding: 12px 30px;
+  margin: $bmd-btn-margin-bottom 1px;
+  min-width: auto;
+  font-size: .75rem; //  12px
+  font-weight: 400;
+  line-height: $bmd-line-height;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  letter-spacing: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  border-radius: $border-radius-sm;
+  outline: 0;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  @include undo-bs-tab-focus();
+
+  // Outline buttons colors
+  @include bmd-outline-button-color();
+
+  // Colors
+  @include bmd-raised-button-color();
+  @include hover-focus();
+
+  // Size variations
+  &.btn-lg,
+  .btn-group-lg & {
+    @include button-size($input-btn-padding-y-lg, $input-btn-padding-x-lg, $bmd-btn-font-size, $btn-lg-line-height, $border-radius-sm);
+  }
+
+  &.btn-sm,
+  .btn-group-sm & {
+    @include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $bmd-btn-font-size-sm, $line-height-sm, $border-radius-sm);
+  }
+
+  &.btn-round {
+    border-radius: $border-radius-extreme;
+
+    > .mat-button-focus-overlay, .mat-button-ripple {
+      border-radius: $border-radius-extreme;
+    }
+
+    &.green-button {
+      background: $vibent-green;
+    }
+
+    &.purple-button {
+      background: #a73974;
+    }
+
+    &.google-button {
+      background: #f23737;
+    }
+
+    &.facebook-button {
+      background: #3b5998;
+    }
+
+    &.white-button {
+      background: white;
+      color: #000;
+    }
+  }
+
+}
+
+// Align icons inside buttons with text
+.btn .material-icons,
+.btn:not(.btn-just-icon):not(.btn-fab) .fas, .fab {
+  position: relative;
+  display: inline-block;
+  top: 0;
+  margin-top: -1em;
+  margin-bottom: -1em;
+  font-size: 1.1rem;
+  vertical-align: middle;
+}
+
+// btn-group variations
+.btn-group,
+.btn-group-vertical {
+  position: relative;
+  margin: 10px 1px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+@media (max-width: 370px) {
+  .home-login-button {
+    font-size: 3vw;
+  }
+}

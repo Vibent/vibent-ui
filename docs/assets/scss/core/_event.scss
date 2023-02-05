@@ -1,0 +1,72 @@
+.event-title {
+  text-align: center;
+}
+
+.event-description {
+  text-align: center;
+}
+
+@mixin participant-user-additional() {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  bottom: 0.2em;
+  right: 0.1em;
+  border: 1.5px solid white;
+}
+
+.participant-user-additional-yes {
+  @include participant-user-additional();
+  background-color: $vibent-green;
+}
+
+.participant-user-additional-no {
+  @include participant-user-additional();
+  background-color: $vibent-red;
+}
+
+.participant-user-additional-maybe {
+  @include participant-user-additional();
+  background-color: grey;
+}
+
+.participant-user-additional-unanswered {
+  @include participant-user-additional();
+  background-color: black;
+}
+
+
+.participant-avatar {
+  position: relative;
+  height: 50px;
+  width: 50px;
+
+  .avatar {
+    height: 50px;
+    width: 50px;
+    border: 1.5px solid #f5f6fa;
+  }
+}
+
+.participant-infos {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 4px;
+
+  p {
+    font-size: 12px;
+    color: black;
+    margin-bottom: -6px;
+    margin-top: -5px;
+  }
+}
+
+.event-participant {
+  display: inline-flex;
+  margin-right: 10px;
+  background-color: white;
+  border-radius: 35px;
+  padding: 3px 15px 3px 5px;
+  margin-bottom: 10px;
+}
